@@ -1,0 +1,7364 @@
+{
+  "id": "shree-kan7-to-unicode",
+  "name": "Shree-Kan (Shree-Lipi-7.0) -\u003E Unicode",
+  "sourceFontId": "shree-kan7",
+  "targetFontId": "tunga",
+  "sourceType": "legacy",
+  "targetType": "unicode",
+  "preRules": [],
+  "pairs": [
+    {
+      "from": "0",
+      "to": "\u0CE6"
+    },
+    {
+      "from": "1",
+      "to": "\u0CE7"
+    },
+    {
+      "from": "2",
+      "to": "\u0CE8"
+    },
+    {
+      "from": "3",
+      "to": "\u0CE9"
+    },
+    {
+      "from": "4",
+      "to": "\u0CEA"
+    },
+    {
+      "from": "5",
+      "to": "\u0CEB"
+    },
+    {
+      "from": "6",
+      "to": "\u0CEC"
+    },
+    {
+      "from": "7",
+      "to": "\u0CED"
+    },
+    {
+      "from": "8",
+      "to": "\u0CEE"
+    },
+    {
+      "from": "9",
+      "to": "\u0CEF"
+    },
+    {
+      "from": "\u003E",
+      "to": "\u0964"
+    },
+    {
+      "from": "\u003E\u003E",
+      "to": "\u0965"
+    },
+    {
+      "from": "@",
+      "to": "\u0C83"
+    },
+    {
+      "from": "A",
+      "to": "\u0C85"
+    },
+    {
+      "from": "B",
+      "to": "\u0C86"
+    },
+    {
+      "from": "C",
+      "to": "\u0C87"
+    },
+    {
+      "from": "D",
+      "to": "\u0C88"
+    },
+    {
+      "from": "E",
+      "to": "\u0C89"
+    },
+    {
+      "from": "F",
+      "to": "\u0C8A"
+    },
+    {
+      "from": "G",
+      "to": "\u0C8E"
+    },
+    {
+      "from": "H",
+      "to": "\u0C8F"
+    },
+    {
+      "from": "I",
+      "to": "\u0C90"
+    },
+    {
+      "from": "J",
+      "to": "\u0C92"
+    },
+    {
+      "from": "K",
+      "to": "\u0C93"
+    },
+    {
+      "from": "L",
+      "to": "\u0C94"
+    },
+    {
+      "from": "M\u00E1",
+      "to": "\u0C8B"
+    },
+    {
+      "from": "M\u00E3",
+      "to": "\u0CE0"
+    },
+    {
+      "from": "N",
+      "to": "\u0C98\u0CC6"
+    },
+    {
+      "from": "N\u00E3",
+      "to": "\u0C98\u0CCA"
+    },
+    {
+      "from": "N\u00E3\u00E0",
+      "to": "\u0C98\u0CCB"
+    },
+    {
+      "from": "O\u00DD",
+      "to": "\u0CA3\u0CBE"
+    },
+    {
+      "from": "O\u00E6",
+      "to": "\u0CA3\u0CC6"
+    },
+    {
+      "from": "O\u00E6\u00E0",
+      "to": "\u0CA3\u0CC7"
+    },
+    {
+      "from": "O\u00E6\u00E3",
+      "to": "\u0CA3\u0CCA"
+    },
+    {
+      "from": "O\u00E6\u00E3\u00E0",
+      "to": "\u0CA3\u0CCB"
+    },
+    {
+      "from": "O\u00E6\u00E7",
+      "to": "\u0CA3\u0CC8"
+    },
+    {
+      "from": "O\u00E8",
+      "to": "\u0CA3\u0CCC"
+    },
+    {
+      "from": "O\u2026",
+      "to": "\u0CA3\u0CCD"
+    },
+    {
+      "from": "P\u00DC",
+      "to": "\u0C95"
+    },
+    {
+      "from": "P\u00DC#",
+      "to": "\u0C95\u0CCD\u0CAB"
+    },
+    {
+      "from": "P\u00DC$\u00BE",
+      "to": "\u0C95\u0CCD\u0CAE"
+    },
+    {
+      "from": "P\u00DCR",
+      "to": "\u0C95\u0CCD\u0C95"
+    },
+    {
+      "from": "P\u00DCV",
+      "to": "\u0C95\u0CCD\u0C96"
+    },
+    {
+      "from": "P\u00DCY",
+      "to": "\u0C95\u0CCD\u0C97"
+    },
+    {
+      "from": "P\u00DC^",
+      "to": "\u0C95\u0CCD\u0C98"
+    },
+    {
+      "from": "P\u00DC\u0060",
+      "to": "\u0C95\u0CCD\u0C99"
+    },
+    {
+      "from": "P\u00DCc",
+      "to": "\u0C95\u0CCD\u0C9A"
+    },
+    {
+      "from": "P\u00DCf",
+      "to": "\u0C95\u0CCD\u0C9B"
+    },
+    {
+      "from": "P\u00DCj",
+      "to": "\u0C95\u0CCD\u0C9C"
+    },
+    {
+      "from": "P\u00DCl",
+      "to": "\u0C95\u0CCD\u0C9D"
+    },
+    {
+      "from": "P\u00DCn",
+      "to": "\u0C95\u0CCD\u0C9E"
+    },
+    {
+      "from": "P\u00DCr",
+      "to": "\u0C95\u0CCD\u0C9F"
+    },
+    {
+      "from": "P\u00DCu",
+      "to": "\u0C95\u0CCD\u0CA0"
+    },
+    {
+      "from": "P\u00DCx",
+      "to": "\u0C95\u0CCD\u0CA1"
+    },
+    {
+      "from": "P\u00DCz",
+      "to": "\u0C95\u0CCD\u0CA2"
+    },
+    {
+      "from": "P\u00DC\u00A1",
+      "to": "\u0C95\u0CCD\u0CA3"
+    },
+    {
+      "from": "P\u00DC\u00A4",
+      "to": "\u0C95\u0CCD\u0CA4"
+    },
+    {
+      "from": "P\u00DC\u00A7",
+      "to": "\u0C95\u0CCD\u0CA5"
+    },
+    {
+      "from": "P\u00DC\u00AA",
+      "to": "\u0C95\u0CCD\u0CA6"
+    },
+    {
+      "from": "P\u00DC\u00B0",
+      "to": "\u0C95\u0CCD\u0CA8"
+    },
+    {
+      "from": "P\u00DC\u00B3",
+      "to": "\u0C95\u0CCD\u0CAA"
+    },
+    {
+      "from": "P\u00DC\u00BA",
+      "to": "\u0C95\u0CCD\u0CAC"
+    },
+    {
+      "from": "P\u00DC\u00BD",
+      "to": "\u0C95\u0CCD\u0CAD"
+    },
+    {
+      "from": "P\u00DC\u00C2",
+      "to": "\u0C95\u0CCD\u0CAF"
+    },
+    {
+      "from": "P\u00DC\u00C5",
+      "to": "\u0C95\u0CCD\u0CB0"
+    },
+    {
+      "from": "P\u00DC\u00C9",
+      "to": "\u0C95\u0CCD\u0CB2"
+    },
+    {
+      "from": "P\u00DC\u00CC",
+      "to": "\u0C95\u0CCD\u0CB5"
+    },
+    {
+      "from": "P\u00DC\u00CF",
+      "to": "\u0C95\u0CCD\u0CB6"
+    },
+    {
+      "from": "P\u00DC\u00D5$",
+      "to": "\u0C95\u0CCD\u0CB8"
+    },
+    {
+      "from": "P\u00DC\u00D8",
+      "to": "\u0C95\u0CCD\u0CB9"
+    },
+    {
+      "from": "P\u00DC\u00DB",
+      "to": "\u0C95\u0CCD\u0CB3"
+    },
+    {
+      "from": "P\u00DC\u00E1",
+      "to": "\u0C95\u0CC1"
+    },
+    {
+      "from": "P\u00DC\u00E3",
+      "to": "\u0C95\u0CC2"
+    },
+    {
+      "from": "P\u00DC\u00EA",
+      "to": "\u0C95\u0CC3"
+    },
+    {
+      "from": "P\u00DC\u00EB",
+      "to": "\u0C95\u0CC4"
+    },
+    {
+      "from": "P\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0C95"
+    },
+    {
+      "from": "P\u00DC\u0153",
+      "to": "\u0C95\u0CCD\u0CA7"
+    },
+    {
+      "from": "P\u00DC\u2022",
+      "to": "\u0C95\u0CCD\u0CB1"
+    },
+    {
+      "from": "P\u00DD",
+      "to": "\u0C95\u0CBE"
+    },
+    {
+      "from": "P\u00E6",
+      "to": "\u0C95\u0CC6"
+    },
+    {
+      "from": "P\u00E6\u00E0",
+      "to": "\u0C95\u0CC7"
+    },
+    {
+      "from": "P\u00E6\u00E3",
+      "to": "\u0C95\u0CCA"
+    },
+    {
+      "from": "P\u00E6\u00E3\u00E0",
+      "to": "\u0C95\u0CCB"
+    },
+    {
+      "from": "P\u00E6\u00E7",
+      "to": "\u0C95\u0CC8"
+    },
+    {
+      "from": "P\u00E8",
+      "to": "\u0C95\u0CCC"
+    },
+    {
+      "from": "P\u2026",
+      "to": "\u0C95\u0CCD"
+    },
+    {
+      "from": "Q",
+      "to": "\u0C95\u0CBF"
+    },
+    {
+      "from": "Q\u00E0",
+      "to": "\u0C95\u0CC0"
+    },
+    {
+      "from": "S",
+      "to": "\u0C96"
+    },
+    {
+      "from": "S#",
+      "to": "\u0C96\u0CCD\u0CAB"
+    },
+    {
+      "from": "S$\u00BE",
+      "to": "\u0C96\u0CCD\u0CAE"
+    },
+    {
+      "from": "SR",
+      "to": "\u0C96\u0CCD\u0C95"
+    },
+    {
+      "from": "SV",
+      "to": "\u0C96\u0CCD\u0C96"
+    },
+    {
+      "from": "SY",
+      "to": "\u0C96\u0CCD\u0C97"
+    },
+    {
+      "from": "S^",
+      "to": "\u0C96\u0CCD\u0C98"
+    },
+    {
+      "from": "S\u0060",
+      "to": "\u0C96\u0CCD\u0C99"
+    },
+    {
+      "from": "Sc",
+      "to": "\u0C96\u0CCD\u0C9A"
+    },
+    {
+      "from": "Sf",
+      "to": "\u0C96\u0CCD\u0C9B"
+    },
+    {
+      "from": "Sj",
+      "to": "\u0C96\u0CCD\u0C9C"
+    },
+    {
+      "from": "Sl",
+      "to": "\u0C96\u0CCD\u0C9D"
+    },
+    {
+      "from": "Sn",
+      "to": "\u0C96\u0CCD\u0C9E"
+    },
+    {
+      "from": "Sr",
+      "to": "\u0C96\u0CCD\u0C9F"
+    },
+    {
+      "from": "Su",
+      "to": "\u0C96\u0CCD\u0CA0"
+    },
+    {
+      "from": "Sx",
+      "to": "\u0C96\u0CCD\u0CA1"
+    },
+    {
+      "from": "Sz",
+      "to": "\u0C96\u0CCD\u0CA2"
+    },
+    {
+      "from": "S\u00A1",
+      "to": "\u0C96\u0CCD\u0CA3"
+    },
+    {
+      "from": "S\u00A4",
+      "to": "\u0C96\u0CCD\u0CA4"
+    },
+    {
+      "from": "S\u00A7",
+      "to": "\u0C96\u0CCD\u0CA5"
+    },
+    {
+      "from": "S\u00AA",
+      "to": "\u0C96\u0CCD\u0CA6"
+    },
+    {
+      "from": "S\u00B0",
+      "to": "\u0C96\u0CCD\u0CA8"
+    },
+    {
+      "from": "S\u00B3",
+      "to": "\u0C96\u0CCD\u0CAA"
+    },
+    {
+      "from": "S\u00BA",
+      "to": "\u0C96\u0CCD\u0CAC"
+    },
+    {
+      "from": "S\u00BD",
+      "to": "\u0C96\u0CCD\u0CAD"
+    },
+    {
+      "from": "S\u00C2",
+      "to": "\u0C96\u0CCD\u0CAF"
+    },
+    {
+      "from": "S\u00C5",
+      "to": "\u0C96\u0CCD\u0CB0"
+    },
+    {
+      "from": "S\u00C9",
+      "to": "\u0C96\u0CCD\u0CB2"
+    },
+    {
+      "from": "S\u00CC",
+      "to": "\u0C96\u0CCD\u0CB5"
+    },
+    {
+      "from": "S\u00CF",
+      "to": "\u0C96\u0CCD\u0CB6"
+    },
+    {
+      "from": "S\u00D2",
+      "to": "\u0C96\u0CCD\u0CB7"
+    },
+    {
+      "from": "S\u00D5$",
+      "to": "\u0C96\u0CCD\u0CB8"
+    },
+    {
+      "from": "S\u00D8",
+      "to": "\u0C96\u0CCD\u0CB9"
+    },
+    {
+      "from": "S\u00DB",
+      "to": "\u0C96\u0CCD\u0CB3"
+    },
+    {
+      "from": "S\u00E1",
+      "to": "\u0C96\u0CC1"
+    },
+    {
+      "from": "S\u00E3",
+      "to": "\u0C96\u0CC2"
+    },
+    {
+      "from": "S\u00EA",
+      "to": "\u0C96\u0CC3"
+    },
+    {
+      "from": "S\u00EB",
+      "to": "\u0C96\u0CC4"
+    },
+    {
+      "from": "S\u00EC",
+      "to": "\u0CB0\u0CCD\u0C96"
+    },
+    {
+      "from": "S\u0153",
+      "to": "\u0C96\u0CCD\u0CA7"
+    },
+    {
+      "from": "S\u2022",
+      "to": "\u0C96\u0CCD\u0CB1"
+    },
+    {
+      "from": "T\u00DD",
+      "to": "\u0C96\u0CBE"
+    },
+    {
+      "from": "T\u00E6",
+      "to": "\u0C96\u0CC6"
+    },
+    {
+      "from": "T\u00E6\u00E0",
+      "to": "\u0C96\u0CC7"
+    },
+    {
+      "from": "T\u00E6\u00E3",
+      "to": "\u0C96\u0CCA"
+    },
+    {
+      "from": "T\u00E6\u00E3\u00E0",
+      "to": "\u0C96\u0CCB"
+    },
+    {
+      "from": "T\u00E6\u00E7",
+      "to": "\u0C96\u0CC8"
+    },
+    {
+      "from": "T\u00E8",
+      "to": "\u0C96\u0CCC"
+    },
+    {
+      "from": "T\u2026",
+      "to": "\u0C96\u0CCD"
+    },
+    {
+      "from": "U",
+      "to": "\u0C96\u0CBF"
+    },
+    {
+      "from": "U\u00E0",
+      "to": "\u0C96\u0CC0"
+    },
+    {
+      "from": "W\u00DC",
+      "to": "\u0C97"
+    },
+    {
+      "from": "W\u00DC#",
+      "to": "\u0C97\u0CCD\u0CAB"
+    },
+    {
+      "from": "W\u00DC$\u00BE",
+      "to": "\u0C97\u0CCD\u0CAE"
+    },
+    {
+      "from": "W\u00DCR",
+      "to": "\u0C97\u0CCD\u0C95"
+    },
+    {
+      "from": "W\u00DCV",
+      "to": "\u0C97\u0CCD\u0C96"
+    },
+    {
+      "from": "W\u00DCY",
+      "to": "\u0C97\u0CCD\u0C97"
+    },
+    {
+      "from": "W\u00DC^",
+      "to": "\u0C97\u0CCD\u0C98"
+    },
+    {
+      "from": "W\u00DC\u0060",
+      "to": "\u0C97\u0CCD\u0C99"
+    },
+    {
+      "from": "W\u00DCc",
+      "to": "\u0C97\u0CCD\u0C9A"
+    },
+    {
+      "from": "W\u00DCf",
+      "to": "\u0C97\u0CCD\u0C9B"
+    },
+    {
+      "from": "W\u00DCj",
+      "to": "\u0C97\u0CCD\u0C9C"
+    },
+    {
+      "from": "W\u00DCl",
+      "to": "\u0C97\u0CCD\u0C9D"
+    },
+    {
+      "from": "W\u00DCn",
+      "to": "\u0C97\u0CCD\u0C9E"
+    },
+    {
+      "from": "W\u00DCr",
+      "to": "\u0C97\u0CCD\u0C9F"
+    },
+    {
+      "from": "W\u00DCu",
+      "to": "\u0C97\u0CCD\u0CA0"
+    },
+    {
+      "from": "W\u00DCx",
+      "to": "\u0C97\u0CCD\u0CA1"
+    },
+    {
+      "from": "W\u00DCz",
+      "to": "\u0C97\u0CCD\u0CA2"
+    },
+    {
+      "from": "W\u00DC\u00A1",
+      "to": "\u0C97\u0CCD\u0CA3"
+    },
+    {
+      "from": "W\u00DC\u00A4",
+      "to": "\u0C97\u0CCD\u0CA4"
+    },
+    {
+      "from": "W\u00DC\u00A7",
+      "to": "\u0C97\u0CCD\u0CA5"
+    },
+    {
+      "from": "W\u00DC\u00AA",
+      "to": "\u0C97\u0CCD\u0CA6"
+    },
+    {
+      "from": "W\u00DC\u00B0",
+      "to": "\u0C97\u0CCD\u0CA8"
+    },
+    {
+      "from": "W\u00DC\u00B3",
+      "to": "\u0C97\u0CCD\u0CAA"
+    },
+    {
+      "from": "W\u00DC\u00BA",
+      "to": "\u0C97\u0CCD\u0CAC"
+    },
+    {
+      "from": "W\u00DC\u00BD",
+      "to": "\u0C97\u0CCD\u0CAD"
+    },
+    {
+      "from": "W\u00DC\u00C2",
+      "to": "\u0C97\u0CCD\u0CAF"
+    },
+    {
+      "from": "W\u00DC\u00C5",
+      "to": "\u0C97\u0CCD\u0CB0"
+    },
+    {
+      "from": "W\u00DC\u00C9",
+      "to": "\u0C97\u0CCD\u0CB2"
+    },
+    {
+      "from": "W\u00DC\u00CC",
+      "to": "\u0C97\u0CCD\u0CB5"
+    },
+    {
+      "from": "W\u00DC\u00CF",
+      "to": "\u0C97\u0CCD\u0CB6"
+    },
+    {
+      "from": "W\u00DC\u00D2",
+      "to": "\u0C97\u0CCD\u0CB7"
+    },
+    {
+      "from": "W\u00DC\u00D5$",
+      "to": "\u0C97\u0CCD\u0CB8"
+    },
+    {
+      "from": "W\u00DC\u00D8",
+      "to": "\u0C97\u0CCD\u0CB9"
+    },
+    {
+      "from": "W\u00DC\u00DB",
+      "to": "\u0C97\u0CCD\u0CB3"
+    },
+    {
+      "from": "W\u00DC\u00E1",
+      "to": "\u0C97\u0CC1"
+    },
+    {
+      "from": "W\u00DC\u00E3",
+      "to": "\u0C97\u0CC2"
+    },
+    {
+      "from": "W\u00DC\u00EA",
+      "to": "\u0C97\u0CC3"
+    },
+    {
+      "from": "W\u00DC\u00EB",
+      "to": "\u0C97\u0CC4"
+    },
+    {
+      "from": "W\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0C97"
+    },
+    {
+      "from": "W\u00DC\u0153",
+      "to": "\u0C97\u0CCD\u0CA7"
+    },
+    {
+      "from": "W\u00DC\u2022",
+      "to": "\u0C97\u0CCD\u0CB1"
+    },
+    {
+      "from": "W\u00DD",
+      "to": "\u0C97\u0CBE"
+    },
+    {
+      "from": "W\u00E6",
+      "to": "\u0C97\u0CC6"
+    },
+    {
+      "from": "W\u00E6\u00E0",
+      "to": "\u0C97\u0CC7"
+    },
+    {
+      "from": "W\u00E6\u00E3",
+      "to": "\u0C97\u0CCA"
+    },
+    {
+      "from": "W\u00E6\u00E3\u00E0",
+      "to": "\u0C97\u0CCB"
+    },
+    {
+      "from": "W\u00E6\u00E7",
+      "to": "\u0C97\u0CC8"
+    },
+    {
+      "from": "W\u00E8",
+      "to": "\u0C97\u0CCC"
+    },
+    {
+      "from": "W\u2026",
+      "to": "\u0C97\u0CCD"
+    },
+    {
+      "from": "X",
+      "to": "\u0C97\u0CBF"
+    },
+    {
+      "from": "X\u00E0",
+      "to": "\u0C97\u0CC0"
+    },
+    {
+      "from": "Z",
+      "to": "\u0C98"
+    },
+    {
+      "from": "Z#",
+      "to": "\u0C98\u0CCD\u0CAB"
+    },
+    {
+      "from": "Z$\u00BE",
+      "to": "\u0C98\u0CCD\u0CAE"
+    },
+    {
+      "from": "ZR",
+      "to": "\u0C98\u0CCD\u0C95"
+    },
+    {
+      "from": "ZV",
+      "to": "\u0C98\u0CCD\u0C96"
+    },
+    {
+      "from": "ZY",
+      "to": "\u0C98\u0CCD\u0C97"
+    },
+    {
+      "from": "Z^",
+      "to": "\u0C98\u0CCD\u0C98"
+    },
+    {
+      "from": "Z\u0060",
+      "to": "\u0C98\u0CCD\u0C99"
+    },
+    {
+      "from": "Zc",
+      "to": "\u0C98\u0CCD\u0C9A"
+    },
+    {
+      "from": "Zf",
+      "to": "\u0C98\u0CCD\u0C9B"
+    },
+    {
+      "from": "Zj",
+      "to": "\u0C98\u0CCD\u0C9C"
+    },
+    {
+      "from": "Zl",
+      "to": "\u0C98\u0CCD\u0C9D"
+    },
+    {
+      "from": "Zn",
+      "to": "\u0C98\u0CCD\u0C9E"
+    },
+    {
+      "from": "Zr",
+      "to": "\u0C98\u0CCD\u0C9F"
+    },
+    {
+      "from": "Zu",
+      "to": "\u0C98\u0CCD\u0CA0"
+    },
+    {
+      "from": "Zx",
+      "to": "\u0C98\u0CCD\u0CA1"
+    },
+    {
+      "from": "Zz",
+      "to": "\u0C98\u0CCD\u0CA2"
+    },
+    {
+      "from": "Z\u00A1",
+      "to": "\u0C98\u0CCD\u0CA3"
+    },
+    {
+      "from": "Z\u00A4",
+      "to": "\u0C98\u0CCD\u0CA4"
+    },
+    {
+      "from": "Z\u00A7",
+      "to": "\u0C98\u0CCD\u0CA5"
+    },
+    {
+      "from": "Z\u00AA",
+      "to": "\u0C98\u0CCD\u0CA6"
+    },
+    {
+      "from": "Z\u00B0",
+      "to": "\u0C98\u0CCD\u0CA8"
+    },
+    {
+      "from": "Z\u00B3",
+      "to": "\u0C98\u0CCD\u0CAA"
+    },
+    {
+      "from": "Z\u00BA",
+      "to": "\u0C98\u0CCD\u0CAC"
+    },
+    {
+      "from": "Z\u00BD",
+      "to": "\u0C98\u0CCD\u0CAD"
+    },
+    {
+      "from": "Z\u00C2",
+      "to": "\u0C98\u0CCD\u0CAF"
+    },
+    {
+      "from": "Z\u00C5",
+      "to": "\u0C98\u0CCD\u0CB0"
+    },
+    {
+      "from": "Z\u00C9",
+      "to": "\u0C98\u0CCD\u0CB2"
+    },
+    {
+      "from": "Z\u00CC",
+      "to": "\u0C98\u0CCD\u0CB5"
+    },
+    {
+      "from": "Z\u00CF",
+      "to": "\u0C98\u0CCD\u0CB6"
+    },
+    {
+      "from": "Z\u00D2",
+      "to": "\u0C98\u0CCD\u0CB7"
+    },
+    {
+      "from": "Z\u00D5$",
+      "to": "\u0C98\u0CCD\u0CB8"
+    },
+    {
+      "from": "Z\u00D8",
+      "to": "\u0C98\u0CCD\u0CB9"
+    },
+    {
+      "from": "Z\u00DB",
+      "to": "\u0C98\u0CCD\u0CB3"
+    },
+    {
+      "from": "Z\u00E1",
+      "to": "\u0C98\u0CC1"
+    },
+    {
+      "from": "Z\u00E3",
+      "to": "\u0C98\u0CC2"
+    },
+    {
+      "from": "Z\u00EA",
+      "to": "\u0C98\u0CC3"
+    },
+    {
+      "from": "Z\u00EB",
+      "to": "\u0C98\u0CC4"
+    },
+    {
+      "from": "Z\u00EC",
+      "to": "\u0CB0\u0CCD\u0C98"
+    },
+    {
+      "from": "Z\u0153",
+      "to": "\u0C98\u0CCD\u0CA7"
+    },
+    {
+      "from": "Z\u2022",
+      "to": "\u0C98\u0CCD\u0CB1"
+    },
+    {
+      "from": "[\u00DD",
+      "to": "\u0C98\u0CBE"
+    },
+    {
+      "from": "[\u00E6\u00E0",
+      "to": "\u0C98\u0CC7"
+    },
+    {
+      "from": "[\u00E6\u00E7",
+      "to": "\u0C98\u0CC8"
+    },
+    {
+      "from": "[\u00E8",
+      "to": "\u0C98\u0CCC"
+    },
+    {
+      "from": "[\u2026",
+      "to": "\u0C98\u0CCD"
+    },
+    {
+      "from": "\\\u00E0",
+      "to": "\u0C98\u0CC0"
+    },
+    {
+      "from": "_\u00EF\u00E0",
+      "to": "\u0C99\u0CC0"
+    },
+    {
+      "from": "a\u00DC",
+      "to": "\u0C9A"
+    },
+    {
+      "from": "a\u00DC#",
+      "to": "\u0C9A\u0CCD\u0CAB"
+    },
+    {
+      "from": "a\u00DC$\u00BE",
+      "to": "\u0C9A\u0CCD\u0CAE"
+    },
+    {
+      "from": "a\u00DCR",
+      "to": "\u0C9A\u0CCD\u0C95"
+    },
+    {
+      "from": "a\u00DCV",
+      "to": "\u0C9A\u0CCD\u0C96"
+    },
+    {
+      "from": "a\u00DCY",
+      "to": "\u0C9A\u0CCD\u0C97"
+    },
+    {
+      "from": "a\u00DC^",
+      "to": "\u0C9A\u0CCD\u0C98"
+    },
+    {
+      "from": "a\u00DC\u0060",
+      "to": "\u0C9A\u0CCD\u0C99"
+    },
+    {
+      "from": "a\u00DCc",
+      "to": "\u0C9A\u0CCD\u0C9A"
+    },
+    {
+      "from": "a\u00DCf",
+      "to": "\u0C9A\u0CCD\u0C9B"
+    },
+    {
+      "from": "a\u00DCj",
+      "to": "\u0C9A\u0CCD\u0C9C"
+    },
+    {
+      "from": "a\u00DCl",
+      "to": "\u0C9A\u0CCD\u0C9D"
+    },
+    {
+      "from": "a\u00DCn",
+      "to": "\u0C9A\u0CCD\u0C9E"
+    },
+    {
+      "from": "a\u00DCr",
+      "to": "\u0C9A\u0CCD\u0C9F"
+    },
+    {
+      "from": "a\u00DCu",
+      "to": "\u0C9A\u0CCD\u0CA0"
+    },
+    {
+      "from": "a\u00DCx",
+      "to": "\u0C9A\u0CCD\u0CA1"
+    },
+    {
+      "from": "a\u00DCz",
+      "to": "\u0C9A\u0CCD\u0CA2"
+    },
+    {
+      "from": "a\u00DC\u00A1",
+      "to": "\u0C9A\u0CCD\u0CA3"
+    },
+    {
+      "from": "a\u00DC\u00A4",
+      "to": "\u0C9A\u0CCD\u0CA4"
+    },
+    {
+      "from": "a\u00DC\u00A7",
+      "to": "\u0C9A\u0CCD\u0CA5"
+    },
+    {
+      "from": "a\u00DC\u00AA",
+      "to": "\u0C9A\u0CCD\u0CA6"
+    },
+    {
+      "from": "a\u00DC\u00B0",
+      "to": "\u0C9A\u0CCD\u0CA8"
+    },
+    {
+      "from": "a\u00DC\u00B3",
+      "to": "\u0C9A\u0CCD\u0CAA"
+    },
+    {
+      "from": "a\u00DC\u00BA",
+      "to": "\u0C9A\u0CCD\u0CAC"
+    },
+    {
+      "from": "a\u00DC\u00BD",
+      "to": "\u0C9A\u0CCD\u0CAD"
+    },
+    {
+      "from": "a\u00DC\u00C2",
+      "to": "\u0C9A\u0CCD\u0CAF"
+    },
+    {
+      "from": "a\u00DC\u00C5",
+      "to": "\u0C9A\u0CCD\u0CB0"
+    },
+    {
+      "from": "a\u00DC\u00C9",
+      "to": "\u0C9A\u0CCD\u0CB2"
+    },
+    {
+      "from": "a\u00DC\u00CC",
+      "to": "\u0C9A\u0CCD\u0CB5"
+    },
+    {
+      "from": "a\u00DC\u00CF",
+      "to": "\u0C9A\u0CCD\u0CB6"
+    },
+    {
+      "from": "a\u00DC\u00D2",
+      "to": "\u0C9A\u0CCD\u0CB7"
+    },
+    {
+      "from": "a\u00DC\u00D5$",
+      "to": "\u0C9A\u0CCD\u0CB8"
+    },
+    {
+      "from": "a\u00DC\u00D8",
+      "to": "\u0C9A\u0CCD\u0CB9"
+    },
+    {
+      "from": "a\u00DC\u00DB",
+      "to": "\u0C9A\u0CCD\u0CB3"
+    },
+    {
+      "from": "a\u00DC\u00E1",
+      "to": "\u0C9A\u0CC1"
+    },
+    {
+      "from": "a\u00DC\u00E3",
+      "to": "\u0C9A\u0CC2"
+    },
+    {
+      "from": "a\u00DC\u00EA",
+      "to": "\u0C9A\u0CC3"
+    },
+    {
+      "from": "a\u00DC\u00EB",
+      "to": "\u0C9A\u0CC4"
+    },
+    {
+      "from": "a\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9A"
+    },
+    {
+      "from": "a\u00DC\u0153",
+      "to": "\u0C9A\u0CCD\u0CA7"
+    },
+    {
+      "from": "a\u00DC\u2022",
+      "to": "\u0C9A\u0CCD\u0CB1"
+    },
+    {
+      "from": "a\u00DD",
+      "to": "\u0C9A\u0CBE"
+    },
+    {
+      "from": "a\u00E6",
+      "to": "\u0C9A\u0CC6"
+    },
+    {
+      "from": "a\u00E6\u00E0",
+      "to": "\u0C9A\u0CC7"
+    },
+    {
+      "from": "a\u00E6\u00E3",
+      "to": "\u0C9A\u0CCA"
+    },
+    {
+      "from": "a\u00E6\u00E3\u00E0",
+      "to": "\u0C9A\u0CCB"
+    },
+    {
+      "from": "a\u00E6\u00E7",
+      "to": "\u0C9A\u0CC8"
+    },
+    {
+      "from": "a\u00E8",
+      "to": "\u0C9A\u0CCC"
+    },
+    {
+      "from": "a\u2026",
+      "to": "\u0C9A\u0CCD"
+    },
+    {
+      "from": "b",
+      "to": "\u0C9A\u0CBF"
+    },
+    {
+      "from": "b\u00E0",
+      "to": "\u0C9A\u0CC0"
+    },
+    {
+      "from": "d\u00DC",
+      "to": "\u0C9B"
+    },
+    {
+      "from": "d\u00DC#",
+      "to": "\u0C9B\u0CCD\u0CAB"
+    },
+    {
+      "from": "d\u00DC$\u00BE",
+      "to": "\u0C9B\u0CCD\u0CAE"
+    },
+    {
+      "from": "d\u00DCR",
+      "to": "\u0C9B\u0CCD\u0C95"
+    },
+    {
+      "from": "d\u00DCV",
+      "to": "\u0C9B\u0CCD\u0C96"
+    },
+    {
+      "from": "d\u00DCY",
+      "to": "\u0C9B\u0CCD\u0C97"
+    },
+    {
+      "from": "d\u00DC^",
+      "to": "\u0C9B\u0CCD\u0C98"
+    },
+    {
+      "from": "d\u00DC\u0060",
+      "to": "\u0C9B\u0CCD\u0C99"
+    },
+    {
+      "from": "d\u00DCc",
+      "to": "\u0C9B\u0CCD\u0C9A"
+    },
+    {
+      "from": "d\u00DCf",
+      "to": "\u0C9B\u0CCD\u0C9B"
+    },
+    {
+      "from": "d\u00DCj",
+      "to": "\u0C9B\u0CCD\u0C9C"
+    },
+    {
+      "from": "d\u00DCl",
+      "to": "\u0C9B\u0CCD\u0C9D"
+    },
+    {
+      "from": "d\u00DCn",
+      "to": "\u0C9B\u0CCD\u0C9E"
+    },
+    {
+      "from": "d\u00DCr",
+      "to": "\u0C9B\u0CCD\u0C9F"
+    },
+    {
+      "from": "d\u00DCu",
+      "to": "\u0C9B\u0CCD\u0CA0"
+    },
+    {
+      "from": "d\u00DCx",
+      "to": "\u0C9B\u0CCD\u0CA1"
+    },
+    {
+      "from": "d\u00DCz",
+      "to": "\u0C9B\u0CCD\u0CA2"
+    },
+    {
+      "from": "d\u00DC\u00A1",
+      "to": "\u0C9B\u0CCD\u0CA3"
+    },
+    {
+      "from": "d\u00DC\u00A4",
+      "to": "\u0C9B\u0CCD\u0CA4"
+    },
+    {
+      "from": "d\u00DC\u00A7",
+      "to": "\u0C9B\u0CCD\u0CA5"
+    },
+    {
+      "from": "d\u00DC\u00AA",
+      "to": "\u0C9B\u0CCD\u0CA6"
+    },
+    {
+      "from": "d\u00DC\u00B0",
+      "to": "\u0C9B\u0CCD\u0CA8"
+    },
+    {
+      "from": "d\u00DC\u00B3",
+      "to": "\u0C9B\u0CCD\u0CAA"
+    },
+    {
+      "from": "d\u00DC\u00BA",
+      "to": "\u0C9B\u0CCD\u0CAC"
+    },
+    {
+      "from": "d\u00DC\u00BD",
+      "to": "\u0C9B\u0CCD\u0CAD"
+    },
+    {
+      "from": "d\u00DC\u00C2",
+      "to": "\u0C9B\u0CCD\u0CAF"
+    },
+    {
+      "from": "d\u00DC\u00C5",
+      "to": "\u0C9B\u0CCD\u0CB0"
+    },
+    {
+      "from": "d\u00DC\u00C9",
+      "to": "\u0C9B\u0CCD\u0CB2"
+    },
+    {
+      "from": "d\u00DC\u00CC",
+      "to": "\u0C9B\u0CCD\u0CB5"
+    },
+    {
+      "from": "d\u00DC\u00CF",
+      "to": "\u0C9B\u0CCD\u0CB6"
+    },
+    {
+      "from": "d\u00DC\u00D2",
+      "to": "\u0C9B\u0CCD\u0CB7"
+    },
+    {
+      "from": "d\u00DC\u00D5$",
+      "to": "\u0C9B\u0CCD\u0CB8"
+    },
+    {
+      "from": "d\u00DC\u00D8",
+      "to": "\u0C9B\u0CCD\u0CB9"
+    },
+    {
+      "from": "d\u00DC\u00DB",
+      "to": "\u0C9B\u0CCD\u0CB3"
+    },
+    {
+      "from": "d\u00DC\u00E1",
+      "to": "\u0C9B\u0CC1"
+    },
+    {
+      "from": "d\u00DC\u00E3",
+      "to": "\u0C9B\u0CC2"
+    },
+    {
+      "from": "d\u00DC\u00EA",
+      "to": "\u0C9B\u0CC3"
+    },
+    {
+      "from": "d\u00DC\u00EB",
+      "to": "\u0C9B\u0CC4"
+    },
+    {
+      "from": "d\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9B"
+    },
+    {
+      "from": "d\u00DC\u0153",
+      "to": "\u0C9B\u0CCD\u0CA7"
+    },
+    {
+      "from": "d\u00DC\u2022",
+      "to": "\u0C9B\u0CCD\u0CB1"
+    },
+    {
+      "from": "d\u00DD",
+      "to": "\u0C9B\u0CBE"
+    },
+    {
+      "from": "d\u00E6",
+      "to": "\u0C9B\u0CC6"
+    },
+    {
+      "from": "d\u00E6\u00E0",
+      "to": "\u0C9B\u0CC7"
+    },
+    {
+      "from": "d\u00E6\u00E3",
+      "to": "\u0C9B\u0CCA"
+    },
+    {
+      "from": "d\u00E6\u00E3\u00E0",
+      "to": "\u0C9B\u0CCB"
+    },
+    {
+      "from": "d\u00E6\u00E7",
+      "to": "\u0C9B\u0CC8"
+    },
+    {
+      "from": "d\u00E8",
+      "to": "\u0C9B\u0CCC"
+    },
+    {
+      "from": "d\u2026",
+      "to": "\u0C9B\u0CCD"
+    },
+    {
+      "from": "e",
+      "to": "\u0C9B\u0CBF"
+    },
+    {
+      "from": "e\u00E0",
+      "to": "\u0C9B\u0CC0"
+    },
+    {
+      "from": "g",
+      "to": "\u0C9C"
+    },
+    {
+      "from": "g#",
+      "to": "\u0C9C\u0CCD\u0CAB"
+    },
+    {
+      "from": "g$\u00BE",
+      "to": "\u0C9C\u0CCD\u0CAE"
+    },
+    {
+      "from": "gR",
+      "to": "\u0C9C\u0CCD\u0C95"
+    },
+    {
+      "from": "gV",
+      "to": "\u0C9C\u0CCD\u0C96"
+    },
+    {
+      "from": "gY",
+      "to": "\u0C9C\u0CCD\u0C97"
+    },
+    {
+      "from": "g^",
+      "to": "\u0C9C\u0CCD\u0C98"
+    },
+    {
+      "from": "g\u0060",
+      "to": "\u0C9C\u0CCD\u0C99"
+    },
+    {
+      "from": "gc",
+      "to": "\u0C9C\u0CCD\u0C9A"
+    },
+    {
+      "from": "gf",
+      "to": "\u0C9C\u0CCD\u0C9B"
+    },
+    {
+      "from": "gj",
+      "to": "\u0C9C\u0CCD\u0C9C"
+    },
+    {
+      "from": "gl",
+      "to": "\u0C9C\u0CCD\u0C9D"
+    },
+    {
+      "from": "gr",
+      "to": "\u0C9C\u0CCD\u0C9F"
+    },
+    {
+      "from": "gu",
+      "to": "\u0C9C\u0CCD\u0CA0"
+    },
+    {
+      "from": "gx",
+      "to": "\u0C9C\u0CCD\u0CA1"
+    },
+    {
+      "from": "gz",
+      "to": "\u0C9C\u0CCD\u0CA2"
+    },
+    {
+      "from": "g\u00A1",
+      "to": "\u0C9C\u0CCD\u0CA3"
+    },
+    {
+      "from": "g\u00A4",
+      "to": "\u0C9C\u0CCD\u0CA4"
+    },
+    {
+      "from": "g\u00A7",
+      "to": "\u0C9C\u0CCD\u0CA5"
+    },
+    {
+      "from": "g\u00AA",
+      "to": "\u0C9C\u0CCD\u0CA6"
+    },
+    {
+      "from": "g\u00B0",
+      "to": "\u0C9C\u0CCD\u0CA8"
+    },
+    {
+      "from": "g\u00B3",
+      "to": "\u0C9C\u0CCD\u0CAA"
+    },
+    {
+      "from": "g\u00BA",
+      "to": "\u0C9C\u0CCD\u0CAC"
+    },
+    {
+      "from": "g\u00BD",
+      "to": "\u0C9C\u0CCD\u0CAD"
+    },
+    {
+      "from": "g\u00C2",
+      "to": "\u0C9C\u0CCD\u0CAF"
+    },
+    {
+      "from": "g\u00C5",
+      "to": "\u0C9C\u0CCD\u0CB0"
+    },
+    {
+      "from": "g\u00C9",
+      "to": "\u0C9C\u0CCD\u0CB2"
+    },
+    {
+      "from": "g\u00CC",
+      "to": "\u0C9C\u0CCD\u0CB5"
+    },
+    {
+      "from": "g\u00CF",
+      "to": "\u0C9C\u0CCD\u0CB6"
+    },
+    {
+      "from": "g\u00D2",
+      "to": "\u0C9C\u0CCD\u0CB7"
+    },
+    {
+      "from": "g\u00D5$",
+      "to": "\u0C9C\u0CCD\u0CB8"
+    },
+    {
+      "from": "g\u00D8",
+      "to": "\u0C9C\u0CCD\u0CB9"
+    },
+    {
+      "from": "g\u00DB",
+      "to": "\u0C9C\u0CCD\u0CB3"
+    },
+    {
+      "from": "g\u00E1",
+      "to": "\u0C9C\u0CC1"
+    },
+    {
+      "from": "g\u00E3",
+      "to": "\u0C9C\u0CC2"
+    },
+    {
+      "from": "g\u00EA",
+      "to": "\u0C9C\u0CC3"
+    },
+    {
+      "from": "g\u00EB",
+      "to": "\u0C9C\u0CC4"
+    },
+    {
+      "from": "g\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9C"
+    },
+    {
+      "from": "g\u0153",
+      "to": "\u0C9C\u0CCD\u0CA7"
+    },
+    {
+      "from": "g\u2022",
+      "to": "\u0C9C\u0CCD\u0CB1"
+    },
+    {
+      "from": "h\u00DD",
+      "to": "\u0C9C\u0CBE"
+    },
+    {
+      "from": "h\u00E6",
+      "to": "\u0C9C\u0CC6"
+    },
+    {
+      "from": "h\u00E6\u00E0",
+      "to": "\u0C9C\u0CC7"
+    },
+    {
+      "from": "h\u00E6\u00E3",
+      "to": "\u0C9C\u0CCA"
+    },
+    {
+      "from": "h\u00E6\u00E3\u00E0",
+      "to": "\u0C9C\u0CCB"
+    },
+    {
+      "from": "h\u00E6\u00E7",
+      "to": "\u0C9C\u0CC8"
+    },
+    {
+      "from": "h\u00E8",
+      "to": "\u0C9C\u0CCC"
+    },
+    {
+      "from": "h\u2026",
+      "to": "\u0C9C\u0CCD"
+    },
+    {
+      "from": "i",
+      "to": "\u0C9C\u0CBF"
+    },
+    {
+      "from": "i\u00E0",
+      "to": "\u0C9C\u0CC0"
+    },
+    {
+      "from": "m",
+      "to": "\u0C9E"
+    },
+    {
+      "from": "m#",
+      "to": "\u0C9E\u0CCD\u0CAB"
+    },
+    {
+      "from": "m$\u00BE",
+      "to": "\u0C9E\u0CCD\u0CAE"
+    },
+    {
+      "from": "mR",
+      "to": "\u0C9E\u0CCD\u0C95"
+    },
+    {
+      "from": "mV",
+      "to": "\u0C9E\u0CCD\u0C96"
+    },
+    {
+      "from": "mY",
+      "to": "\u0C9E\u0CCD\u0C97"
+    },
+    {
+      "from": "m^",
+      "to": "\u0C9E\u0CCD\u0C98"
+    },
+    {
+      "from": "m\u0060",
+      "to": "\u0C9E\u0CCD\u0C99"
+    },
+    {
+      "from": "mc",
+      "to": "\u0C9E\u0CCD\u0C9A"
+    },
+    {
+      "from": "mf",
+      "to": "\u0C9E\u0CCD\u0C9B"
+    },
+    {
+      "from": "mj",
+      "to": "\u0C9E\u0CCD\u0C9C"
+    },
+    {
+      "from": "ml",
+      "to": "\u0C9E\u0CCD\u0C9D"
+    },
+    {
+      "from": "mn",
+      "to": "\u0C9E\u0CCD\u0C9E"
+    },
+    {
+      "from": "mr",
+      "to": "\u0C9E\u0CCD\u0C9F"
+    },
+    {
+      "from": "mu",
+      "to": "\u0C9E\u0CCD\u0CA0"
+    },
+    {
+      "from": "mx",
+      "to": "\u0C9E\u0CCD\u0CA1"
+    },
+    {
+      "from": "mz",
+      "to": "\u0C9E\u0CCD\u0CA2"
+    },
+    {
+      "from": "m\u00A1",
+      "to": "\u0C9E\u0CCD\u0CA3"
+    },
+    {
+      "from": "m\u00A4",
+      "to": "\u0C9E\u0CCD\u0CA4"
+    },
+    {
+      "from": "m\u00A7",
+      "to": "\u0C9E\u0CCD\u0CA5"
+    },
+    {
+      "from": "m\u00AA",
+      "to": "\u0C9E\u0CCD\u0CA6"
+    },
+    {
+      "from": "m\u00B0",
+      "to": "\u0C9E\u0CCD\u0CA8"
+    },
+    {
+      "from": "m\u00B3",
+      "to": "\u0C9E\u0CCD\u0CAA"
+    },
+    {
+      "from": "m\u00BA",
+      "to": "\u0C9E\u0CCD\u0CAC"
+    },
+    {
+      "from": "m\u00BD",
+      "to": "\u0C9E\u0CCD\u0CAD"
+    },
+    {
+      "from": "m\u00C2",
+      "to": "\u0C9E\u0CCD\u0CAF"
+    },
+    {
+      "from": "m\u00C5",
+      "to": "\u0C9E\u0CCD\u0CB0"
+    },
+    {
+      "from": "m\u00C9",
+      "to": "\u0C9E\u0CCD\u0CB2"
+    },
+    {
+      "from": "m\u00CC",
+      "to": "\u0C9E\u0CCD\u0CB5"
+    },
+    {
+      "from": "m\u00CF",
+      "to": "\u0C9E\u0CCD\u0CB6"
+    },
+    {
+      "from": "m\u00D2",
+      "to": "\u0C9E\u0CCD\u0CB7"
+    },
+    {
+      "from": "m\u00D5$",
+      "to": "\u0C9E\u0CCD\u0CB8"
+    },
+    {
+      "from": "m\u00D8",
+      "to": "\u0C9E\u0CCD\u0CB9"
+    },
+    {
+      "from": "m\u00DB",
+      "to": "\u0C9E\u0CCD\u0CB3"
+    },
+    {
+      "from": "m\u00DF",
+      "to": "\u0C9E\u0CBF"
+    },
+    {
+      "from": "m\u00DF\u00E0",
+      "to": "\u0C9E\u0CC0"
+    },
+    {
+      "from": "m\u00E1",
+      "to": "\u0C9E\u0CC1"
+    },
+    {
+      "from": "m\u00E3",
+      "to": "\u0C9E\u0CC2"
+    },
+    {
+      "from": "m\u00E5\u00E8",
+      "to": "\u0C9E\u0CCC"
+    },
+    {
+      "from": "m\u00EA",
+      "to": "\u0C9E\u0CC3"
+    },
+    {
+      "from": "m\u00EB",
+      "to": "\u0C9E\u0CC4"
+    },
+    {
+      "from": "m\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9E"
+    },
+    {
+      "from": "m\u00EE\u00DD",
+      "to": "\u0C9E\u0CBE"
+    },
+    {
+      "from": "m\u00EF",
+      "to": "\u0C9E\u0CC6"
+    },
+    {
+      "from": "m\u00EF\u00E0",
+      "to": "\u0C9E\u0CC7"
+    },
+    {
+      "from": "m\u00EF\u00E3",
+      "to": "\u0C9E\u0CCA"
+    },
+    {
+      "from": "m\u00EF\u00E3\u00E0",
+      "to": "\u0C9E\u0CCB"
+    },
+    {
+      "from": "m\u00EF\u00E7",
+      "to": "\u0C9E\u0CC8"
+    },
+    {
+      "from": "m\u0153",
+      "to": "\u0C9E\u0CCD\u0CA7"
+    },
+    {
+      "from": "m\u2022",
+      "to": "\u0C9E\u0CCD\u0CB1"
+    },
+    {
+      "from": "o",
+      "to": "\u0C9F"
+    },
+    {
+      "from": "o#",
+      "to": "\u0C9F\u0CCD\u0CAB"
+    },
+    {
+      "from": "o$\u00BE",
+      "to": "\u0C9F\u0CCD\u0CAE"
+    },
+    {
+      "from": "oR",
+      "to": "\u0C9F\u0CCD\u0C95"
+    },
+    {
+      "from": "oV",
+      "to": "\u0C9F\u0CCD\u0C96"
+    },
+    {
+      "from": "oY",
+      "to": "\u0C9F\u0CCD\u0C97"
+    },
+    {
+      "from": "o^",
+      "to": "\u0C9F\u0CCD\u0C98"
+    },
+    {
+      "from": "o\u0060",
+      "to": "\u0C9F\u0CCD\u0C99"
+    },
+    {
+      "from": "oc",
+      "to": "\u0C9F\u0CCD\u0C9A"
+    },
+    {
+      "from": "of",
+      "to": "\u0C9F\u0CCD\u0C9B"
+    },
+    {
+      "from": "oj",
+      "to": "\u0C9F\u0CCD\u0C9C"
+    },
+    {
+      "from": "ol",
+      "to": "\u0C9F\u0CCD\u0C9D"
+    },
+    {
+      "from": "on",
+      "to": "\u0C9F\u0CCD\u0C9E"
+    },
+    {
+      "from": "or",
+      "to": "\u0C9F\u0CCD\u0C9F"
+    },
+    {
+      "from": "ou",
+      "to": "\u0C9F\u0CCD\u0CA0"
+    },
+    {
+      "from": "ox",
+      "to": "\u0C9F\u0CCD\u0CA1"
+    },
+    {
+      "from": "oz",
+      "to": "\u0C9F\u0CCD\u0CA2"
+    },
+    {
+      "from": "o\u00A1",
+      "to": "\u0C9F\u0CCD\u0CA3"
+    },
+    {
+      "from": "o\u00A4",
+      "to": "\u0C9F\u0CCD\u0CA4"
+    },
+    {
+      "from": "o\u00A7",
+      "to": "\u0C9F\u0CCD\u0CA5"
+    },
+    {
+      "from": "o\u00AA",
+      "to": "\u0C9F\u0CCD\u0CA6"
+    },
+    {
+      "from": "o\u00B0",
+      "to": "\u0C9F\u0CCD\u0CA8"
+    },
+    {
+      "from": "o\u00B3",
+      "to": "\u0C9F\u0CCD\u0CAA"
+    },
+    {
+      "from": "o\u00BA",
+      "to": "\u0C9F\u0CCD\u0CAC"
+    },
+    {
+      "from": "o\u00BD",
+      "to": "\u0C9F\u0CCD\u0CAD"
+    },
+    {
+      "from": "o\u00C2",
+      "to": "\u0C9F\u0CCD\u0CAF"
+    },
+    {
+      "from": "o\u00C5",
+      "to": "\u0C9F\u0CCD\u0CB0"
+    },
+    {
+      "from": "o\u00C9",
+      "to": "\u0C9F\u0CCD\u0CB2"
+    },
+    {
+      "from": "o\u00CC",
+      "to": "\u0C9F\u0CCD\u0CB5"
+    },
+    {
+      "from": "o\u00CF",
+      "to": "\u0C9F\u0CCD\u0CB6"
+    },
+    {
+      "from": "o\u00D2",
+      "to": "\u0C9F\u0CCD\u0CB7"
+    },
+    {
+      "from": "o\u00D5$",
+      "to": "\u0C9F\u0CCD\u0CB8"
+    },
+    {
+      "from": "o\u00D8",
+      "to": "\u0C9F\u0CCD\u0CB9"
+    },
+    {
+      "from": "o\u00DB",
+      "to": "\u0C9F\u0CCD\u0CB3"
+    },
+    {
+      "from": "o\u00E1",
+      "to": "\u0C9F\u0CC1"
+    },
+    {
+      "from": "o\u00E3",
+      "to": "\u0C9F\u0CC2"
+    },
+    {
+      "from": "o\u00EA",
+      "to": "\u0C9F\u0CC3"
+    },
+    {
+      "from": "o\u00EB",
+      "to": "\u0C9F\u0CC4"
+    },
+    {
+      "from": "o\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9F"
+    },
+    {
+      "from": "o\u0153",
+      "to": "\u0C9F\u0CCD\u0CA7"
+    },
+    {
+      "from": "o\u2022",
+      "to": "\u0C9F\u0CCD\u0CB1"
+    },
+    {
+      "from": "p\u00DD",
+      "to": "\u0C9F\u0CBE"
+    },
+    {
+      "from": "p\u00E6",
+      "to": "\u0C9F\u0CC6"
+    },
+    {
+      "from": "p\u00E6\u00E0",
+      "to": "\u0C9F\u0CC7"
+    },
+    {
+      "from": "p\u00E6\u00E3",
+      "to": "\u0C9F\u0CCA"
+    },
+    {
+      "from": "p\u00E6\u00E3\u00E0",
+      "to": "\u0C9F\u0CCB"
+    },
+    {
+      "from": "p\u00E6\u00E7",
+      "to": "\u0C9F\u0CC8"
+    },
+    {
+      "from": "p\u00E8",
+      "to": "\u0C9F\u0CCC"
+    },
+    {
+      "from": "p\u2026",
+      "to": "\u0C9F\u0CCD"
+    },
+    {
+      "from": "q",
+      "to": "\u0C9F\u0CBF"
+    },
+    {
+      "from": "q\u00E0",
+      "to": "\u0C9F\u0CC0"
+    },
+    {
+      "from": "s\u00DC",
+      "to": "\u0CA0"
+    },
+    {
+      "from": "s\u00DC#",
+      "to": "\u0CA0\u0CCD\u0CAB"
+    },
+    {
+      "from": "s\u00DC$\u00BE",
+      "to": "\u0CA0\u0CCD\u0CAE"
+    },
+    {
+      "from": "s\u00DCR",
+      "to": "\u0CA0\u0CCD\u0C95"
+    },
+    {
+      "from": "s\u00DCV",
+      "to": "\u0CA0\u0CCD\u0C96"
+    },
+    {
+      "from": "s\u00DCY",
+      "to": "\u0CA0\u0CCD\u0C97"
+    },
+    {
+      "from": "s\u00DC^",
+      "to": "\u0CA0\u0CCD\u0C98"
+    },
+    {
+      "from": "s\u00DC\u0060",
+      "to": "\u0CA0\u0CCD\u0C99"
+    },
+    {
+      "from": "s\u00DCc",
+      "to": "\u0CA0\u0CCD\u0C9A"
+    },
+    {
+      "from": "s\u00DCf",
+      "to": "\u0CA0\u0CCD\u0C9B"
+    },
+    {
+      "from": "s\u00DCj",
+      "to": "\u0CA0\u0CCD\u0C9C"
+    },
+    {
+      "from": "s\u00DCl",
+      "to": "\u0CA0\u0CCD\u0C9D"
+    },
+    {
+      "from": "s\u00DCn",
+      "to": "\u0CA0\u0CCD\u0C9E"
+    },
+    {
+      "from": "s\u00DCr",
+      "to": "\u0CA0\u0CCD\u0C9F"
+    },
+    {
+      "from": "s\u00DCu",
+      "to": "\u0CA0\u0CCD\u0CA0"
+    },
+    {
+      "from": "s\u00DCx",
+      "to": "\u0CA0\u0CCD\u0CA1"
+    },
+    {
+      "from": "s\u00DCz",
+      "to": "\u0CA0\u0CCD\u0CA2"
+    },
+    {
+      "from": "s\u00DC\u00A1",
+      "to": "\u0CA0\u0CCD\u0CA3"
+    },
+    {
+      "from": "s\u00DC\u00A4",
+      "to": "\u0CA0\u0CCD\u0CA4"
+    },
+    {
+      "from": "s\u00DC\u00A7",
+      "to": "\u0CA0\u0CCD\u0CA5"
+    },
+    {
+      "from": "s\u00DC\u00AA",
+      "to": "\u0CA0\u0CCD\u0CA6"
+    },
+    {
+      "from": "s\u00DC\u00B0",
+      "to": "\u0CA0\u0CCD\u0CA8"
+    },
+    {
+      "from": "s\u00DC\u00B3",
+      "to": "\u0CA0\u0CCD\u0CAA"
+    },
+    {
+      "from": "s\u00DC\u00BA",
+      "to": "\u0CA0\u0CCD\u0CAC"
+    },
+    {
+      "from": "s\u00DC\u00BD",
+      "to": "\u0CA0\u0CCD\u0CAD"
+    },
+    {
+      "from": "s\u00DC\u00C2",
+      "to": "\u0CA0\u0CCD\u0CAF"
+    },
+    {
+      "from": "s\u00DC\u00C5",
+      "to": "\u0CA0\u0CCD\u0CB0"
+    },
+    {
+      "from": "s\u00DC\u00C9",
+      "to": "\u0CA0\u0CCD\u0CB2"
+    },
+    {
+      "from": "s\u00DC\u00CC",
+      "to": "\u0CA0\u0CCD\u0CB5"
+    },
+    {
+      "from": "s\u00DC\u00CF",
+      "to": "\u0CA0\u0CCD\u0CB6"
+    },
+    {
+      "from": "s\u00DC\u00D2",
+      "to": "\u0CA0\u0CCD\u0CB7"
+    },
+    {
+      "from": "s\u00DC\u00D5$",
+      "to": "\u0CA0\u0CCD\u0CB8"
+    },
+    {
+      "from": "s\u00DC\u00D8",
+      "to": "\u0CA0\u0CCD\u0CB9"
+    },
+    {
+      "from": "s\u00DC\u00DB",
+      "to": "\u0CA0\u0CCD\u0CB3"
+    },
+    {
+      "from": "s\u00DC\u00E1",
+      "to": "\u0CA0\u0CC1"
+    },
+    {
+      "from": "s\u00DC\u00E3",
+      "to": "\u0CA0\u0CC2"
+    },
+    {
+      "from": "s\u00DC\u00EA",
+      "to": "\u0CA0\u0CC3"
+    },
+    {
+      "from": "s\u00DC\u00EB",
+      "to": "\u0CA0\u0CC4"
+    },
+    {
+      "from": "s\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA0"
+    },
+    {
+      "from": "s\u00DC\u0153",
+      "to": "\u0CA0\u0CCD\u0CA7"
+    },
+    {
+      "from": "s\u00DC\u2022",
+      "to": "\u0CA0\u0CCD\u0CB1"
+    },
+    {
+      "from": "s\u00DD",
+      "to": "\u0CA0\u0CBE"
+    },
+    {
+      "from": "s\u00E6",
+      "to": "\u0CA0\u0CC6"
+    },
+    {
+      "from": "s\u00E6\u00E0",
+      "to": "\u0CA0\u0CC7"
+    },
+    {
+      "from": "s\u00E6\u00E3",
+      "to": "\u0CA0\u0CCA"
+    },
+    {
+      "from": "s\u00E6\u00E3\u00E0",
+      "to": "\u0CA0\u0CCB"
+    },
+    {
+      "from": "s\u00E6\u00E7",
+      "to": "\u0CA0\u0CC8"
+    },
+    {
+      "from": "s\u00E8",
+      "to": "\u0CA0\u0CCC"
+    },
+    {
+      "from": "s\u2026",
+      "to": "\u0CA0\u0CCD"
+    },
+    {
+      "from": "t",
+      "to": "\u0CA0\u0CBF"
+    },
+    {
+      "from": "t\u00E0",
+      "to": "\u0CA0\u0CC0"
+    },
+    {
+      "from": "v\u00DC",
+      "to": "\u0CA1"
+    },
+    {
+      "from": "v\u00DC#",
+      "to": "\u0CA1\u0CCD\u0CAB"
+    },
+    {
+      "from": "v\u00DC$\u00BE",
+      "to": "\u0CA1\u0CCD\u0CAE"
+    },
+    {
+      "from": "v\u00DCR",
+      "to": "\u0CA1\u0CCD\u0C95"
+    },
+    {
+      "from": "v\u00DCV",
+      "to": "\u0CA1\u0CCD\u0C96"
+    },
+    {
+      "from": "v\u00DCY",
+      "to": "\u0CA1\u0CCD\u0C97"
+    },
+    {
+      "from": "v\u00DC^",
+      "to": "\u0CA1\u0CCD\u0C98"
+    },
+    {
+      "from": "v\u00DC\u0060",
+      "to": "\u0CA1\u0CCD\u0C99"
+    },
+    {
+      "from": "v\u00DCc",
+      "to": "\u0CA1\u0CCD\u0C9A"
+    },
+    {
+      "from": "v\u00DCf",
+      "to": "\u0CA1\u0CCD\u0C9B"
+    },
+    {
+      "from": "v\u00DCj",
+      "to": "\u0CA1\u0CCD\u0C9C"
+    },
+    {
+      "from": "v\u00DCl",
+      "to": "\u0CA1\u0CCD\u0C9D"
+    },
+    {
+      "from": "v\u00DCn",
+      "to": "\u0CA1\u0CCD\u0C9E"
+    },
+    {
+      "from": "v\u00DCr",
+      "to": "\u0CA1\u0CCD\u0C9F"
+    },
+    {
+      "from": "v\u00DCu",
+      "to": "\u0CA1\u0CCD\u0CA0"
+    },
+    {
+      "from": "v\u00DCx",
+      "to": "\u0CA1\u0CCD\u0CA1"
+    },
+    {
+      "from": "v\u00DCz",
+      "to": "\u0CA1\u0CCD\u0CA2"
+    },
+    {
+      "from": "v\u00DC\u00A1",
+      "to": "\u0CA1\u0CCD\u0CA3"
+    },
+    {
+      "from": "v\u00DC\u00A4",
+      "to": "\u0CA1\u0CCD\u0CA4"
+    },
+    {
+      "from": "v\u00DC\u00A7",
+      "to": "\u0CA1\u0CCD\u0CA5"
+    },
+    {
+      "from": "v\u00DC\u00AA",
+      "to": "\u0CA1\u0CCD\u0CA6"
+    },
+    {
+      "from": "v\u00DC\u00B0",
+      "to": "\u0CA1\u0CCD\u0CA8"
+    },
+    {
+      "from": "v\u00DC\u00B3",
+      "to": "\u0CA1\u0CCD\u0CAA"
+    },
+    {
+      "from": "v\u00DC\u00BA",
+      "to": "\u0CA1\u0CCD\u0CAC"
+    },
+    {
+      "from": "v\u00DC\u00BD",
+      "to": "\u0CA1\u0CCD\u0CAD"
+    },
+    {
+      "from": "v\u00DC\u00C2",
+      "to": "\u0CA1\u0CCD\u0CAF"
+    },
+    {
+      "from": "v\u00DC\u00C5",
+      "to": "\u0CA1\u0CCD\u0CB0"
+    },
+    {
+      "from": "v\u00DC\u00C9",
+      "to": "\u0CA1\u0CCD\u0CB2"
+    },
+    {
+      "from": "v\u00DC\u00CC",
+      "to": "\u0CA1\u0CCD\u0CB5"
+    },
+    {
+      "from": "v\u00DC\u00CF",
+      "to": "\u0CA1\u0CCD\u0CB6"
+    },
+    {
+      "from": "v\u00DC\u00D2",
+      "to": "\u0CA1\u0CCD\u0CB7"
+    },
+    {
+      "from": "v\u00DC\u00D5$",
+      "to": "\u0CA1\u0CCD\u0CB8"
+    },
+    {
+      "from": "v\u00DC\u00D8",
+      "to": "\u0CA1\u0CCD\u0CB9"
+    },
+    {
+      "from": "v\u00DC\u00DB",
+      "to": "\u0CA1\u0CCD\u0CB3"
+    },
+    {
+      "from": "v\u00DC\u00E1",
+      "to": "\u0CA1\u0CC1"
+    },
+    {
+      "from": "v\u00DC\u00E3",
+      "to": "\u0CA1\u0CC2"
+    },
+    {
+      "from": "v\u00DC\u00EA",
+      "to": "\u0CA1\u0CC3"
+    },
+    {
+      "from": "v\u00DC\u00EB",
+      "to": "\u0CA1\u0CC4"
+    },
+    {
+      "from": "v\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA1"
+    },
+    {
+      "from": "v\u00DC\u0153",
+      "to": "\u0CA1\u0CCD\u0CA7"
+    },
+    {
+      "from": "v\u00DC\u2022",
+      "to": "\u0CA1\u0CCD\u0CB1"
+    },
+    {
+      "from": "v\u00DD",
+      "to": "\u0CA1\u0CBE"
+    },
+    {
+      "from": "v\u00E6",
+      "to": "\u0CA1\u0CC6"
+    },
+    {
+      "from": "v\u00E6\u00E0",
+      "to": "\u0CA1\u0CC7"
+    },
+    {
+      "from": "v\u00E6\u00E3",
+      "to": "\u0CA1\u0CCA"
+    },
+    {
+      "from": "v\u00E6\u00E3\u00E0",
+      "to": "\u0CA1\u0CCB"
+    },
+    {
+      "from": "v\u00E6\u00E7",
+      "to": "\u0CA1\u0CC8"
+    },
+    {
+      "from": "v\u00E8",
+      "to": "\u0CA1\u0CCC"
+    },
+    {
+      "from": "v\u2026",
+      "to": "\u0CA1\u0CCD"
+    },
+    {
+      "from": "w",
+      "to": "\u0CA1\u0CBF"
+    },
+    {
+      "from": "w\u00E0",
+      "to": "\u0CA1\u0CC0"
+    },
+    {
+      "from": "y\u00DC",
+      "to": "\u0CA2"
+    },
+    {
+      "from": "y\u00DC#",
+      "to": "\u0CA2\u0CCD\u0CAB"
+    },
+    {
+      "from": "y\u00DC$\u00BE",
+      "to": "\u0CA2\u0CCD\u0CAE"
+    },
+    {
+      "from": "y\u00DCR",
+      "to": "\u0CA2\u0CCD\u0C95"
+    },
+    {
+      "from": "y\u00DCV",
+      "to": "\u0CA2\u0CCD\u0C96"
+    },
+    {
+      "from": "y\u00DCY",
+      "to": "\u0CA2\u0CCD\u0C97"
+    },
+    {
+      "from": "y\u00DC^",
+      "to": "\u0CA2\u0CCD\u0C98"
+    },
+    {
+      "from": "y\u00DC\u0060",
+      "to": "\u0CA2\u0CCD\u0C99"
+    },
+    {
+      "from": "y\u00DCc",
+      "to": "\u0CA2\u0CCD\u0C9A"
+    },
+    {
+      "from": "y\u00DCf",
+      "to": "\u0CA2\u0CCD\u0C9B"
+    },
+    {
+      "from": "y\u00DCj",
+      "to": "\u0CA2\u0CCD\u0C9C"
+    },
+    {
+      "from": "y\u00DCl",
+      "to": "\u0CA2\u0CCD\u0C9D"
+    },
+    {
+      "from": "y\u00DCn",
+      "to": "\u0CA2\u0CCD\u0C9E"
+    },
+    {
+      "from": "y\u00DCr",
+      "to": "\u0CA2\u0CCD\u0C9F"
+    },
+    {
+      "from": "y\u00DCu",
+      "to": "\u0CA2\u0CCD\u0CA0"
+    },
+    {
+      "from": "y\u00DCx",
+      "to": "\u0CA2\u0CCD\u0CA1"
+    },
+    {
+      "from": "y\u00DCz",
+      "to": "\u0CA2\u0CCD\u0CA2"
+    },
+    {
+      "from": "y\u00DC\u00A1",
+      "to": "\u0CA2\u0CCD\u0CA3"
+    },
+    {
+      "from": "y\u00DC\u00A4",
+      "to": "\u0CA2\u0CCD\u0CA4"
+    },
+    {
+      "from": "y\u00DC\u00A7",
+      "to": "\u0CA2\u0CCD\u0CA5"
+    },
+    {
+      "from": "y\u00DC\u00AA",
+      "to": "\u0CA2\u0CCD\u0CA6"
+    },
+    {
+      "from": "y\u00DC\u00B0",
+      "to": "\u0CA2\u0CCD\u0CA8"
+    },
+    {
+      "from": "y\u00DC\u00B3",
+      "to": "\u0CA2\u0CCD\u0CAA"
+    },
+    {
+      "from": "y\u00DC\u00BA",
+      "to": "\u0CA2\u0CCD\u0CAC"
+    },
+    {
+      "from": "y\u00DC\u00BD",
+      "to": "\u0CA2\u0CCD\u0CAD"
+    },
+    {
+      "from": "y\u00DC\u00C2",
+      "to": "\u0CA2\u0CCD\u0CAF"
+    },
+    {
+      "from": "y\u00DC\u00C5",
+      "to": "\u0CA2\u0CCD\u0CB0"
+    },
+    {
+      "from": "y\u00DC\u00C9",
+      "to": "\u0CA2\u0CCD\u0CB2"
+    },
+    {
+      "from": "y\u00DC\u00CC",
+      "to": "\u0CA2\u0CCD\u0CB5"
+    },
+    {
+      "from": "y\u00DC\u00CF",
+      "to": "\u0CA2\u0CCD\u0CB6"
+    },
+    {
+      "from": "y\u00DC\u00D2",
+      "to": "\u0CA2\u0CCD\u0CB7"
+    },
+    {
+      "from": "y\u00DC\u00D5$",
+      "to": "\u0CA2\u0CCD\u0CB8"
+    },
+    {
+      "from": "y\u00DC\u00D8",
+      "to": "\u0CA2\u0CCD\u0CB9"
+    },
+    {
+      "from": "y\u00DC\u00DB",
+      "to": "\u0CA2\u0CCD\u0CB3"
+    },
+    {
+      "from": "y\u00DC\u00E1",
+      "to": "\u0CA2\u0CC1"
+    },
+    {
+      "from": "y\u00DC\u00E3",
+      "to": "\u0CA2\u0CC2"
+    },
+    {
+      "from": "y\u00DC\u00EA",
+      "to": "\u0CA2\u0CC3"
+    },
+    {
+      "from": "y\u00DC\u00EB",
+      "to": "\u0CA2\u0CC4"
+    },
+    {
+      "from": "y\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA2"
+    },
+    {
+      "from": "y\u00DC\u0153",
+      "to": "\u0CA2\u0CCD\u0CA7"
+    },
+    {
+      "from": "y\u00DC\u2022",
+      "to": "\u0CA2\u0CCD\u0CB1"
+    },
+    {
+      "from": "y\u00DD",
+      "to": "\u0CA2\u0CBE"
+    },
+    {
+      "from": "y\u00E6",
+      "to": "\u0CA2\u0CC6"
+    },
+    {
+      "from": "y\u00E6\u00E0",
+      "to": "\u0CA2\u0CC7"
+    },
+    {
+      "from": "y\u00E6\u00E3",
+      "to": "\u0CA2\u0CCA"
+    },
+    {
+      "from": "y\u00E6\u00E3\u00E0",
+      "to": "\u0CA2\u0CCB"
+    },
+    {
+      "from": "y\u00E6\u00E7",
+      "to": "\u0CA2\u0CC8"
+    },
+    {
+      "from": "y\u00E8",
+      "to": "\u0CA2\u0CCC"
+    },
+    {
+      "from": "y\u2026",
+      "to": "\u0CA2\u0CCD"
+    },
+    {
+      "from": "{",
+      "to": "\u0CA2\u0CBF"
+    },
+    {
+      "from": "{\u00E0",
+      "to": "\u0CA2\u0CC0"
+    },
+    {
+      "from": "|",
+      "to": "\u0CA3"
+    },
+    {
+      "from": "|#",
+      "to": "\u0CA3\u0CCD\u0CAB"
+    },
+    {
+      "from": "|$\u00BE",
+      "to": "\u0CA3\u0CCD\u0CAE"
+    },
+    {
+      "from": "|R",
+      "to": "\u0CA3\u0CCD\u0C95"
+    },
+    {
+      "from": "|V",
+      "to": "\u0CA3\u0CCD\u0C96"
+    },
+    {
+      "from": "|Y",
+      "to": "\u0CA3\u0CCD\u0C97"
+    },
+    {
+      "from": "|^",
+      "to": "\u0CA3\u0CCD\u0C98"
+    },
+    {
+      "from": "|\u0060",
+      "to": "\u0CA3\u0CCD\u0C99"
+    },
+    {
+      "from": "|c",
+      "to": "\u0CA3\u0CCD\u0C9A"
+    },
+    {
+      "from": "|f",
+      "to": "\u0CA3\u0CCD\u0C9B"
+    },
+    {
+      "from": "|j",
+      "to": "\u0CA3\u0CCD\u0C9C"
+    },
+    {
+      "from": "|l",
+      "to": "\u0CA3\u0CCD\u0C9D"
+    },
+    {
+      "from": "|n",
+      "to": "\u0CA3\u0CCD\u0C9E"
+    },
+    {
+      "from": "|r",
+      "to": "\u0CA3\u0CCD\u0C9F"
+    },
+    {
+      "from": "|u",
+      "to": "\u0CA3\u0CCD\u0CA0"
+    },
+    {
+      "from": "|x",
+      "to": "\u0CA3\u0CCD\u0CA1"
+    },
+    {
+      "from": "|z",
+      "to": "\u0CA3\u0CCD\u0CA2"
+    },
+    {
+      "from": "|\u00A1",
+      "to": "\u0CA3\u0CCD\u0CA3"
+    },
+    {
+      "from": "|\u00A4",
+      "to": "\u0CA3\u0CCD\u0CA4"
+    },
+    {
+      "from": "|\u00A7",
+      "to": "\u0CA3\u0CCD\u0CA5"
+    },
+    {
+      "from": "|\u00AA",
+      "to": "\u0CA3\u0CCD\u0CA6"
+    },
+    {
+      "from": "|\u00B0",
+      "to": "\u0CA3\u0CCD\u0CA8"
+    },
+    {
+      "from": "|\u00B3",
+      "to": "\u0CA3\u0CCD\u0CAA"
+    },
+    {
+      "from": "|\u00BA",
+      "to": "\u0CA3\u0CCD\u0CAC"
+    },
+    {
+      "from": "|\u00BD",
+      "to": "\u0CA3\u0CCD\u0CAD"
+    },
+    {
+      "from": "|\u00C2",
+      "to": "\u0CA3\u0CCD\u0CAF"
+    },
+    {
+      "from": "|\u00C5",
+      "to": "\u0CA3\u0CCD\u0CB0"
+    },
+    {
+      "from": "|\u00C9",
+      "to": "\u0CA3\u0CCD\u0CB2"
+    },
+    {
+      "from": "|\u00CC",
+      "to": "\u0CA3\u0CCD\u0CB5"
+    },
+    {
+      "from": "|\u00CF",
+      "to": "\u0CA3\u0CCD\u0CB6"
+    },
+    {
+      "from": "|\u00D2",
+      "to": "\u0CA3\u0CCD\u0CB7"
+    },
+    {
+      "from": "|\u00D5$",
+      "to": "\u0CA3\u0CCD\u0CB8"
+    },
+    {
+      "from": "|\u00D8",
+      "to": "\u0CA3\u0CCD\u0CB9"
+    },
+    {
+      "from": "|\u00DB",
+      "to": "\u0CA3\u0CCD\u0CB3"
+    },
+    {
+      "from": "|\u00E1",
+      "to": "\u0CA3\u0CC1"
+    },
+    {
+      "from": "|\u00E3",
+      "to": "\u0CA3\u0CC2"
+    },
+    {
+      "from": "|\u00EA",
+      "to": "\u0CA3\u0CC3"
+    },
+    {
+      "from": "|\u00EB",
+      "to": "\u0CA3\u0CC4"
+    },
+    {
+      "from": "|\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA3"
+    },
+    {
+      "from": "|\u0153",
+      "to": "\u0CA3\u0CCD\u0CA7"
+    },
+    {
+      "from": "|\u2022",
+      "to": "\u0CA3\u0CCD\u0CB1"
+    },
+    {
+      "from": "~",
+      "to": "\u0CA3\u0CBF"
+    },
+    {
+      "from": "~\u00E0",
+      "to": "\u0CA3\u0CC0"
+    },
+    {
+      "from": "\u00A3",
+      "to": "\u0CA4\u0CBF"
+    },
+    {
+      "from": "\u00A3\u00E0",
+      "to": "\u0CA4\u0CC0"
+    },
+    {
+      "from": "\u00A5\u00DC",
+      "to": "\u0CA5"
+    },
+    {
+      "from": "\u00A5\u00DC#",
+      "to": "\u0CA5\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00A5\u00DC$\u00BE",
+      "to": "\u0CA5\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00A5\u00DCR",
+      "to": "\u0CA5\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00A5\u00DCV",
+      "to": "\u0CA5\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00A5\u00DCY",
+      "to": "\u0CA5\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00A5\u00DC^",
+      "to": "\u0CA5\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00A5\u00DC\u0060",
+      "to": "\u0CA5\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00A5\u00DCc",
+      "to": "\u0CA5\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00A5\u00DCf",
+      "to": "\u0CA5\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00A5\u00DCj",
+      "to": "\u0CA5\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00A5\u00DCl",
+      "to": "\u0CA5\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00A5\u00DCn",
+      "to": "\u0CA5\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00A5\u00DCr",
+      "to": "\u0CA5\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00A5\u00DCu",
+      "to": "\u0CA5\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00A5\u00DCx",
+      "to": "\u0CA5\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00A5\u00DCz",
+      "to": "\u0CA5\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00A5\u00DC\u00A1",
+      "to": "\u0CA5\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00A5\u00DC\u00A4",
+      "to": "\u0CA5\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00A5\u00DC\u00A7",
+      "to": "\u0CA5\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00A5\u00DC\u00AA",
+      "to": "\u0CA5\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00A5\u00DC\u00B0",
+      "to": "\u0CA5\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00A5\u00DC\u00B3",
+      "to": "\u0CA5\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00A5\u00DC\u00BA",
+      "to": "\u0CA5\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00A5\u00DC\u00BD",
+      "to": "\u0CA5\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00A5\u00DC\u00C2",
+      "to": "\u0CA5\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00A5\u00DC\u00C5",
+      "to": "\u0CA5\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00A5\u00DC\u00C9",
+      "to": "\u0CA5\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00A5\u00DC\u00CC",
+      "to": "\u0CA5\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00A5\u00DC\u00CF",
+      "to": "\u0CA5\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00A5\u00DC\u00D2",
+      "to": "\u0CA5\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00A5\u00DC\u00D5$",
+      "to": "\u0CA5\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00A5\u00DC\u00D8",
+      "to": "\u0CA5\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00A5\u00DC\u00DB",
+      "to": "\u0CA5\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00A5\u00DC\u00E1",
+      "to": "\u0CA5\u0CC1"
+    },
+    {
+      "from": "\u00A5\u00DC\u00E3",
+      "to": "\u0CA5\u0CC2"
+    },
+    {
+      "from": "\u00A5\u00DC\u00EA",
+      "to": "\u0CA5\u0CC3"
+    },
+    {
+      "from": "\u00A5\u00DC\u00EB",
+      "to": "\u0CA5\u0CC4"
+    },
+    {
+      "from": "\u00A5\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00A5\u00DC\u0153",
+      "to": "\u0CA5\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00A5\u00DC\u2022",
+      "to": "\u0CA5\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00A5\u00DD",
+      "to": "\u0CA5\u0CBE"
+    },
+    {
+      "from": "\u00A5\u00E6",
+      "to": "\u0CA5\u0CC6"
+    },
+    {
+      "from": "\u00A5\u00E6\u00E0",
+      "to": "\u0CA5\u0CC7"
+    },
+    {
+      "from": "\u00A5\u00E6\u00E3",
+      "to": "\u0CA5\u0CCA"
+    },
+    {
+      "from": "\u00A5\u00E6\u00E3\u00E0",
+      "to": "\u0CA5\u0CCB"
+    },
+    {
+      "from": "\u00A5\u00E6\u00E7",
+      "to": "\u0CA5\u0CC8"
+    },
+    {
+      "from": "\u00A5\u00E8",
+      "to": "\u0CA5\u0CCC"
+    },
+    {
+      "from": "\u00A5\u2026",
+      "to": "\u0CA5\u0CCD"
+    },
+    {
+      "from": "\u00A6",
+      "to": "\u0CA5\u0CBF"
+    },
+    {
+      "from": "\u00A6\u00E0",
+      "to": "\u0CA5\u0CC0"
+    },
+    {
+      "from": "\u00A8\u00DC",
+      "to": "\u0CA6"
+    },
+    {
+      "from": "\u00A8\u00DC#",
+      "to": "\u0CA6\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00A8\u00DC$\u00BE",
+      "to": "\u0CA6\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00A8\u00DCR",
+      "to": "\u0CA6\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00A8\u00DCV",
+      "to": "\u0CA6\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00A8\u00DCY",
+      "to": "\u0CA6\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00A8\u00DC^",
+      "to": "\u0CA6\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00A8\u00DC\u0060",
+      "to": "\u0CA6\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00A8\u00DCc",
+      "to": "\u0CA6\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00A8\u00DCf",
+      "to": "\u0CA6\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00A8\u00DCj",
+      "to": "\u0CA6\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00A8\u00DCl",
+      "to": "\u0CA6\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00A8\u00DCn",
+      "to": "\u0CA6\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00A8\u00DCr",
+      "to": "\u0CA6\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00A8\u00DCu",
+      "to": "\u0CA6\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00A8\u00DCx",
+      "to": "\u0CA6\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00A8\u00DCz",
+      "to": "\u0CA6\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00A8\u00DC\u00A1",
+      "to": "\u0CA6\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00A8\u00DC\u00A4",
+      "to": "\u0CA6\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00A8\u00DC\u00A7",
+      "to": "\u0CA6\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00A8\u00DC\u00AA",
+      "to": "\u0CA6\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00A8\u00DC\u00B0",
+      "to": "\u0CA6\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00A8\u00DC\u00B3",
+      "to": "\u0CA6\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00A8\u00DC\u00BA",
+      "to": "\u0CA6\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00A8\u00DC\u00BD",
+      "to": "\u0CA6\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00A8\u00DC\u00C2",
+      "to": "\u0CA6\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00A8\u00DC\u00C5",
+      "to": "\u0CA6\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00A8\u00DC\u00C9",
+      "to": "\u0CA6\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00A8\u00DC\u00CC",
+      "to": "\u0CA6\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00A8\u00DC\u00CF",
+      "to": "\u0CA6\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00A8\u00DC\u00D2",
+      "to": "\u0CA6\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00A8\u00DC\u00D5$",
+      "to": "\u0CA6\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00A8\u00DC\u00D8",
+      "to": "\u0CA6\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00A8\u00DC\u00DB",
+      "to": "\u0CA6\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00A8\u00DC\u00E1",
+      "to": "\u0CA6\u0CC1"
+    },
+    {
+      "from": "\u00A8\u00DC\u00E3",
+      "to": "\u0CA6\u0CC2"
+    },
+    {
+      "from": "\u00A8\u00DC\u00EA",
+      "to": "\u0CA6\u0CC3"
+    },
+    {
+      "from": "\u00A8\u00DC\u00EB",
+      "to": "\u0CA6\u0CC4"
+    },
+    {
+      "from": "\u00A8\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00A8\u00DC\u0153",
+      "to": "\u0CA6\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00A8\u00DC\u2022",
+      "to": "\u0CA6\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00A8\u00DD",
+      "to": "\u0CA6\u0CBE"
+    },
+    {
+      "from": "\u00A8\u00E6",
+      "to": "\u0CA6\u0CC6"
+    },
+    {
+      "from": "\u00A8\u00E6\u00E0",
+      "to": "\u0CA6\u0CC7"
+    },
+    {
+      "from": "\u00A8\u00E6\u00E3",
+      "to": "\u0CA6\u0CCA"
+    },
+    {
+      "from": "\u00A8\u00E6\u00E3\u00E0",
+      "to": "\u0CA6\u0CCB"
+    },
+    {
+      "from": "\u00A8\u00E6\u00E7",
+      "to": "\u0CA6\u0CC8"
+    },
+    {
+      "from": "\u00A8\u00E8",
+      "to": "\u0CA6\u0CCC"
+    },
+    {
+      "from": "\u00A8\u2026",
+      "to": "\u0CA6\u0CCD"
+    },
+    {
+      "from": "\u00A9",
+      "to": "\u0CA6\u0CBF"
+    },
+    {
+      "from": "\u00A9\u00E0",
+      "to": "\u0CA6\u0CC0"
+    },
+    {
+      "from": "\u00AB\u00DC",
+      "to": "\u0CA7"
+    },
+    {
+      "from": "\u00AB\u00DC#",
+      "to": "\u0CA7\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00AB\u00DC$\u00BE",
+      "to": "\u0CA7\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00AB\u00DCR",
+      "to": "\u0CA7\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00AB\u00DCV",
+      "to": "\u0CA7\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00AB\u00DCY",
+      "to": "\u0CA7\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00AB\u00DC^",
+      "to": "\u0CA7\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00AB\u00DC\u0060",
+      "to": "\u0CA7\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00AB\u00DCc",
+      "to": "\u0CA7\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00AB\u00DCf",
+      "to": "\u0CA7\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00AB\u00DCj",
+      "to": "\u0CA7\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00AB\u00DCl",
+      "to": "\u0CA7\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00AB\u00DCn",
+      "to": "\u0CA7\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00AB\u00DCr",
+      "to": "\u0CA7\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00AB\u00DCu",
+      "to": "\u0CA7\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00AB\u00DCx",
+      "to": "\u0CA7\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00AB\u00DCz",
+      "to": "\u0CA7\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00AB\u00DC\u00A1",
+      "to": "\u0CA7\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00AB\u00DC\u00A4",
+      "to": "\u0CA7\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00AB\u00DC\u00A7",
+      "to": "\u0CA7\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00AB\u00DC\u00AA",
+      "to": "\u0CA7\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00AB\u00DC\u00B0",
+      "to": "\u0CA7\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00AB\u00DC\u00B3",
+      "to": "\u0CA7\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00AB\u00DC\u00BA",
+      "to": "\u0CA7\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00AB\u00DC\u00BD",
+      "to": "\u0CA7\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00AB\u00DC\u00C2",
+      "to": "\u0CA7\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00AB\u00DC\u00C5",
+      "to": "\u0CA7\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00AB\u00DC\u00C9",
+      "to": "\u0CA7\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00AB\u00DC\u00CC",
+      "to": "\u0CA7\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00AB\u00DC\u00CF",
+      "to": "\u0CA7\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00AB\u00DC\u00D2",
+      "to": "\u0CA7\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00AB\u00DC\u00D5$",
+      "to": "\u0CA7\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00AB\u00DC\u00D8",
+      "to": "\u0CA7\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00AB\u00DC\u00DB",
+      "to": "\u0CA7\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00AB\u00DC\u00E1",
+      "to": "\u0CA7\u0CC1"
+    },
+    {
+      "from": "\u00AB\u00DC\u00E3",
+      "to": "\u0CA7\u0CC2"
+    },
+    {
+      "from": "\u00AB\u00DC\u00EA",
+      "to": "\u0CA7\u0CC3"
+    },
+    {
+      "from": "\u00AB\u00DC\u00EB",
+      "to": "\u0CA7\u0CC4"
+    },
+    {
+      "from": "\u00AB\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00AB\u00DC\u0153",
+      "to": "\u0CA7\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00AB\u00DC\u2022",
+      "to": "\u0CA7\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00AB\u00DD",
+      "to": "\u0CA7\u0CBE"
+    },
+    {
+      "from": "\u00AB\u00E6",
+      "to": "\u0CA7\u0CC6"
+    },
+    {
+      "from": "\u00AB\u00E6\u00E0",
+      "to": "\u0CA7\u0CC7"
+    },
+    {
+      "from": "\u00AB\u00E6\u00E3",
+      "to": "\u0CA7\u0CCA"
+    },
+    {
+      "from": "\u00AB\u00E6\u00E3\u00E0",
+      "to": "\u0CA7\u0CCB"
+    },
+    {
+      "from": "\u00AB\u00E6\u00E7",
+      "to": "\u0CA7\u0CC8"
+    },
+    {
+      "from": "\u00AB\u00E8",
+      "to": "\u0CA7\u0CCC"
+    },
+    {
+      "from": "\u00AB\u2026",
+      "to": "\u0CA7\u0CCD"
+    },
+    {
+      "from": "\u00AE\u00DC",
+      "to": "\u0CA8"
+    },
+    {
+      "from": "\u00AE\u00DC#",
+      "to": "\u0CA8\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00AE\u00DC$\u00BE",
+      "to": "\u0CA8\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00AE\u00DCR",
+      "to": "\u0CA8\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00AE\u00DCV",
+      "to": "\u0CA8\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00AE\u00DCY",
+      "to": "\u0CA8\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00AE\u00DC^",
+      "to": "\u0CA8\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00AE\u00DC\u0060",
+      "to": "\u0CA8\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00AE\u00DCc",
+      "to": "\u0CA8\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00AE\u00DCf",
+      "to": "\u0CA8\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00AE\u00DCj",
+      "to": "\u0CA8\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00AE\u00DCl",
+      "to": "\u0CA8\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00AE\u00DCn",
+      "to": "\u0CA8\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00AE\u00DCr",
+      "to": "\u0CA8\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00AE\u00DCu",
+      "to": "\u0CA8\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00AE\u00DCx",
+      "to": "\u0CA8\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00AE\u00DCz",
+      "to": "\u0CA8\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00AE\u00DC\u00A1",
+      "to": "\u0CA8\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00AE\u00DC\u00A4",
+      "to": "\u0CA8\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00AE\u00DC\u00A7",
+      "to": "\u0CA8\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00AE\u00DC\u00AA",
+      "to": "\u0CA8\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00AE\u00DC\u00B0",
+      "to": "\u0CA8\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00AE\u00DC\u00B3",
+      "to": "\u0CA8\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00AE\u00DC\u00BA",
+      "to": "\u0CA8\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00AE\u00DC\u00BD",
+      "to": "\u0CA8\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00AE\u00DC\u00C2",
+      "to": "\u0CA8\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00AE\u00DC\u00C5",
+      "to": "\u0CA8\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00AE\u00DC\u00C9",
+      "to": "\u0CA8\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00AE\u00DC\u00CC",
+      "to": "\u0CA8\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00AE\u00DC\u00CF",
+      "to": "\u0CA8\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00AE\u00DC\u00D2",
+      "to": "\u0CA8\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00AE\u00DC\u00D5$",
+      "to": "\u0CA8\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00AE\u00DC\u00D8",
+      "to": "\u0CA8\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00AE\u00DC\u00DB",
+      "to": "\u0CA8\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00AE\u00DC\u00E1",
+      "to": "\u0CA8\u0CC1"
+    },
+    {
+      "from": "\u00AE\u00DC\u00E3",
+      "to": "\u0CA8\u0CC2"
+    },
+    {
+      "from": "\u00AE\u00DC\u00EA",
+      "to": "\u0CA8\u0CC3"
+    },
+    {
+      "from": "\u00AE\u00DC\u00EB",
+      "to": "\u0CA8\u0CC4"
+    },
+    {
+      "from": "\u00AE\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00AE\u00DC\u0153",
+      "to": "\u0CA8\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00AE\u00DC\u2022",
+      "to": "\u0CA8\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00AE\u00DD",
+      "to": "\u0CA8\u0CBE"
+    },
+    {
+      "from": "\u00AE\u00E6",
+      "to": "\u0CA8\u0CC6"
+    },
+    {
+      "from": "\u00AE\u00E6\u00E0",
+      "to": "\u0CA8\u0CC7"
+    },
+    {
+      "from": "\u00AE\u00E6\u00E3",
+      "to": "\u0CA8\u0CCA"
+    },
+    {
+      "from": "\u00AE\u00E6\u00E3\u00E0",
+      "to": "\u0CA8\u0CCB"
+    },
+    {
+      "from": "\u00AE\u00E6\u00E7",
+      "to": "\u0CA8\u0CC8"
+    },
+    {
+      "from": "\u00AE\u00E8",
+      "to": "\u0CA8\u0CCC"
+    },
+    {
+      "from": "\u00AE\u2026",
+      "to": "\u0CA8\u0CCD"
+    },
+    {
+      "from": "\u00AF",
+      "to": "\u0CA8\u0CBF"
+    },
+    {
+      "from": "\u00AF\u00E0",
+      "to": "\u0CA8\u0CC0"
+    },
+    {
+      "from": "\u00B1\u00DC",
+      "to": "\u0CAA"
+    },
+    {
+      "from": "\u00B1\u00DC#",
+      "to": "\u0CAA\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00B1\u00DC$\u00BE",
+      "to": "\u0CAA\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00B1\u00DCR",
+      "to": "\u0CAA\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00B1\u00DCV",
+      "to": "\u0CAA\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00B1\u00DCY",
+      "to": "\u0CAA\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00B1\u00DC^",
+      "to": "\u0CAA\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00B1\u00DC\u0060",
+      "to": "\u0CAA\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00B1\u00DCc",
+      "to": "\u0CAA\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00B1\u00DCf",
+      "to": "\u0CAA\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00B1\u00DCj",
+      "to": "\u0CAA\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00B1\u00DCl",
+      "to": "\u0CAA\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00B1\u00DCn",
+      "to": "\u0CAA\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00B1\u00DCr",
+      "to": "\u0CAA\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00B1\u00DCu",
+      "to": "\u0CAA\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00B1\u00DCx",
+      "to": "\u0CAA\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00B1\u00DCz",
+      "to": "\u0CAA\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00B1\u00DC\u00A1",
+      "to": "\u0CAA\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00B1\u00DC\u00A4",
+      "to": "\u0CAA\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00B1\u00DC\u00A7",
+      "to": "\u0CAA\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00B1\u00DC\u00AA",
+      "to": "\u0CAA\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00B1\u00DC\u00B0",
+      "to": "\u0CAA\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00B1\u00DC\u00B3",
+      "to": "\u0CAA\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00B1\u00DC\u00BA",
+      "to": "\u0CAA\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00B1\u00DC\u00BD",
+      "to": "\u0CAA\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00B1\u00DC\u00C2",
+      "to": "\u0CAA\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00B1\u00DC\u00C5",
+      "to": "\u0CAA\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00B1\u00DC\u00C9",
+      "to": "\u0CAA\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00B1\u00DC\u00CC",
+      "to": "\u0CAA\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00B1\u00DC\u00CF",
+      "to": "\u0CAA\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00B1\u00DC\u00D2",
+      "to": "\u0CAA\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00B1\u00DC\u00D5$",
+      "to": "\u0CAA\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00B1\u00DC\u00D8",
+      "to": "\u0CAA\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00B1\u00DC\u00DB",
+      "to": "\u0CAA\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00B1\u00DC\u00E2",
+      "to": "\u0CAA\u0CC1"
+    },
+    {
+      "from": "\u00B1\u00DC\u00E4",
+      "to": "\u0CAA\u0CC2"
+    },
+    {
+      "from": "\u00B1\u00DC\u00EA",
+      "to": "\u0CAA\u0CC3"
+    },
+    {
+      "from": "\u00B1\u00DC\u00EB",
+      "to": "\u0CAA\u0CC4"
+    },
+    {
+      "from": "\u00B1\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00B1\u00DC\u0153",
+      "to": "\u0CAA\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00B1\u00DC\u2022",
+      "to": "\u0CAA\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00B1\u00DD",
+      "to": "\u0CAA\u0CBE"
+    },
+    {
+      "from": "\u00B1\u00E6",
+      "to": "\u0CAA\u0CC6"
+    },
+    {
+      "from": "\u00B1\u00E6\u00E0",
+      "to": "\u0CAA\u0CC7"
+    },
+    {
+      "from": "\u00B1\u00E6\u00E4",
+      "to": "\u0CAA\u0CCA"
+    },
+    {
+      "from": "\u00B1\u00E6\u00E4\u00E0",
+      "to": "\u0CAA\u0CCB"
+    },
+    {
+      "from": "\u00B1\u00E6\u00E7",
+      "to": "\u0CAA\u0CC8"
+    },
+    {
+      "from": "\u00B1\u00E8",
+      "to": "\u0CAA\u0CCC"
+    },
+    {
+      "from": "\u00B1\u2026",
+      "to": "\u0CAA\u0CCD"
+    },
+    {
+      "from": "\u00B2",
+      "to": "\u0CAA\u0CBF"
+    },
+    {
+      "from": "\u00B2\u00E0",
+      "to": "\u0CAA\u0CC0"
+    },
+    {
+      "from": "\u00B5",
+      "to": "\u0CAB\u0CBF"
+    },
+    {
+      "from": "\u00B5\u00E0",
+      "to": "\u0CAB\u0CC0"
+    },
+    {
+      "from": "\u00B6\u00DC",
+      "to": "\u0CAB"
+    },
+    {
+      "from": "\u00B6\u00DC#",
+      "to": "\u0CAB\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00B6\u00DC$\u00BE",
+      "to": "\u0CAB\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00B6\u00DCR",
+      "to": "\u0CAB\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00B6\u00DCV",
+      "to": "\u0CAB\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00B6\u00DCY",
+      "to": "\u0CAB\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00B6\u00DC^",
+      "to": "\u0CAB\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00B6\u00DC\u0060",
+      "to": "\u0CAB\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00B6\u00DCc",
+      "to": "\u0CAB\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00B6\u00DCf",
+      "to": "\u0CAB\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00B6\u00DCj",
+      "to": "\u0CAB\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00B6\u00DCl",
+      "to": "\u0CAB\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00B6\u00DCn",
+      "to": "\u0CAB\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00B6\u00DCr",
+      "to": "\u0CAB\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00B6\u00DCu",
+      "to": "\u0CAB\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00B6\u00DCx",
+      "to": "\u0CAB\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00B6\u00DCz",
+      "to": "\u0CAB\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00B6\u00DC\u00A1",
+      "to": "\u0CAB\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00B6\u00DC\u00A4",
+      "to": "\u0CAB\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00B6\u00DC\u00A7",
+      "to": "\u0CAB\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00B6\u00DC\u00AA",
+      "to": "\u0CAB\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00B6\u00DC\u00B0",
+      "to": "\u0CAB\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00B6\u00DC\u00B3",
+      "to": "\u0CAB\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00B6\u00DC\u00BA",
+      "to": "\u0CAB\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00B6\u00DC\u00BD",
+      "to": "\u0CAB\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00B6\u00DC\u00C2",
+      "to": "\u0CAB\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00B6\u00DC\u00C5",
+      "to": "\u0CAB\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00B6\u00DC\u00C9",
+      "to": "\u0CAB\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00B6\u00DC\u00CC",
+      "to": "\u0CAB\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00B6\u00DC\u00CF",
+      "to": "\u0CAB\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00B6\u00DC\u00D2",
+      "to": "\u0CAB\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00B6\u00DC\u00D5$",
+      "to": "\u0CAB\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00B6\u00DC\u00D8",
+      "to": "\u0CAB\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00B6\u00DC\u00DB",
+      "to": "\u0CAB\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00B6\u00DC\u00E2",
+      "to": "\u0CAB\u0CC1"
+    },
+    {
+      "from": "\u00B6\u00DC\u00E4",
+      "to": "\u0CAB\u0CC2"
+    },
+    {
+      "from": "\u00B6\u00DC\u00EA",
+      "to": "\u0CAB\u0CC3"
+    },
+    {
+      "from": "\u00B6\u00DC\u00EB",
+      "to": "\u0CAB\u0CC4"
+    },
+    {
+      "from": "\u00B6\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00B6\u00DC\u0153",
+      "to": "\u0CAB\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00B6\u00DC\u2022",
+      "to": "\u0CAB\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00B6\u00DD",
+      "to": "\u0CAB\u0CBE"
+    },
+    {
+      "from": "\u00B6\u00E6",
+      "to": "\u0CAB\u0CC6"
+    },
+    {
+      "from": "\u00B6\u00E6\u00E0",
+      "to": "\u0CAB\u0CC7"
+    },
+    {
+      "from": "\u00B6\u00E6\u00E4",
+      "to": "\u0CAB\u0CCA"
+    },
+    {
+      "from": "\u00B6\u00E6\u00E4\u00E0",
+      "to": "\u0CAB\u0CCB"
+    },
+    {
+      "from": "\u00B6\u00E6\u00E7",
+      "to": "\u0CAB\u0CC8"
+    },
+    {
+      "from": "\u00B6\u00E8",
+      "to": "\u0CAB\u0CCC"
+    },
+    {
+      "from": "\u00B6\u2026",
+      "to": "\u0CAB\u0CCD"
+    },
+    {
+      "from": "\u00B8\u00DD",
+      "to": "\u0CAC\u0CBE"
+    },
+    {
+      "from": "\u00B8\u00E6",
+      "to": "\u0CAC\u0CC6"
+    },
+    {
+      "from": "\u00B8\u00E6\u00E0",
+      "to": "\u0CAC\u0CC7"
+    },
+    {
+      "from": "\u00B8\u00E6\u00E3",
+      "to": "\u0CAC\u0CCA"
+    },
+    {
+      "from": "\u00B8\u00E6\u00E3\u00E0",
+      "to": "\u0CAC\u0CCB"
+    },
+    {
+      "from": "\u00B8\u00E6\u00E7",
+      "to": "\u0CAC\u0CC8"
+    },
+    {
+      "from": "\u00B8\u00E8",
+      "to": "\u0CAC\u0CCC"
+    },
+    {
+      "from": "\u00B8\u2026",
+      "to": "\u0CAC\u0CCD"
+    },
+    {
+      "from": "\u00B9",
+      "to": "\u0CAC\u0CBF"
+    },
+    {
+      "from": "\u00B9\u00E0",
+      "to": "\u0CAC\u0CC0"
+    },
+    {
+      "from": "\u00BB\u00DC",
+      "to": "\u0CAD"
+    },
+    {
+      "from": "\u00BB\u00DC#",
+      "to": "\u0CAD\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00BB\u00DC$\u00BE",
+      "to": "\u0CAD\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00BB\u00DCR",
+      "to": "\u0CAD\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00BB\u00DCV",
+      "to": "\u0CAD\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00BB\u00DCY",
+      "to": "\u0CAD\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00BB\u00DC^",
+      "to": "\u0CAD\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00BB\u00DC\u0060",
+      "to": "\u0CAD\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00BB\u00DCc",
+      "to": "\u0CAD\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00BB\u00DCf",
+      "to": "\u0CAD\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00BB\u00DCj",
+      "to": "\u0CAD\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00BB\u00DCl",
+      "to": "\u0CAD\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00BB\u00DCn",
+      "to": "\u0CAD\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00BB\u00DCr",
+      "to": "\u0CAD\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00BB\u00DCu",
+      "to": "\u0CAD\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00BB\u00DCx",
+      "to": "\u0CAD\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00BB\u00DCz",
+      "to": "\u0CAD\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00BB\u00DC\u00A1",
+      "to": "\u0CAD\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00BB\u00DC\u00A4",
+      "to": "\u0CAD\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00BB\u00DC\u00A7",
+      "to": "\u0CAD\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00BB\u00DC\u00AA",
+      "to": "\u0CAD\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00BB\u00DC\u00B0",
+      "to": "\u0CAD\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00BB\u00DC\u00B3",
+      "to": "\u0CAD\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00BB\u00DC\u00BA",
+      "to": "\u0CAD\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00BB\u00DC\u00BD",
+      "to": "\u0CAD\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00BB\u00DC\u00C2",
+      "to": "\u0CAD\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00BB\u00DC\u00C5",
+      "to": "\u0CAD\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00BB\u00DC\u00C9",
+      "to": "\u0CAD\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00BB\u00DC\u00CC",
+      "to": "\u0CAD\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00BB\u00DC\u00CF",
+      "to": "\u0CAD\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00BB\u00DC\u00D2",
+      "to": "\u0CAD\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00BB\u00DC\u00D5$",
+      "to": "\u0CAD\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00BB\u00DC\u00D8",
+      "to": "\u0CAD\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00BB\u00DC\u00DB",
+      "to": "\u0CAD\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00BB\u00DC\u00E1",
+      "to": "\u0CAD\u0CC1"
+    },
+    {
+      "from": "\u00BB\u00DC\u00E3",
+      "to": "\u0CAD\u0CC2"
+    },
+    {
+      "from": "\u00BB\u00DC\u00EA",
+      "to": "\u0CAD\u0CC3"
+    },
+    {
+      "from": "\u00BB\u00DC\u00EB",
+      "to": "\u0CAD\u0CC4"
+    },
+    {
+      "from": "\u00BB\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00BB\u00DC\u0153",
+      "to": "\u0CAD\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00BB\u00DC\u2022",
+      "to": "\u0CAD\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00BB\u00DD",
+      "to": "\u0CAD\u0CBE"
+    },
+    {
+      "from": "\u00BB\u00E6",
+      "to": "\u0CAD\u0CC6"
+    },
+    {
+      "from": "\u00BB\u00E6\u00E0",
+      "to": "\u0CAD\u0CC7"
+    },
+    {
+      "from": "\u00BB\u00E6\u00E3",
+      "to": "\u0CAD\u0CCA"
+    },
+    {
+      "from": "\u00BB\u00E6\u00E3\u00E0",
+      "to": "\u0CAD\u0CCB"
+    },
+    {
+      "from": "\u00BB\u00E6\u00E7",
+      "to": "\u0CAD\u0CC8"
+    },
+    {
+      "from": "\u00BB\u00E8",
+      "to": "\u0CAD\u0CCC"
+    },
+    {
+      "from": "\u00BB\u2026",
+      "to": "\u0CAD\u0CCD"
+    },
+    {
+      "from": "\u00BC",
+      "to": "\u0CAD\u0CBF"
+    },
+    {
+      "from": "\u00BC\u00E0",
+      "to": "\u0CAD\u0CC0"
+    },
+    {
+      "from": "\u00BF\u00DE",
+      "to": "\u0CAF\u0CBE"
+    },
+    {
+      "from": "\u00BF\u00E1",
+      "to": "\u0CAF"
+    },
+    {
+      "from": "\u00BF\u00E1#",
+      "to": "\u0CAF\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00BF\u00E1$\u00BE",
+      "to": "\u0CAF\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00BF\u00E1R",
+      "to": "\u0CAF\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00BF\u00E1V",
+      "to": "\u0CAF\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00BF\u00E1Y",
+      "to": "\u0CAF\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00BF\u00E1^",
+      "to": "\u0CAF\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00BF\u00E1\u0060",
+      "to": "\u0CAF\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00BF\u00E1c",
+      "to": "\u0CAF\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00BF\u00E1f",
+      "to": "\u0CAF\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00BF\u00E1j",
+      "to": "\u0CAF\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00BF\u00E1l",
+      "to": "\u0CAF\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00BF\u00E1n",
+      "to": "\u0CAF\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00BF\u00E1r",
+      "to": "\u0CAF\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00BF\u00E1u",
+      "to": "\u0CAF\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00BF\u00E1x",
+      "to": "\u0CAF\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00BF\u00E1z",
+      "to": "\u0CAF\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00BF\u00E1\u00A1",
+      "to": "\u0CAF\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00BF\u00E1\u00A4",
+      "to": "\u0CAF\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00BF\u00E1\u00A7",
+      "to": "\u0CAF\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00BF\u00E1\u00AA",
+      "to": "\u0CAF\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00BF\u00E1\u00B0",
+      "to": "\u0CAF\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00BF\u00E1\u00B3",
+      "to": "\u0CAF\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00BF\u00E1\u00BA",
+      "to": "\u0CAF\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00BF\u00E1\u00BD",
+      "to": "\u0CAF\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00BF\u00E1\u00C2",
+      "to": "\u0CAF\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00BF\u00E1\u00C5",
+      "to": "\u0CAF\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00BF\u00E1\u00C9",
+      "to": "\u0CAF\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00BF\u00E1\u00CC",
+      "to": "\u0CAF\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00BF\u00E1\u00CF",
+      "to": "\u0CAF\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00BF\u00E1\u00D2",
+      "to": "\u0CAF\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00BF\u00E1\u00D5$",
+      "to": "\u0CAF\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00BF\u00E1\u00D8",
+      "to": "\u0CAF\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00BF\u00E1\u00DB",
+      "to": "\u0CAF\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00BF\u00E1\u00E1",
+      "to": "\u0CAF\u0CC1"
+    },
+    {
+      "from": "\u00BF\u00E1\u00E3",
+      "to": "\u0CAF\u0CC2"
+    },
+    {
+      "from": "\u00BF\u00E1\u00EA",
+      "to": "\u0CAF\u0CC3"
+    },
+    {
+      "from": "\u00BF\u00E1\u00EB",
+      "to": "\u0CAF\u0CC4"
+    },
+    {
+      "from": "\u00BF\u00E1\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00BF\u00E1\u0153",
+      "to": "\u0CAF\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00BF\u00E1\u2022",
+      "to": "\u0CAF\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00BF\u00E5\u00E8",
+      "to": "\u0CAF\u0CCC"
+    },
+    {
+      "from": "\u00BF\u00E5\u2026",
+      "to": "\u0CAF\u0CCD"
+    },
+    {
+      "from": "\u00C0\u00E1",
+      "to": "\u0CAF\u0CBF"
+    },
+    {
+      "from": "\u00C0\u00E1\u00E0",
+      "to": "\u0CAF\u0CC0"
+    },
+    {
+      "from": "\u00C1\u00E1",
+      "to": "\u0CAF\u0CC6"
+    },
+    {
+      "from": "\u00C1\u00E1\u00E0",
+      "to": "\u0CAF\u0CC7"
+    },
+    {
+      "from": "\u00C1\u00E1\u00E7",
+      "to": "\u0CAF\u0CC8"
+    },
+    {
+      "from": "\u00C1\u00E3",
+      "to": "\u0CAF\u0CCA"
+    },
+    {
+      "from": "\u00C1\u00E3\u00E0",
+      "to": "\u0CAF\u0CCB"
+    },
+    {
+      "from": "\u00C3\u00DC",
+      "to": "\u0CB0"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00DE",
+      "to": "\u0C9D\u0CBE"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1",
+      "to": "\u0C9D"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1#",
+      "to": "\u0C9D\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1$\u00BE",
+      "to": "\u0C9D\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1R",
+      "to": "\u0C9D\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1V",
+      "to": "\u0C9D\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1Y",
+      "to": "\u0C9D\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1^",
+      "to": "\u0C9D\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u0060",
+      "to": "\u0C9D\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1c",
+      "to": "\u0C9D\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1f",
+      "to": "\u0C9D\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1j",
+      "to": "\u0C9D\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1l",
+      "to": "\u0C9D\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1n",
+      "to": "\u0C9D\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1r",
+      "to": "\u0C9D\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1u",
+      "to": "\u0C9D\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1x",
+      "to": "\u0C9D\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1z",
+      "to": "\u0C9D\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00A1",
+      "to": "\u0C9D\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00A4",
+      "to": "\u0C9D\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00A7",
+      "to": "\u0C9D\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00AA",
+      "to": "\u0C9D\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00B0",
+      "to": "\u0C9D\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00B3",
+      "to": "\u0C9D\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00BA",
+      "to": "\u0C9D\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00BD",
+      "to": "\u0C9D\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00C2",
+      "to": "\u0C9D\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00C5",
+      "to": "\u0C9D\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00C9",
+      "to": "\u0C9D\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00CC",
+      "to": "\u0C9D\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00CF",
+      "to": "\u0C9D\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00D2",
+      "to": "\u0C9D\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00D5$",
+      "to": "\u0C9D\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00D8",
+      "to": "\u0C9D\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00DB",
+      "to": "\u0C9D\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00E1",
+      "to": "\u0C9D\u0CC1"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00E3",
+      "to": "\u0C9D\u0CC2"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00EA",
+      "to": "\u0C9D\u0CC3"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00EB",
+      "to": "\u0C9D\u0CC4"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u00EC",
+      "to": "\u0CB0\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u0153",
+      "to": "\u0C9D\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E1\u2022",
+      "to": "\u0C9D\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E5\u00E8",
+      "to": "\u0C9D\u0CCC"
+    },
+    {
+      "from": "\u00C3\u00DCk\u00E5\u2026",
+      "to": "\u0C9D\u0CCD"
+    },
+    {
+      "from": "\u00C3\u00DC\u00C5",
+      "to": "\u0CB0\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00C3\u00DC\u00E1",
+      "to": "\u0CB0\u0CC1"
+    },
+    {
+      "from": "\u00C3\u00DC\u00E3",
+      "to": "\u0CB0\u0CC2"
+    },
+    {
+      "from": "\u00C3\u00DC\u00EA",
+      "to": "\u0CB0\u0CC3"
+    },
+    {
+      "from": "\u00C3\u00DC\u00EB",
+      "to": "\u0CB0\u0CC4"
+    },
+    {
+      "from": "\u00C3\u00DD",
+      "to": "\u0CB0\u0CBE"
+    },
+    {
+      "from": "\u00C3\u00E6",
+      "to": "\u0CB0\u0CC6"
+    },
+    {
+      "from": "\u00C3\u00E6k\u00E1",
+      "to": "\u0C9D\u0CC6"
+    },
+    {
+      "from": "\u00C3\u00E6k\u00E1\u00E0",
+      "to": "\u0C9D\u0CC7"
+    },
+    {
+      "from": "\u00C3\u00E6k\u00E1\u00E7",
+      "to": "\u0C9D\u0CC8"
+    },
+    {
+      "from": "\u00C3\u00E6k\u00E3",
+      "to": "\u0C9D\u0CCA"
+    },
+    {
+      "from": "\u00C3\u00E6k\u00E3\u00E0",
+      "to": "\u0C9D\u0CCB"
+    },
+    {
+      "from": "\u00C3\u00E6\u00E0",
+      "to": "\u0CB0\u0CC7"
+    },
+    {
+      "from": "\u00C3\u00E6\u00E3",
+      "to": "\u0CB0\u0CCA"
+    },
+    {
+      "from": "\u00C3\u00E6\u00E3\u00E0",
+      "to": "\u0CB0\u0CCB"
+    },
+    {
+      "from": "\u00C3\u00E6\u00E7",
+      "to": "\u0CB0\u0CC8"
+    },
+    {
+      "from": "\u00C3\u00E8",
+      "to": "\u0CB0\u0CCC"
+    },
+    {
+      "from": "\u00C3\u2026",
+      "to": "\u0CB0\u0CCD"
+    },
+    {
+      "from": "\u00C4",
+      "to": "\u0CB0\u0CBF"
+    },
+    {
+      "from": "\u00C4k\u00E1",
+      "to": "\u0C9D\u0CBF"
+    },
+    {
+      "from": "\u00C4k\u00E1\u00E0",
+      "to": "\u0C9D\u0CC0"
+    },
+    {
+      "from": "\u00C4\u00E0",
+      "to": "\u0CB0\u0CC0"
+    },
+    {
+      "from": "\u00C6",
+      "to": "\u0CB2"
+    },
+    {
+      "from": "\u00C6#",
+      "to": "\u0CB2\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00C6$\u00BE",
+      "to": "\u0CB2\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00C6R",
+      "to": "\u0CB2\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00C6V",
+      "to": "\u0CB2\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00C6Y",
+      "to": "\u0CB2\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00C6^",
+      "to": "\u0CB2\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00C6\u0060",
+      "to": "\u0CB2\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00C6c",
+      "to": "\u0CB2\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00C6f",
+      "to": "\u0CB2\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00C6j",
+      "to": "\u0CB2\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00C6l",
+      "to": "\u0CB2\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00C6n",
+      "to": "\u0CB2\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00C6r",
+      "to": "\u0CB2\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00C6u",
+      "to": "\u0CB2\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00C6x",
+      "to": "\u0CB2\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00C6z",
+      "to": "\u0CB2\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00C6\u00A1",
+      "to": "\u0CB2\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00C6\u00A4",
+      "to": "\u0CB2\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00C6\u00A7",
+      "to": "\u0CB2\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00C6\u00AA",
+      "to": "\u0CB2\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00C6\u00B0",
+      "to": "\u0CB2\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00C6\u00B3",
+      "to": "\u0CB2\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00C6\u00BA",
+      "to": "\u0CB2\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00C6\u00BD",
+      "to": "\u0CB2\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00C6\u00C2",
+      "to": "\u0CB2\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00C6\u00C5",
+      "to": "\u0CB2\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00C6\u00C9",
+      "to": "\u0CB2\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00C6\u00CC",
+      "to": "\u0CB2\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00C6\u00CF",
+      "to": "\u0CB2\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00C6\u00D2",
+      "to": "\u0CB2\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00C6\u00D5$",
+      "to": "\u0CB2\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00C6\u00D8",
+      "to": "\u0CB2\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00C6\u00DB",
+      "to": "\u0CB2\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00C6\u00E1",
+      "to": "\u0CB2\u0CC1"
+    },
+    {
+      "from": "\u00C6\u00E3",
+      "to": "\u0CB2\u0CC2"
+    },
+    {
+      "from": "\u00C6\u00EA",
+      "to": "\u0CB2\u0CC3"
+    },
+    {
+      "from": "\u00C6\u00EB",
+      "to": "\u0CB2\u0CC4"
+    },
+    {
+      "from": "\u00C6\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00C6\u0153",
+      "to": "\u0CB2\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00C6\u2022",
+      "to": "\u0CB2\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00C7\u00DD",
+      "to": "\u0CB2\u0CBE"
+    },
+    {
+      "from": "\u00C7\u00E6",
+      "to": "\u0CB2\u0CC6"
+    },
+    {
+      "from": "\u00C7\u00E6\u00E0",
+      "to": "\u0CB2\u0CC7"
+    },
+    {
+      "from": "\u00C7\u00E6\u00E3",
+      "to": "\u0CB2\u0CCA"
+    },
+    {
+      "from": "\u00C7\u00E6\u00E3\u00E0",
+      "to": "\u0CB2\u0CCB"
+    },
+    {
+      "from": "\u00C7\u00E6\u00E7",
+      "to": "\u0CB2\u0CC8"
+    },
+    {
+      "from": "\u00C7\u00E8",
+      "to": "\u0CB2\u0CCC"
+    },
+    {
+      "from": "\u00C7\u2026",
+      "to": "\u0CB2\u0CCD"
+    },
+    {
+      "from": "\u00C8",
+      "to": "\u0CB2\u0CBF"
+    },
+    {
+      "from": "\u00C8\u00E0",
+      "to": "\u0CB2\u0CC0"
+    },
+    {
+      "from": "\u00CA\u00DC",
+      "to": "\u0CB5"
+    },
+    {
+      "from": "\u00CA\u00DC#",
+      "to": "\u0CB5\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00CA\u00DC$\u00BE",
+      "to": "\u0CB5\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00CA\u00DCR",
+      "to": "\u0CB5\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00CA\u00DCV",
+      "to": "\u0CB5\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00CA\u00DCY",
+      "to": "\u0CB5\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00CA\u00DC^",
+      "to": "\u0CB5\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00CA\u00DC\u0060",
+      "to": "\u0CB5\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00CA\u00DCc",
+      "to": "\u0CB5\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00CA\u00DCf",
+      "to": "\u0CB5\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00CA\u00DCj",
+      "to": "\u0CB5\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00CA\u00DCl",
+      "to": "\u0CB5\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00CA\u00DCn",
+      "to": "\u0CB5\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00CA\u00DCr",
+      "to": "\u0CB5\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00CA\u00DCu",
+      "to": "\u0CB5\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00CA\u00DCx",
+      "to": "\u0CB5\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00CA\u00DCz",
+      "to": "\u0CB5\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00A1",
+      "to": "\u0CB5\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00A4",
+      "to": "\u0CB5\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00CA\u00DC\u00A7",
+      "to": "\u0CB5\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00CA\u00DC\u00AA",
+      "to": "\u0CB5\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00CA\u00DC\u00B0",
+      "to": "\u0CB5\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00CA\u00DC\u00B3",
+      "to": "\u0CB5\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00CA\u00DC\u00BA",
+      "to": "\u0CB5\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00CA\u00DC\u00BD",
+      "to": "\u0CB5\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00CA\u00DC\u00C2",
+      "to": "\u0CB5\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00CA\u00DC\u00C5",
+      "to": "\u0CB5\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00CA\u00DC\u00C9",
+      "to": "\u0CB5\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00CC",
+      "to": "\u0CB5\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00CA\u00DC\u00CF",
+      "to": "\u0CB5\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00CA\u00DC\u00D2",
+      "to": "\u0CB5\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00CA\u00DC\u00D5$",
+      "to": "\u0CB5\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00CA\u00DC\u00D8",
+      "to": "\u0CB5\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00CA\u00DC\u00DB",
+      "to": "\u0CB5\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00DE",
+      "to": "\u0CAE\u0CBE"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1",
+      "to": "\u0CAE"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1#",
+      "to": "\u0CAE\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1$\u00BE",
+      "to": "\u0CAE\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1R",
+      "to": "\u0CAE\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1V",
+      "to": "\u0CAE\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1Y",
+      "to": "\u0CAE\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1^",
+      "to": "\u0CAE\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u0060",
+      "to": "\u0CAE\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1c",
+      "to": "\u0CAE\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1f",
+      "to": "\u0CAE\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1j",
+      "to": "\u0CAE\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1l",
+      "to": "\u0CAE\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1n",
+      "to": "\u0CAE\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1r",
+      "to": "\u0CAE\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1u",
+      "to": "\u0CAE\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1x",
+      "to": "\u0CAE\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1z",
+      "to": "\u0CAE\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00A1",
+      "to": "\u0CAE\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00A4",
+      "to": "\u0CAE\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00A7",
+      "to": "\u0CAE\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00AA",
+      "to": "\u0CAE\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00B0",
+      "to": "\u0CAE\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00B3",
+      "to": "\u0CAE\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00BA",
+      "to": "\u0CAE\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00BD",
+      "to": "\u0CAE\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00C2",
+      "to": "\u0CAE\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00C5",
+      "to": "\u0CAE\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00C9",
+      "to": "\u0CAE\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00CC",
+      "to": "\u0CAE\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00CF",
+      "to": "\u0CAE\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00D2",
+      "to": "\u0CAE\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00D5$",
+      "to": "\u0CAE\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00D8",
+      "to": "\u0CAE\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00DB",
+      "to": "\u0CAE\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00E1",
+      "to": "\u0CAE\u0CC1"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00E3",
+      "to": "\u0CAE\u0CC2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00EA",
+      "to": "\u0CAE\u0CC3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00EB",
+      "to": "\u0CAE\u0CC4"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u0153",
+      "to": "\u0CAE\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E1\u2022",
+      "to": "\u0CAE\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E2",
+      "to": "\u0CB5\u0CC1"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E4",
+      "to": "\u0CB5\u0CC2"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E5\u00E8",
+      "to": "\u0CAE\u0CCC"
+    },
+    {
+      "from": "\u00CA\u00DC\u00E5\u2026",
+      "to": "\u0CAE\u0CCD"
+    },
+    {
+      "from": "\u00CA\u00DC\u00EA",
+      "to": "\u0CB5\u0CC3"
+    },
+    {
+      "from": "\u00CA\u00DC\u00EB",
+      "to": "\u0CB5\u0CC4"
+    },
+    {
+      "from": "\u00CA\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00CA\u00DC\u0153",
+      "to": "\u0CB5\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00CA\u00DC\u2022",
+      "to": "\u0CB5\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00CA\u00DD",
+      "to": "\u0CB5\u0CBE"
+    },
+    {
+      "from": "\u00CA\u00E6",
+      "to": "\u0CB5\u0CC6"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E0",
+      "to": "\u0CB5\u0CC7"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E1",
+      "to": "\u0CAE\u0CC6"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E1\u00E0",
+      "to": "\u0CAE\u0CC7"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E1\u00E7",
+      "to": "\u0CAE\u0CC8"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E3",
+      "to": "\u0CAE\u0CCA"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E3\u00E0",
+      "to": "\u0CAE\u0CCB"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E4",
+      "to": "\u0CB5\u0CCA"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E4\u00E0",
+      "to": "\u0CB5\u0CCB"
+    },
+    {
+      "from": "\u00CA\u00E6\u00E7",
+      "to": "\u0CB5\u0CC8"
+    },
+    {
+      "from": "\u00CA\u00E8",
+      "to": "\u0CB5\u0CCC"
+    },
+    {
+      "from": "\u00CA\u2026",
+      "to": "\u0CB5\u0CCD"
+    },
+    {
+      "from": "\u00CB",
+      "to": "\u0CB5\u0CBF"
+    },
+    {
+      "from": "\u00CB\u00E0",
+      "to": "\u0CB5\u0CC0"
+    },
+    {
+      "from": "\u00CB\u00E1",
+      "to": "\u0CAE\u0CBF"
+    },
+    {
+      "from": "\u00CB\u00E1\u00E0",
+      "to": "\u0CAE\u0CC0"
+    },
+    {
+      "from": "\u00CD\u00DC",
+      "to": "\u0CB6"
+    },
+    {
+      "from": "\u00CD\u00DC#",
+      "to": "\u0CB6\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00CD\u00DC$\u00BE",
+      "to": "\u0CB6\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00CD\u00DCR",
+      "to": "\u0CB6\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00CD\u00DCV",
+      "to": "\u0CB6\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00CD\u00DCY",
+      "to": "\u0CB6\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00CD\u00DC^",
+      "to": "\u0CB6\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00CD\u00DC\u0060",
+      "to": "\u0CB6\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00CD\u00DCc",
+      "to": "\u0CB6\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00CD\u00DCf",
+      "to": "\u0CB6\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00CD\u00DCj",
+      "to": "\u0CB6\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00CD\u00DCl",
+      "to": "\u0CB6\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00CD\u00DCn",
+      "to": "\u0CB6\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00CD\u00DCr",
+      "to": "\u0CB6\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00CD\u00DCu",
+      "to": "\u0CB6\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00CD\u00DCx",
+      "to": "\u0CB6\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00CD\u00DCz",
+      "to": "\u0CB6\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00CD\u00DC\u00A1",
+      "to": "\u0CB6\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00CD\u00DC\u00A4",
+      "to": "\u0CB6\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00CD\u00DC\u00A7",
+      "to": "\u0CB6\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00CD\u00DC\u00AA",
+      "to": "\u0CB6\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00CD\u00DC\u00B0",
+      "to": "\u0CB6\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00CD\u00DC\u00B3",
+      "to": "\u0CB6\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00CD\u00DC\u00BA",
+      "to": "\u0CB6\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00CD\u00DC\u00BD",
+      "to": "\u0CB6\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00CD\u00DC\u00C2",
+      "to": "\u0CB6\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00CD\u00DC\u00C5",
+      "to": "\u0CB6\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00CD\u00DC\u00C9",
+      "to": "\u0CB6\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00CD\u00DC\u00CC",
+      "to": "\u0CB6\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00CD\u00DC\u00CF",
+      "to": "\u0CB6\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00CD\u00DC\u00D2",
+      "to": "\u0CB6\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00CD\u00DC\u00D5$",
+      "to": "\u0CB6\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00CD\u00DC\u00D8",
+      "to": "\u0CB6\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00CD\u00DC\u00DB",
+      "to": "\u0CB6\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00CD\u00DC\u00E1",
+      "to": "\u0CB6\u0CC1"
+    },
+    {
+      "from": "\u00CD\u00DC\u00E3",
+      "to": "\u0CB6\u0CC2"
+    },
+    {
+      "from": "\u00CD\u00DC\u00EA",
+      "to": "\u0CB6\u0CC3"
+    },
+    {
+      "from": "\u00CD\u00DC\u00EB",
+      "to": "\u0CB6\u0CC4"
+    },
+    {
+      "from": "\u00CD\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00CD\u00DC\u0153",
+      "to": "\u0CB6\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00CD\u00DC\u2022",
+      "to": "\u0CB6\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00CD\u00DD",
+      "to": "\u0CB6\u0CBE"
+    },
+    {
+      "from": "\u00CD\u00E6",
+      "to": "\u0CB6\u0CC6"
+    },
+    {
+      "from": "\u00CD\u00E6\u00E0",
+      "to": "\u0CB6\u0CC7"
+    },
+    {
+      "from": "\u00CD\u00E6\u00E3",
+      "to": "\u0CB6\u0CCA"
+    },
+    {
+      "from": "\u00CD\u00E6\u00E3\u00E0",
+      "to": "\u0CB6\u0CCB"
+    },
+    {
+      "from": "\u00CD\u00E6\u00E7",
+      "to": "\u0CB6\u0CC8"
+    },
+    {
+      "from": "\u00CD\u00E8",
+      "to": "\u0CB6\u0CCC"
+    },
+    {
+      "from": "\u00CD\u2026",
+      "to": "\u0CB6\u0CCD"
+    },
+    {
+      "from": "\u00CE",
+      "to": "\u0CB6\u0CBF"
+    },
+    {
+      "from": "\u00CE\u00E0",
+      "to": "\u0CB6\u0CC0"
+    },
+    {
+      "from": "\u00D0\u00DC",
+      "to": "\u0CB7"
+    },
+    {
+      "from": "\u00D0\u00DC#",
+      "to": "\u0CB7\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00D0\u00DC$\u00BE",
+      "to": "\u0CB7\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00D0\u00DCR",
+      "to": "\u0CB7\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00D0\u00DCV",
+      "to": "\u0CB7\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00D0\u00DCY",
+      "to": "\u0CB7\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00D0\u00DC^",
+      "to": "\u0CB7\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00D0\u00DC\u0060",
+      "to": "\u0CB7\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00D0\u00DCc",
+      "to": "\u0CB7\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00D0\u00DCf",
+      "to": "\u0CB7\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00D0\u00DCj",
+      "to": "\u0CB7\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00D0\u00DCl",
+      "to": "\u0CB7\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00D0\u00DCn",
+      "to": "\u0CB7\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00D0\u00DCr",
+      "to": "\u0CB7\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00D0\u00DCu",
+      "to": "\u0CB7\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00D0\u00DCx",
+      "to": "\u0CB7\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00D0\u00DCz",
+      "to": "\u0CB7\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00D0\u00DC\u00A1",
+      "to": "\u0CB7\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00D0\u00DC\u00A4",
+      "to": "\u0CB7\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00D0\u00DC\u00A7",
+      "to": "\u0CB7\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00D0\u00DC\u00AA",
+      "to": "\u0CB7\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00D0\u00DC\u00B0",
+      "to": "\u0CB7\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00D0\u00DC\u00B3",
+      "to": "\u0CB7\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00D0\u00DC\u00BA",
+      "to": "\u0CB7\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00D0\u00DC\u00BD",
+      "to": "\u0CB7\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00D0\u00DC\u00C2",
+      "to": "\u0CB7\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00D0\u00DC\u00C5",
+      "to": "\u0CB7\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00D0\u00DC\u00C9",
+      "to": "\u0CB7\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00D0\u00DC\u00CC",
+      "to": "\u0CB7\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00D0\u00DC\u00CF",
+      "to": "\u0CB7\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00D0\u00DC\u00D2",
+      "to": "\u0CB7\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00D0\u00DC\u00D5$",
+      "to": "\u0CB7\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00D0\u00DC\u00D8",
+      "to": "\u0CB7\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00D0\u00DC\u00DB",
+      "to": "\u0CB7\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00D0\u00DC\u00E1",
+      "to": "\u0CB7\u0CC1"
+    },
+    {
+      "from": "\u00D0\u00DC\u00E3",
+      "to": "\u0CB7\u0CC2"
+    },
+    {
+      "from": "\u00D0\u00DC\u00EA",
+      "to": "\u0CB7\u0CC3"
+    },
+    {
+      "from": "\u00D0\u00DC\u00EB",
+      "to": "\u0CB7\u0CC4"
+    },
+    {
+      "from": "\u00D0\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00D0\u00DC\u0153",
+      "to": "\u0CB7\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00D0\u00DC\u2022",
+      "to": "\u0CB7\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00D0\u00DD",
+      "to": "\u0CB7\u0CBE"
+    },
+    {
+      "from": "\u00D0\u00E6",
+      "to": "\u0CB7\u0CC6"
+    },
+    {
+      "from": "\u00D0\u00E6\u00E0",
+      "to": "\u0CB7\u0CC7"
+    },
+    {
+      "from": "\u00D0\u00E6\u00E3",
+      "to": "\u0CB7\u0CCA"
+    },
+    {
+      "from": "\u00D0\u00E6\u00E3\u00E0",
+      "to": "\u0CB7\u0CCB"
+    },
+    {
+      "from": "\u00D0\u00E6\u00E7",
+      "to": "\u0CB7\u0CC8"
+    },
+    {
+      "from": "\u00D0\u00E8",
+      "to": "\u0CB7\u0CCC"
+    },
+    {
+      "from": "\u00D0\u2026",
+      "to": "\u0CB7\u0CCD"
+    },
+    {
+      "from": "\u00D1",
+      "to": "\u0CB7\u0CBF"
+    },
+    {
+      "from": "\u00D1\u00E0",
+      "to": "\u0CB7\u0CC0"
+    },
+    {
+      "from": "\u00D3\u00DC",
+      "to": "\u0CB8"
+    },
+    {
+      "from": "\u00D3\u00DC#",
+      "to": "\u0CB8\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00D3\u00DC$\u00BE",
+      "to": "\u0CB8\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00D3\u00DCR",
+      "to": "\u0CB8\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00D3\u00DCV",
+      "to": "\u0CB8\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00D3\u00DCY",
+      "to": "\u0CB8\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00D3\u00DC^",
+      "to": "\u0CB8\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00D3\u00DC\u0060",
+      "to": "\u0CB8\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00D3\u00DCc",
+      "to": "\u0CB8\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00D3\u00DCf",
+      "to": "\u0CB8\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00D3\u00DCj",
+      "to": "\u0CB8\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00D3\u00DCl",
+      "to": "\u0CB8\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00D3\u00DCn",
+      "to": "\u0CB8\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00D3\u00DCr",
+      "to": "\u0CB8\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00D3\u00DCu",
+      "to": "\u0CB8\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00D3\u00DCx",
+      "to": "\u0CB8\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00D3\u00DCz",
+      "to": "\u0CB8\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00D3\u00DC\u00A1",
+      "to": "\u0CB8\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00D3\u00DC\u00A4",
+      "to": "\u0CB8\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00D3\u00DC\u00A7",
+      "to": "\u0CB8\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00D3\u00DC\u00AA",
+      "to": "\u0CB8\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00D3\u00DC\u00B0",
+      "to": "\u0CB8\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00D3\u00DC\u00B3",
+      "to": "\u0CB8\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00D3\u00DC\u00BA",
+      "to": "\u0CB8\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00D3\u00DC\u00BD",
+      "to": "\u0CB8\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00D3\u00DC\u00C2",
+      "to": "\u0CB8\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00D3\u00DC\u00C5",
+      "to": "\u0CB8\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00D3\u00DC\u00C9",
+      "to": "\u0CB8\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00D3\u00DC\u00CC",
+      "to": "\u0CB8\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00D3\u00DC\u00CF",
+      "to": "\u0CB8\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00D3\u00DC\u00D2",
+      "to": "\u0CB8\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00D3\u00DC\u00D5$",
+      "to": "\u0CB8\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00D3\u00DC\u00D8",
+      "to": "\u0CB8\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00D3\u00DC\u00DB",
+      "to": "\u0CB8\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00D3\u00DC\u00E1",
+      "to": "\u0CB8\u0CC1"
+    },
+    {
+      "from": "\u00D3\u00DC\u00E3",
+      "to": "\u0CB8\u0CC2"
+    },
+    {
+      "from": "\u00D3\u00DC\u00EA",
+      "to": "\u0CB8\u0CC3"
+    },
+    {
+      "from": "\u00D3\u00DC\u00EB",
+      "to": "\u0CB8\u0CC4"
+    },
+    {
+      "from": "\u00D3\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00D3\u00DC\u0153",
+      "to": "\u0CB8\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00D3\u00DC\u2022",
+      "to": "\u0CB8\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00D3\u00DD",
+      "to": "\u0CB8\u0CBE"
+    },
+    {
+      "from": "\u00D3\u00E6",
+      "to": "\u0CB8\u0CC6"
+    },
+    {
+      "from": "\u00D3\u00E6\u00E0",
+      "to": "\u0CB8\u0CC7"
+    },
+    {
+      "from": "\u00D3\u00E6\u00E3",
+      "to": "\u0CB8\u0CCA"
+    },
+    {
+      "from": "\u00D3\u00E6\u00E3\u00E0",
+      "to": "\u0CB8\u0CCB"
+    },
+    {
+      "from": "\u00D3\u00E6\u00E7",
+      "to": "\u0CB8\u0CC8"
+    },
+    {
+      "from": "\u00D3\u00E8",
+      "to": "\u0CB8\u0CCC"
+    },
+    {
+      "from": "\u00D3\u2026",
+      "to": "\u0CB8\u0CCD"
+    },
+    {
+      "from": "\u00D4",
+      "to": "\u0CB8\u0CBF"
+    },
+    {
+      "from": "\u00D4\u00E0",
+      "to": "\u0CB8\u0CC0"
+    },
+    {
+      "from": "\u00D6\u00DC",
+      "to": "\u0CB9"
+    },
+    {
+      "from": "\u00D6\u00DC#",
+      "to": "\u0CB9\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00D6\u00DC$\u00BE",
+      "to": "\u0CB9\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00D6\u00DCR",
+      "to": "\u0CB9\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00D6\u00DCV",
+      "to": "\u0CB9\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00D6\u00DCY",
+      "to": "\u0CB9\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00D6\u00DC^",
+      "to": "\u0CB9\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00D6\u00DC\u0060",
+      "to": "\u0CB9\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00D6\u00DCc",
+      "to": "\u0CB9\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00D6\u00DCf",
+      "to": "\u0CB9\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00D6\u00DCj",
+      "to": "\u0CB9\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00D6\u00DCl",
+      "to": "\u0CB9\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00D6\u00DCn",
+      "to": "\u0CB9\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00D6\u00DCr",
+      "to": "\u0CB9\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00D6\u00DCu",
+      "to": "\u0CB9\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00D6\u00DCx",
+      "to": "\u0CB9\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00D6\u00DCz",
+      "to": "\u0CB9\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00D6\u00DC\u00A1",
+      "to": "\u0CB9\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00D6\u00DC\u00A4",
+      "to": "\u0CB9\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00D6\u00DC\u00A7",
+      "to": "\u0CB9\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00D6\u00DC\u00AA",
+      "to": "\u0CB9\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00D6\u00DC\u00B0",
+      "to": "\u0CB9\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00D6\u00DC\u00B3",
+      "to": "\u0CB9\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00D6\u00DC\u00BA",
+      "to": "\u0CB9\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00D6\u00DC\u00BD",
+      "to": "\u0CB9\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00D6\u00DC\u00C2",
+      "to": "\u0CB9\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00D6\u00DC\u00C5",
+      "to": "\u0CB9\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00D6\u00DC\u00C9",
+      "to": "\u0CB9\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00D6\u00DC\u00CC",
+      "to": "\u0CB9\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00D6\u00DC\u00CF",
+      "to": "\u0CB9\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00D6\u00DC\u00D2",
+      "to": "\u0CB9\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00D6\u00DC\u00D5$",
+      "to": "\u0CB9\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00D6\u00DC\u00D8",
+      "to": "\u0CB9\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00D6\u00DC\u00DB",
+      "to": "\u0CB9\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00D6\u00DC\u00E1",
+      "to": "\u0CB9\u0CC1"
+    },
+    {
+      "from": "\u00D6\u00DC\u00E3",
+      "to": "\u0CB9\u0CC2"
+    },
+    {
+      "from": "\u00D6\u00DC\u00EA",
+      "to": "\u0CB9\u0CC3"
+    },
+    {
+      "from": "\u00D6\u00DC\u00EB",
+      "to": "\u0CB9\u0CC4"
+    },
+    {
+      "from": "\u00D6\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00D6\u00DC\u0153",
+      "to": "\u0CB9\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00D6\u00DC\u2022",
+      "to": "\u0CB9\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00D6\u00DD",
+      "to": "\u0CB9\u0CBE"
+    },
+    {
+      "from": "\u00D6\u00E6",
+      "to": "\u0CB9\u0CC6"
+    },
+    {
+      "from": "\u00D6\u00E6\u00E0",
+      "to": "\u0CB9\u0CC7"
+    },
+    {
+      "from": "\u00D6\u00E6\u00E3",
+      "to": "\u0CB9\u0CCA"
+    },
+    {
+      "from": "\u00D6\u00E6\u00E3\u00E0",
+      "to": "\u0CB9\u0CCB"
+    },
+    {
+      "from": "\u00D6\u00E6\u00E7",
+      "to": "\u0CB9\u0CC8"
+    },
+    {
+      "from": "\u00D6\u00E8",
+      "to": "\u0CB9\u0CCC"
+    },
+    {
+      "from": "\u00D6\u2026",
+      "to": "\u0CB9\u0CCD"
+    },
+    {
+      "from": "\u00D7",
+      "to": "\u0CB9\u0CBF"
+    },
+    {
+      "from": "\u00D7\u00E0",
+      "to": "\u0CB9\u0CC0"
+    },
+    {
+      "from": "\u00D9\u00DC",
+      "to": "\u0CB3"
+    },
+    {
+      "from": "\u00D9\u00DC#",
+      "to": "\u0CB3\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00D9\u00DC$\u00BE",
+      "to": "\u0CB3\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00D9\u00DCR",
+      "to": "\u0CB3\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00D9\u00DCV",
+      "to": "\u0CB3\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00D9\u00DCY",
+      "to": "\u0CB3\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00D9\u00DC^",
+      "to": "\u0CB3\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00D9\u00DC\u0060",
+      "to": "\u0CB3\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00D9\u00DCc",
+      "to": "\u0CB3\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00D9\u00DCf",
+      "to": "\u0CB3\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00D9\u00DCj",
+      "to": "\u0CB3\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00D9\u00DCl",
+      "to": "\u0CB3\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00D9\u00DCn",
+      "to": "\u0CB3\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00D9\u00DCr",
+      "to": "\u0CB3\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00D9\u00DCu",
+      "to": "\u0CB3\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00D9\u00DCx",
+      "to": "\u0CB3\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00D9\u00DCz",
+      "to": "\u0CB3\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00D9\u00DC\u00A1",
+      "to": "\u0CB3\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00D9\u00DC\u00A4",
+      "to": "\u0CB3\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00D9\u00DC\u00A7",
+      "to": "\u0CB3\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00D9\u00DC\u00AA",
+      "to": "\u0CB3\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00D9\u00DC\u00B0",
+      "to": "\u0CB3\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00D9\u00DC\u00B3",
+      "to": "\u0CB3\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00D9\u00DC\u00BA",
+      "to": "\u0CB3\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00D9\u00DC\u00BD",
+      "to": "\u0CB3\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00D9\u00DC\u00C2",
+      "to": "\u0CB3\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00D9\u00DC\u00C5",
+      "to": "\u0CB3\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00D9\u00DC\u00C9",
+      "to": "\u0CB3\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00D9\u00DC\u00CC",
+      "to": "\u0CB3\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00D9\u00DC\u00CF",
+      "to": "\u0CB3\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00D9\u00DC\u00D2",
+      "to": "\u0CB3\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00D9\u00DC\u00D5$",
+      "to": "\u0CB3\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00D9\u00DC\u00D8",
+      "to": "\u0CB3\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00D9\u00DC\u00DB",
+      "to": "\u0CB3\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00D9\u00DC\u00E1",
+      "to": "\u0CB3\u0CC1"
+    },
+    {
+      "from": "\u00D9\u00DC\u00E3",
+      "to": "\u0CB3\u0CC2"
+    },
+    {
+      "from": "\u00D9\u00DC\u00EA",
+      "to": "\u0CB3\u0CC3"
+    },
+    {
+      "from": "\u00D9\u00DC\u00EB",
+      "to": "\u0CB3\u0CC4"
+    },
+    {
+      "from": "\u00D9\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00D9\u00DC\u0153",
+      "to": "\u0CB3\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00D9\u00DC\u2022",
+      "to": "\u0CB3\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00D9\u00DD",
+      "to": "\u0CB3\u0CBE"
+    },
+    {
+      "from": "\u00D9\u00E6",
+      "to": "\u0CB3\u0CC6"
+    },
+    {
+      "from": "\u00D9\u00E6\u00E0",
+      "to": "\u0CB3\u0CC7"
+    },
+    {
+      "from": "\u00D9\u00E6\u00E3",
+      "to": "\u0CB3\u0CCA"
+    },
+    {
+      "from": "\u00D9\u00E6\u00E3\u00E0",
+      "to": "\u0CB3\u0CCB"
+    },
+    {
+      "from": "\u00D9\u00E6\u00E7",
+      "to": "\u0CB3\u0CC8"
+    },
+    {
+      "from": "\u00D9\u00E8",
+      "to": "\u0CB3\u0CCC"
+    },
+    {
+      "from": "\u00D9\u2026",
+      "to": "\u0CB3\u0CCD"
+    },
+    {
+      "from": "\u00DA",
+      "to": "\u0CB3\u0CBF"
+    },
+    {
+      "from": "\u00DA\u00E0",
+      "to": "\u0CB3\u0CC0"
+    },
+    {
+      "from": "\u00DD",
+      "to": "\u0CBE"
+    },
+    {
+      "from": "\u00DF",
+      "to": "\u0CBF"
+    },
+    {
+      "from": "\u00E0",
+      "to": "\u0CD5"
+    },
+    {
+      "from": "\u00E1",
+      "to": "\u0CC1"
+    },
+    {
+      "from": "\u00E3",
+      "to": "\u0CC2"
+    },
+    {
+      "from": "\u00E6",
+      "to": "\u0CC6"
+    },
+    {
+      "from": "\u00E6\u00E3",
+      "to": "\u0CCA"
+    },
+    {
+      "from": "\u00E7",
+      "to": "\u0CD6"
+    },
+    {
+      "from": "\u00E8",
+      "to": "\u0CCC"
+    },
+    {
+      "from": "\u00EA",
+      "to": "\u0CC3"
+    },
+    {
+      "from": "\u00EB",
+      "to": "\u0CC4"
+    },
+    {
+      "from": "\u00ED",
+      "to": "\u0C82"
+    },
+    {
+      "from": "\u00F1\u00DC",
+      "to": "\u0CA4"
+    },
+    {
+      "from": "\u00F1\u00DC#",
+      "to": "\u0CA4\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u00F1\u00DC$\u00BE",
+      "to": "\u0CA4\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u00F1\u00DCR",
+      "to": "\u0CA4\u0CCD\u0C95"
+    },
+    {
+      "from": "\u00F1\u00DCV",
+      "to": "\u0CA4\u0CCD\u0C96"
+    },
+    {
+      "from": "\u00F1\u00DCY",
+      "to": "\u0CA4\u0CCD\u0C97"
+    },
+    {
+      "from": "\u00F1\u00DC^",
+      "to": "\u0CA4\u0CCD\u0C98"
+    },
+    {
+      "from": "\u00F1\u00DC\u0060",
+      "to": "\u0CA4\u0CCD\u0C99"
+    },
+    {
+      "from": "\u00F1\u00DCc",
+      "to": "\u0CA4\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u00F1\u00DCf",
+      "to": "\u0CA4\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u00F1\u00DCj",
+      "to": "\u0CA4\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u00F1\u00DCl",
+      "to": "\u0CA4\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u00F1\u00DCn",
+      "to": "\u0CA4\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u00F1\u00DCr",
+      "to": "\u0CA4\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u00F1\u00DCu",
+      "to": "\u0CA4\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u00F1\u00DCx",
+      "to": "\u0CA4\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u00F1\u00DCz",
+      "to": "\u0CA4\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u00F1\u00DC\u00A1",
+      "to": "\u0CA4\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u00F1\u00DC\u00A4",
+      "to": "\u0CA4\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00F1\u00DC\u00A7",
+      "to": "\u0CA4\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u00F1\u00DC\u00AA",
+      "to": "\u0CA4\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u00F1\u00DC\u00B0",
+      "to": "\u0CA4\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u00F1\u00DC\u00B3",
+      "to": "\u0CA4\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u00F1\u00DC\u00BA",
+      "to": "\u0CA4\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u00F1\u00DC\u00BD",
+      "to": "\u0CA4\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u00F1\u00DC\u00C2",
+      "to": "\u0CA4\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u00F1\u00DC\u00C5",
+      "to": "\u0CA4\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u00F1\u00DC\u00C9",
+      "to": "\u0CA4\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u00F1\u00DC\u00CC",
+      "to": "\u0CA4\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u00F1\u00DC\u00CF",
+      "to": "\u0CA4\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u00F1\u00DC\u00D2",
+      "to": "\u0CA4\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00F1\u00DC\u00D5$",
+      "to": "\u0CA4\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u00F1\u00DC\u00D8",
+      "to": "\u0CA4\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u00F1\u00DC\u00DB",
+      "to": "\u0CA4\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u00F1\u00DC\u00E1",
+      "to": "\u0CA4\u0CC1"
+    },
+    {
+      "from": "\u00F1\u00DC\u00E3",
+      "to": "\u0CA4\u0CC2"
+    },
+    {
+      "from": "\u00F1\u00DC\u00EA",
+      "to": "\u0CA4\u0CC3"
+    },
+    {
+      "from": "\u00F1\u00DC\u00EB",
+      "to": "\u0CA4\u0CC4"
+    },
+    {
+      "from": "\u00F1\u00DC\u00EC",
+      "to": "\u0CB0\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u00F1\u00DC\u0153",
+      "to": "\u0CA4\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u00F1\u00DC\u2022",
+      "to": "\u0CA4\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u00F1\u00DD",
+      "to": "\u0CA4\u0CBE"
+    },
+    {
+      "from": "\u00F1\u00E6",
+      "to": "\u0CA4\u0CC6"
+    },
+    {
+      "from": "\u00F1\u00E6\u00E0",
+      "to": "\u0CA4\u0CC7"
+    },
+    {
+      "from": "\u00F1\u00E6\u00E3",
+      "to": "\u0CA4\u0CCA"
+    },
+    {
+      "from": "\u00F1\u00E6\u00E3\u00E0",
+      "to": "\u0CA4\u0CCB"
+    },
+    {
+      "from": "\u00F1\u00E6\u00E7",
+      "to": "\u0CA4\u0CC8"
+    },
+    {
+      "from": "\u00F1\u00E8",
+      "to": "\u0CA4\u0CCC"
+    },
+    {
+      "from": "\u00F1\u2026",
+      "to": "\u0CA4\u0CCD"
+    },
+    {
+      "from": "\u00FB\u00DC",
+      "to": "\u0C95\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u00FD",
+      "to": "\u0C9C\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u0161",
+      "to": "\u0C99"
+    },
+    {
+      "from": "\u0161#",
+      "to": "\u0C99\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u0161$\u00BE",
+      "to": "\u0C99\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u0161R",
+      "to": "\u0C99\u0CCD\u0C95"
+    },
+    {
+      "from": "\u0161V",
+      "to": "\u0C99\u0CCD\u0C96"
+    },
+    {
+      "from": "\u0161Y",
+      "to": "\u0C99\u0CCD\u0C97"
+    },
+    {
+      "from": "\u0161^",
+      "to": "\u0C99\u0CCD\u0C98"
+    },
+    {
+      "from": "\u0161\u0060",
+      "to": "\u0C99\u0CCD\u0C99"
+    },
+    {
+      "from": "\u0161c",
+      "to": "\u0C99\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u0161f",
+      "to": "\u0C99\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u0161j",
+      "to": "\u0C99\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u0161l",
+      "to": "\u0C99\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u0161n",
+      "to": "\u0C99\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u0161r",
+      "to": "\u0C99\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u0161u",
+      "to": "\u0C99\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u0161x",
+      "to": "\u0C99\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u0161z",
+      "to": "\u0C99\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u0161\u00A1",
+      "to": "\u0C99\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u0161\u00A4",
+      "to": "\u0C99\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u0161\u00A7",
+      "to": "\u0C99\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u0161\u00AA",
+      "to": "\u0C99\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u0161\u00B0",
+      "to": "\u0C99\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u0161\u00B3",
+      "to": "\u0C99\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u0161\u00BA",
+      "to": "\u0C99\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u0161\u00BD",
+      "to": "\u0C99\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u0161\u00C2",
+      "to": "\u0C99\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u0161\u00C5",
+      "to": "\u0C99\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u0161\u00C9",
+      "to": "\u0C99\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u0161\u00CC",
+      "to": "\u0C99\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u0161\u00CF",
+      "to": "\u0C99\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u0161\u00D2",
+      "to": "\u0C99\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u0161\u00D5$",
+      "to": "\u0C99\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u0161\u00D8",
+      "to": "\u0C99\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u0161\u00DB",
+      "to": "\u0C99\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u0161\u00DF",
+      "to": "\u0C99\u0CBF"
+    },
+    {
+      "from": "\u0161\u00E1",
+      "to": "\u0C99\u0CC1"
+    },
+    {
+      "from": "\u0161\u00E3",
+      "to": "\u0C99\u0CC2"
+    },
+    {
+      "from": "\u0161\u00E5\u00E8",
+      "to": "\u0C99\u0CCC"
+    },
+    {
+      "from": "\u0161\u00EA",
+      "to": "\u0C99\u0CC3"
+    },
+    {
+      "from": "\u0161\u00EB",
+      "to": "\u0C99\u0CC4"
+    },
+    {
+      "from": "\u0161\u00EC",
+      "to": "\u0CB0\u0CCD\u0C99"
+    },
+    {
+      "from": "\u0161\u00EE\u00DD",
+      "to": "\u0C99\u0CBE"
+    },
+    {
+      "from": "\u0161\u00EF",
+      "to": "\u0C99\u0CC6"
+    },
+    {
+      "from": "\u0161\u00EF\u00E0",
+      "to": "\u0C99\u0CC7"
+    },
+    {
+      "from": "\u0161\u00EF\u00E3",
+      "to": "\u0C99\u0CCA"
+    },
+    {
+      "from": "\u0161\u00EF\u00E3\u00E0",
+      "to": "\u0C99\u0CCB"
+    },
+    {
+      "from": "\u0161\u00EF\u00E7",
+      "to": "\u0C99\u0CC8"
+    },
+    {
+      "from": "\u0161\u0153",
+      "to": "\u0C99\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u0161\u2022",
+      "to": "\u0C99\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u0161\u2026",
+      "to": "\u0C99\u0CCD"
+    },
+    {
+      "from": "\u0178",
+      "to": "\u0CAC"
+    },
+    {
+      "from": "\u0178#",
+      "to": "\u0CAC\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u0178$\u00BE",
+      "to": "\u0CAC\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u0178R",
+      "to": "\u0CAC\u0CCD\u0C95"
+    },
+    {
+      "from": "\u0178V",
+      "to": "\u0CAC\u0CCD\u0C96"
+    },
+    {
+      "from": "\u0178Y",
+      "to": "\u0CAC\u0CCD\u0C97"
+    },
+    {
+      "from": "\u0178^",
+      "to": "\u0CAC\u0CCD\u0C98"
+    },
+    {
+      "from": "\u0178\u0060",
+      "to": "\u0CAC\u0CCD\u0C99"
+    },
+    {
+      "from": "\u0178c",
+      "to": "\u0CAC\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u0178f",
+      "to": "\u0CAC\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u0178j",
+      "to": "\u0CAC\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u0178l",
+      "to": "\u0CAC\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u0178n",
+      "to": "\u0CAC\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u0178r",
+      "to": "\u0CAC\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u0178u",
+      "to": "\u0CAC\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u0178x",
+      "to": "\u0CAC\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u0178z",
+      "to": "\u0CAC\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u0178\u00A1",
+      "to": "\u0CAC\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u0178\u00A4",
+      "to": "\u0CAC\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u0178\u00A7",
+      "to": "\u0CAC\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u0178\u00AA",
+      "to": "\u0CAC\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u0178\u00B0",
+      "to": "\u0CAC\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u0178\u00B3",
+      "to": "\u0CAC\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u0178\u00BA",
+      "to": "\u0CAC\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u0178\u00BD",
+      "to": "\u0CAC\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u0178\u00C2",
+      "to": "\u0CAC\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u0178\u00C5",
+      "to": "\u0CAC\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u0178\u00C9",
+      "to": "\u0CAC\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u0178\u00CC",
+      "to": "\u0CAC\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u0178\u00CF",
+      "to": "\u0CAC\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u0178\u00D2",
+      "to": "\u0CAC\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u0178\u00D5$",
+      "to": "\u0CAC\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u0178\u00D8",
+      "to": "\u0CAC\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u0178\u00DB",
+      "to": "\u0CAC\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u0178\u00E1",
+      "to": "\u0CAC\u0CC1"
+    },
+    {
+      "from": "\u0178\u00E3",
+      "to": "\u0CAC\u0CC2"
+    },
+    {
+      "from": "\u0178\u00EA",
+      "to": "\u0CAC\u0CC3"
+    },
+    {
+      "from": "\u0178\u00EB",
+      "to": "\u0CAC\u0CC4"
+    },
+    {
+      "from": "\u0178\u00EC",
+      "to": "\u0CB0\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u0178\u0153",
+      "to": "\u0CAC\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u0178\u2022",
+      "to": "\u0CAC\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u02DC",
+      "to": "\u0CA7\u0CBF"
+    },
+    {
+      "from": "\u02DC\u00E0",
+      "to": "\u0CA7\u0CC0"
+    },
+    {
+      "from": "\u2014",
+      "to": "\u0CBD"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u0CDE"
+    },
+    {
+      "from": "\u2018#",
+      "to": "\u0CDE\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u2018$\u00BE",
+      "to": "\u0CDE\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u2018R",
+      "to": "\u0CDE\u0CCD\u0C95"
+    },
+    {
+      "from": "\u2018V",
+      "to": "\u0CDE\u0CCD\u0C96"
+    },
+    {
+      "from": "\u2018Y",
+      "to": "\u0CDE\u0CCD\u0C97"
+    },
+    {
+      "from": "\u2018^",
+      "to": "\u0CDE\u0CCD\u0C98"
+    },
+    {
+      "from": "\u2018\u0060",
+      "to": "\u0CDE\u0CCD\u0C99"
+    },
+    {
+      "from": "\u2018c",
+      "to": "\u0CDE\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u2018f",
+      "to": "\u0CDE\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u2018j",
+      "to": "\u0CDE\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u2018l",
+      "to": "\u0CDE\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u2018n",
+      "to": "\u0CDE\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u2018r",
+      "to": "\u0CDE\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u2018u",
+      "to": "\u0CDE\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u2018x",
+      "to": "\u0CDE\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u2018z",
+      "to": "\u0CDE\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u2018\u00A1",
+      "to": "\u0CDE\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u2018\u00A4",
+      "to": "\u0CDE\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u2018\u00A7",
+      "to": "\u0CDE\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u2018\u00AA",
+      "to": "\u0CDE\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u2018\u00B0",
+      "to": "\u0CDE\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u2018\u00B3",
+      "to": "\u0CDE\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u2018\u00BA",
+      "to": "\u0CDE\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u2018\u00BD",
+      "to": "\u0CDE\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u2018\u00C2",
+      "to": "\u0CDE\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u2018\u00C5",
+      "to": "\u0CDE\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u2018\u00C9",
+      "to": "\u0CDE\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u2018\u00CC",
+      "to": "\u0CDE\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u2018\u00CF",
+      "to": "\u0CDE\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u2018\u00D2",
+      "to": "\u0CDE\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u2018\u00D5$",
+      "to": "\u0CDE\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u2018\u00D8",
+      "to": "\u0CDE\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u2018\u00DB",
+      "to": "\u0CDE\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u2018\u00DD",
+      "to": "\u0CDE\u0CBE"
+    },
+    {
+      "from": "\u2018\u00DF",
+      "to": "\u0CDE\u0CBF"
+    },
+    {
+      "from": "\u2018\u00E1",
+      "to": "\u0CDE\u0CC1"
+    },
+    {
+      "from": "\u2018\u00E3",
+      "to": "\u0CDE\u0CC2"
+    },
+    {
+      "from": "\u2018\u00E6",
+      "to": "\u0CDE\u0CC6"
+    },
+    {
+      "from": "\u2018\u00E6\u00E3",
+      "to": "\u0CDE\u0CCA"
+    },
+    {
+      "from": "\u2018\u00E8",
+      "to": "\u0CDE\u0CCC"
+    },
+    {
+      "from": "\u2018\u00EA",
+      "to": "\u0CDE\u0CC3"
+    },
+    {
+      "from": "\u2018\u00EB",
+      "to": "\u0CDE\u0CC4"
+    },
+    {
+      "from": "\u2018\u00EC",
+      "to": "\u0CB0\u0CCD\u0CDE"
+    },
+    {
+      "from": "\u2018\u0153",
+      "to": "\u0CDE\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u2018\u2022",
+      "to": "\u0CDE\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u2018\u2026\u200D",
+      "to": "\u0CDE\u0CCD"
+    },
+    {
+      "from": "\u201A",
+      "to": "\u0CBC"
+    },
+    {
+      "from": "\u201C",
+      "to": "\u0CB1"
+    },
+    {
+      "from": "\u201C#",
+      "to": "\u0CB1\u0CCD\u0CAB"
+    },
+    {
+      "from": "\u201C$\u00BE",
+      "to": "\u0CB1\u0CCD\u0CAE"
+    },
+    {
+      "from": "\u201CR",
+      "to": "\u0CB1\u0CCD\u0C95"
+    },
+    {
+      "from": "\u201CV",
+      "to": "\u0CB1\u0CCD\u0C96"
+    },
+    {
+      "from": "\u201CY",
+      "to": "\u0CB1\u0CCD\u0C97"
+    },
+    {
+      "from": "\u201C^",
+      "to": "\u0CB1\u0CCD\u0C98"
+    },
+    {
+      "from": "\u201C\u0060",
+      "to": "\u0CB1\u0CCD\u0C99"
+    },
+    {
+      "from": "\u201Cc",
+      "to": "\u0CB1\u0CCD\u0C9A"
+    },
+    {
+      "from": "\u201Cf",
+      "to": "\u0CB1\u0CCD\u0C9B"
+    },
+    {
+      "from": "\u201Cj",
+      "to": "\u0CB1\u0CCD\u0C9C"
+    },
+    {
+      "from": "\u201Cl",
+      "to": "\u0CB1\u0CCD\u0C9D"
+    },
+    {
+      "from": "\u201Cn",
+      "to": "\u0CB1\u0CCD\u0C9E"
+    },
+    {
+      "from": "\u201Cr",
+      "to": "\u0CB1\u0CCD\u0C9F"
+    },
+    {
+      "from": "\u201Cu",
+      "to": "\u0CB1\u0CCD\u0CA0"
+    },
+    {
+      "from": "\u201Cx",
+      "to": "\u0CB1\u0CCD\u0CA1"
+    },
+    {
+      "from": "\u201Cz",
+      "to": "\u0CB1\u0CCD\u0CA2"
+    },
+    {
+      "from": "\u201C\u00A1",
+      "to": "\u0CB1\u0CCD\u0CA3"
+    },
+    {
+      "from": "\u201C\u00A4",
+      "to": "\u0CB1\u0CCD\u0CA4"
+    },
+    {
+      "from": "\u201C\u00A7",
+      "to": "\u0CB1\u0CCD\u0CA5"
+    },
+    {
+      "from": "\u201C\u00AA",
+      "to": "\u0CB1\u0CCD\u0CA6"
+    },
+    {
+      "from": "\u201C\u00B0",
+      "to": "\u0CB1\u0CCD\u0CA8"
+    },
+    {
+      "from": "\u201C\u00B3",
+      "to": "\u0CB1\u0CCD\u0CAA"
+    },
+    {
+      "from": "\u201C\u00BA",
+      "to": "\u0CB1\u0CCD\u0CAC"
+    },
+    {
+      "from": "\u201C\u00BD",
+      "to": "\u0CB1\u0CCD\u0CAD"
+    },
+    {
+      "from": "\u201C\u00C2",
+      "to": "\u0CB1\u0CCD\u0CAF"
+    },
+    {
+      "from": "\u201C\u00C5",
+      "to": "\u0CB1\u0CCD\u0CB0"
+    },
+    {
+      "from": "\u201C\u00C9",
+      "to": "\u0CB1\u0CCD\u0CB2"
+    },
+    {
+      "from": "\u201C\u00CC",
+      "to": "\u0CB1\u0CCD\u0CB5"
+    },
+    {
+      "from": "\u201C\u00CF",
+      "to": "\u0CB1\u0CCD\u0CB6"
+    },
+    {
+      "from": "\u201C\u00D2",
+      "to": "\u0CB1\u0CCD\u0CB7"
+    },
+    {
+      "from": "\u201C\u00D5$",
+      "to": "\u0CB1\u0CCD\u0CB8"
+    },
+    {
+      "from": "\u201C\u00D8",
+      "to": "\u0CB1\u0CCD\u0CB9"
+    },
+    {
+      "from": "\u201C\u00DB",
+      "to": "\u0CB1\u0CCD\u0CB3"
+    },
+    {
+      "from": "\u201C\u00DD",
+      "to": "\u0CB1\u0CBE"
+    },
+    {
+      "from": "\u201C\u00DF",
+      "to": "\u0CB1\u0CBF"
+    },
+    {
+      "from": "\u201C\u00DF\u00E0",
+      "to": "\u0CB1\u0CC0"
+    },
+    {
+      "from": "\u201C\u00E1",
+      "to": "\u0CB1\u0CC1"
+    },
+    {
+      "from": "\u201C\u00E3",
+      "to": "\u0CB1\u0CC2"
+    },
+    {
+      "from": "\u201C\u00E6\u00E0",
+      "to": "\u0CB1\u0CC7"
+    },
+    {
+      "from": "\u201C\u00E6\u00E3",
+      "to": "\u0CB1\u0CCA"
+    },
+    {
+      "from": "\u201C\u00E6\u00E3\u00E0",
+      "to": "\u0CB1\u0CCB"
+    },
+    {
+      "from": "\u201C\u00E6\u00E7",
+      "to": "\u0CB1\u0CC8"
+    },
+    {
+      "from": "\u201C\u00E8",
+      "to": "\u0CB1\u0CCC"
+    },
+    {
+      "from": "\u201C\u00EA",
+      "to": "\u0CB1\u0CC3"
+    },
+    {
+      "from": "\u201C\u00EB",
+      "to": "\u0CB1\u0CC4"
+    },
+    {
+      "from": "\u201C\u00EC",
+      "to": "\u0CB0\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u201C\u00EF",
+      "to": "\u0CB1\u0CC6"
+    },
+    {
+      "from": "\u201C\u0153",
+      "to": "\u0CB1\u0CCD\u0CA7"
+    },
+    {
+      "from": "\u201C\u2022",
+      "to": "\u0CB1\u0CCD\u0CB1"
+    },
+    {
+      "from": "\u201C\u2026",
+      "to": "\u0CB1\u0CCD"
+    },
+    {
+      "from": "\u2026",
+      "to": "\u0CCD"
+    },
+    {
+      "from": "\u2122",
+      "to": "\u0C98\u0CBF"
+    }
+  ],
+  "postRules": []
+}

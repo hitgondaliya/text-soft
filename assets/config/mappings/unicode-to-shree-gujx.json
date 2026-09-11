@@ -1,0 +1,1058 @@
+{
+  "id": "unicode-to-shree-gujx",
+  "name": "Unicode -\u003E Shree-GujX (ShreeLipi-Ex)",
+  "sourceFontId": "shruti",
+  "targetFontId": "shree-gujx",
+  "sourceType": "unicode",
+  "targetType": "legacy",
+  "preRules": [
+    {
+      "pattern": "((?:[\u0A95-\u0AB9]\u0ABC?\u0ACD)*[\u0A95-\u0AB9]\u0ABC?)\u0ABF",
+      "replace": "\u0ABF$1",
+      "note": "Move pre-base matra U\u002B0ABF before the consonant cluster (Unicode logical order -\u003E legacy visual order)."
+    }
+  ],
+  "pairs": [
+    {
+      "from": "\u0A99\u0ACD\u0A95\u0ACD\u0AB7",
+      "to": "\uE3D3"
+    },
+    {
+      "from": "\u0AB8\u0ACD\u0AA4\u0ACD\u0AB0",
+      "to": "\uE3F3"
+    },
+    {
+      "from": "\u0A9C\u0ACB\u0AB0\u0ACD\u0A82",
+      "to": "\uE409"
+    },
+    {
+      "from": "\u0A9C\u0ACC\u0AB0\u0ACD\u0A82",
+      "to": "\uE40D"
+    },
+    {
+      "from": "\u0A95\u0ACD\u0AB7\u0ACD",
+      "to": "\uE38A"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0A9E\u0ACD",
+      "to": "\uE38B"
+    },
+    {
+      "from": "\u0AA4\u0ACD\u0AB0\u0ACD",
+      "to": "\uE38C"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0AB0\u0ACD",
+      "to": "\uE38D"
+    },
+    {
+      "from": "\u0AA4\u0ACD\u0AA4\u0ACD",
+      "to": "\uE38E"
+    },
+    {
+      "from": "\u0AC7\u0AB0\u0ACD\u0A82",
+      "to": "\uE3B2"
+    },
+    {
+      "from": "\u0AC8\u0AB0\u0ACD\u0A82",
+      "to": "\uE3B5"
+    },
+    {
+      "from": "\u0AC0\u0AB0\u0ACD\u0A82",
+      "to": "\uE3B8"
+    },
+    {
+      "from": "\u0ACB\u0AB0\u0ACD\u0A82",
+      "to": "\uE3BB"
+    },
+    {
+      "from": "\u0ACC\u0AB0\u0ACD\u0A82",
+      "to": "\uE3BE"
+    },
+    {
+      "from": "\u0A9C\u0ACB\u0AB0\u0ACD",
+      "to": "\uE408"
+    },
+    {
+      "from": "\u0A9C\u0ACC\u0AB0\u0ACD",
+      "to": "\uE40C"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0AB0\u0ABE",
+      "to": "\uE41F"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0AB0\u0AC0",
+      "to": "\uE420"
+    },
+    {
+      "from": "\u0A95\u0ACD\u0AB0",
+      "to": "\uE38F"
+    },
+    {
+      "from": "\u0A96\u0ACD\u0AB0",
+      "to": "\uE390"
+    },
+    {
+      "from": "\u0A97\u0ACD\u0AB0",
+      "to": "\uE391"
+    },
+    {
+      "from": "\u0A98\u0ACD\u0AB0",
+      "to": "\uE392"
+    },
+    {
+      "from": "\u0A9A\u0ACD\u0AB0",
+      "to": "\uE394"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0AB0",
+      "to": "\uE396"
+    },
+    {
+      "from": "\u0A9D\u0ACD\u0AB0",
+      "to": "\uE397"
+    },
+    {
+      "from": "\u0A9E\u0ACD\u0AB0",
+      "to": "\uE398"
+    },
+    {
+      "from": "\u0AA3\u0ACD\u0AB0",
+      "to": "\uE39D"
+    },
+    {
+      "from": "\u0AA4\u0ACD\u0AB0",
+      "to": "\uE39E"
+    },
+    {
+      "from": "\u0AA5\u0ACD\u0AB0",
+      "to": "\uE39F"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AB0",
+      "to": "\uE3A0"
+    },
+    {
+      "from": "\u0AA7\u0ACD\u0AB0",
+      "to": "\uE3A1"
+    },
+    {
+      "from": "\u0AAA\u0ACD\u0AB0",
+      "to": "\uE3A3"
+    },
+    {
+      "from": "\u0AAB\u0ACD\u0AB0",
+      "to": "\uE3A4"
+    },
+    {
+      "from": "\u0AAC\u0ACD\u0AB0",
+      "to": "\uE3A5"
+    },
+    {
+      "from": "\u0AAD\u0ACD\u0AB0",
+      "to": "\uE3A6"
+    },
+    {
+      "from": "\u0AAE\u0ACD\u0AB0",
+      "to": "\uE3A7"
+    },
+    {
+      "from": "\u0AAF\u0ACD\u0AB0",
+      "to": "\uE3A8"
+    },
+    {
+      "from": "\u0AB2\u0ACD\u0AB0",
+      "to": "\uE3A9"
+    },
+    {
+      "from": "\u0AB3\u0ACD\u0AB0",
+      "to": "\uE3AA"
+    },
+    {
+      "from": "\u0AB5\u0ACD\u0AB0",
+      "to": "\uE3AB"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0AB0",
+      "to": "\uE3AC"
+    },
+    {
+      "from": "\u0AB7\u0ACD\u0AB0",
+      "to": "\uE3AD"
+    },
+    {
+      "from": "\u0AB8\u0ACD\u0AB0",
+      "to": "\uE3AE"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AB0",
+      "to": "\uE3AF"
+    },
+    {
+      "from": "\u0AC7\u0AB0\u0ACD",
+      "to": "\uE3B1"
+    },
+    {
+      "from": "\u0AC8\u0AB0\u0ACD",
+      "to": "\uE3B4"
+    },
+    {
+      "from": "\u0AC0\u0AB0\u0ACD",
+      "to": "\uE3B7"
+    },
+    {
+      "from": "\u0ACB\u0AB0\u0ACD",
+      "to": "\uE3BA"
+    },
+    {
+      "from": "\u0ACC\u0AB0\u0ACD",
+      "to": "\uE3BD"
+    },
+    {
+      "from": "\u0A95\u0ACD\u0A95",
+      "to": "\uE3CC"
+    },
+    {
+      "from": "\u0A97\u0ACD\u0AA8",
+      "to": "\uE3CD"
+    },
+    {
+      "from": "\u0A99\u0ACD\u0A95",
+      "to": "\uE3CE"
+    },
+    {
+      "from": "\u0A99\u0ACD\u0A96",
+      "to": "\uE3CF"
+    },
+    {
+      "from": "\u0A99\u0ACD\u0A97",
+      "to": "\uE3D0"
+    },
+    {
+      "from": "\u0A99\u0ACD\u0AAE",
+      "to": "\uE3D2"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0A9C",
+      "to": "\uE3D4"
+    },
+    {
+      "from": "\u0A9E\u0ACD\u0A9A",
+      "to": "\uE3D5"
+    },
+    {
+      "from": "\u0A9E\u0ACD\u0A9C",
+      "to": "\uE3D6"
+    },
+    {
+      "from": "\u0A9F\u0ACD\u0A9F",
+      "to": "\uE3D7"
+    },
+    {
+      "from": "\u0A9F\u0ACD\u0AAF",
+      "to": "\uE3D8"
+    },
+    {
+      "from": "\u0A9F\u0ACD\u0AB5",
+      "to": "\uE3D9"
+    },
+    {
+      "from": "\u0AA0\u0ACD\u0AA0",
+      "to": "\uE3DA"
+    },
+    {
+      "from": "\u0AA0\u0ACD\u0AAF",
+      "to": "\uE3DB"
+    },
+    {
+      "from": "\u0AA1\u0ACD\u0AA1",
+      "to": "\uE3DC"
+    },
+    {
+      "from": "\u0AA1\u0ACD\u0AAF",
+      "to": "\uE3DD"
+    },
+    {
+      "from": "\u0AA1\u0ACD\u0AA2",
+      "to": "\uE3DE"
+    },
+    {
+      "from": "\u0AA2\u0ACD\u0AA2",
+      "to": "\uE3DF"
+    },
+    {
+      "from": "\u0AA2\u0ACD\u0AAF",
+      "to": "\uE3E0"
+    },
+    {
+      "from": "\u0AA4\u0ACD\u0AA4",
+      "to": "\uE3E1"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AAF",
+      "to": "\uE3E2"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0A97",
+      "to": "\uE3E3"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AB5",
+      "to": "\uE3E4"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AA6",
+      "to": "\uE3E5"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AA7",
+      "to": "\uE3E6"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AAD",
+      "to": "\uE3E7"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AAE",
+      "to": "\uE3E8"
+    },
+    {
+      "from": "\u0AA6\u0ACD\u0AA8",
+      "to": "\uE3E9"
+    },
+    {
+      "from": "\u0AA8\u0ACD\u0AA8",
+      "to": "\uE3EA"
+    },
+    {
+      "from": "\u0AAA\u0ACD\u0AA4",
+      "to": "\uE3EB"
+    },
+    {
+      "from": "\u0AB2\u0ACD\u0AB2",
+      "to": "\uE3EC"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0AB5",
+      "to": "\uE3ED"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0AA8",
+      "to": "\uE3EE"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0A9A",
+      "to": "\uE3EF"
+    },
+    {
+      "from": "\u0AB6\u0ACD\u0AB2",
+      "to": "\uE3F0"
+    },
+    {
+      "from": "\u0AB7\u0ACD\u0A9F",
+      "to": "\uE3F1"
+    },
+    {
+      "from": "\u0AB7\u0ACD\u0AA0",
+      "to": "\uE3F2"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AAE",
+      "to": "\uE3F4"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AAF",
+      "to": "\uE3F5"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AA8",
+      "to": "\uE3F6"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AA3",
+      "to": "\uE3F7"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AB2",
+      "to": "\uE3F8"
+    },
+    {
+      "from": "\u0AB9\u0ACD\u0AB5",
+      "to": "\uE3F9"
+    },
+    {
+      "from": "\u0AB3\u0ACD\u0AAF",
+      "to": "\uE3FA"
+    },
+    {
+      "from": "\u0A95\u0ACD\u0AB7",
+      "to": "\uE3FB"
+    },
+    {
+      "from": "\u0A9C\u0ACD\u0A9E",
+      "to": "\uE3FC"
+    },
+    {
+      "from": "\u0ACD\u0AB0\u0AC1",
+      "to": "\uE3FE"
+    },
+    {
+      "from": "\u0ACD\u0AB0\u0AC2",
+      "to": "\uE3FF"
+    },
+    {
+      "from": "\u0AB0\u0ACD\u0A82",
+      "to": "\uE401"
+    },
+    {
+      "from": "\u0A9B\u0ACD\u0AB5",
+      "to": "\uE403"
+    },
+    {
+      "from": "\u0A9C\u0ACB\u0A82",
+      "to": "\uE407"
+    },
+    {
+      "from": "\u0A9C\u0ACC\u0A82",
+      "to": "\uE40B"
+    },
+    {
+      "from": "\u0A9C\u0AC9\u0A82",
+      "to": "\uE40F"
+    },
+    {
+      "from": "\u0A9F\u0ACD\u0AA0",
+      "to": "\uE417"
+    },
+    {
+      "from": "\u0A99\u0ACD\u0AB0",
+      "to": "\uE319\uE44B"
+    },
+    {
+      "from": "\u0A9B\u0ACD\u0AB0",
+      "to": "\uE31B\uE44B"
+    },
+    {
+      "from": "\u0A9F\u0ACD\u0AB0",
+      "to": "\uE31F\uE44B"
+    },
+    {
+      "from": "\u0AA0\u0ACD\u0AB0",
+      "to": "\uE320\uE44B"
+    },
+    {
+      "from": "\u0AA1\u0ACD\u0AB0",
+      "to": "\uE321\uE44B"
+    },
+    {
+      "from": "\u0AA2\u0ACD\u0AB0",
+      "to": "\uE322\uE44B"
+    },
+    {
+      "from": "\u0AA8\u0ACD\u0AB0",
+      "to": "\uE328\uE44B"
+    },
+    {
+      "from": "\u0AB0\u0ACD\u0AB0",
+      "to": "\uE32F\uE44B"
+    },
+    {
+      "from": "\u0A95\u0ACD",
+      "to": "\uE369"
+    },
+    {
+      "from": "\u0A96\u0ACD",
+      "to": "\uE36A"
+    },
+    {
+      "from": "\u0A97\u0ACD",
+      "to": "\uE36B"
+    },
+    {
+      "from": "\u0A98\u0ACD",
+      "to": "\uE36C"
+    },
+    {
+      "from": "\u0A9A\u0ACD",
+      "to": "\uE36E"
+    },
+    {
+      "from": "\u0A9C\u0ACD",
+      "to": "\uE370"
+    },
+    {
+      "from": "\u0A9D\u0ACD",
+      "to": "\uE371"
+    },
+    {
+      "from": "\u0A9E\u0ACD",
+      "to": "\uE372"
+    },
+    {
+      "from": "\u0AA3\u0ACD",
+      "to": "\uE377"
+    },
+    {
+      "from": "\u0AA4\u0ACD",
+      "to": "\uE378"
+    },
+    {
+      "from": "\u0AA5\u0ACD",
+      "to": "\uE379"
+    },
+    {
+      "from": "\u0AA7\u0ACD",
+      "to": "\uE37B"
+    },
+    {
+      "from": "\u0AA8\u0ACD",
+      "to": "\uE37C"
+    },
+    {
+      "from": "\u0AAA\u0ACD",
+      "to": "\uE37D"
+    },
+    {
+      "from": "\u0AAB\u0ACD",
+      "to": "\uE37E"
+    },
+    {
+      "from": "\u0AAC\u0ACD",
+      "to": "\uE37F"
+    },
+    {
+      "from": "\u0AAE\u0ACD",
+      "to": "\uE381"
+    },
+    {
+      "from": "\u0AAF\u0ACD",
+      "to": "\uE382"
+    },
+    {
+      "from": "\u0AB2\u0ACD",
+      "to": "\uE383"
+    },
+    {
+      "from": "\u0AB3\u0ACD",
+      "to": "\uE384"
+    },
+    {
+      "from": "\u0AB5\u0ACD",
+      "to": "\uE385"
+    },
+    {
+      "from": "\u0AB6\u0ACD",
+      "to": "\uE386"
+    },
+    {
+      "from": "\u0AB7\u0ACD",
+      "to": "\uE387"
+    },
+    {
+      "from": "\u0AB8\u0ACD",
+      "to": "\uE388"
+    },
+    {
+      "from": "\u0AB9\u0ACD",
+      "to": "\uE389"
+    },
+    {
+      "from": "\u0AC7\u0A82",
+      "to": "\uE3B0"
+    },
+    {
+      "from": "\u0AC8\u0A82",
+      "to": "\uE3B3"
+    },
+    {
+      "from": "\u0ACB\u0A82",
+      "to": "\uE3B9"
+    },
+    {
+      "from": "\u0ACC\u0A82",
+      "to": "\uE3BC"
+    },
+    {
+      "from": "\u0AC5\u0A82",
+      "to": "\uE3BF"
+    },
+    {
+      "from": "\u0AC9\u0A82",
+      "to": "\uE3C0"
+    },
+    {
+      "from": "\u0A87\u0A82",
+      "to": "\uE3C1"
+    },
+    {
+      "from": "\u0A88\u0A82",
+      "to": "\uE3C2"
+    },
+    {
+      "from": "\u0A89\u0A82",
+      "to": "\uE3C3"
+    },
+    {
+      "from": "\u0A8A\u0A82",
+      "to": "\uE3C4"
+    },
+    {
+      "from": "\u0AB0\u0AC1",
+      "to": "\uE3C5"
+    },
+    {
+      "from": "\u0AB9\u0AC3",
+      "to": "\uE3C7"
+    },
+    {
+      "from": "\u0A9C\u0ABE",
+      "to": "\uE3C8"
+    },
+    {
+      "from": "\u0A9C\u0AC0",
+      "to": "\uE3C9"
+    },
+    {
+      "from": "\u0AB0\u0AC2",
+      "to": "\uE3CA"
+    },
+    {
+      "from": "\u0AA6\u0AC3",
+      "to": "\uE3CB"
+    },
+    {
+      "from": "\u0AB0\u0ACD",
+      "to": "\uE400"
+    },
+    {
+      "from": "\u0AA3\u0AC1",
+      "to": "\uE402"
+    },
+    {
+      "from": "\u0A9C\u0ACB",
+      "to": "\uE406"
+    },
+    {
+      "from": "\u0A9C\u0ACC",
+      "to": "\uE40A"
+    },
+    {
+      "from": "\u0A9C\u0AC9",
+      "to": "\uE40E"
+    },
+    {
+      "from": "\u0AB9\u0AC1",
+      "to": "\uE41C"
+    },
+    {
+      "from": "\u0AB9\u0AC2",
+      "to": "\uE41D"
+    },
+    {
+      "from": "\u0AAB\u0ABC",
+      "to": "\uE41E"
+    },
+    {
+      "from": "\u0ACD\u0AB0",
+      "to": "\uE44B"
+    },
+    {
+      "from": "\u00A2",
+      "to": "\u00A2"
+    },
+    {
+      "from": "\u00D7",
+      "to": "\u00D7"
+    },
+    {
+      "from": "\u00F7",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u2018"
+    },
+    {
+      "from": "\u2019",
+      "to": "\u2019"
+    },
+    {
+      "from": "\u201C",
+      "to": "\u201C"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u201D"
+    },
+    {
+      "from": "\u20B9",
+      "to": "\u20B9"
+    },
+    {
+      "from": "\u0A81",
+      "to": "\uE304"
+    },
+    {
+      "from": "\u0A82",
+      "to": "\uE305"
+    },
+    {
+      "from": "\u0A83",
+      "to": "\uE306"
+    },
+    {
+      "from": "\u0A85",
+      "to": "\uE307"
+    },
+    {
+      "from": "\u0A86",
+      "to": "\uE308"
+    },
+    {
+      "from": "\u0A87",
+      "to": "\uE309"
+    },
+    {
+      "from": "\u0A88",
+      "to": "\uE30A"
+    },
+    {
+      "from": "\u0A89",
+      "to": "\uE30B"
+    },
+    {
+      "from": "\u0A8A",
+      "to": "\uE30C"
+    },
+    {
+      "from": "\u0A8B",
+      "to": "\uE30D"
+    },
+    {
+      "from": "\u0A8C",
+      "to": "\uE30E"
+    },
+    {
+      "from": "\u0A8D",
+      "to": "\uE30F"
+    },
+    {
+      "from": "\u0A8F",
+      "to": "\uE310"
+    },
+    {
+      "from": "\u0A90",
+      "to": "\uE311"
+    },
+    {
+      "from": "\u0A91",
+      "to": "\uE312"
+    },
+    {
+      "from": "\u0A93",
+      "to": "\uE313"
+    },
+    {
+      "from": "\u0A94",
+      "to": "\uE314"
+    },
+    {
+      "from": "\u0A95",
+      "to": "\uE315"
+    },
+    {
+      "from": "\u0A96",
+      "to": "\uE316"
+    },
+    {
+      "from": "\u0A97",
+      "to": "\uE317"
+    },
+    {
+      "from": "\u0A98",
+      "to": "\uE318"
+    },
+    {
+      "from": "\u0A99",
+      "to": "\uE319"
+    },
+    {
+      "from": "\u0A9A",
+      "to": "\uE31A"
+    },
+    {
+      "from": "\u0A9B",
+      "to": "\uE31B"
+    },
+    {
+      "from": "\u0A9C",
+      "to": "\uE31C"
+    },
+    {
+      "from": "\u0A9D",
+      "to": "\uE31D"
+    },
+    {
+      "from": "\u0A9E",
+      "to": "\uE31E"
+    },
+    {
+      "from": "\u0A9F",
+      "to": "\uE31F"
+    },
+    {
+      "from": "\u0AA0",
+      "to": "\uE320"
+    },
+    {
+      "from": "\u0AA1",
+      "to": "\uE321"
+    },
+    {
+      "from": "\u0AA2",
+      "to": "\uE322"
+    },
+    {
+      "from": "\u0AA3",
+      "to": "\uE323"
+    },
+    {
+      "from": "\u0AA4",
+      "to": "\uE324"
+    },
+    {
+      "from": "\u0AA5",
+      "to": "\uE325"
+    },
+    {
+      "from": "\u0AA6",
+      "to": "\uE326"
+    },
+    {
+      "from": "\u0AA7",
+      "to": "\uE327"
+    },
+    {
+      "from": "\u0AA8",
+      "to": "\uE328"
+    },
+    {
+      "from": "\u0AAA",
+      "to": "\uE329"
+    },
+    {
+      "from": "\u0AAB",
+      "to": "\uE32A"
+    },
+    {
+      "from": "\u0AAC",
+      "to": "\uE32B"
+    },
+    {
+      "from": "\u0AAE",
+      "to": "\uE32D"
+    },
+    {
+      "from": "\u0AAF",
+      "to": "\uE32E"
+    },
+    {
+      "from": "\u0AB0",
+      "to": "\uE32F"
+    },
+    {
+      "from": "\u0AB2",
+      "to": "\uE330"
+    },
+    {
+      "from": "\u0AB3",
+      "to": "\uE331"
+    },
+    {
+      "from": "\u0AB5",
+      "to": "\uE332"
+    },
+    {
+      "from": "\u0AB6",
+      "to": "\uE333"
+    },
+    {
+      "from": "\u0AB7",
+      "to": "\uE334"
+    },
+    {
+      "from": "\u0AB8",
+      "to": "\uE335"
+    },
+    {
+      "from": "\u0AB9",
+      "to": "\uE336"
+    },
+    {
+      "from": "\u0ABD",
+      "to": "\uE338"
+    },
+    {
+      "from": "\u0ABE",
+      "to": "\uE339"
+    },
+    {
+      "from": "\u0ABF",
+      "to": "\uE33A"
+    },
+    {
+      "from": "\u0AC0",
+      "to": "\uE33B"
+    },
+    {
+      "from": "\u0AC1",
+      "to": "\uE33C"
+    },
+    {
+      "from": "\u0AC2",
+      "to": "\uE33D"
+    },
+    {
+      "from": "\u0AC3",
+      "to": "\uE33E"
+    },
+    {
+      "from": "\u0AC4",
+      "to": "\uE33F"
+    },
+    {
+      "from": "\u0AC5",
+      "to": "\uE340"
+    },
+    {
+      "from": "\u0AC7",
+      "to": "\uE341"
+    },
+    {
+      "from": "\u0AC8",
+      "to": "\uE342"
+    },
+    {
+      "from": "\u0AC9",
+      "to": "\uE343"
+    },
+    {
+      "from": "\u0ACB",
+      "to": "\uE344"
+    },
+    {
+      "from": "\u0ACC",
+      "to": "\uE345"
+    },
+    {
+      "from": "\u0ACD",
+      "to": "\uE346"
+    },
+    {
+      "from": "\u0AD0",
+      "to": "\uE347"
+    },
+    {
+      "from": "\u0AE0",
+      "to": "\uE348"
+    },
+    {
+      "from": "\u0AE1",
+      "to": "\uE349"
+    },
+    {
+      "from": "\u0AE2",
+      "to": "\uE34A"
+    },
+    {
+      "from": "\u0AE3",
+      "to": "\uE34B"
+    },
+    {
+      "from": "\u0AE6",
+      "to": "\uE34C"
+    },
+    {
+      "from": "\u0AE7",
+      "to": "\uE34D"
+    },
+    {
+      "from": "\u0AE8",
+      "to": "\uE34E"
+    },
+    {
+      "from": "\u0AE9",
+      "to": "\uE34F"
+    },
+    {
+      "from": "\u0AEA",
+      "to": "\uE350"
+    },
+    {
+      "from": "\u0AEB",
+      "to": "\uE351"
+    },
+    {
+      "from": "\u0AEC",
+      "to": "\uE352"
+    },
+    {
+      "from": "\u0AED",
+      "to": "\uE353"
+    },
+    {
+      "from": "\u0AEE",
+      "to": "\uE354"
+    },
+    {
+      "from": "\u0AEF",
+      "to": "\uE355"
+    },
+    {
+      "from": "\u0AF1",
+      "to": "\uE356"
+    },
+    {
+      "from": "\u0964",
+      "to": "\uE357"
+    },
+    {
+      "from": "\u0965",
+      "to": "\uE358"
+    },
+    {
+      "from": "\u0AAD",
+      "to": "\uE32C"
+    },
+    {
+      "from": "\u0A9C\u0ACB\u0AB0",
+      "to": "\uE408"
+    },
+    {
+      "from": "\u0A9C\u0ACC\u0AB0",
+      "to": "\uE40C"
+    },
+    {
+      "from": "\u0AC7\u0AB0",
+      "to": "\uE3B1"
+    },
+    {
+      "from": "\u0AC8\u0AB0",
+      "to": "\uE3B4"
+    },
+    {
+      "from": "\u0AC0\u0AB0",
+      "to": "\uE3B7"
+    },
+    {
+      "from": "\u0ACB\u0AB0",
+      "to": "\uE3BA"
+    },
+    {
+      "from": "\u0ACC\u0AB0",
+      "to": "\uE3BD"
+    }
+  ],
+  "postRules": []
+}

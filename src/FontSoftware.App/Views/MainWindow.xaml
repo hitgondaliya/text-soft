@@ -1,0 +1,416 @@
+<Window x:Class="FontSoftware.App.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TextSoft — Beyond Typing" Height="740" Width="1060"
+        Icon="/app.ico" WindowStartupLocation="CenterScreen" MinWidth="900" MinHeight="600"
+        Background="{StaticResource AppBg}" FontFamily="{StaticResource UiFont}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ================= Sidebar ================= -->
+        <Border Grid.Column="0" Background="{StaticResource Sidebar}"
+                TextElement.Foreground="{StaticResource SidebarMuted}">
+            <DockPanel>
+                <!-- Brand -->
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="20,22,20,26">
+                    <Border Width="44" Height="44" CornerRadius="12" Background="White" Padding="3">
+                        <Image Source="/logo.png" Stretch="Uniform" />
+                    </Border>
+                    <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
+                        <TextBlock Text="TextSoft" Foreground="White" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text="Beyond Typing" Foreground="{StaticResource Primary}"
+                                   FontSize="11.5" FontWeight="SemiBold" />
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Footer -->
+                <TextBlock DockPanel.Dock="Bottom" Text="TextSoft v1.0 · Windows" Foreground="#7A7F87"
+                           FontSize="11" Margin="24,0,0,18" />
+
+                <!-- Nav -->
+                <ListBox x:Name="Nav" Style="{StaticResource NavList}" SelectedIndex="0" Margin="0,4,0,0">
+                    <ListBoxItem Style="{StaticResource NavItem}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="⌨" FontSize="16" Width="26" Style="{StaticResource NavText}" />
+                            <TextBlock Text="Type" Style="{StaticResource NavText}" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Style="{StaticResource NavItem}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="⇄" FontSize="16" Width="26" Style="{StaticResource NavText}" />
+                            <TextBlock Text="Convert" Style="{StaticResource NavText}" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Style="{StaticResource NavItem}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="◈" FontSize="15" Width="26" Style="{StaticResource NavText}" />
+                            <TextBlock Text="License" Style="{StaticResource NavText}" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Style="{StaticResource NavItem}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="⚙" FontSize="16" Width="26" Style="{StaticResource NavText}" />
+                            <TextBlock Text="Settings" Style="{StaticResource NavText}" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </DockPanel>
+        </Border>
+
+        <!-- ================= Content ================= -->
+        <DockPanel Grid.Column="1" TextElement.Foreground="{StaticResource Text}">
+
+            <!-- Content top bar -->
+            <Border DockPanel.Dock="Top" Background="{StaticResource Surface}"
+                    BorderBrush="{StaticResource Border}" BorderThickness="0,0,0,1" Padding="26,16">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="40" Height="40" CornerRadius="10" Background="{StaticResource PrimaryLight}">
+                            <TextBlock Text="{Binding ActiveScriptChar}" Foreground="{StaticResource Primary}"
+                                       FontSize="21" FontWeight="Bold" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Margin="13,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding SelectedLanguage.Name, FallbackValue='Multilingual Typing'}"
+                                       Style="{StaticResource H1}" />
+                            <TextBlock Text="Type any Indian script · convert legacy ↔ Unicode"
+                                       Style="{StaticResource Hint}" Margin="0,1,0,0" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border HorizontalAlignment="Right" VerticalAlignment="Center" CornerRadius="20" Padding="13,7">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="Background" Value="{StaticResource AppBg}" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding TypingEnabled}" Value="True">
+                                        <Setter Property="Background" Value="{StaticResource SuccessLight}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="9" Height="9" VerticalAlignment="Center">
+                                <Ellipse.Style>
+                                    <Style TargetType="Ellipse">
+                                        <Setter Property="Fill" Value="{StaticResource Faint}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding TypingEnabled}" Value="True">
+                                                <Setter Property="Fill" Value="{StaticResource Success}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Ellipse.Style>
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" Margin="8,0,0,0" FontWeight="SemiBold" FontSize="12">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Text" Value="Typing OFF" />
+                                        <Setter Property="Foreground" Value="{StaticResource Muted}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding TypingEnabled}" Value="True">
+                                                <Setter Property="Text" Value="Typing ON" />
+                                                <Setter Property="Foreground" Value="{StaticResource SuccessDark}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Asset error banner -->
+            <Border DockPanel.Dock="Top" x:Name="ErrorBanner" Background="#FEF3C7" BorderBrush="#FDE68A"
+                    BorderThickness="0,0,0,1" Padding="26,10" Visibility="Collapsed">
+                <TextBlock x:Name="ErrorText" TextWrapping="Wrap" Foreground="#92400E" />
+            </Border>
+
+            <!-- Pages -->
+            <TabControl Style="{StaticResource ContentTabs}" SelectedIndex="{Binding SelectedIndex, ElementName=Nav}"
+                        Margin="26,20,26,22">
+
+                <!-- ===== TYPE ===== -->
+                <TabItem>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Background="{StaticResource Surface}" CornerRadius="14"
+                                BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="20">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                                        <TextBlock Text="LANGUAGE" Style="{StaticResource Label}" />
+                                        <ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage}"
+                                                  DisplayMemberPath="Name" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="0,0,10,0">
+                                        <TextBlock Text="FONT LAYOUT" Style="{StaticResource Label}" />
+                                        <ComboBox ItemsSource="{Binding FontLayouts}" SelectedItem="{Binding SelectedFontLayout}"
+                                                  DisplayMemberPath="Name" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="2">
+                                        <TextBlock Text="KEYBOARD LAYOUT" Style="{StaticResource Label}" />
+                                        <ComboBox ItemsSource="{Binding Layouts}" SelectedItem="{Binding SelectedLayout}"
+                                                  DisplayMemberPath="Name" />
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Margin="0,12,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="260" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="RENDER / OWN FONT" Style="{StaticResource Label}"
+                                               VerticalAlignment="Center" Margin="0,0,10,0" />
+                                    <ComboBox Grid.Column="1" ItemsSource="{Binding Fonts}" SelectedItem="{Binding SelectedFont}"
+                                              DisplayMemberPath="Label"
+                                              ToolTip="With Unicode selected, pick any installed font — including your own." />
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="16,0,0,0">
+                                        <CheckBox Content="Show all installed fonts" IsChecked="{Binding ShowAllInstalledFonts}"
+                                                  VerticalAlignment="Center" />
+                                        <TextBlock Text="⚠ Not installed / not provided — glyphs may not display."
+                                                   Style="{StaticResource Hint}" Foreground="#B45309" Margin="18,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   Visibility="{Binding SelectedFontMissing, Converter={StaticResource BoolToVis}}" />
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,16,0,14">
+                            <ToggleButton IsChecked="{Binding TypingEnabled}" MinWidth="152" Height="44" Cursor="Hand">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border x:Name="b" CornerRadius="11" Background="{StaticResource Surface}"
+                                                BorderBrush="{StaticResource BorderStrong}" BorderThickness="1.5" Padding="18,0">
+                                            <TextBlock x:Name="t" Text="⌨   Typing: OFF" FontWeight="SemiBold" FontSize="14"
+                                                       Foreground="{StaticResource Text}" VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsChecked" Value="True">
+                                                <Setter TargetName="b" Property="Background" Value="{StaticResource Success}" />
+                                                <Setter TargetName="b" Property="BorderBrush" Value="{StaticResource Success}" />
+                                                <Setter TargetName="t" Property="Text" Value="⌨   Typing: ON" />
+                                                <Setter TargetName="t" Property="Foreground" Value="White" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <CheckBox Content="Show Shift layer" IsChecked="{Binding ShowShiftLayer}" Margin="20,0,0,0" VerticalAlignment="Center" />
+                            <CheckBox Content="Phonetic (type by sound)" IsChecked="{Binding PhoneticMode}"
+                                      IsEnabled="{Binding HasPhonetic}" Margin="20,0,0,0" VerticalAlignment="Center"
+                                      ToolTip="Type words the way they sound, e.g. namaste → नमस्ते" />
+                        </StackPanel>
+
+                        <Border Grid.Row="2" Background="{StaticResource Surface}" BorderBrush="{StaticResource Border}"
+                                BorderThickness="1" CornerRadius="14" Padding="18">
+                            <ItemsControl ItemsSource="{Binding KeyboardRows}" VerticalAlignment="Center"
+                                          HorizontalAlignment="Center" FontFamily="{Binding SelectedFontFamily}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <ItemsControl ItemsSource="{Binding}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate><StackPanel Orientation="Horizontal" /></ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Width="56" Height="56" Margin="4" CornerRadius="10"
+                                                            BorderBrush="{StaticResource Border}" BorderThickness="1"
+                                                            Background="{StaticResource AppBg}">
+                                                        <Grid>
+                                                            <TextBlock Text="{Binding Label}" FontSize="10" FontFamily="{StaticResource UiFont}"
+                                                                       Foreground="{StaticResource Faint}" HorizontalAlignment="Left"
+                                                                       VerticalAlignment="Top" Margin="7,5,0,0" />
+                                                            <TextBlock Text="{Binding Display}" FontSize="22"
+                                                                       Foreground="{StaticResource Text}" HorizontalAlignment="Center"
+                                                                       VerticalAlignment="Center" />
+                                                        </Grid>
+                                                        <Border.Style>
+                                                            <Style TargetType="Border">
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding IsMapped}" Value="True">
+                                                                        <Setter Property="Background" Value="{StaticResource PrimaryLight}" />
+                                                                        <Setter Property="BorderBrush" Value="#F3C09B" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Border>
+
+                        <TextBlock Grid.Row="3" Margin="2,12,0,0" Style="{StaticResource Hint}" Text="{Binding Status}" />
+                    </Grid>
+                </TabItem>
+
+                <!-- ===== CONVERT ===== -->
+                <TabItem>
+                    <Grid DataContext="{Binding Converter}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Background="{StaticResource Surface}" CornerRadius="14"
+                                BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="20" Margin="0,0,0,14">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="FROM FONT" Style="{StaticResource Label}" />
+                                    <ComboBox ItemsSource="{Binding Fonts}" SelectedItem="{Binding SourceFont}" DisplayMemberPath="Name" />
+                                </StackPanel>
+                                <Button Grid.Column="1" Content="⇄" Command="{Binding SwapCommand}"
+                                        Style="{StaticResource Secondary}" Margin="14,22,14,0" Padding="13,9"
+                                        ToolTip="Swap source and target" />
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="TO FONT" Style="{StaticResource Label}" />
+                                    <ComboBox ItemsSource="{Binding Fonts}" SelectedItem="{Binding TargetFont}" DisplayMemberPath="Name" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="INPUT" Style="{StaticResource Label}" />
+                            <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding InputText, UpdateSourceTrigger=PropertyChanged}"
+                                     AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="16"
+                                     FontFamily="{Binding SourceFontFamily}" VerticalContentAlignment="Top" />
+
+                            <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="14,0">
+                                <Button Content="Convert →" Command="{Binding ConvertCommand}" />
+                                <Button Content="Copy" Command="{Binding CopyCommand}" Style="{StaticResource Secondary}" Margin="0,10,0,0" />
+                            </StackPanel>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="RESULT" Style="{StaticResource Label}" />
+                            <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding OutputText}" IsReadOnly="True" AcceptsReturn="True"
+                                     TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="16"
+                                     FontFamily="{Binding TargetFontFamily}" VerticalContentAlignment="Top" Background="{StaticResource AppBg}" />
+                        </Grid>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="2,12,0,0">
+                            <CheckBox Content="Auto-copy result (Premium)" IsChecked="{Binding AutoCopyOutput}" IsEnabled="{Binding PremiumUnlocked}" />
+                            <TextBlock Text="{Binding Status}" Margin="18,0,0,0" Style="{StaticResource Hint}" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+
+                <!-- ===== LICENSE ===== -->
+                <TabItem>
+                    <Border DataContext="{Binding License}" Background="{StaticResource Surface}" CornerRadius="14"
+                            BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="28" VerticalAlignment="Top">
+                        <StackPanel MaxWidth="480" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                <TextBlock Text="License" Style="{StaticResource H2}" VerticalAlignment="Center" />
+                                <Border Background="{StaticResource PrimaryLight}" CornerRadius="7" Padding="11,4" Margin="12,0,0,0">
+                                    <TextBlock Text="{Binding EditionText}" Foreground="{StaticResource Primary}" FontWeight="SemiBold" />
+                                </Border>
+                            </StackPanel>
+                            <TextBlock Text="{Binding ExpiryText}" Style="{StaticResource Hint}" Margin="0,0,0,18" />
+                            <TextBlock Text="LICENSE KEY" Style="{StaticResource Label}" />
+                            <TextBox Text="{Binding KeyInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas" />
+                            <StackPanel Orientation="Horizontal" Margin="0,14,0,0">
+                                <Button Content="Activate" Command="{Binding ActivateCommand}" />
+                                <Button Content="Deactivate" Command="{Binding DeactivateCommand}" Style="{StaticResource Secondary}" Margin="10,0,0,0" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,16,0,0" TextWrapping="Wrap" />
+                            <TextBlock Style="{StaticResource Hint}" Margin="0,18,0,0" TextWrapping="Wrap"
+                                       Text="Your key is activated online and bound to this device. It re-verifies periodically; an internet connection is needed to activate and, occasionally, to keep the license valid." />
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+
+                <!-- ===== SETTINGS ===== -->
+                <TabItem>
+                    <Border Background="{StaticResource Surface}" CornerRadius="14" BorderBrush="{StaticResource Border}"
+                            BorderThickness="1" Padding="28" VerticalAlignment="Top">
+                        <StackPanel MaxWidth="460" HorizontalAlignment="Left">
+                            <TextBlock Text="TOGGLE KEY" Style="{StaticResource Label}" />
+                            <ComboBox ItemsSource="{Binding ToggleKeyOptions}" SelectedItem="{Binding SelectedToggleKey}"
+                                      DisplayMemberPath="Name" Width="240" HorizontalAlignment="Left" />
+                            <TextBlock Text="The key that turns system-wide typing on/off. Applies immediately."
+                                       Style="{StaticResource Hint}" Margin="2,6,0,20" />
+                            <CheckBox Content="Show on-screen notification when toggled" IsChecked="{Binding ShowToggleNotification}" Margin="0,0,0,16" />
+                            <CheckBox Content="Start automatically when I sign in to Windows" IsChecked="{Binding AutoStart}" Margin="0,0,0,20" />
+                            <TextBlock Text="EXCLUDE APPS (don't type in these)" Style="{StaticResource Label}" />
+                            <TextBox Text="{Binding ExcludedProcesses, UpdateSourceTrigger=LostFocus}" Width="320" HorizontalAlignment="Left" />
+                            <TextBlock Text="Comma-separated process names, e.g. mstsc, keepass. Typing passes through untouched in these."
+                                       Style="{StaticResource Hint}" Margin="2,6,0,20" />
+                            <Button Content="Save current selection as default" Command="{Binding SaveDefaultsCommand}"
+                                    Style="{StaticResource Secondary}" HorizontalAlignment="Left" />
+                            <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,12,0,0" />
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+
+        <!-- ================= LOCK OVERLAY ================= -->
+        <!-- Covers the whole window while the app is unlicensed/expired/revoked.
+             Full-lock model: nothing behind it is reachable until activation. -->
+        <Border Grid.Column="0" Grid.ColumnSpan="2" DataContext="{Binding License}"
+                Background="#E61B1D21"
+                Visibility="{Binding IsLocked, Converter={StaticResource BoolToVis}}">
+            <Border Background="{StaticResource Surface}" CornerRadius="16" BorderBrush="{StaticResource Border}"
+                    BorderThickness="1" Padding="34" MaxWidth="440" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,18">
+                        <Border Width="40" Height="40" CornerRadius="11" Background="White" Padding="3">
+                            <Image Source="/logo.png" Stretch="Uniform" />
+                        </Border>
+                        <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="TextSoft" Foreground="{StaticResource Text}" FontSize="16" FontWeight="Bold" />
+                            <TextBlock Text="Activation required" Foreground="{StaticResource Primary}"
+                                       FontSize="11.5" FontWeight="SemiBold" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <TextBlock Text="{Binding LockReason}" Style="{StaticResource Hint}" TextWrapping="Wrap"
+                               Margin="0,0,0,16" />
+
+                    <TextBlock Text="LICENSE KEY" Style="{StaticResource Label}" />
+                    <TextBox Text="{Binding KeyInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas" />
+
+                    <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
+                        <Button Content="Activate" Command="{Binding ActivateCommand}" />
+                        <Button Content="Retry" Command="{Binding RetryCommand}" Style="{StaticResource Secondary}" Margin="10,0,0,0" />
+                    </StackPanel>
+
+                    <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,16,0,0" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+        </Border>
+    </Grid>
+</Window>

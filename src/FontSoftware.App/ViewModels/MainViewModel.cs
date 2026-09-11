@@ -1,0 +1,635 @@
+using System.Collections.ObjectModel;
+using System.Windows.Threading;
+using FontSoftware.App.Infrastructure;
+using FontSoftware.App.Services;
+using FontSoftware.Core.Config;
+using FontSoftware.Core.Conversion;
+using FontSoftware.Core.Diagnostics;
+using FontSoftware.Core.Models;
+using FontSoftware.Engine;
+using FontSoftware.Licensing;
+
+namespace FontSoftware.App.ViewModels;
+
+/// <summary>
+/// Root view model. Owns FR-1 selection, drives the FR-2 keyboard viewer,
+/// hosts the FR-3 typing engine, exposes the FR-4 converter panel, and applies
+/// FR-6 settings.
+/// </summary>
+public sealed class MainViewModel : ObservableObject, IDisposable
+{
+    private readonly AssetBundle _bundle;
+    private readonly AppSettings _settings;
+    private readonly SettingsStore _store;
+    private readonly IAppLog _log;
+    private readonly StartupService _startup;
+    private readonly FontResolver _fonts;
+
+    private readonly LowLevelKeyboardHook _hook;
+    private readonly InputInjector _injector;
+    private readonly TypingEngine _engine;
+    private readonly DispatcherTimer _licenseTimer;
+
+    private readonly List<KeyCapViewModel> _allKeys = new();
+
+    /// <summary>
+    /// The always-available "Unicode" font offered for every language, and the
+    /// default selection. Nirmala UI ships with Windows 8+ and covers every
+    /// supported Indic script, so Unicode text renders even when none of the
+    /// client's own fonts are installed. Every keyboard layout already emits
+    /// Unicode, so picking this types correctly into any app.
+    /// </summary>
+    private static readonly FontAsset UnicodeFont = new()
+    {
+        Id = "unicode",
+        Name = "Unicode",
+        Family = "Nirmala UI",
+        Type = FontType.Unicode
+    };
+
+    /// <summary>Raised when typing is toggled, so the view can show the FR-3 toast.</summary>
+    public event Action<bool, string, string>? ToggleNotified;
+
+    // ---- FR-1 selection ----
+    public ObservableCollection<LanguageProfile> Languages { get; } = new();
+    public ObservableCollection<FontLayout> FontLayouts { get; } = new();
+    public ObservableCollection<FontAsset> Fonts { get; } = new();
+    public ObservableCollection<LayoutRef> Layouts { get; } = new();
+
+    private LanguageProfile? _selectedLanguage;
+    public LanguageProfile? SelectedLanguage
+    {
+        get => _selectedLanguage;
+        set { if (SetProperty(ref _selectedLanguage, value)) OnLanguageChanged(); }
+    }
+
+    private FontAsset? _selectedFont;
+    public FontAsset? SelectedFont
+    {
+        get => _selectedFont;
+        set
+        {
+            if (SetProperty(ref _selectedFont, value))
+            {
+                OnPropertyChanged(nameof(SelectedFontFamily));
+                OnPropertyChanged(nameof(SelectedFontMissing));
+                ApplyProfile();
+            }
+        }
+    }
+
+    private FontLayout? _selectedFontLayout;
+    /// <summary>The Shree-style Font Layout (font product / encoding family) in use.</summary>
+    public FontLayout? SelectedFontLayout
+    {
+        get => _selectedFontLayout;
+        set { if (SetProperty(ref _selectedFontLayout, value)) OnFontLayoutChanged(); }
+    }
+
+    private LayoutRef? _selectedLayout;
+    public LayoutRef? SelectedLayout
+    {
+        get => _selectedLayout;
+        set { if (SetProperty(ref _selectedLayout, value)) ApplyProfile(); }
+    }
+
+    private bool _legacyTypingActive;
+    /// <summary>True when the active Font Layout types live in a legacy encoding (ShreeLipi-Ex etc.).</summary>
+    public bool LegacyTypingActive
+    {
+        get => _legacyTypingActive;
+        private set => SetProperty(ref _legacyTypingActive, value);
+    }
+
+    /// <summary>Representative script character for the active language (app badge).</summary>
+    public string ActiveScriptChar => SelectedLanguage?.Sample ?? "अ";
+
+    /// <summary>
+    /// Font for the on-screen keyboard, which always shows the layout's Unicode
+    /// characters. For a legacy Font Layout the selected font is a legacy (byte-
+    /// mapped) font that can't render Unicode, so the preview uses a Unicode font;
+    /// the legacy font is what the TYPED output lands in, in the target app.
+    /// </summary>
+    public System.Windows.Media.FontFamily SelectedFontFamily =>
+        SelectedFont is { Type: FontType.Legacy }
+            ? new System.Windows.Media.FontFamily("Nirmala UI, Segoe UI")
+            : _fonts.Resolve(SelectedFont);
+
+    /// <summary>True unless the selected font can be rendered (bundled or installed); shows an install hint.</summary>
+    public bool SelectedFontMissing => SelectedFont is not null && !_fonts.IsAvailable(SelectedFont);
+
+    private bool _showAllInstalledFonts;
+    /// <summary>Include every font installed on this PC in the Font list (FR-1 convenience).</summary>
+    public bool ShowAllInstalledFonts
+    {
+        get => _showAllInstalledFonts;
+        set { if (SetProperty(ref _showAllInstalledFonts, value)) OnLanguageChanged(); }
+    }
+
+    // ---- FR-2 keyboard viewer ----
+    public ObservableCollection<ObservableCollection<KeyCapViewModel>> KeyboardRows { get; } = new();
+
+    private bool _showShiftLayer;
+    public bool ShowShiftLayer
+    {
+        get => _showShiftLayer;
+        set { if (SetProperty(ref _showShiftLayer, value)) RefreshKeyboard(); }
+    }
+
+    // ---- FR-3 typing ----
+    private bool _typingEnabled;
+    public bool TypingEnabled
+    {
+        get => _typingEnabled;
+        set
+        {
+            // Full-lock: never let typing run while the app is unlicensed.
+            if (value && License is { IsActive: false }) value = false;
+            if (SetProperty(ref _typingEnabled, value))
+                _engine.SetEnabled(value);
+        }
+    }
+
+    public RelayCommand ToggleTypingCommand { get; }
+
+    /// <summary>True when the app is locked (no valid license) — drives the lock overlay.</summary>
+    public bool IsAppLocked => !License.IsActive;
+
+    // Keep premium gating + typing + the overlay in sync with the license state.
+    private void OnLicenseActiveChanged()
+    {
+        Converter.PremiumUnlocked = License.IsActive;
+        OnPropertyChanged(nameof(IsAppLocked));
+        if (!License.IsActive)
+            TypingEnabled = false;
+    }
+
+    // ---- Phonetic "type by sound" ----
+    private bool _hasPhonetic;
+    /// <summary>True when the selected language has a phonetic scheme (enables the toggle).</summary>
+    public bool HasPhonetic
+    {
+        get => _hasPhonetic;
+        private set => SetProperty(ref _hasPhonetic, value);
+    }
+
+    private bool _phoneticMode;
+    /// <summary>Type-by-sound mode: roman input transliterates to the script.</summary>
+    public bool PhoneticMode
+    {
+        get => _phoneticMode;
+        set
+        {
+            if (SetProperty(ref _phoneticMode, value))
+            {
+                _engine.SetPhoneticMode(value);
+                Status = value ? "Phonetic mode: type words the way they sound." : Status;
+            }
+        }
+    }
+
+    // ---- FR-4 converter ----
+    public ConverterViewModel Converter { get; }
+
+    // ---- FR-5 licensing ----
+    public LicenseViewModel License { get; }
+
+    // ---- FR-6 settings ----
+    public IReadOnlyList<ToggleKeyOption> ToggleKeyOptions { get; } = ToggleKeyOption.All;
+
+    private ToggleKeyOption _selectedToggleKey;
+    public ToggleKeyOption SelectedToggleKey
+    {
+        get => _selectedToggleKey;
+        set
+        {
+            if (SetProperty(ref _selectedToggleKey, value) && value is not null)
+            {
+                _engine.ToggleKey = value.VirtualKey;
+                _settings.ToggleKey = value.VirtualKey;
+                Persist();
+            }
+        }
+    }
+
+    private bool _showToggleNotification;
+    public bool ShowToggleNotification
+    {
+        get => _showToggleNotification;
+        set
+        {
+            if (SetProperty(ref _showToggleNotification, value))
+            {
+                _settings.ShowToggleNotification = value;
+                Persist();
+            }
+        }
+    }
+
+    private bool _autoStart;
+    /// <summary>Start the app automatically at Windows login (FRD NFR: optional auto-start).</summary>
+    public bool AutoStart
+    {
+        get => _autoStart;
+        set
+        {
+            if (!SetProperty(ref _autoStart, value))
+                return;
+
+            // The registry write is the source of truth; only persist/keep the
+            // toggle if it actually applied, so the checkbox never claims a state
+            // the OS didn't accept.
+            if (_startup.SetEnabled(value))
+            {
+                _settings.AutoStart = value;
+                Persist();
+            }
+            else
+            {
+                Status = "Could not change the auto-start setting. See the log for details.";
+                SetProperty(ref _autoStart, !value, nameof(AutoStart)); // revert UI
+            }
+        }
+    }
+
+    private string _excludedProcesses = string.Empty;
+    /// <summary>Comma-separated process names where typing is suppressed (FR-3).</summary>
+    public string ExcludedProcesses
+    {
+        get => _excludedProcesses;
+        set
+        {
+            if (!SetProperty(ref _excludedProcesses, value))
+                return;
+
+            var names = value.Split(new[] { ',', ';', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                             .Select(n => n.Trim().ToLowerInvariant())
+                             .Where(n => n.Length > 0)
+                             .Distinct()
+                             .ToList();
+
+            _engine.ExcludedProcesses.Clear();
+            foreach (var n in names)
+                _engine.ExcludedProcesses.Add(n);
+
+            _settings.ExcludedProcesses = names;
+            Persist();
+        }
+    }
+
+    public RelayCommand SaveDefaultsCommand { get; }
+
+    private string _status = string.Empty;
+    public string Status
+    {
+        get => _status;
+        set => SetProperty(ref _status, value);
+    }
+
+    public MainViewModel(AssetBundle bundle, AppSettings settings, SettingsStore store, IAppLog log, FontResolver fonts)
+    {
+        _bundle = bundle;
+        _settings = settings;
+        _store = store;
+        _log = log;
+        _fonts = fonts;
+
+        _startup = new StartupService(log);
+        _hook = new LowLevelKeyboardHook();
+        _injector = new InputInjector(log);
+        _engine = new TypingEngine(_hook, _injector, log) { ToggleKey = settings.ToggleKey };
+        _engine.Toggled += OnEngineToggled;
+        foreach (var name in settings.ExcludedProcesses)
+            _engine.ExcludedProcesses.Add(name);
+
+        Converter = new ConverterViewModel(bundle, fonts);
+
+        string appVersion = typeof(MainViewModel).Assembly.GetName().Version?.ToString() ?? "1.0.0";
+        var licenseManager = new LicenseManager(
+            new LicenseApiClient(settings.LicenseApiUrl),
+            new TokenReader(new Ed25519Verifier()),
+            new WindowsDeviceIdProvider(),
+            new FileLicenseStore(),
+            appVersion);
+        License = new LicenseViewModel(licenseManager);
+
+        // Full-lock gating: the app is usable only while licensed (demo or full).
+        Converter.PremiumUnlocked = License.IsActive;
+        License.PropertyChanged += (_, e) =>
+        {
+            if (e.PropertyName == nameof(LicenseViewModel.IsActive))
+                OnLicenseActiveChanged();
+        };
+
+        // Re-validate against the server every 6h while running.
+        _licenseTimer = new DispatcherTimer { Interval = TimeSpan.FromHours(6) };
+        _licenseTimer.Tick += (_, _) => _ = License.RefreshAsync();
+        _licenseTimer.Start();
+
+        // Load + re-validate now; the lock overlay stays up until this resolves.
+        _ = License.InitializeAsync();
+
+        ToggleTypingCommand = new RelayCommand(() => TypingEnabled = !TypingEnabled);
+        SaveDefaultsCommand = new RelayCommand(SaveDefaults);
+
+        _showToggleNotification = settings.ShowToggleNotification;
+        // The registry is authoritative (the installer may have set auto-start),
+        // so reflect the real state and reconcile the saved setting to match.
+        _autoStart = _startup.IsEnabled();
+        if (_autoStart != settings.AutoStart)
+        {
+            settings.AutoStart = _autoStart;
+            _store.Save(settings);
+        }
+        _excludedProcesses = string.Join(", ", settings.ExcludedProcesses);
+        _selectedToggleKey = ToggleKeyOption.All.FirstOrDefault(o => o.VirtualKey == settings.ToggleKey)
+                             ?? ToggleKeyOption.All[0];
+
+        foreach (var lang in bundle.Languages)
+            Languages.Add(lang);
+
+        BuildKeyboardShell();
+        RestoreDefaults();
+    }
+
+    /// <summary>Install the global hook. Call once the UI (message pump) is up.</summary>
+    public void Start()
+    {
+        try
+        {
+            _hook.Install();
+            _log.Info("Keyboard hook installed.");
+        }
+        catch (Exception ex)
+        {
+            _log.Error("Failed to install keyboard hook.", ex);
+            Status = "Could not start the typing hook. See the log for details.";
+        }
+    }
+
+    private void OnLanguageChanged()
+    {
+        Fonts.Clear();
+        Layouts.Clear();
+        FontLayouts.Clear();
+        OnPropertyChanged(nameof(ActiveScriptChar));
+
+        if (SelectedLanguage is null)
+            return;
+
+        // A "Unicode" option is ALWAYS offered for every language, and is the
+        // default. Every keyboard layout already emits Unicode, so this types
+        // correctly into any app and renders in Windows' built-in Indic font
+        // even when none of the client's legacy fonts are installed. This is
+        // what makes "pick Unicode and whatever font the client has just works".
+        Fonts.Add(UnicodeFont);
+
+        // FR-1: show the language's FULL supported font list so the client can
+        // see everything the software integrates. Fonts not installed on this PC
+        // are shown too, just marked "not installed" — that is the client's
+        // machine, not our fault, and hiding them looked like missing features.
+        // Bundled legacy fonts (e.g. Shree) render without a system install.
+        foreach (var font in SelectedLanguage.Fonts)
+        {
+            if (string.Equals(font.Family, UnicodeFont.Family, StringComparison.OrdinalIgnoreCase))
+                continue; // already covered by the universal Unicode entry
+            Fonts.Add(_fonts.IsAvailable(font) ? font : font.AsNotInstalled());
+        }
+        foreach (var layout in SelectedLanguage.Layouts)
+            Layouts.Add(layout);
+
+        // Optionally append every other font installed on this PC (deduped by
+        // family), so a client's own/private Unicode font can be picked too.
+        if (ShowAllInstalledFonts)
+        {
+            var have = new HashSet<string>(Fonts.Select(f => f.Family), StringComparer.OrdinalIgnoreCase);
+            foreach (var fam in SystemFontService.InstalledFamilies())
+            {
+                if (have.Add(fam))
+                    Fonts.Add(new FontAsset { Id = "sys:" + fam, Name = fam, Family = fam, Type = FontType.Unicode });
+            }
+        }
+
+        // Font Layout list (Shree-style product/encoding families) for this language.
+        foreach (var fl in SelectedLanguage.FontLayouts)
+            FontLayouts.Add(fl);
+
+        SelectedFont = Fonts.FirstOrDefault();
+        SelectedLayout = Layouts.FirstOrDefault();
+        // Setting this drives the render font via OnFontLayoutChanged (defaults to Unicode).
+        SelectedFontLayout = FontLayouts.FirstOrDefault();
+
+        // Apply any saved per-language defaults (FR-6) on top of the fallbacks.
+        RestoreDefaultsForLanguage();
+    }
+
+    /// <summary>
+    /// A Font Layout was chosen: point the render font at the family it implies.
+    /// Unicode → the universal Unicode font (or the user's own pick). A legacy
+    /// family we ship → that font. A third-party family we don't have yet → a
+    /// placeholder entry marked not provided, so it is visible but honest.
+    /// </summary>
+    private void OnFontLayoutChanged()
+    {
+        if (SelectedFontLayout is null)
+            return;
+
+        if (SelectedFontLayout.IsUnicode)
+        {
+            SelectedFont = Fonts.FirstOrDefault(f => f.Id == "unicode") ?? Fonts.FirstOrDefault();
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(SelectedFontLayout.FontId))
+        {
+            var existing = Fonts.FirstOrDefault(x => x.Id == SelectedFontLayout.FontId);
+            if (existing is not null) { SelectedFont = existing; return; }
+
+            var cat = SelectedLanguage?.Fonts.FirstOrDefault(x => x.Id == SelectedFontLayout.FontId);
+            var add = cat is null
+                ? new FontAsset { Id = SelectedFontLayout.FontId!, Name = SelectedFontLayout.Name, Family = SelectedFontLayout.Name, Type = FontType.Legacy, Display = $"{SelectedFontLayout.Name}  —  not installed" }
+                : (_fonts.IsAvailable(cat) ? cat : cat.AsNotInstalled());
+            Fonts.Add(add);
+            SelectedFont = add;
+            return;
+        }
+
+        // Third-party family whose font/encoding the client hasn't provided yet.
+        string synId = "fl:" + SelectedFontLayout.Id;
+        var syn = Fonts.FirstOrDefault(x => x.Id == synId)
+                  ?? AddAndReturn(new FontAsset { Id = synId, Name = SelectedFontLayout.Name, Family = SelectedFontLayout.Name, Type = FontType.Legacy, Display = $"{SelectedFontLayout.Name}  —  font not provided" });
+        SelectedFont = syn;
+    }
+
+    private FontAsset AddAndReturn(FontAsset f) { Fonts.Add(f); return f; }
+
+    /// <summary>Push the current selection into the engine and keyboard viewer.</summary>
+    private void ApplyProfile()
+    {
+        if (SelectedLanguage is null || SelectedLayout is null)
+            return;
+
+        try
+        {
+            var layout = _bundle.GetLayout(SelectedLayout);
+            _engine.SetProfile(layout, SelectedLanguage.Name, SelectedFont?.Name ?? string.Empty);
+
+            // Phonetic scheme for this language (null if none) drives the type-by-sound toggle.
+            var translit = _bundle.GetTransliterator(SelectedLanguage);
+            _engine.SetTransliterator(translit);
+            HasPhonetic = translit is not null;
+            if (!HasPhonetic && PhoneticMode)
+                PhoneticMode = false;
+
+            // Legacy Font Layout: type live in that legacy encoding so it shows in
+            // the legacy font. Unicode layout (or no map available) types plain Unicode.
+            FontConverter? legacy = null;
+            if (SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode && SelectedFont is not null)
+                legacy = _bundle.CreateConverterToLegacy(SelectedFont.ConversionKey);
+            _engine.SetLegacyConverter(legacy);
+            LegacyTypingActive = legacy is not null;
+
+            RefreshKeyboard();
+            string mode = LegacyTypingActive ? " (legacy)" : SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode ? " (font not provided — types Unicode)" : string.Empty;
+            Status = $"Active: {SelectedLanguage.Name} · {SelectedFontLayout?.Name}{mode} · {SelectedLayout.Name}";
+        }
+        catch (ConfigException ex)
+        {
+            Status = ex.Message; // FR-1: graceful, clear message on bad asset
+        }
+    }
+
+    private void BuildKeyboardShell()
+    {
+        _allKeys.Clear();
+        KeyboardRows.Clear();
+        foreach (var physRow in PhysicalKeyboard.Rows)
+        {
+            var row = new ObservableCollection<KeyCapViewModel>();
+            foreach (var key in physRow)
+            {
+                var cap = new KeyCapViewModel(key.VirtualKey, key.Label);
+                row.Add(cap);
+                _allKeys.Add(cap);
+            }
+            KeyboardRows.Add(row);
+        }
+    }
+
+    private void RefreshKeyboard()
+    {
+        KeyboardLayout? layout = null;
+        if (SelectedLayout is not null)
+        {
+            try { layout = _bundle.GetLayout(SelectedLayout); }
+            catch (ConfigException) { layout = null; }
+        }
+
+        foreach (var cap in _allKeys)
+        {
+            var mapping = layout?.Find(cap.VirtualKey);
+            string? mapped = mapping is null
+                ? null
+                : (ShowShiftLayer ? mapping.Shift ?? mapping.Base : mapping.Base);
+
+            if (!string.IsNullOrEmpty(mapped))
+            {
+                cap.Display = mapped;
+                cap.IsMapped = true;
+            }
+            else
+            {
+                cap.Display = cap.Label; // fall back to English (FR-2 rule)
+                cap.IsMapped = false;
+            }
+        }
+    }
+
+    private void OnEngineToggled(object? sender, ToggleEventArgs e)
+    {
+        // Hook callback runs on the UI thread, so touching the VM is safe.
+        SetProperty(ref _typingEnabled, e.Enabled, nameof(TypingEnabled));
+        if (ShowToggleNotification)
+            ToggleNotified?.Invoke(e.Enabled, e.LanguageName, e.FontName);
+    }
+
+    // ---- FR-6 ----
+    private void RestoreDefaults() => SelectedLanguage = ResolveDefaultLanguage();
+
+    private LanguageProfile? ResolveDefaultLanguage()
+    {
+        var lang = _settings.DefaultLanguageId is null
+            ? Languages.FirstOrDefault()
+            : Languages.FirstOrDefault(l => l.Id == _settings.DefaultLanguageId) ?? Languages.FirstOrDefault();
+        return lang;
+    }
+
+    private void RestoreDefaultsForLanguage()
+    {
+        if (_settings.DefaultFontId is not null)
+        {
+            var f = Fonts.FirstOrDefault(x => x.Id == _settings.DefaultFontId);
+            if (f is not null) SelectedFont = f;
+        }
+        if (_settings.DefaultLayoutId is not null)
+        {
+            var l = Layouts.FirstOrDefault(x => x.Id == _settings.DefaultLayoutId);
+            if (l is not null) SelectedLayout = l;
+        }
+    }
+
+    private void SaveDefaults()
+    {
+        _settings.DefaultLanguageId = SelectedLanguage?.Id;
+        _settings.DefaultFontId = SelectedFont?.Id;
+        _settings.DefaultLayoutId = SelectedLayout?.Id;
+        Persist();
+        Status = "Defaults saved.";
+    }
+
+    private void Persist() => _store.Save(_settings);
+
+    public void Dispose()
+    {
+        _licenseTimer.Stop();
+        _engine.Toggled -= OnEngineToggled;
+        _engine.Dispose();
+        _hook.Dispose();
+    }
+}
+
+/// <summary>A selectable toggle key for the settings panel (FR-6).</summary>
+public sealed class ToggleKeyOption
+{
+    public string Name { get; }
+    public int VirtualKey { get; }
+
+    public ToggleKeyOption(string name, int virtualKey)
+    {
+        Name = name;
+        VirtualKey = virtualKey;
+    }
+
+    public override string ToString() => Name;
+
+    public static IReadOnlyList<ToggleKeyOption> All { get; } = new List<ToggleKeyOption>
+    {
+        new("CapsLock", 0x14),
+        new("Scroll Lock", 0x91),
+        new("Right Ctrl", 0xA3),
+        new("Right Alt", 0xA5),
+        new("Pause/Break", 0x13),
+        new("F1", 0x70),
+        new("F2", 0x71),
+        new("F3", 0x72),
+        new("F4", 0x73),
+        new("F5", 0x74),
+        new("F6", 0x75),
+        new("F7", 0x76),
+        new("F8", 0x77),
+        new("F9", 0x78),
+        new("F10", 0x79),
+        new("F11", 0x7A),
+        new("F12", 0x7B)
+    };
+}

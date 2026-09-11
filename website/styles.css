@@ -1,0 +1,162 @@
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f5f7fb;
+    --ink: #0f172a;
+    --muted: #5b6472;
+    --line: #e5e9f0;
+    --brand: #2563eb;
+    --brand-dark: #1e40af;
+    --accent: #7c3aed;
+    --card: #ffffff;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* guard against any wide decorative element */
+}
+
+.kbd { max-width: 100%; }
+
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+
+/* ---------------- Nav ---------------- */
+.nav {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+.nav__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; }
+.brand__mark {
+    display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--brand), var(--accent)); color: #fff; font-weight: 700;
+}
+.nav__links { display: flex; align-items: center; gap: 26px; }
+.nav__links a { color: var(--muted); font-weight: 500; }
+.nav__links a:hover { color: var(--ink); }
+.nav__toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+.nav__toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; border-radius: 2px; }
+
+/* ---------------- Buttons ---------------- */
+.btn {
+    display: inline-block; background: var(--brand); color: #fff; font-weight: 600;
+    padding: 11px 20px; border-radius: 10px; transition: transform .05s ease, background .2s ease;
+}
+.btn:hover { background: var(--brand-dark); }
+.btn:active { transform: translateY(1px); }
+.btn--sm { padding: 8px 14px; font-size: .92rem; }
+.btn--lg { padding: 14px 26px; font-size: 1.05rem; }
+.btn--ghost { background: transparent; color: var(--brand); box-shadow: inset 0 0 0 1.5px var(--brand); }
+.btn--ghost:hover { background: rgba(37, 99, 235, 0.06); }
+.btn--block { display: block; text-align: center; }
+
+/* ---------------- Hero ---------------- */
+.hero { padding: 72px 0 64px; background: radial-gradient(1200px 500px at 70% -10%, #eef2ff, transparent); }
+.hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; color: var(--brand); margin: 0 0 12px; }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -.02em; }
+.grad { background: linear-gradient(135deg, var(--brand), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 34ch; }
+.hero__cta { display: flex; gap: 14px; flex-wrap: wrap; margin: 28px 0 14px; }
+.hero__note { font-size: .9rem; color: var(--muted); margin: 0; }
+
+/* Decorative keyboard */
+.hero__art { display: flex; justify-content: center; }
+.kbd { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+.kbd__row { display: flex; gap: 8px; margin-bottom: 8px; }
+.kbd__row span {
+    width: 46px; height: 46px; display: grid; place-items: center; border-radius: 10px;
+    background: var(--bg-alt); border: 1px solid var(--line); font-size: 1.05rem; color: var(--muted);
+}
+.kbd__row span.on { background: #eaf1ff; border-color: #b9d0f8; color: var(--brand-dark); font-weight: 700; }
+.kbd__space { margin-top: 4px; }
+.kbd__space span {
+    display: grid; place-items: center; height: 40px; border-radius: 10px;
+    background: var(--bg-alt); border: 1px solid var(--line); color: var(--muted); font-size: .85rem;
+}
+
+/* ---------------- Sections ---------------- */
+.section { padding: 76px 0; }
+.section--alt { background: var(--bg-alt); }
+.section__title { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 800; text-align: center; margin-bottom: 44px; letter-spacing: -.01em; }
+
+/* Features grid */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.card__icon { font-size: 1.7rem; margin-bottom: 12px; }
+.card h3 { font-size: 1.15rem; }
+.card p { color: var(--muted); margin: 0; }
+
+/* Steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.steps li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.steps__num { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--brand), var(--accent)); color: #fff; font-weight: 700; margin-bottom: 14px; }
+.steps p { color: var(--muted); margin: 0; }
+
+/* Pricing */
+.pricing { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 24px; justify-content: center; }
+.plan { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; }
+.plan--featured { border-color: var(--brand); box-shadow: var(--shadow); }
+.plan__badge { position: absolute; top: -12px; right: 22px; background: var(--brand); color: #fff; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 5px 12px; border-radius: 999px; }
+.plan__price { font-size: 2.4rem; font-weight: 800; margin: .2em 0 .6em; }
+.plan ul { list-style: none; padding: 0; margin: 0 0 24px; }
+.plan li { padding: 8px 0 8px 26px; position: relative; color: var(--muted); border-top: 1px solid var(--line); }
+.plan li::before { content: "✓"; position: absolute; left: 2px; color: var(--brand); font-weight: 700; }
+.fineprint { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 20px; }
+
+/* CTA + contact */
+.cta, .contact { text-align: center; max-width: 620px; margin: 0 auto; }
+.cta h2, .contact h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
+.cta p, .contact p { color: var(--muted); }
+.cta .btn { margin: 12px 0; }
+
+/* Footer */
+.footer { border-top: 1px solid var(--line); padding: 30px 0; }
+.footer__inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: .9rem; }
+.footer__muted { color: var(--muted); }
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__art { order: -1; }
+    .grid, .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+    .nav__toggle { display: block; }
+    .nav__links {
+        position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0;
+        background: #fff; border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden;
+        transition: max-height .25s ease;
+    }
+    .nav__links.open { max-height: 340px; }
+    .nav__links a { width: 100%; padding: 14px 20px; border-top: 1px solid var(--line); }
+    .nav__links .btn { margin: 12px 20px; width: calc(100% - 40px); text-align: center; }
+}
+@media (max-width: 560px) {
+    .grid, .steps, .pricing { grid-template-columns: 1fr; }
+    .footer__inner { flex-direction: column; text-align: center; }
+    .lead { max-width: none; }
+    /* Shrink the decorative keyboard so it never forces horizontal scroll. */
+    .kbd { padding: 12px; }
+    .kbd__row { gap: 5px; margin-bottom: 5px; }
+    .kbd__row span { width: 32px; height: 38px; font-size: .9rem; }
+    .hero__cta .btn { flex: 1 1 auto; text-align: center; }
+}

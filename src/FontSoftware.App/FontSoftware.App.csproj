@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <!-- WinForms is enabled only for the system-tray icon (NotifyIcon); the UI is WPF. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>FontSoftware.App</RootNamespace>
+    <AssemblyName>TextSoft</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <!-- WPF drives DPI via the manifest (correct for this WPF-only UI); silence the
+         WinForms analyzer that wants DPI configured through its own API instead. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Embedded so the window title bar can use it too. -->
+    <Resource Include="app.ico" />
+    <!-- TextSoft brand logo (lives at the repo root), shown in the sidebar. -->
+    <Resource Include="..\..\logo.png" Link="logo.png" />
+  </ItemGroup>
+
+  <!-- WinForms is used only for the tray icon, via an explicit alias in code.
+       Drop its implicit global usings so 'Application', 'MessageBox', etc. stay
+       unambiguously WPF everywhere else. -->
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FontSoftware.Core\FontSoftware.Core.csproj" />
+    <ProjectReference Include="..\FontSoftware.Engine\FontSoftware.Engine.csproj" />
+    <ProjectReference Include="..\FontSoftware.Licensing\FontSoftware.Licensing.csproj" />
+  </ItemGroup>
+
+  <!-- Ship the config next to the app; client replaces with real assets.
+       Includes JSON catalog/layouts/mappings and any bundled font files. -->
+  <ItemGroup>
+    <Content Include="..\..\assets\config\**\*.json;..\..\assets\config\**\*.ttf;..\..\assets\config\**\*.otf" Link="config\%(RecursiveDir)%(Filename)%(Extension)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

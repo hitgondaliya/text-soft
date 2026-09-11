@@ -1,0 +1,26 @@
+# deps
+/node_modules
+/.pnp
+.pnp.js
+
+# next
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# env — SECRETS. Never commit. Ed25519 private key lives here.
+.env
+.env.local
+.env*.local
+
+# keys (any stray PEM/key material)
+*.pem
+/keys/
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*

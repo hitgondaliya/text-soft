@@ -1,0 +1,3274 @@
+{
+  "languages": [
+    {
+      "id": "hi",
+      "name": "Hindi",
+      "sample": "\u0905",
+      "fonts": [
+        {
+          "id": "shree-devx",
+          "name": "Shree-DevX (Legacy)",
+          "family": "Shree-DevX-0001",
+          "file": "fonts/shree/shree-devx.ttf",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "mangal",
+          "name": "Mangal (Unicode)",
+          "family": "Mangal",
+          "type": "unicode"
+        },
+        {
+          "id": "krutidev",
+          "name": "Kruti Dev 010 (Legacy)",
+          "family": "Kruti Dev 010",
+          "type": "legacy"
+        },
+        {
+          "id": "devlys",
+          "name": "DevLys 010 (Legacy)",
+          "family": "DevLys 010",
+          "type": "legacy",
+          "encoding": "krutidev"
+        },
+        {
+          "id": "shree-dev-0700",
+          "name": "Shree-Dev 0700 (Legacy)",
+          "family": "SHREE-DEVX-0700",
+          "file": "fonts/S0700810.TTF",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "cf-amita",
+          "name": "Amita (Unicode)",
+          "family": "Amita",
+          "file": "fonts/client/Amita-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-biryani",
+          "name": "Biryani (Unicode)",
+          "family": "Biryani",
+          "file": "fonts/client/Biryani-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-mukta",
+          "name": "Mukta (Unicode)",
+          "family": "Mukta",
+          "file": "fonts/client/Mukta-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "nirmala-hi",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "mangal"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "hi-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-hi"
+        },
+        {
+          "id": "hi-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-devx"
+        },
+        {
+          "id": "hi-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-dev-0700"
+        },
+        {
+          "id": "hi-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-shivaji",
+          "name": "Shivaji",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-isfoc-monolingual",
+          "name": "ISFOC Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-indica",
+          "name": "Indica",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-anu",
+          "name": "Anu",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-aps-monolingual",
+          "name": "APS Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "hi-fl-akruti-monolingual",
+          "name": "Akruti Monolingual",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "hi-inscript",
+          "name": "InScript",
+          "file": "layouts/hindi-inscript.json"
+        },
+        {
+          "id": "dev-abitr",
+          "name": "Abitr",
+          "file": "layouts/dev-abitr.json"
+        },
+        {
+          "id": "dev-akrphone",
+          "name": "Akrphone",
+          "file": "layouts/dev-akrphone.json"
+        },
+        {
+          "id": "dev-akruti",
+          "name": "Akruti",
+          "file": "layouts/dev-akruti.json"
+        },
+        {
+          "id": "dev-akshar",
+          "name": "Akshar",
+          "file": "layouts/dev-akshar.json"
+        },
+        {
+          "id": "dev-apple",
+          "name": "Apple",
+          "file": "layouts/dev-apple.json"
+        },
+        {
+          "id": "dev-aps-1",
+          "name": "Aps 1",
+          "file": "layouts/dev-aps-1.json"
+        },
+        {
+          "id": "dev-aps-2",
+          "name": "Aps 2",
+          "file": "layouts/dev-aps-2.json"
+        },
+        {
+          "id": "dev-asterix",
+          "name": "Asterix",
+          "file": "layouts/dev-asterix.json"
+        },
+        {
+          "id": "dev-bpmk",
+          "name": "Bpmk",
+          "file": "layouts/dev-bpmk.json"
+        },
+        {
+          "id": "dev-compset",
+          "name": "Compset",
+          "file": "layouts/dev-compset.json"
+        },
+        {
+          "id": "dev-compset1",
+          "name": "Compset1",
+          "file": "layouts/dev-compset1.json"
+        },
+        {
+          "id": "dev-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/dev-crtronic.json"
+        },
+        {
+          "id": "dev-devyani",
+          "name": "Devyani",
+          "file": "layouts/dev-devyani.json"
+        },
+        {
+          "id": "dev-devyani2",
+          "name": "Devyani2",
+          "file": "layouts/dev-devyani2.json"
+        },
+        {
+          "id": "dev-doe",
+          "name": "Doe",
+          "file": "layouts/dev-doe.json"
+        },
+        {
+          "id": "dev-eng",
+          "name": "Eng",
+          "file": "layouts/dev-eng.json"
+        },
+        {
+          "id": "dev-godrej",
+          "name": "Godrej",
+          "file": "layouts/dev-godrej.json"
+        },
+        {
+          "id": "dev-godrej1",
+          "name": "Godrej1",
+          "file": "layouts/dev-godrej1.json"
+        },
+        {
+          "id": "dev-indica",
+          "name": "Indica",
+          "file": "layouts/dev-indica.json"
+        },
+        {
+          "id": "dev-itr",
+          "name": "Itr",
+          "file": "layouts/dev-itr.json"
+        },
+        {
+          "id": "dev-k-p-rao",
+          "name": "K P Rao",
+          "file": "layouts/dev-k-p-rao.json"
+        },
+        {
+          "id": "dev-marathi",
+          "name": "Marathi",
+          "file": "layouts/dev-marathi.json"
+        },
+        {
+          "id": "dev-mtnk",
+          "name": "Mtnk",
+          "file": "layouts/dev-mtnk.json"
+        },
+        {
+          "id": "dev-naidunia",
+          "name": "Naidunia",
+          "file": "layouts/dev-naidunia.json"
+        },
+        {
+          "id": "dev-network",
+          "name": "Network",
+          "file": "layouts/dev-network.json"
+        },
+        {
+          "id": "dev-newroma",
+          "name": "Newroma",
+          "file": "layouts/dev-newroma.json"
+        },
+        {
+          "id": "dev-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/dev-phonetic.json"
+        },
+        {
+          "id": "dev-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/dev-phonet86.json"
+        },
+        {
+          "id": "dev-rajya",
+          "name": "Rajya",
+          "file": "layouts/dev-rajya.json"
+        },
+        {
+          "id": "dev-raming",
+          "name": "Remington",
+          "file": "layouts/dev-raming.json"
+        },
+        {
+          "id": "dev-raming2",
+          "name": "Remington 2",
+          "file": "layouts/dev-raming2.json"
+        },
+        {
+          "id": "dev-raming3",
+          "name": "Remington 3",
+          "file": "layouts/dev-raming3.json"
+        },
+        {
+          "id": "dev-roma",
+          "name": "Roma",
+          "file": "layouts/dev-roma.json"
+        },
+        {
+          "id": "dev-script",
+          "name": "Script",
+          "file": "layouts/dev-script.json"
+        },
+        {
+          "id": "dev-script1",
+          "name": "Script1",
+          "file": "layouts/dev-script1.json"
+        },
+        {
+          "id": "dev-srg",
+          "name": "Srg",
+          "file": "layouts/dev-srg.json"
+        },
+        {
+          "id": "dev-sulipi",
+          "name": "Sulipi",
+          "file": "layouts/dev-sulipi.json"
+        },
+        {
+          "id": "dev-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/dev-typewrit.json"
+        },
+        {
+          "id": "dev-typewri2",
+          "name": "Typewriter 2",
+          "file": "layouts/dev-typewri2.json"
+        },
+        {
+          "id": "dev-wx-dev",
+          "name": "Wx Dev",
+          "file": "layouts/dev-wx-dev.json"
+        }
+      ],
+      "scheme": "translit/hindi-phonetic.json"
+    },
+    {
+      "id": "mr",
+      "name": "Marathi",
+      "sample": "\u0905",
+      "fonts": [
+        {
+          "id": "shree-devx",
+          "name": "Shree-DevX (Legacy)",
+          "family": "Shree-DevX-0001",
+          "file": "fonts/shree/shree-devx.ttf",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "mangal",
+          "name": "Mangal (Unicode)",
+          "family": "Mangal",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-amita",
+          "name": "Amita (Unicode)",
+          "family": "Amita",
+          "file": "fonts/client/Amita-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-biryani",
+          "name": "Biryani (Unicode)",
+          "family": "Biryani",
+          "file": "fonts/client/Biryani-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-mukta",
+          "name": "Mukta (Unicode)",
+          "family": "Mukta",
+          "file": "fonts/client/Mukta-Regular.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "nirmala-mr",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "mangal"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "mr-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-mr"
+        },
+        {
+          "id": "mr-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-devx"
+        },
+        {
+          "id": "mr-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-dev-0700"
+        },
+        {
+          "id": "mr-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-shivaji",
+          "name": "Shivaji",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-isfoc-monolingual",
+          "name": "ISFOC Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-indica",
+          "name": "Indica",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-anu",
+          "name": "Anu",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-aps-monolingual",
+          "name": "APS Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "mr-fl-akruti-monolingual",
+          "name": "Akruti Monolingual",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "hi-inscript",
+          "name": "InScript",
+          "file": "layouts/hindi-inscript.json"
+        },
+        {
+          "id": "dev-abitr",
+          "name": "Abitr",
+          "file": "layouts/dev-abitr.json"
+        },
+        {
+          "id": "dev-akrphone",
+          "name": "Akrphone",
+          "file": "layouts/dev-akrphone.json"
+        },
+        {
+          "id": "dev-akruti",
+          "name": "Akruti",
+          "file": "layouts/dev-akruti.json"
+        },
+        {
+          "id": "dev-akshar",
+          "name": "Akshar",
+          "file": "layouts/dev-akshar.json"
+        },
+        {
+          "id": "dev-apple",
+          "name": "Apple",
+          "file": "layouts/dev-apple.json"
+        },
+        {
+          "id": "dev-aps-1",
+          "name": "Aps 1",
+          "file": "layouts/dev-aps-1.json"
+        },
+        {
+          "id": "dev-aps-2",
+          "name": "Aps 2",
+          "file": "layouts/dev-aps-2.json"
+        },
+        {
+          "id": "dev-asterix",
+          "name": "Asterix",
+          "file": "layouts/dev-asterix.json"
+        },
+        {
+          "id": "dev-bpmk",
+          "name": "Bpmk",
+          "file": "layouts/dev-bpmk.json"
+        },
+        {
+          "id": "dev-compset",
+          "name": "Compset",
+          "file": "layouts/dev-compset.json"
+        },
+        {
+          "id": "dev-compset1",
+          "name": "Compset1",
+          "file": "layouts/dev-compset1.json"
+        },
+        {
+          "id": "dev-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/dev-crtronic.json"
+        },
+        {
+          "id": "dev-devyani",
+          "name": "Devyani",
+          "file": "layouts/dev-devyani.json"
+        },
+        {
+          "id": "dev-devyani2",
+          "name": "Devyani2",
+          "file": "layouts/dev-devyani2.json"
+        },
+        {
+          "id": "dev-doe",
+          "name": "Doe",
+          "file": "layouts/dev-doe.json"
+        },
+        {
+          "id": "dev-eng",
+          "name": "Eng",
+          "file": "layouts/dev-eng.json"
+        },
+        {
+          "id": "dev-godrej",
+          "name": "Godrej",
+          "file": "layouts/dev-godrej.json"
+        },
+        {
+          "id": "dev-godrej1",
+          "name": "Godrej1",
+          "file": "layouts/dev-godrej1.json"
+        },
+        {
+          "id": "dev-indica",
+          "name": "Indica",
+          "file": "layouts/dev-indica.json"
+        },
+        {
+          "id": "dev-itr",
+          "name": "Itr",
+          "file": "layouts/dev-itr.json"
+        },
+        {
+          "id": "dev-k-p-rao",
+          "name": "K P Rao",
+          "file": "layouts/dev-k-p-rao.json"
+        },
+        {
+          "id": "dev-marathi",
+          "name": "Marathi",
+          "file": "layouts/dev-marathi.json"
+        },
+        {
+          "id": "dev-mtnk",
+          "name": "Mtnk",
+          "file": "layouts/dev-mtnk.json"
+        },
+        {
+          "id": "dev-naidunia",
+          "name": "Naidunia",
+          "file": "layouts/dev-naidunia.json"
+        },
+        {
+          "id": "dev-network",
+          "name": "Network",
+          "file": "layouts/dev-network.json"
+        },
+        {
+          "id": "dev-newroma",
+          "name": "Newroma",
+          "file": "layouts/dev-newroma.json"
+        },
+        {
+          "id": "dev-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/dev-phonetic.json"
+        },
+        {
+          "id": "dev-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/dev-phonet86.json"
+        },
+        {
+          "id": "dev-rajya",
+          "name": "Rajya",
+          "file": "layouts/dev-rajya.json"
+        },
+        {
+          "id": "dev-raming",
+          "name": "Remington",
+          "file": "layouts/dev-raming.json"
+        },
+        {
+          "id": "dev-raming2",
+          "name": "Remington 2",
+          "file": "layouts/dev-raming2.json"
+        },
+        {
+          "id": "dev-raming3",
+          "name": "Remington 3",
+          "file": "layouts/dev-raming3.json"
+        },
+        {
+          "id": "dev-roma",
+          "name": "Roma",
+          "file": "layouts/dev-roma.json"
+        },
+        {
+          "id": "dev-script",
+          "name": "Script",
+          "file": "layouts/dev-script.json"
+        },
+        {
+          "id": "dev-script1",
+          "name": "Script1",
+          "file": "layouts/dev-script1.json"
+        },
+        {
+          "id": "dev-srg",
+          "name": "Srg",
+          "file": "layouts/dev-srg.json"
+        },
+        {
+          "id": "dev-sulipi",
+          "name": "Sulipi",
+          "file": "layouts/dev-sulipi.json"
+        },
+        {
+          "id": "dev-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/dev-typewrit.json"
+        },
+        {
+          "id": "dev-typewri2",
+          "name": "Typewriter 2",
+          "file": "layouts/dev-typewri2.json"
+        },
+        {
+          "id": "dev-wx-dev",
+          "name": "Wx Dev",
+          "file": "layouts/dev-wx-dev.json"
+        }
+      ],
+      "scheme": "translit/hindi-phonetic.json"
+    },
+    {
+      "id": "sa",
+      "name": "Sanskrit",
+      "sample": "\u0905",
+      "fonts": [
+        {
+          "id": "shree-devx",
+          "name": "Shree-DevX (Legacy)",
+          "family": "Shree-DevX-0001",
+          "file": "fonts/shree/shree-devx.ttf",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "mangal",
+          "name": "Mangal (Unicode)",
+          "family": "Mangal",
+          "type": "unicode"
+        },
+        {
+          "id": "nirmala-sa",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "mangal"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "sa-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-sa"
+        },
+        {
+          "id": "sa-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-devx"
+        },
+        {
+          "id": "sa-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-dev-0700"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "hi-inscript",
+          "name": "InScript",
+          "file": "layouts/hindi-inscript.json"
+        },
+        {
+          "id": "san-abitr",
+          "name": "Abitr",
+          "file": "layouts/san-abitr.json"
+        },
+        {
+          "id": "san-akrphone",
+          "name": "Akrphone",
+          "file": "layouts/san-akrphone.json"
+        },
+        {
+          "id": "san-akruti",
+          "name": "Akruti",
+          "file": "layouts/san-akruti.json"
+        },
+        {
+          "id": "san-akshar",
+          "name": "Akshar",
+          "file": "layouts/san-akshar.json"
+        },
+        {
+          "id": "san-apple",
+          "name": "Apple",
+          "file": "layouts/san-apple.json"
+        },
+        {
+          "id": "san-asterix",
+          "name": "Asterix",
+          "file": "layouts/san-asterix.json"
+        },
+        {
+          "id": "san-bpmk",
+          "name": "Bpmk",
+          "file": "layouts/san-bpmk.json"
+        },
+        {
+          "id": "san-compset",
+          "name": "Compset",
+          "file": "layouts/san-compset.json"
+        },
+        {
+          "id": "san-compset1",
+          "name": "Compset1",
+          "file": "layouts/san-compset1.json"
+        },
+        {
+          "id": "san-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/san-crtronic.json"
+        },
+        {
+          "id": "san-devyani",
+          "name": "Devyani",
+          "file": "layouts/san-devyani.json"
+        },
+        {
+          "id": "san-devyani2",
+          "name": "Devyani2",
+          "file": "layouts/san-devyani2.json"
+        },
+        {
+          "id": "san-doe",
+          "name": "Doe",
+          "file": "layouts/san-doe.json"
+        },
+        {
+          "id": "san-eng",
+          "name": "Eng",
+          "file": "layouts/san-eng.json"
+        },
+        {
+          "id": "san-godrej",
+          "name": "Godrej",
+          "file": "layouts/san-godrej.json"
+        },
+        {
+          "id": "san-godrej1",
+          "name": "Godrej1",
+          "file": "layouts/san-godrej1.json"
+        },
+        {
+          "id": "san-indica",
+          "name": "Indica",
+          "file": "layouts/san-indica.json"
+        },
+        {
+          "id": "san-itr",
+          "name": "Itr",
+          "file": "layouts/san-itr.json"
+        },
+        {
+          "id": "san-k-p-rao",
+          "name": "K P Rao",
+          "file": "layouts/san-k-p-rao.json"
+        },
+        {
+          "id": "san-marathi",
+          "name": "Marathi",
+          "file": "layouts/san-marathi.json"
+        },
+        {
+          "id": "san-mtnk",
+          "name": "Mtnk",
+          "file": "layouts/san-mtnk.json"
+        },
+        {
+          "id": "san-naidunia",
+          "name": "Naidunia",
+          "file": "layouts/san-naidunia.json"
+        },
+        {
+          "id": "san-network",
+          "name": "Network",
+          "file": "layouts/san-network.json"
+        },
+        {
+          "id": "san-newroma",
+          "name": "Newroma",
+          "file": "layouts/san-newroma.json"
+        },
+        {
+          "id": "san-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/san-phonetic.json"
+        },
+        {
+          "id": "san-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/san-phonet86.json"
+        },
+        {
+          "id": "san-rajya",
+          "name": "Rajya",
+          "file": "layouts/san-rajya.json"
+        },
+        {
+          "id": "san-raming",
+          "name": "Remington",
+          "file": "layouts/san-raming.json"
+        },
+        {
+          "id": "san-raming2",
+          "name": "Remington 2",
+          "file": "layouts/san-raming2.json"
+        },
+        {
+          "id": "san-raming3",
+          "name": "Remington 3",
+          "file": "layouts/san-raming3.json"
+        },
+        {
+          "id": "san-roma",
+          "name": "Roma",
+          "file": "layouts/san-roma.json"
+        },
+        {
+          "id": "san-script",
+          "name": "Script",
+          "file": "layouts/san-script.json"
+        },
+        {
+          "id": "san-script1",
+          "name": "Script1",
+          "file": "layouts/san-script1.json"
+        },
+        {
+          "id": "san-srg",
+          "name": "Srg",
+          "file": "layouts/san-srg.json"
+        },
+        {
+          "id": "san-sulipi",
+          "name": "Sulipi",
+          "file": "layouts/san-sulipi.json"
+        },
+        {
+          "id": "san-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/san-typewrit.json"
+        },
+        {
+          "id": "san-typewri2",
+          "name": "Typewriter 2",
+          "file": "layouts/san-typewri2.json"
+        },
+        {
+          "id": "san-wx-dev",
+          "name": "Wx Dev",
+          "file": "layouts/san-wx-dev.json"
+        }
+      ],
+      "scheme": "translit/hindi-phonetic.json"
+    },
+    {
+      "id": "pa",
+      "name": "Punjabi",
+      "sample": "\u0A05",
+      "fonts": [
+        {
+          "id": "shree-punx",
+          "name": "Shree-PunX (Legacy)",
+          "family": "Shree-PunX-0001",
+          "file": "fonts/shree/shree-punx.ttf",
+          "type": "legacy",
+          "encoding": "shree-punx"
+        },
+        {
+          "id": "raavi",
+          "name": "Raavi (Unicode)",
+          "family": "Raavi",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-pun-0950",
+          "name": "SHREE-PUN-0950 (Shree-Lipi 4-5-6)",
+          "family": "SHREE-PUN-0950",
+          "type": "legacy",
+          "encoding": "shree-pun7"
+        },
+        {
+          "id": "shree-pun-0951",
+          "name": "SHREE-PUN-0951 (Shree-Lipi 4-5-6)",
+          "family": "SHREE-PUN-0951",
+          "type": "legacy",
+          "encoding": "shree-pun7"
+        },
+        {
+          "id": "shree-pun-0952",
+          "name": "SHREE-PUN-0952 (Shree-Lipi 4-5-6)",
+          "family": "SHREE-PUN-0952",
+          "type": "legacy",
+          "encoding": "shree-pun7"
+        },
+        {
+          "id": "shree-pun-0955",
+          "name": "SHREE-PUN-0955 (Shree-Lipi 4-5-6)",
+          "family": "SHREE-PUN-0955",
+          "type": "legacy",
+          "encoding": "shree-pun7"
+        },
+        {
+          "id": "shree-pun-0956",
+          "name": "SHREE-PUN-0956 (Shree-Lipi 4-5-6)",
+          "family": "SHREE-PUN-0956",
+          "type": "legacy",
+          "encoding": "shree-pun7"
+        },
+        {
+          "id": "shree-punx-0950",
+          "name": "SHREE-PUNX-0950 (ShreeLipi-Ex)",
+          "family": "SHREE-PUNX-0950",
+          "type": "legacy",
+          "encoding": "shree-punx"
+        },
+        {
+          "id": "shree-punx-0951",
+          "name": "SHREE-PUNX-0951 (ShreeLipi-Ex)",
+          "family": "SHREE-PUNX-0951",
+          "type": "legacy",
+          "encoding": "shree-punx"
+        },
+        {
+          "id": "shree-punx-0956",
+          "name": "SHREE-PUNX-0956 (ShreeLipi-Ex)",
+          "family": "SHREE-PUNX-0956",
+          "type": "legacy",
+          "encoding": "shree-punx"
+        },
+        {
+          "id": "nirmala-pa",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "raavi"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "pa-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-pa"
+        },
+        {
+          "id": "pa-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-punx"
+        },
+        {
+          "id": "pa-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "pa-inscript",
+          "name": "InScript",
+          "file": "layouts/punjabi-inscript.json"
+        },
+        {
+          "id": "pun-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/pun-crtronic.json"
+        },
+        {
+          "id": "pun-doe",
+          "name": "Doe",
+          "file": "layouts/pun-doe.json"
+        },
+        {
+          "id": "pun-eng",
+          "name": "Eng",
+          "file": "layouts/pun-eng.json"
+        },
+        {
+          "id": "pun-godrej",
+          "name": "Godrej",
+          "file": "layouts/pun-godrej.json"
+        },
+        {
+          "id": "pun-itr",
+          "name": "Itr",
+          "file": "layouts/pun-itr.json"
+        },
+        {
+          "id": "pun-newroma",
+          "name": "Newroma",
+          "file": "layouts/pun-newroma.json"
+        },
+        {
+          "id": "pun-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/pun-phonetic.json"
+        },
+        {
+          "id": "pun-raming",
+          "name": "Remington",
+          "file": "layouts/pun-raming.json"
+        },
+        {
+          "id": "pun-roma",
+          "name": "Roma",
+          "file": "layouts/pun-roma.json"
+        },
+        {
+          "id": "pun-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/pun-typewrit.json"
+        },
+        {
+          "id": "pun-varitype",
+          "name": "Varitype",
+          "file": "layouts/pun-varitype.json"
+        }
+      ]
+    },
+    {
+      "id": "bn",
+      "name": "Bangla",
+      "sample": "\u0985",
+      "fonts": [
+        {
+          "id": "shree-banx",
+          "name": "Shree-BanX (Legacy)",
+          "family": "Shree-BanX-0001",
+          "file": "fonts/shree/shree-banx.ttf",
+          "type": "legacy",
+          "encoding": "shree-banx"
+        },
+        {
+          "id": "vrinda",
+          "name": "Vrinda (Unicode)",
+          "family": "Vrinda",
+          "type": "unicode"
+        },
+        {
+          "id": "nirmala-bn",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "vrinda"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "bn-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-bn"
+        },
+        {
+          "id": "bn-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-banx"
+        },
+        {
+          "id": "bn-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-stm-bnt",
+          "name": "STM-BNT",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-stm-bat",
+          "name": "STM-BAT",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-stm",
+          "name": "STM",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-ramdhenu-3-1",
+          "name": "Ramdhenu 3.1",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-indica-2004",
+          "name": "Indica 2004",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-bijoy",
+          "name": "BIJOY",
+          "type": "legacy"
+        },
+        {
+          "id": "bn-fl-bangla-akademi-2004",
+          "name": "Bangla Akademi 2004",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "bn-inscript",
+          "name": "InScript",
+          "file": "layouts/bengali-inscript.json"
+        },
+        {
+          "id": "ban-akadami",
+          "name": "Akadami",
+          "file": "layouts/ban-akadami.json"
+        },
+        {
+          "id": "ban-akruti",
+          "name": "Akruti",
+          "file": "layouts/ban-akruti.json"
+        },
+        {
+          "id": "ban-amr1",
+          "name": "Amr1",
+          "file": "layouts/ban-amr1.json"
+        },
+        {
+          "id": "ban-avro",
+          "name": "Avro",
+          "file": "layouts/ban-avro.json"
+        },
+        {
+          "id": "ban-bangword",
+          "name": "Bangword",
+          "file": "layouts/ban-bangword.json"
+        },
+        {
+          "id": "ban-bijoy",
+          "name": "Bijoy",
+          "file": "layouts/ban-bijoy.json"
+        },
+        {
+          "id": "ban-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/ban-crtronic.json"
+        },
+        {
+          "id": "ban-doe",
+          "name": "Doe",
+          "file": "layouts/ban-doe.json"
+        },
+        {
+          "id": "ban-eng",
+          "name": "Eng",
+          "file": "layouts/ban-eng.json"
+        },
+        {
+          "id": "ban-godrej",
+          "name": "Godrej",
+          "file": "layouts/ban-godrej.json"
+        },
+        {
+          "id": "ban-indica",
+          "name": "Indica",
+          "file": "layouts/ban-indica.json"
+        },
+        {
+          "id": "ban-indica1",
+          "name": "Indica1",
+          "file": "layouts/ban-indica1.json"
+        },
+        {
+          "id": "ban-itr",
+          "name": "Itr",
+          "file": "layouts/ban-itr.json"
+        },
+        {
+          "id": "ban-joy",
+          "name": "Joy",
+          "file": "layouts/ban-joy.json"
+        },
+        {
+          "id": "ban-linotype",
+          "name": "Linotype",
+          "file": "layouts/ban-linotype.json"
+        },
+        {
+          "id": "ban-monotype",
+          "name": "Monotype",
+          "file": "layouts/ban-monotype.json"
+        },
+        {
+          "id": "ban-newroma",
+          "name": "Newroma",
+          "file": "layouts/ban-newroma.json"
+        },
+        {
+          "id": "ban-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/ban-phonetic.json"
+        },
+        {
+          "id": "ban-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/ban-phonet86.json"
+        },
+        {
+          "id": "ban-piyali",
+          "name": "Piyali",
+          "file": "layouts/ban-piyali.json"
+        },
+        {
+          "id": "ban-roma",
+          "name": "Roma",
+          "file": "layouts/ban-roma.json"
+        },
+        {
+          "id": "ban-stm",
+          "name": "Stm",
+          "file": "layouts/ban-stm.json"
+        },
+        {
+          "id": "ban-suneet",
+          "name": "Suneet",
+          "file": "layouts/ban-suneet.json"
+        },
+        {
+          "id": "ban-swarna",
+          "name": "Swarna",
+          "file": "layouts/ban-swarna.json"
+        },
+        {
+          "id": "ban-toptype",
+          "name": "Toptype",
+          "file": "layouts/ban-toptype.json"
+        },
+        {
+          "id": "ban-webel",
+          "name": "Webel",
+          "file": "layouts/ban-webel.json"
+        }
+      ]
+    },
+    {
+      "id": "te",
+      "name": "Telugu",
+      "sample": "\u0C05",
+      "fonts": [
+        {
+          "id": "shree-telx",
+          "name": "Shree-TelX (Legacy)",
+          "family": "Shree-TelX-0001",
+          "file": "fonts/shree/shree-telx.ttf",
+          "type": "legacy",
+          "encoding": "shree-telx"
+        },
+        {
+          "id": "gautami",
+          "name": "Gautami (Unicode)",
+          "family": "Gautami",
+          "type": "unicode"
+        },
+        {
+          "id": "nirmala-te",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "gautami"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "te-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-te"
+        },
+        {
+          "id": "te-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-telx"
+        },
+        {
+          "id": "te-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy"
+        },
+        {
+          "id": "te-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "te-fl-isfoc-monolingual",
+          "name": "ISFOC Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "te-fl-anu6",
+          "name": "Anu6",
+          "type": "legacy"
+        },
+        {
+          "id": "te-fl-anu-7-0",
+          "name": "Anu 7.0",
+          "type": "legacy"
+        },
+        {
+          "id": "te-fl-anu-4-0",
+          "name": "Anu 4.0",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "te-inscript",
+          "name": "InScript",
+          "file": "layouts/telugu-inscript.json"
+        },
+        {
+          "id": "tel-apple",
+          "name": "Apple",
+          "file": "layouts/tel-apple.json"
+        },
+        {
+          "id": "tel-applen",
+          "name": "Applen",
+          "file": "layouts/tel-applen.json"
+        },
+        {
+          "id": "tel-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/tel-crtronic.json"
+        },
+        {
+          "id": "tel-doe",
+          "name": "Doe",
+          "file": "layouts/tel-doe.json"
+        },
+        {
+          "id": "tel-eng",
+          "name": "Eng",
+          "file": "layouts/tel-eng.json"
+        },
+        {
+          "id": "tel-godrej",
+          "name": "Godrej",
+          "file": "layouts/tel-godrej.json"
+        },
+        {
+          "id": "tel-indica",
+          "name": "Indica",
+          "file": "layouts/tel-indica.json"
+        },
+        {
+          "id": "tel-itr",
+          "name": "Itr",
+          "file": "layouts/tel-itr.json"
+        },
+        {
+          "id": "tel-micro",
+          "name": "Micro",
+          "file": "layouts/tel-micro.json"
+        },
+        {
+          "id": "tel-mono",
+          "name": "Mono",
+          "file": "layouts/tel-mono.json"
+        },
+        {
+          "id": "tel-newroma",
+          "name": "Newroma",
+          "file": "layouts/tel-newroma.json"
+        },
+        {
+          "id": "tel-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/tel-phonetic.json"
+        },
+        {
+          "id": "tel-prakash",
+          "name": "Prakash",
+          "file": "layouts/tel-prakash.json"
+        },
+        {
+          "id": "tel-roma",
+          "name": "Roma",
+          "file": "layouts/tel-roma.json"
+        },
+        {
+          "id": "tel-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/tel-typewrit.json"
+        },
+        {
+          "id": "tel-vision",
+          "name": "Vision",
+          "file": "layouts/tel-vision.json"
+        }
+      ]
+    },
+    {
+      "id": "gu",
+      "name": "Gujarati",
+      "sample": "\u0A85",
+      "fonts": [
+        {
+          "id": "shree-gujx",
+          "name": "Shree-GujX (Legacy)",
+          "family": "SHREE-GUJX-0001",
+          "file": "fonts/shree/shree-gujx.ttf",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shruti",
+          "name": "Shruti (Unicode)",
+          "family": "Shruti",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-guj-1120",
+          "name": "Shree-Guj 1120 (Legacy)",
+          "family": "SHREE-GUJX-1120",
+          "file": "fonts/S1120810.TTF",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "cf-aakar",
+          "name": "Aakar (Unicode)",
+          "family": "aakar",
+          "file": "fonts/client/Aakar.ttf",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-shruti",
+          "name": "Shruti (Unicode)",
+          "family": "Shruti",
+          "file": "fonts/client/SHRUTI.TTF",
+          "type": "unicode"
+        },
+        {
+          "id": "cf-sgujx-0756",
+          "name": "SHREE-GUJX-0756 (Legacy)",
+          "family": "SHREE-GUJX-0756",
+          "file": "fonts/client/S0756810.TTF",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "cf-sgujx-0757",
+          "name": "SHREE-GUJX-0757 (Legacy)",
+          "family": "SHREE-GUJX-0757",
+          "file": "fonts/client/S0757810.TTF",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "cf-sgujx-0793",
+          "name": "SHREE-GUJX-0793 (Legacy)",
+          "family": "SHREE-GUJX-0793",
+          "file": "fonts/client/S0793810.TTF",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-guj-0750",
+          "name": "SHREE-GUJ-0750 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0750",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-0751",
+          "name": "SHREE-GUJ-0751 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0751",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-0763",
+          "name": "SHREE-GUJ-0763 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0763",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-0768",
+          "name": "SHREE-GUJ-0768 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0768",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-0769",
+          "name": "SHREE-GUJ-0769 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0769",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-0781",
+          "name": "SHREE-GUJ-0781 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-0781",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj-3700",
+          "name": "SHREE-GUJ-3700 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ-3700",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-001",
+          "name": "Shree-Guj7-001 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "Shree-Guj7-001",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-002",
+          "name": "Shree-Guj7-002 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "Shree-Guj7-002",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0750",
+          "name": "SHREE-GUJ7-0750 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0750",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0751",
+          "name": "SHREE-GUJ7-0751 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0751",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0763",
+          "name": "SHREE-GUJ7-0763 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0763",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0768",
+          "name": "SHREE-GUJ7-0768 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0768",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0769",
+          "name": "SHREE-GUJ7-0769 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0769",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-0781",
+          "name": "SHREE-GUJ7-0781 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-0781",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-guj7-3700",
+          "name": "SHREE-GUJ7-3700 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-GUJ7-3700",
+          "type": "legacy",
+          "encoding": "shree-guj7"
+        },
+        {
+          "id": "shree-gujx-0750",
+          "name": "SHREE-GUJX-0750 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0750",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-0751",
+          "name": "SHREE-GUJX-0751 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0751",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-0763",
+          "name": "SHREE-GUJX-0763 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0763",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-0768",
+          "name": "SHREE-GUJX-0768 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0768",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-0769",
+          "name": "SHREE-GUJX-0769 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0769",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-0781",
+          "name": "SHREE-GUJX-0781 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-0781",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-3700",
+          "name": "SHREE-GUJX-3700 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-3700",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "shree-gujx-5231",
+          "name": "SHREE-GUJX-5231 (ShreeLipi-Ex)",
+          "family": "SHREE-GUJX-5231",
+          "type": "legacy",
+          "encoding": "shree-gujx"
+        },
+        {
+          "id": "nirmala-gu",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "shruti"
+        },
+        {
+          "id": "bb-abmar-two",
+          "name": "B Bharati AbmarTwo (Bhasha Bharti-2)",
+          "family": "B Bharati AbmarTwo Normal",
+          "type": "legacy",
+          "encoding": "bhasha-bharti-2-guj"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "gu-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-gu"
+        },
+        {
+          "id": "gu-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-gujx"
+        },
+        {
+          "id": "gu-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-guj-0750"
+        },
+        {
+          "id": "gu-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy",
+          "fontId": "shree-guj-0750"
+        },
+        {
+          "id": "gu-fl-terafont",
+          "name": "Terafont",
+          "type": "legacy"
+        },
+        {
+          "id": "gu-fl-isfoc-monolingual",
+          "name": "ISFOC Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "gu-fl-bhasha-bharti-2",
+          "name": "Bhasha Bharti-2",
+          "type": "legacy",
+          "fontId": "bb-abmar-two"
+        },
+        {
+          "id": "gu-fl-bhasha-bharti-1",
+          "name": "Bhasha Bharti-1",
+          "type": "legacy"
+        },
+        {
+          "id": "gu-fl-bhasha-bharati",
+          "name": "Bhasha Bharati",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "gu-inscript",
+          "name": "InScript",
+          "file": "layouts/gujarati-inscript.json"
+        },
+        {
+          "id": "guj-akshar",
+          "name": "Akshar",
+          "file": "layouts/guj-akshar.json"
+        },
+        {
+          "id": "guj-asterix",
+          "name": "Asterix",
+          "file": "layouts/guj-asterix.json"
+        },
+        {
+          "id": "guj-bpmk",
+          "name": "Bpmk",
+          "file": "layouts/guj-bpmk.json"
+        },
+        {
+          "id": "guj-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/guj-crtronic.json"
+        },
+        {
+          "id": "guj-doe",
+          "name": "Doe",
+          "file": "layouts/guj-doe.json"
+        },
+        {
+          "id": "guj-eng",
+          "name": "Eng",
+          "file": "layouts/guj-eng.json"
+        },
+        {
+          "id": "guj-indica",
+          "name": "Indica",
+          "file": "layouts/guj-indica.json"
+        },
+        {
+          "id": "guj-itr",
+          "name": "Itr",
+          "file": "layouts/guj-itr.json"
+        },
+        {
+          "id": "guj-mtnk",
+          "name": "Mtnk",
+          "file": "layouts/guj-mtnk.json"
+        },
+        {
+          "id": "guj-newroma",
+          "name": "Newroma",
+          "file": "layouts/guj-newroma.json"
+        },
+        {
+          "id": "guj-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/guj-phonetic.json"
+        },
+        {
+          "id": "guj-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/guj-phonet86.json"
+        },
+        {
+          "id": "guj-raming",
+          "name": "Remington",
+          "file": "layouts/guj-raming.json"
+        },
+        {
+          "id": "guj-raming1",
+          "name": "Remington 1",
+          "file": "layouts/guj-raming1.json"
+        },
+        {
+          "id": "guj-raming2",
+          "name": "Remington 2",
+          "file": "layouts/guj-raming2.json"
+        },
+        {
+          "id": "guj-roma",
+          "name": "Roma",
+          "file": "layouts/guj-roma.json"
+        },
+        {
+          "id": "guj-script",
+          "name": "Script",
+          "file": "layouts/guj-script.json"
+        },
+        {
+          "id": "guj-sulekh-1",
+          "name": "Sulekh 1",
+          "file": "layouts/guj-sulekh-1.json"
+        },
+        {
+          "id": "guj-sulekh-2",
+          "name": "Sulekh 2",
+          "file": "layouts/guj-sulekh-2.json"
+        },
+        {
+          "id": "guj-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/guj-typewrit.json"
+        }
+      ],
+      "scheme": "translit/gujarati-phonetic.json"
+    },
+    {
+      "id": "kn",
+      "name": "Kannada",
+      "sample": "\u0C85",
+      "fonts": [
+        {
+          "id": "shree-kanx",
+          "name": "Shree-KanX (Legacy)",
+          "family": "Shree-KanX-0001",
+          "file": "fonts/shree/shree-kanx.ttf",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "tunga",
+          "name": "Tunga (Unicode)",
+          "family": "Tunga",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-kanx-0850",
+          "name": "SHREE-KANX-0850 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0850",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-0851",
+          "name": "SHREE-KANX-0851 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0851",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-0852",
+          "name": "SHREE-KANX-0852 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0852",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-0853",
+          "name": "SHREE-KANX-0853 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0853",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-0854",
+          "name": "SHREE-KANX-0854 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0854",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-0855",
+          "name": "SHREE-KANX-0855 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-0855",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-5369",
+          "name": "SHREE-KANX-5369 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-5369",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "shree-kanx-5370",
+          "name": "SHREE-KANX-5370 (ShreeLipi-Ex)",
+          "family": "SHREE-KANX-5370",
+          "type": "legacy",
+          "encoding": "shree-kanx"
+        },
+        {
+          "id": "nirmala-kn",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "tunga"
+        },
+        {
+          "id": "shree-kan7-0850",
+          "name": "SHREE-KAN7-0850 (Shree-Lipi 7.0)",
+          "family": "SHREE-KAN7-0850",
+          "type": "legacy",
+          "encoding": "shree-kan7"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "kn-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-kn"
+        },
+        {
+          "id": "kn-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-kanx"
+        },
+        {
+          "id": "kn-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-kan7-0850"
+        },
+        {
+          "id": "kn-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "kn-fl-kgp-nudi-monolingual",
+          "name": "KGP/Nudi Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "kn-fl-anu",
+          "name": "Anu",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "kn-inscript",
+          "name": "InScript",
+          "file": "layouts/kannada-inscript.json"
+        },
+        {
+          "id": "kan-asterix",
+          "name": "Asterix",
+          "file": "layouts/kan-asterix.json"
+        },
+        {
+          "id": "kan-avenue",
+          "name": "Avenue",
+          "file": "layouts/kan-avenue.json"
+        },
+        {
+          "id": "kan-brinda",
+          "name": "Brinda",
+          "file": "layouts/kan-brinda.json"
+        },
+        {
+          "id": "kan-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/kan-crtronic.json"
+        },
+        {
+          "id": "kan-doe",
+          "name": "Doe",
+          "file": "layouts/kan-doe.json"
+        },
+        {
+          "id": "kan-eng",
+          "name": "Eng",
+          "file": "layouts/kan-eng.json"
+        },
+        {
+          "id": "kan-godrej",
+          "name": "Godrej",
+          "file": "layouts/kan-godrej.json"
+        },
+        {
+          "id": "kan-indica",
+          "name": "Indica",
+          "file": "layouts/kan-indica.json"
+        },
+        {
+          "id": "kan-itr",
+          "name": "Itr",
+          "file": "layouts/kan-itr.json"
+        },
+        {
+          "id": "kan-k-p-rao",
+          "name": "K P Rao",
+          "file": "layouts/kan-k-p-rao.json"
+        },
+        {
+          "id": "kan-kgp",
+          "name": "Kgp",
+          "file": "layouts/kan-kgp.json"
+        },
+        {
+          "id": "kan-kgpnew",
+          "name": "Kgpnew",
+          "file": "layouts/kan-kgpnew.json"
+        },
+        {
+          "id": "kan-newroma",
+          "name": "Newroma",
+          "file": "layouts/kan-newroma.json"
+        },
+        {
+          "id": "kan-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/kan-phonetic.json"
+        },
+        {
+          "id": "kan-roma",
+          "name": "Roma",
+          "file": "layouts/kan-roma.json"
+        },
+        {
+          "id": "kan-sonata",
+          "name": "Sonata",
+          "file": "layouts/kan-sonata.json"
+        },
+        {
+          "id": "kan-srg",
+          "name": "Srg",
+          "file": "layouts/kan-srg.json"
+        },
+        {
+          "id": "kan-surabhi",
+          "name": "Surabhi",
+          "file": "layouts/kan-surabhi.json"
+        },
+        {
+          "id": "kan-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/kan-typewrit.json"
+        },
+        {
+          "id": "kan-vss",
+          "name": "Vss",
+          "file": "layouts/kan-vss.json"
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "name": "Malayalam",
+      "sample": "\u0D05",
+      "fonts": [
+        {
+          "id": "shree-malx",
+          "name": "Shree-MalX (Legacy)",
+          "family": "Shree-MalX-0001",
+          "file": "fonts/shree/shree-malx.ttf",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "kartika",
+          "name": "Kartika (Unicode)",
+          "family": "Kartika",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-malx-0501",
+          "name": "SHREE-MALX-0501 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-0501",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-0502",
+          "name": "SHREE-MALX-0502 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-0502",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-0507",
+          "name": "SHREE-MALX-0507 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-0507",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-0508",
+          "name": "SHREE-MALX-0508 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-0508",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-0520",
+          "name": "SHREE-MALX-0520 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-0520",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-4479",
+          "name": "SHREE-MALX-4479 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-4479",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-malx-4480",
+          "name": "SHREE-MALX-4480 (ShreeLipi-Ex)",
+          "family": "SHREE-MALX-4480",
+          "type": "legacy",
+          "encoding": "shree-malx"
+        },
+        {
+          "id": "shree-mal7-001",
+          "name": "Shree-Mal7-001 (Shree-Lipi 7.0)",
+          "family": "Shree-Mal7-001",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-002",
+          "name": "Shree-Mal7-002 (Shree-Lipi 7.0)",
+          "family": "Shree-Mal7-002",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-0501",
+          "name": "SHREE-MAL7-0501 (Shree-Lipi 7.0)",
+          "family": "SHREE-MAL7-0501",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-0502",
+          "name": "SHREE-MAL7-0502 (Shree-Lipi 7.0)",
+          "family": "SHREE-MAL7-0502",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-0507",
+          "name": "SHREE-MAL7-0507 (Shree-Lipi 7.0)",
+          "family": "SHREE-MAL7-0507",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-0508",
+          "name": "SHREE-MAL7-0508 (Shree-Lipi 7.0)",
+          "family": "SHREE-MAL7-0508",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "shree-mal7-0520",
+          "name": "SHREE-MAL7-0520 (Shree-Lipi 7.0)",
+          "family": "SHREE-MAL7-0520",
+          "type": "legacy",
+          "encoding": "shree-mal7"
+        },
+        {
+          "id": "nirmala-ml",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "kartika"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "ml-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-ml"
+        },
+        {
+          "id": "ml-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-malx"
+        },
+        {
+          "id": "ml-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-mal7-001"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "ml-inscript",
+          "name": "InScript",
+          "file": "layouts/malayalam-inscript.json"
+        },
+        {
+          "id": "mal-avenue",
+          "name": "Avenue",
+          "file": "layouts/mal-avenue.json"
+        },
+        {
+          "id": "mal-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/mal-crtronic.json"
+        },
+        {
+          "id": "mal-doe",
+          "name": "Doe",
+          "file": "layouts/mal-doe.json"
+        },
+        {
+          "id": "mal-eng",
+          "name": "Eng",
+          "file": "layouts/mal-eng.json"
+        },
+        {
+          "id": "mal-indica",
+          "name": "Indica",
+          "file": "layouts/mal-indica.json"
+        },
+        {
+          "id": "mal-ismeng",
+          "name": "Ismeng",
+          "file": "layouts/mal-ismeng.json"
+        },
+        {
+          "id": "mal-itr",
+          "name": "Itr",
+          "file": "layouts/mal-itr.json"
+        },
+        {
+          "id": "mal-k-p-rao",
+          "name": "K P Rao",
+          "file": "layouts/mal-k-p-rao.json"
+        },
+        {
+          "id": "mal-kergovt",
+          "name": "Kergovt",
+          "file": "layouts/mal-kergovt.json"
+        },
+        {
+          "id": "mal-newroma",
+          "name": "Newroma",
+          "file": "layouts/mal-newroma.json"
+        },
+        {
+          "id": "mal-panchari",
+          "name": "Panchari",
+          "file": "layouts/mal-panchari.json"
+        },
+        {
+          "id": "mal-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/mal-phonetic.json"
+        },
+        {
+          "id": "mal-roma",
+          "name": "Roma",
+          "file": "layouts/mal-roma.json"
+        },
+        {
+          "id": "mal-typewri1",
+          "name": "Typewri1",
+          "file": "layouts/mal-typewri1.json"
+        },
+        {
+          "id": "mal-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/mal-typewrit.json"
+        }
+      ]
+    },
+    {
+      "id": "or",
+      "name": "Odia",
+      "sample": "\u0B05",
+      "fonts": [
+        {
+          "id": "shree-orix",
+          "name": "Shree-OriX (Legacy)",
+          "family": "Shree-OriX-0001",
+          "file": "fonts/shree/shree-orix.ttf",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "kalinga",
+          "name": "Kalinga (Unicode)",
+          "family": "Kalinga",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-ori-0600",
+          "name": "SHREE-ORI-0600 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI-0600",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori-0601",
+          "name": "SHREE-ORI-0601 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI-0601",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori-0602",
+          "name": "SHREE-ORI-0602 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI-0602",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori-0603",
+          "name": "SHREE-ORI-0603 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI-0603",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori-0604",
+          "name": "SHREE-ORI-0604 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI-0604",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori7-0600",
+          "name": "SHREE-ORI7-0600 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI7-0600",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori7-0601",
+          "name": "SHREE-ORI7-0601 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI7-0601",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori7-0602",
+          "name": "SHREE-ORI7-0602 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI7-0602",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori7-0603",
+          "name": "SHREE-ORI7-0603 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI7-0603",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-ori7-0604",
+          "name": "SHREE-ORI7-0604 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-ORI7-0604",
+          "type": "legacy",
+          "encoding": "shree-ori7"
+        },
+        {
+          "id": "shree-orix-0600",
+          "name": "SHREE-ORIX-0600 (ShreeLipi-Ex)",
+          "family": "SHREE-ORIX-0600",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "shree-orix-0601",
+          "name": "SHREE-ORIX-0601 (ShreeLipi-Ex)",
+          "family": "SHREE-ORIX-0601",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "shree-orix-0602",
+          "name": "SHREE-ORIX-0602 (ShreeLipi-Ex)",
+          "family": "SHREE-ORIX-0602",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "shree-orix-0603",
+          "name": "SHREE-ORIX-0603 (ShreeLipi-Ex)",
+          "family": "SHREE-ORIX-0603",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "shree-orix-0604",
+          "name": "SHREE-ORIX-0604 (ShreeLipi-Ex)",
+          "family": "SHREE-ORIX-0604",
+          "type": "legacy",
+          "encoding": "shree-orix"
+        },
+        {
+          "id": "nirmala-or",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "kalinga"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "or-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-or"
+        },
+        {
+          "id": "or-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-orix"
+        },
+        {
+          "id": "or-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-ori-0600"
+        },
+        {
+          "id": "or-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy",
+          "fontId": "shree-ori-0600"
+        },
+        {
+          "id": "or-fl-akruti-98",
+          "name": "Akruti 98",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "or-inscript",
+          "name": "InScript",
+          "file": "layouts/odia-inscript.json"
+        },
+        {
+          "id": "ori-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/ori-crtronic.json"
+        },
+        {
+          "id": "ori-doe",
+          "name": "Doe",
+          "file": "layouts/ori-doe.json"
+        },
+        {
+          "id": "ori-eng",
+          "name": "Eng",
+          "file": "layouts/ori-eng.json"
+        },
+        {
+          "id": "ori-newroma",
+          "name": "Newroma",
+          "file": "layouts/ori-newroma.json"
+        },
+        {
+          "id": "ori-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/ori-phonetic.json"
+        },
+        {
+          "id": "ori-roma",
+          "name": "Roma",
+          "file": "layouts/ori-roma.json"
+        },
+        {
+          "id": "ori-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/ori-typewrit.json"
+        }
+      ]
+    },
+    {
+      "id": "ta",
+      "name": "Tamil",
+      "sample": "\u0B85",
+      "fonts": [
+        {
+          "id": "shree-tamx",
+          "name": "Shree-TamX (Legacy)",
+          "family": "Shree-TamX-0001",
+          "type": "legacy",
+          "encoding": "shree-tamx"
+        },
+        {
+          "id": "latha",
+          "name": "Latha (Unicode)",
+          "family": "Latha",
+          "type": "unicode"
+        },
+        {
+          "id": "shree-tam-0800",
+          "name": "SHREE-TAM-0800 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-0800",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam-0801",
+          "name": "SHREE-TAM-0801 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-0801",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam-0802",
+          "name": "SHREE-TAM-0802 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-0802",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam-0803",
+          "name": "SHREE-TAM-0803 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-0803",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam-1316",
+          "name": "SHREE-TAM-1316 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-1316",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam-3883",
+          "name": "SHREE-TAM-3883 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM-3883",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-0800",
+          "name": "SHREE-TAM7-0800 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-0800",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-0801",
+          "name": "SHREE-TAM7-0801 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-0801",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-0802",
+          "name": "SHREE-TAM7-0802 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-0802",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-0803",
+          "name": "SHREE-TAM7-0803 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-0803",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-1316",
+          "name": "SHREE-TAM7-1316 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-1316",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "shree-tam7-3883",
+          "name": "SHREE-TAM7-3883 (Shree-Lipi 7.0 / 4-5-6)",
+          "family": "SHREE-TAM7-3883",
+          "type": "legacy",
+          "encoding": "shree-tam7"
+        },
+        {
+          "id": "nirmala-ta",
+          "name": "Nirmala UI (Unicode)",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "latha"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "ta-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "nirmala-ta"
+        },
+        {
+          "id": "ta-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-tamx"
+        },
+        {
+          "id": "ta-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-tam-0800"
+        },
+        {
+          "id": "ta-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy",
+          "fontId": "shree-tam-0800"
+        },
+        {
+          "id": "ta-fl-vanavil",
+          "name": "Vanavil",
+          "type": "legacy"
+        },
+        {
+          "id": "ta-fl-tamil99-monolingual",
+          "name": "Tamil99 Monolingual",
+          "type": "legacy"
+        },
+        {
+          "id": "ta-fl-tamil99-bilingual",
+          "name": "Tamil99 Bilingual",
+          "type": "legacy"
+        },
+        {
+          "id": "ta-fl-bamini",
+          "name": "Bamini",
+          "type": "legacy"
+        },
+        {
+          "id": "ta-fl-anu",
+          "name": "Anu",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "ta-inscript",
+          "name": "InScript",
+          "file": "layouts/tamil-inscript.json"
+        },
+        {
+          "id": "tam-doe",
+          "name": "Doe",
+          "file": "layouts/tam-doe.json"
+        },
+        {
+          "id": "tam-eng",
+          "name": "Eng",
+          "file": "layouts/tam-eng.json"
+        },
+        {
+          "id": "tam-ie",
+          "name": "Ie",
+          "file": "layouts/tam-ie.json"
+        },
+        {
+          "id": "tam-indoword",
+          "name": "Indoword",
+          "file": "layouts/tam-indoword.json"
+        },
+        {
+          "id": "tam-itr",
+          "name": "Itr",
+          "file": "layouts/tam-itr.json"
+        },
+        {
+          "id": "tam-kanian",
+          "name": "Kanian",
+          "file": "layouts/tam-kanian.json"
+        },
+        {
+          "id": "tam-keyman",
+          "name": "Keyman",
+          "file": "layouts/tam-keyman.json"
+        },
+        {
+          "id": "tam-mono",
+          "name": "Mono",
+          "file": "layouts/tam-mono.json"
+        },
+        {
+          "id": "tam-newroma",
+          "name": "Newroma",
+          "file": "layouts/tam-newroma.json"
+        },
+        {
+          "id": "tam-patrika",
+          "name": "Patrika",
+          "file": "layouts/tam-patrika.json"
+        },
+        {
+          "id": "tam-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/tam-phonetic.json"
+        },
+        {
+          "id": "tam-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/tam-phonet86.json"
+        },
+        {
+          "id": "tam-phonscr",
+          "name": "Phonscr",
+          "file": "layouts/tam-phonscr.json"
+        },
+        {
+          "id": "tam-prkshak",
+          "name": "Prkshak",
+          "file": "layouts/tam-prkshak.json"
+        },
+        {
+          "id": "tam-raming",
+          "name": "Remington",
+          "file": "layouts/tam-raming.json"
+        },
+        {
+          "id": "tam-raming1",
+          "name": "Remington 1",
+          "file": "layouts/tam-raming1.json"
+        },
+        {
+          "id": "tam-roma",
+          "name": "Roma",
+          "file": "layouts/tam-roma.json"
+        },
+        {
+          "id": "tam-spatha",
+          "name": "Spatha",
+          "file": "layouts/tam-spatha.json"
+        },
+        {
+          "id": "tam-tamil99",
+          "name": "Tamil99",
+          "file": "layouts/tam-tamil99.json"
+        },
+        {
+          "id": "tam-tscii",
+          "name": "Tscii",
+          "file": "layouts/tam-tscii.json"
+        },
+        {
+          "id": "tam-typewrit",
+          "name": "Typewriter",
+          "file": "layouts/tam-typewrit.json"
+        }
+      ]
+    },
+    {
+      "id": "as",
+      "name": "Assamese",
+      "sample": "\u0985",
+      "fonts": [
+        {
+          "id": "shree-banx",
+          "name": "Shree-BanX (Legacy)",
+          "family": "Shree-BanX-0001",
+          "file": "fonts/shree/shree-banx.ttf",
+          "type": "legacy",
+          "encoding": "shree-banx"
+        },
+        {
+          "id": "unicode",
+          "name": "Unicode",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "vrinda"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "as-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "unicode"
+        },
+        {
+          "id": "as-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-banx"
+        },
+        {
+          "id": "as-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy"
+        },
+        {
+          "id": "as-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "as-fl-stm-bnt",
+          "name": "STM-BNT",
+          "type": "legacy"
+        },
+        {
+          "id": "as-fl-stm",
+          "name": "STM",
+          "type": "legacy"
+        },
+        {
+          "id": "as-fl-ramdhenu-3-1",
+          "name": "Ramdhenu 3.1",
+          "type": "legacy"
+        },
+        {
+          "id": "as-fl-indica-2004",
+          "name": "Indica 2004",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "as-inscript",
+          "name": "InScript",
+          "file": "layouts/bengali-inscript.json"
+        },
+        {
+          "id": "ass-akadami",
+          "name": "Akadami",
+          "file": "layouts/ass-akadami.json"
+        },
+        {
+          "id": "ass-akruti",
+          "name": "Akruti",
+          "file": "layouts/ass-akruti.json"
+        },
+        {
+          "id": "ass-amr1",
+          "name": "Amr1",
+          "file": "layouts/ass-amr1.json"
+        },
+        {
+          "id": "ass-avro",
+          "name": "Avro",
+          "file": "layouts/ass-avro.json"
+        },
+        {
+          "id": "ass-bangword",
+          "name": "Bangword",
+          "file": "layouts/ass-bangword.json"
+        },
+        {
+          "id": "ass-bijoy",
+          "name": "Bijoy",
+          "file": "layouts/ass-bijoy.json"
+        },
+        {
+          "id": "ass-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/ass-crtronic.json"
+        },
+        {
+          "id": "ass-doe",
+          "name": "Doe",
+          "file": "layouts/ass-doe.json"
+        },
+        {
+          "id": "ass-eng",
+          "name": "Eng",
+          "file": "layouts/ass-eng.json"
+        },
+        {
+          "id": "ass-godrej",
+          "name": "Godrej",
+          "file": "layouts/ass-godrej.json"
+        },
+        {
+          "id": "ass-indica",
+          "name": "Indica",
+          "file": "layouts/ass-indica.json"
+        },
+        {
+          "id": "ass-indica1",
+          "name": "Indica1",
+          "file": "layouts/ass-indica1.json"
+        },
+        {
+          "id": "ass-itr",
+          "name": "Itr",
+          "file": "layouts/ass-itr.json"
+        },
+        {
+          "id": "ass-joy",
+          "name": "Joy",
+          "file": "layouts/ass-joy.json"
+        },
+        {
+          "id": "ass-linotype",
+          "name": "Linotype",
+          "file": "layouts/ass-linotype.json"
+        },
+        {
+          "id": "ass-modban",
+          "name": "Modban",
+          "file": "layouts/ass-modban.json"
+        },
+        {
+          "id": "ass-monotype",
+          "name": "Monotype",
+          "file": "layouts/ass-monotype.json"
+        },
+        {
+          "id": "ass-newroma",
+          "name": "Newroma",
+          "file": "layouts/ass-newroma.json"
+        },
+        {
+          "id": "ass-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/ass-phonetic.json"
+        },
+        {
+          "id": "ass-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/ass-phonet86.json"
+        },
+        {
+          "id": "ass-roma",
+          "name": "Roma",
+          "file": "layouts/ass-roma.json"
+        },
+        {
+          "id": "ass-stm",
+          "name": "Stm",
+          "file": "layouts/ass-stm.json"
+        },
+        {
+          "id": "ass-suneet",
+          "name": "Suneet",
+          "file": "layouts/ass-suneet.json"
+        },
+        {
+          "id": "ass-swarna",
+          "name": "Swarna",
+          "file": "layouts/ass-swarna.json"
+        },
+        {
+          "id": "ass-toptype",
+          "name": "Toptype",
+          "file": "layouts/ass-toptype.json"
+        },
+        {
+          "id": "ass-webel",
+          "name": "Webel",
+          "file": "layouts/ass-webel.json"
+        }
+      ]
+    },
+    {
+      "id": "mni",
+      "name": "Manipuri",
+      "sample": "\u0985",
+      "fonts": [
+        {
+          "id": "shree-banx",
+          "name": "Shree-BanX (Legacy)",
+          "family": "Shree-BanX-0001",
+          "file": "fonts/shree/shree-banx.ttf",
+          "type": "legacy",
+          "encoding": "shree-banx"
+        },
+        {
+          "id": "unicode",
+          "name": "Unicode",
+          "family": "Nirmala UI",
+          "type": "unicode",
+          "encoding": "vrinda"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "mni-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "unicode"
+        },
+        {
+          "id": "mni-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-banx"
+        },
+        {
+          "id": "mni-fl-shree-lipi-7-0",
+          "name": "Shree-Lipi 7.0",
+          "type": "legacy"
+        },
+        {
+          "id": "mni-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy"
+        },
+        {
+          "id": "mni-fl-stm-bnt",
+          "name": "STM-BNT",
+          "type": "legacy"
+        },
+        {
+          "id": "mni-fl-stm",
+          "name": "STM",
+          "type": "legacy"
+        },
+        {
+          "id": "mni-fl-ramdhenu-3-1",
+          "name": "Ramdhenu 3.1",
+          "type": "legacy"
+        },
+        {
+          "id": "mni-fl-indica-2004",
+          "name": "Indica 2004",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "mni-bn-inscript",
+          "name": "InScript",
+          "file": "layouts/bengali-inscript.json"
+        },
+        {
+          "id": "mni-ban-akadami",
+          "name": "Akadami",
+          "file": "layouts/ban-akadami.json"
+        },
+        {
+          "id": "mni-ban-akruti",
+          "name": "Akruti",
+          "file": "layouts/ban-akruti.json"
+        },
+        {
+          "id": "mni-ban-amr1",
+          "name": "Amr1",
+          "file": "layouts/ban-amr1.json"
+        },
+        {
+          "id": "mni-ban-avro",
+          "name": "Avro",
+          "file": "layouts/ban-avro.json"
+        },
+        {
+          "id": "mni-ban-bangword",
+          "name": "Bangword",
+          "file": "layouts/ban-bangword.json"
+        },
+        {
+          "id": "mni-ban-bijoy",
+          "name": "Bijoy",
+          "file": "layouts/ban-bijoy.json"
+        },
+        {
+          "id": "mni-ban-crtronic",
+          "name": "Crtronic",
+          "file": "layouts/ban-crtronic.json"
+        },
+        {
+          "id": "mni-ban-doe",
+          "name": "Doe",
+          "file": "layouts/ban-doe.json"
+        },
+        {
+          "id": "mni-ban-eng",
+          "name": "Eng",
+          "file": "layouts/ban-eng.json"
+        },
+        {
+          "id": "mni-ban-godrej",
+          "name": "Godrej",
+          "file": "layouts/ban-godrej.json"
+        },
+        {
+          "id": "mni-ban-indica",
+          "name": "Indica",
+          "file": "layouts/ban-indica.json"
+        },
+        {
+          "id": "mni-ban-indica1",
+          "name": "Indica1",
+          "file": "layouts/ban-indica1.json"
+        },
+        {
+          "id": "mni-ban-itr",
+          "name": "Itr",
+          "file": "layouts/ban-itr.json"
+        },
+        {
+          "id": "mni-ban-joy",
+          "name": "Joy",
+          "file": "layouts/ban-joy.json"
+        },
+        {
+          "id": "mni-ban-linotype",
+          "name": "Linotype",
+          "file": "layouts/ban-linotype.json"
+        },
+        {
+          "id": "mni-ban-monotype",
+          "name": "Monotype",
+          "file": "layouts/ban-monotype.json"
+        },
+        {
+          "id": "mni-ban-newroma",
+          "name": "Newroma",
+          "file": "layouts/ban-newroma.json"
+        },
+        {
+          "id": "mni-ban-phonetic",
+          "name": "Phonetic",
+          "file": "layouts/ban-phonetic.json"
+        },
+        {
+          "id": "mni-ban-phonet86",
+          "name": "Phonetic 86",
+          "file": "layouts/ban-phonet86.json"
+        },
+        {
+          "id": "mni-ban-piyali",
+          "name": "Piyali",
+          "file": "layouts/ban-piyali.json"
+        },
+        {
+          "id": "mni-ban-roma",
+          "name": "Roma",
+          "file": "layouts/ban-roma.json"
+        },
+        {
+          "id": "mni-ban-stm",
+          "name": "Stm",
+          "file": "layouts/ban-stm.json"
+        },
+        {
+          "id": "mni-ban-suneet",
+          "name": "Suneet",
+          "file": "layouts/ban-suneet.json"
+        },
+        {
+          "id": "mni-ban-swarna",
+          "name": "Swarna",
+          "file": "layouts/ban-swarna.json"
+        },
+        {
+          "id": "mni-ban-toptype",
+          "name": "Toptype",
+          "file": "layouts/ban-toptype.json"
+        },
+        {
+          "id": "mni-ban-webel",
+          "name": "Webel",
+          "file": "layouts/ban-webel.json"
+        }
+      ]
+    },
+    {
+      "id": "dia",
+      "name": "Diacritical",
+      "sample": "\u0101",
+      "fonts": [
+        {
+          "id": "unicode",
+          "name": "Unicode",
+          "family": "Nirmala UI",
+          "type": "unicode"
+        }
+      ],
+      "fontLayouts": [
+        {
+          "id": "dia-fl-unicode",
+          "name": "Unicode",
+          "type": "unicode",
+          "fontId": "unicode"
+        },
+        {
+          "id": "dia-fl-shreelipi-ex",
+          "name": "ShreeLipi-Ex",
+          "type": "legacy",
+          "fontId": "shree-devx"
+        },
+        {
+          "id": "dia-fl-indic-diacritical",
+          "name": "Indic Diacritical",
+          "type": "legacy"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "dia-inscript",
+          "name": "InScript",
+          "file": "layouts/hindi-inscript.json"
+        }
+      ]
+    }
+  ],
+  "mappingFiles": [
+    "mappings/krutidev-to-unicode.json",
+    "mappings/unicode-to-krutidev.json",
+    "mappings/shree-devx-to-unicode.json",
+    "mappings/unicode-to-shree-devx.json",
+    "mappings/shree-gujx-to-unicode.json",
+    "mappings/unicode-to-shree-gujx.json",
+    "mappings/shree-banx-to-unicode.json",
+    "mappings/unicode-to-shree-banx.json",
+    "mappings/shree-telx-to-unicode.json",
+    "mappings/unicode-to-shree-telx.json",
+    "mappings/shree-punx-to-unicode.json",
+    "mappings/unicode-to-shree-punx.json",
+    "mappings/shree-kanx-to-unicode.json",
+    "mappings/unicode-to-shree-kanx.json",
+    "mappings/shree-malx-to-unicode.json",
+    "mappings/unicode-to-shree-malx.json",
+    "mappings/shree-orix-to-unicode.json",
+    "mappings/unicode-to-shree-orix.json",
+    "mappings/shree-tamx-to-unicode.json",
+    "mappings/unicode-to-shree-tamx.json",
+    "mappings/shree-guj7-to-unicode.json",
+    "mappings/unicode-to-shree-guj7.json",
+    "mappings/shree-mal7-to-unicode.json",
+    "mappings/unicode-to-shree-mal7.json",
+    "mappings/shree-ori7-to-unicode.json",
+    "mappings/unicode-to-shree-ori7.json",
+    "mappings/shree-pun7-to-unicode.json",
+    "mappings/unicode-to-shree-pun7.json",
+    "mappings/shree-tam7-to-unicode.json",
+    "mappings/unicode-to-shree-tam7.json",
+    "mappings/bhasha-bharti-2-guj-to-unicode.json",
+    "mappings/unicode-to-bhasha-bharti-2-guj.json",
+    "mappings/shree-kan7-to-unicode.json",
+    "mappings/unicode-to-shree-kan7.json"
+  ]
+}

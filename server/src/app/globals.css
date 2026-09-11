@@ -1,0 +1,158 @@
+:root {
+  --bg: #1b1d21;
+  --surface: #24272c;
+  --surface-2: #2c3037;
+  --border: #3a3f47;
+  --text: #eceef1;
+  --muted: #9aa2ad;
+  --brand: #ef7215;
+  --brand-hover: #d9640c;
+  --ok: #3fb950;
+  --warn: #d9a441;
+  --danger: #e5534b;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 16px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+button:hover {
+  background: var(--brand-hover);
+}
+button.secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+button.danger {
+  background: var(--danger);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 11px;
+  width: 100%;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.active {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--ok);
+}
+.badge.revoked {
+  background: rgba(229, 83, 75, 0.15);
+  color: var(--danger);
+}
+.badge.expired {
+  background: rgba(217, 164, 65, 0.15);
+  color: var(--warn);
+}
+.badge.demo {
+  background: rgba(154, 162, 173, 0.15);
+  color: var(--muted);
+}
+.badge.full {
+  background: rgba(239, 114, 21, 0.15);
+  color: var(--brand);
+}
+
+.mono {
+  font-family: "Cascadia Mono", "Consolas", monospace;
+}
+.muted {
+  color: var(--muted);
+}

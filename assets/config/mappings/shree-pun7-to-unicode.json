@@ -1,0 +1,415 @@
+{
+  "id": "shree-pun7-to-unicode",
+  "name": "Shree-Pun (4-5-6) -\u003E Unicode",
+  "sourceFontId": "shree-pun7",
+  "targetFontId": "raavi",
+  "sourceType": "legacy",
+  "targetType": "unicode",
+  "preRules": [],
+  "pairs": [
+    {
+      "from": "\u0022",
+      "to": "\u2018"
+    },
+    {
+      "from": "#",
+      "to": "\u00D7"
+    },
+    {
+      "from": "$",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u0026",
+      "to": "\u0964"
+    },
+    {
+      "from": "\u0027",
+      "to": "\u2019"
+    },
+    {
+      "from": "0",
+      "to": "\u0A66"
+    },
+    {
+      "from": "1",
+      "to": "\u0A67"
+    },
+    {
+      "from": "2",
+      "to": "\u0A68"
+    },
+    {
+      "from": "3",
+      "to": "\u0A69"
+    },
+    {
+      "from": "4",
+      "to": "\u0A6A"
+    },
+    {
+      "from": "5",
+      "to": "\u0A6B"
+    },
+    {
+      "from": "6",
+      "to": "\u0A6C"
+    },
+    {
+      "from": "7",
+      "to": "\u0A6D"
+    },
+    {
+      "from": "8",
+      "to": "\u0A6E"
+    },
+    {
+      "from": "9",
+      "to": "\u0A6F"
+    },
+    {
+      "from": "\u003E",
+      "to": "\u0A03"
+    },
+    {
+      "from": "A",
+      "to": "\u0A05"
+    },
+    {
+      "from": "B",
+      "to": "\u0A72"
+    },
+    {
+      "from": "C",
+      "to": "\u0A73"
+    },
+    {
+      "from": "D",
+      "to": "\u0A73"
+    },
+    {
+      "from": "E",
+      "to": "\u0A09"
+    },
+    {
+      "from": "F",
+      "to": "\u0A0A"
+    },
+    {
+      "from": "G",
+      "to": "\u0A13"
+    },
+    {
+      "from": "H",
+      "to": "\u0A15"
+    },
+    {
+      "from": "I",
+      "to": "\u0A16"
+    },
+    {
+      "from": "J",
+      "to": "\u0A17"
+    },
+    {
+      "from": "K",
+      "to": "\u0A18"
+    },
+    {
+      "from": "L",
+      "to": "\u0A19"
+    },
+    {
+      "from": "M",
+      "to": "\u0A1A"
+    },
+    {
+      "from": "N",
+      "to": "\u0A1B"
+    },
+    {
+      "from": "O",
+      "to": "\u0A1C"
+    },
+    {
+      "from": "P",
+      "to": "\u0A1D"
+    },
+    {
+      "from": "Q",
+      "to": "\u0A1E"
+    },
+    {
+      "from": "R",
+      "to": "\u0A1F"
+    },
+    {
+      "from": "S",
+      "to": "\u0A20"
+    },
+    {
+      "from": "T",
+      "to": "\u0A21"
+    },
+    {
+      "from": "U",
+      "to": "\u0A22"
+    },
+    {
+      "from": "V",
+      "to": "\u0A23"
+    },
+    {
+      "from": "W",
+      "to": "\u0A24"
+    },
+    {
+      "from": "X",
+      "to": "\u0A25"
+    },
+    {
+      "from": "Y",
+      "to": "\u0A26"
+    },
+    {
+      "from": "Z",
+      "to": "\u0A27"
+    },
+    {
+      "from": "\\",
+      "to": "\u0A2A"
+    },
+    {
+      "from": "^",
+      "to": "\u0A2C"
+    },
+    {
+      "from": "_",
+      "to": "\u0A2D"
+    },
+    {
+      "from": "\u0060",
+      "to": "\u0A2E"
+    },
+    {
+      "from": "a",
+      "to": "\u0A2F"
+    },
+    {
+      "from": "b",
+      "to": "\u0A4D\u0A2F"
+    },
+    {
+      "from": "c",
+      "to": "\u0A30"
+    },
+    {
+      "from": "d",
+      "to": "\u0A32"
+    },
+    {
+      "from": "e",
+      "to": "\u0A35"
+    },
+    {
+      "from": "f",
+      "to": "\u0A36"
+    },
+    {
+      "from": "g",
+      "to": "\u0A38"
+    },
+    {
+      "from": "h",
+      "to": "\u0A39"
+    },
+    {
+      "from": "i",
+      "to": "\u0A59"
+    },
+    {
+      "from": "j",
+      "to": "\u0A5A"
+    },
+    {
+      "from": "k",
+      "to": "\u0A5B"
+    },
+    {
+      "from": "l",
+      "to": "\u0A5E"
+    },
+    {
+      "from": "m",
+      "to": "\u0A5C"
+    },
+    {
+      "from": "n",
+      "to": "\u0A15\u0A4D\u0A30"
+    },
+    {
+      "from": "o",
+      "to": "\u0A4D\u0A30"
+    },
+    {
+      "from": "p",
+      "to": "\u0A3E"
+    },
+    {
+      "from": "q",
+      "to": "\u0A3F"
+    },
+    {
+      "from": "r",
+      "to": "\u0A40"
+    },
+    {
+      "from": "s",
+      "to": "\u0A40\u0A02"
+    },
+    {
+      "from": "t",
+      "to": "\u0A41"
+    },
+    {
+      "from": "v",
+      "to": "\u0A42"
+    },
+    {
+      "from": "y",
+      "to": "\u0A47"
+    },
+    {
+      "from": "z",
+      "to": "\u0A47\u0A02"
+    },
+    {
+      "from": "|",
+      "to": "\u0A48\u0A02"
+    },
+    {
+      "from": "}",
+      "to": "\u0A4B"
+    },
+    {
+      "from": "~",
+      "to": "\u0A4B\u0A02"
+    },
+    {
+      "from": "\u00A1",
+      "to": "\u0A4C"
+    },
+    {
+      "from": "\u00A2",
+      "to": "\u0A4C\u0A02"
+    },
+    {
+      "from": "\u00A3",
+      "to": "\u0A02"
+    },
+    {
+      "from": "\u00A5",
+      "to": "\u0A70"
+    },
+    {
+      "from": "\u00A7",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\u00A8",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\u00AA",
+      "to": "\u0A4D\u0A39"
+    },
+    {
+      "from": "\u00AB",
+      "to": "\u0A4D\u0A35"
+    },
+    {
+      "from": "\u00B1",
+      "to": "\u0A48"
+    },
+    {
+      "from": "\u00B2",
+      "to": "\u0A28"
+    },
+    {
+      "from": "\u00B3",
+      "to": "\u0A2B"
+    },
+    {
+      "from": "\u00B4",
+      "to": "\u0A33"
+    },
+    {
+      "from": "\u00B5",
+      "to": "\u0A4D"
+    },
+    {
+      "from": "\u00B9",
+      "to": "\u2014"
+    },
+    {
+      "from": "\u00BA",
+      "to": "\u2013"
+    },
+    {
+      "from": "{",
+      "to": "\u0A49"
+    }
+  ],
+  "postRules": [
+    {
+      "pattern": "\u0A05\u0A3E",
+      "replace": "\u0A06",
+      "note": "Recompose U\u002B0A06, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A3F",
+      "replace": "\u0A07",
+      "note": "Recompose U\u002B0A07, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A40",
+      "replace": "\u0A08",
+      "note": "Recompose U\u002B0A08, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A41",
+      "replace": "\u0A09",
+      "note": "Recompose U\u002B0A09, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A42",
+      "replace": "\u0A0A",
+      "note": "Recompose U\u002B0A0A, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A47",
+      "replace": "\u0A0F",
+      "note": "Recompose U\u002B0A0F, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A05\u0A48",
+      "replace": "\u0A10",
+      "note": "Recompose U\u002B0A10, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A4B",
+      "replace": "\u0A13",
+      "note": "Recompose U\u002B0A13, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A05\u0A4C",
+      "replace": "\u0A14",
+      "note": "Recompose U\u002B0A14, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A3F((?:[\u0A15-\u0A39]\u0A3C?\u0A4D)*[\u0A15-\u0A39]\u0A3C?)",
+      "replace": "$1\u0A3F",
+      "note": "Move pre-base matra U\u002B0A3F after the consonant cluster (legacy visual order -\u003E Unicode logical order)."
+    }
+  ]
+}

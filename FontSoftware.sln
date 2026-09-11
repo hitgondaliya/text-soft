@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSoftware.Core", "src\FontSoftware.Core\FontSoftware.Core.csproj", "{11111111-1111-1111-1111-111111111111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSoftware.Engine", "src\FontSoftware.Engine\FontSoftware.Engine.csproj", "{22222222-2222-2222-2222-222222222222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSoftware.App", "src\FontSoftware.App\FontSoftware.App.csproj", "{33333333-3333-3333-3333-333333333333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSoftware.Licensing", "src\FontSoftware.Licensing\FontSoftware.Licensing.csproj", "{44444444-4444-4444-4444-444444444444}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{F89AFBE7-577D-4F11-8F1A-45D2B56B2966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGen", "tools\KeyGen\KeyGen.csproj", "{D9068D3C-5B3A-4466-BDE0-87C848607AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigCheck", "tools\ConfigCheck\ConfigCheck.csproj", "{5109BEB7-1649-4041-9AB5-6C258A88362E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E81B7E9-E683-4CE6-B765-1109CACA03DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSoftware.Tests", "tests\FontSoftware.Tests\FontSoftware.Tests.csproj", "{767A17E3-FF88-4DD0-BEF1-E558EA4EB777}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9068D3C-5B3A-4466-BDE0-87C848607AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9068D3C-5B3A-4466-BDE0-87C848607AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9068D3C-5B3A-4466-BDE0-87C848607AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9068D3C-5B3A-4466-BDE0-87C848607AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5109BEB7-1649-4041-9AB5-6C258A88362E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5109BEB7-1649-4041-9AB5-6C258A88362E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5109BEB7-1649-4041-9AB5-6C258A88362E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5109BEB7-1649-4041-9AB5-6C258A88362E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767A17E3-FF88-4DD0-BEF1-E558EA4EB777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767A17E3-FF88-4DD0-BEF1-E558EA4EB777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767A17E3-FF88-4DD0-BEF1-E558EA4EB777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767A17E3-FF88-4DD0-BEF1-E558EA4EB777}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9068D3C-5B3A-4466-BDE0-87C848607AC9} = {F89AFBE7-577D-4F11-8F1A-45D2B56B2966}
+		{5109BEB7-1649-4041-9AB5-6C258A88362E} = {F89AFBE7-577D-4F11-8F1A-45D2B56B2966}
+		{767A17E3-FF88-4DD0-BEF1-E558EA4EB777} = {5E81B7E9-E683-4CE6-B765-1109CACA03DB}
+	EndGlobalSection
+EndGlobal

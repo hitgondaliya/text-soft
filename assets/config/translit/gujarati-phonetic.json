@@ -1,0 +1,28 @@
+{
+  "$comment": "Gujarati phonetic 'type by sound' scheme. Roman input composes to Unicode Gujarati. Capitals mark retroflex/long (T=ટ, D=ડ, N=ણ, S=ષ, A/I/U=long, M=anusvara, H=visarga). Deterministic/rule-based; spell words as they sound (e.g. gujaraatii, helo).",
+  "id": "gu-phonetic",
+  "name": "Phonetic (type by sound)",
+  "fontId": "shruti",
+  "virama": "્",
+  "consonants": {
+    "kh": "ખ", "gh": "ઘ", "chh": "છ", "ch": "ચ", "jh": "ઝ",
+    "Th": "ઠ", "Dh": "ઢ", "th": "થ", "dh": "ધ", "ph": "ફ",
+    "bh": "ભ", "sh": "શ", "Sh": "ષ", "NG": "ઙ", "NY": "ઞ",
+    "gy": "જ્ઞ", "x": "ક્ષ",
+    "k": "ક", "g": "ગ", "c": "ચ", "j": "જ", "T": "ટ", "D": "ડ",
+    "N": "ણ", "t": "ત", "d": "દ", "n": "ન", "p": "પ", "b": "બ",
+    "m": "મ", "y": "ય", "r": "ર", "l": "લ", "L": "ળ", "v": "વ",
+    "w": "વ", "s": "સ", "h": "હ", "z": "ઝ", "f": "ફ"
+  },
+  "vowels": {
+    "aa": ["આ", "ા"], "ai": ["ઐ", "ૈ"], "au": ["ઔ", "ૌ"],
+    "ii": ["ઈ", "ી"], "ee": ["ઈ", "ી"], "uu": ["ઊ", "ૂ"], "oo": ["ઊ", "ૂ"],
+    "RRi": ["ઋ", "ૃ"],
+    "a": ["અ", ""], "A": ["આ", "ા"], "i": ["ઇ", "િ"], "I": ["ઈ", "ી"],
+    "u": ["ઉ", "ુ"], "U": ["ઊ", "ૂ"], "e": ["એ", "ે"], "E": ["ઐ", "ૈ"],
+    "o": ["ઓ", "ો"], "O": ["ઔ", "ૌ"]
+  },
+  "specials": {
+    "OM": "ૐ", ".n": "ં", "M": "ં", "H": "ઃ"
+  }
+}

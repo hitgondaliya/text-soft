@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc -t markdown FRD.docx)",
+      "Bash(which pandoc *)"
+    ]
+  }
+}

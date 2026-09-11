@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "website",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "tools/WebServe", "-c", "Release"],
+      "port": 5080
+    }
+  ]
+}

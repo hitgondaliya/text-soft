@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Obfuscar config for the TextSoft release build.
+
+  Scope: FontSoftware.Licensing.dll ONLY — the assembly that holds the Ed25519
+  verification, the offline-grace / clock-rollback / expiry logic, and the local
+  store's MAC secret. Obfuscating this raises the effort to locate and patch the
+  license checks.
+
+  Why not the App/Engine/Core assemblies: the WPF app binds to public view-model
+  members and XAML handlers by *name*, so renaming them would break the UI. We keep
+  those readable and concentrate obfuscation on the sensitive library.
+
+  KeepPublicApi=true keeps FontSoftware.Licensing's PUBLIC surface (LicenseManager,
+  LicenseApiClient, etc.) intact so the already-compiled App still binds to it, while
+  HidePrivateApi=true renames the private internals (the crypto helpers, the MAC
+  routine, the evaluation state machine). HideStrings encrypts string literals.
+
+  Paths are relative to InPath, set on the Obfuscar command line by build-release.ps1.
+-->
+<Obfuscator>
+  <Var name="InPath" value="." />
+  <Var name="OutPath" value=".\obfuscated" />
+
+  <Var name="KeepPublicApi" value="true" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="RenameProperties" value="true" />
+  <Var name="RenameEvents" value="true" />
+  <Var name="RenameFields" value="true" />
+  <Var name="UseUnicodeNames" value="false" />
+  <Var name="HideStrings" value="true" />
+  <Var name="OptimizeMethods" value="true" />
+  <Var name="SuppressIldasm" value="true" />
+
+  <Module file="$(InPath)\FontSoftware.Licensing.dll" />
+</Obfuscator>

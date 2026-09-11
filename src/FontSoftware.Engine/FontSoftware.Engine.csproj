@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>FontSoftware.Engine</RootNamespace>
+    <!-- P/Invoke to user32 only; no WPF/WinForms UI here. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FontSoftware.Core\FontSoftware.Core.csproj" />
+  </ItemGroup>
+
+</Project>
