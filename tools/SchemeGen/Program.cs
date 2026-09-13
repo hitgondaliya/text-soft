@@ -104,6 +104,20 @@ foreach (var sc in scripts)
             matraRows.Add(k);
             if (vowels.TryGetValue(token, out var v)) { if (v[1].Length == 0) vowels[token] = new[] { v[0], matra }; }
             else if (!specials.ContainsKey(token)) specials[token] = matra;
+
+            // "kaM" -> कं is k + a + M, and the inherent a contributes nothing, so
+            // the mark belongs to the M alone. Shree only ever shows it on the
+            // inherent vowel, but a writer needs it after any vowel — हिंदी is
+            // ह ि ं द ी — so register the bare mark as well. Derived from the row,
+            // not assumed: the a is known to add nothing.
+            // The remainder must be a MARK, never another vowel: "aa" and "au" also
+            // start with a, and letting them through registered "a" as the long-ā
+            // matra and "u" as the au one, so every inherent a started typing ા and
+            // "gujaraatee" came out गौजराती.
+            string rest = token.Length > 1 && token[0] == 'a' ? token[1..] : "";
+            if (rest.Length > 0 && !rest.Any(ch => "aeiouAEIOU".Contains(ch))
+                && !specials.ContainsKey(rest) && !vowels.ContainsKey(rest))
+                specials[rest] = matra;
         }
 
     // pass 3: consonants. A matra row must not be read as one: "kaa" -> કા would

@@ -72,20 +72,29 @@ Console.WriteLine($"  keys carried overall:      {totalCarried}/{totalDefined}"
 Console.WriteLine("\n=== phonetic 'type by sound' ===");
 var words = new (string Lang, string Roman, string Expect)[]
 {
-    ("Gujarati", "nishaant", "નિશાન્ત"),
-    ("Gujarati", "nishaaMt", "નિશાંત"),
-    ("Gujarati", "gujaraatii", "ગુજરાતી"),
-    ("Gujarati", "kamal", "કમલ"),
-    ("Gujarati", "bhaarat", "ભારત"),
+    // Spellings follow Shree's own Eng tables, which every language now uses: a
+    // consonant carries its inherent vowel ("ka"), "ee" is the long i, "M" the
+    // anusvara, and retroflex or long forms are capitals.
     ("Hindi", "namaste", "नमस्ते"),
-    ("Hindi", "bhaarat", "भारत"),
-    ("Telugu", "kamala", "కమల"),
-    ("Tamil", "kamala", "கமல"),
+    ("Hindi", "hiMdee", "हिंदी"),
+    ("Hindi", "kshamaa", "क्षमा"),
+    ("Hindi", "dhanyavaad", "धन्यवाद"),
+    ("Hindi", "Om", "ॐ"),
+    ("Marathi", "maraaThee", "मराठी"),
+    ("Sanskrit", "namaste", "नमस्ते"),
+    ("Gujarati", "nishaaMta", "નિશાંત"),
+    ("Gujarati", "gujaraatee", "ગુજરાતી"),
+    ("Gujarati", "shaaLaa", "શાળા"),
+    ("Gujarati", "cho", "છો"),
+    ("Punjabi", "kamala", "ਕਮਲ"),
     ("Bangla", "kamala", "কমল"),
+    ("Telugu", "kamala", "కమల"),
     ("Kannada", "kamala", "ಕಮಲ"),
     ("Malayalam", "kamala", "കമല"),
     ("Odia", "kamaLa", "କମଳ"),
-    ("Punjabi", "kamala", "ਕਮਲ"),
+    ("Tamil", "kamala", "கமல"),
+    ("Assamese", "kamala", "কমল"),
+    ("Manipuri", "kamala", "কমল"),
 };
 int pOk = 0, pTotal = 0;
 foreach (var lang in bundle.Languages)
