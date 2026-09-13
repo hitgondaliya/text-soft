@@ -93,6 +93,38 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         set { if (SetProperty(ref _selectedLayout, value)) ApplyProfile(); }
     }
 
+    private string _legacyFontHint = "";
+    /// <summary>
+    /// A legacy layout types characters only its own fonts can draw; in Word (or any
+    /// app) the user must pick one of those fonts or they see boxes. This names the
+    /// installed ones so the choice is obvious — the same step Shree-Lipi users take.
+    /// </summary>
+    public string LegacyFontHint
+    {
+        get => _legacyFontHint;
+        private set { if (SetProperty(ref _legacyFontHint, value)) OnPropertyChanged(nameof(ShowLegacyFontHint)); }
+    }
+    public bool ShowLegacyFontHint => _legacyFontHint.Length > 0;
+
+    private void UpdateLegacyFontHint()
+    {
+        if (!LegacyTypingActive || SelectedFont is null || SelectedLanguage is null)
+        {
+            LegacyFontHint = "";
+            return;
+        }
+        string key = SelectedFont.ConversionKey;
+        var installed = _bundle.Languages.SelectMany(l => l.Fonts)
+            .Where(f => f.ConversionKey == key && !string.IsNullOrWhiteSpace(f.Family) && SystemFontService.IsInstalled(f.Family))
+            .Select(f => f.Family)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+        LegacyFontHint = installed.Count == 0
+            ? $"In Word or any other app, set the font to a {SelectedFontLayout?.Name} font. No such font is installed on this PC yet, so typed text will show as boxes there."
+            : $"In Word or any other app, set the font to {string.Join(" / ", installed.Take(4))}{(installed.Count > 4 ? " …" : "")} — {SelectedFontLayout?.Name} text shows as boxes in any other font.";
+    }
+
     private bool _legacyTypingActive;
     /// <summary>True when the active Font Layout types live in a legacy encoding (ShreeLipi-Ex etc.).</summary>
     public bool LegacyTypingActive
@@ -501,6 +533,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                 legacy = _bundle.CreateConverterToLegacy(SelectedFont.ConversionKey);
             _engine.SetLegacyConverter(legacy);
             LegacyTypingActive = legacy is not null;
+            UpdateLegacyFontHint();
 
             RefreshKeyboard();
             string mode = LegacyTypingActive ? " (legacy)" : SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode ? " (font not provided — types Unicode)" : string.Empty;

@@ -205,6 +205,14 @@
                                                    Visibility="{Binding SelectedFontMissing, Converter={StaticResource BoolToVis}}" />
                                     </StackPanel>
                                 </Grid>
+                                <Border Background="{StaticResource PrimaryLight}" CornerRadius="8" Padding="12,8" Margin="0,12,0,0"
+                                        Visibility="{Binding ShowLegacyFontHint, Converter={StaticResource BoolToVis}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="ⓘ" Foreground="{StaticResource PrimaryDeep}" FontSize="14" VerticalAlignment="Top" Margin="0,0,8,0" />
+                                        <TextBlock Text="{Binding LegacyFontHint}" Foreground="{StaticResource PrimaryDeep}" FontSize="12"
+                                                   TextWrapping="Wrap" MaxWidth="820" />
+                                    </StackPanel>
+                                </Border>
                             </StackPanel>
                         </Border>
 
