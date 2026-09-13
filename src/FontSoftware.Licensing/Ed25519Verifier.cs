@@ -1,4 +1,4 @@
-using Org.BouncyCastle.Crypto.Parameters;
+﻿using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Crypto.Signers;
 
 namespace FontSoftware.Licensing;
@@ -15,7 +15,7 @@ public sealed class Ed25519Verifier
 {
     // TODO(client): DEV key for the generated dev keypair. Replace with your
     // PRODUCTION public key (from `npm run genkeys`) before shipping real builds.
-    public const string DefaultPublicKeyBase64 = "4+s4/OseeXn6dCpVDXrRcM8BgDJ9BFoLak8hFs7if0U=";
+    public const string DefaultPublicKeyBase64 = "OvrGren3lqZss8fLcfI5M2/otEqL4TtHbXaYrlUqeqc=";
 
     private readonly Ed25519PublicKeyParameters _key;
 
@@ -38,3 +38,4 @@ public sealed class Ed25519Verifier
         return signer.VerifySignature(signature);
     }
 }
+

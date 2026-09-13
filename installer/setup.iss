@@ -1,4 +1,4 @@
-; Inno Setup script for TextSoft — Beyond Typing (FRD NFR: installer).
+﻿; Inno Setup script for TextSoft — Beyond Typing (FRD NFR: installer).
 ; Build with Inno Setup 6+ (ISCC.exe). See README.md in this folder.
 
 #define AppName        "TextSoft"
@@ -13,7 +13,7 @@
 #endif
 ; Licence server. scripts\set-prod-config.ps1 stamps the production HTTPS URL here
 ; (it must match LicenseEndpoints.BaseUrl in the app).
-#define ApiUrl         "http://localhost:3100"
+#define ApiUrl         "https://admin.text-soft.com"
 
 [Setup]
 ; A fixed AppId keeps upgrades/uninstall tied to the same product. Keep it stable.
@@ -303,3 +303,4 @@ begin
   ForceDirectories(ExtractFileDir(Path));
   SaveStringToFile(Path, '{"serial":"' + VerifiedSerial + '","key":"' + VerifiedKey + '"}', False);
 end;
+

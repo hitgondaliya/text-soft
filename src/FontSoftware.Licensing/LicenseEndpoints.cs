@@ -1,4 +1,4 @@
-namespace FontSoftware.Licensing;
+﻿namespace FontSoftware.Licensing;
 
 /// <summary>
 /// Where the licence server lives. A compile-time constant on purpose: it used to
@@ -13,7 +13,7 @@ namespace FontSoftware.Licensing;
 public static class LicenseEndpoints
 {
     // TODO(client): DEV value. set-prod-config.ps1 replaces this with https://api.<yourdomain>.
-    public const string BaseUrl = "http://localhost:3100";
+    public const string BaseUrl = "https://admin.text-soft.com";
 
     public static string Resolve()
     {
@@ -24,3 +24,4 @@ public static class LicenseEndpoints
         return BaseUrl;
     }
 }
+

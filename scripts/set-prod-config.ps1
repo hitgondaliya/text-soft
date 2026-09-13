@@ -36,7 +36,7 @@ $endpoints = Join-Path $root "src\FontSoftware.Licensing\LicenseEndpoints.cs"
 $iss = Join-Path $root "installer\setup.iss"
 
 # 1) Embedded public key.
-$v = Get-Content $verifier -Raw
+$v = Get-Content $verifier -Raw -Encoding utf8
 $v = [regex]::Replace($v,
     'public const string DefaultPublicKeyBase64 = "[^"]*";',
     "public const string DefaultPublicKeyBase64 = `"$PublicKey`";")
@@ -45,14 +45,14 @@ Write-Host "Set public key in Ed25519Verifier.cs" -ForegroundColor Green
 
 # 2) API URL — a compile-time constant in the app, and the installer's precheck target.
 $ApiUrl = $ApiUrl.TrimEnd('/')
-$s = Get-Content $endpoints -Raw
+$s = Get-Content $endpoints -Raw -Encoding utf8
 $s = [regex]::Replace($s,
     'public const string BaseUrl = "[^"]*";',
     "public const string BaseUrl = `"$ApiUrl`";")
 Set-Content $endpoints $s -Encoding utf8
 Write-Host "Set API URL in LicenseEndpoints.cs" -ForegroundColor Green
 
-$i = Get-Content $iss -Raw
+$i = Get-Content $iss -Raw -Encoding utf8
 $i = [regex]::Replace($i,
     '#define ApiUrl\s+"[^"]*"',
     "#define ApiUrl         `"$ApiUrl`"")
