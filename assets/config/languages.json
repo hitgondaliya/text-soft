@@ -900,6 +900,20 @@
           "family": "SHREE-SAN7-0964",
           "type": "legacy",
           "encoding": "shree-dev456"
+        },
+        {
+          "id": "bb-kautilya",
+          "name": "B Bharati Kautilya (Bhasha Bharati)",
+          "family": "B Bharati Kautilya",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev"
+        },
+        {
+          "id": "bb-sharmila",
+          "name": "B Bharati Sharmila (Bhasha Bharati)",
+          "family": "B Bharati Sharmila",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev"
         }
       ],
       "fontLayouts": [
@@ -955,6 +969,12 @@
           "id": "hi-fl-akruti-monolingual",
           "name": "Akruti Monolingual",
           "type": "legacy"
+        },
+        {
+          "id": "hi-fl-bhasha-bharati",
+          "name": "Bhasha Bharati",
+          "type": "legacy",
+          "fontId": "bb-kautilya"
         }
       ],
       "layouts": [
@@ -1212,6 +1232,13 @@
           "family": "Nirmala UI",
           "type": "unicode",
           "encoding": "mangal"
+        },
+        {
+          "id": "bb-kautilya-mr",
+          "name": "B Bharati Kautilya (Bhasha Bharati)",
+          "family": "B Bharati Kautilya",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev"
         }
       ],
       "fontLayouts": [
@@ -1267,6 +1294,12 @@
           "id": "mr-fl-akruti-monolingual",
           "name": "Akruti Monolingual",
           "type": "legacy"
+        },
+        {
+          "id": "mr-fl-bhasha-bharati",
+          "name": "Bhasha Bharati",
+          "type": "legacy",
+          "fontId": "bb-kautilya-mr"
         }
       ],
       "layouts": [
@@ -10660,6 +10693,8 @@
     "mappings/shree-ban7-to-unicode.json",
     "mappings/unicode-to-shree-ban7.json",
     "mappings/shree-tel7-to-unicode.json",
-    "mappings/unicode-to-shree-tel7.json"
+    "mappings/unicode-to-shree-tel7.json",
+    "mappings/bhasha-bharati-dev-to-unicode.json",
+    "mappings/unicode-to-bhasha-bharati-dev.json"
   ]
 }

@@ -207,6 +207,25 @@ if (args.Contains("--add-nirmala"))
             var lang = cfg["languages"]!.AsArray().FirstOrDefault(l => (string?)l!["name"] == f[0])?.AsObject();
             if (lang is null) { Console.WriteLine("  no language " + f[0]); continue; }
 
+            // prove the font really uses this encoding before listing it: every
+            // legacy code the table can emit has to exist in the font's cmap
+            string tbl = Path.Combine(Path.GetDirectoryName(configPath)!, "mappings", "unicode-to-" + f[4] + ".json");
+            string? file = FindInstalled(f[3]);
+            if (File.Exists(tbl) && file is not null)
+            {
+                var want = new HashSet<int>();
+                foreach (var pr in JsonNode.Parse(File.ReadAllText(tbl))!["pairs"]!.AsArray())
+                    foreach (char ch in (string?)pr!["to"] ?? "") if (ch >= 0x80) want.Add(ch);
+                var got = CodePoints(file);
+                int miss = want.Count(c => !got.Contains(c));
+                if (miss > want.Count * 0.02)
+                {
+                    Console.WriteLine("  REJECT " + f[2] + ": " + miss + "/" + want.Count + " codes absent from the font");
+                    continue;
+                }
+            }
+            else Console.WriteLine("  (unverified: " + (file is null ? "font not installed" : "no table") + ")");
+
             var fonts = lang["fonts"]!.AsArray();
             if (!fonts.Any(x => (string?)x!["id"] == f[1]))
                 fonts.Add(new JsonObject
@@ -234,6 +253,42 @@ if (args.Contains("--add-nirmala"))
         }
         File.WriteAllText(configPath, cfg.ToJsonString(new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() }));
         Console.WriteLine("added " + done + " font(s), wrote " + configPath);
+        return 0;
+    }
+}
+
+// --add-layout "<language>|<layout name>|<fontId>": add a FONT LAYOUT entry the
+// config never had. Shree offers Bhasha Bharati for Devanagari but our config only
+// listed it under Gujarati, so there was no way to pick it for Hindi.
+{
+    var specs = new List<string>();
+    for (int i = 0; i < args.Length; i++) if (args[i] == "--add-layout" && i + 1 < args.Length) specs.Add(args[++i]);
+    if (specs.Count > 0)
+    {
+        var cfg = JsonNode.Parse(File.ReadAllText(configPath))!.AsObject();
+        int n = 0;
+        foreach (string spec in specs)
+        {
+            var f = spec.Split('|');
+            if (f.Length < 3) { Console.WriteLine("  bad spec: " + spec); continue; }
+            var lang = cfg["languages"]!.AsArray().FirstOrDefault(l => (string?)l!["name"] == f[0])?.AsObject();
+            if (lang is null) { Console.WriteLine("  no language " + f[0]); continue; }
+            var fls = lang["fontLayouts"]!.AsArray();
+            var existing = fls.FirstOrDefault(x => (string?)x!["name"] == f[1])?.AsObject();
+            if (existing is not null) { existing["fontId"] = f[2]; Console.WriteLine("  " + f[0] + ": '" + f[1] + "' -> " + f[2]); n++; continue; }
+            string langId = (string?)lang["id"] ?? "x";
+            fls.Add(new JsonObject
+            {
+                ["id"] = langId + "-fl-" + Slug(f[1]),
+                ["name"] = f[1],
+                ["type"] = "legacy",
+                ["fontId"] = f[2],
+            });
+            Console.WriteLine("  " + f[0] + ": + '" + f[1] + "' -> " + f[2]);
+            n++;
+        }
+        File.WriteAllText(configPath, cfg.ToJsonString(new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() }));
+        Console.WriteLine("layouts touched: " + n);
         return 0;
     }
 }
@@ -590,4 +645,28 @@ static HashSet<int> CodePoints(string path)
         }
     }
     return res;
+}
+
+/// Locate an installed font file by its family name, across both font folders.
+static string? FindInstalled(string family)
+{
+    string[] dirs =
+    {
+        @"C:\Windows\Fonts",
+        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows", "Fonts"),
+    };
+    foreach (string d in dirs)
+    {
+        if (!Directory.Exists(d)) continue;
+        foreach (string f in Directory.EnumerateFiles(d, "*.ttf"))
+        {
+            try
+            {
+                var r = Read(f);
+                if (r.Length == 2 && string.Equals(r[1], family, StringComparison.OrdinalIgnoreCase)) return f;
+            }
+            catch { }
+        }
+    }
+    return null;
 }
