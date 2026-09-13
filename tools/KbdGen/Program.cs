@@ -25,6 +25,14 @@ const int MinKeys = 20;
 // model to change keyboards would risk all of that for nothing.
 bool layoutsOnly = args.Contains("--layouts-only");
 
+// --chm <dir>: Shree publishes a help file per keyboard per script, and ChmMap
+// turns each into key -> Unicode pairs. That is Shree's own account of its
+// keyboards, so where it names a key the scheme file could not explain, take it.
+// Only ever ADDS keys — the hand-verified InScript mappings are never overwritten
+// by it — and every added key still has to pass the renderability check.
+string? chmDir = null;
+for (int i = 0; i < args.Length; i++) if (args[i] == "--chm" && i + 1 < args.Length) chmDir = args[++i];
+
 // script ext -> (rosetta InScript layout id-language, unicode fontId, id prefix,
 //                target language ids, Unicode block base)
 var scripts = new (string Ext, string RosettaLang, string FontId, string Prefix, string[] Targets, int Block)[]
@@ -183,7 +191,27 @@ bool Renderable(string[] targets, string s)
     return true;
 }
 
-int fromRosetta = 0, fromBorrow = 0, fromLiteral = 0, unknownKeys = 0, rejected = 0;
+int fromRosetta = 0, fromBorrow = 0, fromLiteral = 0, unknownKeys = 0, rejected = 0, fromHelp = 0;
+
+/// Single-character keys from Shree's help file for this script and scheme.
+/// A multi-character key there is a typing recipe ("kha" -> ખ), not a key, and
+/// belongs in a transliteration scheme rather than a keyboard layout.
+Dictionary<char, string> LoadChm(string? dir, string ext, string scheme)
+{
+    var result = new Dictionary<char, string>();
+    if (dir is null) return result;
+    string path = Path.Combine(dir, ext.ToLowerInvariant(),
+        new string(scheme.ToLowerInvariant().Where(char.IsLetterOrDigit).ToArray()) + ".json");
+    if (!File.Exists(path)) return result;
+    using var doc = JsonDocument.Parse(File.ReadAllText(path));
+    foreach (var p in doc.RootElement.GetProperty("Pairs").EnumerateArray())
+    {
+        string k = p.GetProperty("Key").GetString() ?? "", u = p.GetProperty("Uni").GetString() ?? "";
+        if (k.Length != 1 || u.Length == 0) continue;
+        if (!result.ContainsKey(k[0])) result[k[0]] = u;
+    }
+    return result;
+}
 
 /// The Unicode a key produces, or null if nothing can be said about it honestly.
 string? Decode(string ext, int block, byte b, char keyChar, string[] targets)
@@ -231,11 +259,15 @@ foreach (var sc in scripts)
         byte[] d = File.ReadAllBytes(file);
         if (d.Length < 128) continue;
 
+        var fromChm = LoadChm(chmDir, sc.Ext, scheme);
         var rows = new List<string>();
         foreach (var (vk, n, s) in keys.OrderBy(k => k.vk))
         {
             string? un = Decode(sc.Ext, sc.Block, Prim(d, n), n, sc.Targets);
             string? us = Decode(sc.Ext, sc.Block, Prim(d, s), s, sc.Targets);
+            // Shree's own help file fills the gaps the scheme file left.
+            if (un is null && fromChm.TryGetValue(n, out string? cn) && Renderable(sc.Targets, cn)) { un = cn; fromHelp++; }
+            if (us is null && fromChm.TryGetValue(s, out string? cs) && Renderable(sc.Targets, cs)) { us = cs; fromHelp++; }
             if (un is null && us is null) continue;
             var parts = new List<string> { $"\"vk\": {vk}" };
             if (un is not null) parts.Add($"\"base\": \"{Esc(un)}\"");
@@ -271,7 +303,7 @@ foreach (var sc in scripts)
 }
 
 Console.WriteLine($"\nkeys decoded: {fromRosetta} from this script's InScript, {fromBorrow} borrowed from an"
-                + $" agreeing script, {fromLiteral} literal punctuation; {rejected} rejected as unrenderable, {unknownKeys} still unexplained.");
+                + $" agreeing script, {fromLiteral} literal punctuation; {fromHelp} from Shree's help files, {rejected} rejected as unrenderable, {unknownKeys} still unexplained.");
 
 if (layoutsOnly)
 {

@@ -26,7 +26,7 @@
     { "vk": 74, "base": "र", "shift": "ण" },
     { "vk": 75, "base": "ा", "shift": "श" },
     { "vk": 76, "base": "े", "shift": "ष" },
-    { "vk": 77, "shift": "ळ" },
+    { "vk": 77, "base": "ल", "shift": "ळ" },
     { "vk": 78, "base": "ू", "shift": "ऊ" },
     { "vk": 79, "base": "ह", "shift": "ड" },
     { "vk": 80, "base": "ै", "shift": "ढ" },
@@ -44,10 +44,11 @@
     { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": ",", "shift": "ए" },
     { "vk": 189, "base": "ऋ" },
-    { "vk": 190, "base": "." },
+    { "vk": 190, "base": ".", "shift": "्य" },
     { "vk": 191, "base": "/", "shift": "?" },
     { "vk": 192, "base": "।", "shift": "ॠ" },
     { "vk": 219, "base": "अ", "shift": "ृ" },
+    { "vk": 221, "shift": "ऽ" },
     { "vk": 222, "base": "ज्ञ", "shift": "ॅ" }
   ],
   "deadKeyCombinations": []

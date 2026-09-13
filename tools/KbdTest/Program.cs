@@ -79,6 +79,13 @@ var words = new (string Lang, string Roman, string Expect)[]
     ("Gujarati", "bhaarat", "ભારત"),
     ("Hindi", "namaste", "नमस्ते"),
     ("Hindi", "bhaarat", "भारत"),
+    ("Telugu", "kamala", "కమల"),
+    ("Tamil", "kamala", "கமல"),
+    ("Bangla", "kamala", "কমল"),
+    ("Kannada", "kamala", "ಕಮಲ"),
+    ("Malayalam", "kamala", "കമല"),
+    ("Odia", "kamaLa", "କମଳ"),
+    ("Punjabi", "kamala", "ਕਮਲ"),
 };
 int pOk = 0, pTotal = 0;
 foreach (var lang in bundle.Languages)
