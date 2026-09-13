@@ -238,6 +238,132 @@ if (args.Contains("--add-nirmala"))
     }
 }
 
+// --sync-mappings: the catalog loads only the tables it lists, so every encoding a
+// registered font names must have its two files listed. Missing entries make the
+// font look wired while the converter cannot find a table for it.
+if (args.Contains("--sync-mappings"))
+{
+    var cfg = JsonNode.Parse(File.ReadAllText(configPath))!.AsObject();
+    var mf = cfg["mappingFiles"]!.AsArray();
+    var have = new HashSet<string>(mf.Select(n => (string?)n ?? ""), StringComparer.OrdinalIgnoreCase);
+    string dir = Path.GetDirectoryName(configPath)!;
+    int syncAdded = 0;
+    foreach (var l in cfg["languages"]!.AsArray())
+        foreach (var f in l!["fonts"]!.AsArray())
+        {
+            string enc = (string?)f!["encoding"] ?? "";
+            if (enc.Length == 0) continue;
+            foreach (string rel in new[] { "mappings/" + enc + "-to-unicode.json", "mappings/unicode-to-" + enc + ".json" })
+            {
+                if (!have.Add(rel)) continue;
+                if (!File.Exists(Path.Combine(dir, rel.Replace('/', Path.DirectorySeparatorChar)))) { have.Remove(rel); continue; }
+                mf.Add(rel);
+                Console.WriteLine("  + " + rel);
+                syncAdded++;
+            }
+        }
+    File.WriteAllText(configPath, cfg.ToJsonString(new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() }));
+    Console.WriteLine("syncAdded " + syncAdded + " mapping file entries");
+    return 0;
+}
+
+// --by-series: register by what the font IS, then prove it.
+//
+// Grouping by the exact set of code points a font maps splits one encoding into
+// dozens of groups, because designs of the same series carry different glyph
+// subsets — SHREE-GUJX-5227 was treated as its own layout although the shree-gujx
+// table renders it correctly. Shree's own taxonomy is in the family name:
+// SHREE-<SCRIPT><SERIES>-<design>, where the series is X, 7 or nothing.
+//
+// Naming alone is not proof, so each candidate is checked against the table it
+// would use: every legacy code that table can emit must exist in the font's cmap.
+if (args.Contains("--by-series"))
+{
+    var seriesToEnc = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    {
+        ["DEVX"] = "shree-devx",  ["DEV7"] = "shree-dev456", ["DEV"] = "shree-dev456",
+        ["BANX"] = "shree-banx",  ["ASSX"] = "shree-banx",   ["MANX"] = "shree-banx",
+        ["GUJX"] = "shree-gujx",  ["GUJ7"] = "shree-guj7",   ["GUJ"] = "shree-guj7",
+        ["KANX"] = "shree-kanx",  ["KAN7"] = "shree-kan7",   ["KAN"] = "shree-kan7",
+        ["MALX"] = "shree-malx",  ["MAL7"] = "shree-mal7",   ["MAL"] = "shree-mal7",
+        ["ORIX"] = "shree-orix",  ["ORI7"] = "shree-ori7",   ["ORI"] = "shree-ori7",
+        ["PUNX"] = "shree-punx",  ["PUN7"] = "shree-pun7",   ["PUN"] = "shree-pun7",
+        ["TAMX"] = "shree-tamx",  ["TAM7"] = "shree-tam7",   ["TAM"] = "shree-tam7",
+        ["TELX"] = "shree-telx",
+    };
+    var encToLang = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    {
+        ["shree-devx"] = "Hindi", ["shree-dev456"] = "Hindi",
+        ["shree-banx"] = "Bangla",
+        ["shree-gujx"] = "Gujarati", ["shree-guj7"] = "Gujarati",
+        ["shree-kanx"] = "Kannada", ["shree-kan7"] = "Kannada",
+        ["shree-malx"] = "Malayalam", ["shree-mal7"] = "Malayalam",
+        ["shree-orix"] = "Odia", ["shree-ori7"] = "Odia",
+        ["shree-punx"] = "Punjabi", ["shree-pun7"] = "Punjabi",
+        ["shree-tamx"] = "Tamil", ["shree-tam7"] = "Tamil",
+        ["shree-telx"] = "Telugu",
+    };
+
+    string mapDir = Path.Combine(Path.GetDirectoryName(configPath)!, "mappings");
+    // encoding -> the legacy code points its table can emit
+    var needed = new Dictionary<string, HashSet<int>>(StringComparer.OrdinalIgnoreCase);
+    foreach (var enc in seriesToEnc.Values.Distinct(StringComparer.OrdinalIgnoreCase))
+    {
+        string p = Path.Combine(mapDir, "unicode-to-" + enc + ".json");
+        if (!File.Exists(p)) continue;
+        var set = new HashSet<int>();
+        var doc = JsonNode.Parse(File.ReadAllText(p))!.AsObject();
+        foreach (var pr in doc["pairs"]!.AsArray())
+            foreach (char ch in (string?)pr!["to"] ?? "")
+                if (ch >= 0x80) set.Add(ch);
+        needed[enc] = set;
+    }
+    Console.WriteLine("tables loaded: " + string.Join(", ", needed.Select(k => k.Key + "=" + k.Value.Count)));
+
+    var cfg2 = JsonNode.Parse(File.ReadAllText(configPath))!.AsObject();
+    int ok = 0, rejected = 0, dup = 0, noTable = 0;
+    var perEnc = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
+    foreach (var file in Directory.EnumerateFiles(fontDir, "*.ttf"))
+    {
+        string[] r;
+        try { r = Read(file); } catch { continue; }
+        if (r.Length != 2) continue;
+        string family = r[1];
+        var m = System.Text.RegularExpressions.Regex.Match(family, @"^SHREE[-_ ]?([A-Z]{3}[X7]?)[-_ ]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+        if (!m.Success) continue;
+        if (!seriesToEnc.TryGetValue(m.Groups[1].Value, out var enc)) continue;
+        if (!needed.TryGetValue(enc, out var want)) { noTable++; continue; }
+
+        var have = CodePoints(file);
+        int missing = want.Count(c => !have.Contains(c));
+        // a design legitimately omits a few rare glyphs; a different encoding misses many
+        if (missing > want.Count * 0.02) { rejected++; continue; }
+
+        if (!encToLang.TryGetValue(enc, out var langName)) continue;
+        var lang = cfg2["languages"]!.AsArray().FirstOrDefault(l => (string?)l!["name"] == langName)?.AsObject();
+        if (lang is null) continue;
+        var fonts = lang["fonts"]!.AsArray();
+        string id = Slug(family);
+        if (fonts.Any(x => (string?)x!["id"] == id || (string?)x!["family"] == family)) { dup++; continue; }
+
+        fonts.Add(new JsonObject
+        {
+            ["id"] = id, ["name"] = family, ["family"] = family,
+            ["type"] = "legacy", ["encoding"] = enc,
+        });
+        perEnc[enc] = perEnc.GetValueOrDefault(enc) + 1;
+        ok++;
+    }
+
+    foreach (var kv in perEnc.OrderByDescending(k => k.Value)) Console.WriteLine("  " + kv.Key.PadRight(14) + kv.Value);
+    Console.WriteLine("registered=" + ok + " already-present=" + dup + " rejected-by-cmap-check=" + rejected + " no-table=" + noTable);
+    if (dryRun) { Console.WriteLine("(dry run)"); return 0; }
+    File.WriteAllText(configPath, cfg2.ToJsonString(new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() }));
+    Console.WriteLine("wrote " + configPath);
+    return 0;
+}
+
 // --- scan the installed fonts ---
 var found = new List<(string hash, string family, string file)>();
 foreach (var f in Directory.EnumerateFiles(fontDir, "*.ttf", SearchOption.TopDirectoryOnly))
@@ -404,3 +530,50 @@ static string[] Read(string path)
 static bool ShreeFamily(string family) =>
     System.Text.RegularExpressions.Regex.IsMatch(family, @"^SHREE-[A-Z]+\d?-\d+",
         System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+/// The code points a font's (3,1) cmap maps — used to prove a font really uses
+/// the encoding its family name claims.
+static HashSet<int> CodePoints(string path)
+{
+    var res = new HashSet<int>();
+    byte[] d = File.ReadAllBytes(path);
+    ushort U16(long o) => (ushort)((d[o] << 8) | d[o + 1]);
+    uint U32(long o) => (uint)((d[o] << 24) | (d[o + 1] << 16) | (d[o + 2] << 8) | d[o + 3]);
+    var tables = new Dictionary<string, uint>(StringComparer.Ordinal);
+    int num = U16(4);
+    for (int i = 0; i < num; i++)
+    {
+        long o = 12 + i * 16;
+        tables[Encoding.ASCII.GetString(d, (int)o, 4)] = U32(o + 8);
+    }
+    if (!tables.TryGetValue("cmap", out uint cm)) return res;
+    int n = U16(cm + 2);
+    for (int i = 0; i < n; i++)
+    {
+        long rec = cm + 4 + i * 8;
+        if (U16(rec) != 3 || U16(rec + 2) != 1) continue;
+        uint sub = cm + U32(rec + 4);
+        if (U16(sub) != 4) continue;
+        int segX2 = U16(sub + 6), seg = segX2 / 2;
+        long endO = sub + 14, startO = endO + segX2 + 2, deltaO = startO + segX2, rangeO = deltaO + segX2;
+        for (int s = 0; s < seg; s++)
+        {
+            int end = U16(endO + s * 2), start = U16(startO + s * 2);
+            short delta = (short)U16(deltaO + s * 2); int ro = U16(rangeO + s * 2);
+            if (start == 0xFFFF) continue;
+            for (int ch = start; ch <= end; ch++)
+            {
+                int g;
+                if (ro == 0) g = (ch + delta) & 0xFFFF;
+                else
+                {
+                    long gi = rangeO + s * 2 + ro + (ch - start) * 2;
+                    if (gi + 1 >= d.Length) continue;
+                    g = U16(gi); if (g != 0) g = (g + delta) & 0xFFFF;
+                }
+                if (g != 0) res.Add(ch);
+            }
+        }
+    }
+    return res;
+}
