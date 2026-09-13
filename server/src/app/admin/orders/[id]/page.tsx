@@ -16,6 +16,7 @@ import {
   Mail,
   Phone,
   StickyNote,
+  Send,
   Loader2,
   UserCheck,
 } from "lucide-react";
@@ -69,6 +70,8 @@ interface Order {
   expiryUtc: string | null;
   expired: boolean;
   note: string;
+  emailedUtc: string | null;
+  emailError: string;
   createdBy: string;
   createdUtc: string;
   keys: KeyRow[];
@@ -195,6 +198,16 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
               </div>
               <div className="flex items-start gap-2">
                 <StickyNote className="mt-0.5 h-3.5 w-3.5 shrink-0" /> {o.note || "—"}
+              </div>
+              <div className="flex items-center gap-2">
+                <Send className="h-3.5 w-3.5" />
+                {o.emailedUtc ? (
+                  <span>Keys emailed {fmtDateTime(o.emailedUtc)}</span>
+                ) : o.emailError ? (
+                  <span className="text-warning">Email failed: {o.emailError}</span>
+                ) : (
+                  <span>Keys not emailed</span>
+                )}
               </div>
             </div>
             <div className="rounded-lg bg-muted/60 p-3">

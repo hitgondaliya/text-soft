@@ -13,13 +13,20 @@ export type KeyStatus = "active" | "revoked";
  */
 export type ActivationStatus = "active" | "released" | "replaced";
 
-/** admins — who can log into the panel. Password is bcrypt-hashed. */
+/**
+ * admins — who can log into the panel. Password is bcrypt-hashed.
+ * owner: everything, including managing other admins. staff: everything else.
+ */
 export interface AdminDoc {
   _id?: ObjectId;
   email: string;
+  name?: string;
   passwordHash: string;
   role: "owner" | "staff";
+  status?: "active" | "disabled";
   createdUtc: Date;
+  createdBy?: string;
+  lastLoginUtc?: Date | null;
 }
 
 /**
@@ -50,6 +57,9 @@ export interface OrderDoc {
   note?: string;
   createdBy: string; // admin email
   createdUtc: Date;
+  /** When the serial + keys were emailed to the customer (null = failed / not sent). */
+  emailedUtc?: Date | null;
+  emailError?: string;
 }
 
 /**

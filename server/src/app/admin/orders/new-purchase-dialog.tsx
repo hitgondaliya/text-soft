@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-import { Copy, Download, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import { Copy, Download, ArrowRight, Loader2, CheckCircle2, Mail, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,7 +20,13 @@ import {
 import { PhoneField, type PhoneValue } from "@/components/phone-field";
 import { DEFAULT_COUNTRY } from "@/lib/countries";
 
-type Created = { serial: string; created: Array<{ seq: number; key: string }> };
+type Created = {
+  serial: string;
+  created: Array<{ seq: number; key: string }>;
+  emailed?: boolean;
+  emailTo?: string | null;
+  emailError?: string;
+};
 
 export function NewPurchaseDialog({
   open,
@@ -42,6 +48,7 @@ export function NewPurchaseDialog({
   const [expiryDate, setExpiryDate] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [note, setNote] = useState("");
+  const [sendEmail, setSendEmail] = useState(true);
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState<Created | null>(null);
 
@@ -73,6 +80,7 @@ export function NewPurchaseDialog({
       edition,
       quantity,
       note: note || undefined,
+      sendEmail: sendEmail && !!customerEmail,
     };
     if (mode === "days") body.durationDays = days;
     else if (mode === "date" && expiryDate) body.expiryUtc = new Date(expiryDate + "T23:59:59Z").toISOString();
@@ -136,6 +144,20 @@ export function NewPurchaseDialog({
                 server keeps only their hashes.
               </DialogDescription>
             </DialogHeader>
+            {done.emailTo && (
+              <div
+                className={`flex items-start gap-2 rounded-lg p-3 text-sm ${
+                  done.emailed ? "bg-success/10 text-success" : "border border-warning/40 bg-warning/10 text-warning"
+                }`}
+              >
+                {done.emailed ? <Mail className="mt-0.5 h-4 w-4 shrink-0" /> : <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />}
+                <div>
+                  {done.emailed
+                    ? `Emailed the serial and keys to ${done.emailTo}.`
+                    : `Could not email ${done.emailTo}: ${done.emailError ?? "unknown error"}. Send the keys below by hand.`}
+                </div>
+              </div>
+            )}
             <Textarea readOnly value={text} rows={Math.min(done.created.length + 1, 12)} className="font-mono text-xs" />
             <DialogFooter className="gap-2 sm:gap-2">
               <Button
@@ -234,6 +256,22 @@ export function NewPurchaseDialog({
               <Field label="Note" className="sm:col-span-2">
                 <Input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Invoice number, reseller, anything useful later" />
               </Field>
+              <label className="col-span-full flex cursor-pointer items-start gap-3 rounded-lg border p-3 text-sm">
+                <input
+                  type="checkbox"
+                  className="mt-0.5 h-4 w-4 accent-primary"
+                  checked={sendEmail}
+                  onChange={(e) => setSendEmail(e.target.checked)}
+                />
+                <span>
+                  <span className="font-medium">Email the customer</span>
+                  <span className="block text-xs text-muted-foreground">
+                    {customerEmail
+                      ? `A branded email with the serial and every key goes to ${customerEmail} the moment the purchase is created.`
+                      : "Enter an email above to send the serial and keys automatically."}
+                  </span>
+                </span>
+              </label>
             </div>
 
             <DialogFooter className="mt-6">

@@ -6,6 +6,7 @@ import { nextSerial } from "@/lib/serial";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import { parsePhone, formatPhone } from "@/lib/phone";
+import { sendPurchaseEmail, mailConfigured } from "@/lib/mail";
 import type { LicenseKeyDoc, OrderDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
@@ -28,6 +29,8 @@ const CreateBody = z.object({
   expiryUtc: z.string().datetime().optional(),
   perpetual: z.boolean().optional(),
   note: z.string().max(500).optional(),
+  /** Email the serial and keys to the customer (needs customerEmail). Default true. */
+  sendEmail: z.boolean().optional(),
 });
 
 function computeExpiry(b: z.infer<typeof CreateBody>): Date | null {
@@ -91,6 +94,7 @@ export async function GET(req: Request) {
         expiryUtc: o.expiryUtc ? o.expiryUtc.toISOString() : null,
         expired: !!o.expiryUtc && now > o.expiryUtc,
         note: o.note ?? "",
+        emailedUtc: o.emailedUtc ? o.emailedUtc.toISOString() : null,
         createdUtc: o.createdUtc.toISOString(),
       };
     }),
@@ -193,5 +197,32 @@ export async function POST(req: Request) {
     expiryUtc: expiryUtc ? expiryUtc.toISOString() : "perpetual",
   });
 
-  return ok({ orderId: orderId.toHexString(), serial, created }, 201);
+  // The raw keys exist only in this response, so the email goes out now or never.
+  let emailed = false;
+  let emailError: string | undefined;
+  const wantEmail = b.sendEmail !== false && !!b.customerEmail;
+  if (wantEmail) {
+    if (!mailConfigured()) {
+      emailError = "Email is not set up on this server (SMTP_USER / SMTP_PASS).";
+    } else {
+      const r = await sendPurchaseEmail({
+        to: b.customerEmail!,
+        customerName: b.customerName,
+        company: b.company || undefined,
+        phoneE164: phone?.e164,
+        serial,
+        edition: b.edition,
+        expiryUtc,
+        quantity: b.quantity,
+        keys: created.map((c) => ({ seq: c.seq, key: c.key })),
+        note: b.note,
+      });
+      emailed = r.ok;
+      emailError = r.error;
+      await orders.updateOne({ _id: orderId }, { $set: { emailedUtc: r.ok ? new Date() : null, emailError: r.error } });
+      await audit(session.email, r.ok ? "order.email" : "order.email_failed", serial, { to: b.customerEmail, error: r.error });
+    }
+  }
+
+  return ok({ orderId: orderId.toHexString(), serial, created, emailed, emailTo: wantEmail ? b.customerEmail : null, emailError }, 201);
 }

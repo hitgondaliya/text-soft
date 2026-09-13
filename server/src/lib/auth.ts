@@ -23,9 +23,11 @@ export interface Session {
 export async function verifyCredentials(email: string, password: string): Promise<AdminDoc | null> {
   const db = await getDb();
   const admin = await db.collection<AdminDoc>("admins").findOne({ email: email.toLowerCase().trim() });
-  if (!admin) return null;
+  if (!admin || admin.status === "disabled") return null;
   const ok = await bcrypt.compare(password, admin.passwordHash);
-  return ok ? admin : null;
+  if (!ok) return null;
+  await db.collection<AdminDoc>("admins").updateOne({ _id: admin._id }, { $set: { lastLoginUtc: new Date() } });
+  return admin;
 }
 
 export async function createSessionCookie(admin: AdminDoc): Promise<void> {

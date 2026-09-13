@@ -1,5 +1,5 @@
 import { formatPhone } from "./phone";
-import type { ActivationDoc, ActivationAttemptDoc, EndUser } from "./models";
+import type { ActivationDoc, ActivationAttemptDoc, AdminDoc, EndUser } from "./models";
 
 // JSON shapes the admin pages consume. One place, so the key page, the purchase
 // page and the lists all describe a device or a person the same way.
@@ -54,3 +54,17 @@ export function attemptView(t: ActivationAttemptDoc) {
     createdUtc: t.createdUtc.toISOString(),
   };
 }
+
+export function adminView(a: AdminDoc) {
+  return {
+    id: a._id!.toHexString(),
+    email: a.email,
+    name: a.name ?? "",
+    role: a.role,
+    status: a.status ?? "active",
+    createdUtc: a.createdUtc.toISOString(),
+    createdBy: a.createdBy ?? "",
+    lastLoginUtc: a.lastLoginUtc ? a.lastLoginUtc.toISOString() : null,
+  };
+}
+

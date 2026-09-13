@@ -97,6 +97,8 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     expiryUtc: order.expiryUtc ? order.expiryUtc.toISOString() : null,
     expired: !!order.expiryUtc && now > order.expiryUtc,
     note: order.note ?? "",
+    emailedUtc: order.emailedUtc ? order.emailedUtc.toISOString() : null,
+    emailError: order.emailError ?? "",
     createdBy: order.createdBy,
     createdUtc: order.createdUtc.toISOString(),
     keys: keyList,
