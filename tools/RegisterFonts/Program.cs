@@ -88,23 +88,40 @@ if (args.Contains("--fix-layouts"))
 
         string? FirstUnicodeId() => fonts.FirstOrDefault(f => (string?)f!["type"] == "unicode") is { } u ? (string?)u["id"] : null;
 
-        // the label RegisterFonts writes into each font's name, per series
-        string? LegacyIdForLabel(string layoutName)
+        // Which ENCODING does a dropdown entry name? Matching on a label inside the
+        // font's name only worked for fonts registered by the older path; the
+        // by-series pass writes the bare family name, which left every entry it
+        // could have fixed looking dead. The entry names a Shree series, and the
+        // series is exactly what the encoding id records: "…x" for the X series,
+        // the other Shree encoding for 7.0 and 4.0/5.0/6.0 (Shree gives those two
+        // the same byte layout, so they legitimately share a table).
+        //
+        // The "Shree" prefix check matters: Telugu has an "Anu 7.0" entry, and a
+        // bare "7.0" test would hand it a Shree encoding and render garbage.
+        string? EncodingForLayout(string layoutName)
         {
-            string want = layoutName.Contains("Ex", StringComparison.OrdinalIgnoreCase) ? "(ShreeLipi-Ex)"
-                        : layoutName.Contains("7.0", StringComparison.Ordinal) ? "(Shree-Lipi 7.0"
-                        : layoutName.Contains("4.0", StringComparison.Ordinal) ? "4-5-6)"
-                        : "";
-            if (want.Length == 0) return null;
-            foreach (var f in fonts)
-            {
-                if ((string?)f!["type"] != "legacy") continue;
-                string name = (string?)f["name"] ?? "";
-                if (!ShreeFamily((string?)f["family"] ?? "")) continue;
-                if (name.Contains(want, StringComparison.Ordinal))
-                    return (string?)f["id"];
-            }
-            return null;
+            if (!layoutName.StartsWith("Shree", StringComparison.OrdinalIgnoreCase)) return null;
+            bool wantEx = layoutName.Contains("Ex", StringComparison.OrdinalIgnoreCase);
+            if (!wantEx && !layoutName.Contains("7.0", StringComparison.Ordinal)
+                        && !layoutName.Contains("4.0", StringComparison.Ordinal)) return null;
+
+            var encs = fonts.Where(f => (string?)f!["type"] == "legacy" && ShreeFamily((string?)f["family"] ?? ""))
+                            .Select(f => (string?)f!["encoding"] ?? (string?)f["id"] ?? "")
+                            .Where(e => e.StartsWith("shree-", StringComparison.Ordinal))
+                            .Distinct(StringComparer.Ordinal).ToList();
+            return encs.FirstOrDefault(e => e.EndsWith("x", StringComparison.Ordinal) == wantEx);
+        }
+
+        // Any font of the right encoding renders correctly, so prefer a stable,
+        // predictable default: the first by family name.
+        string? LegacyIdForLayout(string layoutName)
+        {
+            string? enc = EncodingForLayout(layoutName);
+            if (enc is null) return null;
+            return fonts.Where(f => (string?)f!["type"] == "legacy"
+                                 && ((string?)f["encoding"] ?? (string?)f["id"]) == enc)
+                        .OrderBy(f => (string?)f!["family"] ?? "", StringComparer.OrdinalIgnoreCase)
+                        .Select(f => (string?)f!["id"]).FirstOrDefault();
         }
 
         foreach (var flNode in lang["fontLayouts"]!.AsArray())
@@ -114,22 +131,26 @@ if (args.Contains("--fix-layouts"))
             string name = (string?)fl["name"] ?? "";
             var cur = fonts.FirstOrDefault(f => (string?)f!["id"] == id);
             bool resolves = id.Length > 0 && cur is not null;
-            // A layout can resolve and still be wrong: Gujarati's "Shree-Lipi 7.0"
-            // pointed at an X-series font. If the entry names a Shree series, the
-            // font it picks has to carry that series' label.
-            if (resolves && fl["type"]?.GetValue<string>() == "legacy")
-            {
-                string? shouldBe = LegacyIdForLabel(name);
-                var want = fonts.FirstOrDefault(f => (string?)f!["id"] == shouldBe);
-                // compare ENCODINGS, not ids — any font of the right encoding is a
-                // correct choice, and the bundled one is the better default
-                if (want is not null && (string?)want["encoding"] != (string?)cur!["encoding"]) resolves = false;
-            }
+            // A layout can resolve and still be wrong: Hindi's "Shree-Lipi 7.0"
+            // pointed at SHREE-DEVX-0700, an X-series font, so the entry silently
+            // produced ShreeLipi-Ex output under a 7.0 label.
+            if (resolves && fl["type"]?.GetValue<string>() == "legacy"
+                && EncodingForLayout(name) is { } wantEnc
+                && ((string?)cur!["encoding"] ?? (string?)cur["id"]) != wantEnc) resolves = false;
             if (resolves) continue;
 
             string type = (string?)fl["type"] ?? "legacy";
-            string? repl = type == "unicode" ? FirstUnicodeId() : LegacyIdForLabel(name);
-            if (repl is null) { stillDead++; continue; }
+            string? repl = type == "unicode" ? FirstUnicodeId() : LegacyIdForLayout(name);
+            if (repl is null)
+            {
+                stillDead++;
+                // A stale id is worse than an empty one: it names a font the
+                // language does not have, and the app has nothing to fall back on.
+                if (id.Length > 0 && cur is null)
+                    Console.WriteLine("  " + LangName().PadRight(11) + name.PadRight(26) + id + " -> (cleared: no such font here)");
+                if (cur is null) fl["fontId"] = "";
+                continue;
+            }
 
             fl["fontId"] = repl;
             if (type == "unicode") fixedUni++; else fixedLegacy++;
@@ -351,17 +372,24 @@ if (args.Contains("--by-series"))
         ["TAMX"] = "shree-tamx",  ["TAM7"] = "shree-tam7",   ["TAM"] = "shree-tam7",
         ["TELX"] = "shree-telx",
     };
-    var encToLang = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    // An encoding belongs to a SCRIPT, and a script serves several languages:
+    // Devanagari is Hindi, Marathi and Sanskrit; the Bengali script is Bangla,
+    // Assamese and Manipuri. Registering each font under only the first language
+    // left Marathi with 7 fonts against Hindi's 130 and Assamese with 2 — the
+    // same font file has to be offered in every language that writes that script.
+    var encToLangs = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
     {
-        ["shree-devx"] = "Hindi", ["shree-dev456"] = "Hindi",
-        ["shree-banx"] = "Bangla", ["shree-ban7"] = "Bangla", ["shree-tel7"] = "Telugu",
-        ["shree-gujx"] = "Gujarati", ["shree-guj7"] = "Gujarati",
-        ["shree-kanx"] = "Kannada", ["shree-kan7"] = "Kannada",
-        ["shree-malx"] = "Malayalam", ["shree-mal7"] = "Malayalam",
-        ["shree-orix"] = "Odia", ["shree-ori7"] = "Odia",
-        ["shree-punx"] = "Punjabi", ["shree-pun7"] = "Punjabi",
-        ["shree-tamx"] = "Tamil", ["shree-tam7"] = "Tamil",
-        ["shree-telx"] = "Telugu",
+        ["shree-devx"] = new[] { "Hindi", "Marathi", "Sanskrit" },
+        ["shree-dev456"] = new[] { "Hindi", "Marathi", "Sanskrit" },
+        ["shree-banx"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-ban7"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-tel7"] = new[] { "Telugu" }, ["shree-telx"] = new[] { "Telugu" },
+        ["shree-gujx"] = new[] { "Gujarati" }, ["shree-guj7"] = new[] { "Gujarati" },
+        ["shree-kanx"] = new[] { "Kannada" }, ["shree-kan7"] = new[] { "Kannada" },
+        ["shree-malx"] = new[] { "Malayalam" }, ["shree-mal7"] = new[] { "Malayalam" },
+        ["shree-orix"] = new[] { "Odia" }, ["shree-ori7"] = new[] { "Odia" },
+        ["shree-punx"] = new[] { "Punjabi" }, ["shree-pun7"] = new[] { "Punjabi" },
+        ["shree-tamx"] = new[] { "Tamil" }, ["shree-tam7"] = new[] { "Tamil" },
     };
 
     string mapDir = Path.Combine(Path.GetDirectoryName(configPath)!, "mappings");
@@ -407,20 +435,30 @@ if (args.Contains("--by-series"))
         // a design legitimately omits a few rare glyphs; a different encoding misses many
         if (missing > want.Count * 0.02) { rejected++; continue; }
 
-        if (!encToLang.TryGetValue(enc, out var langName)) continue;
-        var lang = cfg2["languages"]!.AsArray().FirstOrDefault(l => (string?)l!["name"] == langName)?.AsObject();
-        if (lang is null) continue;
-        var fonts = lang["fonts"]!.AsArray();
+        if (!encToLangs.TryGetValue(enc, out var langNames)) continue;
         string id = Slug(family);
-        if (fonts.Any(x => (string?)x!["id"] == id || (string?)x!["family"] == family)) { dup++; continue; }
-
-        fonts.Add(new JsonObject
+        foreach (string langName in langNames)
         {
-            ["id"] = id, ["name"] = family, ["family"] = family,
-            ["type"] = "legacy", ["encoding"] = enc,
-        });
-        perEnc[enc] = perEnc.GetValueOrDefault(enc) + 1;
-        ok++;
+            var lang = cfg2["languages"]!.AsArray().FirstOrDefault(l => (string?)l!["name"] == langName)?.AsObject();
+            if (lang is null) continue;
+            var fonts = lang["fonts"]!.AsArray();
+            if (fonts.Any(x => (string?)x!["family"] == family)) { dup++; continue; }
+            // Two families can slug to the same id — SHREE-DEV-0700 and the config's
+            // hand-written entry for SHREE-DEVX-0700 both want "shree-dev-0700". The
+            // first one in wins the plain id and the other would be dropped as a
+            // duplicate, silently losing a whole font, so give it its own.
+            string id2 = id;
+            if (fonts.Any(x => (string?)x!["id"] == id2)) id2 = Slug(family) + "-" + enc.Replace("shree-", "");
+            if (fonts.Any(x => (string?)x!["id"] == id2)) { dup++; continue; }
+
+            fonts.Add(new JsonObject
+            {
+                ["id"] = id2, ["name"] = family, ["family"] = family,
+                ["type"] = "legacy", ["encoding"] = enc,
+            });
+            perEnc[enc] = perEnc.GetValueOrDefault(enc) + 1;
+            ok++;
+        }
     }
 
     foreach (var kv in perEnc.OrderByDescending(k => k.Value)) Console.WriteLine("  " + kv.Key.PadRight(14) + kv.Value);

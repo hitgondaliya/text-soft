@@ -24,7 +24,10 @@ catch (ConfigException ex)
     return 2;
 }
 
-// Collect all font ids across languages for reference checks.
+// Collect the keys a mapping table can legitimately name. The converter looks a
+// table up by FontAsset.ConversionKey — the font's encoding, or its id when it has
+// none — so checking ids alone reported every shared-encoding table as dangling
+// and buried the real findings under 22 false warnings.
 var fontIds = new HashSet<string>(StringComparer.Ordinal);
 
 foreach (var lang in bundle.Languages)
@@ -39,7 +42,25 @@ foreach (var lang in bundle.Languages)
     {
         if (string.IsNullOrWhiteSpace(font.Id)) errors.Add($"{where}: a font has no id.");
         else if (!seenFont.Add(font.Id)) errors.Add($"{where}: duplicate font id '{font.Id}'.");
-        else fontIds.Add(font.Id);
+        else { fontIds.Add(font.Id); fontIds.Add(font.ConversionKey); }
+    }
+
+    // Every FONT LAYOUT entry is a dropdown row the customer can pick. A row that
+    // names a font the language does not have, or names one of the wrong kind,
+    // silently produces nothing or the wrong script — the client who tested the
+    // build hit exactly this. An empty row is honest but useless, so it is a
+    // warning rather than an error.
+    foreach (var fl in lang.FontLayouts)
+    {
+        string flWhere = $"{where} font layout '{fl.Name}'";
+        if (string.IsNullOrWhiteSpace(fl.FontId)) { warnings.Add($"{flWhere}: no fontId — the dropdown entry does nothing."); continue; }
+
+        var target = lang.Fonts.FirstOrDefault(f => f.Id == fl.FontId);
+        if (target is null) { errors.Add($"{flWhere}: fontId '{fl.FontId}' is not a font of this language."); continue; }
+        if ((fl.Type == FontType.Legacy) != (target.Type == FontType.Legacy))
+            errors.Add($"{flWhere}: entry is {fl.Type} but font '{target.Id}' is {target.Type}.");
+        else if (fl.Type == FontType.Legacy && bundle.CreateConverterToLegacy(target.ConversionKey) is null)
+            errors.Add($"{flWhere}: no Unicode -> '{target.ConversionKey}' mapping table, so typing produces nothing.");
     }
 
     // Load each layout referenced by the language.
@@ -77,6 +98,22 @@ foreach (var table in bundle.MappingTables)
     // Empty 'from' would loop/blank the converter.
     if (table.Pairs.Any(p => string.IsNullOrEmpty(p.From)))
         errors.Add($"{where}: a pair has an empty 'from'.");
+
+    // An empty 'to' is not "leave it alone" — it deletes the character, without
+    // even reporting it unmapped. Drop the pair instead and let it fall through.
+    foreach (var p in table.Pairs.Where(p => string.IsNullOrEmpty(p.To)))
+        errors.Add($"{where}: '{p.From}' maps to nothing, which silently deletes it.");
+}
+
+// A table that exists on disk but is not listed in languages.json is simply not
+// loaded — four third-party tables sat in the folder unreferenced, looking done.
+string mapDir = Path.Combine(root, "mappings");
+if (Directory.Exists(mapDir))
+{
+    var listed = new HashSet<string>(bundle.Catalog.MappingFiles.Select(p => Path.GetFileName(p)), StringComparer.OrdinalIgnoreCase);
+    foreach (string f in Directory.EnumerateFiles(mapDir, "*.json").Select(Path.GetFileName).OfType<string>())
+        if (!listed.Contains(f))
+            warnings.Add($"mapping file '{f}' is on disk but not listed in languages.json — it is never loaded.");
 }
 
 void CheckRegex(string where, string pattern)

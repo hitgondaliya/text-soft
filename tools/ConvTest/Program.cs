@@ -22,17 +22,20 @@ var scripts = new (string Enc, string Uni, string[] Words)[]
 
 // Words per script block, so any encoding wired later is exercised too without
 // having to be listed here by hand.
+// The second half of each list is the characters a full-matrix run once found
+// missing — the danda, Gujarati's independent vowels, Tamil ள, the nuktas. They
+// are ordinary letters a customer types on day one, so they stay here as a guard.
 var wordsByBlock = new Dictionary<int, string[]>
 {
-    [0x0900] = new[] { "कमल", "नमस्ते", "विद्यालय", "कर्म" },
-    [0x0980] = new[] { "কমল", "নমস্তে", "বিদ্যা", "কর্ম" },
-    [0x0A00] = new[] { "ਕਮਲ", "ਭਾਰਤ", "ਵਿਦਿਆ", "ਭਾਸ਼ਾ" },
-    [0x0A80] = new[] { "કમલ", "નમસ્તે", "વિદ્યા", "ક્ષત્રિય" },
-    [0x0B00] = new[] { "କମଳ", "ଭାରତ", "ବିଦ୍ୟା", "ଅଛି" },
-    [0x0B80] = new[] { "கமலம்", "பாரதம்", "வித்தை" },
+    [0x0900] = new[] { "कमल", "नमस्ते", "विद्यालय", "कर्म", "राम।" },
+    [0x0980] = new[] { "কমল", "নমস্তে", "বিদ্যা", "কর্ম", "ভারত৷" },
+    [0x0A00] = new[] { "ਕਮਲ", "ਭਾਰਤ", "ਵਿਦਿਆ", "ਭਾਸ਼ਾ", "ਖ਼ਬਰ" },
+    [0x0A80] = new[] { "કમલ", "નમસ્તે", "વિદ્યા", "ક્ષત્રિય", "આ", "એ", "ઐ", "ઓ", "ઔ", "કો", "કૌ", "ક઼" },
+    [0x0B00] = new[] { "କମଳ", "ଭାରତ", "ବିଦ୍ୟା", "ଅଛି", "ଆମେ", "ୱ" },
+    [0x0B80] = new[] { "கமலம்", "பாரதம்", "வித்தை", "ளி" },
     [0x0C00] = new[] { "కమల", "భారత", "విద్య" },
     [0x0C80] = new[] { "ಕಮಲ", "ಭಾರತ", "ವಿದ್ಯಾ", "ಕನ್ನಡ" },
-    [0x0D00] = new[] { "കമല", "ഭാരതം", "വിദ്യ", "നല്ല" },
+    [0x0D00] = new[] { "കമല", "ഭാരതം", "വിദ്യ", "നല്ല", "ഈ", "ഊ", "ഐ", "ഓ", "ഔ" },
 };
 
 // every legacy encoding actually wired in languages.json, paired with its language's

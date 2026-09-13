@@ -914,6 +914,13 @@
           "family": "B Bharati Sharmila",
           "type": "legacy",
           "encoding": "bhasha-bharati-dev"
+        },
+        {
+          "id": "shree-dev-0700-dev456",
+          "name": "SHREE-DEV-0700",
+          "family": "SHREE-DEV-0700",
+          "type": "legacy",
+          "encoding": "shree-dev456"
         }
       ],
       "fontLayouts": [
@@ -933,42 +940,49 @@
           "id": "hi-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-dev-0700"
+          "fontId": "shree-dev-4914"
         },
         {
           "id": "hi-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-dev-4914"
         },
         {
           "id": "hi-fl-shivaji",
           "name": "Shivaji",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-indica",
           "name": "Indica",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-anu",
           "name": "Anu",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-aps-monolingual",
           "name": "APS Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-akruti-monolingual",
           "name": "Akruti Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "hi-fl-bhasha-bharati",
@@ -1239,6 +1253,853 @@
           "family": "B Bharati Kautilya",
           "type": "legacy",
           "encoding": "bhasha-bharati-dev"
+        },
+        {
+          "id": "shree-dev-0700",
+          "name": "SHREE-DEV-0700",
+          "family": "SHREE-DEV-0700",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0700",
+          "name": "SHREE-DEVX-0700",
+          "family": "SHREE-DEVX-0700",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev7-0700",
+          "name": "SHREE-DEV7-0700",
+          "family": "SHREE-DEV7-0700",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0701",
+          "name": "SHREE-DEVX-0701",
+          "family": "SHREE-DEVX-0701",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0703",
+          "name": "SHREE-DEVX-0703",
+          "family": "SHREE-DEVX-0703",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0704",
+          "name": "SHREE-DEVX-0704",
+          "family": "SHREE-DEVX-0704",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0706",
+          "name": "SHREE-DEVX-0706",
+          "family": "SHREE-DEVX-0706",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0708",
+          "name": "SHREE-DEVX-0708",
+          "family": "SHREE-DEVX-0708",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0710",
+          "name": "SHREE-DEVX-0710",
+          "family": "SHREE-DEVX-0710",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0713",
+          "name": "SHREE-DEVX-0713",
+          "family": "SHREE-DEVX-0713",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0714",
+          "name": "SHREE-DEVX-0714",
+          "family": "SHREE-DEVX-0714",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0719",
+          "name": "SHREE-DEVX-0719",
+          "family": "SHREE-DEVX-0719",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0721",
+          "name": "SHREE-DEVX-0721",
+          "family": "SHREE-DEVX-0721",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0723",
+          "name": "SHREE-DEVX-0723",
+          "family": "SHREE-DEVX-0723",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0725",
+          "name": "SHREE-DEVX-0725",
+          "family": "SHREE-DEVX-0725",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0726",
+          "name": "SHREE-DEVX-0726",
+          "family": "SHREE-DEVX-0726",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0730",
+          "name": "SHREE-DEVX-0730",
+          "family": "SHREE-DEVX-0730",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0733",
+          "name": "SHREE-DEVX-0733",
+          "family": "SHREE-DEVX-0733",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0736",
+          "name": "SHREE-DEVX-0736",
+          "family": "SHREE-DEVX-0736",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0739",
+          "name": "SHREE-DEVX-0739",
+          "family": "SHREE-DEVX-0739",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0741",
+          "name": "SHREE-DEVX-0741",
+          "family": "SHREE-DEVX-0741",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0744",
+          "name": "SHREE-DEVX-0744",
+          "family": "SHREE-DEVX-0744",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0746",
+          "name": "SHREE-DEVX-0746",
+          "family": "SHREE-DEVX-0746",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0748",
+          "name": "SHREE-DEVX-0748",
+          "family": "SHREE-DEVX-0748",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-san7-0960",
+          "name": "SHREE-SAN7-0960",
+          "family": "SHREE-SAN7-0960",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-san7-0962",
+          "name": "SHREE-SAN7-0962",
+          "family": "SHREE-SAN7-0962",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-san7-0964",
+          "name": "SHREE-SAN7-0964",
+          "family": "SHREE-SAN7-0964",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0971",
+          "name": "SHREE-DEVX-0971",
+          "family": "SHREE-DEVX-0971",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0973",
+          "name": "SHREE-DEVX-0973",
+          "family": "SHREE-DEVX-0973",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0977",
+          "name": "SHREE-DEVX-0977",
+          "family": "SHREE-DEVX-0977",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0979",
+          "name": "SHREE-DEVX-0979",
+          "family": "SHREE-DEVX-0979",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4902",
+          "name": "SHREE-DEVX-4902",
+          "family": "SHREE-DEVX-4902",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0984",
+          "name": "SHREE-DEVX-0984",
+          "family": "SHREE-DEVX-0984",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0986",
+          "name": "SHREE-DEVX-0986",
+          "family": "SHREE-DEVX-0986",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0989",
+          "name": "SHREE-DEVX-0989",
+          "family": "SHREE-DEVX-0989",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0990",
+          "name": "SHREE-DEVX-0990",
+          "family": "SHREE-DEVX-0990",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0991",
+          "name": "SHREE-DEVX-0991",
+          "family": "SHREE-DEVX-0991",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0993",
+          "name": "SHREE-DEVX-0993",
+          "family": "SHREE-DEVX-0993",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0996",
+          "name": "SHREE-DEVX-0996",
+          "family": "SHREE-DEVX-0996",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0997",
+          "name": "SHREE-DEVX-0997",
+          "family": "SHREE-DEVX-0997",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0998",
+          "name": "SHREE-DEVX-0998",
+          "family": "SHREE-DEVX-0998",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0999",
+          "name": "SHREE-DEVX-0999",
+          "family": "SHREE-DEVX-0999",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1000",
+          "name": "SHREE-DEVX-1000",
+          "family": "SHREE-DEVX-1000",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1002",
+          "name": "SHREE-DEVX-1002",
+          "family": "SHREE-DEVX-1002",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4948",
+          "name": "SHREE-DEVX-4948",
+          "family": "SHREE-DEVX-4948",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1004",
+          "name": "SHREE-DEVX-1004",
+          "family": "SHREE-DEVX-1004",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1005",
+          "name": "SHREE-DEVX-1005",
+          "family": "SHREE-DEVX-1005",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4650",
+          "name": "SHREE-DEVX-4650",
+          "family": "SHREE-DEVX-4650",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1008",
+          "name": "SHREE-DEVX-1008",
+          "family": "SHREE-DEVX-1008",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1009",
+          "name": "SHREE-DEVX-1009",
+          "family": "SHREE-DEVX-1009",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1010",
+          "name": "SHREE-DEVX-1010",
+          "family": "SHREE-DEVX-1010",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1012",
+          "name": "SHREE-DEVX-1012",
+          "family": "SHREE-DEVX-1012",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1013",
+          "name": "SHREE-DEVX-1013",
+          "family": "SHREE-DEVX-1013",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1014",
+          "name": "SHREE-DEVX-1014",
+          "family": "SHREE-DEVX-1014",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1015",
+          "name": "SHREE-DEVX-1015",
+          "family": "SHREE-DEVX-1015",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1016",
+          "name": "SHREE-DEVX-1016",
+          "family": "SHREE-DEVX-1016",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1017",
+          "name": "SHREE-DEVX-1017",
+          "family": "SHREE-DEVX-1017",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1018",
+          "name": "SHREE-DEVX-1018",
+          "family": "SHREE-DEVX-1018",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4652",
+          "name": "SHREE-DEVX-4652",
+          "family": "SHREE-DEVX-4652",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1020",
+          "name": "SHREE-DEVX-1020",
+          "family": "SHREE-DEVX-1020",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1021",
+          "name": "SHREE-DEVX-1021",
+          "family": "SHREE-DEVX-1021",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1022",
+          "name": "SHREE-DEVX-1022",
+          "family": "SHREE-DEVX-1022",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1023",
+          "name": "SHREE-DEVX-1023",
+          "family": "SHREE-DEVX-1023",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1024",
+          "name": "SHREE-DEVX-1024",
+          "family": "SHREE-DEVX-1024",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1025",
+          "name": "SHREE-DEVX-1025",
+          "family": "SHREE-DEVX-1025",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1026",
+          "name": "SHREE-DEVX-1026",
+          "family": "SHREE-DEVX-1026",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1027",
+          "name": "SHREE-DEVX-1027",
+          "family": "SHREE-DEVX-1027",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1029",
+          "name": "SHREE-DEVX-1029",
+          "family": "SHREE-DEVX-1029",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1031",
+          "name": "SHREE-DEVX-1031",
+          "family": "SHREE-DEVX-1031",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1033",
+          "name": "SHREE-DEVX-1033",
+          "family": "SHREE-DEVX-1033",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1035",
+          "name": "SHREE-DEVX-1035",
+          "family": "SHREE-DEVX-1035",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1036",
+          "name": "SHREE-DEVX-1036",
+          "family": "SHREE-DEVX-1036",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1037",
+          "name": "SHREE-DEVX-1037",
+          "family": "SHREE-DEVX-1037",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4939",
+          "name": "SHREE-DEVX-4939",
+          "family": "SHREE-DEVX-4939",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1039",
+          "name": "SHREE-DEVX-1039",
+          "family": "SHREE-DEVX-1039",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1040",
+          "name": "SHREE-DEVX-1040",
+          "family": "SHREE-DEVX-1040",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1218",
+          "name": "SHREE-DEVX-1218",
+          "family": "SHREE-DEVX-1218",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1043",
+          "name": "SHREE-DEVX-1043",
+          "family": "SHREE-DEVX-1043",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1044",
+          "name": "SHREE-DEVX-1044",
+          "family": "SHREE-DEVX-1044",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4958",
+          "name": "SHREE-DEVX-4958",
+          "family": "SHREE-DEVX-4958",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1048",
+          "name": "SHREE-DEVX-1048",
+          "family": "SHREE-DEVX-1048",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1049",
+          "name": "SHREE-DEVX-1049",
+          "family": "SHREE-DEVX-1049",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1051",
+          "name": "SHREE-DEVX-1051",
+          "family": "SHREE-DEVX-1051",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1053",
+          "name": "SHREE-DEVX-1053",
+          "family": "SHREE-DEVX-1053",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1054",
+          "name": "SHREE-DEVX-1054",
+          "family": "SHREE-DEVX-1054",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1055",
+          "name": "SHREE-DEVX-1055",
+          "family": "SHREE-DEVX-1055",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1056",
+          "name": "SHREE-DEVX-1056",
+          "family": "SHREE-DEVX-1056",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1057",
+          "name": "SHREE-DEVX-1057",
+          "family": "SHREE-DEVX-1057",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1059",
+          "name": "SHREE-DEVX-1059",
+          "family": "SHREE-DEVX-1059",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1060",
+          "name": "SHREE-DEVX-1060",
+          "family": "SHREE-DEVX-1060",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1061",
+          "name": "SHREE-DEVX-1061",
+          "family": "SHREE-DEVX-1061",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1062",
+          "name": "SHREE-DEVX-1062",
+          "family": "SHREE-DEVX-1062",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4656",
+          "name": "SHREE-DEVX-4656",
+          "family": "SHREE-DEVX-4656",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1064",
+          "name": "SHREE-DEVX-1064",
+          "family": "SHREE-DEVX-1064",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1066",
+          "name": "SHREE-DEVX-1066",
+          "family": "SHREE-DEVX-1066",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1067",
+          "name": "SHREE-DEVX-1067",
+          "family": "SHREE-DEVX-1067",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1068",
+          "name": "SHREE-DEVX-1068",
+          "family": "SHREE-DEVX-1068",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1070",
+          "name": "SHREE-DEVX-1070",
+          "family": "SHREE-DEVX-1070",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1071",
+          "name": "SHREE-DEVX-1071",
+          "family": "SHREE-DEVX-1071",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1072",
+          "name": "SHREE-DEVX-1072",
+          "family": "SHREE-DEVX-1072",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1073",
+          "name": "SHREE-DEVX-1073",
+          "family": "SHREE-DEVX-1073",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1074",
+          "name": "SHREE-DEVX-1074",
+          "family": "SHREE-DEVX-1074",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1075",
+          "name": "SHREE-DEVX-1075",
+          "family": "SHREE-DEVX-1075",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1077",
+          "name": "SHREE-DEVX-1077",
+          "family": "SHREE-DEVX-1077",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1078",
+          "name": "SHREE-DEVX-1078",
+          "family": "SHREE-DEVX-1078",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1080",
+          "name": "SHREE-DEVX-1080",
+          "family": "SHREE-DEVX-1080",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1081",
+          "name": "SHREE-DEVX-1081",
+          "family": "SHREE-DEVX-1081",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1085",
+          "name": "SHREE-DEVX-1085",
+          "family": "SHREE-DEVX-1085",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4654",
+          "name": "SHREE-DEVX-4654",
+          "family": "SHREE-DEVX-4654",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1089",
+          "name": "SHREE-DEVX-1089",
+          "family": "SHREE-DEVX-1089",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1090",
+          "name": "SHREE-DEVX-1090",
+          "family": "SHREE-DEVX-1090",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1093",
+          "name": "SHREE-DEVX-1093",
+          "family": "SHREE-DEVX-1093",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4672",
+          "name": "SHREE-DEVX-4672",
+          "family": "SHREE-DEVX-4672",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1096",
+          "name": "SHREE-DEVX-1096",
+          "family": "SHREE-DEVX-1096",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1098",
+          "name": "SHREE-DEVX-1098",
+          "family": "SHREE-DEVX-1098",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1099",
+          "name": "SHREE-DEVX-1099",
+          "family": "SHREE-DEVX-1099",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev-4914",
+          "name": "SHREE-DEV-4914",
+          "family": "SHREE-DEV-4914",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-4914",
+          "name": "SHREE-DEVX-4914",
+          "family": "SHREE-DEVX-4914",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev7-4914",
+          "name": "SHREE-DEV7-4914",
+          "family": "SHREE-DEV7-4914",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-dev7-001",
+          "name": "Shree-Dev7-001",
+          "family": "Shree-Dev7-001",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-dev7-002",
+          "name": "Shree-Dev7-002",
+          "family": "Shree-Dev7-002",
+          "type": "legacy",
+          "encoding": "shree-dev456"
         }
       ],
       "fontLayouts": [
@@ -1263,37 +2124,44 @@
         {
           "id": "mr-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-dev-0700"
         },
         {
           "id": "mr-fl-shivaji",
           "name": "Shivaji",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-indica",
           "name": "Indica",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-anu",
           "name": "Anu",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-aps-monolingual",
           "name": "APS Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-akruti-monolingual",
           "name": "Akruti Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mr-fl-bhasha-bharati",
@@ -1536,6 +2404,853 @@
           "family": "Nirmala UI",
           "type": "unicode",
           "encoding": "mangal"
+        },
+        {
+          "id": "shree-dev-0700",
+          "name": "SHREE-DEV-0700",
+          "family": "SHREE-DEV-0700",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0700",
+          "name": "SHREE-DEVX-0700",
+          "family": "SHREE-DEVX-0700",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev7-0700",
+          "name": "SHREE-DEV7-0700",
+          "family": "SHREE-DEV7-0700",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0701",
+          "name": "SHREE-DEVX-0701",
+          "family": "SHREE-DEVX-0701",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0703",
+          "name": "SHREE-DEVX-0703",
+          "family": "SHREE-DEVX-0703",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0704",
+          "name": "SHREE-DEVX-0704",
+          "family": "SHREE-DEVX-0704",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0706",
+          "name": "SHREE-DEVX-0706",
+          "family": "SHREE-DEVX-0706",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0708",
+          "name": "SHREE-DEVX-0708",
+          "family": "SHREE-DEVX-0708",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0710",
+          "name": "SHREE-DEVX-0710",
+          "family": "SHREE-DEVX-0710",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0713",
+          "name": "SHREE-DEVX-0713",
+          "family": "SHREE-DEVX-0713",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0714",
+          "name": "SHREE-DEVX-0714",
+          "family": "SHREE-DEVX-0714",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0719",
+          "name": "SHREE-DEVX-0719",
+          "family": "SHREE-DEVX-0719",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0721",
+          "name": "SHREE-DEVX-0721",
+          "family": "SHREE-DEVX-0721",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0723",
+          "name": "SHREE-DEVX-0723",
+          "family": "SHREE-DEVX-0723",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0725",
+          "name": "SHREE-DEVX-0725",
+          "family": "SHREE-DEVX-0725",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0726",
+          "name": "SHREE-DEVX-0726",
+          "family": "SHREE-DEVX-0726",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0730",
+          "name": "SHREE-DEVX-0730",
+          "family": "SHREE-DEVX-0730",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0733",
+          "name": "SHREE-DEVX-0733",
+          "family": "SHREE-DEVX-0733",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0736",
+          "name": "SHREE-DEVX-0736",
+          "family": "SHREE-DEVX-0736",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0739",
+          "name": "SHREE-DEVX-0739",
+          "family": "SHREE-DEVX-0739",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0741",
+          "name": "SHREE-DEVX-0741",
+          "family": "SHREE-DEVX-0741",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0744",
+          "name": "SHREE-DEVX-0744",
+          "family": "SHREE-DEVX-0744",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0746",
+          "name": "SHREE-DEVX-0746",
+          "family": "SHREE-DEVX-0746",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0748",
+          "name": "SHREE-DEVX-0748",
+          "family": "SHREE-DEVX-0748",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-san7-0960",
+          "name": "SHREE-SAN7-0960",
+          "family": "SHREE-SAN7-0960",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-san7-0962",
+          "name": "SHREE-SAN7-0962",
+          "family": "SHREE-SAN7-0962",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-san7-0964",
+          "name": "SHREE-SAN7-0964",
+          "family": "SHREE-SAN7-0964",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-0971",
+          "name": "SHREE-DEVX-0971",
+          "family": "SHREE-DEVX-0971",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0973",
+          "name": "SHREE-DEVX-0973",
+          "family": "SHREE-DEVX-0973",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0977",
+          "name": "SHREE-DEVX-0977",
+          "family": "SHREE-DEVX-0977",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0979",
+          "name": "SHREE-DEVX-0979",
+          "family": "SHREE-DEVX-0979",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4902",
+          "name": "SHREE-DEVX-4902",
+          "family": "SHREE-DEVX-4902",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0984",
+          "name": "SHREE-DEVX-0984",
+          "family": "SHREE-DEVX-0984",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0986",
+          "name": "SHREE-DEVX-0986",
+          "family": "SHREE-DEVX-0986",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0989",
+          "name": "SHREE-DEVX-0989",
+          "family": "SHREE-DEVX-0989",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0990",
+          "name": "SHREE-DEVX-0990",
+          "family": "SHREE-DEVX-0990",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0991",
+          "name": "SHREE-DEVX-0991",
+          "family": "SHREE-DEVX-0991",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0993",
+          "name": "SHREE-DEVX-0993",
+          "family": "SHREE-DEVX-0993",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0996",
+          "name": "SHREE-DEVX-0996",
+          "family": "SHREE-DEVX-0996",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0997",
+          "name": "SHREE-DEVX-0997",
+          "family": "SHREE-DEVX-0997",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0998",
+          "name": "SHREE-DEVX-0998",
+          "family": "SHREE-DEVX-0998",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-0999",
+          "name": "SHREE-DEVX-0999",
+          "family": "SHREE-DEVX-0999",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1000",
+          "name": "SHREE-DEVX-1000",
+          "family": "SHREE-DEVX-1000",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1002",
+          "name": "SHREE-DEVX-1002",
+          "family": "SHREE-DEVX-1002",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4948",
+          "name": "SHREE-DEVX-4948",
+          "family": "SHREE-DEVX-4948",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1004",
+          "name": "SHREE-DEVX-1004",
+          "family": "SHREE-DEVX-1004",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1005",
+          "name": "SHREE-DEVX-1005",
+          "family": "SHREE-DEVX-1005",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4650",
+          "name": "SHREE-DEVX-4650",
+          "family": "SHREE-DEVX-4650",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1008",
+          "name": "SHREE-DEVX-1008",
+          "family": "SHREE-DEVX-1008",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1009",
+          "name": "SHREE-DEVX-1009",
+          "family": "SHREE-DEVX-1009",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1010",
+          "name": "SHREE-DEVX-1010",
+          "family": "SHREE-DEVX-1010",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1012",
+          "name": "SHREE-DEVX-1012",
+          "family": "SHREE-DEVX-1012",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1013",
+          "name": "SHREE-DEVX-1013",
+          "family": "SHREE-DEVX-1013",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1014",
+          "name": "SHREE-DEVX-1014",
+          "family": "SHREE-DEVX-1014",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1015",
+          "name": "SHREE-DEVX-1015",
+          "family": "SHREE-DEVX-1015",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1016",
+          "name": "SHREE-DEVX-1016",
+          "family": "SHREE-DEVX-1016",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1017",
+          "name": "SHREE-DEVX-1017",
+          "family": "SHREE-DEVX-1017",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1018",
+          "name": "SHREE-DEVX-1018",
+          "family": "SHREE-DEVX-1018",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4652",
+          "name": "SHREE-DEVX-4652",
+          "family": "SHREE-DEVX-4652",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1020",
+          "name": "SHREE-DEVX-1020",
+          "family": "SHREE-DEVX-1020",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1021",
+          "name": "SHREE-DEVX-1021",
+          "family": "SHREE-DEVX-1021",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1022",
+          "name": "SHREE-DEVX-1022",
+          "family": "SHREE-DEVX-1022",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1023",
+          "name": "SHREE-DEVX-1023",
+          "family": "SHREE-DEVX-1023",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1024",
+          "name": "SHREE-DEVX-1024",
+          "family": "SHREE-DEVX-1024",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1025",
+          "name": "SHREE-DEVX-1025",
+          "family": "SHREE-DEVX-1025",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1026",
+          "name": "SHREE-DEVX-1026",
+          "family": "SHREE-DEVX-1026",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1027",
+          "name": "SHREE-DEVX-1027",
+          "family": "SHREE-DEVX-1027",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1029",
+          "name": "SHREE-DEVX-1029",
+          "family": "SHREE-DEVX-1029",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1031",
+          "name": "SHREE-DEVX-1031",
+          "family": "SHREE-DEVX-1031",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1033",
+          "name": "SHREE-DEVX-1033",
+          "family": "SHREE-DEVX-1033",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1035",
+          "name": "SHREE-DEVX-1035",
+          "family": "SHREE-DEVX-1035",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1036",
+          "name": "SHREE-DEVX-1036",
+          "family": "SHREE-DEVX-1036",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1037",
+          "name": "SHREE-DEVX-1037",
+          "family": "SHREE-DEVX-1037",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4939",
+          "name": "SHREE-DEVX-4939",
+          "family": "SHREE-DEVX-4939",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1039",
+          "name": "SHREE-DEVX-1039",
+          "family": "SHREE-DEVX-1039",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1040",
+          "name": "SHREE-DEVX-1040",
+          "family": "SHREE-DEVX-1040",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1218",
+          "name": "SHREE-DEVX-1218",
+          "family": "SHREE-DEVX-1218",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1043",
+          "name": "SHREE-DEVX-1043",
+          "family": "SHREE-DEVX-1043",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1044",
+          "name": "SHREE-DEVX-1044",
+          "family": "SHREE-DEVX-1044",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4958",
+          "name": "SHREE-DEVX-4958",
+          "family": "SHREE-DEVX-4958",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1048",
+          "name": "SHREE-DEVX-1048",
+          "family": "SHREE-DEVX-1048",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1049",
+          "name": "SHREE-DEVX-1049",
+          "family": "SHREE-DEVX-1049",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1051",
+          "name": "SHREE-DEVX-1051",
+          "family": "SHREE-DEVX-1051",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1053",
+          "name": "SHREE-DEVX-1053",
+          "family": "SHREE-DEVX-1053",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1054",
+          "name": "SHREE-DEVX-1054",
+          "family": "SHREE-DEVX-1054",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1055",
+          "name": "SHREE-DEVX-1055",
+          "family": "SHREE-DEVX-1055",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1056",
+          "name": "SHREE-DEVX-1056",
+          "family": "SHREE-DEVX-1056",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1057",
+          "name": "SHREE-DEVX-1057",
+          "family": "SHREE-DEVX-1057",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1059",
+          "name": "SHREE-DEVX-1059",
+          "family": "SHREE-DEVX-1059",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1060",
+          "name": "SHREE-DEVX-1060",
+          "family": "SHREE-DEVX-1060",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1061",
+          "name": "SHREE-DEVX-1061",
+          "family": "SHREE-DEVX-1061",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1062",
+          "name": "SHREE-DEVX-1062",
+          "family": "SHREE-DEVX-1062",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4656",
+          "name": "SHREE-DEVX-4656",
+          "family": "SHREE-DEVX-4656",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1064",
+          "name": "SHREE-DEVX-1064",
+          "family": "SHREE-DEVX-1064",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1066",
+          "name": "SHREE-DEVX-1066",
+          "family": "SHREE-DEVX-1066",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1067",
+          "name": "SHREE-DEVX-1067",
+          "family": "SHREE-DEVX-1067",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1068",
+          "name": "SHREE-DEVX-1068",
+          "family": "SHREE-DEVX-1068",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1070",
+          "name": "SHREE-DEVX-1070",
+          "family": "SHREE-DEVX-1070",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1071",
+          "name": "SHREE-DEVX-1071",
+          "family": "SHREE-DEVX-1071",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1072",
+          "name": "SHREE-DEVX-1072",
+          "family": "SHREE-DEVX-1072",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1073",
+          "name": "SHREE-DEVX-1073",
+          "family": "SHREE-DEVX-1073",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1074",
+          "name": "SHREE-DEVX-1074",
+          "family": "SHREE-DEVX-1074",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1075",
+          "name": "SHREE-DEVX-1075",
+          "family": "SHREE-DEVX-1075",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1077",
+          "name": "SHREE-DEVX-1077",
+          "family": "SHREE-DEVX-1077",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1078",
+          "name": "SHREE-DEVX-1078",
+          "family": "SHREE-DEVX-1078",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1080",
+          "name": "SHREE-DEVX-1080",
+          "family": "SHREE-DEVX-1080",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1081",
+          "name": "SHREE-DEVX-1081",
+          "family": "SHREE-DEVX-1081",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1085",
+          "name": "SHREE-DEVX-1085",
+          "family": "SHREE-DEVX-1085",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4654",
+          "name": "SHREE-DEVX-4654",
+          "family": "SHREE-DEVX-4654",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1089",
+          "name": "SHREE-DEVX-1089",
+          "family": "SHREE-DEVX-1089",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1090",
+          "name": "SHREE-DEVX-1090",
+          "family": "SHREE-DEVX-1090",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1093",
+          "name": "SHREE-DEVX-1093",
+          "family": "SHREE-DEVX-1093",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-4672",
+          "name": "SHREE-DEVX-4672",
+          "family": "SHREE-DEVX-4672",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1096",
+          "name": "SHREE-DEVX-1096",
+          "family": "SHREE-DEVX-1096",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1098",
+          "name": "SHREE-DEVX-1098",
+          "family": "SHREE-DEVX-1098",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-devx-1099",
+          "name": "SHREE-DEVX-1099",
+          "family": "SHREE-DEVX-1099",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev-4914",
+          "name": "SHREE-DEV-4914",
+          "family": "SHREE-DEV-4914",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-devx-4914",
+          "name": "SHREE-DEVX-4914",
+          "family": "SHREE-DEVX-4914",
+          "type": "legacy",
+          "encoding": "shree-devx"
+        },
+        {
+          "id": "shree-dev7-4914",
+          "name": "SHREE-DEV7-4914",
+          "family": "SHREE-DEV7-4914",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-dev7-001",
+          "name": "Shree-Dev7-001",
+          "family": "Shree-Dev7-001",
+          "type": "legacy",
+          "encoding": "shree-dev456"
+        },
+        {
+          "id": "shree-dev7-002",
+          "name": "Shree-Dev7-002",
+          "family": "Shree-Dev7-002",
+          "type": "legacy",
+          "encoding": "shree-dev456"
         }
       ],
       "fontLayouts": [
@@ -1919,7 +3634,14 @@
         {
           "id": "pa-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-pun-0950"
+        },
+        {
+          "id": "pa-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
+          "type": "legacy",
+          "fontId": "shree-pun-0950"
         }
       ],
       "layouts": [
@@ -2364,47 +4086,56 @@
         {
           "id": "bn-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "bn-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "bn-fl-stm-bnt",
           "name": "STM-BNT",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-stm-bat",
           "name": "STM-BAT",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-stm",
           "name": "STM",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-ramdhenu-3-1",
           "name": "Ramdhenu 3.1",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-indica-2004",
           "name": "Indica 2004",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-bijoy",
           "name": "BIJOY",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "bn-fl-bangla-akademi-2004",
           "name": "Bangla Akademi 2004",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -4709,32 +6440,38 @@
         {
           "id": "te-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-tel-apoorva-0900"
         },
         {
           "id": "te-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-tel-apoorva-0900"
         },
         {
           "id": "te-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "te-fl-anu6",
           "name": "Anu6",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "te-fl-anu-7-0",
           "name": "Anu 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "te-fl-anu-4-0",
           "name": "Anu 4.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -5068,7 +6805,7 @@
         {
           "id": "bb-abmar-two",
           "name": "B Bharati AbmarTwo (Bhasha Bharti-2)",
-          "family": "B Bharati AbmarTwo Normal",
+          "family": "B Bharati AbmarTwo",
           "type": "legacy",
           "encoding": "bhasha-bharti-2-guj"
         },
@@ -5430,12 +7167,14 @@
         {
           "id": "gu-fl-terafont",
           "name": "Terafont",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "gu-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "gu-fl-bhasha-bharti-2",
@@ -5446,12 +7185,14 @@
         {
           "id": "gu-fl-bhasha-bharti-1",
           "name": "Bhasha Bharti-1",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "gu-fl-bhasha-bharati",
           "name": "Bhasha Bharati",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -5962,17 +7703,20 @@
         {
           "id": "kn-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-kan-0850"
         },
         {
           "id": "kn-fl-kgp-nudi-monolingual",
           "name": "KGP/Nudi Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "kn-fl-anu",
           "name": "Anu",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -6350,6 +8094,12 @@
         {
           "id": "ml-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
+          "type": "legacy",
+          "fontId": "shree-mal7-001"
+        },
+        {
+          "id": "ml-fl-shree-lipi-4-0-5-0-6-0",
+          "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
           "fontId": "shree-mal7-001"
         }
@@ -6877,7 +8627,8 @@
         {
           "id": "or-fl-akruti-98",
           "name": "Akruti 98",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -10071,27 +11822,32 @@
         {
           "id": "ta-fl-vanavil",
           "name": "Vanavil",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "ta-fl-tamil99-monolingual",
           "name": "Tamil99 Monolingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "ta-fl-tamil99-bilingual",
           "name": "Tamil99 Bilingual",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "ta-fl-bamini",
           "name": "Bamini",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "ta-fl-anu",
           "name": "Anu",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -10226,6 +11982,342 @@
           "family": "Nirmala UI",
           "type": "unicode",
           "encoding": "vrinda"
+        },
+        {
+          "id": "shree-ban-0550",
+          "name": "SHREE-BAN-0550",
+          "family": "SHREE-BAN-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0550",
+          "name": "SHREE-ASS-0550",
+          "family": "SHREE-ASS-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0550",
+          "name": "SHREE-BAN7-0550",
+          "family": "SHREE-BAN7-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0550",
+          "name": "SHREE-ASS7-0550",
+          "family": "SHREE-ASS7-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0552",
+          "name": "SHREE-BAN-0552",
+          "family": "SHREE-BAN-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0552",
+          "name": "SHREE-ASS-0552",
+          "family": "SHREE-ASS-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0552",
+          "name": "SHREE-BAN7-0552",
+          "family": "SHREE-BAN7-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0552",
+          "name": "SHREE-ASS7-0552",
+          "family": "SHREE-ASS7-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0553",
+          "name": "SHREE-BAN-0553",
+          "family": "SHREE-BAN-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0553",
+          "name": "SHREE-ASS-0553",
+          "family": "SHREE-ASS-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0553",
+          "name": "SHREE-BAN7-0553",
+          "family": "SHREE-BAN7-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0553",
+          "name": "SHREE-ASS7-0553",
+          "family": "SHREE-ASS7-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0560",
+          "name": "SHREE-BAN-0560",
+          "family": "SHREE-BAN-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0560",
+          "name": "SHREE-ASS-0560",
+          "family": "SHREE-ASS-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0560",
+          "name": "SHREE-BAN7-0560",
+          "family": "SHREE-BAN7-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0560",
+          "name": "SHREE-ASS7-0560",
+          "family": "SHREE-ASS7-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0562",
+          "name": "SHREE-BAN-0562",
+          "family": "SHREE-BAN-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0562",
+          "name": "SHREE-ASS-0562",
+          "family": "SHREE-ASS-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0562",
+          "name": "SHREE-BAN7-0562",
+          "family": "SHREE-BAN7-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0562",
+          "name": "SHREE-ASS7-0562",
+          "family": "SHREE-ASS7-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0564",
+          "name": "SHREE-BAN-0564",
+          "family": "SHREE-BAN-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0564",
+          "name": "SHREE-ASS-0564",
+          "family": "SHREE-ASS-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0564",
+          "name": "SHREE-BAN7-0564",
+          "family": "SHREE-BAN7-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0564",
+          "name": "SHREE-ASS7-0564",
+          "family": "SHREE-ASS7-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0592",
+          "name": "SHREE-BAN-0592",
+          "family": "SHREE-BAN-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0592",
+          "name": "SHREE-ASS-0592",
+          "family": "SHREE-ASS-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0592",
+          "name": "SHREE-BAN7-0592",
+          "family": "SHREE-BAN7-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0592",
+          "name": "SHREE-ASS7-0592",
+          "family": "SHREE-ASS7-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0593",
+          "name": "SHREE-BAN-0593",
+          "family": "SHREE-BAN-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0593",
+          "name": "SHREE-ASS-0593",
+          "family": "SHREE-ASS-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0593",
+          "name": "SHREE-BAN7-0593",
+          "family": "SHREE-BAN7-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0593",
+          "name": "SHREE-ASS7-0593",
+          "family": "SHREE-ASS7-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0594",
+          "name": "SHREE-BAN-0594",
+          "family": "SHREE-BAN-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0594",
+          "name": "SHREE-ASS-0594",
+          "family": "SHREE-ASS-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0594",
+          "name": "SHREE-BAN7-0594",
+          "family": "SHREE-BAN7-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0594",
+          "name": "SHREE-ASS7-0594",
+          "family": "SHREE-ASS7-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0595",
+          "name": "SHREE-BAN-0595",
+          "family": "SHREE-BAN-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0595",
+          "name": "SHREE-ASS-0595",
+          "family": "SHREE-ASS-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0595",
+          "name": "SHREE-BAN7-0595",
+          "family": "SHREE-BAN7-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0595",
+          "name": "SHREE-ASS7-0595",
+          "family": "SHREE-ASS7-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0597",
+          "name": "SHREE-BAN-0597",
+          "family": "SHREE-BAN-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0597",
+          "name": "SHREE-ASS-0597",
+          "family": "SHREE-ASS-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0597",
+          "name": "SHREE-BAN7-0597",
+          "family": "SHREE-BAN7-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0597",
+          "name": "SHREE-ASS7-0597",
+          "family": "SHREE-ASS7-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-001",
+          "name": "Shree-Ass7-001",
+          "family": "Shree-Ass7-001",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-002",
+          "name": "Shree-Ass7-002",
+          "family": "Shree-Ass7-002",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-001",
+          "name": "Shree-Ban7-001",
+          "family": "Shree-Ban7-001",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-002",
+          "name": "Shree-Ban7-002",
+          "family": "Shree-Ban7-002",
+          "type": "legacy",
+          "encoding": "shree-ban7"
         }
       ],
       "fontLayouts": [
@@ -10244,32 +12336,38 @@
         {
           "id": "as-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "as-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "as-fl-stm-bnt",
           "name": "STM-BNT",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "as-fl-stm",
           "name": "STM",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "as-fl-ramdhenu-3-1",
           "name": "Ramdhenu 3.1",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "as-fl-indica-2004",
           "name": "Indica 2004",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -10429,6 +12527,342 @@
           "family": "Nirmala UI",
           "type": "unicode",
           "encoding": "vrinda"
+        },
+        {
+          "id": "shree-ban-0550",
+          "name": "SHREE-BAN-0550",
+          "family": "SHREE-BAN-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0550",
+          "name": "SHREE-ASS-0550",
+          "family": "SHREE-ASS-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0550",
+          "name": "SHREE-BAN7-0550",
+          "family": "SHREE-BAN7-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0550",
+          "name": "SHREE-ASS7-0550",
+          "family": "SHREE-ASS7-0550",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0552",
+          "name": "SHREE-BAN-0552",
+          "family": "SHREE-BAN-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0552",
+          "name": "SHREE-ASS-0552",
+          "family": "SHREE-ASS-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0552",
+          "name": "SHREE-BAN7-0552",
+          "family": "SHREE-BAN7-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0552",
+          "name": "SHREE-ASS7-0552",
+          "family": "SHREE-ASS7-0552",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0553",
+          "name": "SHREE-BAN-0553",
+          "family": "SHREE-BAN-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0553",
+          "name": "SHREE-ASS-0553",
+          "family": "SHREE-ASS-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0553",
+          "name": "SHREE-BAN7-0553",
+          "family": "SHREE-BAN7-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0553",
+          "name": "SHREE-ASS7-0553",
+          "family": "SHREE-ASS7-0553",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0560",
+          "name": "SHREE-BAN-0560",
+          "family": "SHREE-BAN-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0560",
+          "name": "SHREE-ASS-0560",
+          "family": "SHREE-ASS-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0560",
+          "name": "SHREE-BAN7-0560",
+          "family": "SHREE-BAN7-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0560",
+          "name": "SHREE-ASS7-0560",
+          "family": "SHREE-ASS7-0560",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0562",
+          "name": "SHREE-BAN-0562",
+          "family": "SHREE-BAN-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0562",
+          "name": "SHREE-ASS-0562",
+          "family": "SHREE-ASS-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0562",
+          "name": "SHREE-BAN7-0562",
+          "family": "SHREE-BAN7-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0562",
+          "name": "SHREE-ASS7-0562",
+          "family": "SHREE-ASS7-0562",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0564",
+          "name": "SHREE-BAN-0564",
+          "family": "SHREE-BAN-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0564",
+          "name": "SHREE-ASS-0564",
+          "family": "SHREE-ASS-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0564",
+          "name": "SHREE-BAN7-0564",
+          "family": "SHREE-BAN7-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0564",
+          "name": "SHREE-ASS7-0564",
+          "family": "SHREE-ASS7-0564",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0592",
+          "name": "SHREE-BAN-0592",
+          "family": "SHREE-BAN-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0592",
+          "name": "SHREE-ASS-0592",
+          "family": "SHREE-ASS-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0592",
+          "name": "SHREE-BAN7-0592",
+          "family": "SHREE-BAN7-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0592",
+          "name": "SHREE-ASS7-0592",
+          "family": "SHREE-ASS7-0592",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0593",
+          "name": "SHREE-BAN-0593",
+          "family": "SHREE-BAN-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0593",
+          "name": "SHREE-ASS-0593",
+          "family": "SHREE-ASS-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0593",
+          "name": "SHREE-BAN7-0593",
+          "family": "SHREE-BAN7-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0593",
+          "name": "SHREE-ASS7-0593",
+          "family": "SHREE-ASS7-0593",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0594",
+          "name": "SHREE-BAN-0594",
+          "family": "SHREE-BAN-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0594",
+          "name": "SHREE-ASS-0594",
+          "family": "SHREE-ASS-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0594",
+          "name": "SHREE-BAN7-0594",
+          "family": "SHREE-BAN7-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0594",
+          "name": "SHREE-ASS7-0594",
+          "family": "SHREE-ASS7-0594",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0595",
+          "name": "SHREE-BAN-0595",
+          "family": "SHREE-BAN-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0595",
+          "name": "SHREE-ASS-0595",
+          "family": "SHREE-ASS-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0595",
+          "name": "SHREE-BAN7-0595",
+          "family": "SHREE-BAN7-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0595",
+          "name": "SHREE-ASS7-0595",
+          "family": "SHREE-ASS7-0595",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban-0597",
+          "name": "SHREE-BAN-0597",
+          "family": "SHREE-BAN-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass-0597",
+          "name": "SHREE-ASS-0597",
+          "family": "SHREE-ASS-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-0597",
+          "name": "SHREE-BAN7-0597",
+          "family": "SHREE-BAN7-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-0597",
+          "name": "SHREE-ASS7-0597",
+          "family": "SHREE-ASS7-0597",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-001",
+          "name": "Shree-Ass7-001",
+          "family": "Shree-Ass7-001",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ass7-002",
+          "name": "Shree-Ass7-002",
+          "family": "Shree-Ass7-002",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-001",
+          "name": "Shree-Ban7-001",
+          "family": "Shree-Ban7-001",
+          "type": "legacy",
+          "encoding": "shree-ban7"
+        },
+        {
+          "id": "shree-ban7-002",
+          "name": "Shree-Ban7-002",
+          "family": "Shree-Ban7-002",
+          "type": "legacy",
+          "encoding": "shree-ban7"
         }
       ],
       "fontLayouts": [
@@ -10447,32 +12881,38 @@
         {
           "id": "mni-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "mni-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": "shree-ass-0550"
         },
         {
           "id": "mni-fl-stm-bnt",
           "name": "STM-BNT",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mni-fl-stm",
           "name": "STM",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mni-fl-ramdhenu-3-1",
           "name": "Ramdhenu 3.1",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         },
         {
           "id": "mni-fl-indica-2004",
           "name": "Indica 2004",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [
@@ -10636,12 +13076,13 @@
           "id": "dia-fl-shreelipi-ex",
           "name": "ShreeLipi-Ex",
           "type": "legacy",
-          "fontId": "shree-devx"
+          "fontId": ""
         },
         {
           "id": "dia-fl-indic-diacritical",
           "name": "Indic Diacritical",
-          "type": "legacy"
+          "type": "legacy",
+          "fontId": ""
         }
       ],
       "layouts": [

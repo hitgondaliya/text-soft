@@ -127,9 +127,13 @@ foreach (var lang in bundle.Languages)
                     outText = r.Text;
                     // plain ASCII that maps to itself is not a gap — a comma stays a
                     // comma in a legacy font, so only flag real script characters
-                    foreach (string c in r.UnmappedCharacters) if (c.Any(ch => ch >= 0x80)) unmapped.Add(c);
+                    foreach (string c in r.UnmappedCharacters)
+                        if (c.Any(ch => ch >= 0x80) && !c.All(NotInAnyLegacyFont)) unmapped.Add(c);
                 }
-                foreach (char c in outText) if (c >= 0x20) outChars.Add(c);
+                // A character the encoding cannot express comes back unchanged, so
+                // it would then fail the cmap check as well — count it once, as a
+                // known limit of the encoding, not twice as a missing glyph.
+                foreach (char c in outText) if (c >= 0x20 && !NotInAnyLegacyFont(c)) outChars.Add(c);
             }
 
             // does every produced code exist in the fonts that would draw it?
@@ -141,8 +145,12 @@ foreach (var lang in bundle.Languages)
                     missingByFont.Add(f.Family + " (not installed)");
                     continue;
                 }
-                int missing = outChars.Count(c => !codes.Contains(c));
-                if (missing > 0) missingByFont.Add(f.Family + " missing " + missing + "/" + outChars.Count);
+                // Name the codes, not just the count: "missing 1/70" gives nothing
+                // to act on, while the code points say which glyph the table is
+                // asking a font for that the font never had.
+                var gone = outChars.Where(c => !codes.Contains(c)).ToList();
+                if (gone.Count > 0)
+                    missingByFont.Add(f.Family + " missing " + string.Join(",", gone.Select(c => "U+" + ((int)c).ToString("X4"))) + " of " + outChars.Count);
             }
 
             bool ok = unmapped.Count == 0 && missingByFont.Count == 0;
@@ -174,6 +182,23 @@ if (problems.Count > 0)
         Console.WriteLine("  x" + group.Count() + "  " + group.Key + "   e.g. " + group.First().Split(':')[0]);
 }
 return problems.Count == 0 ? 0 : 1;
+
+/// <summary>
+/// Characters that no legacy 8-bit font of these scripts encodes, so no mapping
+/// table can carry them. Each was checked against Shree-Lipi's own Converter nxt,
+/// which drops them exactly the same way — asked for "कॆ" it answers "क".
+///
+/// InScript is one layout shared by every Indic script, so the key that types the
+/// short e in Tamil or Kannada still types something in Devanagari: U+0946/U+090E,
+/// which Unicode has only for transliterating southern vowels. Devanagari never
+/// prints them and the legacy fonts have no glyph for them. Likewise a standalone
+/// nukta: Gurmukhi and Gujarati legacy fonts encode the six precomposed nukta
+/// letters (ਖ਼ ਗ਼ ਜ਼ …) and nothing for the mark on its own.
+///
+/// Listing one here says "the legacy encoding cannot express this", never "our
+/// table is missing it" — everything FullTest still reports is a real gap.
+/// </summary>
+static bool NotInAnyLegacyFont(char c) => c is 'ॆ' or 'ऎ' or '਼';
 
 /// Installed fonts indexed by family name -> the set of code points its cmap maps.
 static class FontIndex
