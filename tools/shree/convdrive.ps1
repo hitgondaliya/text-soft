@@ -14,7 +14,12 @@ param(
   [string]$From = 'Unicode',
   [string]$To = 'ShreeLipi-Ex',
   [string]$InFile,
-  [string]$OutFile
+  [string]$OutFile,
+  # How long to wait for the output box to fill. A layout Shree cannot produce
+  # never fills it at all, so a sweep across candidate layouts spends the whole
+  # budget on every miss — drop this to a few tens of seconds when the run is
+  # only asking "does this layout exist", and leave it alone for a real capture.
+  [int]$MaxWaitSeconds = 300
 )
 
 Add-Type -AssemblyName UIAutomationClient, UIAutomationTypes, System.Windows.Forms | Out-Null
@@ -111,7 +116,7 @@ if ($cv -ne 'ok') { Write-Output 'FAILED: convert button not available'; exit 2 
 # A long unit list takes a while; poll the output box until it has as many lines
 # as we sent rather than guessing a sleep and reading a half-finished result.
 $wantLines = ($text -split "`r?`n" | Where-Object { $_.Length -gt 0 }).Count
-for ($t = 0; $t -lt 150; $t++) {
+for ($t = 0; $t -lt [int]($MaxWaitSeconds / 2); $t++) {
   Start-Sleep -Seconds 2
   $ob = ById 'rtbOPData'
   if (-not $ob) { continue }

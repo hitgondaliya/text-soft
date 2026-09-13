@@ -83,7 +83,11 @@ public static class Proof
             Draw(dc, "Unicode text in " + Path.GetFileName(uniFont), 20, 30, 14, new FontFamily("Segoe UI"), Brushes.Gray);
             Draw(dc, text, 20, 90, 44, uniFam, Brushes.Black);
             Draw(dc, "same text via GlyphJoin table in " + Path.GetFileName(legacyFont), 20, 150, 14, new FontFamily("Segoe UI"), Brushes.Gray);
-            Draw(dc, legacy, 20, 210, 44, legFam, Brushes.Black);
+            // By glyph index, not as Unicode text: a legacy font puts letters on
+            // bytes Unicode reserves for invisible characters (ISFOC Gujarati has
+            // ર on U+00AD SOFT HYPHEN), and drawing them as text silently omits
+            // them — which would make a correct table look broken here.
+            DrawLegacy(dc, legacy, 20, 210, 44, legacyFont, Brushes.Black);
         }
         var rtb = new RenderTargetBitmap(W, H, 96, 96, PixelFormats.Pbgra32);
         rtb.Render(dv);
@@ -102,6 +106,24 @@ public static class Proof
         var gt = new GlyphTypeface(new Uri(Path.GetFullPath(path)));
         string name = gt.FamilyNames.Values.FirstOrDefault() ?? "";
         return new FontFamily(uri, "./#" + name);
+    }
+
+    /// Draw legacy bytes through the font's own cmap, bypassing every Unicode
+    /// character rule. Same approach the app uses (LegacyTextView).
+    static void DrawLegacy(DrawingContext dc, string s, double x, double y, double size, string fontPath, Brush brush)
+    {
+        var gt = new GlyphTypeface(new Uri(Path.GetFullPath(fontPath)));
+        var glyphs = new List<ushort>();
+        var advances = new List<double>();
+        foreach (char ch in s)
+        {
+            if (!gt.CharacterToGlyphMap.TryGetValue(ch, out ushort gid)) continue;
+            glyphs.Add(gid);
+            advances.Add(gt.AdvanceWidths.TryGetValue(gid, out double a) ? a * size : 0);
+        }
+        if (glyphs.Count == 0) return;
+        dc.DrawGlyphRun(brush, new GlyphRun(gt, 0, false, size, 1.0f, glyphs,
+            new Point(x, y), advances, null, null, null, null, null, null));
     }
 
     static void Draw(DrawingContext dc, string s, double x, double y, double size, FontFamily fam, Brush brush)

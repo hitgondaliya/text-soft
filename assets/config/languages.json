@@ -7137,6 +7137,34 @@
           "family": "SHREE-GUJX-1134",
           "type": "legacy",
           "encoding": "shree-gujx"
+        },
+        {
+          "id": "akruti-guj-archana",
+          "name": "Akruti Guj Archana",
+          "family": "AkrutiGujArchana",
+          "type": "legacy",
+          "encoding": "akruti-guj"
+        },
+        {
+          "id": "isfoc-gj-ttchitra",
+          "name": "GJ-TTChitra (ISFOC)",
+          "family": "GJ-TTChitra",
+          "type": "legacy",
+          "encoding": "isfoc-guj"
+        },
+        {
+          "id": "isfoc-gj-ttdwarika",
+          "name": "GJ-TTDwarika (ISFOC)",
+          "family": "GJ-TTDwarika",
+          "type": "legacy",
+          "encoding": "isfoc-guj"
+        },
+        {
+          "id": "terafont-chandan",
+          "name": "TERAFONT-CHANDAN",
+          "family": "TERAFONT-CHANDAN",
+          "type": "legacy",
+          "encoding": "terafont-guj"
         }
       ],
       "fontLayouts": [
@@ -7168,13 +7196,13 @@
           "id": "gu-fl-terafont",
           "name": "Terafont",
           "type": "legacy",
-          "fontId": ""
+          "fontId": "terafont-chandan"
         },
         {
           "id": "gu-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
           "type": "legacy",
-          "fontId": ""
+          "fontId": "isfoc-gj-ttchitra"
         },
         {
           "id": "gu-fl-bhasha-bharti-2",
@@ -7193,6 +7221,12 @@
           "name": "Bhasha Bharati",
           "type": "legacy",
           "fontId": ""
+        },
+        {
+          "id": "gu-fl-akruti-monolingual",
+          "name": "Akruti Monolingual",
+          "type": "legacy",
+          "fontId": "akruti-guj-archana"
         }
       ],
       "layouts": [
@@ -13136,6 +13170,12 @@
     "mappings/shree-tel7-to-unicode.json",
     "mappings/unicode-to-shree-tel7.json",
     "mappings/bhasha-bharati-dev-to-unicode.json",
-    "mappings/unicode-to-bhasha-bharati-dev.json"
+    "mappings/unicode-to-bhasha-bharati-dev.json",
+    "mappings/akruti-guj-to-unicode.json",
+    "mappings/unicode-to-akruti-guj.json",
+    "mappings/isfoc-guj-to-unicode.json",
+    "mappings/unicode-to-isfoc-guj.json",
+    "mappings/terafont-guj-to-unicode.json",
+    "mappings/unicode-to-terafont-guj.json"
   ]
 }

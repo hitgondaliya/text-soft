@@ -22,6 +22,7 @@ for (int i = 0; i < args.Length; i++)
     if (args[i] == "--fonts" && i + 1 < args.Length) fontDir = args[++i];
     else if (args[i] == "--config" && i + 1 < args.Length) configPath = args[++i];
     else if (args[i] == "--dry-run") dryRun = true;
+    else if (args[i] == "--font-src" && i + 1 < args.Length) ExtraFonts.Dirs.Add(args[++i]);
 }
 
 // layout hash -> (encoding id, language name, display label)
@@ -685,18 +686,18 @@ static HashSet<int> CodePoints(string path)
     return res;
 }
 
-/// Locate an installed font file by its family name, across both font folders.
 static string? FindInstalled(string family)
 {
-    string[] dirs =
+    var dirs = new List<string>
     {
         @"C:\Windows\Fonts",
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows", "Fonts"),
     };
+    dirs.AddRange(ExtraFonts.Dirs);
     foreach (string d in dirs)
     {
         if (!Directory.Exists(d)) continue;
-        foreach (string f in Directory.EnumerateFiles(d, "*.ttf"))
+        foreach (string f in Directory.EnumerateFiles(d, "*.ttf", SearchOption.AllDirectories))
         {
             try
             {
@@ -707,4 +708,15 @@ static string? FindInstalled(string family)
         }
     }
     return null;
+}
+
+/// <summary>
+/// Extra folders to search for a font file, from --font-src. A font the customer
+/// owns but has not installed yet still has to pass the cmap proof before we list
+/// it: "not installed on this machine" is not a reason to skip the check and ship
+/// an unverified entry.
+/// </summary>
+static class ExtraFonts
+{
+    public static readonly List<string> Dirs = new();
 }

@@ -85,8 +85,12 @@ foreach (var s in scripts)
         // Unmapped characters pass through untouched, so a round trip can "match"
         // while the legacy text is really the original letters in a legacy font —
         // i.e. garbage on screen. Treat any unmapped character as a failure.
+        // …except where the encoding provably has no room for the character:
+        // Akruti and ISFOC Gujarati carry no nukta, and Shree's own converter
+        // discards it too (assets/config/encoding-limits.json records the evidence).
+        var realGaps = legacy.UnmappedCharacters.Where(c => !c.All(ch => Limits.Covers(s.Enc, ch))).ToList();
         bool ok = back.Text.Normalize(System.Text.NormalizationForm.FormC) == word.Normalize(System.Text.NormalizationForm.FormC)
-                  && legacy.UnmappedCharacters.Count == 0;
+                  && realGaps.Count == 0;
         if (ok) pass++;
         else problems.Add($"[{s.Enc}] FAIL: '{word}' -> legacy '{legacy.Text}' -> '{back.Text}'" + (legacy.UnmappedCharacters.Count > 0 ? $" (unmapped: {string.Join("", legacy.UnmappedCharacters)})" : ""));
 
@@ -104,3 +108,32 @@ if (problems.Count > 0)
     foreach (var p in problems) Console.WriteLine("  " + p);
 }
 return problems.Count == 0 ? 0 : 1;
+
+/// <summary>
+/// Characters an encoding provably cannot carry, written by GapFill from what
+/// Shree-Lipi's own converter does with them. Kept out of the pass/fail decision
+/// so a real gap in one of our tables is never lost among them.
+/// </summary>
+static class Limits
+{
+    private static readonly Dictionary<string, HashSet<char>> ByEncoding = Load();
+
+    public static bool Covers(string encoding, char c) =>
+        ByEncoding.TryGetValue(encoding, out var set) && set.Contains(c);
+
+    private static Dictionary<string, HashSet<char>> Load()
+    {
+        var result = new Dictionary<string, HashSet<char>>(StringComparer.OrdinalIgnoreCase);
+        string path = Path.Combine(AppContext.BaseDirectory, "config", "encoding-limits.json");
+        if (!File.Exists(path)) return result;
+        using var doc = System.Text.Json.JsonDocument.Parse(File.ReadAllText(path));
+        foreach (var prop in doc.RootElement.EnumerateObject())
+        {
+            var set = new HashSet<char>();
+            foreach (var v in prop.Value.EnumerateArray())
+                set.Add((char)Convert.ToInt32(v.GetString() ?? "0", 16));
+            result[prop.Name] = set;
+        }
+        return result;
+    }
+}

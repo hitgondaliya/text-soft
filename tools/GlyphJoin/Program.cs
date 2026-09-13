@@ -95,6 +95,18 @@ if (args[0] == "guess")
     return Guess.Run(args[1], pua, blk, verify, o);
 }
 
+if (args[0] == "bytes")
+{
+    // bytes <font> 0041,00AD,0042 [--out png]
+    string? bp = null;
+    for (int i = 3; i < args.Length; i++) if (args[i] == "--out" && i + 1 < args.Length) bp = args[++i];
+    int brc = 0;
+    var bth = new System.Threading.Thread(() => brc = Bytes.Run(args[1], args[2], bp));
+    bth.SetApartmentState(System.Threading.ApartmentState.STA);
+    bth.Start(); bth.Join();
+    return brc;
+}
+
 if (args[0] == "codes")
 {
     // codes <font> — print the contiguous runs of code points the cmap maps

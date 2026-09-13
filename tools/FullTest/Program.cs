@@ -26,7 +26,10 @@ string[] fontDirs =
 bool verbose = false;
 for (int i = 0; i < args.Length; i++)
 {
-    if (args[i] == "--fonts" && i + 1 < args.Length) fontDirs = new[] { args[++i] };
+    // --fonts may be repeated: fonts a customer owns often sit in their own folder
+    // before being installed, and a run has to be able to see those too.
+    if (args[i] == "--fonts" && i + 1 < args.Length) fontDirs = fontDirs.Append(args[++i]).ToArray();
+    else if (args[i] == "--only-fonts" && i + 1 < args.Length) fontDirs = new[] { args[++i] };
     else if (args[i] == "--verbose") verbose = true;
 }
 
@@ -128,12 +131,12 @@ foreach (var lang in bundle.Languages)
                     // plain ASCII that maps to itself is not a gap — a comma stays a
                     // comma in a legacy font, so only flag real script characters
                     foreach (string c in r.UnmappedCharacters)
-                        if (c.Any(ch => ch >= 0x80) && !c.All(NotInAnyLegacyFont)) unmapped.Add(c);
+                        if (c.Any(ch => ch >= 0x80) && !c.All(ch => EncodingLimits.Covers(font.ConversionKey, ch))) unmapped.Add(c);
                 }
                 // A character the encoding cannot express comes back unchanged, so
                 // it would then fail the cmap check as well — count it once, as a
                 // known limit of the encoding, not twice as a missing glyph.
-                foreach (char c in outText) if (c >= 0x20 && !NotInAnyLegacyFont(c)) outChars.Add(c);
+                foreach (char c in outText) if (c >= 0x20 && !EncodingLimits.Covers(font.ConversionKey, c)) outChars.Add(c);
             }
 
             // does every produced code exist in the fonts that would draw it?
@@ -173,6 +176,18 @@ foreach (var lang in bundle.Languages)
     Console.WriteLine();
 }
 
+// Every family the config lists, checked against what is actually on this machine.
+// A font listed under a name that is one character off ("B Bharati AbmarTwo Normal"
+// for "B Bharati AbmarTwo", "Akruti Guj Archana" for "AkrutiGujArchana") tells a
+// customer who owns the font that they do not have it, and nothing else catches it
+// because the entry looks perfectly well-formed.
+var listedFamilies = bundle.Languages.SelectMany(l => l.Fonts).Select(f => f.Family)
+    .Where(f => !string.IsNullOrWhiteSpace(f)).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+var absent = listedFamilies.Where(f => !cmaps.ContainsKey(f)).OrderBy(f => f, StringComparer.OrdinalIgnoreCase).ToList();
+Console.WriteLine("font families listed: " + listedFamilies.Count + ", present here: " + (listedFamilies.Count - absent.Count));
+foreach (string f in absent) Console.WriteLine("  not on this machine: " + f);
+Console.WriteLine();
+
 Console.WriteLine("==== combinations " + comboOk + "/" + comboTotal + " fully working ====");
 if (problems.Count > 0)
 {
@@ -184,21 +199,47 @@ if (problems.Count > 0)
 return problems.Count == 0 ? 0 : 1;
 
 /// <summary>
-/// Characters that no legacy 8-bit font of these scripts encodes, so no mapping
-/// table can carry them. Each was checked against Shree-Lipi's own Converter nxt,
-/// which drops them exactly the same way — asked for "कॆ" it answers "क".
+/// Characters a given legacy encoding has no room for, so no mapping table can
+/// carry them. Saying this per encoding matters: Shree's own Gujarati encodings
+/// carry the nukta U+0ABC perfectly well, while Akruti's and ISFOC's do not.
 ///
-/// InScript is one layout shared by every Indic script, so the key that types the
-/// short e in Tamil or Kannada still types something in Devanagari: U+0946/U+090E,
-/// which Unicode has only for transliterating southern vowels. Devanagari never
-/// prints them and the legacy fonts have no glyph for them. Likewise a standalone
-/// nukta: Gurmukhi and Gujarati legacy fonts encode the six precomposed nukta
-/// letters (ਖ਼ ਗ਼ ਜ਼ …) and nothing for the mark on its own.
+/// The list is evidence, not opinion — GapFill writes an entry when Shree-Lipi's
+/// own Converter nxt refuses a character or discards it from a cluster (asked for
+/// "कॆ" it answers "क"). The few that predate that tool are marked below.
 ///
-/// Listing one here says "the legacy encoding cannot express this", never "our
-/// table is missing it" — everything FullTest still reports is a real gap.
+/// An entry here means "the encoding cannot express this", never "our table is
+/// missing it", so everything FullTest still reports is a real gap.
 /// </summary>
-static bool NotInAnyLegacyFont(char c) => c is 'ॆ' or 'ऎ' or '਼';
+static class EncodingLimits
+{
+    private static readonly Dictionary<string, HashSet<char>> ByEncoding = Load();
+
+    // InScript is one layout shared by every Indic script, so the key that types
+    // the short e in Tamil or Kannada types U+0946/U+090E in Devanagari — code
+    // points Unicode has only for transliterating southern vowels, which no
+    // Devanagari legacy font draws. A standalone Gurmukhi nukta is the same case:
+    // the fonts carry the six precomposed letters (ਖ਼ ਗ਼ ਜ਼ …) and nothing else.
+    private static readonly HashSet<char> Everywhere = new() { 'ॆ', 'ऎ', '਼' };
+
+    public static bool Covers(string encoding, char c) =>
+        Everywhere.Contains(c) || (ByEncoding.TryGetValue(encoding, out var set) && set.Contains(c));
+
+    private static Dictionary<string, HashSet<char>> Load()
+    {
+        var result = new Dictionary<string, HashSet<char>>(StringComparer.OrdinalIgnoreCase);
+        string path = Path.Combine(AppContext.BaseDirectory, "config", "encoding-limits.json");
+        if (!File.Exists(path)) return result;
+        using var doc = System.Text.Json.JsonDocument.Parse(File.ReadAllText(path));
+        foreach (var prop in doc.RootElement.EnumerateObject())
+        {
+            var set = new HashSet<char>();
+            foreach (var v in prop.Value.EnumerateArray())
+                set.Add((char)Convert.ToInt32(v.GetString() ?? "0", 16));
+            result[prop.Name] = set;
+        }
+        return result;
+    }
+}
 
 /// Installed fonts indexed by family name -> the set of code points its cmap maps.
 static class FontIndex
@@ -208,7 +249,9 @@ static class FontIndex
         var res = new Dictionary<string, HashSet<int>>(StringComparer.OrdinalIgnoreCase);
         foreach (string dir in dirs) {
         if (!Directory.Exists(dir)) continue;
-        foreach (var f in Directory.EnumerateFiles(dir, "*.tt?"))
+        // A folder a customer hands over usually has the fonts in subfolders, one
+        // per download, so walk the tree rather than only the top level.
+        foreach (var f in Directory.EnumerateFiles(dir, "*.tt?", SearchOption.AllDirectories))
         {
             try
             {

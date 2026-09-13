@@ -31,8 +31,17 @@ public sealed class ConverterViewModel : ObservableObject
     public FontAsset? TargetFont
     {
         get => _targetFont;
-        set { if (SetProperty(ref _targetFont, value)) { OnPairChanged(); OnPropertyChanged(nameof(TargetFontFamily)); } }
+        set { if (SetProperty(ref _targetFont, value)) { OnPairChanged(); OnPropertyChanged(nameof(TargetFontFamily)); OnPropertyChanged(nameof(TargetIsLegacy)); } }
     }
+
+    /// <summary>
+    /// Draw the result by glyph index rather than as Unicode text. A legacy font
+    /// puts letters on bytes Unicode reserves for invisible characters — ISFOC
+    /// Gujarati has ર on U+00AD SOFT HYPHEN — and WPF honours the Unicode meaning,
+    /// so the letter disappears from the box even though the converted text is
+    /// correct and Word prints it. See <see cref="Controls.LegacyTextView"/>.
+    /// </summary>
+    public bool TargetIsLegacy => TargetFont?.Type == FontType.Legacy;
 
     /// <summary>Font to render the input box in (the source font, incl. bundled legacy fonts).</summary>
     public System.Windows.Media.FontFamily SourceFontFamily => _fonts.Resolve(SourceFont);
