@@ -4,16 +4,16 @@
   "name": "Eng",
   "fontId": "raavi",
   "keys": [
-    { "vk": 48, "base": "੦" },
-    { "vk": 49, "base": "੧" },
+    { "vk": 48, "base": "੦", "shift": ")" },
+    { "vk": 49, "base": "੧", "shift": "!" },
     { "vk": 50, "base": "੨" },
     { "vk": 51, "base": "੩" },
     { "vk": 52, "base": "੪" },
-    { "vk": 53, "base": "੫" },
+    { "vk": 53, "base": "੫", "shift": "%" },
     { "vk": 54, "base": "੬" },
     { "vk": 55, "base": "੭", "shift": "।" },
-    { "vk": 56, "base": "੮" },
-    { "vk": 57, "base": "੯" },
+    { "vk": 56, "base": "੮", "shift": "*" },
+    { "vk": 57, "base": "੯", "shift": "(" },
     { "vk": 65, "base": "ਾ", "shift": "ਅ" },
     { "vk": 66, "base": "ਬ" },
     { "vk": 67, "base": "ਚ", "shift": "੍" },
@@ -39,8 +39,15 @@
     { "vk": 87, "base": "ਵ" },
     { "vk": 89, "base": "ਯ", "shift": "ਲ਼" },
     { "vk": 90, "base": "ਝ" },
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": ",", "shift": "ਂ" },
-    { "vk": 190, "base": ".", "shift": "।" }
+    { "vk": 189, "base": "-" },
+    { "vk": 190, "base": ".", "shift": "।" },
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 219, "base": "[" },
+    { "vk": 221, "base": "]" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

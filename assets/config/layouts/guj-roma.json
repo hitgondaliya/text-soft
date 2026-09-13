@@ -4,16 +4,16 @@
   "name": "Roma",
   "fontId": "shruti",
   "keys": [
-    { "vk": 48, "base": "૦" },
-    { "vk": 49, "base": "૧" },
+    { "vk": 48, "base": "૦", "shift": ")" },
+    { "vk": 49, "base": "૧", "shift": "!" },
     { "vk": 50, "base": "૨" },
     { "vk": 51, "base": "૩", "shift": "ૅ" },
     { "vk": 52, "base": "૪" },
-    { "vk": 53, "base": "૫" },
+    { "vk": 53, "base": "૫", "shift": "%" },
     { "vk": 54, "base": "૬" },
     { "vk": 55, "base": "૭", "shift": "।" },
-    { "vk": 56, "base": "૮" },
-    { "vk": 57, "base": "૯" },
+    { "vk": 56, "base": "૮", "shift": "*" },
+    { "vk": 57, "base": "૯", "shift": "(" },
     { "vk": 65, "base": "ા", "shift": "અ" },
     { "vk": 66, "base": "બ", "shift": "ભ" },
     { "vk": 67, "base": "ચ", "shift": "છ" },
@@ -40,11 +40,15 @@
     { "vk": 88, "base": "ષ" },
     { "vk": 89, "base": "ય", "shift": "ઐ" },
     { "vk": 90, "base": "ો" },
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": "ઇ", "shift": "," },
     { "vk": 189, "base": "ઋ" },
     { "vk": 190, "base": "ઈ", "shift": "." },
+    { "vk": 191, "base": "/", "shift": "?" },
     { "vk": 192, "base": "ૈ", "shift": "ૃ" },
-    { "vk": 219, "base": "ઉ", "shift": "ઊ" }
+    { "vk": 219, "base": "ઉ", "shift": "ઊ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

@@ -4,16 +4,16 @@
   "name": "Roma",
   "fontId": "vrinda",
   "keys": [
-    { "vk": 48, "base": "০" },
-    { "vk": 49, "base": "১" },
+    { "vk": 48, "base": "০", "shift": ")" },
+    { "vk": 49, "base": "১", "shift": "!" },
     { "vk": 50, "base": "২" },
     { "vk": 51, "base": "৩" },
     { "vk": 52, "base": "৪" },
     { "vk": 53, "base": "৫" },
     { "vk": 54, "base": "৬" },
     { "vk": 55, "base": "৭", "shift": "।" },
-    { "vk": 56, "base": "৮" },
-    { "vk": 57, "base": "৯" },
+    { "vk": 56, "base": "৮", "shift": "*" },
+    { "vk": 57, "base": "৯", "shift": "(" },
     { "vk": 65, "base": "া", "shift": "অ" },
     { "vk": 66, "base": "ব", "shift": "ভ" },
     { "vk": 67, "base": "চ", "shift": "ছ" },
@@ -38,11 +38,14 @@
     { "vk": 88, "base": "ষ" },
     { "vk": 89, "base": "য়", "shift": "ঐ" },
     { "vk": 90, "base": "এ", "shift": "ও" },
-    { "vk": 187, "base": "য" },
+    { "vk": 187, "base": "য", "shift": "+" },
     { "vk": 188, "base": "ই", "shift": "," },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "ঈ", "shift": "." },
+    { "vk": 191, "shift": "?" },
     { "vk": 192, "base": "ৈ", "shift": "ৃ" },
-    { "vk": 219, "base": "ড", "shift": "ঊ" }
+    { "vk": 219, "base": "ড", "shift": "ঊ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

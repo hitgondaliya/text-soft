@@ -4,7 +4,16 @@
   "name": "Eng",
   "fontId": "kartika",
   "keys": [
-    { "vk": 50, "shift": "ഴ" },
+    { "vk": 48, "base": "0", "shift": ")" },
+    { "vk": 49, "base": "1", "shift": "!" },
+    { "vk": 50, "base": "2", "shift": "ഴ" },
+    { "vk": 51, "base": "3" },
+    { "vk": 52, "base": "4" },
+    { "vk": 53, "base": "5", "shift": "%" },
+    { "vk": 54, "base": "6" },
+    { "vk": 55, "base": "7" },
+    { "vk": 56, "base": "8", "shift": "*" },
+    { "vk": 57, "base": "9", "shift": "(" },
     { "vk": 66, "base": "ബ" },
     { "vk": 67, "base": "ച", "shift": "ഛ" },
     { "vk": 68, "base": "ദ", "shift": "ഢ" },
@@ -27,8 +36,14 @@
     { "vk": 88, "base": "ഷ" },
     { "vk": 89, "base": "യ", "shift": "എ" },
     { "vk": 90, "base": "ഴ" },
-    { "vk": 190, "shift": "ഓ" },
-    { "vk": 219, "base": "ഉ", "shift": "ഊ" }
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=", "shift": "+" },
+    { "vk": 188, "base": "," },
+    { "vk": 189, "base": "-" },
+    { "vk": 190, "base": ".", "shift": "ഓ" },
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 219, "base": "ഉ", "shift": "ഊ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

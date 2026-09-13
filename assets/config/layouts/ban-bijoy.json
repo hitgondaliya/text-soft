@@ -4,16 +4,16 @@
   "name": "Bijoy",
   "fontId": "vrinda",
   "keys": [
-    { "vk": 48, "base": "০" },
-    { "vk": 49, "base": "১" },
+    { "vk": 48, "base": "০", "shift": ")" },
+    { "vk": 49, "base": "১", "shift": "!" },
     { "vk": 50, "base": "২", "shift": "ঁ" },
     { "vk": 51, "base": "৩" },
     { "vk": 52, "base": "৪", "shift": "ট" },
     { "vk": 53, "base": "৫" },
     { "vk": 54, "base": "৬" },
     { "vk": 55, "base": "৭", "shift": "ঁ" },
-    { "vk": 56, "base": "৮" },
-    { "vk": 57, "base": "৯" },
+    { "vk": 56, "base": "৮", "shift": "*" },
+    { "vk": 57, "base": "৯", "shift": "(" },
     { "vk": 65, "base": "ৃ" },
     { "vk": 66, "base": "ন", "shift": "ণ" },
     { "vk": 67, "base": "ে", "shift": "ৈ" },
@@ -38,9 +38,14 @@
     { "vk": 87, "base": "য়", "shift": "য" },
     { "vk": 88, "base": "ও" },
     { "vk": 89, "base": "চ", "shift": "ছ" },
+    { "vk": 186, "base": ";" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": "," },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "." },
-    { "vk": 219, "shift": "ঔ" }
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 219, "shift": "ঔ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

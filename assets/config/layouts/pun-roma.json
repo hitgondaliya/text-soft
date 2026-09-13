@@ -4,16 +4,16 @@
   "name": "Roma",
   "fontId": "raavi",
   "keys": [
-    { "vk": 48, "base": "੦" },
-    { "vk": 49, "base": "੧" },
+    { "vk": 48, "base": "੦", "shift": ")" },
+    { "vk": 49, "base": "੧", "shift": "!" },
     { "vk": 50, "base": "੨" },
     { "vk": 51, "base": "੩" },
     { "vk": 52, "base": "੪" },
-    { "vk": 53, "base": "੫" },
+    { "vk": 53, "base": "੫", "shift": "%" },
     { "vk": 54, "base": "੬" },
     { "vk": 55, "base": "੭", "shift": "।" },
-    { "vk": 56, "base": "੮" },
-    { "vk": 57, "base": "੯" },
+    { "vk": 56, "base": "੮", "shift": "*" },
+    { "vk": 57, "base": "੯", "shift": "(" },
     { "vk": 65, "base": "ਾ", "shift": "ਅ" },
     { "vk": 66, "base": "ਬ", "shift": "ਭ" },
     { "vk": 67, "base": "ਚ", "shift": "ਛ" },
@@ -39,10 +39,15 @@
     { "vk": 88, "base": "਼" },
     { "vk": 89, "base": "ਯ", "shift": "ਈ" },
     { "vk": 90, "base": "ਏ", "shift": "ਓ" },
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": "ਇ", "shift": "," },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "ਆ", "shift": "." },
+    { "vk": 191, "base": "/", "shift": "?" },
     { "vk": 192, "base": "ੈ" },
-    { "vk": 219, "base": "ਊ", "shift": "ਐ" }
+    { "vk": 219, "base": "ਊ", "shift": "ਐ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

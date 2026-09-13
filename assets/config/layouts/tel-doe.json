@@ -4,7 +4,7 @@
   "name": "Doe",
   "fontId": "gautami",
   "keys": [
-    { "vk": 48, "base": "౦" },
+    { "vk": 48, "base": "౦", "shift": ")" },
     { "vk": 49, "base": "౧" },
     { "vk": 50, "base": "౨", "shift": "ఏ" },
     { "vk": 51, "base": "౩" },
@@ -13,7 +13,7 @@
     { "vk": 54, "base": "౬" },
     { "vk": 55, "base": "౭", "shift": "క్ష" },
     { "vk": 56, "base": "౮", "shift": "ె" },
-    { "vk": 57, "base": "౯" },
+    { "vk": 57, "base": "౯", "shift": "(" },
     { "vk": 66, "base": "వ" },
     { "vk": 67, "base": "మ", "shift": "ణ" },
     { "vk": 68, "base": "్", "shift": "అ" },
@@ -41,8 +41,9 @@
     { "vk": 186, "base": "చ", "shift": "ఛ" },
     { "vk": 187, "base": "ృ", "shift": "ఋ" },
     { "vk": 188, "base": ",", "shift": "ష" },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "." },
-    { "vk": 191, "base": "య" },
+    { "vk": 191, "base": "య", "shift": "?" },
     { "vk": 219, "base": "డ", "shift": "ఢ" },
     { "vk": 221, "shift": "ఞ" },
     { "vk": 222, "base": "ట", "shift": "ఠ" }

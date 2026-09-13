@@ -4,6 +4,16 @@
   "name": "Newroma",
   "fontId": "kalinga",
   "keys": [
+    { "vk": 48, "base": "0", "shift": ")" },
+    { "vk": 49, "base": "1", "shift": "!" },
+    { "vk": 50, "base": "2" },
+    { "vk": 51, "base": "3" },
+    { "vk": 52, "base": "4" },
+    { "vk": 53, "base": "5", "shift": "%" },
+    { "vk": 54, "base": "6" },
+    { "vk": 55, "base": "7" },
+    { "vk": 56, "base": "8", "shift": "*" },
+    { "vk": 57, "base": "9", "shift": "(" },
     { "vk": 65, "shift": "ଅ" },
     { "vk": 66, "base": "ୱ", "shift": "ୠ" },
     { "vk": 67, "base": "ଚ", "shift": "ଛ" },
@@ -25,7 +35,11 @@
     { "vk": 89, "base": "ଯ" },
     { "vk": 90, "shift": "ଋ" },
     { "vk": 186, "shift": "ୟ" },
-    { "vk": 190, "shift": "।" }
+    { "vk": 188, "base": "," },
+    { "vk": 189, "base": "-" },
+    { "vk": 190, "base": ".", "shift": "।" },
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

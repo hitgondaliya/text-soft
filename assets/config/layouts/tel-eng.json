@@ -4,16 +4,16 @@
   "name": "Eng",
   "fontId": "gautami",
   "keys": [
-    { "vk": 48, "base": "౦" },
-    { "vk": 49, "base": "౧" },
+    { "vk": 48, "base": "౦", "shift": ")" },
+    { "vk": 49, "base": "౧", "shift": "!" },
     { "vk": 50, "base": "౨" },
     { "vk": 51, "base": "౩" },
     { "vk": 52, "base": "౪", "shift": "ఁ" },
-    { "vk": 53, "base": "౫" },
+    { "vk": 53, "base": "౫", "shift": "%" },
     { "vk": 54, "base": "౬" },
     { "vk": 55, "base": "౭" },
-    { "vk": 56, "base": "౮" },
-    { "vk": 57, "base": "౯" },
+    { "vk": 56, "base": "౮", "shift": "*" },
+    { "vk": 57, "base": "౯", "shift": "(" },
     { "vk": 65, "base": "ా", "shift": "అ" },
     { "vk": 66, "base": "బ", "shift": "భ" },
     { "vk": 67, "base": "చ", "shift": "ఛ" },
@@ -40,10 +40,15 @@
     { "vk": 88, "base": "క్ష", "shift": "ఙ" },
     { "vk": 89, "base": "య", "shift": "ఎ" },
     { "vk": 90, "base": "ఝ" },
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": ",", "shift": "," },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "." },
+    { "vk": 191, "base": "/", "shift": "?" },
     { "vk": 192, "base": "ై" },
-    { "vk": 219, "base": "ఉ" }
+    { "vk": 219, "base": "ఉ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

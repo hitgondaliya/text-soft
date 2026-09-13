@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using FontSoftware.Core.Config;
 using FontSoftware.Core.Models;
+using FontSoftware.Core.Fonts;
 
 // KbdGen — batch-generate Unicode keyboard-layout JSON from Shree-Lipi's 406-byte
 // scheme files. For each script it builds a Rosetta (Shree glyph byte -> Unicode)
@@ -19,20 +20,26 @@ if (!Directory.Exists(config)) config = @"C:\Users\harde\Desktop\Windows Font So
 string layoutsDir = Path.Combine(config, "layouts");
 const int MinKeys = 20;
 
-// script ext -> (rosetta InScript layout id-language, unicode fontId, id prefix, target language ids)
-var scripts = new (string Ext, string RosettaLang, string FontId, string Prefix, string[] Targets)[]
+// --layouts-only rewrites the layout files and leaves languages.json alone. The
+// catalog now carries 1,500 hand-verified font entries; re-serialising it from the
+// model to change keyboards would risk all of that for nothing.
+bool layoutsOnly = args.Contains("--layouts-only");
+
+// script ext -> (rosetta InScript layout id-language, unicode fontId, id prefix,
+//                target language ids, Unicode block base)
+var scripts = new (string Ext, string RosettaLang, string FontId, string Prefix, string[] Targets, int Block)[]
 {
-    ("DEV", "hi", "mangal",  "dev", new[]{"hi","mr"}),
-    ("SAN", "hi", "mangal",  "san", new[]{"sa"}),
-    ("GUJ", "gu", "shruti",  "guj", new[]{"gu"}),
-    ("PUN", "pa", "raavi",   "pun", new[]{"pa"}),
-    ("BAN", "bn", "vrinda",  "ban", new[]{"bn"}),
-    ("TEL", "te", "gautami", "tel", new[]{"te"}),
-    ("KAN", "kn", "tunga",   "kan", new[]{"kn"}),
-    ("MAL", "ml", "kartika", "mal", new[]{"ml"}),
-    ("ORI", "or", "kalinga", "ori", new[]{"or"}),
-    ("TAM", "ta", "latha",   "tam", new[]{"ta"}),
-    ("ASS", "bn", "vrinda",  "ass", new[]{"as"}),
+    ("DEV", "hi", "mangal",  "dev", new[]{"hi","mr"}, 0x0900),
+    ("SAN", "hi", "mangal",  "san", new[]{"sa"},      0x0900),
+    ("GUJ", "gu", "shruti",  "guj", new[]{"gu"},      0x0A80),
+    ("PUN", "pa", "raavi",   "pun", new[]{"pa"},      0x0A00),
+    ("BAN", "bn", "vrinda",  "ban", new[]{"bn"},      0x0980),
+    ("TEL", "te", "gautami", "tel", new[]{"te"},      0x0C00),
+    ("KAN", "kn", "tunga",   "kan", new[]{"kn"},      0x0C80),
+    ("MAL", "ml", "kartika", "mal", new[]{"ml"},      0x0D00),
+    ("ORI", "or", "kalinga", "ori", new[]{"or"},      0x0B00),
+    ("TAM", "ta", "latha",   "tam", new[]{"ta"},      0x0B80),
+    ("ASS", "bn", "vrinda",  "ass", new[]{"as"},      0x0980),
 };
 
 var keys = new List<(int vk, char n, char s)>();
@@ -64,23 +71,157 @@ var catalog = bundle.Catalog;
 // generated layouts per target language id
 var generated = new Dictionary<string, List<LayoutRef>>();
 
+// ---------------------------------------------------------------------------
+// Shree's scheme files map a key to an internal GLYPH BYTE, and the only way we
+// can read those bytes is by joining INSCRIPT.<ext> against our verified InScript
+// layout. That explains about 80 bytes per script — every other byte was simply
+// dropped, taking its key with it, which is why the Eng layout had no શ and 216
+// layouts were short of keys.
+//
+// Two things rescue most of the rest.
+//
+// First, the byte code is POSITIONAL and shared between related scripts: byte 0x53
+// is "kha" in Devanagari, Gujarati and Bengali alike, each at offset 0x16 in its
+// own Unicode block. So a byte one script cannot explain can be borrowed from a
+// script that can. Which scripts may lend to which is measured here, not assumed —
+// Devanagari and Gujarati agree on 68 of 68 shared bytes, Telugu and Kannada form
+// their own pair, and Tamil and Malayalam agree with nobody and so borrow nothing.
+// A donor needs >=90% agreement over >=20 shared bytes, every donor that knows the
+// byte has to give the same answer, and the borrowed code point has to be assigned
+// in the target block.
+//
+// Second, a key whose byte equals its own ASCII code is punctuation passing
+// straight through, and can be taken literally.
+// ---------------------------------------------------------------------------
+var offsets = new Dictionary<string, Dictionary<byte, int>>(StringComparer.Ordinal);
+var rosettas = new Dictionary<string, Dictionary<byte, string>>(StringComparer.Ordinal);
+
 foreach (var sc in scripts)
 {
-    string insFile = Path.Combine(shree, "INSCRIPT." + sc.Ext);
-    if (!File.Exists(insFile)) { Console.WriteLine($"skip {sc.Ext}: no INSCRIPT file"); continue; }
-    byte[] ins = File.ReadAllBytes(insFile);
+    // Shree ships no INSCRIPT.SAN — Sanskrit is Devanagari and shares its scheme,
+    // so read the byte meanings from INSCRIPT.DEV. Without this the 9 Sanskrit
+    // schemes decode against nothing and every key of them is dropped.
+    string insPath = Path.Combine(shree, "INSCRIPT." + sc.Ext);
+    if (!File.Exists(insPath) && sc.Ext == "SAN") insPath = Path.Combine(shree, "INSCRIPT.DEV");
+    if (!File.Exists(insPath)) continue;
+    byte[] insBytes = File.ReadAllBytes(insPath);
+    var rl = catalog.FindLanguage(sc.RosettaLang);
+    if (rl is null) continue;
+    var rIns = bundle.GetLayout(rl.Layouts.First(l => l.Name == "InScript"));
 
-    // Rosetta from this script's verified InScript.
-    var rlang = catalog.FindLanguage(sc.RosettaLang)!;
-    var rInscript = bundle.GetLayout(rlang.Layouts.First(l => l.Name == "InScript"));
-    var b2u = new Dictionary<byte, string>();
+    var map = new Dictionary<byte, string>();
     foreach (var (vk, n, s) in keys)
     {
-        var m = rInscript.Find(vk); if (m is null) continue;
-        byte bn = Prim(ins, n), bs = Prim(ins, s);
-        if (bn != 0xFF && !string.IsNullOrEmpty(m.Base) && !b2u.ContainsKey(bn)) b2u[bn] = m.Base!;
-        if (bs != 0xFF && !string.IsNullOrEmpty(m.Shift) && !b2u.ContainsKey(bs)) b2u[bs] = m.Shift!;
+        var m = rIns.Find(vk); if (m is null) continue;
+        byte bn = Prim(insBytes, n), bs = Prim(insBytes, s);
+        if (bn != 0xFF && !string.IsNullOrEmpty(m.Base) && !map.ContainsKey(bn)) map[bn] = m.Base!;
+        if (bs != 0xFF && !string.IsNullOrEmpty(m.Shift) && !map.ContainsKey(bs)) map[bs] = m.Shift!;
     }
+    rosettas[sc.Ext] = map;
+
+    var off = new Dictionary<byte, int>();
+    foreach (var (b, u) in map)
+        if (u.Length == 1 && u[0] >= sc.Block && u[0] < sc.Block + 0x80) off[b] = u[0] - sc.Block;
+    offsets[sc.Ext] = off;
+}
+
+// donors[ext] = the scripts allowed to lend it a byte meaning
+var donors = new Dictionary<string, List<string>>(StringComparer.Ordinal);
+foreach (var a in scripts)
+{
+    var list = new List<string>();
+    if (offsets.TryGetValue(a.Ext, out var oa))
+        foreach (var b in scripts)
+        {
+            if (a.Ext == b.Ext || !offsets.TryGetValue(b.Ext, out var ob)) continue;
+            int shared = 0, agree = 0;
+            foreach (var (k, v) in oa) if (ob.TryGetValue(k, out int w)) { shared++; if (v == w) agree++; }
+            // Perfect agreement only. At 90% the Telugu/Kannada pair (43 of 47)
+            // lent Kannada three matras Kannada does not use, and the keys it
+            // produced converted to nothing.
+            if (shared >= 20 && agree == shared) list.Add(b.Ext);
+        }
+    donors[a.Ext] = list;
+}
+foreach (var sc in scripts)
+    Console.WriteLine($"  {sc.Ext}: {(rosettas.TryGetValue(sc.Ext, out var r) ? r.Count : 0)} bytes known, donors: "
+                    + (donors[sc.Ext].Count > 0 ? string.Join(",", donors[sc.Ext]) : "(none)"));
+Console.WriteLine();
+
+// A key is only worth having if the app can draw what it types. This is the same
+// test the full-matrix run applies: push the character through every legacy
+// encoding the language offers and check the resulting code exists in the fonts
+// that would render it. It matters most for the literal-punctuation rule — Tamil
+// legacy fonts put Tamil glyphs on the bytes for f, h and t, and the Bengali ones
+// have nothing at all on '%' or ':', so taking those keys at face value produced
+// keys that typed blanks.
+var fontCodes = FontIndex.Build(
+    @"C:\Windows\Fonts",
+    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows", "Fonts"));
+Console.WriteLine($"indexed {fontCodes.Count} installed font families for the renderability check\n");
+
+bool Renderable(string[] targets, string s)
+{
+    foreach (string langId in targets)
+    {
+        var lang = catalog.FindLanguage(langId);
+        if (lang is null) continue;
+        foreach (var enc in lang.Fonts.Where(f => f.Type == FontType.Legacy)
+                                      .Select(f => f.ConversionKey).Distinct(StringComparer.Ordinal))
+        {
+            var conv = bundle.CreateConverterToLegacy(enc);
+            if (conv is null) continue;
+            var r = conv.Convert(s);
+            if (r.UnmappedCharacters.Any(c => c.Any(ch => ch >= 0x80))) return false;
+            foreach (var font in lang.Fonts.Where(f => f.Type == FontType.Legacy && f.ConversionKey == enc))
+            {
+                if (!fontCodes.TryGetValue(font.Family, out var codes)) continue;   // not installed here
+                foreach (char ch in r.Text) if (ch >= 0x20 && !codes.Contains(ch)) return false;
+            }
+        }
+    }
+    return true;
+}
+
+int fromRosetta = 0, fromBorrow = 0, fromLiteral = 0, unknownKeys = 0, rejected = 0;
+
+/// The Unicode a key produces, or null if nothing can be said about it honestly.
+string? Decode(string ext, int block, byte b, char keyChar, string[] targets)
+{
+    if (b == 0xFF) return null;
+    if (rosettas.TryGetValue(ext, out var own) && own.TryGetValue(b, out string? direct)) { fromRosetta++; return direct; }
+
+    int? consensus = null;
+    foreach (string donor in donors[ext])
+    {
+        if (!offsets[donor].TryGetValue(b, out int o)) continue;
+        if (consensus is null) consensus = o;
+        else if (consensus != o) { consensus = null; break; }   // donors disagree: say nothing
+    }
+    if (consensus is int off2)
+    {
+        char cp = (char)(block + off2);
+        if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(cp) != System.Globalization.UnicodeCategory.OtherNotAssigned)
+        {
+            if (Renderable(targets, cp.ToString())) { fromBorrow++; return cp.ToString(); }
+            rejected++;
+            return null;
+        }
+    }
+
+    if (b == keyChar && b >= 0x20 && b < 0x7F)
+    {
+        if (Renderable(targets, keyChar.ToString())) { fromLiteral++; return keyChar.ToString(); }
+        rejected++;
+        return null;
+    }
+    unknownKeys++;
+    return null;
+}
+
+foreach (var sc in scripts)
+{
+    if (!rosettas.TryGetValue(sc.Ext, out var b2u)) { Console.WriteLine($"skip {sc.Ext}: no scheme bytes"); continue; }
 
     int made = 0;
     foreach (var file in Directory.GetFiles(shree, "*." + sc.Ext))
@@ -93,9 +234,8 @@ foreach (var sc in scripts)
         var rows = new List<string>();
         foreach (var (vk, n, s) in keys.OrderBy(k => k.vk))
         {
-            byte bn = Prim(d, n), bs = Prim(d, s);
-            string? un = bn != 0xFF && b2u.TryGetValue(bn, out var u1) ? u1 : null;
-            string? us = bs != 0xFF && b2u.TryGetValue(bs, out var u2) ? u2 : null;
+            string? un = Decode(sc.Ext, sc.Block, Prim(d, n), n, sc.Targets);
+            string? us = Decode(sc.Ext, sc.Block, Prim(d, s), s, sc.Targets);
             if (un is null && us is null) continue;
             var parts = new List<string> { $"\"vk\": {vk}" };
             if (un is not null) parts.Add($"\"base\": \"{Esc(un)}\"");
@@ -128,6 +268,15 @@ foreach (var sc in scripts)
         made++;
     }
     Console.WriteLine($"{sc.Ext}: generated {made} schemes (rosetta {b2u.Count} bytes) -> {string.Join(",", sc.Targets)}");
+}
+
+Console.WriteLine($"\nkeys decoded: {fromRosetta} from this script's InScript, {fromBorrow} borrowed from an"
+                + $" agreeing script, {fromLiteral} literal punctuation; {rejected} rejected as unrenderable, {unknownKeys} still unexplained.");
+
+if (layoutsOnly)
+{
+    Console.WriteLine("--layouts-only: languages.json left untouched.");
+    return;
 }
 
 // Register: only touch the languages this run generated for. Others (e.g.

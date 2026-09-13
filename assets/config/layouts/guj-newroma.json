@@ -4,16 +4,16 @@
   "name": "Newroma",
   "fontId": "shruti",
   "keys": [
-    { "vk": 48, "base": "૦" },
+    { "vk": 48, "base": "૦", "shift": ")" },
     { "vk": 49, "base": "૧" },
     { "vk": 50, "base": "૨" },
     { "vk": 51, "base": "૩" },
     { "vk": 52, "base": "૪" },
-    { "vk": 53, "base": "૫" },
+    { "vk": 53, "base": "૫", "shift": "%" },
     { "vk": 54, "base": "૬" },
     { "vk": 55, "base": "૭" },
-    { "vk": 56, "base": "૮" },
-    { "vk": 57, "base": "૯" },
+    { "vk": 56, "base": "૮", "shift": "*" },
+    { "vk": 57, "base": "૯", "shift": "(" },
     { "vk": 65, "base": "ા", "shift": "અ" },
     { "vk": 66, "base": "બ", "shift": "ભ" },
     { "vk": 67, "base": "ચ", "shift": "છ" },
@@ -39,10 +39,12 @@
     { "vk": 87, "base": "વ" },
     { "vk": 88, "base": "શ્ર" },
     { "vk": 89, "base": "ય" },
+    { "vk": 186, "base": ";", "shift": ":" },
     { "vk": 187, "base": "્" },
     { "vk": 188, "base": ",", "shift": "ં" },
     { "vk": 189, "base": "ઋ" },
-    { "vk": 190, "shift": "।" }
+    { "vk": 190, "shift": "।" },
+    { "vk": 191, "shift": "?" }
   ],
   "deadKeyCombinations": []
 }

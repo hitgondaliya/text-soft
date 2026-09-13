@@ -4,7 +4,16 @@
   "name": "Roma",
   "fontId": "kalinga",
   "keys": [
-    { "vk": 55, "shift": "।" },
+    { "vk": 48, "base": "0", "shift": ")" },
+    { "vk": 49, "base": "1", "shift": "!" },
+    { "vk": 50, "base": "2" },
+    { "vk": 51, "base": "3" },
+    { "vk": 52, "base": "4" },
+    { "vk": 53, "base": "5", "shift": "%" },
+    { "vk": 54, "base": "6" },
+    { "vk": 55, "base": "7", "shift": "।" },
+    { "vk": 56, "base": "8", "shift": "*" },
+    { "vk": 57, "base": "9", "shift": "(" },
     { "vk": 65, "shift": "ଅ" },
     { "vk": 66, "base": "ୱ", "shift": "ୠ" },
     { "vk": 67, "base": "ଚ", "shift": "ଛ" },
@@ -25,10 +34,14 @@
     { "vk": 88, "base": "ଷ", "shift": "ଋ" },
     { "vk": 89, "base": "ୟ" },
     { "vk": 90, "base": "ଏ", "shift": "ଓ" },
-    { "vk": 186, "shift": "ୟ" },
+    { "vk": 186, "base": ";", "shift": "ୟ" },
+    { "vk": 187, "base": "=", "shift": "+" },
     { "vk": 188, "base": "ଇ" },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "ଈ" },
-    { "vk": 219, "base": "ଉ", "shift": "ଊ" }
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 219, "base": "ଉ", "shift": "ଊ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

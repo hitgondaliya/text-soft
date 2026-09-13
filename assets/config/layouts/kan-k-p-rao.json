@@ -4,9 +4,17 @@
   "name": "K P Rao",
   "fontId": "tunga",
   "keys": [
-    { "vk": 50, "shift": "ಋ" },
-    { "vk": 54, "shift": "ಽ" },
-    { "vk": 65, "shift": "ಅ" },
+    { "vk": 48, "base": "0", "shift": ")" },
+    { "vk": 49, "base": "1", "shift": "!" },
+    { "vk": 50, "base": "2", "shift": "ಋ" },
+    { "vk": 51, "base": "3" },
+    { "vk": 52, "base": "4" },
+    { "vk": 53, "base": "5", "shift": "%" },
+    { "vk": 54, "base": "6", "shift": "ಽ" },
+    { "vk": 55, "base": "7" },
+    { "vk": 56, "base": "8", "shift": "*" },
+    { "vk": 57, "base": "9", "shift": "(" },
+    { "vk": 65, "base": "a", "shift": "ಅ" },
     { "vk": 66, "base": "ಬ", "shift": "ಭ" },
     { "vk": 67, "base": "ಚ", "shift": "ಛ" },
     { "vk": 68, "base": "ದ", "shift": "ಧ" },
@@ -28,7 +36,14 @@
     { "vk": 87, "base": "ಡ", "shift": "ಢ" },
     { "vk": 89, "base": "ಯ", "shift": "ಐ" },
     { "vk": 90, "base": "ಏ", "shift": "ಓ" },
-    { "vk": 192, "shift": "ಋ" }
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 187, "base": "=" },
+    { "vk": 188, "base": "," },
+    { "vk": 189, "base": "-" },
+    { "vk": 190, "base": "." },
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 192, "shift": "ಋ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

@@ -4,15 +4,16 @@
   "name": "Newroma",
   "fontId": "gautami",
   "keys": [
-    { "vk": 49, "base": "౧" },
+    { "vk": 48, "shift": ")" },
+    { "vk": 49, "base": "౧", "shift": "!" },
     { "vk": 50, "base": "౨" },
     { "vk": 51, "base": "౩" },
     { "vk": 52, "base": "౪" },
-    { "vk": 53, "base": "౫" },
+    { "vk": 53, "base": "౫", "shift": "%" },
     { "vk": 54, "base": "౬", "shift": "ఐ" },
     { "vk": 55, "base": "౭" },
-    { "vk": 56, "base": "౮" },
-    { "vk": 57, "base": "౯" },
+    { "vk": 56, "base": "౮", "shift": "*" },
+    { "vk": 57, "base": "౯", "shift": "(" },
     { "vk": 65, "base": "ా", "shift": "అ" },
     { "vk": 66, "base": "బ", "shift": "భ" },
     { "vk": 67, "base": "చ", "shift": "ఛ" },
@@ -39,10 +40,14 @@
     { "vk": 88, "base": "క్ష" },
     { "vk": 89, "base": "య", "shift": "థ" },
     { "vk": 90, "base": "ఁ", "shift": "ఐ" },
+    { "vk": 186, "base": ";", "shift": ":" },
     { "vk": 187, "base": "్" },
     { "vk": 188, "base": ",", "shift": "ఠ" },
+    { "vk": 189, "base": "-" },
     { "vk": 190, "base": "." },
-    { "vk": 219, "base": "ై", "shift": "ఢ" }
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 219, "base": "ై", "shift": "ఢ" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }

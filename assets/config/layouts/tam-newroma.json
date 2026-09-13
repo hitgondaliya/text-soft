@@ -4,7 +4,16 @@
   "name": "Newroma",
   "fontId": "latha",
   "keys": [
-    { "vk": 49, "shift": "க்ஷ" },
+    { "vk": 48, "base": "0", "shift": ")" },
+    { "vk": 49, "base": "1", "shift": "க்ஷ" },
+    { "vk": 50, "base": "2" },
+    { "vk": 51, "base": "3" },
+    { "vk": 52, "base": "4" },
+    { "vk": 53, "base": "5", "shift": "%" },
+    { "vk": 54, "base": "6" },
+    { "vk": 55, "base": "7" },
+    { "vk": 56, "base": "8", "shift": "*" },
+    { "vk": 57, "base": "9", "shift": "(" },
     { "vk": 65, "shift": "அ" },
     { "vk": 66, "base": "ப" },
     { "vk": 67, "base": "ச" },
@@ -24,7 +33,12 @@
     { "vk": 87, "base": "வ" },
     { "vk": 88, "shift": "ஸ்ரீ" },
     { "vk": 89, "base": "ய" },
-    { "vk": 90, "base": "ழ", "shift": "ழ" }
+    { "vk": 90, "base": "ழ", "shift": "ழ" },
+    { "vk": 186, "base": ";", "shift": ":" },
+    { "vk": 188, "base": "," },
+    { "vk": 189, "base": "-" },
+    { "vk": 191, "base": "/", "shift": "?" },
+    { "vk": 222, "base": "'", "shift": "\"" }
   ],
   "deadKeyCombinations": []
 }
