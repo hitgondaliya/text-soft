@@ -1,0 +1,276 @@
+<UserControl x:Class="FontSoftware.App.Views.ConverterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ctl="clr-namespace:FontSoftware.App.Controls"
+             xmlns:vm="clr-namespace:FontSoftware.App.ViewModels">
+    <UserControl.Resources>
+        <Style x:Key="PanelHead" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource Sidebar}" />
+            <Setter Property="Padding" Value="14,8" />
+        </Style>
+        <Style x:Key="PanelHeadText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        <Style x:Key="FieldLabel" TargetType="TextBlock" BasedOn="{StaticResource Label}">
+            <Setter Property="Margin" Value="1,10,0,5" />
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+            <Setter Property="Margin" Value="0,0,16,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+        <Style x:Key="BoxBorder" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource Surface}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Border}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+        <Style TargetType="RichTextBox">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Padding" Value="10,8" />
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+            <Setter Property="AcceptsTab" Value="True" />
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+        </Style>
+        <Style x:Key="SmallSecondary" TargetType="Button" BasedOn="{StaticResource Secondary}">
+            <Setter Property="Padding" Value="12,7" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style x:Key="SmallCombo" TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="Height" Value="34" />
+            <Setter Property="FontSize" Value="12.5" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="290" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ================= LEFT: data ================= -->
+        <Grid Grid.Column="0" Margin="0,0,14,0">
+            <!-- Text / clipboard mode -->
+            <Grid Visibility="{Binding TextMode, Converter={StaticResource BoolToVis}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Input Data" Style="{StaticResource H2}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <ComboBox ItemsSource="{Binding InputFonts}" SelectedItem="{Binding SelectedInputFont}" Width="168"
+                                  Style="{StaticResource SmallCombo}" DisplayMemberPath="Name" ToolTip="Font of the input box" />
+                        <ComboBox x:Name="InputSizeBox" SelectedItem="{Binding InputFontSize}" Width="66" Margin="8,0,0,0"
+                                  Style="{StaticResource SmallCombo}" ToolTip="Font size" />
+                        <Button Content="Clipboard" Command="{Binding GetClipboardCommand}" Style="{StaticResource SmallSecondary}"
+                                Margin="10,0,0,0" ToolTip="Take whatever is on the clipboard (Word text keeps its formatting)" />
+                    </StackPanel>
+                </Grid>
+
+                <Border Grid.Row="1" Style="{StaticResource BoxBorder}">
+                    <RichTextBox x:Name="InputBox" FontFamily="{Binding InputFontFamily}" FontSize="{Binding InputFontSize}"
+                                 AutomationProperties.AutomationId="ConvInput" />
+                </Border>
+
+                <Grid Grid.Row="2" Margin="0,12,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Output Data" Style="{StaticResource H2}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <ComboBox ItemsSource="{Binding OutputFonts}" SelectedItem="{Binding SelectedOutputFont}" Width="168"
+                                  Style="{StaticResource SmallCombo}" DisplayMemberPath="Name" ToolTip="Font of the output box" />
+                        <ComboBox x:Name="OutputSizeBox" SelectedItem="{Binding OutputFontSize}" Width="66" Margin="8,0,0,0"
+                                  Style="{StaticResource SmallCombo}" ToolTip="Font size" />
+                        <Button Content="Copy" Command="{Binding CopyCommand}" Style="{StaticResource SmallSecondary}" Margin="10,0,0,0" />
+                    </StackPanel>
+                </Grid>
+
+                <Border Grid.Row="3" Style="{StaticResource BoxBorder}" Background="{StaticResource AppBg}">
+                    <Grid>
+                        <RichTextBox x:Name="OutputBox" IsReadOnly="True" FontFamily="{Binding OutputFontFamily}" FontSize="{Binding OutputFontSize}"
+                                     Visibility="{Binding TargetIsLegacy, Converter={StaticResource NotBoolToVis}}"
+                                     AutomationProperties.AutomationId="ConvOutput" />
+                        <!-- A legacy font's letters sit on bytes Unicode treats as invisible (ISFOC's ર is
+                             U+00AD), so the legacy result is drawn by glyph index. The clipboard still gets
+                             the formatted RTF. -->
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="10,8"
+                                      Visibility="{Binding TargetIsLegacy, Converter={StaticResource BoolToVis}}">
+                            <ctl:LegacyTextView x:Name="LegacyOutput" FontFamily="{Binding OutputFontFamily}" FontSize="{Binding OutputFontSize}"
+                                                Foreground="{StaticResource Text}" />
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+
+                <DockPanel Grid.Row="4" Margin="0,12,0,0">
+                    <Button Content="Start Over" Command="{Binding StartOverCommand}" Style="{StaticResource Secondary}" DockPanel.Dock="Left" />
+                    <Button Content="Convert" Command="{Binding ConvertCommand}" DockPanel.Dock="Right" MinWidth="120"
+                            AutomationProperties.AutomationId="ConvConvert" />
+                    <TextBlock Margin="16,0" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Status}">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StatusIsError}" Value="True">
+                                        <Setter Property="Foreground" Value="#B91C1C" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DockPanel>
+            </Grid>
+
+            <!-- Files mode -->
+            <Grid Visibility="{Binding FilesMode, Converter={StaticResource BoolToVis}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource BoxBorder}" AllowDrop="True" Drop="FilesDrop" DragOver="FilesDragOver">
+                    <Grid>
+                        <ListView x:Name="FileList" ItemsSource="{Binding Files}" BorderThickness="0" Background="Transparent"
+                                  SelectionMode="Extended" FontSize="12.5">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="File" Width="220" DisplayMemberBinding="{Binding Name}" />
+                                    <GridViewColumn Header="Folder" Width="300" DisplayMemberBinding="{Binding Folder}" />
+                                    <GridViewColumn Header="Status" Width="180" DisplayMemberBinding="{Binding Status}" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <TextBlock Text="Drop .txt, .rtf or .docx files here, or use Add Files / Add Folder."
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Files.Count}" Value="0">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" Margin="12,0,0,0" Width="130">
+                    <Button Content="Add Files" Click="AddFilesClick" />
+                    <Button Content="Add Folder" Click="AddFolderClick" Margin="0,8,0,0" />
+                    <CheckBox Content="Include subfolders" IsChecked="{Binding IncludeSubdirectories}" Margin="2,10,0,0" FontSize="12" />
+                    <Button Content="Remove" Click="RemoveClick" Style="{StaticResource Secondary}" Margin="0,14,0,0" />
+                    <Button Content="Remove All" Command="{Binding RemoveAllFilesCommand}" Style="{StaticResource Secondary}" Margin="0,8,0,0" />
+                </StackPanel>
+
+                <ProgressBar Grid.Row="1" Grid.ColumnSpan="2" Height="6" Margin="0,10,0,0" Value="{Binding Progress}" Maximum="100"
+                             Foreground="{StaticResource Primary}" BorderThickness="0" Background="{StaticResource Border}"
+                             Visibility="{Binding IsBusy, Converter={StaticResource BoolToVis}}" />
+
+                <DockPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="0,12,0,0">
+                    <Button Content="Start Over" Command="{Binding StartOverCommand}" Style="{StaticResource Secondary}" DockPanel.Dock="Left" />
+                    <Button Content="Convert Files" Command="{Binding ConvertCommand}" DockPanel.Dock="Right" MinWidth="140" />
+                    <TextBlock Margin="16,0" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Status}">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StatusIsError}" Value="True">
+                                        <Setter Property="Foreground" Value="#B91C1C" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DockPanel>
+            </Grid>
+        </Grid>
+
+        <!-- ================= RIGHT: selection panel ================= -->
+        <Border Grid.Column="1" Style="{StaticResource BoxBorder}" Padding="0" ClipToBounds="True">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Border Style="{StaticResource PanelHead}" CornerRadius="10,10,0,0">
+                        <TextBlock Text="Input Selection" Style="{StaticResource PanelHeadText}" />
+                    </Border>
+                    <StackPanel Margin="14,4,14,12">
+                        <TextBlock Text="SCRIPT" Style="{StaticResource FieldLabel}" />
+                        <ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage}" DisplayMemberPath="Name"
+                                  Style="{StaticResource SmallCombo}" AutomationProperties.AutomationId="ConvScript" />
+                        <TextBlock Text="INPUT LAYOUT" Style="{StaticResource FieldLabel}" />
+                        <ComboBox ItemsSource="{Binding InputLayouts}" SelectedItem="{Binding SelectedInputLayout}" DisplayMemberPath="Label"
+                                  Style="{StaticResource SmallCombo}" AutomationProperties.AutomationId="ConvInLayout" />
+                        <TextBlock Text="INPUT DATA FORMAT" Style="{StaticResource FieldLabel}" />
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton Content="Text / Clipboard" IsChecked="{Binding TextMode}" GroupName="inMode" />
+                            <RadioButton Content="Files" IsChecked="{Binding FilesMode}" GroupName="inMode" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border Style="{StaticResource PanelHead}">
+                        <TextBlock Text="Output Selection" Style="{StaticResource PanelHeadText}" />
+                    </Border>
+                    <StackPanel Margin="14,4,14,12">
+                        <TextBlock Text="OUTPUT LAYOUT" Style="{StaticResource FieldLabel}" />
+                        <DockPanel>
+                            <Button Content="⇄" Command="{Binding SwapCommand}" Style="{StaticResource SmallSecondary}" DockPanel.Dock="Right"
+                                    Margin="6,0,0,0" Padding="9,6" ToolTip="Swap input and output layouts" />
+                            <ComboBox ItemsSource="{Binding OutputLayouts}" SelectedItem="{Binding SelectedOutputLayout}" DisplayMemberPath="Label"
+                                      Style="{StaticResource SmallCombo}" AutomationProperties.AutomationId="ConvOutLayout" />
+                        </DockPanel>
+                        <StackPanel Visibility="{Binding TextMode, Converter={StaticResource BoolToVis}}">
+                            <TextBlock Text="OUTPUT DATA FORMAT" Style="{StaticResource FieldLabel}" />
+                            <CheckBox Content="Also copy result to clipboard" IsChecked="{Binding CopyToClipboard}" FontSize="12" />
+                        </StackPanel>
+                        <StackPanel Visibility="{Binding FilesMode, Converter={StaticResource BoolToVis}}">
+                            <TextBlock Text="OUTPUT TO FOLDER" Style="{StaticResource FieldLabel}" />
+                            <DockPanel>
+                                <Button Content="Browse" Click="BrowseOutputClick" Style="{StaticResource SmallSecondary}" DockPanel.Dock="Right" Margin="6,0,0,0" />
+                                <TextBox Text="{Binding OutputFolder, UpdateSourceTrigger=PropertyChanged}" FontSize="12" Padding="8,7" />
+                            </DockPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border Style="{StaticResource PanelHead}">
+                        <TextBlock Text="Advanced Settings" Style="{StaticResource PanelHeadText}" />
+                    </Border>
+                    <StackPanel Margin="14,4,14,14">
+                        <TextBlock Text="OUTPUT NUMERALS" Style="{StaticResource FieldLabel}" />
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton Content="Language" IsChecked="{Binding NumeralsLanguage}" GroupName="num" />
+                            <RadioButton Content="English" IsChecked="{Binding NumeralsEnglish}" GroupName="num" />
+                            <RadioButton Content="Hindi" IsChecked="{Binding NumeralsHindi}" GroupName="num" />
+                        </StackPanel>
+                        <TextBlock Text="CONVERSION DICTIONARY" Style="{StaticResource FieldLabel}" />
+                        <CheckBox Content="Use dictionary" IsChecked="{Binding UseDictionary}" FontSize="12" />
+                        <TextBlock Text="{Binding DictionaryCountText}" Style="{StaticResource Hint}" FontSize="11" Margin="26,2,0,6" />
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Edit…" Click="EditDictionaryClick" Style="{StaticResource SmallSecondary}" />
+                            <Button Content="Clear" Command="{Binding ClearDictionaryCommand}" Style="{StaticResource SmallSecondary}" Margin="6,0,0,0" />
+                        </StackPanel>
+                        <TextBlock Text="OUTPUT" Style="{StaticResource FieldLabel}" />
+                        <CheckBox Content="Get plain text (drop formatting)" IsChecked="{Binding PlainText}" FontSize="12" />
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>

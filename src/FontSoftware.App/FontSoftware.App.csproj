@@ -33,6 +33,8 @@
   <ItemGroup>
     <!-- Mobile-number validation per country (same rules as the server's libphonenumber-js). -->
     <PackageReference Include="libphonenumber-csharp" Version="9.0.39" />
+    <!-- .docx conversion (Converter nxt "Files" mode). -->
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.5.1" />
   </ItemGroup>
 
   <!-- WinForms is used only for the tray icon, via an explicit alias in code.

@@ -1,12 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <RootNamespace>FontSoftware.Tests</RootNamespace>
   </PropertyGroup>
+
+  <!-- UseWPF drops System.IO from the implicit usings (Path clashes with Shapes.Path); the tests want it. -->
+  <ItemGroup>
+    <Using Include="System.IO" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
@@ -17,6 +23,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\FontSoftware.Core\FontSoftware.Core.csproj" />
     <ProjectReference Include="..\..\src\FontSoftware.Licensing\FontSoftware.Licensing.csproj" />
+    <!-- Rich-text / file conversion services live in the app assembly (WPF). -->
+    <ProjectReference Include="..\..\src\FontSoftware.App\FontSoftware.App.csproj" />
   </ItemGroup>
 
   <!-- Copy the sample config so ConfigLoader tests can load real files. -->
