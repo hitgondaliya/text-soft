@@ -305,6 +305,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         Converter = new ConverterViewModel(bundle, fonts);
 
         string appVersion = typeof(MainViewModel).Assembly.GetName().Version?.ToString() ?? "1.0.0";
+        LicenseApiClient.Log = msg => _log.Warn(msg);
         var licenseManager = new LicenseManager(
             new LicenseApiClient(LicenseEndpoints.Resolve()),
             new TokenReader(new Ed25519Verifier()),

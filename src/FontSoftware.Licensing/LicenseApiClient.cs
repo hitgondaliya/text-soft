@@ -1,6 +1,5 @@
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Text.Json;
 
 namespace FontSoftware.Licensing;
@@ -51,35 +50,44 @@ public sealed class LicenseApiClient : ILicenseApi
             _http.Timeout = TimeSpan.FromSeconds(15);
     }
 
+    /// <summary>Diagnostics sink (the app points this at its log file).</summary>
+    public static Action<string>? Log { get; set; }
+
+    // Request bodies are dictionaries, not anonymous types: the release build is
+    // obfuscated, and Obfuscar renames anonymous-type properties, which turned
+    // {"serial":…} into {"A":…} and every call into "cannot reach the server".
+    // Dictionary keys are plain runtime strings and survive obfuscation.
     public Task<ApiResult> ActivateAsync(ActivationRequest r, CancellationToken ct = default)
-        => PostAsync("api/activate", new
+        => PostAsync("api/activate", new Dictionary<string, string?>
         {
-            serial = r.Serial,
-            key = r.Key,
-            deviceFp = r.DeviceFp,
-            machineHint = r.MachineHint,
-            deviceName = r.DeviceName,
-            appVersion = r.AppVersion
+            ["serial"] = r.Serial,
+            ["key"] = r.Key,
+            ["deviceFp"] = r.DeviceFp,
+            ["machineHint"] = r.MachineHint,
+            ["deviceName"] = r.DeviceName,
+            ["appVersion"] = r.AppVersion
         }, ct);
 
     public Task<ApiResult> ValidateAsync(string token, string appVersion, CancellationToken ct = default)
-        => PostAsync("api/validate", new { token, appVersion }, ct);
+        => PostAsync("api/validate", new Dictionary<string, string?> { ["token"] = token, ["appVersion"] = appVersion }, ct);
 
     public Task<ApiResult> RegisterAsync(string token, RegistrationInfo info, CancellationToken ct = default)
-        => PostAsync("api/register", new
+        => PostAsync("api/register", new Dictionary<string, string?>
         {
-            token,
-            name = info.Name,
-            email = info.Email,
-            phoneCountry = info.PhoneCountry,
-            phone = info.Phone
+            ["token"] = token,
+            ["name"] = info.Name,
+            ["email"] = info.Email,
+            ["phoneCountry"] = info.PhoneCountry,
+            ["phone"] = info.Phone
         }, ct);
 
-    private async Task<ApiResult> PostAsync(string path, object body, CancellationToken ct)
+    private async Task<ApiResult> PostAsync(string path, Dictionary<string, string?> body, CancellationToken ct)
     {
         try
         {
-            using var resp = await _http.PostAsJsonAsync(path, body, ct).ConfigureAwait(false);
+            string payload = JsonSerializer.Serialize(body);
+            using var content = new StringContent(payload, System.Text.Encoding.UTF8, "application/json");
+            using var resp = await _http.PostAsync(path, content, ct).ConfigureAwait(false);
             string json = await resp.Content.ReadAsStringAsync(ct).ConfigureAwait(false);
 
             if (resp.IsSuccessStatusCode)
@@ -94,16 +102,20 @@ public sealed class LicenseApiClient : ILicenseApi
             // A 5xx is the server falling over, which for the caller is the same as
             // not being reachable. Anything else is a real answer.
             if ((int)resp.StatusCode >= 500)
+            {
+                Log?.Invoke($"License API {path}: HTTP {(int)resp.StatusCode}");
                 return ApiResult.Net;
+            }
 
             // Error body looks like {"error":"already_bound","boundDeviceName":"OFFICE-PC1"}.
             string? err = TryGet(json, "error");
             string? detail = TryGet(json, "boundDeviceName") ?? TryGet(json, "field") ?? TryGet(json, "reason");
             return new ApiResult(MapError(err), null, detail);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             // Timeouts, DNS, refused connections, TLS, malformed body — all transport.
+            Log?.Invoke($"License API {path}: {ex.GetType().Name}: {ex.Message}");
             return ApiResult.Net;
         }
     }
