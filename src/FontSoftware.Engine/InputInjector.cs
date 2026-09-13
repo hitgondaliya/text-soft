@@ -40,6 +40,37 @@ public sealed class InputInjector
         Send(inputs, $"text '{text}'");
     }
 
+    /// <summary>
+    /// Inject text already carrying a font: the text goes on the clipboard as RTF
+    /// (+ plain text) and a Ctrl+V is sent. Rich editors (Word, WordPad, Outlook)
+    /// take the font from the RTF, so legacy-font text appears in its font without
+    /// the user touching the font box. Whatever text was on the clipboard before is
+    /// put back shortly after the paste.
+    /// </summary>
+    public void SendRichText(string text, string fontName)
+    {
+        if (string.IsNullOrEmpty(text))
+            return;
+
+        string? previous = RichTextClipboard.Set(text, fontName);
+
+        var inputs = new INPUT[4];
+        inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false);
+        inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false);
+        inputs[2] = VirtualKeyInput(0x56, keyUp: true);
+        inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true);
+        Send(inputs, $"rich paste '{text}' in {fontName}");
+
+        if (previous is not null)
+        {
+            // Give the target app time to read the clipboard, then restore the user's text.
+            _ = Task.Delay(400).ContinueWith(_ =>
+            {
+                try { RichTextClipboard.SetText(previous); } catch { /* best effort */ }
+            });
+        }
+    }
+
     /// <summary>Send <paramref name="count"/> backspace key presses.</summary>
     public void SendBackspace(int count = 1)
     {

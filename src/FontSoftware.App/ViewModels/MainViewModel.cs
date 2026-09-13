@@ -106,8 +106,12 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     }
     public bool ShowLegacyFontHint => _legacyFontHint.Length > 0;
 
+    /// <summary>The installed font Word gets when legacy text is typed (null = none installed).</summary>
+    public string? LegacyFontName { get; private set; }
+
     private void UpdateLegacyFontHint()
     {
+        LegacyFontName = null;
         if (!LegacyTypingActive || SelectedFont is null || SelectedLanguage is null)
         {
             LegacyFontHint = "";
@@ -120,9 +124,11 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
             .ToList();
+        // Prefer the font chosen in the Render box when it is installed, else the first installed one.
+        LegacyFontName = installed.FirstOrDefault(f => string.Equals(f, SelectedFont.Family, StringComparison.OrdinalIgnoreCase)) ?? installed.FirstOrDefault();
         LegacyFontHint = installed.Count == 0
-            ? $"In Word or any other app, set the font to a {SelectedFontLayout?.Name} font. No such font is installed on this PC yet, so typed text will show as boxes there."
-            : $"In Word or any other app, set the font to {string.Join(" / ", installed.Take(4))}{(installed.Count > 4 ? " …" : "")} — {SelectedFontLayout?.Name} text shows as boxes in any other font.";
+            ? $"No {SelectedFontLayout?.Name} font is installed on this PC, so typed text will show as boxes in other apps. Install one of its fonts."
+            : $"Word, Outlook and WordPad get the font {LegacyFontName} automatically. In Notepad or a browser, set the font to {LegacyFontName} yourself — {SelectedFontLayout?.Name} text shows as boxes in any other font.";
     }
 
     private bool _legacyTypingActive;
@@ -531,9 +537,9 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             FontConverter? legacy = null;
             if (SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode && SelectedFont is not null)
                 legacy = _bundle.CreateConverterToLegacy(SelectedFont.ConversionKey);
-            _engine.SetLegacyConverter(legacy);
             LegacyTypingActive = legacy is not null;
             UpdateLegacyFontHint();
+            _engine.SetLegacyConverter(legacy, LegacyFontName);
 
             RefreshKeyboard();
             string mode = LegacyTypingActive ? " (legacy)" : SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode ? " (font not provided — types Unicode)" : string.Empty;

@@ -110,11 +110,31 @@ public sealed class TypingEngine : IDisposable
     /// plain Unicode). When set, typed text is injected in the legacy encoding so it
     /// renders in that legacy font.
     /// </summary>
-    public void SetLegacyConverter(FontConverter? converter)
+    public void SetLegacyConverter(FontConverter? converter, string? fontName = null)
     {
         _legacyConv = converter;
+        LegacyFontName = converter is null ? null : fontName;
         ResetLegacy();
     }
+
+    /// <summary>
+    /// Installed font that draws the active legacy layout (e.g. "SHREE-GUJX-1120").
+    /// When set, legacy text typed into a rich editor (see <see cref="RichTextApps"/>)
+    /// is pasted as RTF in this font, so it shows correctly without the user
+    /// picking the font by hand — the way Shree-Lipi does it.
+    /// </summary>
+    public string? LegacyFontName { get; private set; }
+
+    /// <summary>
+    /// Process names (lower-case, no extension) that take RTF from the clipboard and
+    /// keep its font. Everything else (Notepad, browsers, chat apps) gets plain
+    /// characters and shows them in whatever font it uses.
+    /// </summary>
+    public HashSet<string> RichTextApps { get; } = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "winword", "wordpad", "outlook", "powerpnt", "excel", "onenote", "onenoteim",
+        "soffice", "soffice.bin", "swriter", "wps", "wpp", "et", "notepad++", "textmaker"
+    };
 
     private void ResetLegacy()
     {
@@ -270,8 +290,19 @@ public sealed class TypingEngine : IDisposable
         if (_legacyOut.Length > 0)
             _injector.SendBackspace(_legacyOut.Length);
         if (next.Length > 0)
-            _injector.SendText(next);
+        {
+            if (LegacyFontName is not null && ForegroundTakesRichText())
+                _injector.SendRichText(next, LegacyFontName);
+            else
+                _injector.SendText(next);
+        }
         _legacyOut = next;
+    }
+
+    private bool ForegroundTakesRichText()
+    {
+        string? name = ForegroundApp.GetProcessName();
+        return name is not null && RichTextApps.Contains(name);
     }
 
     private void HandleBackspace(HookKeyEventArgs e)
