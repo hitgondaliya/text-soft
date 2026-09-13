@@ -57,7 +57,14 @@ const child = spawn(
   ["next", "dev", "-p", port],
   {
     stdio: "inherit",
-    env: { ...process.env, ...fileEnv, MONGODB_URI: uri, MONGODB_DB: dbName },
+    env: {
+      ...process.env,
+      ...fileEnv,
+      MONGODB_URI: uri,
+      MONGODB_DB: dbName,
+      // own build directory, so a production build cannot clobber this one
+      NEXT_DIST_DIR: ".next-dev",
+    },
     shell: process.platform === "win32",
   },
 );

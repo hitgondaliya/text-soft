@@ -1,158 +1,102 @@
-:root {
-  --bg: #1b1d21;
-  --surface: #24272c;
-  --surface-2: #2c3037;
-  --border: #3a3f47;
-  --text: #eceef1;
-  --muted: #9aa2ad;
-  --brand: #ef7215;
-  --brand-hover: #d9640c;
-  --ok: #3fb950;
-  --warn: #d9a441;
-  --danger: #e5534b;
-  --radius: 10px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TextSoft brand: logo orange on warm neutrals. Light is the default; dark is
+   opted into with the .dark class (next-themes), never by media query alone,
+   so the toggle wins in both directions. */
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 220 14% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 12%;
+    --primary: 22 89% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 12% 94%;
+    --secondary-foreground: 220 14% 16%;
+    --muted: 30 12% 94%;
+    --muted-foreground: 220 9% 44%;
+    --accent: 24 95% 95%;
+    --accent-foreground: 20 80% 32%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 45%;
+    --warning-foreground: 0 0% 100%;
+    --border: 30 10% 88%;
+    --input: 30 10% 86%;
+    --ring: 22 89% 50%;
+    --radius: 0.75rem;
+
+    --sidebar: 220 16% 11%;
+    --sidebar-foreground: 30 10% 90%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-accent: 220 14% 17%;
+    --sidebar-accent-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 30 12% 92%;
+    --card: 220 14% 11%;
+    --card-foreground: 30 12% 92%;
+    --popover: 220 14% 11%;
+    --popover-foreground: 30 12% 92%;
+    --primary: 22 92% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 12% 16%;
+    --secondary-foreground: 30 10% 90%;
+    --muted: 220 12% 16%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 22 40% 16%;
+    --accent-foreground: 24 95% 75%;
+    --destructive: 0 68% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 55% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 90% 55%;
+    --warning-foreground: 220 15% 8%;
+    --border: 220 12% 18%;
+    --input: 220 12% 20%;
+    --ring: 22 92% 55%;
+
+    --sidebar: 220 16% 6%;
+    --sidebar-foreground: 30 10% 88%;
+    --sidebar-border: 220 12% 14%;
+    --sidebar-accent: 220 14% 13%;
+    --sidebar-accent-foreground: 0 0% 100%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+  ::selection {
+    @apply bg-primary/20;
+  }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-size: 14px;
-}
-
-a {
-  color: var(--brand);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-  border: none;
-  border-radius: var(--radius);
-  padding: 9px 16px;
-  background: var(--brand);
-  color: #fff;
-  font-weight: 600;
-  transition: background 0.15s;
-}
-button:hover {
-  background: var(--brand-hover);
-}
-button.secondary {
-  background: var(--surface-2);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-button.danger {
-  background: var(--danger);
-}
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-input,
-select,
-textarea {
-  font: inherit;
-  background: var(--surface-2);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 9px 11px;
-  width: 100%;
-}
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--brand);
-}
-
-label {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-}
-
-.grid {
-  display: grid;
-  gap: 16px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th,
-td {
-  text-align: left;
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--border);
-}
-th {
-  color: var(--muted);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-tbody tr:hover {
-  background: var(--surface-2);
-}
-
-.badge {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-}
-.badge.active {
-  background: rgba(63, 185, 80, 0.15);
-  color: var(--ok);
-}
-.badge.revoked {
-  background: rgba(229, 83, 75, 0.15);
-  color: var(--danger);
-}
-.badge.expired {
-  background: rgba(217, 164, 65, 0.15);
-  color: var(--warn);
-}
-.badge.demo {
-  background: rgba(154, 162, 173, 0.15);
-  color: var(--muted);
-}
-.badge.full {
-  background: rgba(239, 114, 21, 0.15);
-  color: var(--brand);
-}
-
-.mono {
-  font-family: "Cascadia Mono", "Consolas", monospace;
-}
-.muted {
-  color: var(--muted);
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* soft radial glow behind hero surfaces */
+  .brand-glow {
+    background-image:
+      radial-gradient(60% 50% at 20% 0%, hsl(var(--primary) / 0.28), transparent 60%),
+      radial-gradient(40% 40% at 90% 100%, hsl(var(--primary) / 0.18), transparent 60%);
+  }
 }

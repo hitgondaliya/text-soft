@@ -37,6 +37,8 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
   return ok({
     id: key._id!.toHexString(),
     prefix: key.keyPrefix,
+    serial: key.serial ?? null,
+    seq: key.seq ?? null,
     edition: key.edition,
     status: key.status,
     expired: !!key.expiryUtc && now > key.expiryUtc,

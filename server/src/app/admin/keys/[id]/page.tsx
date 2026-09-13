@@ -1,7 +1,20 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { toast } from "sonner";
+import { ArrowLeft, CalendarPlus, Ban, RotateCcw, MonitorSmartphone, Unplug, Loader2 } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { EditionBadge, StatusBadge } from "@/components/status-badge";
+import { fmtDate, fmtDateTime, fmtRelative } from "@/lib/utils";
 
 interface Activation {
   id: string;
@@ -16,6 +29,8 @@ interface Activation {
 interface Detail {
   id: string;
   prefix: string;
+  serial?: string;
+  seq?: number;
   edition: string;
   status: string;
   expired: boolean;
@@ -31,10 +46,10 @@ interface Detail {
 
 export default function KeyDetail() {
   const { id } = useParams<{ id: string }>();
-  const router = useRouter();
   const [d, setD] = useState<Detail | null>(null);
   const [extendDays, setExtendDays] = useState(30);
   const [limit, setLimit] = useState(1);
+  const [busy, setBusy] = useState(false);
 
   const load = useCallback(() => {
     fetch(`/api/admin/keys/${id}`)
@@ -50,140 +65,209 @@ export default function KeyDetail() {
     load();
   }, [load]);
 
-  async function patch(body: Record<string, unknown>) {
-    await fetch(`/api/admin/keys/${id}`, {
+  async function patch(body: Record<string, unknown>, success: string) {
+    setBusy(true);
+    const res = await fetch(`/api/admin/keys/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(body),
     });
+    setBusy(false);
+    if (res.ok) toast.success(success);
+    else toast.error("That didn't work. Try again.");
     load();
   }
 
-  if (!d) return <div className="muted">Loading…</div>;
+  if (!d) {
+    return (
+      <div className="space-y-4">
+        <Skeleton className="h-8 w-56" />
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Skeleton className="h-64" />
+          <Skeleton className="h-64" />
+        </div>
+      </div>
+    );
+  }
+
+  const active = d.activations.filter((a) => a.status === "active").length;
 
   return (
     <div>
-      <button className="secondary" onClick={() => router.push("/admin/keys")} style={{ marginBottom: 16 }}>
-        ← Back
-      </button>
+      <Button variant="ghost" size="sm" className="-ml-2 mb-2 text-muted-foreground" asChild>
+        <Link href={d.serial ? `/admin/orders/${d.serial}` : "/admin/keys"}>
+          <ArrowLeft /> {d.serial ?? "License keys"}
+        </Link>
+      </Button>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-        <h1 className="mono" style={{ margin: 0 }}>{d.prefix}…</h1>
-        <span className={`badge ${d.edition}`}>{d.edition}</span>
-        {d.status === "revoked" ? (
-          <span className="badge revoked">revoked</span>
-        ) : d.expired ? (
-          <span className="badge expired">expired</span>
-        ) : (
-          <span className="badge active">active</span>
-        )}
-      </div>
-
-      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", marginTop: 20 }}>
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Details</h3>
-          <Row label="Expiry" value={d.expiryUtc ? new Date(d.expiryUtc).toLocaleString() : "perpetual"} />
-          <Row label="Device limit" value={String(d.deviceLimit)} />
-          <Row label="Customer" value={d.customerName || "—"} />
-          <Row label="Email" value={d.customerEmail || "—"} />
-          <Row label="Note" value={d.note || "—"} />
-          <Row label="Created by" value={d.createdBy} />
-          <Row label="Created" value={new Date(d.createdUtc).toLocaleString()} />
-        </div>
-
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Actions</h3>
-
-          <div style={{ display: "flex", gap: 8, alignItems: "flex-end", marginBottom: 14 }}>
-            <div style={{ flex: 1 }}>
-              <label>Extend by days</label>
-              <input type="number" min={1} value={extendDays} onChange={(e) => setExtendDays(+e.target.value)} />
-            </div>
-            <button onClick={() => patch({ action: "extend", days: extendDays })}>Extend</button>
-          </div>
-
-          <div style={{ display: "flex", gap: 8, alignItems: "flex-end", marginBottom: 14 }}>
-            <div style={{ flex: 1 }}>
-              <label>Device limit</label>
-              <input type="number" min={1} value={limit} onChange={(e) => setLimit(+e.target.value)} />
-            </div>
-            <button className="secondary" onClick={() => patch({ action: "setDeviceLimit", deviceLimit: limit })}>
-              Set
-            </button>
-          </div>
-
-          {d.status === "revoked" ? (
-            <button onClick={() => patch({ action: "unrevoke" })}>Un-revoke key</button>
+      <PageHeader
+        title={
+          <span className="flex flex-wrap items-center gap-3">
+            <span className="font-mono">{d.prefix}…</span>
+            <EditionBadge edition={d.edition} />
+            <StatusBadge status={d.status} expired={d.expired} />
+          </span>
+        }
+        description={
+          d.serial ? (
+            <>
+              Key #{d.seq} of purchase{" "}
+              <Link href={`/admin/orders/${d.serial}`} className="font-mono text-primary hover:underline">
+                {d.serial}
+              </Link>
+            </>
           ) : (
-            <button className="danger" onClick={() => patch({ action: "revoke" })}>
-              Revoke key
-            </button>
-          )}
-        </div>
+            "Issued before purchases existed"
+          )
+        }
+      />
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Details</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <dl className="divide-y text-sm">
+              <Row label="Customer" value={d.customerName || "—"} />
+              <Row label="Email" value={d.customerEmail || "—"} />
+              <Row label="Valid until" value={d.expiryUtc ? `${fmtDate(d.expiryUtc)} (${fmtRelative(d.expiryUtc)})` : "Perpetual"} />
+              <Row label="Device limit" value={String(d.deviceLimit)} />
+              <Row label="Note" value={d.note || "—"} />
+              <Row label="Issued" value={`${fmtDateTime(d.createdUtc)} by ${d.createdBy}`} />
+            </dl>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>This key only</CardTitle>
+            <CardDescription>
+              To change every key of the sale at once, use the purchase page instead.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-5">
+            <div className="flex items-end gap-2">
+              <div className="flex-1 space-y-2">
+                <Label htmlFor="extend">Extend by days</Label>
+                <Input id="extend" type="number" min={1} value={extendDays} onChange={(e) => setExtendDays(+e.target.value)} />
+              </div>
+              <Button
+                variant="outline"
+                disabled={busy}
+                onClick={() => patch({ action: "extend", days: extendDays }, `Extended by ${extendDays} days`)}
+              >
+                <CalendarPlus /> Extend
+              </Button>
+            </div>
+            <div className="flex items-end gap-2">
+              <div className="flex-1 space-y-2">
+                <Label htmlFor="limit">Device limit</Label>
+                <Input id="limit" type="number" min={1} max={100} value={limit} onChange={(e) => setLimit(+e.target.value)} />
+              </div>
+              <Button
+                variant="outline"
+                disabled={busy}
+                onClick={() => patch({ action: "setDeviceLimit", deviceLimit: limit }, `Device limit set to ${limit}`)}
+              >
+                <MonitorSmartphone /> Set
+              </Button>
+            </div>
+            <div className="border-t pt-5">
+              {d.status === "revoked" ? (
+                <Button disabled={busy} onClick={() => patch({ action: "unrevoke" }, "Key is active again")}>
+                  <RotateCcw /> Un-revoke key
+                </Button>
+              ) : (
+                <Button
+                  variant="destructive"
+                  disabled={busy}
+                  onClick={() => patch({ action: "revoke" }, "Key revoked")}
+                >
+                  <Ban /> Revoke key
+                </Button>
+              )}
+              {busy && <Loader2 className="ml-3 inline h-4 w-4 animate-spin text-muted-foreground" />}
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
-      <div className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>
-          Activations ({d.activations.filter((a) => a.status === "active").length}/{d.deviceLimit})
-        </h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Device</th>
-              <th>Fingerprint</th>
-              <th>IP</th>
-              <th>Version</th>
-              <th>Last seen</th>
-              <th>Status</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {d.activations.map((a) => (
-              <tr key={a.id}>
-                <td>{a.deviceName || "—"}</td>
-                <td className="mono muted">{a.deviceFp.slice(0, 16)}…</td>
-                <td className="muted">{a.ip}</td>
-                <td className="muted">{a.appVersion || "—"}</td>
-                <td className="muted">{new Date(a.lastSeenUtc).toLocaleString()}</td>
-                <td>
-                  {a.status === "active" ? (
-                    <span className="badge active">active</span>
-                  ) : (
-                    <span className="badge revoked">off</span>
-                  )}
-                </td>
-                <td>
-                  {a.status === "active" && (
-                    <button
-                      className="secondary"
-                      onClick={() => patch({ action: "deactivateDevice", deviceFp: a.deviceFp })}
-                    >
-                      Free slot
-                    </button>
-                  )}
-                </td>
-              </tr>
-            ))}
-            {d.activations.length === 0 && (
-              <tr>
-                <td colSpan={7} className="muted" style={{ textAlign: "center", padding: 20 }}>
-                  Not activated on any device yet.
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+      <Card className="mt-6">
+        <CardHeader>
+          <CardTitle>
+            Devices{" "}
+            <span className="ml-1 font-normal text-muted-foreground">
+              {active}/{d.deviceLimit}
+            </span>
+          </CardTitle>
+          <CardDescription>Each PC that activated with this key. Free a slot to let another one in.</CardDescription>
+        </CardHeader>
+        <CardContent className="p-0">
+          {d.activations.length === 0 ? (
+            <div className="px-6 pb-8 pt-2 text-center text-sm text-muted-foreground">
+              Not activated on any device yet.
+            </div>
+          ) : (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Device</TableHead>
+                  <TableHead className="hidden md:table-cell">Fingerprint</TableHead>
+                  <TableHead className="hidden lg:table-cell">IP</TableHead>
+                  <TableHead className="hidden sm:table-cell">Version</TableHead>
+                  <TableHead>Last seen</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead />
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {d.activations.map((a) => (
+                  <TableRow key={a.id}>
+                    <TableCell className="font-medium">{a.deviceName || "Unnamed device"}</TableCell>
+                    <TableCell className="hidden font-mono text-xs text-muted-foreground md:table-cell">
+                      {a.deviceFp.slice(0, 16)}…
+                    </TableCell>
+                    <TableCell className="hidden text-muted-foreground lg:table-cell">{a.ip}</TableCell>
+                    <TableCell className="hidden text-muted-foreground sm:table-cell">{a.appVersion || "—"}</TableCell>
+                    <TableCell className="text-muted-foreground">{fmtRelative(a.lastSeenUtc)}</TableCell>
+                    <TableCell>
+                      {a.status === "active" ? (
+                        <Badge variant="success">Active</Badge>
+                      ) : (
+                        <Badge variant="secondary">Freed</Badge>
+                      )}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      {a.status === "active" && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          disabled={busy}
+                          onClick={() =>
+                            patch({ action: "deactivateDevice", deviceFp: a.deviceFp }, "Device slot freed")
+                          }
+                        >
+                          <Unplug /> Free slot
+                        </Button>
+                      )}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 }
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
-      <span className="muted">{label}</span>
-      <span>{value}</span>
+    <div className="flex justify-between gap-4 py-2.5">
+      <dt className="shrink-0 text-muted-foreground">{label}</dt>
+      <dd className="text-right font-medium">{value}</dd>
     </div>
   );
 }
