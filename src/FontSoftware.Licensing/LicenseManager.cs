@@ -5,17 +5,22 @@ using System.Text.Json;
 namespace FontSoftware.Licensing;
 
 /// <summary>
-/// Online licensing facade (full-lock model). Activates a key against the server,
-/// stores the returned Ed25519-signed token in a device-bound tamper-evident blob,
-/// and re-evaluates on every launch:
+/// Online licensing facade (full-lock model, one key = one device). Activates a
+/// serial + key against the server, stores the returned Ed25519-signed token in a
+/// device-bound tamper-evident blob, and re-evaluates on every launch:
 ///
 ///  - signature + device-binding checks (offline, always),
 ///  - expiry check against a clock-rollback-guarded "now",
-///  - a periodic online heartbeat that is the source of truth for revoke/expiry,
-///  - an offline grace window so a briefly-offline machine keeps working.
+///  - a token ceiling (validUntilUtc) so an old token cannot be replayed forever,
+///  - a periodic online heartbeat that is the source of truth for revoke / expiry /
+///    "moved to another device",
+///  - an offline grace window so a briefly-offline machine keeps working,
+///  - a registration gate: the licence is not usable until the person has given
+///    name, email and mobile (the server marks the token <c>registered</c>).
 ///
-/// Anything that is not a valid, unexpired, non-revoked, this-device license ends in
-/// <see cref="LicenseStatus.Locked"/> — there is no free tier.
+/// Anything that is not a valid, unexpired, non-revoked, registered, this-device
+/// license ends in <see cref="LicenseStatus.Locked"/> — there is no free tier.
+/// Moving a key to another PC is done by an admin in the panel, never from here.
 /// </summary>
 public sealed class LicenseManager
 {
@@ -32,6 +37,10 @@ public sealed class LicenseManager
     public LicenseState Current { get; private set; } = LicenseState.LockedState();
     public LicenseResult LastReason { get; private set; } = LicenseResult.NotActivated;
 
+    /// <summary>Extra the server sent with the last refusal, e.g. the name of the PC
+    /// that holds the key.</summary>
+    public string? LastDetail { get; private set; }
+
     public bool IsActive => Current.IsActive;
 
     public LicenseManager(
@@ -47,32 +56,76 @@ public sealed class LicenseManager
         _device = device;
         _store = store;
         _appVersion = appVersion;
-        _protectSecret = protectSecret ?? Encoding.UTF8.GetBytes("TextSoft-license-protect-v2");
+        _protectSecret = protectSecret ?? Encoding.UTF8.GetBytes("TextSoft-license-protect-v3");
     }
 
-    /// <summary>Activate a key online. On success the token is stored and unlocked.</summary>
-    public async Task<LicenseResult> ActivateAsync(string key, string deviceName = "", DateTime? nowUtc = null)
+    /// <summary>
+    /// Claim the key for this PC. On success the token is stored; the result is
+    /// <see cref="LicenseResult.Valid"/> when the person already registered on this
+    /// key+device, else <see cref="LicenseResult.RegistrationRequired"/>.
+    /// </summary>
+    public async Task<LicenseResult> ActivateAsync(string serial, string key, string deviceName = "", DateTime? nowUtc = null)
     {
         DateTime now = nowUtc ?? DateTime.UtcNow;
         string fp = _device.GetDeviceId();
 
-        var res = await _api.ActivateAsync(key.Trim(), fp, deviceName, _appVersion).ConfigureAwait(false);
+        var req = new ActivationRequest(
+            NormalizeSerial(serial), key.Trim(), fp, _device.GetMachineHint(), deviceName, _appVersion);
+        var res = await _api.ActivateAsync(req).ConfigureAwait(false);
         if (res.Result != LicenseResult.Valid || res.Token is null)
-            return Lock(res.Result);
+            return Lock(res.Result, res.Detail);
 
         var token = _reader.Read(res.Token);
         if (token is null) return Lock(LicenseResult.Tampered);
         if (!string.Equals(token.DeviceFp, fp, StringComparison.Ordinal))
             return Lock(LicenseResult.DeviceMismatch);
 
+        // A previous registration on this PC (same key, reinstall) is remembered
+        // for display; the server decides whether it still counts.
+        TryLoadState(out var old, out _);
         var state = new LicenseState
         {
             Token = res.Token,
             LastServerSeenUtc = token.ServerTimeUtc,
-            LastContactUtc = now
+            LastContactUtc = now,
+            Serial = token.Serial,
+            RegisteredName = res.User?.Name ?? (token.Registered ? old?.RegisteredName ?? "" : ""),
+            RegisteredEmail = res.User?.Email ?? (token.Registered ? old?.RegisteredEmail ?? "" : ""),
+            RegisteredPhone = res.User?.Phone ?? (token.Registered ? old?.RegisteredPhone ?? "" : ""),
         };
         Persist(state);
         return Evaluate(state, token, now);
+    }
+
+    /// <summary>Send the person's details for the key on this PC. Succeeds with a
+    /// token whose <c>registered</c> flag is set, which unlocks the app.</summary>
+    public async Task<LicenseResult> RegisterAsync(RegistrationInfo info, DateTime? nowUtc = null)
+    {
+        DateTime now = nowUtc ?? DateTime.UtcNow;
+        if (!TryLoadState(out var state, out var reason) || state?.Token is null)
+            return Lock(reason);
+
+        var res = await _api.RegisterAsync(state.Token, info).ConfigureAwait(false);
+        if (res.Result != LicenseResult.Valid || res.Token is null)
+            return Lock(res.Result == LicenseResult.Network ? LicenseResult.Network : res.Result, res.Detail, keepPending: state);
+
+        var token = _reader.Read(res.Token);
+        if (token is null) return Lock(LicenseResult.Tampered);
+        if (!string.Equals(token.DeviceFp, _device.GetDeviceId(), StringComparison.Ordinal))
+            return Lock(LicenseResult.DeviceMismatch);
+
+        var fresh = new LicenseState
+        {
+            Token = res.Token,
+            LastServerSeenUtc = Max(state.LastServerSeenUtc, token.ServerTimeUtc),
+            LastContactUtc = now,
+            Serial = token.Serial,
+            RegisteredName = res.User?.Name ?? info.Name,
+            RegisteredEmail = res.User?.Email ?? info.Email,
+            RegisteredPhone = res.User?.Phone ?? info.Phone,
+        };
+        Persist(fresh);
+        return Evaluate(fresh, token, now);
     }
 
     /// <summary>
@@ -91,8 +144,9 @@ public sealed class LicenseManager
 
         bool clockBack = now + ClockSkew < state.LastServerSeenUtc;
         bool heartbeatDue = (now - state.LastContactUtc) >= TimeSpan.FromHours(Math.Max(1, token.HeartbeatHours));
-
-        if (heartbeatDue || clockBack)
+        // An unregistered key always asks the server: the person may have
+        // registered from a reinstall, and the form should not show twice.
+        if (heartbeatDue || clockBack || !token.Registered)
         {
             var online = await HeartbeatOnceAsync(state, now).ConfigureAwait(false);
             // Network failure falls through to offline evaluation (grace window).
@@ -118,14 +172,10 @@ public sealed class LicenseManager
         return r;
     }
 
-    /// <summary>Release this device's slot on the server and revert to locked.</summary>
-    public async Task DeactivateAsync()
+    /// <summary>Drop the local licence (e.g. after the server says the key was moved
+    /// away) so the activation screen starts clean.</summary>
+    public void Forget()
     {
-        if (TryLoadState(out var state, out _) && state?.Token is not null)
-        {
-            try { await _api.DeactivateAsync(state.Token).ConfigureAwait(false); }
-            catch { /* best effort */ }
-        }
         _store.Delete();
         Lock(LicenseResult.NotActivated);
     }
@@ -140,7 +190,14 @@ public sealed class LicenseManager
         if (res.Result == LicenseResult.Network) return LicenseResult.Network;
 
         if (res.Result != LicenseResult.Valid || res.Token is null)
-            return Lock(res.Result); // revoked / expired / invalid / device removed
+        {
+            // Moved away or unknown: the licence on this PC is over for good, so the
+            // blob goes. Expired / revoked keep it — an admin can extend or un-revoke,
+            // and Retry then works without typing the key again.
+            if (res.Result is LicenseResult.Released or LicenseResult.Invalid or LicenseResult.DeviceMismatch)
+                _store.Delete();
+            return Lock(res.Result, res.Detail);
+        }
 
         var token = _reader.Read(res.Token);
         if (token is null) return Lock(LicenseResult.Tampered);
@@ -151,13 +208,18 @@ public sealed class LicenseManager
         {
             Token = res.Token,
             LastServerSeenUtc = Max(state.LastServerSeenUtc, token.ServerTimeUtc),
-            LastContactUtc = now
+            LastContactUtc = now,
+            Serial = token.Serial,
+            RegisteredName = res.User?.Name ?? state.RegisteredName,
+            RegisteredEmail = res.User?.Email ?? state.RegisteredEmail,
+            RegisteredPhone = res.User?.Phone ?? state.RegisteredPhone,
         };
         Persist(fresh);
         return Evaluate(fresh, token, now);
     }
 
-    /// <summary>Pure local evaluation: device match, clock guard, expiry, offline grace.</summary>
+    /// <summary>Pure local evaluation: device match, clock guard, expiry, token
+    /// ceiling, offline grace, registration.</summary>
     private LicenseResult Evaluate(LicenseState state, LicenseToken token, DateTime now, bool clockBack = false)
     {
         if (!string.Equals(token.DeviceFp, _device.GetDeviceId(), StringComparison.Ordinal))
@@ -172,22 +234,50 @@ public sealed class LicenseManager
         if (token.IsExpired(effectiveNow))
             return Lock(LicenseResult.Expired);
 
+        // The server stamps how long this token may be trusted without a check-in.
+        if (token.IsStale(effectiveNow))
+            return Lock(LicenseResult.Offline);
+
         int graceDays = Math.Max(0, token.GraceDays);
         if ((now - state.LastContactUtc) > TimeSpan.FromDays(graceDays) + TimeSpan.FromHours(12))
             return Lock(LicenseResult.Offline);
 
-        state.Status = LicenseStatus.Active;
         state.Edition = token.Edition;
         state.ExpiryUtc = token.ExpiryUtc;
+        state.Serial = token.Serial;
+        state.Registered = token.Registered;
+
+        if (!token.Registered)
+        {
+            // Valid key on this PC, person unknown: the app shows the form. Expose
+            // the details so the screen can say what is about to be registered.
+            state.Status = LicenseStatus.Locked;
+            Current = state;
+            LastReason = LicenseResult.RegistrationRequired;
+            LastDetail = null;
+            return LicenseResult.RegistrationRequired;
+        }
+
+        state.Status = LicenseStatus.Active;
         Current = state;
         LastReason = LicenseResult.Valid;
+        LastDetail = null;
         return LicenseResult.Valid;
     }
 
-    private LicenseResult Lock(LicenseResult reason)
+    private LicenseResult Lock(LicenseResult reason, string? detail = null, LicenseState? keepPending = null)
     {
-        Current = LicenseState.LockedState();
+        if (keepPending is not null)
+        {
+            keepPending.Status = LicenseStatus.Locked;
+            Current = keepPending;
+        }
+        else
+        {
+            Current = LicenseState.LockedState();
+        }
         LastReason = reason;
+        LastDetail = detail;
         return reason;
     }
 
@@ -209,6 +299,8 @@ public sealed class LicenseManager
     }
 
     private static DateTime Max(DateTime a, DateTime b) => a > b ? a : b;
+
+    public static string NormalizeSerial(string s) => s.Trim().ToUpperInvariant().Replace(" ", "");
 
     private void Persist(LicenseState state) => _store.Write(Protect(state));
 

@@ -306,12 +306,16 @@ public sealed class MainViewModel : ObservableObject, IDisposable
 
         string appVersion = typeof(MainViewModel).Assembly.GetName().Version?.ToString() ?? "1.0.0";
         var licenseManager = new LicenseManager(
-            new LicenseApiClient(settings.LicenseApiUrl),
+            new LicenseApiClient(LicenseEndpoints.Resolve()),
             new TokenReader(new Ed25519Verifier()),
             new WindowsDeviceIdProvider(),
             new FileLicenseStore(),
             appVersion);
         License = new LicenseViewModel(licenseManager);
+
+        // The engine asks the licence manager itself on every key, so a patched
+        // view model alone cannot switch typing back on.
+        _engine.Gate = () => licenseManager.IsActive;
 
         // Full-lock gating: the app is usable only while licensed (demo or full).
         Converter.PremiumUnlocked = License.IsActive;
@@ -321,9 +325,17 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                 OnLicenseActiveChanged();
         };
 
-        // Re-validate against the server every 6h while running.
-        _licenseTimer = new DispatcherTimer { Interval = TimeSpan.FromHours(6) };
-        _licenseTimer.Tick += (_, _) => _ = License.RefreshAsync();
+        // Re-validate against the server every 6h while running, and re-check
+        // expiry locally every minute so a licence that ends while the app is open
+        // stops it within the minute.
+        _licenseTimer = new DispatcherTimer { Interval = TimeSpan.FromMinutes(1) };
+        int ticks = 0;
+        _licenseTimer.Tick += (_, _) =>
+        {
+            ticks++;
+            if (ticks % 360 == 0) _ = License.RefreshAsync();
+            else _ = License.ReevaluateAsync();
+        };
         _licenseTimer.Start();
 
         // Load + re-validate now; the lock overlay stays up until this resolves.

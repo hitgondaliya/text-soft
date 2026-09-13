@@ -30,7 +30,7 @@ foreach ($ttf in @("config\fonts\S0700810.TTF","config\fonts\S1120810.TTF")) {
     }
 }
 
-Write-Host "== Obfuscating FontSoftware.Licensing.dll ==" -ForegroundColor Cyan
+Write-Host "== Obfuscating FontSoftware.Licensing.dll + FontSoftware.Engine.dll ==" -ForegroundColor Cyan
 $obfuscar = (Get-Command obfuscar.console -ErrorAction SilentlyContinue).Source
 if (-not $obfuscar) {
     $obfuscar = Join-Path $env:USERPROFILE ".dotnet\tools\obfuscar.console.exe"
@@ -45,9 +45,11 @@ try {
     & $obfuscar "obfuscar.xml"
     if ($LASTEXITCODE -ne 0) { throw "Obfuscar failed" }
 
-    $obf = Join-Path $publishDir "obfuscated\FontSoftware.Licensing.dll"
-    if (-not (Test-Path $obf)) { throw "Obfuscated Licensing.dll not produced" }
-    Copy-Item $obf (Join-Path $publishDir "FontSoftware.Licensing.dll") -Force
+    foreach ($dll in @("FontSoftware.Licensing.dll", "FontSoftware.Engine.dll")) {
+        $obf = Join-Path $publishDir "obfuscated\$dll"
+        if (-not (Test-Path $obf)) { throw "Obfuscated $dll not produced" }
+        Copy-Item $obf (Join-Path $publishDir $dll) -Force
+    }
 
     Remove-Item (Join-Path $publishDir "obfuscated") -Recurse -Force
     Remove-Item (Join-Path $publishDir "obfuscar.xml") -Force

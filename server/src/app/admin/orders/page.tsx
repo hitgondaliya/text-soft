@@ -20,6 +20,7 @@ interface OrderRow {
   serial: string;
   customerName: string;
   customerEmail: string;
+  customerPhoneDisplay: string;
   company: string;
   edition: string;
   deviceLimit: number;
@@ -115,8 +116,10 @@ function Orders() {
                     </TableCell>
                     <TableCell>
                       <div className="font-medium">{o.customerName}</div>
-                      {(o.company || o.customerEmail) && (
-                        <div className="truncate text-xs text-muted-foreground">{o.company || o.customerEmail}</div>
+                      {(o.company || o.customerPhoneDisplay || o.customerEmail) && (
+                        <div className="truncate text-xs text-muted-foreground">
+                          {o.company || o.customerPhoneDisplay || o.customerEmail}
+                        </div>
                       )}
                     </TableCell>
                     <TableCell className="hidden sm:table-cell">

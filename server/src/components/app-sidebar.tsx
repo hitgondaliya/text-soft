@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, ShoppingBag, KeyRound, LogOut, Menu, ChevronUp } from "lucide-react";
+import { LayoutDashboard, ShoppingBag, KeyRound, Users, ShieldAlert, LogOut, Menu, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -21,6 +21,8 @@ const NAV = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/orders", label: "Purchases", icon: ShoppingBag },
   { href: "/admin/keys", label: "License keys", icon: KeyRound },
+  { href: "/admin/users", label: "End users", icon: Users },
+  { href: "/admin/security", label: "Security", icon: ShieldAlert },
 ];
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {

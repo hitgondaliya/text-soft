@@ -7,6 +7,7 @@
 
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <infra:InverseBoolToVisibility x:Key="NotBoolToVis" />
+        <infra:NullToVisibility x:Key="NullToVis" />
 
         <!-- ============ Color system (TextSoft brand: logo orange + charcoal) ============
              Contrast rule of thumb, so text is never invisible again:

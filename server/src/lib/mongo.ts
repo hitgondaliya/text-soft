@@ -48,6 +48,11 @@ async function ensureIndexes(db: Db): Promise<void> {
     db.collection("orders").createIndex({ customerEmail: 1 }),
     db.collection("activations").createIndex({ keyId: 1, deviceFp: 1 }, { unique: true }),
     db.collection("activations").createIndex({ keyId: 1 }),
+    db.collection("activations").createIndex({ deviceFp: 1, status: 1 }),
+    db.collection("activations").createIndex({ "user.email": 1 }),
+    db.collection("activationAttempts").createIndex({ createdUtc: -1 }),
+    db.collection("activationAttempts").createIndex({ keyId: 1, createdUtc: -1 }),
+    db.collection("activationAttempts").createIndex({ serial: 1 }),
     db.collection("auditLog").createIndex({ createdUtc: -1 }),
   ]);
 }

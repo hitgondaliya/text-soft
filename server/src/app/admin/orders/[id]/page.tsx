@@ -8,7 +8,7 @@ import {
   KeyRound,
   MonitorSmartphone,
   Ban,
-  Users,
+  ShieldAlert,
   CalendarPlus,
   Infinity as InfinityIcon,
   RotateCcw,
@@ -17,6 +17,7 @@ import {
   Phone,
   StickyNote,
   Loader2,
+  UserCheck,
 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
@@ -25,6 +26,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { EditionBadge, StatusBadge } from "@/components/status-badge";
+import { PhoneDisplay } from "@/components/flag";
 import {
   Dialog,
   DialogContent,
@@ -41,8 +43,14 @@ interface KeyRow {
   prefix: string;
   status: string;
   expired: boolean;
-  deviceLimit: number;
-  devicesUsed: number;
+  bound: boolean;
+  deviceName: string;
+  registered: boolean;
+  userName: string;
+  userEmail: string;
+  userPhone: string;
+  userPhoneCountry: string;
+  attempts: number;
   lastSeenUtc: string | null;
 }
 
@@ -52,10 +60,12 @@ interface Order {
   customerName: string;
   customerEmail: string;
   customerPhone: string;
+  customerPhoneCountry: string;
+  customerPhoneDisplay: string;
   company: string;
   edition: string;
-  deviceLimit: number;
   quantity: number;
+  attemptsTotal: number;
   expiryUtc: string | null;
   expired: boolean;
   note: string;
@@ -108,7 +118,7 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
   }
 
   const revoked = o.keys.filter((k) => k.status === "revoked").length;
-  const inUse = o.keys.filter((k) => k.devicesUsed > 0).length;
+  const inUse = o.keys.filter((k) => k.bound).length;
   const allRevoked = o.keys.length > 0 && revoked === o.keys.length;
 
   return (
@@ -142,9 +152,15 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <Stat icon={KeyRound} label="Keys issued" value={o.keys.length} />
-        <Stat icon={MonitorSmartphone} label="Keys in use" value={inUse} tone="text-primary bg-primary/10" />
+        <Stat icon={MonitorSmartphone} label="PCs activated" value={inUse} tone="text-primary bg-primary/10" />
         <Stat icon={Ban} label="Revoked" value={revoked} tone="text-destructive bg-destructive/10" />
-        <Stat icon={Users} label="Devices per key" value={o.deviceLimit} />
+        <Stat
+          icon={ShieldAlert}
+          label="Blocked attempts"
+          value={o.attemptsTotal}
+          tone={o.attemptsTotal > 0 ? "text-destructive bg-destructive/10" : "text-success bg-success/10"}
+          href={o.attemptsTotal > 0 ? `/admin/security?q=${o.serial}` : undefined}
+        />
       </div>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_1.4fr]">
@@ -174,7 +190,8 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
                 )}
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5" /> {o.customerPhone || "—"}
+                <Phone className="h-3.5 w-3.5" />
+                <PhoneDisplay country={o.customerPhoneCountry} text={o.customerPhoneDisplay} className="text-foreground" />
               </div>
               <div className="flex items-start gap-2">
                 <StickyNote className="mt-0.5 h-3.5 w-3.5 shrink-0" /> {o.note || "—"}
@@ -239,7 +256,8 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
         <CardHeader>
           <CardTitle>Keys</CardTitle>
           <CardDescription>
-            {o.keys.length} issued under {o.serial}. Open one to see its devices or act on it alone.
+            {o.keys.length} issued under {o.serial}. Each key lives on one PC; open a key to move it or see who tried
+            it elsewhere.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-0">
@@ -249,7 +267,10 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
                 <TableHead className="w-12">#</TableHead>
                 <TableHead>Key</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead className="text-right">Devices</TableHead>
+                <TableHead>Registered user</TableHead>
+                <TableHead className="hidden md:table-cell">Mobile</TableHead>
+                <TableHead className="hidden lg:table-cell">PC</TableHead>
+                <TableHead className="text-right">Blocked</TableHead>
                 <TableHead className="hidden text-right sm:table-cell">Last seen</TableHead>
               </TableRow>
             </TableHeader>
@@ -265,8 +286,35 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
                   <TableCell>
                     <StatusBadge status={k.status} expired={k.expired} />
                   </TableCell>
+                  <TableCell>
+                    {k.registered ? (
+                      <div className="flex items-center gap-2">
+                        <UserCheck className="h-3.5 w-3.5 text-success" />
+                        <div className="min-w-0">
+                          <div className="font-medium">{k.userName}</div>
+                          <div className="truncate text-xs text-muted-foreground">{k.userEmail}</div>
+                        </div>
+                      </div>
+                    ) : k.bound ? (
+                      <Badge variant="warning">Not registered yet</Badge>
+                    ) : (
+                      <span className="text-muted-foreground">Not activated</span>
+                    )}
+                  </TableCell>
+                  <TableCell className="hidden md:table-cell">
+                    <PhoneDisplay country={k.userPhoneCountry} text={k.userPhone} />
+                  </TableCell>
+                  <TableCell className="hidden text-muted-foreground lg:table-cell">
+                    {k.deviceName || (k.bound ? "Unnamed PC" : "—")}
+                  </TableCell>
                   <TableCell className="text-right tabular-nums">
-                    {k.devicesUsed}/{k.deviceLimit}
+                    {k.attempts > 0 ? (
+                      <Badge variant="destructive">
+                        <ShieldAlert className="h-3 w-3" /> {k.attempts}
+                      </Badge>
+                    ) : (
+                      <span className="text-muted-foreground">0</span>
+                    )}
                   </TableCell>
                   <TableCell className="hidden text-right text-muted-foreground sm:table-cell">
                     {k.lastSeenUtc ? fmtRelative(k.lastSeenUtc) : "never used"}
@@ -283,8 +331,7 @@ export default function OrderDetail({ params }: { params: { id: string } }) {
           <DialogHeader>
             <DialogTitle>Revoke all {o.keys.length} keys?</DialogTitle>
             <DialogDescription>
-              Every device using a key from {o.serial} stops working at its next check-in. You can un-revoke
-              later.
+              Every PC using a key from {o.serial} stops working at its next check-in. You can un-revoke later.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -312,14 +359,16 @@ function Stat({
   label,
   value,
   tone = "text-foreground bg-muted",
+  href,
 }: {
   icon: React.ElementType;
   label: string;
   value: number;
   tone?: string;
+  href?: string;
 }) {
-  return (
-    <Card>
+  const card = (
+    <Card className={href ? "h-full transition-shadow hover:shadow-md" : "h-full"}>
       <CardContent className="flex items-center gap-4 p-5">
         <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${tone}`}>
           <Icon className="h-4 w-4" />
@@ -331,4 +380,5 @@ function Stat({
       </CardContent>
     </Card>
   );
+  return href ? <Link href={href}>{card}</Link> : card;
 }

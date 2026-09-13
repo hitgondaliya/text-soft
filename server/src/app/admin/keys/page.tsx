@@ -3,7 +3,7 @@
 import { Suspense, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Plus, Search, KeyRound } from "lucide-react";
+import { Plus, Search, KeyRound, ShieldAlert } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,7 +13,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { EditionBadge, StatusBadge } from "@/components/status-badge";
-import { fmtDate } from "@/lib/utils";
+import { fmtDate, fmtRelative } from "@/lib/utils";
 
 interface KeyRow {
   id: string;
@@ -24,8 +24,12 @@ interface KeyRow {
   status: string;
   expired: boolean;
   expiryUtc: string | null;
-  deviceLimit: number;
-  devicesUsed: number;
+  bound: boolean;
+  deviceName: string;
+  registered: boolean;
+  userName: string;
+  userPhone: string;
+  attempts: number;
   customerName: string;
   customerEmail: string;
   createdUtc: string;
@@ -44,7 +48,7 @@ function Keys() {
   const params = useSearchParams();
   const [rows, setRows] = useState<KeyRow[] | null>(null);
   const [status, setStatus] = useState(params.get("status") ?? "all");
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(params.get("q") ?? "");
 
   const load = useCallback(() => {
     const p = new URLSearchParams();
@@ -62,7 +66,7 @@ function Keys() {
 
   return (
     <div>
-      <PageHeader title="License keys" description="Every key ever issued, with the purchase it belongs to.">
+      <PageHeader title="License keys" description="Every key ever issued, the PC it lives on and the person using it.">
         <Button asChild>
           <Link href="/admin/orders?new=1">
             <Plus /> New purchase
@@ -72,22 +76,24 @@ function Keys() {
 
       <div className="mb-4 flex flex-col gap-3 sm:flex-row">
         <Select value={status} onValueChange={setStatus}>
-          <SelectTrigger className="sm:w-44">
+          <SelectTrigger className="sm:w-48">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All statuses</SelectItem>
+            <SelectItem value="all">All keys</SelectItem>
             <SelectItem value="active">Active</SelectItem>
+            <SelectItem value="bound">On a PC</SelectItem>
+            <SelectItem value="unused">Never activated</SelectItem>
+            <SelectItem value="attempts">With blocked attempts</SelectItem>
             <SelectItem value="expired">Expired</SelectItem>
             <SelectItem value="revoked">Revoked</SelectItem>
-            <SelectItem value="unused">Never activated</SelectItem>
           </SelectContent>
         </Select>
         <div className="relative flex-1 sm:max-w-md">
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             className="pl-9"
-            placeholder="Search key, serial, customer, email…"
+            placeholder="Search key, serial, customer, user, email, mobile…"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           />
@@ -118,12 +124,13 @@ function Keys() {
                 <TableRow>
                   <TableHead>Key</TableHead>
                   <TableHead>Serial</TableHead>
-                  <TableHead className="hidden sm:table-cell">Edition</TableHead>
                   <TableHead>Status</TableHead>
-                  <TableHead className="hidden text-right md:table-cell">Devices</TableHead>
+                  <TableHead>User</TableHead>
+                  <TableHead className="hidden lg:table-cell">PC</TableHead>
+                  <TableHead className="hidden text-right md:table-cell">Blocked</TableHead>
                   <TableHead className="hidden md:table-cell">Expiry</TableHead>
-                  <TableHead className="hidden lg:table-cell">Customer</TableHead>
-                  <TableHead className="hidden text-right xl:table-cell">Issued</TableHead>
+                  <TableHead className="hidden xl:table-cell">Customer</TableHead>
+                  <TableHead className="hidden text-right xl:table-cell">Last seen</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -133,6 +140,9 @@ function Keys() {
                       <Link href={`/admin/keys/${k.id}`} className="text-primary hover:underline">
                         {k.prefix}…
                       </Link>
+                      <div className="mt-0.5">
+                        <EditionBadge edition={k.edition} />
+                      </div>
                     </TableCell>
                     <TableCell className="whitespace-nowrap font-mono text-xs">
                       {k.serial ? (
@@ -144,14 +154,32 @@ function Keys() {
                         <span className="text-muted-foreground">—</span>
                       )}
                     </TableCell>
-                    <TableCell className="hidden sm:table-cell">
-                      <EditionBadge edition={k.edition} />
-                    </TableCell>
                     <TableCell>
                       <StatusBadge status={k.status} expired={k.expired} />
                     </TableCell>
-                    <TableCell className="hidden text-right tabular-nums md:table-cell">
-                      {k.devicesUsed}/{k.deviceLimit}
+                    <TableCell>
+                      {k.registered ? (
+                        <>
+                          <div className="font-medium">{k.userName}</div>
+                          <div className="text-xs text-muted-foreground">{k.userPhone}</div>
+                        </>
+                      ) : k.bound ? (
+                        <Badge variant="warning">Not registered</Badge>
+                      ) : (
+                        <span className="text-muted-foreground">Not activated</span>
+                      )}
+                    </TableCell>
+                    <TableCell className="hidden text-muted-foreground lg:table-cell">
+                      {k.deviceName || (k.bound ? "Unnamed PC" : "—")}
+                    </TableCell>
+                    <TableCell className="hidden text-right md:table-cell">
+                      {k.attempts > 0 ? (
+                        <Badge variant="destructive">
+                          <ShieldAlert className="h-3 w-3" /> {k.attempts}
+                        </Badge>
+                      ) : (
+                        <span className="text-muted-foreground">0</span>
+                      )}
                     </TableCell>
                     <TableCell className="hidden whitespace-nowrap md:table-cell">
                       {k.expiryUtc ? (
@@ -160,11 +188,11 @@ function Keys() {
                         <Badge variant="outline">Perpetual</Badge>
                       )}
                     </TableCell>
-                    <TableCell className="hidden lg:table-cell">
+                    <TableCell className="hidden xl:table-cell">
                       {k.customerName || <span className="text-muted-foreground">—</span>}
                     </TableCell>
                     <TableCell className="hidden whitespace-nowrap text-right text-muted-foreground xl:table-cell">
-                      {fmtDate(k.createdUtc)}
+                      {k.lastSeenUtc ? fmtRelative(k.lastSeenUtc) : "never"}
                     </TableCell>
                   </TableRow>
                 ))}

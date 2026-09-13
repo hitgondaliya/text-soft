@@ -62,7 +62,10 @@
         </Border>
 
         <!-- ================= Content ================= -->
-        <DockPanel Grid.Column="1" TextElement.Foreground="{StaticResource Text}">
+        <!-- Everything here is disabled (not just covered) while the licence is not
+             active, so an expired or moved key stops typing, converting and settings. -->
+        <DockPanel Grid.Column="1" TextElement.Foreground="{StaticResource Text}"
+                   IsEnabled="{Binding License.IsActive}">
 
             <!-- Content top bar -->
             <Border DockPanel.Dock="Top" Background="{StaticResource Surface}"
@@ -129,6 +132,17 @@
             <Border DockPanel.Dock="Top" x:Name="ErrorBanner" Background="#FEF3C7" BorderBrush="#FDE68A"
                     BorderThickness="0,0,0,1" Padding="26,10" Visibility="Collapsed">
                 <TextBlock x:Name="ErrorText" TextWrapping="Wrap" Foreground="#92400E" />
+            </Border>
+
+            <!-- Licence period strip: demo licences always, full licences in the last week -->
+            <Border DockPanel.Dock="Top" Background="{StaticResource PrimaryLight}" BorderBrush="#F3C09B"
+                    BorderThickness="0,0,0,1" Padding="26,8"
+                    Visibility="{Binding License.ShowExpiryBanner, Converter={StaticResource BoolToVis}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="◷" Foreground="{StaticResource PrimaryDeep}" FontSize="14" VerticalAlignment="Center" />
+                    <TextBlock Text="{Binding License.ExpiryBannerText}" Foreground="{StaticResource PrimaryDeep}"
+                               FontWeight="SemiBold" FontSize="12" Margin="8,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
             </Border>
 
             <!-- Pages -->
@@ -341,27 +355,58 @@
 
                 <!-- ===== LICENSE ===== -->
                 <TabItem>
-                    <Border DataContext="{Binding License}" Background="{StaticResource Surface}" CornerRadius="14"
-                            BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="28" VerticalAlignment="Top">
-                        <StackPanel MaxWidth="480" HorizontalAlignment="Left">
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                                <TextBlock Text="License" Style="{StaticResource H2}" VerticalAlignment="Center" />
-                                <Border Background="{StaticResource PrimaryLight}" CornerRadius="7" Padding="11,4" Margin="12,0,0,0">
-                                    <TextBlock Text="{Binding EditionText}" Foreground="{StaticResource Primary}" FontWeight="SemiBold" />
-                                </Border>
+                    <StackPanel DataContext="{Binding License}" MaxWidth="560" HorizontalAlignment="Left">
+                        <Border Background="{StaticResource Surface}" CornerRadius="14"
+                                BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="28">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                                    <TextBlock Text="Licence" Style="{StaticResource H2}" VerticalAlignment="Center" />
+                                    <Border Background="{StaticResource PrimaryLight}" CornerRadius="7" Padding="11,4" Margin="12,0,0,0">
+                                        <TextBlock Text="{Binding EditionText}" Foreground="{StaticResource PrimaryDeep}" FontWeight="SemiBold" />
+                                    </Border>
+                                    <Border Background="{StaticResource SuccessLight}" CornerRadius="7" Padding="11,4" Margin="8,0,0,0">
+                                        <TextBlock Text="Active on this PC" Foreground="{StaticResource SuccessDark}" FontWeight="SemiBold" />
+                                    </Border>
+                                </StackPanel>
+
+                                <Grid Margin="0,16,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition /><RowDefinition /><RowDefinition /><RowDefinition /><RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Serial number" Style="{StaticResource Hint}" Margin="0,0,24,8" />
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SerialText}" FontFamily="Consolas" FontSize="13.5" FontWeight="SemiBold" />
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Validity" Style="{StaticResource Hint}" Margin="0,0,24,8" />
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="{Binding ExpiryText}" FontWeight="SemiBold" />
+                                        <TextBlock Text="{Binding DaysLeftText}" Style="{StaticResource Hint}" Margin="8,0,0,0" />
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Registered to" Style="{StaticResource Hint}" Margin="0,0,24,8" />
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding RegisteredText}" TextWrapping="Wrap" />
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="This PC" Style="{StaticResource Hint}" Margin="0,0,24,8" />
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding DeviceText}" />
+                                </Grid>
+
+                                <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,14,0,0" />
                             </StackPanel>
-                            <TextBlock Text="{Binding ExpiryText}" Style="{StaticResource Hint}" Margin="0,0,0,18" />
-                            <TextBlock Text="LICENSE KEY" Style="{StaticResource Label}" />
-                            <TextBox Text="{Binding KeyInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas" />
-                            <StackPanel Orientation="Horizontal" Margin="0,14,0,0">
-                                <Button Content="Activate" Command="{Binding ActivateCommand}" />
-                                <Button Content="Deactivate" Command="{Binding DeactivateCommand}" Style="{StaticResource Secondary}" Margin="10,0,0,0" />
+                        </Border>
+
+                        <Border Background="{StaticResource Surface}" CornerRadius="14" Margin="0,14,0,0"
+                                BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="22">
+                            <StackPanel>
+                                <TextBlock Text="ONE KEY, ONE PC" Style="{StaticResource Label}" />
+                                <TextBlock Style="{StaticResource Hint}"
+                                           Text="Your licence key is bound to this computer. It cannot be used on a second PC. If you replace this PC, contact support with your serial number and we will move the key to the new machine; this PC then stops working with it." />
+                                <TextBlock Style="{StaticResource Hint}" Margin="0,10,0,0"
+                                           Text="TextSoft re-verifies with the licence server about once a day. It keeps working offline for a few days; after that an internet connection is needed. When the licence expires, typing and conversion stop until it is renewed." />
+                                <Button AutomationProperties.AutomationId="RecheckButton" Content="Re-check licence now" Command="{Binding RetryCommand}"
+                                        Style="{StaticResource Secondary}" HorizontalAlignment="Left" Margin="0,16,0,0" />
                             </StackPanel>
-                            <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,16,0,0" TextWrapping="Wrap" />
-                            <TextBlock Style="{StaticResource Hint}" Margin="0,18,0,0" TextWrapping="Wrap"
-                                       Text="Your key is activated online and bound to this device. It re-verifies periodically; an internet connection is needed to activate and, occasionally, to keep the license valid." />
-                        </StackPanel>
-                    </Border>
+                        </Border>
+                    </StackPanel>
                 </TabItem>
 
                 <!-- ===== SETTINGS ===== -->
@@ -404,23 +449,120 @@
                         </Border>
                         <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
                             <TextBlock Text="TextSoft" Foreground="{StaticResource Text}" FontSize="16" FontWeight="Bold" />
-                            <TextBlock Text="Activation required" Foreground="{StaticResource Primary}"
+                            <TextBlock Text="{Binding LockTitle}" Foreground="{StaticResource Primary}"
                                        FontSize="11.5" FontWeight="SemiBold" />
                         </StackPanel>
                     </StackPanel>
 
-                    <TextBlock Text="{Binding LockReason}" Style="{StaticResource Hint}" TextWrapping="Wrap"
-                               Margin="0,0,0,16" />
-
-                    <TextBlock Text="LICENSE KEY" Style="{StaticResource Label}" />
-                    <TextBox Text="{Binding KeyInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas" />
-
-                    <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
-                        <Button Content="Activate" Command="{Binding ActivateCommand}" />
-                        <Button Content="Retry" Command="{Binding RetryCommand}" Style="{StaticResource Secondary}" Margin="10,0,0,0" />
+                    <!-- Step 0: checking -->
+                    <StackPanel Visibility="{Binding IsChecking, Converter={StaticResource BoolToVis}}">
+                        <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" />
                     </StackPanel>
 
-                    <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,16,0,0" TextWrapping="Wrap" />
+                    <!-- Step 1: serial + key -->
+                    <StackPanel Visibility="{Binding IsActivateStep, Converter={StaticResource BoolToVis}}">
+                        <TextBlock Text="{Binding LockReason}" Style="{StaticResource Hint}" Margin="0,0,0,16" />
+
+                        <TextBlock Text="SERIAL NUMBER" Style="{StaticResource Label}" />
+                        <TextBox AutomationProperties.AutomationId="SerialBox" Text="{Binding SerialInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas"
+                                 CharacterCasing="Upper" Tag="TXS-2026-0001" />
+                        <TextBlock Text="LICENCE KEY" Style="{StaticResource Label}" Margin="1,12,0,6" />
+                        <TextBox AutomationProperties.AutomationId="KeyBox" Text="{Binding KeyInput, UpdateSourceTrigger=PropertyChanged}" FontFamily="Consolas"
+                                 CharacterCasing="Upper" />
+                        <TextBlock Text="Both are on your purchase confirmation. One key works on one PC only."
+                                   Style="{StaticResource Hint}" FontSize="11" Margin="1,6,0,0" />
+
+                        <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
+                            <Button AutomationProperties.AutomationId="ActivateButton" Content="Activate this PC" Command="{Binding ActivateCommand}" />
+                            <Button Content="Retry" Command="{Binding RetryCommand}" Style="{StaticResource Secondary}" Margin="10,0,0,0" />
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding Status}" Margin="0,16,0,0" TextWrapping="Wrap" FontSize="12">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StatusIsError}" Value="True">
+                                            <Setter Property="Foreground" Value="#B91C1C" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!-- Step 2: who is using it -->
+                    <StackPanel Visibility="{Binding IsRegisterStep, Converter={StaticResource BoolToVis}}">
+                        <TextBlock Text="{Binding LockReason}" Style="{StaticResource Hint}" Margin="0,0,0,16" />
+
+                        <TextBlock Text="YOUR NAME" Style="{StaticResource Label}" />
+                        <TextBox AutomationProperties.AutomationId="RegNameBox" Text="{Binding RegName, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{Binding RegNameError}" Foreground="#B91C1C" FontSize="11" Margin="1,4,0,0"
+                                   Visibility="{Binding RegNameError, Converter={StaticResource NullToVis}}" />
+
+                        <TextBlock Text="EMAIL" Style="{StaticResource Label}" Margin="1,12,0,6" />
+                        <TextBox AutomationProperties.AutomationId="RegEmailBox" Text="{Binding RegEmail, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="{Binding RegEmailError}" Foreground="#B91C1C" FontSize="11" Margin="1,4,0,0"
+                                   Visibility="{Binding RegEmailError, Converter={StaticResource NullToVis}}" />
+
+                        <TextBlock Text="MOBILE NUMBER" Style="{StaticResource Label}" Margin="1,12,0,6" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Grid.Column="0" AutomationProperties.AutomationId="CountryCombo" ItemsSource="{Binding Countries}" SelectedItem="{Binding SelectedCountry}"
+                                      IsTextSearchEnabled="True" TextSearch.TextPath="Name" ToolTip="Country code">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding Flag}" Width="22" Height="16" Stretch="Uniform"
+                                                   VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality" />
+                                            <TextBlock Text="{Binding DialDisplay}" FontWeight="SemiBold" Margin="8,0,0,0"
+                                                       VerticalAlignment="Center" MinWidth="36" />
+                                            <TextBlock Text="{Binding Name}" Margin="6,0,0,0" VerticalAlignment="Center"
+                                                       Foreground="{StaticResource Muted}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <TextBox Grid.Column="1" AutomationProperties.AutomationId="RegPhoneBox" Text="{Binding RegPhone, UpdateSourceTrigger=PropertyChanged}"
+                                     Margin="8,0,0,0" InputScope="TelephoneNumber" />
+                        </Grid>
+                        <TextBlock Text="{Binding RegPhoneError}" Foreground="#B91C1C" FontSize="11" Margin="1,4,0,0"
+                                   Visibility="{Binding RegPhoneError, Converter={StaticResource NullToVis}}" />
+
+                        <StackPanel Orientation="Horizontal" Margin="0,18,0,0">
+                            <Button AutomationProperties.AutomationId="RegisterButton" Content="Complete registration" Command="{Binding RegisterCommand}" />
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding Status}" Margin="0,14,0,0" TextWrapping="Wrap" FontSize="12">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StatusIsError}" Value="True">
+                                            <Setter Property="Foreground" Value="#B91C1C" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!-- Step 3: activated — say how long it lasts, once -->
+                    <StackPanel Visibility="{Binding IsWelcomeStep, Converter={StaticResource BoolToVis}}">
+                        <Border Background="{StaticResource SuccessLight}" CornerRadius="10" Padding="14,12" Margin="0,0,0,14">
+                            <StackPanel>
+                                <TextBlock Text="{Binding WelcomeTitle}" Foreground="{StaticResource SuccessDark}"
+                                           FontWeight="Bold" FontSize="15" />
+                                <TextBlock Text="{Binding ExpiryText}" Foreground="{StaticResource SuccessDark}"
+                                           FontWeight="SemiBold" Margin="0,4,0,0" />
+                                <TextBlock Text="{Binding DaysLeftText}" Foreground="{StaticResource SuccessDark}" FontSize="12" />
+                            </StackPanel>
+                        </Border>
+                        <TextBlock Text="{Binding WelcomeBody}" Style="{StaticResource Hint}" />
+                        <TextBlock Text="{Binding RegisteredText}" Style="{StaticResource Hint}" Margin="0,8,0,0" />
+                        <Button AutomationProperties.AutomationId="ContinueButton" Content="Start typing" Command="{Binding ContinueCommand}" HorizontalAlignment="Left" Margin="0,18,0,0" />
+                    </StackPanel>
                 </StackPanel>
             </Border>
         </Border>

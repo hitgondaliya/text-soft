@@ -31,15 +31,21 @@ public sealed class TokenReader
             using var doc = JsonDocument.Parse(json);
             var r = doc.RootElement;
 
+            int v = r.GetProperty("v").GetInt32();
             return new LicenseToken
             {
-                V = r.GetProperty("v").GetInt32(),
+                V = v,
                 KeyId = r.GetProperty("keyId").GetString() ?? "",
+                Serial = r.TryGetProperty("serial", out var s) ? s.GetString() ?? "" : "",
                 Edition = ParseEdition(r.GetProperty("edition").GetString()),
                 ExpiryUtc = ReadUtc(r, "expiryUtc"),
                 DeviceFp = r.GetProperty("deviceFp").GetString() ?? "",
+                // v1 tokens predate registration; treat them as registered so an
+                // upgrade does not throw an existing customer back to the form.
+                Registered = r.TryGetProperty("registered", out var reg) ? reg.GetBoolean() : v < 2,
                 IssuedUtc = ReadUtc(r, "issuedUtc") ?? default,
                 ServerTimeUtc = ReadUtc(r, "serverTimeUtc") ?? default,
+                ValidUntilUtc = ReadUtc(r, "validUntilUtc"),
                 GraceDays = r.TryGetProperty("graceDays", out var g) ? g.GetInt32() : 5,
                 HeartbeatHours = r.TryGetProperty("heartbeatHours", out var h) ? h.GetInt32() : 24,
                 Nonce = r.TryGetProperty("nonce", out var n) ? n.GetString() ?? "" : ""

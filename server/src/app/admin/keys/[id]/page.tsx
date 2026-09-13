@@ -4,7 +4,21 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { toast } from "sonner";
-import { ArrowLeft, CalendarPlus, Ban, RotateCcw, MonitorSmartphone, Unplug, Loader2 } from "lucide-react";
+import {
+  ArrowLeft,
+  CalendarPlus,
+  Ban,
+  RotateCcw,
+  MonitorSmartphone,
+  ArrowRightLeft,
+  Loader2,
+  ShieldAlert,
+  UserCheck,
+  Mail,
+  Phone,
+  Clock,
+  History,
+} from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,9 +27,26 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { EditionBadge, StatusBadge } from "@/components/status-badge";
+import { PhoneDisplay } from "@/components/flag";
+import { AttemptsTable, type AttemptRow } from "@/components/attempts-table";
 import { fmtDate, fmtDateTime, fmtRelative } from "@/lib/utils";
 
+interface EndUser {
+  name: string;
+  email: string;
+  phoneCountry: string;
+  phoneDisplay: string;
+  registeredUtc: string;
+}
 interface Activation {
   id: string;
   deviceFp: string;
@@ -25,6 +56,10 @@ interface Activation {
   status: string;
   activatedUtc: string;
   lastSeenUtc: string;
+  user: EndUser | null;
+  releasedUtc: string | null;
+  releasedBy: string;
+  releaseReason: string;
 }
 interface Detail {
   id: string;
@@ -35,29 +70,28 @@ interface Detail {
   status: string;
   expired: boolean;
   expiryUtc: string | null;
-  deviceLimit: number;
   customerName: string;
   customerEmail: string;
   note: string;
   createdBy: string;
   createdUtc: string;
-  activations: Activation[];
+  device: Activation | null;
+  history: Activation[];
+  attempts: AttemptRow[];
 }
 
 export default function KeyDetail() {
   const { id } = useParams<{ id: string }>();
   const [d, setD] = useState<Detail | null>(null);
   const [extendDays, setExtendDays] = useState(30);
-  const [limit, setLimit] = useState(1);
   const [busy, setBusy] = useState(false);
+  const [moveOpen, setMoveOpen] = useState(false);
+  const [moveReason, setMoveReason] = useState("");
 
   const load = useCallback(() => {
     fetch(`/api/admin/keys/${id}`)
       .then((r) => r.json())
-      .then((x) => {
-        setD(x);
-        if (x?.deviceLimit) setLimit(x.deviceLimit);
-      })
+      .then(setD)
       .catch(() => {});
   }, [id]);
 
@@ -90,7 +124,7 @@ export default function KeyDetail() {
     );
   }
 
-  const active = d.activations.filter((a) => a.status === "active").length;
+  const dev = d.device;
 
   return (
     <div>
@@ -106,6 +140,11 @@ export default function KeyDetail() {
             <span className="font-mono">{d.prefix}…</span>
             <EditionBadge edition={d.edition} />
             <StatusBadge status={d.status} expired={d.expired} />
+            {d.attempts.length > 0 && (
+              <Badge variant="destructive">
+                <ShieldAlert className="h-3 w-3" /> {d.attempts.length} blocked
+              </Badge>
+            )}
           </span>
         }
         description={
@@ -115,6 +154,8 @@ export default function KeyDetail() {
               <Link href={`/admin/orders/${d.serial}`} className="font-mono text-primary hover:underline">
                 {d.serial}
               </Link>
+              {" · "}
+              {d.customerName}
             </>
           ) : (
             "Issued before purchases existed"
@@ -123,22 +164,77 @@ export default function KeyDetail() {
       />
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Details</CardTitle>
+        {/* ---- The PC that holds the key, and the person on it ---- */}
+        <Card className={dev ? "border-primary/30" : ""}>
+          <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-3 space-y-0">
+            <div className="min-w-[10rem]">
+              <CardTitle className="flex items-center gap-2">
+                <MonitorSmartphone className="h-4 w-4 text-primary" /> Device
+              </CardTitle>
+              <CardDescription>The one PC this key is bound to.</CardDescription>
+            </div>
+            {dev && (
+              <Button variant="outline" size="sm" disabled={busy} onClick={() => setMoveOpen(true)}>
+                <ArrowRightLeft /> Move to another device
+              </Button>
+            )}
           </CardHeader>
-          <CardContent>
-            <dl className="divide-y text-sm">
-              <Row label="Customer" value={d.customerName || "—"} />
-              <Row label="Email" value={d.customerEmail || "—"} />
-              <Row label="Valid until" value={d.expiryUtc ? `${fmtDate(d.expiryUtc)} (${fmtRelative(d.expiryUtc)})` : "Perpetual"} />
-              <Row label="Device limit" value={String(d.deviceLimit)} />
-              <Row label="Note" value={d.note || "—"} />
-              <Row label="Issued" value={`${fmtDateTime(d.createdUtc)} by ${d.createdBy}`} />
-            </dl>
+          <CardContent className="text-sm">
+            {!dev ? (
+              <div className="rounded-lg border border-dashed p-6 text-center text-muted-foreground">
+                Not activated on any PC yet. The first PC to install with this serial and key takes it.
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="flex items-start justify-between gap-4 rounded-lg bg-muted/60 p-3">
+                  <div>
+                    <div className="font-semibold">{dev.deviceName || "Unnamed PC"}</div>
+                    <div className="mt-0.5 font-mono text-[11px] text-muted-foreground">{dev.deviceFp.slice(0, 24)}…</div>
+                  </div>
+                  <div className="text-right text-xs text-muted-foreground">
+                    <div>Activated {fmtDate(dev.activatedUtc)}</div>
+                    <div>Seen {fmtRelative(dev.lastSeenUtc)}</div>
+                    <div>
+                      {dev.ip} · v{dev.appVersion || "?"}
+                    </div>
+                  </div>
+                </div>
+
+                {dev.user ? (
+                  <div>
+                    <div className="mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      <UserCheck className="h-3.5 w-3.5 text-success" /> Registered user
+                    </div>
+                    <div className="text-base font-semibold">{dev.user.name}</div>
+                    <div className="mt-1 space-y-1 text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Mail className="h-3.5 w-3.5" />
+                        <a href={`mailto:${dev.user.email}`} className="text-foreground hover:underline">
+                          {dev.user.email}
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-3.5 w-3.5" />
+                        <PhoneDisplay country={dev.user.phoneCountry} text={dev.user.phoneDisplay} className="text-foreground" />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-3.5 w-3.5" /> Registered {fmtDateTime(dev.user.registeredUtc)}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2 rounded-lg border border-warning/40 bg-warning/10 p-3 text-warning">
+                    <Clock className="h-4 w-4 shrink-0" />
+                    Activated but the user has not filled in name, email and mobile yet. The app stays on the
+                    registration screen until they do.
+                  </div>
+                )}
+              </div>
+            )}
           </CardContent>
         </Card>
 
+        {/* ---- Actions on this key alone ---- */}
         <Card>
           <CardHeader>
             <CardTitle>This key only</CardTitle>
@@ -147,6 +243,12 @@ export default function KeyDetail() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5">
+            <dl className="divide-y text-sm">
+              <Row label="Valid until" value={d.expiryUtc ? `${fmtDate(d.expiryUtc)} (${fmtRelative(d.expiryUtc)})` : "Perpetual"} />
+              <Row label="Customer" value={d.customerName || "—"} />
+              <Row label="Note" value={d.note || "—"} />
+              <Row label="Issued" value={`${fmtDateTime(d.createdUtc)} by ${d.createdBy}`} />
+            </dl>
             <div className="flex items-end gap-2">
               <div className="flex-1 space-y-2">
                 <Label htmlFor="extend">Extend by days</Label>
@@ -158,19 +260,6 @@ export default function KeyDetail() {
                 onClick={() => patch({ action: "extend", days: extendDays }, `Extended by ${extendDays} days`)}
               >
                 <CalendarPlus /> Extend
-              </Button>
-            </div>
-            <div className="flex items-end gap-2">
-              <div className="flex-1 space-y-2">
-                <Label htmlFor="limit">Device limit</Label>
-                <Input id="limit" type="number" min={1} max={100} value={limit} onChange={(e) => setLimit(+e.target.value)} />
-              </div>
-              <Button
-                variant="outline"
-                disabled={busy}
-                onClick={() => patch({ action: "setDeviceLimit", deviceLimit: limit }, `Device limit set to ${limit}`)}
-              >
-                <MonitorSmartphone /> Set
               </Button>
             </div>
             <div className="border-t pt-5">
@@ -193,72 +282,104 @@ export default function KeyDetail() {
         </Card>
       </div>
 
+      {/* ---- Attempts from other PCs ---- */}
       <Card className="mt-6">
         <CardHeader>
-          <CardTitle>
-            Devices{" "}
-            <span className="ml-1 font-normal text-muted-foreground">
-              {active}/{d.deviceLimit}
-            </span>
+          <CardTitle className="flex items-center gap-2">
+            <ShieldAlert className={`h-4 w-4 ${d.attempts.length ? "text-destructive" : "text-success"}`} />
+            Blocked attempts
+            {d.attempts.length > 0 && <span className="font-normal text-muted-foreground">{d.attempts.length}</span>}
           </CardTitle>
-          <CardDescription>Each PC that activated with this key. Free a slot to let another one in.</CardDescription>
+          <CardDescription>
+            Every time this key was tried from a PC other than the one it is bound to, or with the wrong serial.
+          </CardDescription>
         </CardHeader>
         <CardContent className="p-0">
-          {d.activations.length === 0 ? (
-            <div className="px-6 pb-8 pt-2 text-center text-sm text-muted-foreground">
-              Not activated on any device yet.
-            </div>
-          ) : (
+          <AttemptsTable rows={d.attempts} showKey={false} />
+        </CardContent>
+      </Card>
+
+      {/* ---- Previous devices ---- */}
+      {d.history.length > 0 && (
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <History className="h-4 w-4" /> Previous devices
+            </CardTitle>
+            <CardDescription>PCs that held this key before it was moved.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Device</TableHead>
-                  <TableHead className="hidden md:table-cell">Fingerprint</TableHead>
-                  <TableHead className="hidden lg:table-cell">IP</TableHead>
-                  <TableHead className="hidden sm:table-cell">Version</TableHead>
-                  <TableHead>Last seen</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead />
+                  <TableHead>PC</TableHead>
+                  <TableHead className="hidden sm:table-cell">User</TableHead>
+                  <TableHead>Held</TableHead>
+                  <TableHead>Released</TableHead>
+                  <TableHead className="hidden md:table-cell">Why</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {d.activations.map((a) => (
+                {d.history.map((a) => (
                   <TableRow key={a.id}>
-                    <TableCell className="font-medium">{a.deviceName || "Unnamed device"}</TableCell>
-                    <TableCell className="hidden font-mono text-xs text-muted-foreground md:table-cell">
-                      {a.deviceFp.slice(0, 16)}…
-                    </TableCell>
-                    <TableCell className="hidden text-muted-foreground lg:table-cell">{a.ip}</TableCell>
-                    <TableCell className="hidden text-muted-foreground sm:table-cell">{a.appVersion || "—"}</TableCell>
-                    <TableCell className="text-muted-foreground">{fmtRelative(a.lastSeenUtc)}</TableCell>
                     <TableCell>
-                      {a.status === "active" ? (
-                        <Badge variant="success">Active</Badge>
-                      ) : (
-                        <Badge variant="secondary">Freed</Badge>
-                      )}
+                      <div className="font-medium">{a.deviceName || "Unnamed PC"}</div>
+                      <div className="font-mono text-[11px] text-muted-foreground">{a.deviceFp.slice(0, 12)}…</div>
                     </TableCell>
-                    <TableCell className="text-right">
-                      {a.status === "active" && (
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          disabled={busy}
-                          onClick={() =>
-                            patch({ action: "deactivateDevice", deviceFp: a.deviceFp }, "Device slot freed")
-                          }
-                        >
-                          <Unplug /> Free slot
-                        </Button>
-                      )}
+                    <TableCell className="hidden sm:table-cell">{a.user?.name || <span className="text-muted-foreground">—</span>}</TableCell>
+                    <TableCell className="whitespace-nowrap text-muted-foreground">
+                      {fmtDate(a.activatedUtc)} → {a.releasedUtc ? fmtDate(a.releasedUtc) : "?"}
                     </TableCell>
+                    <TableCell>
+                      <Badge variant={a.status === "released" ? "warning" : "secondary"}>
+                        {a.status === "released" ? `by ${a.releasedBy}` : "replaced"}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="hidden text-muted-foreground md:table-cell">{a.releaseReason}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
-          )}
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
+
+      <Dialog open={moveOpen} onOpenChange={setMoveOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Move this key to another device?</DialogTitle>
+            <DialogDescription>
+              <strong>{dev?.deviceName || "The current PC"}</strong> loses the licence at its next check-in (within 24
+              hours, or immediately if it is online). The customer then enters the same serial and key on the new PC,
+              which takes the key. The old PC cannot take it back.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-2">
+            <Label htmlFor="reason">Reason (kept on record)</Label>
+            <Input
+              id="reason"
+              value={moveReason}
+              onChange={(e) => setMoveReason(e.target.value)}
+              placeholder="Old laptop stolen, customer called 13 Sep"
+              autoFocus
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="ghost" onClick={() => setMoveOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              onClick={() => {
+                setMoveOpen(false);
+                patch({ action: "releaseDevice", reason: moveReason }, "Key released. The next PC to activate takes it.");
+                setMoveReason("");
+              }}
+            >
+              <ArrowRightLeft /> Release this device
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

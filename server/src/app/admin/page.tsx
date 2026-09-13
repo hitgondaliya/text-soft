@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ShoppingBag, KeyRound, CheckCircle2, Clock, Ban, MonitorSmartphone, ArrowRight, Plus } from "lucide-react";
+import { ShoppingBag, KeyRound, CheckCircle2, Clock, Ban, MonitorSmartphone, UserCheck, ShieldAlert, ArrowRight, Plus } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { EditionBadge } from "@/components/status-badge";
+import { AttemptsTable, type AttemptRow } from "@/components/attempts-table";
 import { fmtRelative } from "@/lib/utils";
 
 interface Stats {
@@ -18,7 +19,10 @@ interface Stats {
   revoked: number;
   expiringSoon: number;
   activations: number;
-  recent: Array<{ id: string; prefix: string; edition: string; lastSeenUtc: string }>;
+  registered: number;
+  blocked7d: number;
+  recent: Array<{ id: string; prefix: string; serial: string; seq: number | null; edition: string; userName: string; lastSeenUtc: string }>;
+  recentAttempts: AttemptRow[];
 }
 
 const STATS: Array<{ key: keyof Stats; label: string; icon: React.ElementType; tone: string; href?: string }> = [
@@ -27,7 +31,9 @@ const STATS: Array<{ key: keyof Stats; label: string; icon: React.ElementType; t
   { key: "active", label: "Active", icon: CheckCircle2, tone: "text-success bg-success/10", href: "/admin/keys?status=active" },
   { key: "expiringSoon", label: "Expiring in 7 days", icon: Clock, tone: "text-warning bg-warning/10", href: "/admin/keys?status=expired" },
   { key: "revoked", label: "Revoked", icon: Ban, tone: "text-destructive bg-destructive/10", href: "/admin/keys?status=revoked" },
-  { key: "activations", label: "Devices online", icon: MonitorSmartphone, tone: "text-primary bg-primary/10" },
+  { key: "activations", label: "PCs activated", icon: MonitorSmartphone, tone: "text-primary bg-primary/10", href: "/admin/users" },
+  { key: "registered", label: "Registered users", icon: UserCheck, tone: "text-success bg-success/10", href: "/admin/users?registered=yes" },
+  { key: "blocked7d", label: "Blocked, last 7 days", icon: ShieldAlert, tone: "text-destructive bg-destructive/10", href: "/admin/security?days=7" },
 ];
 
 export default function Dashboard() {
@@ -50,7 +56,7 @@ export default function Dashboard() {
         </Button>
       </PageHeader>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-8">
         {STATS.map(({ key, label, icon: Icon, tone, href }) => {
           const value = s ? (s[key] as number) : null;
           const body = (
@@ -78,7 +84,8 @@ export default function Dashboard() {
         })}
       </div>
 
-      <Card className="mt-6">
+      <div className="mt-6 grid gap-6 xl:grid-cols-2">
+      <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0">
           <div>
             <CardTitle>Recently active keys</CardTitle>
@@ -106,21 +113,22 @@ export default function Dashboard() {
               <TableHeader>
                 <TableRow>
                   <TableHead>Key</TableHead>
-                  <TableHead>Edition</TableHead>
+                  <TableHead>User</TableHead>
                   <TableHead className="text-right">Last seen</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {s.recent.map((k) => (
                   <TableRow key={k.id}>
-                    <TableCell className="font-mono">
+                    <TableCell className="whitespace-nowrap font-mono text-xs">
                       <Link href={`/admin/keys/${k.id}`} className="text-primary hover:underline">
-                        {k.prefix}…
+                        {k.serial || k.prefix} {k.seq ? <span className="text-muted-foreground">#{k.seq}</span> : null}
                       </Link>
+                      <div className="mt-0.5">
+                        <EditionBadge edition={k.edition} />
+                      </div>
                     </TableCell>
-                    <TableCell>
-                      <EditionBadge edition={k.edition} />
-                    </TableCell>
+                    <TableCell>{k.userName || <span className="text-muted-foreground">Not registered</span>}</TableCell>
                     <TableCell className="text-right text-muted-foreground">{fmtRelative(k.lastSeenUtc)}</TableCell>
                   </TableRow>
                 ))}
@@ -129,6 +137,34 @@ export default function Dashboard() {
           )}
         </CardContent>
       </Card>
+
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between space-y-0">
+          <div>
+            <CardTitle className="flex items-center gap-2">
+              <ShieldAlert className={`h-4 w-4 ${s?.recentAttempts.length ? "text-destructive" : "text-success"}`} />
+              Latest blocked attempts
+            </CardTitle>
+            <CardDescription>Keys tried on a second PC, wrong serials, expired keys.</CardDescription>
+          </div>
+          <Button variant="ghost" size="sm" asChild>
+            <Link href="/admin/security">
+              Security <ArrowRight />
+            </Link>
+          </Button>
+        </CardHeader>
+        <CardContent className="p-0">
+          {!s ? (
+            <div className="space-y-3 p-6">
+              <Skeleton className="h-5 w-full" />
+              <Skeleton className="h-5 w-4/5" />
+            </div>
+          ) : (
+            <AttemptsTable rows={s.recentAttempts} emptyText="Nothing refused so far." />
+          )}
+        </CardContent>
+      </Card>
+      </div>
     </div>
   );
 }

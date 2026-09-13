@@ -4,7 +4,14 @@ import { ObjectId } from "mongodb";
 
 export type Edition = "demo" | "full";
 export type KeyStatus = "active" | "revoked";
-export type ActivationStatus = "active" | "deactivated";
+/**
+ * active   — this device holds the key.
+ * released — an admin moved the key off this device ("Move to another device");
+ *            the device is locked at its next check-in. Kept as history.
+ * replaced — the same device activated a different key; the old binding is
+ *            dropped so a PC never holds two keys.
+ */
+export type ActivationStatus = "active" | "released" | "replaced";
 
 /** admins — who can log into the panel. Password is bcrypt-hashed. */
 export interface AdminDoc {
@@ -29,11 +36,15 @@ export interface OrderDoc {
   serial: string; // "TXS-2026-0001" — unique, sequential within the year
   customerName: string;
   customerEmail?: string;
+  /** Phone as typed (national digits) plus its country and E.164 form. */
   customerPhone?: string;
+  customerPhoneCountry?: string; // ISO 3166-1 alpha-2, e.g. "IN"
+  customerPhoneE164?: string; // "+919825000000"
   company?: string;
   /** What was sold. Every key under the serial is issued on these terms. */
   edition: Edition;
   expiryUtc: Date | null; // null = perpetual
+  /** Always 1 — one key, one device. Kept for old documents. */
   deviceLimit: number;
   quantity: number;
   note?: string;
@@ -57,6 +68,7 @@ export interface LicenseKeyDoc {
   seq: number;
   edition: Edition;
   expiryUtc: Date | null; // null = perpetual
+  /** Always 1 — one key, one device. Kept for old documents. */
   deviceLimit: number;
   status: KeyStatus;
   customerName?: string;
@@ -65,6 +77,10 @@ export interface LicenseKeyDoc {
   createdBy: string; // admin email
   createdUtc: Date;
   lastSeenUtc?: Date | null;
+  /** Copy of the end user who registered on the bound device, for lists/search. */
+  userName?: string;
+  userEmail?: string;
+  userPhoneE164?: string;
 }
 
 /** counters — atomic sequence generator, one document per counter name. */
@@ -73,17 +89,67 @@ export interface CounterDoc {
   seq: number;
 }
 
+/** The person who registered the software on a device (asked after activation). */
+export interface EndUser {
+  name: string;
+  email: string;
+  phoneCountry: string; // ISO 3166-1 alpha-2
+  phone: string; // national number as typed, digits only
+  phoneE164: string; // "+919825000000"
+  registeredUtc: Date;
+}
+
 /** activations — a device bound to a key. Unique on (keyId, deviceFp). */
 export interface ActivationDoc {
   _id?: ObjectId;
   keyId: ObjectId;
+  serial: string;
   deviceFp: string;
+  /** sha256 of the Windows MachineGuid — what the installer can send before the
+   *  app exists, so a reinstall on the same PC is recognised. */
+  machineHint?: string;
   deviceName?: string;
   ip?: string;
   appVersion?: string;
   status: ActivationStatus;
   activatedUtc: Date;
   lastSeenUtc: Date;
+  user?: EndUser;
+  releasedUtc?: Date;
+  releasedBy?: string; // admin email, or "system" for `replaced`
+  releaseReason?: string;
+}
+
+export type AttemptReason =
+  | "already_bound" // key is on another device — the one the customer asked us to block
+  | "serial_mismatch" // key exists but not under that serial
+  | "invalid" // unknown key
+  | "revoked"
+  | "expired"
+  | "released"; // a device whose key was moved away keeps trying
+
+/**
+ * activationAttempts — every refused activation, so the panel can show when a
+ * key was tried on a second PC. Never blocks anything itself; it is the record.
+ */
+export interface ActivationAttemptDoc {
+  _id?: ObjectId;
+  keyId?: ObjectId; // absent when the key itself is unknown
+  serial?: string;
+  seq?: number;
+  keyPrefix?: string;
+  /** What was typed when the key is unknown (prefix only, never the full key). */
+  typedPrefix?: string;
+  deviceFp?: string;
+  machineHint?: string;
+  deviceName?: string;
+  ip: string;
+  appVersion?: string;
+  reason: AttemptReason;
+  source: "app" | "installer";
+  /** For already_bound: the device that legitimately holds the key. */
+  boundDeviceName?: string;
+  createdUtc: Date;
 }
 
 /** auditLog — every admin mutation, for accountability. */

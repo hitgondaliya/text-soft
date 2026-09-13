@@ -4,7 +4,8 @@ import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
-import type { ActivationDoc, LicenseKeyDoc, OrderDoc } from "@/lib/models";
+import { parsePhone, formatPhone } from "@/lib/phone";
+import type { ActivationAttemptDoc, ActivationDoc, LicenseKeyDoc, OrderDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -43,22 +44,43 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     .sort({ seq: 1 })
     .toArray();
 
-  const acts = db.collection<ActivationDoc>("activations");
   const now = new Date();
+  const ids = keys.map((k) => k._id!);
+  const [holders, attemptCounts] = await Promise.all([
+    db.collection<ActivationDoc>("activations").find({ keyId: { $in: ids }, status: "active" }).toArray(),
+    db
+      .collection<ActivationAttemptDoc>("activationAttempts")
+      .aggregate<{ _id: string; n: number }>([
+        { $match: { keyId: { $in: ids } } },
+        { $group: { _id: { $toString: "$keyId" }, n: { $sum: 1 } } },
+      ])
+      .toArray(),
+  ]);
+  const holderBy = new Map(holders.map((a) => [a.keyId.toHexString(), a]));
+  const attemptsBy = new Map(attemptCounts.map((c) => [c._id, c.n]));
 
-  const keyList = await Promise.all(
-    keys.map(async (k) => ({
-      id: k._id!.toHexString(),
+  const keyList = keys.map((k) => {
+    const id = k._id!.toHexString();
+    const h = holderBy.get(id);
+    return {
+      id,
       seq: k.seq,
       prefix: k.keyPrefix,
       status: k.status,
       expired: !!k.expiryUtc && now > k.expiryUtc,
       expiryUtc: k.expiryUtc ? k.expiryUtc.toISOString() : null,
-      deviceLimit: k.deviceLimit,
-      devicesUsed: await acts.countDocuments({ keyId: k._id!, status: "active" }),
+      bound: !!h,
+      deviceName: h?.deviceName ?? "",
+      registered: !!h?.user,
+      userName: h?.user?.name ?? "",
+      userEmail: h?.user?.email ?? "",
+      userPhone: formatPhone(h?.user?.phoneE164),
+      userPhoneCountry: h?.user?.phoneCountry ?? "",
+      attempts: attemptsBy.get(id) ?? 0,
       lastSeenUtc: k.lastSeenUtc ? k.lastSeenUtc.toISOString() : null,
-    })),
-  );
+    };
+  });
+  const attemptsTotal = Array.from(attemptsBy.values()).reduce((a, b) => a + b, 0);
 
   return ok({
     id: order._id!.toHexString(),
@@ -66,9 +88,11 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     customerName: order.customerName,
     customerEmail: order.customerEmail ?? "",
     customerPhone: order.customerPhone ?? "",
+    customerPhoneCountry: order.customerPhoneCountry ?? "",
+    customerPhoneDisplay: formatPhone(order.customerPhoneE164) || order.customerPhone || "",
     company: order.company ?? "",
     edition: order.edition,
-    deviceLimit: order.deviceLimit,
+    attemptsTotal,
     quantity: order.quantity,
     expiryUtc: order.expiryUtc ? order.expiryUtc.toISOString() : null,
     expired: !!order.expiryUtc && now > order.expiryUtc,
@@ -88,6 +112,7 @@ const PatchBody = z.object({
   customerName: z.string().min(1).max(128).optional(),
   customerEmail: z.string().email().optional().or(z.literal("")),
   customerPhone: z.string().max(40).optional(),
+  customerPhoneCountry: z.string().length(2).optional(),
   company: z.string().max(128).optional(),
   note: z.string().max(500).optional(),
 });
@@ -139,7 +164,19 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       const set: Partial<OrderDoc> = {};
       if (b.customerName) set.customerName = b.customerName;
       if (b.customerEmail !== undefined) set.customerEmail = b.customerEmail || undefined;
-      if (b.customerPhone !== undefined) set.customerPhone = b.customerPhone || undefined;
+      if (b.customerPhone !== undefined) {
+        if (b.customerPhone.trim()) {
+          const phone = parsePhone(b.customerPhoneCountry ?? order.customerPhoneCountry ?? "IN", b.customerPhone);
+          if (!phone) return fail("bad_request", 400, { field: "customerPhone" });
+          set.customerPhone = phone.national;
+          set.customerPhoneCountry = phone.country;
+          set.customerPhoneE164 = phone.e164;
+        } else {
+          set.customerPhone = undefined;
+          set.customerPhoneCountry = undefined;
+          set.customerPhoneE164 = undefined;
+        }
+      }
       if (b.company !== undefined) set.company = b.company || undefined;
       if (b.note !== undefined) set.note = b.note || undefined;
       if (Object.keys(set).length === 0) return fail("bad_request", 400);

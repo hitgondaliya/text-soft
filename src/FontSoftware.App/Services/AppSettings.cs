@@ -30,13 +30,6 @@ public sealed class AppSettings
     public bool AutoStart { get; set; }
 
     /// <summary>
-    /// Base URL of the license server (activation + heartbeat). Must be HTTPS in
-    /// production. Set this to your deployed API, e.g. https://api.yourdomain.com.
-    /// </summary>
-    [JsonPropertyName("licenseApiUrl")]
-    public string LicenseApiUrl { get; set; } = "http://localhost:3000";
-
-    /// <summary>
     /// Process names (no extension) where system-wide typing is suppressed.
     /// FR-3 lists secure fields / elevated windows / games as out of scope; this
     /// lets the user add known-problem apps. Defaults cover common cases.

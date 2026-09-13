@@ -19,11 +19,25 @@ To build the installer only (after publishing yourself):
 & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" setup.iss
 ```
 
+## Licence page (serial + key)
+
+Setup asks for the purchase serial (`TXS-2026-0001`) and the licence key right after
+the welcome page and checks them with the licence server (`#define ApiUrl` in
+`setup.iss`, stamped by `scriptsset-prod-config.ps1`) **before** copying anything.
+A key that is already bound to another PC, a wrong serial, a revoked or expired key
+stops the install with a clear message, and the attempt shows up in the panel. A
+reinstall on the same PC is recognised (MachineGuid). The verified pair is left in
+`%ProgramData%TextSoftpending-activation.json`; the app activates with it on first
+launch and then asks the user to register (name, email, mobile).
+
+Silent installs: `TextSoft-Setup.exe /SILENT /SERIAL=TXS-2026-0001 /KEY=TXSF-...`.
+
 ## Release build (obfuscated) — for shipping licensed builds
 `build-installer.ps1` makes a quick single-file build with **no** obfuscation. For a
 real release use `build-release.ps1`, which publishes as a folder and runs Obfuscar
-over `FontSoftware.Licensing.dll` (the assembly holding the Ed25519 verification and
-the expiry / clock-rollback / grace logic) before packaging — see `obfuscar.xml`.
+over `FontSoftware.Licensing.dll` (Ed25519 verification, expiry / clock-rollback /
+grace / registration logic, API URL) and `FontSoftware.Engine.dll` (the per-key
+licence gate) before packaging — see `obfuscar.xml`.
 
 ```powershell
 # 1) one-time tool
@@ -33,8 +47,8 @@ powershell -File ..\scripts\set-prod-config.ps1 -PublicKey "<b64>" -ApiUrl "http
 # 3) build the obfuscated installer
 powershell -ExecutionPolicy Bypass -File build-release.ps1
 ```
-`set-prod-config.ps1` swaps the dev Ed25519 public key + `localhost` API URL for your
-production values (get the key from `server`: `npm run genkeys`). Obfuscation keeps
+`set-prod-config.ps1` swaps the dev Ed25519 public key + `localhost` API URL (in the
+app's `LicenseEndpoints.cs` and the installer's `setup.iss`) for your production values (get the key from `server`: `npm run genkeys`). Obfuscation keeps
 the library's public API readable (so the WPF app still binds) and renames the private
 internals + encrypts string literals. **Test-launch the installed app after building**
 — the release script does not UI-test the obfuscated build.

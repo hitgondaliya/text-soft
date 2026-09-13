@@ -4,7 +4,8 @@ import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
-import type { LicenseKeyDoc, ActivationDoc } from "@/lib/models";
+import { activationView, attemptView } from "@/lib/views";
+import type { LicenseKeyDoc, ActivationDoc, ActivationAttemptDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -17,7 +18,8 @@ function oid(id: string): ObjectId | null {
   }
 }
 
-// GET /api/admin/keys/:id — full detail including per-device activations.
+// GET /api/admin/keys/:id — full detail: the device holding it, the person who
+// registered, every past device, and every refused attempt.
 export async function GET(_req: Request, { params }: { params: { id: string } }) {
   if (!(await getSession())) return fail("unauthorized", 401);
   const _id = oid(params.id);
@@ -27,13 +29,13 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
   const key = await db.collection<LicenseKeyDoc>("licenseKeys").findOne({ _id });
   if (!key) return fail("not_found", 404);
 
-  const activations = await db
-    .collection<ActivationDoc>("activations")
-    .find({ keyId: _id })
-    .sort({ activatedUtc: -1 })
-    .toArray();
+  const [activations, attempts] = await Promise.all([
+    db.collection<ActivationDoc>("activations").find({ keyId: _id }).sort({ activatedUtc: -1 }).toArray(),
+    db.collection<ActivationAttemptDoc>("activationAttempts").find({ keyId: _id }).sort({ createdUtc: -1 }).limit(200).toArray(),
+  ]);
 
   const now = new Date();
+  const holder = activations.find((a) => a.status === "active") ?? null;
   return ok({
     id: key._id!.toHexString(),
     prefix: key.keyPrefix,
@@ -43,35 +45,26 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     status: key.status,
     expired: !!key.expiryUtc && now > key.expiryUtc,
     expiryUtc: key.expiryUtc ? key.expiryUtc.toISOString() : null,
-    deviceLimit: key.deviceLimit,
     customerName: key.customerName ?? "",
     customerEmail: key.customerEmail ?? "",
     note: key.note ?? "",
     createdBy: key.createdBy,
     createdUtc: key.createdUtc.toISOString(),
     lastSeenUtc: key.lastSeenUtc ? key.lastSeenUtc.toISOString() : null,
-    activations: activations.map((a) => ({
-      id: a._id!.toHexString(),
-      deviceFp: a.deviceFp,
-      deviceName: a.deviceName ?? "",
-      ip: a.ip ?? "",
-      appVersion: a.appVersion ?? "",
-      status: a.status,
-      activatedUtc: a.activatedUtc.toISOString(),
-      lastSeenUtc: a.lastSeenUtc.toISOString(),
-    })),
+    device: holder ? activationView(holder) : null,
+    history: activations.filter((a) => a.status !== "active").map(activationView),
+    attempts: attempts.map(attemptView),
   });
 }
 
 const PatchBody = z.object({
-  action: z.enum(["revoke", "unrevoke", "extend", "setExpiry", "setDeviceLimit", "deactivateDevice"]),
+  action: z.enum(["revoke", "unrevoke", "extend", "setExpiry", "releaseDevice"]),
   days: z.number().int().min(1).max(3650).optional(),
   expiryUtc: z.string().datetime().nullable().optional(),
-  deviceLimit: z.number().int().min(1).max(100).optional(),
-  deviceFp: z.string().optional(),
+  reason: z.string().max(200).optional(),
 });
 
-// PATCH /api/admin/keys/:id — revoke / extend / change limit / free a device.
+// PATCH /api/admin/keys/:id — revoke / extend / move to another device.
 export async function PATCH(req: Request, { params }: { params: { id: string } }) {
   const session = await getSession();
   if (!session) return fail("unauthorized", 401);
@@ -106,24 +99,28 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       break;
     }
     case "setExpiry":
-      await keys.updateOne(
-        { _id },
-        { $set: { expiryUtc: b.expiryUtc ? new Date(b.expiryUtc) : null } },
+      await keys.updateOne({ _id }, { $set: { expiryUtc: b.expiryUtc ? new Date(b.expiryUtc) : null } });
+      break;
+    case "releaseDevice": {
+      // "Move to another device": the current PC loses the key at its next
+      // check-in and the next PC to activate takes it. Only an admin can do this.
+      const acts = db.collection<ActivationDoc>("activations");
+      const res = await acts.updateOne(
+        { keyId: _id, status: "active" },
+        {
+          $set: {
+            status: "released",
+            releasedUtc: new Date(),
+            releasedBy: session.email,
+            releaseReason: b.reason?.trim() || "Moved to another device by support",
+          },
+        },
       );
-      break;
-    case "setDeviceLimit":
-      if (!b.deviceLimit) return fail("bad_request", 400);
-      await keys.updateOne({ _id }, { $set: { deviceLimit: b.deviceLimit } });
-      break;
-    case "deactivateDevice": {
-      if (!b.deviceFp) return fail("bad_request", 400);
-      await db
-        .collection<ActivationDoc>("activations")
-        .updateOne({ keyId: _id, deviceFp: b.deviceFp }, { $set: { status: "deactivated" } });
+      if (res.matchedCount === 0) return fail("not_bound", 409);
       break;
     }
   }
 
-  await audit(session.email, `key.${b.action}`, key.keyPrefix, { ...b });
+  await audit(session.email, `key.${b.action}`, `${key.serial} #${key.seq}`, { ...b });
   return ok({ status: "updated" });
 }

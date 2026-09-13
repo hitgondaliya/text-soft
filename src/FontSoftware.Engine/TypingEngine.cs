@@ -58,6 +58,13 @@ public sealed class TypingEngine : IDisposable
 
     public bool Enabled { get; private set; }
 
+    /// <summary>
+    /// Licence gate, consulted on every key while enabled. Returns false when the
+    /// licence is not active; the engine then switches itself off and lets the key
+    /// through as plain English. Set by the app to the licence manager.
+    /// </summary>
+    public Func<bool>? Gate { get; set; }
+
     /// <summary>Virtual-key code of the toggle key. Default CapsLock (FR-6 config).</summary>
     public int ToggleKey { get; set; } = VK_CAPITAL;
 
@@ -131,6 +138,8 @@ public sealed class TypingEngine : IDisposable
     /// <summary>Force the engine on/off (e.g. from a UI button).</summary>
     public void SetEnabled(bool enabled)
     {
+        if (enabled && Gate is { } gate && !gate())
+            enabled = false; // no licence, no typing
         if (Enabled == enabled)
             return;
         Enabled = enabled;
@@ -165,6 +174,13 @@ public sealed class TypingEngine : IDisposable
 
         if (!Enabled)
             return; // OFF: normal English typing (FR-3)
+
+        // Licence gone (expired, revoked, moved): stop, and do not consume the key.
+        if (Gate is { } gate && !gate())
+        {
+            SetEnabled(false);
+            return;
+        }
 
         // Phonetic "type by sound" mode intercepts before the fixed-key layout.
         if (PhoneticMode && _translit is not null)

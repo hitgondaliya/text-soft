@@ -15,6 +15,8 @@
     <!-- WPF drives DPI via the manifest (correct for this WPF-only UI); silence the
          WinForms analyzer that wants DPI configured through its own API instead. -->
     <NoWarn>$(NoWarn);WFAC010</NoWarn>
+    <!-- Reported to the licence server as appVersion; bump per release. -->
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +24,15 @@
     <Resource Include="app.ico" />
     <!-- TextSoft brand logo (lives at the repo root), shown in the sidebar. -->
     <Resource Include="..\..\logo.png" Link="logo.png" />
+    <!-- Country list + one flag PNG per country for the registration form
+         (Windows renders emoji flags as letters, so bitmaps are embedded). -->
+    <Resource Include="Assets\countries.json" />
+    <Resource Include="Assets\flags\*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Mobile-number validation per country (same rules as the server's libphonenumber-js). -->
+    <PackageReference Include="libphonenumber-csharp" Version="9.0.39" />
   </ItemGroup>
 
   <!-- WinForms is used only for the tray icon, via an explicit alias in code.

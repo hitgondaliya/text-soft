@@ -86,8 +86,9 @@ public sealed class ConverterViewModel : ObservableObject
         get => _premiumUnlocked;
         set
         {
-            if (SetProperty(ref _premiumUnlocked, value) && !value)
-                AutoCopyOutput = false; // reverting to free disables the feature
+            if (!SetProperty(ref _premiumUnlocked, value)) return;
+            if (!value) AutoCopyOutput = false; // locked: the feature goes too
+            ConvertCommand.RaiseCanExecuteChanged();
         }
     }
 
@@ -113,7 +114,7 @@ public sealed class ConverterViewModel : ObservableObject
                                    .GroupBy(f => f.Id).Select(g => g.First()))
             Fonts.Add(font);
 
-        ConvertCommand = new RelayCommand(Convert, () => CanConvert);
+        ConvertCommand = new RelayCommand(Convert, () => CanConvert && PremiumUnlocked);
         CopyCommand = new RelayCommand(Copy);
         SwapCommand = new RelayCommand(Swap);
 

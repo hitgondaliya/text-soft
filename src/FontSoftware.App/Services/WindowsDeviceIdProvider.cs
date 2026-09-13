@@ -8,37 +8,57 @@ using Microsoft.Win32;
 namespace FontSoftware.App.Services;
 
 /// <summary>
-/// Windows device fingerprint for license binding. Derived from stable hardware/OS
-/// identifiers — the registry <c>MachineGuid</c>, the system-drive volume serial, and
-/// the processor count/architecture — hashed together. Stable across reboots and app
-/// updates, but different on another machine, so a copied activation will not verify.
+/// Windows device fingerprint for license binding. Hashed together from the
+/// registry <c>MachineGuid</c>, the system-drive volume serial, the BIOS / board
+/// identity and the CPU identifier. Stable across reboots, app updates and a
+/// renamed PC (the machine name is deliberately NOT included), but different on
+/// any other machine — so a copied activation will not verify, and a key stays
+/// on the one PC it was activated on.
+///
+/// A reinstall of Windows changes the MachineGuid and usually the volume serial,
+/// which counts as a new device; support moves the key from the panel.
 /// </summary>
 public sealed class WindowsDeviceIdProvider : IDeviceIdProvider
 {
+    private string? _cached;
+
     public string GetDeviceId()
     {
+        if (_cached is not null) return _cached;
         var sb = new StringBuilder();
         sb.Append(MachineGuid()).Append('|');
         sb.Append(SystemVolumeSerial()).Append('|');
-        sb.Append(Environment.ProcessorCount).Append('|');
-        sb.Append(RuntimeInformation.ProcessArchitecture).Append('|');
-        sb.Append(Environment.MachineName);
+        sb.Append(Reg(@"HARDWARE\DESCRIPTION\System\BIOS", "SystemManufacturer")).Append('|');
+        sb.Append(Reg(@"HARDWARE\DESCRIPTION\System\BIOS", "SystemProductName")).Append('|');
+        sb.Append(Reg(@"HARDWARE\DESCRIPTION\System\BIOS", "BaseBoardProduct")).Append('|');
+        sb.Append(Reg(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0", "Identifier")).Append('|');
+        sb.Append(RuntimeInformation.ProcessArchitecture);
 
         byte[] hash = SHA256.HashData(Encoding.UTF8.GetBytes(sb.ToString()));
-        return Convert.ToHexString(hash); // 64 hex chars
+        return _cached = Convert.ToHexString(hash); // 64 hex chars
     }
 
+    /// <summary>The raw MachineGuid — the same value the installer reads, so the
+    /// server can tell a reinstall on this PC from an install on another one.</summary>
+    public string GetMachineHint() => MachineGuid();
+
     private static string MachineGuid()
+    {
+        var v = Reg(@"SOFTWARE\Microsoft\Cryptography", "MachineGuid");
+        return string.IsNullOrEmpty(v) ? "no-guid" : v;
+    }
+
+    private static string Reg(string subKey, string value)
     {
         try
         {
             using var key = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64)
-                .OpenSubKey(@"SOFTWARE\Microsoft\Cryptography");
-            return key?.GetValue("MachineGuid") as string ?? "no-guid";
+                .OpenSubKey(subKey);
+            return key?.GetValue(value)?.ToString()?.Trim() ?? "";
         }
         catch
         {
-            return "no-guid";
+            return "";
         }
     }
 
@@ -47,7 +67,6 @@ public sealed class WindowsDeviceIdProvider : IDeviceIdProvider
         try
         {
             string root = Path.GetPathRoot(Environment.SystemDirectory) ?? "C:\\";
-            var sb = new StringBuilder(261);
             var fs = new StringBuilder(261);
             if (GetVolumeInformation(root, null, 0, out uint serial, out _, out _, fs, fs.Capacity))
                 return serial.ToString("X8");

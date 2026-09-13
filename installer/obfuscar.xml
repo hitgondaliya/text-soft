@@ -2,10 +2,10 @@
 <!--
   Obfuscar config for the TextSoft release build.
 
-  Scope: FontSoftware.Licensing.dll ONLY — the assembly that holds the Ed25519
-  verification, the offline-grace / clock-rollback / expiry logic, and the local
-  store's MAC secret. Obfuscating this raises the effort to locate and patch the
-  license checks.
+  Scope: FontSoftware.Licensing.dll (Ed25519 verification, offline-grace /
+  clock-rollback / expiry / registration logic, the local store's MAC secret, the
+  API URL) and FontSoftware.Engine.dll (the per-key licence gate). Obfuscating
+  these raises the effort to locate and patch the license checks.
 
   Why not the App/Engine/Core assemblies: the WPF app binds to public view-model
   members and XAML handlers by *name*, so renaming them would break the UI. We keep
@@ -33,4 +33,7 @@
   <Var name="SuppressIldasm" value="true" />
 
   <Module file="$(InPath)\FontSoftware.Licensing.dll" />
+  <!-- The typing engine holds the licence gate (TypingEngine.Gate); it has no XAML
+       bindings, so its private internals can be renamed as well. -->
+  <Module file="$(InPath)\FontSoftware.Engine.dll" />
 </Obfuscator>

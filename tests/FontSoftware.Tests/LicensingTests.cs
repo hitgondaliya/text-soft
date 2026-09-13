@@ -35,6 +35,7 @@ public class LicensingTests
         private readonly string _id;
         public FixedDevice(string id) => _id = id;
         public string GetDeviceId() => _id;
+        public string GetMachineHint() => "hint-" + _id;
     }
 
     /// <summary>Signs tokens with a test private key; the public half feeds the verifier.</summary>
@@ -54,14 +55,17 @@ public class LicensingTests
         }
 
         public string MakeToken(string deviceFp, LicenseEdition edition, DateTime serverTime,
-            DateTime? expiry, int graceDays = 5, int heartbeatHours = 24)
+            DateTime? expiry, int graceDays = 5, int heartbeatHours = 24, bool registered = true,
+            DateTime? validUntil = null)
         {
             string exp = expiry is { } e ? $"\"{e:yyyy-MM-ddTHH:mm:ss.fffZ}\"" : "null";
+            DateTime vu = validUntil ?? serverTime.AddDays(graceDays).AddHours(heartbeatHours + 12);
             string json =
-                $"{{\"v\":1,\"keyId\":\"k1\",\"edition\":\"{(edition == LicenseEdition.Full ? "full" : "demo")}\"," +
-                $"\"expiryUtc\":{exp},\"deviceFp\":\"{deviceFp}\"," +
+                $"{{\"v\":2,\"keyId\":\"k1\",\"serial\":\"TXS-2026-0001\",\"edition\":\"{(edition == LicenseEdition.Full ? "full" : "demo")}\"," +
+                $"\"expiryUtc\":{exp},\"deviceFp\":\"{deviceFp}\",\"registered\":{(registered ? "true" : "false")}," +
                 $"\"issuedUtc\":\"{serverTime:yyyy-MM-ddTHH:mm:ss.fffZ}\"," +
                 $"\"serverTimeUtc\":\"{serverTime:yyyy-MM-ddTHH:mm:ss.fffZ}\"," +
+                $"\"validUntilUtc\":\"{vu:yyyy-MM-ddTHH:mm:ss.fffZ}\"," +
                 $"\"graceDays\":{graceDays},\"heartbeatHours\":{heartbeatHours},\"nonce\":\"n1\"}}";
             byte[] bytes = Encoding.UTF8.GetBytes(json);
             var signer = new Ed25519Signer();
@@ -76,15 +80,20 @@ public class LicensingTests
     {
         public Func<string, ApiResult>? OnActivate;
         public Func<string, ApiResult>? OnValidate;
+        public Func<RegistrationInfo, ApiResult>? OnRegister;
+        public ActivationRequest? LastActivation;
 
-        public Task<ApiResult> ActivateAsync(string key, string deviceFp, string deviceName, string appVersion, CancellationToken ct = default)
-            => Task.FromResult(OnActivate?.Invoke(key) ?? new ApiResult(LicenseResult.Invalid, null));
+        public Task<ApiResult> ActivateAsync(ActivationRequest req, CancellationToken ct = default)
+        {
+            LastActivation = req;
+            return Task.FromResult(OnActivate?.Invoke(req.Key) ?? new ApiResult(LicenseResult.Invalid, null));
+        }
 
         public Task<ApiResult> ValidateAsync(string token, string appVersion, CancellationToken ct = default)
             => Task.FromResult(OnValidate?.Invoke(token) ?? new ApiResult(LicenseResult.Network, null));
 
-        public Task<ApiResult> DeactivateAsync(string token, CancellationToken ct = default)
-            => Task.FromResult(new ApiResult(LicenseResult.Valid, null));
+        public Task<ApiResult> RegisterAsync(string token, RegistrationInfo info, CancellationToken ct = default)
+            => Task.FromResult(OnRegister?.Invoke(info) ?? new ApiResult(LicenseResult.Network, null));
     }
 
     private static (LicenseManager mgr, MemoryStore store, TokenReader reader) Build(
@@ -130,7 +139,7 @@ public class LicensingTests
         var api = new FakeApi { OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null)) };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
 
-        Assert.Equal(LicenseResult.Valid, await mgr.ActivateAsync("TXSF-x", "PC", Now));
+        Assert.Equal(LicenseResult.Valid, await mgr.ActivateAsync("TXS-2026-0001", "TXSF-x", "PC", Now));
         Assert.True(mgr.IsActive);
         Assert.Equal(LicenseEdition.Full, mgr.Current.Edition);
         Assert.NotNull(store.Raw);
@@ -148,7 +157,7 @@ public class LicensingTests
         var signer = new TestSigner();
         var api = new FakeApi { OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null)) };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
-        await mgr.ActivateAsync("k", "PC", Now);
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
 
         // Same blob, different machine → MAC + device-fp checks fail → locked.
         var other = new LicenseManager(api, new TokenReader(new Ed25519Verifier(signer.PublicKeyBase64)),
@@ -168,7 +177,7 @@ public class LicensingTests
             OnValidate = _ => new ApiResult(LicenseResult.Network, null) // offline so local expiry decides
         };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
-        await mgr.ActivateAsync("k", "PC", Now);
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
 
         Assert.Equal(LicenseResult.Expired, await mgr.LoadAndRefreshAsync(Now.AddDays(8)));
         Assert.False(mgr.IsActive);
@@ -184,7 +193,7 @@ public class LicensingTests
             OnValidate = _ => new ApiResult(LicenseResult.Revoked, null)
         };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
-        await mgr.ActivateAsync("k", "PC", Now);
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
 
         // Heartbeat due (25h later) → server says revoked → locked.
         Assert.Equal(LicenseResult.Revoked, await mgr.LoadAndRefreshAsync(Now.AddHours(25)));
@@ -201,7 +210,7 @@ public class LicensingTests
             OnValidate = _ => new ApiResult(LicenseResult.Network, null) // always offline
         };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
-        await mgr.ActivateAsync("k", "PC", Now);
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
 
         // 3 days offline → within 5-day grace → active.
         Assert.Equal(LicenseResult.Valid, await mgr.LoadAndRefreshAsync(Now.AddDays(3)));
@@ -222,7 +231,7 @@ public class LicensingTests
             OnValidate = _ => new ApiResult(LicenseResult.Network, null)
         };
         var (mgr, store, _) = Build(signer, api, "DEV-A");
-        await mgr.ActivateAsync("k", "PC", Now);
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
 
         // System clock set well before the last server-seen time → rollback → locked.
         Assert.Equal(LicenseResult.ClockRolledBack, await mgr.LoadAndRefreshAsync(Now.AddDays(-30)));
@@ -235,7 +244,109 @@ public class LicensingTests
         var signer = new TestSigner();
         var api = new FakeApi { OnActivate = _ => new ApiResult(LicenseResult.Invalid, null) };
         var (mgr, _, _) = Build(signer, api, "DEV-A");
-        Assert.Equal(LicenseResult.Invalid, await mgr.ActivateAsync("BAD", "PC", Now));
+        Assert.Equal(LicenseResult.Invalid, await mgr.ActivateAsync("TXS-2026-0001", "BAD", "PC", Now));
         Assert.False(mgr.IsActive);
+    }
+
+    // ---- v3: one device, registration, token ceiling ----
+
+    [Fact]
+    public async Task ActivationSendsSerialKeyFingerprintAndHint()
+    {
+        var signer = new TestSigner();
+        var api = new FakeApi { OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null)) };
+        var (mgr, _, _) = Build(signer, api, "DEV-A");
+        await mgr.ActivateAsync(" txs-2026-0001 ", "TXSF-x", "OFFICE-PC", Now);
+        Assert.Equal("TXS-2026-0001", api.LastActivation!.Serial);
+        Assert.Equal("DEV-A", api.LastActivation.DeviceFp);
+        Assert.Equal("hint-DEV-A", api.LastActivation.MachineHint);
+        Assert.Equal("OFFICE-PC", api.LastActivation.DeviceName);
+    }
+
+    [Fact]
+    public async Task UnregisteredTokenLocksUntilRegistered()
+    {
+        var signer = new TestSigner();
+        var api = new FakeApi
+        {
+            OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null, registered: false)),
+            OnRegister = info => info.Phone == "9825000000"
+                ? new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now.AddMinutes(1), null, registered: true))
+                : new ApiResult(LicenseResult.Rejected, null, "phone")
+        };
+        var (mgr, store, _) = Build(signer, api, "DEV-A");
+
+        Assert.Equal(LicenseResult.RegistrationRequired, await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now));
+        Assert.False(mgr.IsActive);
+        Assert.Equal("TXS-2026-0001", mgr.Current.Serial); // details available for the form
+
+        Assert.Equal(LicenseResult.Rejected, await mgr.RegisterAsync(new RegistrationInfo("N", "n@x.com", "IN", "123"), Now));
+        Assert.Equal("phone", mgr.LastDetail);
+        Assert.False(mgr.IsActive);
+
+        Assert.Equal(LicenseResult.Valid, await mgr.RegisterAsync(new RegistrationInfo("Nishant", "n@x.com", "IN", "9825000000"), Now));
+        Assert.True(mgr.IsActive);
+        Assert.Equal("Nishant", mgr.Current.RegisteredName);
+
+        // Persisted: a reload (heartbeat not due) is active without asking again.
+        var reloaded = new LicenseManager(api, new TokenReader(new Ed25519Verifier(signer.PublicKeyBase64)), new FixedDevice("DEV-A"), store, "1.0.0");
+        Assert.Equal(LicenseResult.Valid, await reloaded.LoadAndRefreshAsync(Now.AddHours(2)));
+    }
+
+    [Fact]
+    public async Task AlreadyBoundKeyIsRefusedWithDeviceName()
+    {
+        var signer = new TestSigner();
+        var api = new FakeApi { OnActivate = _ => new ApiResult(LicenseResult.AlreadyBound, null, "OFFICE-PC1") };
+        var (mgr, _, _) = Build(signer, api, "DEV-B");
+        Assert.Equal(LicenseResult.AlreadyBound, await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now));
+        Assert.Equal("OFFICE-PC1", mgr.LastDetail);
+        Assert.False(mgr.IsActive);
+    }
+
+    [Fact]
+    public async Task MovedAwayByAdminLocksAndForgetsOnHeartbeat()
+    {
+        var signer = new TestSigner();
+        var api = new FakeApi
+        {
+            OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null)),
+            OnValidate = _ => new ApiResult(LicenseResult.Released, null)
+        };
+        var (mgr, store, _) = Build(signer, api, "DEV-A");
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
+        Assert.True(mgr.IsActive);
+
+        Assert.Equal(LicenseResult.Released, await mgr.LoadAndRefreshAsync(Now.AddHours(25)));
+        Assert.False(mgr.IsActive);
+        Assert.Null(store.Raw); // the old PC does not keep a token it can no longer use
+    }
+
+    [Fact]
+    public async Task StaleTokenLocksEvenIfLocalContactLooksRecent()
+    {
+        var signer = new TestSigner();
+        // Token the server says is trustworthy for only 2 days.
+        var api = new FakeApi
+        {
+            OnActivate = _ => new ApiResult(LicenseResult.Valid, signer.MakeToken("DEV-A", LicenseEdition.Full, Now, null, graceDays: 30, validUntil: Now.AddDays(2))),
+            OnValidate = _ => new ApiResult(LicenseResult.Network, null)
+        };
+        var (mgr, _, _) = Build(signer, api, "DEV-A");
+        await mgr.ActivateAsync("TXS-2026-0001", "k", "PC", Now);
+        Assert.Equal(LicenseResult.Valid, await mgr.LoadAndRefreshAsync(Now.AddDays(1)));
+        Assert.Equal(LicenseResult.Offline, await mgr.LoadAndRefreshAsync(Now.AddDays(3)));
+        Assert.False(mgr.IsActive);
+    }
+
+    [Fact]
+    public void TokenCarriesSerialRegisteredAndCeiling()
+    {
+        var signer = new TestSigner();
+        var reader = new TokenReader(new Ed25519Verifier(signer.PublicKeyBase64));
+        var t = reader.Read(signer.MakeToken("DEV", LicenseEdition.Full, Now, null))!;
+        Assert.Equal("TXS-2026-0001", t.Serial);
+        Assert.True(t.Registered);
+        Assert.NotNull(t.ValidUntilUtc);
     }
 }

@@ -5,6 +5,7 @@ import { generateKeyString, hashKey, keyPrefix } from "@/lib/licenseKey";
 import { nextSerial } from "@/lib/serial";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
+import { parsePhone, formatPhone } from "@/lib/phone";
 import type { LicenseKeyDoc, OrderDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
@@ -16,9 +17,11 @@ const CreateBody = z.object({
   customerName: z.string().min(1).max(128),
   customerEmail: z.string().email().optional().or(z.literal("")),
   customerPhone: z.string().max(40).optional(),
+  customerPhoneCountry: z.string().length(2).optional(),
   company: z.string().max(128).optional(),
   edition: z.enum(["demo", "full"]),
-  deviceLimit: z.number().int().min(1).max(100),
+  /** Ignored — one key, one device. Accepted so older panels don't break. */
+  deviceLimit: z.number().int().optional(),
   quantity: z.number().int().min(1).max(500),
   // Exactly one of durationDays / expiryUtc / perpetual.
   durationDays: z.number().int().min(1).max(3650).optional(),
@@ -56,6 +59,7 @@ export async function GET(req: Request) {
       { customerName: { $regex: q, $options: "i" } },
       { customerEmail: { $regex: q, $options: "i" } },
       { company: { $regex: q, $options: "i" } },
+      ...(q.replace(/[^d]/g, "") ? [{ customerPhoneE164: { $regex: q.replace(/[^d]/g, "") } }] : []),
     ];
   }
 
@@ -75,6 +79,8 @@ export async function GET(req: Request) {
         customerName: o.customerName,
         customerEmail: o.customerEmail ?? "",
         customerPhone: o.customerPhone ?? "",
+        customerPhoneCountry: o.customerPhoneCountry ?? "",
+        customerPhoneDisplay: formatPhone(o.customerPhoneE164) || o.customerPhone || "",
         company: o.company ?? "",
         edition: o.edition,
         deviceLimit: o.deviceLimit,
@@ -106,6 +112,13 @@ export async function POST(req: Request) {
     return fail("bad_request", 400);
   }
 
+  // Phone is optional, but when given it must be a real number for its country.
+  let phone: ReturnType<typeof parsePhone> = null;
+  if (b.customerPhone && b.customerPhone.trim()) {
+    phone = parsePhone(b.customerPhoneCountry ?? "IN", b.customerPhone);
+    if (!phone) return fail("bad_request", 400, { field: "customerPhone" });
+  }
+
   const expiryUtc = computeExpiry(b);
   const db = await getDb();
   const orders = db.collection<OrderDoc>("orders");
@@ -118,11 +131,13 @@ export async function POST(req: Request) {
     serial,
     customerName: b.customerName,
     customerEmail: b.customerEmail || undefined,
-    customerPhone: b.customerPhone || undefined,
+    customerPhone: phone?.national,
+    customerPhoneCountry: phone?.country,
+    customerPhoneE164: phone?.e164,
     company: b.company || undefined,
     edition: b.edition,
     expiryUtc,
-    deviceLimit: b.deviceLimit,
+    deviceLimit: 1,
     quantity: b.quantity,
     note: b.note,
     createdBy: session.email,
@@ -149,7 +164,7 @@ export async function POST(req: Request) {
       seq: i,
       edition: b.edition,
       expiryUtc,
-      deviceLimit: b.deviceLimit,
+      deviceLimit: 1,
       status: "active",
       customerName: b.customerName,
       customerEmail: b.customerEmail || undefined,
@@ -175,7 +190,6 @@ export async function POST(req: Request) {
     customer: b.customerName,
     quantity: b.quantity,
     edition: b.edition,
-    deviceLimit: b.deviceLimit,
     expiryUtc: expiryUtc ? expiryUtc.toISOString() : "perpetual",
   });
 

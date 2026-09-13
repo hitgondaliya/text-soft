@@ -1,18 +1,18 @@
 import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { ok, fail } from "@/lib/http";
-import type { LicenseKeyDoc, ActivationDoc } from "@/lib/models";
+import { formatPhone } from "@/lib/phone";
+import type { LicenseKeyDoc, ActivationDoc, ActivationAttemptDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
 
 // GET /api/admin/keys — list with optional status/search filter.
 export async function GET(req: Request) {
   if (!(await getSession())) return fail("unauthorized", 401);
 
   const url = new URL(req.url);
-  const status = url.searchParams.get("status"); // active|revoked|expired|unused
+  const status = url.searchParams.get("status"); // active|revoked|expired|unused|bound|attempts
   const q = url.searchParams.get("q")?.trim();
 
   const db = await getDb();
@@ -27,41 +27,64 @@ export async function GET(req: Request) {
       { serial: { $regex: q, $options: "i" } },
       { customerName: { $regex: q, $options: "i" } },
       { customerEmail: { $regex: q, $options: "i" } },
+      { userName: { $regex: q, $options: "i" } },
+      { userEmail: { $regex: q, $options: "i" } },
+      { userPhoneE164: { $regex: q.replace(/[^\d+]/g, "") || q, $options: "i" } },
     ];
   }
 
   const rows = await keys.find(filter).sort({ createdUtc: -1 }).limit(500).toArray();
+  const ids = rows.map((k) => k._id!);
   const acts = db.collection<ActivationDoc>("activations");
+  const attempts = db.collection<ActivationAttemptDoc>("activationAttempts");
   const now = new Date();
 
-  const list = await Promise.all(
-    rows.map(async (k) => {
-      const used = await acts.countDocuments({ keyId: k._id!, status: "active" });
-      const expired = !!k.expiryUtc && now > k.expiryUtc;
-      return {
-        id: k._id!.toHexString(),
-        prefix: k.keyPrefix,
-        serial: k.serial ?? "",
-        seq: k.seq ?? 0,
-        edition: k.edition,
-        status: k.status,
-        expired,
-        expiryUtc: k.expiryUtc ? k.expiryUtc.toISOString() : null,
-        deviceLimit: k.deviceLimit,
-        devicesUsed: used,
-        customerName: k.customerName ?? "",
-        customerEmail: k.customerEmail ?? "",
-        note: k.note ?? "",
-        createdUtc: k.createdUtc.toISOString(),
-        lastSeenUtc: k.lastSeenUtc ? k.lastSeenUtc.toISOString() : null,
-      };
-    }),
-  );
+  // Two queries instead of two per row.
+  const [holders, attemptCounts] = await Promise.all([
+    acts.find({ keyId: { $in: ids }, status: "active" }).toArray(),
+    attempts
+      .aggregate<{ _id: string; n: number }>([
+        { $match: { keyId: { $in: ids } } },
+        { $group: { _id: { $toString: "$keyId" }, n: { $sum: 1 } } },
+      ])
+      .toArray(),
+  ]);
+  const holderBy = new Map(holders.map((a) => [a.keyId.toHexString(), a]));
+  const attemptsBy = new Map(attemptCounts.map((c) => [c._id, c.n]));
 
-  // Client-side "expired"/"unused" filters that depend on computed fields.
+  const list = rows.map((k) => {
+    const id = k._id!.toHexString();
+    const h = holderBy.get(id);
+    const expired = !!k.expiryUtc && now > k.expiryUtc;
+    return {
+      id,
+      prefix: k.keyPrefix,
+      serial: k.serial ?? "",
+      seq: k.seq ?? 0,
+      edition: k.edition,
+      status: k.status,
+      expired,
+      expiryUtc: k.expiryUtc ? k.expiryUtc.toISOString() : null,
+      bound: !!h,
+      deviceName: h?.deviceName ?? "",
+      registered: !!h?.user,
+      userName: h?.user?.name ?? "",
+      userPhone: formatPhone(h?.user?.phoneE164),
+      attempts: attemptsBy.get(id) ?? 0,
+      customerName: k.customerName ?? "",
+      customerEmail: k.customerEmail ?? "",
+      note: k.note ?? "",
+      createdUtc: k.createdUtc.toISOString(),
+      lastSeenUtc: k.lastSeenUtc ? k.lastSeenUtc.toISOString() : null,
+    };
+  });
+
+  // Filters that depend on computed fields.
   const filtered = list.filter((k) => {
     if (status === "expired") return k.expired;
-    if (status === "unused") return k.devicesUsed === 0 && !k.expired && k.status === "active";
+    if (status === "unused") return !k.bound && !k.expired && k.status === "active";
+    if (status === "bound") return k.bound;
+    if (status === "attempts") return k.attempts > 0;
     return true;
   });
 

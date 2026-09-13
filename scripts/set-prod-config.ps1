@@ -32,7 +32,8 @@ if ([Convert]::FromBase64String($PublicKey).Length -ne 32) {
 }
 
 $verifier = Join-Path $root "src\FontSoftware.Licensing\Ed25519Verifier.cs"
-$settings = Join-Path $root "src\FontSoftware.App\Services\AppSettings.cs"
+$endpoints = Join-Path $root "src\FontSoftware.Licensing\LicenseEndpoints.cs"
+$iss = Join-Path $root "installer\setup.iss"
 
 # 1) Embedded public key.
 $v = Get-Content $verifier -Raw
@@ -42,12 +43,20 @@ $v = [regex]::Replace($v,
 Set-Content $verifier $v -Encoding utf8
 Write-Host "Set public key in Ed25519Verifier.cs" -ForegroundColor Green
 
-# 2) Default API URL.
-$s = Get-Content $settings -Raw
+# 2) API URL — a compile-time constant in the app, and the installer's precheck target.
+$ApiUrl = $ApiUrl.TrimEnd('/')
+$s = Get-Content $endpoints -Raw
 $s = [regex]::Replace($s,
-    'public string LicenseApiUrl \{ get; set; \} = "[^"]*";',
-    "public string LicenseApiUrl { get; set; } = `"$ApiUrl`";")
-Set-Content $settings $s -Encoding utf8
-Write-Host "Set API URL in AppSettings.cs" -ForegroundColor Green
+    'public const string BaseUrl = "[^"]*";',
+    "public const string BaseUrl = `"$ApiUrl`";")
+Set-Content $endpoints $s -Encoding utf8
+Write-Host "Set API URL in LicenseEndpoints.cs" -ForegroundColor Green
+
+$i = Get-Content $iss -Raw
+$i = [regex]::Replace($i,
+    '#define ApiUrl\s+"[^"]*"',
+    "#define ApiUrl         `"$ApiUrl`"")
+Set-Content $iss $i -Encoding utf8
+Write-Host "Set API URL in installer\setup.iss" -ForegroundColor Green
 
 Write-Host "Done. Now: installer\build-release.ps1" -ForegroundColor Cyan

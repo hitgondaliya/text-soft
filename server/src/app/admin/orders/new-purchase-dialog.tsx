@@ -17,6 +17,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { PhoneField, type PhoneValue } from "@/components/phone-field";
+import { DEFAULT_COUNTRY } from "@/lib/countries";
 
 type Created = { serial: string; created: Array<{ seq: number; key: string }> };
 
@@ -31,13 +33,13 @@ export function NewPurchaseDialog({
 }) {
   const [customerName, setCustomerName] = useState("");
   const [customerEmail, setCustomerEmail] = useState("");
-  const [customerPhone, setCustomerPhone] = useState("");
+  const [phone, setPhone] = useState<PhoneValue>({ country: DEFAULT_COUNTRY, number: "" });
+  const [phoneBad, setPhoneBad] = useState(false);
   const [company, setCompany] = useState("");
   const [edition, setEdition] = useState("full");
   const [mode, setMode] = useState<"days" | "date" | "perpetual">("days");
   const [days, setDays] = useState(365);
   const [expiryDate, setExpiryDate] = useState("");
-  const [deviceLimit, setDeviceLimit] = useState(1);
   const [quantity, setQuantity] = useState(1);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
@@ -47,7 +49,8 @@ export function NewPurchaseDialog({
     setDone(null);
     setCustomerName("");
     setCustomerEmail("");
-    setCustomerPhone("");
+    setPhone({ country: DEFAULT_COUNTRY, number: "" });
+    setPhoneBad(false);
     setCompany("");
     setQuantity(1);
     setNote("");
@@ -60,13 +63,14 @@ export function NewPurchaseDialog({
       return;
     }
     setBusy(true);
+    setPhoneBad(false);
     const body: Record<string, unknown> = {
       customerName,
       customerEmail: customerEmail || undefined,
-      customerPhone: customerPhone || undefined,
+      customerPhone: phone.number.trim() || undefined,
+      customerPhoneCountry: phone.country,
       company: company || undefined,
       edition,
-      deviceLimit,
       quantity,
       note: note || undefined,
     };
@@ -86,15 +90,21 @@ export function NewPurchaseDialog({
       onCreated();
       toast.success(`${d.serial} created — ${d.created.length} key${d.created.length > 1 ? "s" : ""} issued`);
     } else {
-      toast.error("Could not create the purchase. Check the fields.");
+      const err = await res.json().catch(() => ({}));
+      if (err?.field === "customerPhone") {
+        setPhoneBad(true);
+        toast.error("That mobile number is not valid for the selected country.");
+      } else {
+        toast.error("Could not create the purchase. Check the fields.");
+      }
     }
   }
 
-  const lines = done ? done.created.map((c) => `${done.serial}-${String(c.seq).padStart(3, "0")}\t${c.key}`) : [];
+  const lines = done ? done.created.map((c) => `${done.serial}\t${c.seq}\t${c.key}`) : [];
   const text = lines.join("\n");
 
   function download() {
-    const blob = new Blob([`serial\tkey\n${text}\n`], { type: "text/tab-separated-values" });
+    const blob = new Blob([`serial\tno\tkey\n${text}\n`], { type: "text/tab-separated-values" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = `${done!.serial}.tsv`;
@@ -121,8 +131,9 @@ export function NewPurchaseDialog({
                 Serial <span className="font-mono text-primary">{done.serial}</span>
               </DialogTitle>
               <DialogDescription>
-                {done.created.length} key{done.created.length > 1 ? "s" : ""} issued. Copy them now — the raw keys are
-                shown once and the server keeps only their hashes. The serial stays on record forever.
+                {done.created.length} key{done.created.length > 1 ? "s" : ""} issued. Give the customer the serial{" "}
+                <strong>and</strong> a key — the installer asks for both. Copy them now: raw keys are shown once and the
+                server keeps only their hashes.
               </DialogDescription>
             </DialogHeader>
             <Textarea readOnly value={text} rows={Math.min(done.created.length + 1, 12)} className="font-mono text-xs" />
@@ -151,7 +162,8 @@ export function NewPurchaseDialog({
             <DialogHeader>
               <DialogTitle>New purchase</DialogTitle>
               <DialogDescription>
-                One serial number is created for this sale and every key is issued under it.
+                One serial number is created for this sale and every key is issued under it. Each key works on exactly
+                one PC.
               </DialogDescription>
             </DialogHeader>
 
@@ -165,8 +177,15 @@ export function NewPurchaseDialog({
               <Field label="Email">
                 <Input type="email" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} placeholder="name@company.com" />
               </Field>
-              <Field label="Phone">
-                <Input value={customerPhone} onChange={(e) => setCustomerPhone(e.target.value)} placeholder="+91 98250 00000" />
+              <Field label="Mobile" hint={phoneBad ? "Not a valid number for that country." : undefined} error={phoneBad}>
+                <PhoneField
+                  value={phone}
+                  invalid={phoneBad}
+                  onChange={(v) => {
+                    setPhone(v);
+                    setPhoneBad(false);
+                  }}
+                />
               </Field>
 
               <div className="col-span-full my-1 h-px bg-border" />
@@ -182,7 +201,7 @@ export function NewPurchaseDialog({
                   </SelectContent>
                 </Select>
               </Field>
-              <Field label="How many keys" hint="One per licence sold, up to 500">
+              <Field label="How many keys" hint="One per PC. Up to 500.">
                 <Input type="number" min={1} max={500} value={quantity} onChange={(e) => setQuantity(+e.target.value)} />
               </Field>
               <Field label="Validity">
@@ -212,9 +231,6 @@ export function NewPurchaseDialog({
                   <div className="flex h-9 items-center text-sm text-muted-foreground">Never expires</div>
                 </Field>
               )}
-              <Field label="Devices per key" hint="How many PCs one key may activate">
-                <Input type="number" min={1} max={100} value={deviceLimit} onChange={(e) => setDeviceLimit(+e.target.value)} />
-              </Field>
               <Field label="Note" className="sm:col-span-2">
                 <Input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Invoice number, reseller, anything useful later" />
               </Field>
@@ -240,12 +256,14 @@ function Field({
   label,
   hint,
   required,
+  error,
   className,
   children,
 }: {
   label: string;
   hint?: string;
   required?: boolean;
+  error?: boolean;
   className?: string;
   children: React.ReactNode;
 }) {
@@ -256,7 +274,7 @@ function Field({
         {required && <span className="ml-0.5 text-primary">*</span>}
       </Label>
       {children}
-      {hint && <p className="text-xs text-muted-foreground">{hint}</p>}
+      {hint && <p className={`text-xs ${error ? "text-destructive" : "text-muted-foreground"}`}>{hint}</p>}
     </div>
   );
 }

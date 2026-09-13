@@ -6,7 +6,16 @@ namespace FontSoftware.Licensing;
 /// <summary>Supplies a stable per-device identifier for license binding (FR-5).</summary>
 public interface IDeviceIdProvider
 {
+    /// <summary>The fingerprint a key is bound to. Must be stable across reboots and
+    /// app updates and different on any other machine.</summary>
     string GetDeviceId();
+
+    /// <summary>
+    /// A lighter identifier the installer can also compute before the app exists
+    /// (on Windows the registry MachineGuid), so a reinstall on the same PC is
+    /// recognised by the server's precheck. Sent raw; the server stores its hash.
+    /// </summary>
+    string GetMachineHint();
 }
 
 /// <summary>
@@ -23,4 +32,6 @@ public sealed class DefaultDeviceIdProvider : IDeviceIdProvider
         byte[] hash = SHA256.HashData(Encoding.UTF8.GetBytes(raw));
         return Convert.ToHexString(hash, 0, 8); // 16 hex chars
     }
+
+    public string GetMachineHint() => Environment.MachineName;
 }

@@ -1,7 +1,8 @@
 import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { ok, fail } from "@/lib/http";
-import type { LicenseKeyDoc } from "@/lib/models";
+import { attemptView } from "@/lib/views";
+import type { LicenseKeyDoc, ActivationAttemptDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -12,20 +13,27 @@ export async function GET() {
 
   const db = await getDb();
   const keys = db.collection<LicenseKeyDoc>("licenseKeys");
+  const attempts = db.collection<ActivationAttemptDoc>("activationAttempts");
   const now = new Date();
   const soon = new Date();
   soon.setUTCDate(soon.getUTCDate() + 7);
+  const weekAgo = new Date(now.getTime() - 7 * 86_400_000);
 
-  const [total, revoked, active, expiringSoon, activations, orders] = await Promise.all([
+  const [total, revoked, active, expiringSoon, activations, registered, orders, blocked7d] = await Promise.all([
     keys.countDocuments({}),
     keys.countDocuments({ status: "revoked" }),
     keys.countDocuments({ status: "active", $or: [{ expiryUtc: null }, { expiryUtc: { $gt: now } }] }),
     keys.countDocuments({ status: "active", expiryUtc: { $gt: now, $lte: soon } }),
     db.collection("activations").countDocuments({ status: "active" }),
+    db.collection("activations").countDocuments({ status: "active", user: { $exists: true } }),
     db.collection("orders").countDocuments({}),
+    attempts.countDocuments({ createdUtc: { $gte: weekAgo } }),
   ]);
 
-  const recent = await keys.find({}).sort({ lastSeenUtc: -1 }).limit(8).toArray();
+  const [recent, recentAttempts] = await Promise.all([
+    keys.find({ lastSeenUtc: { $ne: null } }).sort({ lastSeenUtc: -1 }).limit(8).toArray(),
+    attempts.find({}).sort({ createdUtc: -1 }).limit(6).toArray(),
+  ]);
 
   return ok({
     total,
@@ -33,14 +41,18 @@ export async function GET() {
     revoked,
     expiringSoon,
     activations,
+    registered,
     orders,
-    recent: recent
-      .filter((k) => k.lastSeenUtc)
-      .map((k) => ({
-        id: k._id!.toHexString(),
-        prefix: k.keyPrefix,
-        edition: k.edition,
-        lastSeenUtc: k.lastSeenUtc!.toISOString(),
-      })),
+    blocked7d,
+    recent: recent.map((k) => ({
+      id: k._id!.toHexString(),
+      prefix: k.keyPrefix,
+      serial: k.serial ?? "",
+      seq: k.seq ?? null,
+      edition: k.edition,
+      userName: k.userName ?? "",
+      lastSeenUtc: k.lastSeenUtc!.toISOString(),
+    })),
+    recentAttempts: recentAttempts.map(attemptView),
   });
 }
