@@ -282,7 +282,12 @@ if (args.Contains("--by-series"))
     var seriesToEnc = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
     {
         ["DEVX"] = "shree-devx",  ["DEV7"] = "shree-dev456", ["DEV"] = "shree-dev456",
+        // Sanskrit is written in Devanagari and Shree gives it the same byte layout;
+        // the cmap check below rejects it if that ever stops being true
+        ["SANX"] = "shree-devx",  ["SAN7"] = "shree-dev456", ["SAN"] = "shree-dev456",
         ["BANX"] = "shree-banx",  ["ASSX"] = "shree-banx",   ["MANX"] = "shree-banx",
+        ["BAN7"] = "shree-ban7",  ["ASS7"] = "shree-ban7",   ["BAN"] = "shree-ban7", ["ASS"] = "shree-ban7",
+        ["TEL7"] = "shree-tel7",  ["TEL"] = "shree-tel7",
         ["GUJX"] = "shree-gujx",  ["GUJ7"] = "shree-guj7",   ["GUJ"] = "shree-guj7",
         ["KANX"] = "shree-kanx",  ["KAN7"] = "shree-kan7",   ["KAN"] = "shree-kan7",
         ["MALX"] = "shree-malx",  ["MAL7"] = "shree-mal7",   ["MAL"] = "shree-mal7",
@@ -294,7 +299,7 @@ if (args.Contains("--by-series"))
     var encToLang = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
     {
         ["shree-devx"] = "Hindi", ["shree-dev456"] = "Hindi",
-        ["shree-banx"] = "Bangla",
+        ["shree-banx"] = "Bangla", ["shree-ban7"] = "Bangla", ["shree-tel7"] = "Telugu",
         ["shree-gujx"] = "Gujarati", ["shree-guj7"] = "Gujarati",
         ["shree-kanx"] = "Kannada", ["shree-kan7"] = "Kannada",
         ["shree-malx"] = "Malayalam", ["shree-mal7"] = "Malayalam",
@@ -323,6 +328,7 @@ if (args.Contains("--by-series"))
     var cfg2 = JsonNode.Parse(File.ReadAllText(configPath))!.AsObject();
     int ok = 0, rejected = 0, dup = 0, noTable = 0;
     var perEnc = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+    var unmatched = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
     foreach (var file in Directory.EnumerateFiles(fontDir, "*.ttf"))
     {
@@ -331,8 +337,14 @@ if (args.Contains("--by-series"))
         if (r.Length != 2) continue;
         string family = r[1];
         var m = System.Text.RegularExpressions.Regex.Match(family, @"^SHREE[-_ ]?([A-Z]{3}[X7]?)[-_ ]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-        if (!m.Success) continue;
-        if (!seriesToEnc.TryGetValue(m.Groups[1].Value, out var enc)) continue;
+        if (!m.Success) { string k2 = "OTHER: " + (family.Length > 14 ? family.Substring(0, 14) : family); unmatched[k2] = unmatched.GetValueOrDefault(k2) + 1; continue; }
+        if (!seriesToEnc.TryGetValue(m.Groups[1].Value, out var enc))
+        {
+            // no table for this series yet — count it so the gap is visible
+            string key = m.Groups[1].Value.ToUpperInvariant();
+            unmatched[key] = unmatched.GetValueOrDefault(key) + 1;
+            continue;
+        }
         if (!needed.TryGetValue(enc, out var want)) { noTable++; continue; }
 
         var have = CodePoints(file);
@@ -358,6 +370,8 @@ if (args.Contains("--by-series"))
 
     foreach (var kv in perEnc.OrderByDescending(k => k.Value)) Console.WriteLine("  " + kv.Key.PadRight(14) + kv.Value);
     Console.WriteLine("registered=" + ok + " already-present=" + dup + " rejected-by-cmap-check=" + rejected + " no-table=" + noTable);
+    Console.WriteLine("series with NO table yet:");
+    foreach (var kv in unmatched.OrderByDescending(k => k.Value)) Console.WriteLine("  " + kv.Key.PadRight(18) + kv.Value);
     if (dryRun) { Console.WriteLine("(dry run)"); return 0; }
     File.WriteAllText(configPath, cfg2.ToJsonString(new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() }));
     Console.WriteLine("wrote " + configPath);

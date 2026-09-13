@@ -29,8 +29,16 @@ public static class Batch
         Console.WriteLine("legacy Shree fonts: " + legacy.Count + " in " + legacy.Select(f => f.LayoutHash).Distinct().Count() + " distinct layouts");
         Console.WriteLine("unicode candidates: " + unicode.Count);
 
-        var uniByDesign = new Dictionary<string, FontRef>(StringComparer.Ordinal);
-        foreach (var u in unicode) if (!uniByDesign.ContainsKey(u.Design)) uniByDesign[u.Design] = u;
+        // Shree ships more than one Unicode face per design number, and they are not
+        // equally close to the legacy drawing: the *_OTF_* cuts match far worse than
+        // the same-numbered SHREE#### ones (GUJX-0750 maps 133 through the OTF twin
+        // against 317 through SHREE0750). Keep every candidate and pick by result.
+        var uniByDesign = new Dictionary<string, List<FontRef>>(StringComparer.Ordinal);
+        foreach (var u in unicode)
+        {
+            if (!uniByDesign.TryGetValue(u.Design, out var l)) uniByDesign[u.Design] = l = new List<FontRef>();
+            l.Add(u);
+        }
 
         // one representative legacy font per (layout hash) that has a Unicode partner
         var solved = new Dictionary<string, (FontRef leg, FontRef uni, SortedDictionary<string, string> table)>(StringComparer.Ordinal);
@@ -38,13 +46,25 @@ public static class Batch
         foreach (var group in legacy.GroupBy(f => f.LayoutHash))
         {
             if (solved.ContainsKey(group.Key)) continue;
-            var pair = group.Select(f => (leg: f, uni: uniByDesign.TryGetValue(f.Design, out var u) ? u : null))
-                            .FirstOrDefault(p => p.uni is not null);
-            if (pair.uni is null) continue;
 
-            var table = Join(pair.leg, pair.uni!, tol, out string stats);
-            Console.WriteLine(group.Key + "  " + pair.leg.Family + " x " + pair.uni!.Family + "  " + stats);
-            solved[group.Key] = (pair.leg, pair.uni!, table);
+            FontRef? bestLeg = null, bestUni = null;
+            SortedDictionary<string, string>? bestTable = null;
+            string bestStats = "";
+            foreach (var leg in group)
+            {
+                if (!uniByDesign.TryGetValue(leg.Design, out var cands)) continue;
+                foreach (var uni in cands)
+                {
+                    var t = Join(leg, uni, tol, out string s);
+                    if (bestTable is null || t.Count > bestTable.Count)
+                    { bestLeg = leg; bestUni = uni; bestTable = t; bestStats = s; }
+                }
+                if (bestTable is not null) break;   // one legacy font per group is enough
+            }
+            if (bestTable is null) continue;
+
+            Console.WriteLine(group.Key + "  " + bestLeg!.Family + " x " + bestUni!.Family + "  " + bestStats);
+            solved[group.Key] = (bestLeg, bestUni, bestTable);
             if (++done >= limit && limit > 0) break;
         }
 
