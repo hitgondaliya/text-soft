@@ -54,11 +54,13 @@ public sealed class InputInjector
 
         string? previous = RichTextClipboard.Set(text, fontName);
 
+        // Scan codes as well as virtual keys: some editors only honour a shortcut
+        // that carries the physical key.
         var inputs = new INPUT[4];
-        inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false);
-        inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false);
-        inputs[2] = VirtualKeyInput(0x56, keyUp: true);
-        inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true);
+        inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D);
+        inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F);
+        inputs[2] = VirtualKeyInput(0x56, keyUp: true, scan: 0x2F);
+        inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D);
         Send(inputs, $"rich paste '{text}' in {fontName}");
 
         if (previous is not null)
@@ -118,7 +120,7 @@ public sealed class InputInjector
         }
     };
 
-    private static INPUT VirtualKeyInput(int vk, bool keyUp) => new()
+    private static INPUT VirtualKeyInput(int vk, bool keyUp, ushort scan = 0) => new()
     {
         type = INPUT_KEYBOARD,
         U = new InputUnion
@@ -126,7 +128,7 @@ public sealed class InputInjector
             ki = new KEYBDINPUT
             {
                 wVk = (ushort)vk,
-                wScan = 0,
+                wScan = scan,
                 dwFlags = keyUp ? KEYEVENTF_KEYUP : 0,
                 time = 0,
                 dwExtraInfo = InjectionSignature

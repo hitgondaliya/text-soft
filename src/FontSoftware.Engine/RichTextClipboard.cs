@@ -21,7 +21,9 @@ internal static class RichTextClipboard
     {
         var sb = new StringBuilder(text.Length * 8 + 64);
         sb.Append(@"{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil ").Append(Escape(fontName)).Append(";}}");
-        sb.Append(@"\uc1\f0 ");
+        // \f0 is the Latin/high-ANSI font, \af0 the complex-script font: Word-style
+        // editors file private-use characters under the latter.
+        sb.Append(@"\uc1\pard\plain\rtlch\fcs1\af0\ltrch\fcs0\f0 ");
         foreach (char c in text)
         {
             switch (c)

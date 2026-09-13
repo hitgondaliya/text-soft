@@ -287,22 +287,26 @@ public sealed class TypingEngine : IDisposable
     private void RerenderLegacy()
     {
         string next = _legacyConv!.ConvertText(_uniWord.ToString());
+        string? app = LegacyFontName is null ? null : ForegroundApp.GetProcessName();
+
+        // Word: talk to it directly — a paste there may lose the font (Word's own
+        // paste options), the object model never does.
+        if (app == "winword" && WordAutomation.TryType(next, _legacyOut.Length, LegacyFontName!))
+        {
+            _legacyOut = next;
+            return;
+        }
+
         if (_legacyOut.Length > 0)
             _injector.SendBackspace(_legacyOut.Length);
         if (next.Length > 0)
         {
-            if (LegacyFontName is not null && ForegroundTakesRichText())
-                _injector.SendRichText(next, LegacyFontName);
+            if (app is not null && RichTextApps.Contains(app))
+                _injector.SendRichText(next, LegacyFontName!);
             else
                 _injector.SendText(next);
         }
         _legacyOut = next;
-    }
-
-    private bool ForegroundTakesRichText()
-    {
-        string? name = ForegroundApp.GetProcessName();
-        return name is not null && RichTextApps.Contains(name);
     }
 
     private void HandleBackspace(HookKeyEventArgs e)
