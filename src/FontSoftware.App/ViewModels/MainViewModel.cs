@@ -83,7 +83,14 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     public FontLayout? SelectedFontLayout
     {
         get => _selectedFontLayout;
-        set { if (SetProperty(ref _selectedFontLayout, value)) OnFontLayoutChanged(); }
+        set
+        {
+            if (SetProperty(ref _selectedFontLayout, value))
+            {
+                OnFontLayoutChanged();
+                PersistSelection(); // also covers a layout whose font was already selected
+            }
+        }
     }
 
     private LayoutRef? _selectedLayout;
@@ -470,8 +477,17 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         // Setting this drives the render font via OnFontLayoutChanged (defaults to Unicode).
         SelectedFontLayout = FontLayouts.FirstOrDefault();
 
-        // Apply any saved per-language defaults (FR-6) on top of the fallbacks.
-        RestoreDefaultsForLanguage();
+        if (_restoring)
+        {
+            // Launch: put back the font layout, font and keyboard the user last used.
+            RestoreDefaultsForLanguage();
+        }
+        else
+        {
+            // The user picked another language: that language, with its fresh
+            // defaults, is what we reopen with next time.
+            PersistSelection();
+        }
     }
 
     /// <summary>
@@ -542,6 +558,9 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             _engine.SetLegacyConverter(legacy, LegacyFontName);
 
             RefreshKeyboard();
+            PersistSelection(); // reopen with exactly this language/font/keyboard
+            _log.Info($"Selection: language={SelectedLanguage.Id} fontLayout={SelectedFontLayout?.Id} " +
+                      $"font={SelectedFont?.Id} keyboard={SelectedLayout.Id}");
             string mode = LegacyTypingActive ? " (legacy)" : SelectedFontLayout is not null && !SelectedFontLayout.IsUnicode ? " (font not provided — types Unicode)" : string.Empty;
             Status = $"Active: {SelectedLanguage.Name} · {SelectedFontLayout?.Name}{mode} · {SelectedLayout.Name}";
         }
@@ -606,7 +625,50 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     }
 
     // ---- FR-6 ----
-    private void RestoreDefaults() => SelectedLanguage = ResolveDefaultLanguage();
+    /// <summary>
+    /// True while the saved selection is being applied at launch. Selection changes
+    /// made during that pass must not be written back, or the intermediate fallback
+    /// picks (first language / first font) would overwrite what the user had.
+    /// </summary>
+    private bool _restoring;
+
+    private void RestoreDefaults()
+    {
+        _restoring = true;
+        try { SelectedLanguage = ResolveDefaultLanguage(); }
+        finally { _restoring = false; }
+    }
+
+    /// <summary>
+    /// Remember the whole current selection immediately (FR-6). The user expects the
+    /// app to reopen exactly as they left it after a shutdown, so this runs on every
+    /// change rather than waiting for the Save Defaults button.
+    /// </summary>
+    private void PersistSelection()
+    {
+        if (_restoring || SelectedLanguage is null)
+            return;
+
+        if (_settings.DefaultLanguageId == SelectedLanguage.Id
+            && _settings.DefaultFontLayoutId == SelectedFontLayout?.Id
+            && _settings.DefaultFontId == SelectedFont?.Id
+            && _settings.DefaultLayoutId == SelectedLayout?.Id)
+            return; // nothing moved — don't rewrite the file on every keystroke-free redraw
+
+        _settings.DefaultLanguageId = SelectedLanguage.Id;
+        _settings.DefaultFontLayoutId = SelectedFontLayout?.Id;
+        _settings.DefaultFontId = SelectedFont?.Id;
+        _settings.DefaultLayoutId = SelectedLayout?.Id;
+        try
+        {
+            Persist();
+        }
+        catch (Exception ex)
+        {
+            // A locked/read-only settings file must not break typing.
+            _log.Warn($"Could not save the selection: {ex.Message}");
+        }
+    }
 
     private LanguageProfile? ResolveDefaultLanguage()
     {
@@ -618,6 +680,13 @@ public sealed class MainViewModel : ObservableObject, IDisposable
 
     private void RestoreDefaultsForLanguage()
     {
+        // Font Layout first: choosing one repoints the render font, so applying it
+        // after the saved font would undo that font.
+        if (_settings.DefaultFontLayoutId is not null)
+        {
+            var fl = FontLayouts.FirstOrDefault(x => x.Id == _settings.DefaultFontLayoutId);
+            if (fl is not null) SelectedFontLayout = fl;
+        }
         if (_settings.DefaultFontId is not null)
         {
             var f = Fonts.FirstOrDefault(x => x.Id == _settings.DefaultFontId);
@@ -632,10 +701,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
 
     private void SaveDefaults()
     {
-        _settings.DefaultLanguageId = SelectedLanguage?.Id;
-        _settings.DefaultFontId = SelectedFont?.Id;
-        _settings.DefaultLayoutId = SelectedLayout?.Id;
-        Persist();
+        PersistSelection();
         Status = "Defaults saved.";
     }
 

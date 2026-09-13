@@ -14,9 +14,13 @@ public sealed class SettingsStore
 
     private readonly string _path;
 
-    public SettingsStore()
+    /// <param name="directory">
+    /// Where settings.json lives. Defaults to %AppData%\TextSoft; tests pass a
+    /// temporary folder so they never touch the real user's saved selection.
+    /// </param>
+    public SettingsStore(string? directory = null)
     {
-        string dir = Path.Combine(
+        string dir = directory ?? Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
             "TextSoft");
         Directory.CreateDirectory(dir);

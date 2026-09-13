@@ -15,6 +15,10 @@ public sealed class AppSettings
     [JsonPropertyName("defaultLanguageId")]
     public string? DefaultLanguageId { get; set; }
 
+    /// <summary>Last used Font Layout (Shree-style encoding family), e.g. "gu-fl-shreelipi-ex".</summary>
+    [JsonPropertyName("defaultFontLayoutId")]
+    public string? DefaultFontLayoutId { get; set; }
+
     [JsonPropertyName("defaultFontId")]
     public string? DefaultFontId { get; set; }
 
