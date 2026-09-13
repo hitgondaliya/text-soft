@@ -40,6 +40,12 @@ async function ensureIndexes(db: Db): Promise<void> {
     db.collection("licenseKeys").createIndex({ keyHash: 1 }, { unique: true }),
     db.collection("licenseKeys").createIndex({ status: 1 }),
     db.collection("licenseKeys").createIndex({ createdUtc: -1 }),
+    // A purchase's keys are always read together and in order.
+    db.collection("licenseKeys").createIndex({ orderId: 1, seq: 1 }),
+    db.collection("licenseKeys").createIndex({ serial: 1 }),
+    db.collection("orders").createIndex({ serial: 1 }, { unique: true }),
+    db.collection("orders").createIndex({ createdUtc: -1 }),
+    db.collection("orders").createIndex({ customerEmail: 1 }),
     db.collection("activations").createIndex({ keyId: 1, deviceFp: 1 }, { unique: true }),
     db.collection("activations").createIndex({ keyId: 1 }),
     db.collection("auditLog").createIndex({ createdUtc: -1 }),

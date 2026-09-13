@@ -16,12 +16,13 @@ export async function GET() {
   const soon = new Date();
   soon.setUTCDate(soon.getUTCDate() + 7);
 
-  const [total, revoked, active, expiringSoon, activations] = await Promise.all([
+  const [total, revoked, active, expiringSoon, activations, orders] = await Promise.all([
     keys.countDocuments({}),
     keys.countDocuments({ status: "revoked" }),
     keys.countDocuments({ status: "active", $or: [{ expiryUtc: null }, { expiryUtc: { $gt: now } }] }),
     keys.countDocuments({ status: "active", expiryUtc: { $gt: now, $lte: soon } }),
     db.collection("activations").countDocuments({ status: "active" }),
+    db.collection("orders").countDocuments({}),
   ]);
 
   const recent = await keys.find({}).sort({ lastSeenUtc: -1 }).limit(8).toArray();
@@ -32,6 +33,7 @@ export async function GET() {
     revoked,
     expiringSoon,
     activations,
+    orders,
     recent: recent
       .filter((k) => k.lastSeenUtc)
       .map((k) => ({

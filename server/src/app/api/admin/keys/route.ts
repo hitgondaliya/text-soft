@@ -1,37 +1,11 @@
-import { z } from "zod";
 import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
-import { generateKeyString, hashKey, keyPrefix } from "@/lib/licenseKey";
-import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import type { LicenseKeyDoc, ActivationDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const CreateBody = z.object({
-  edition: z.enum(["demo", "full"]),
-  deviceLimit: z.number().int().min(1).max(100),
-  // Exactly one of durationDays / expiryUtc / perpetual.
-  durationDays: z.number().int().min(1).max(3650).optional(),
-  expiryUtc: z.string().datetime().optional(),
-  perpetual: z.boolean().optional(),
-  customerName: z.string().max(128).optional(),
-  customerEmail: z.string().email().optional().or(z.literal("")),
-  note: z.string().max(500).optional(),
-  count: z.number().int().min(1).max(100).default(1),
-});
-
-function computeExpiry(b: z.infer<typeof CreateBody>): Date | null {
-  if (b.perpetual) return null;
-  if (b.expiryUtc) return new Date(b.expiryUtc);
-  if (b.durationDays) {
-    const d = new Date();
-    d.setUTCDate(d.getUTCDate() + b.durationDays);
-    return d;
-  }
-  return null; // default: perpetual
-}
 
 // GET /api/admin/keys — list with optional status/search filter.
 export async function GET(req: Request) {
@@ -50,6 +24,7 @@ export async function GET(req: Request) {
   if (q) {
     filter.$or = [
       { keyPrefix: { $regex: q, $options: "i" } },
+      { serial: { $regex: q, $options: "i" } },
       { customerName: { $regex: q, $options: "i" } },
       { customerEmail: { $regex: q, $options: "i" } },
     ];
@@ -66,6 +41,8 @@ export async function GET(req: Request) {
       return {
         id: k._id!.toHexString(),
         prefix: k.keyPrefix,
+        serial: k.serial ?? "",
+        seq: k.seq ?? 0,
         edition: k.edition,
         status: k.status,
         expired,
@@ -91,55 +68,11 @@ export async function GET(req: Request) {
   return ok({ keys: filtered });
 }
 
-// POST /api/admin/keys — generate one or more keys. Returns the RAW strings ONCE.
-export async function POST(req: Request) {
-  const session = await getSession();
-  if (!session) return fail("unauthorized", 401);
-
-  let b;
-  try {
-    b = CreateBody.parse(await req.json());
-  } catch {
-    return fail("bad_request", 400);
-  }
-
-  const expiryUtc = computeExpiry(b);
-  const db = await getDb();
-  const keys = db.collection<LicenseKeyDoc>("licenseKeys");
-
-  const created: Array<{ id: string; key: string; prefix: string }> = [];
-  for (let i = 0; i < b.count; i++) {
-    // Retry on the astronomically-unlikely hash collision.
-    let keyString = generateKeyString();
-    let hash = hashKey(keyString);
-    while (await keys.findOne({ keyHash: hash })) {
-      keyString = generateKeyString();
-      hash = hashKey(keyString);
-    }
-
-    const doc: LicenseKeyDoc = {
-      keyHash: hash,
-      keyPrefix: keyPrefix(keyString),
-      edition: b.edition,
-      expiryUtc,
-      deviceLimit: b.deviceLimit,
-      status: "active",
-      customerName: b.customerName,
-      customerEmail: b.customerEmail || undefined,
-      note: b.note,
-      createdBy: session.email,
-      createdUtc: new Date(),
-      lastSeenUtc: null,
-    };
-    const res = await keys.insertOne(doc);
-    created.push({ id: res.insertedId.toHexString(), key: keyString, prefix: doc.keyPrefix });
-  }
-
-  await audit(session.email, "key.create", `${b.count} key(s)`, {
-    edition: b.edition,
-    deviceLimit: b.deviceLimit,
-    expiryUtc: expiryUtc ? expiryUtc.toISOString() : "perpetual",
+// Keys are issued by POST /api/admin/orders, which records the purchase and its
+// serial number first. Creating a key with no purchase behind it would leave a
+// licence nobody can trace back to a sale, which is the whole point of the serial.
+export async function POST() {
+  return fail("use_orders_endpoint", 410, {
+    hint: "POST /api/admin/orders — a purchase creates its serial and all its keys.",
   });
-
-  return ok({ created }, 201);
 }

@@ -25,6 +25,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin" style={{ color: "var(--text)", padding: "8px 10px", borderRadius: 8 }}>
             Dashboard
           </Link>
+          <Link href="/admin/orders" style={{ color: "var(--text)", padding: "8px 10px", borderRadius: 8 }}>
+            Purchases
+          </Link>
           <Link href="/admin/keys" style={{ color: "var(--text)", padding: "8px 10px", borderRadius: 8 }}>
             License keys
           </Link>

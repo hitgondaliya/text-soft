@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface Stats {
+  orders: number;
   total: number;
   active: number;
   revoked: number;
@@ -34,7 +35,8 @@ export default function Dashboard() {
   return (
     <div>
       <h1 style={{ marginTop: 0 }}>Dashboard</h1>
-      <div className="grid" style={{ gridTemplateColumns: "repeat(5, 1fr)", marginBottom: 24 }}>
+      <div className="grid" style={{ gridTemplateColumns: "repeat(6, 1fr)", marginBottom: 24 }}>
+        <Stat label="Purchases" value={s?.orders ?? 0} accent="var(--brand)" />
         <Stat label="Total keys" value={s?.total ?? 0} />
         <Stat label="Active" value={s?.active ?? 0} accent="var(--ok)" />
         <Stat label="Expiring ≤7d" value={s?.expiringSoon ?? 0} accent="var(--warn)" />
@@ -45,7 +47,7 @@ export default function Dashboard() {
       <div className="card">
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
           <h3 style={{ margin: 0 }}>Recently active</h3>
-          <Link href="/admin/keys">All keys →</Link>
+          <Link href="/admin/orders">All purchases →</Link>
         </div>
         {!s?.recent?.length ? (
           <div className="muted">No activity yet.</div>
