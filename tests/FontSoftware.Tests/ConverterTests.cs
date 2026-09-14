@@ -82,6 +82,43 @@ public class ConverterTests
         Assert.Equal(word, toUnicode.ConvertText(legacy.Text));
     }
 
+    // Gopika (Oasis Systems, 1993) is the one Gujarati table built from the font
+    // itself rather than captured from a reference converter: its bytes follow the
+    // ITR typewriter layout, and the reordering is done by rules instead of an
+    // enumerated cluster list. These pin both the letters and the reordering.
+    [Theory]
+    [InlineData("કમલ", "fbj")]
+    [InlineData("ગુજરાત", "dwsht;")]
+    [InlineData("કિ", "rf")]              // i-matra is typed before its consonant
+    [InlineData("કર્મ", "fbo")]           // reph moves to the end of the cluster
+    [InlineData("બાળક", "ct¤f")]     // la is a high byte, not shift+B
+    [InlineData("શ્રીફળ", "§eV¤")]
+    [InlineData("પ્રેમ", "¡ub")]
+    public void UnicodeToGopika(string unicode, string expected)
+        => Assert.Equal(expected, Bundle().CreateConverter("shruti", "gopika-guj")!.ConvertText(unicode));
+
+    [Theory]
+    [InlineData("કમલ")]
+    [InlineData("નમસ્તે")]
+    [InlineData("ગુજરાત")]
+    [InlineData("બાળક")]
+    [InlineData("કર્મ")]
+    [InlineData("ક્ષત્રિય")]
+    [InlineData("જ્ઞાન")]
+    [InlineData("વિદ્યાર્થી")]
+    [InlineData("અમદાવાદ")]
+    [InlineData("૧૨૩૪૫૬૭૮૯૦")]
+    public void RoundTripUnicodeGopikaUnicode(string word)
+    {
+        var b = Bundle();
+        var toGopika = b.CreateConverter("shruti", "gopika-guj")!;
+        var toUnicode = b.CreateConverter("gopika-guj", "shruti")!;
+        var legacy = toGopika.Convert(word);
+        Assert.False(legacy.HasUnmapped,
+            $"legacy '{legacy.Text}' left unmapped: {string.Join("", legacy.UnmappedCharacters)}");
+        Assert.Equal(word, toUnicode.ConvertText(legacy.Text));
+    }
+
     [Fact]
     public void EveryRegisteredLegacyFontHasBothDirections()
     {

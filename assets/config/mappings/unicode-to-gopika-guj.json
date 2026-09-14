@@ -1,0 +1,443 @@
+{
+  "id": "unicode-to-gopika-guj",
+  "name": "Unicode -> Gopika Gujarati",
+  "sourceFontId": "shruti",
+  "targetFontId": "gopika-guj",
+  "sourceType": "unicode",
+  "targetType": "legacy",
+  "preRules": [
+    {
+      "pattern": "ર્((?:[ક-હ]્)*[ક-હ])",
+      "replace": "$1\uE000",
+      "note": "ra+virama before a cluster becomes the reph mark after it"
+    },
+    {
+      "pattern": "((?:[ક-હ]્)*[ક-હ])િ",
+      "replace": "િ$1",
+      "note": "the i-matra glyph is typed before its cluster"
+    }
+  ],
+  "pairs": [
+    {
+      "from": "ક",
+      "to": "f"
+    },
+    {
+      "from": "ખ",
+      "to": "F"
+    },
+    {
+      "from": "ગ",
+      "to": "d"
+    },
+    {
+      "from": "ઘ",
+      "to": "D"
+    },
+    {
+      "from": "ચ",
+      "to": "a"
+    },
+    {
+      "from": "છ",
+      "to": "A"
+    },
+    {
+      "from": "જ",
+      "to": "s"
+    },
+    {
+      "from": "ઝ",
+      "to": "S"
+    },
+    {
+      "from": "ટ",
+      "to": "x"
+    },
+    {
+      "from": "ઠ",
+      "to": "X"
+    },
+    {
+      "from": "ડ",
+      "to": "z"
+    },
+    {
+      "from": "ઢ",
+      "to": "Z"
+    },
+    {
+      "from": "ણ",
+      "to": "K"
+    },
+    {
+      "from": "ત",
+      "to": ";"
+    },
+    {
+      "from": "થ",
+      "to": ":"
+    },
+    {
+      "from": "દ",
+      "to": "^"
+    },
+    {
+      "from": "ધ",
+      "to": "\""
+    },
+    {
+      "from": "ન",
+      "to": "l"
+    },
+    {
+      "from": "પ",
+      "to": "v"
+    },
+    {
+      "from": "ફ",
+      "to": "V"
+    },
+    {
+      "from": "બ",
+      "to": "c"
+    },
+    {
+      "from": "ભ",
+      "to": "C"
+    },
+    {
+      "from": "મ",
+      "to": "b"
+    },
+    {
+      "from": "ય",
+      "to": "g"
+    },
+    {
+      "from": "ર",
+      "to": "h"
+    },
+    {
+      "from": "લ",
+      "to": "j"
+    },
+    {
+      "from": "વ",
+      "to": "J"
+    },
+    {
+      "from": "શ",
+      "to": "N"
+    },
+    {
+      "from": "ષ",
+      "to": "M"
+    },
+    {
+      "from": "સ",
+      "to": "m"
+    },
+    {
+      "from": "હ",
+      "to": "n"
+    },
+    {
+      "from": "ક્ષ",
+      "to": "H"
+    },
+    {
+      "from": "જ્ઞ",
+      "to": "@"
+    },
+    {
+      "from": "ળ",
+      "to": "¤"
+    },
+    {
+      "from": "શ્ર",
+      "to": "§"
+    },
+    {
+      "from": "પ્ર",
+      "to": "¡"
+    },
+    {
+      "from": "ક્ર",
+      "to": "¢"
+    },
+    {
+      "from": "ફ્ર",
+      "to": "£"
+    },
+    {
+      "from": "્મ",
+      "to": "B"
+    },
+    {
+      "from": "્ય",
+      "to": "G"
+    },
+    {
+      "from": "્ન",
+      "to": "L"
+    },
+    {
+      "from": "્ત",
+      "to": "À"
+    },
+    {
+      "from": "અ",
+      "to": "y"
+    },
+    {
+      "from": "ઇ",
+      "to": "R"
+    },
+    {
+      "from": "ઈ",
+      "to": "E"
+    },
+    {
+      "from": "ઉ",
+      "to": "W"
+    },
+    {
+      "from": "ઊ",
+      "to": "Q"
+    },
+    {
+      "from": "ઋ",
+      "to": "}"
+    },
+    {
+      "from": "ઇં",
+      "to": "#"
+    },
+    {
+      "from": "ઈં",
+      "to": "$"
+    },
+    {
+      "from": "ા",
+      "to": "t"
+    },
+    {
+      "from": "િ",
+      "to": "r"
+    },
+    {
+      "from": "ી",
+      "to": "e"
+    },
+    {
+      "from": "ુ",
+      "to": "w"
+    },
+    {
+      "from": "ૂ",
+      "to": "q"
+    },
+    {
+      "from": "ૃ",
+      "to": "]"
+    },
+    {
+      "from": "ે",
+      "to": "u"
+    },
+    {
+      "from": "ૈ",
+      "to": "i"
+    },
+    {
+      "from": "ૅ",
+      "to": "p"
+    },
+    {
+      "from": "ં",
+      "to": "k"
+    },
+    {
+      "from": "ઁ",
+      "to": "P"
+    },
+    {
+      "from": "ઃ",
+      "to": "&"
+    },
+    {
+      "from": "઼",
+      "to": "|"
+    },
+    {
+      "from": "્",
+      "to": "T"
+    },
+    {
+      "from": "\uE000",
+      "to": "o"
+    },
+    {
+      "from": "ેં",
+      "to": "U"
+    },
+    {
+      "from": "ૈં",
+      "to": "I"
+    },
+    {
+      "from": "\uE000ં",
+      "to": "O"
+    },
+    {
+      "from": "૦",
+      "to": "0"
+    },
+    {
+      "from": "૧",
+      "to": "1"
+    },
+    {
+      "from": "૨",
+      "to": "2"
+    },
+    {
+      "from": "૩",
+      "to": "3"
+    },
+    {
+      "from": "૪",
+      "to": "4"
+    },
+    {
+      "from": "૫",
+      "to": "5"
+    },
+    {
+      "from": "૬",
+      "to": "6"
+    },
+    {
+      "from": "૭",
+      "to": "7"
+    },
+    {
+      "from": "૮",
+      "to": "8"
+    },
+    {
+      "from": "૯",
+      "to": "9"
+    },
+    {
+      "from": "ૐ",
+      "to": "`"
+    },
+    {
+      "from": "।",
+      "to": ">"
+    },
+    {
+      "from": ";",
+      "to": "<"
+    },
+    {
+      "from": "!",
+      "to": "!"
+    },
+    {
+      "from": "%",
+      "to": "%"
+    },
+    {
+      "from": "(",
+      "to": "("
+    },
+    {
+      "from": ")",
+      "to": ")"
+    },
+    {
+      "from": "*",
+      "to": "*"
+    },
+    {
+      "from": "+",
+      "to": "+"
+    },
+    {
+      "from": ",",
+      "to": ","
+    },
+    {
+      "from": "-",
+      "to": "-"
+    },
+    {
+      "from": ".",
+      "to": "."
+    },
+    {
+      "from": "/",
+      "to": "/"
+    },
+    {
+      "from": "=",
+      "to": "="
+    },
+    {
+      "from": "?",
+      "to": "?"
+    },
+    {
+      "from": "—",
+      "to": "_"
+    },
+    {
+      "from": "’",
+      "to": "'"
+    },
+    {
+      "from": "આ",
+      "to": "yt"
+    },
+    {
+      "from": "એ",
+      "to": "yu"
+    },
+    {
+      "from": "ઐ",
+      "to": "yi"
+    },
+    {
+      "from": "ઓ",
+      "to": "yut"
+    },
+    {
+      "from": "ઔ",
+      "to": "yit"
+    },
+    {
+      "from": "ઍ",
+      "to": "yp"
+    },
+    {
+      "from": "ૉ",
+      "to": "pt"
+    },
+    {
+      "from": "ો",
+      "to": "ut"
+    },
+    {
+      "from": "ૌ",
+      "to": "it"
+    },
+    {
+      "from": "ૄ",
+      "to": "]t"
+    }
+  ],
+  "postRules": []
+}

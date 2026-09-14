@@ -7168,6 +7168,13 @@
           "family": "TERAFONT-CHANDAN",
           "type": "legacy",
           "encoding": "terafont-guj"
+        },
+        {
+          "id": "gopika",
+          "name": "Gopika",
+          "family": "Gopika",
+          "type": "legacy",
+          "encoding": "gopika-guj"
         }
       ],
       "fontLayouts": [
@@ -7200,6 +7207,12 @@
           "name": "Terafont",
           "type": "legacy",
           "fontId": "terafont-chandan"
+        },
+        {
+          "id": "gu-fl-gopika",
+          "name": "Gopika",
+          "type": "legacy",
+          "fontId": "gopika"
         },
         {
           "id": "gu-fl-isfoc-monolingual",
@@ -13185,6 +13198,8 @@
     "mappings/isfoc-guj-to-unicode.json",
     "mappings/unicode-to-isfoc-guj.json",
     "mappings/terafont-guj-to-unicode.json",
-    "mappings/unicode-to-terafont-guj.json"
+    "mappings/unicode-to-terafont-guj.json",
+    "mappings/gopika-guj-to-unicode.json",
+    "mappings/unicode-to-gopika-guj.json"
   ]
 }
