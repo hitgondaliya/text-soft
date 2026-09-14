@@ -42,6 +42,37 @@ pinned down by typing the byte inside a real word and reading the result:
 `ઙ`, `ઞ` and `ૠ` have no glyph in this font; they are listed in
 `assets/config/encoding-limits.json` so the matrix run does not flag them.
 
+## What is mapped, and what is left
+
+182 of the font's code points draw something. 108 of them are mapped: every
+consonant, vowel, vowel sign, digit, punctuation mark and the ligatures and
+variants that could be confirmed. **Typing needs nothing more** — a Gujarati
+keyboard cannot produce a character this table does not cover (beyond the three
+the font lacks), and text typed on the machine reads back exactly.
+
+The remaining 74 are the ligature block, roughly 0xB5–0xFF: conjunct glyphs
+(દ્ધ, દ્ય, હ્ય, ટ્ટ …) and combined consonant+vowel forms (દુ, ટૂ, રૃ …) that a
+DTP program substituted automatically. They appear only in files made by such a
+program, never in anything typed key by key. Converting a file that contains
+them leaves them as-is and the status line names them, so nothing is silently
+wrong.
+
+Four ways of naming them automatically were tried and all failed — the shapes of
+a 1993 typewriter face carry too little in common with anything else we have:
+
+| method                                                | best scores |
+|-------------------------------------------------------|-------------|
+| glyph vs Unicode Gujarati (Shruti / Aakar)             | 34/183 and 14/183 above 0.55 |
+| glyph vs the same cluster spelled from Gopika's own bytes | 0.9 only where the byte is a duplicate; 0.2–0.4 for real ligatures |
+| left half / right half vs each consonant               | 0.2–0.4 |
+| glyph vs the cluster in Terafont / ISFOC / Akruti      | 0.35–0.6 |
+
+Finishing them needs ground truth, not more guessing: one document typed in
+Gopika (any .doc/.pmd with its Gujarati text known) is enough to align bytes to
+letters and map the block with proof. `gopika-remaining.png`, produced by the
+scratch tool in this folder, is a numbered contact sheet of the 74 glyphs that a
+Gopika user can name directly.
+
 ## Shape of the table
 
 Unlike the Shree tables (captured from Converter nxt, ~1 MB of enumerated

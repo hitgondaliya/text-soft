@@ -118,6 +118,33 @@ var atoms = new List<(string Legacy, string Uni)>
     ("_", "—"), ("'", "’"), (" ", " "),
 };
 
+// Second glyphs for the same thing — the font carries width variants and a few
+// duplicates. They are read (legacy -> Unicode) but never produced, so the
+// output stays on the canonical byte. Each was confirmed by rendering the byte,
+// and the byte after ka, against the mapping we already have: the scores are in
+// the 0.85-0.98 range, i.e. the same picture.
+var aliases = new List<(string Legacy, string Uni)>
+{
+    ("©", "શ્ર"),   // second શ્ર
+    ("«", "પ્ર"),   // second પ્ર
+    ("Ä", "ક્ર"),   // second ક્ર
+    ("³", "ઊ"),     // second ઊ
+    ("®", "િ"),     // wide i-matra
+    ("´", "ી"),     // wide ii-matra
+    ("²", "ૂ"),     // wide uu-matra
+    ("¸", "ુ"),     // wide u-matra
+    ("Ã", "્ય"),    // second ya half form
+    ("[", "઼"),          // second nukta
+    ("±", "."),     // middle dot
+    ("¥", "’"),
+    ("ª", "”"),
+    ("¦", "॥"), // ॥
+    ("¯", "–"),
+    ("°", "°"),
+    ("¶", "¶"),
+    ("·", "·"),
+};
+
 // Unicode clusters the font types as two or three glyphs.
 var composites = new List<(string Uni, string Legacy)>
 {
@@ -185,6 +212,8 @@ foreach (var (uni, legacy) in composites)
     toLegacy.Pairs.Add(new Pair { From = uni, To = legacy });
     toUnicode.Pairs.Add(new Pair { From = legacy, To = uni });
 }
+foreach (var (legacy, uni) in aliases)
+    toUnicode.Pairs.Add(new Pair { From = legacy, To = uni });   // read only
 
 // Clusters the font has no glyph for are written consonant + virama + consonant,
 // exactly as they are typed on the machine; that is legible and is what the
