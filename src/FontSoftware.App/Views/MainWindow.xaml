@@ -4,7 +4,7 @@
         xmlns:ctl="clr-namespace:FontSoftware.App.Controls"
         xmlns:views="clr-namespace:FontSoftware.App.Views"
         Title="TextSoft — Beyond Typing" Height="740" Width="1060"
-        Icon="/app.ico" WindowStartupLocation="CenterScreen" MinWidth="900" MinHeight="600"
+        Icon="/app.ico" WindowStartupLocation="CenterScreen" MinWidth="780" MinHeight="560"
         Background="{StaticResource AppBg}" FontFamily="{StaticResource UiFont}">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -17,23 +17,42 @@
                 TextElement.Foreground="{StaticResource SidebarMuted}">
             <DockPanel>
                 <!-- Brand -->
-                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="20,22,20,26">
-                    <Border Width="44" Height="44" CornerRadius="12" Background="White" Padding="3">
-                        <Image Source="/logo.png" Stretch="Uniform" />
-                    </Border>
-                    <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
-                        <TextBlock Text="TextSoft" Foreground="White" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Beyond Typing" Foreground="{StaticResource Primary}"
-                                   FontSize="11.5" FontWeight="SemiBold" />
+                <StackPanel DockPanel.Dock="Top" Margin="18,20,18,22">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="42" Height="42" CornerRadius="12" Background="White" Padding="3">
+                            <Image Source="/logo.png" Stretch="Uniform" />
+                        </Border>
+                        <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="TextSoft" Foreground="White" FontSize="16" FontWeight="Bold" />
+                            <TextBlock Text="Beyond Typing" Foreground="{StaticResource Primary}"
+                                       FontSize="11.5" FontWeight="SemiBold" />
+                        </StackPanel>
                     </StackPanel>
+                    <Border Height="1" Background="#33383F" Margin="2,20,2,0" />
                 </StackPanel>
 
-                <!-- Footer -->
-                <TextBlock DockPanel.Dock="Bottom" Text="TextSoft v1.0 · Windows" Foreground="#7A7F87"
-                           FontSize="11" Margin="24,0,0,18" />
+                <!-- Footer: licence at a glance, then the build line -->
+                <StackPanel DockPanel.Dock="Bottom" Margin="18,14,18,16">
+                    <Border Background="#2B2F36" CornerRadius="10" Padding="12,10"
+                            Visibility="{Binding License.IsActive, Converter={StaticResource BoolToVis}}">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Width="8" Height="8" Fill="{StaticResource Success}" VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding License.EditionText}" Foreground="#F1F0EE" FontSize="12"
+                                           FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding License.DaysLeftText}" Foreground="#8A9099" FontSize="11"
+                                       Margin="16,2,0,0" TextTrimming="CharacterEllipsis" />
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Text="TextSoft v1.0 · Windows" Foreground="#6E737B"
+                               FontSize="11" Margin="4,12,0,0" />
+                </StackPanel>
 
                 <!-- Nav -->
-                <ListBox x:Name="Nav" Style="{StaticResource NavList}" SelectedIndex="0" Margin="0,4,0,0">
+                <StackPanel>
+                <TextBlock Text="MENU" Style="{StaticResource SidebarSection}" />
+                <ListBox x:Name="Nav" Style="{StaticResource NavList}" SelectedIndex="0">
                     <ListBoxItem Style="{StaticResource NavItem}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="⌨" FontSize="16" Width="26" Style="{StaticResource NavText}" />
@@ -59,6 +78,7 @@
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
+                </StackPanel>
             </DockPanel>
         </Border>
 
@@ -185,26 +205,25 @@
                                                   DisplayMemberPath="Name" />
                                     </StackPanel>
                                 </Grid>
-                                <Grid Margin="0,12,0,0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="260" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="RENDER / OWN FONT" Style="{StaticResource Label}"
-                                               VerticalAlignment="Center" Margin="0,0,10,0" />
-                                    <ComboBox Grid.Column="1" ItemsSource="{Binding Fonts}" SelectedItem="{Binding SelectedFont}"
-                                              DisplayMemberPath="Label"
-                                              ToolTip="With Unicode selected, pick any installed font — including your own." />
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="16,0,0,0">
+                                <!-- A WrapPanel, not a Grid: on a narrow window the checkbox moves to
+                                     its own line instead of being clipped by the card edge. -->
+                                <WrapPanel Margin="0,12,0,0">
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,16,0">
+                                        <TextBlock Text="RENDER / OWN FONT" Style="{StaticResource Label}"
+                                                   VerticalAlignment="Center" Margin="0,0,10,0" />
+                                        <ComboBox Width="240" ItemsSource="{Binding Fonts}" SelectedItem="{Binding SelectedFont}"
+                                                  DisplayMemberPath="Label"
+                                                  ToolTip="With Unicode selected, pick any installed font — including your own." />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
                                         <CheckBox Content="Show all installed fonts" IsChecked="{Binding ShowAllInstalledFonts}"
                                                   VerticalAlignment="Center" />
                                         <TextBlock Text="⚠ Not installed / not provided — glyphs may not display."
-                                                   Style="{StaticResource Hint}" Foreground="#B45309" Margin="18,0,0,0"
-                                                   VerticalAlignment="Center"
+                                                   Style="{StaticResource Hint}" Foreground="#B45309" Margin="16,0,0,0"
+                                                   VerticalAlignment="Center" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap"
                                                    Visibility="{Binding SelectedFontMissing, Converter={StaticResource BoolToVis}}" />
                                     </StackPanel>
-                                </Grid>
+                                </WrapPanel>
                                 <Border Background="{StaticResource PrimaryLight}" CornerRadius="8" Padding="12,8" Margin="0,12,0,0"
                                         Visibility="{Binding ShowLegacyFontHint, Converter={StaticResource BoolToVis}}">
                                     <StackPanel Orientation="Horizontal">
@@ -216,8 +235,11 @@
                             </StackPanel>
                         </Border>
 
-                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,16,0,14">
-                            <ToggleButton IsChecked="{Binding TypingEnabled}" MinWidth="152" Height="44" Cursor="Hand">
+                        <!-- WrapPanel, so the two checkboxes drop to a second line instead of
+                             being clipped when the window is narrow. -->
+                        <WrapPanel Grid.Row="1" Orientation="Horizontal" Margin="0,16,0,14">
+                            <ToggleButton IsChecked="{Binding TypingEnabled}" MinWidth="152" Height="44" Cursor="Hand"
+                                          Margin="0,0,0,6">
                                 <ToggleButton.Template>
                                     <ControlTemplate TargetType="ToggleButton">
                                         <Border x:Name="b" CornerRadius="11" Background="{StaticResource Surface}"
@@ -237,14 +259,21 @@
                                     </ControlTemplate>
                                 </ToggleButton.Template>
                             </ToggleButton>
-                            <CheckBox Content="Show Shift layer" IsChecked="{Binding ShowShiftLayer}" Margin="20,0,0,0" VerticalAlignment="Center" />
+                            <CheckBox Content="Show Shift layer" IsChecked="{Binding ShowShiftLayer}" Margin="20,0,0,6"
+                                      VerticalAlignment="Center" />
                             <CheckBox Content="Phonetic (type by sound)" IsChecked="{Binding PhoneticMode}"
-                                      IsEnabled="{Binding HasPhonetic}" Margin="20,0,0,0" VerticalAlignment="Center"
+                                      IsEnabled="{Binding HasPhonetic}" Margin="20,0,0,6" VerticalAlignment="Center"
                                       ToolTip="Type words the way they sound, e.g. namaste → नमस्ते" />
-                        </StackPanel>
+                        </WrapPanel>
 
                         <Border Grid.Row="2" Background="{StaticResource Surface}" BorderBrush="{StaticResource Border}"
-                                BorderThickness="1" CornerRadius="14" Padding="18">
+                                BorderThickness="1" CornerRadius="14" Padding="18" ClipToBounds="True">
+                            <!-- The key grid has a fixed natural size (14 keys of 56px per row).
+                                 A Viewbox scales it down to whatever space the window gives, so
+                                 resizing shrinks the keyboard instead of cutting the right-hand
+                                 keys off; DownOnly keeps it from blowing up on a large monitor. -->
+                            <Viewbox Stretch="Uniform" MaxWidth="1120" MaxHeight="430"
+                                     HorizontalAlignment="Center" VerticalAlignment="Center">
                             <ItemsControl ItemsSource="{Binding KeyboardRows}" VerticalAlignment="Center"
                                           HorizontalAlignment="Center" FontFamily="{Binding SelectedFontFamily}">
                                 <ItemsControl.ItemTemplate>
@@ -283,9 +312,11 @@
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>
+                            </Viewbox>
                         </Border>
 
-                        <TextBlock Grid.Row="3" Margin="2,12,0,0" Style="{StaticResource Hint}" Text="{Binding Status}" />
+                        <TextBlock Grid.Row="3" Margin="2,12,0,0" Style="{StaticResource Hint}" Text="{Binding Status}"
+                                   TextTrimming="CharacterEllipsis" />
                     </Grid>
                 </TabItem>
 
@@ -296,6 +327,7 @@
 
                 <!-- ===== LICENSE ===== -->
                 <TabItem>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,0,6,0">
                     <StackPanel DataContext="{Binding License}" MaxWidth="560" HorizontalAlignment="Left">
                         <Border Background="{StaticResource Surface}" CornerRadius="14"
                                 BorderBrush="{StaticResource Border}" BorderThickness="1" Padding="28">
@@ -348,12 +380,15 @@
                             </StackPanel>
                         </Border>
                     </StackPanel>
+                    </ScrollViewer>
                 </TabItem>
 
                 <!-- ===== SETTINGS ===== -->
                 <TabItem>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,0,6,0">
                     <Border Background="{StaticResource Surface}" CornerRadius="14" BorderBrush="{StaticResource Border}"
-                            BorderThickness="1" Padding="28" VerticalAlignment="Top">
+                            BorderThickness="1" Padding="28" VerticalAlignment="Top" HorizontalAlignment="Left"
+                            MinWidth="420">
                         <StackPanel MaxWidth="460" HorizontalAlignment="Left">
                             <TextBlock Text="TOGGLE KEY" Style="{StaticResource Label}" />
                             <ComboBox ItemsSource="{Binding ToggleKeyOptions}" SelectedItem="{Binding SelectedToggleKey}"
@@ -371,6 +406,7 @@
                             <TextBlock Text="{Binding Status}" Style="{StaticResource Hint}" Margin="0,12,0,0" />
                         </StackPanel>
                     </Border>
+                    </ScrollViewer>
                 </TabItem>
             </TabControl>
         </DockPanel>
@@ -381,6 +417,9 @@
         <Border Grid.Column="0" Grid.ColumnSpan="2" DataContext="{Binding License}"
                 Background="#E61B1D21"
                 Visibility="{Binding IsLocked, Converter={StaticResource BoolToVis}}">
+            <!-- Scrolls when the window is short: the registration step is tall and
+                 the Activate button must stay reachable. -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="20,24">
             <Border Background="{StaticResource Surface}" CornerRadius="16" BorderBrush="{StaticResource Border}"
                     BorderThickness="1" Padding="34" MaxWidth="440" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <StackPanel>
@@ -506,6 +545,7 @@
                     </StackPanel>
                 </StackPanel>
             </Border>
+            </ScrollViewer>
         </Border>
     </Grid>
 </Window>

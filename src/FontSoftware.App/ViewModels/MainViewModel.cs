@@ -88,7 +88,11 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             if (SetProperty(ref _selectedFontLayout, value))
             {
                 OnFontLayoutChanged();
-                PersistSelection(); // also covers a layout whose font was already selected
+                // When the new layout keeps the font that is already selected (Unicode,
+                // typically) the font setter does not fire, so push the profile and the
+                // status line here — otherwise the status still names the old layout.
+                ApplyProfile();
+                PersistSelection();
             }
         }
     }

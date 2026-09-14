@@ -16,11 +16,9 @@
         <Style x:Key="FieldLabel" TargetType="TextBlock" BasedOn="{StaticResource Label}">
             <Setter Property="Margin" Value="1,10,0,5" />
         </Style>
-        <Style TargetType="RadioButton">
-            <Setter Property="Foreground" Value="{StaticResource Text}" />
-            <Setter Property="Margin" Value="0,0,16,0" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-            <Setter Property="Cursor" Value="Hand" />
+        <!-- Inherits the themed radio from App.xaml; only the spacing differs here. -->
+        <Style TargetType="RadioButton" BasedOn="{StaticResource {x:Type RadioButton}}">
+            <Setter Property="Margin" Value="0,3,16,3" />
         </Style>
         <Style x:Key="BoxBorder" TargetType="Border">
             <Setter Property="Background" Value="{StaticResource Surface}" />
@@ -48,8 +46,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="290" />
+            <!-- The selection panel gives up width on a small window instead of
+                 squeezing the text boxes to nothing. -->
+            <ColumnDefinition Width="*" MinWidth="300" />
+            <ColumnDefinition Width="0.34*" MinWidth="236" MaxWidth="300" />
         </Grid.ColumnDefinitions>
 
         <!-- ================= LEFT: data ================= -->
@@ -70,14 +70,14 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" Text="Input Data" Style="{StaticResource H2}" VerticalAlignment="Center" Margin="0,0,12,0" />
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <WrapPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                         <ComboBox ItemsSource="{Binding InputFonts}" SelectedItem="{Binding SelectedInputFont}" Width="168"
                                   Style="{StaticResource SmallCombo}" DisplayMemberPath="Name" ToolTip="Font of the input box" />
                         <ComboBox x:Name="InputSizeBox" SelectedItem="{Binding InputFontSize}" Width="66" Margin="8,0,0,0"
                                   Style="{StaticResource SmallCombo}" ToolTip="Font size" />
                         <Button Content="Clipboard" Command="{Binding GetClipboardCommand}" Style="{StaticResource SmallSecondary}"
                                 Margin="10,0,0,0" ToolTip="Take whatever is on the clipboard (Word text keeps its formatting)" />
-                    </StackPanel>
+                    </WrapPanel>
                 </Grid>
 
                 <Border Grid.Row="1" Style="{StaticResource BoxBorder}">
@@ -91,13 +91,13 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" Text="Output Data" Style="{StaticResource H2}" VerticalAlignment="Center" Margin="0,0,12,0" />
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <WrapPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                         <ComboBox ItemsSource="{Binding OutputFonts}" SelectedItem="{Binding SelectedOutputFont}" Width="168"
                                   Style="{StaticResource SmallCombo}" DisplayMemberPath="Name" ToolTip="Font of the output box" />
                         <ComboBox x:Name="OutputSizeBox" SelectedItem="{Binding OutputFontSize}" Width="66" Margin="8,0,0,0"
                                   Style="{StaticResource SmallCombo}" ToolTip="Font size" />
                         <Button Content="Copy" Command="{Binding CopyCommand}" Style="{StaticResource SmallSecondary}" Margin="10,0,0,0" />
-                    </StackPanel>
+                    </WrapPanel>
                 </Grid>
 
                 <Border Grid.Row="3" Style="{StaticResource BoxBorder}" Background="{StaticResource AppBg}">
@@ -152,9 +152,12 @@
                                   SelectionMode="Extended" FontSize="12.5">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="File" Width="220" DisplayMemberBinding="{Binding Name}" />
-                                    <GridViewColumn Header="Folder" Width="300" DisplayMemberBinding="{Binding Folder}" />
-                                    <GridViewColumn Header="Status" Width="180" DisplayMemberBinding="{Binding Status}" />
+                                    <!-- Narrower than the old 220/300/180: those three added up to
+                                         700px and pushed a horizontal scrollbar into a panel that is
+                                         often only 500 wide. -->
+                                    <GridViewColumn Header="File" Width="180" DisplayMemberBinding="{Binding Name}" />
+                                    <GridViewColumn Header="Folder" Width="210" DisplayMemberBinding="{Binding Folder}" />
+                                    <GridViewColumn Header="Status" Width="130" DisplayMemberBinding="{Binding Status}" />
                                 </GridView>
                             </ListView.View>
                         </ListView>
@@ -219,10 +222,10 @@
                         <ComboBox ItemsSource="{Binding InputLayouts}" SelectedItem="{Binding SelectedInputLayout}" DisplayMemberPath="Label"
                                   Style="{StaticResource SmallCombo}" AutomationProperties.AutomationId="ConvInLayout" />
                         <TextBlock Text="INPUT DATA FORMAT" Style="{StaticResource FieldLabel}" />
-                        <StackPanel Orientation="Horizontal">
+                        <WrapPanel Orientation="Horizontal">
                             <RadioButton Content="Text / Clipboard" IsChecked="{Binding TextMode}" GroupName="inMode" />
                             <RadioButton Content="Files" IsChecked="{Binding FilesMode}" GroupName="inMode" />
-                        </StackPanel>
+                        </WrapPanel>
                     </StackPanel>
 
                     <Border Style="{StaticResource PanelHead}">
@@ -254,11 +257,11 @@
                     </Border>
                     <StackPanel Margin="14,4,14,14">
                         <TextBlock Text="OUTPUT NUMERALS" Style="{StaticResource FieldLabel}" />
-                        <StackPanel Orientation="Horizontal">
+                        <WrapPanel Orientation="Horizontal">
                             <RadioButton Content="Language" IsChecked="{Binding NumeralsLanguage}" GroupName="num" />
                             <RadioButton Content="English" IsChecked="{Binding NumeralsEnglish}" GroupName="num" />
                             <RadioButton Content="Hindi" IsChecked="{Binding NumeralsHindi}" GroupName="num" />
-                        </StackPanel>
+                        </WrapPanel>
                         <TextBlock Text="CONVERSION DICTIONARY" Style="{StaticResource FieldLabel}" />
                         <CheckBox Content="Use dictionary" IsChecked="{Binding UseDictionary}" FontSize="12" />
                         <TextBlock Text="{Binding DictionaryCountText}" Style="{StaticResource Hint}" FontSize="11" Margin="26,2,0,6" />
