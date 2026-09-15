@@ -235,6 +235,17 @@ public sealed class TypingEngine : IDisposable
             return;              // unmapped key → default English behaviour
         }
 
+        // Ctrl+A, Ctrl+S, Alt+F, Win+E and the rest are commands, not text. Without
+        // this the layout would swallow them and type a letter instead, so no
+        // shortcut worked while typing was on.
+        if (IsShortcut(mapping))
+        {
+            _pendingDead = null;
+            _lastEmitted = null;
+            ResetLegacy(); // the shortcut may move the caret; start the next word fresh
+            return;
+        }
+
         string? output = SelectOutput(mapping);
         if (string.IsNullOrEmpty(output))
         {
@@ -374,6 +385,13 @@ public sealed class TypingEngine : IDisposable
         if (IsModifier(e.VirtualKey))
             return;
 
+        // A shortcut ends the word and belongs to the application, not to us.
+        if (IsShortcut(null))
+        {
+            ResetPhonetic();
+            return;
+        }
+
         // A–Z are the roman letters we buffer; anything else commits the word.
         if (TryRomanChar(e.VirtualKey, out char ch))
         {
@@ -441,13 +459,37 @@ public sealed class TypingEngine : IDisposable
         return mapping.Base;
     }
 
+    /// <summary>
+    /// True when the key press is an application shortcut rather than text, so the
+    /// engine must leave it alone: Ctrl+key, Alt+key and Win+key.
+    /// Ctrl+Alt is AltGr on European keyboards, so that pair counts as text only
+    /// when the layout actually defines an AltGr glyph for the key.
+    /// </summary>
+    private static bool IsShortcut(KeyMapping? mapping)
+    {
+        if (IsDown(VK_LWIN) || IsDown(VK_RWIN))
+            return true;
+
+        bool ctrl = IsDown(VK_CONTROL), alt = IsDown(VK_MENU);
+        if (ctrl && alt)
+            return string.IsNullOrEmpty(mapping?.AltGr);
+        return ctrl || alt;
+    }
+
     private static bool IsModifier(int vk) =>
         vk is VK_SHIFT or VK_CONTROL or VK_MENU
             or 0xA0 or 0xA1  // L/R Shift
             or 0xA2 or 0xA3  // L/R Ctrl
             or 0xA4 or 0xA5; // L/R Alt
 
-    private static bool IsDown(int vk) => (GetKeyState(vk) & 0x8000) != 0;
+    /// <summary>
+    /// Reads whether a key is physically held down. Replaceable so the Shift and
+    /// shortcut behaviour can be tested without a real keyboard; production code
+    /// never changes it.
+    /// </summary>
+    public static Func<int, bool> KeyDownProbe { get; set; } = vk => (GetKeyState(vk) & 0x8000) != 0;
+
+    private static bool IsDown(int vk) => KeyDownProbe(vk);
     private static bool IsToggled(int vk) => (GetKeyState(vk) & 0x0001) != 0;
 
     public void Dispose()
