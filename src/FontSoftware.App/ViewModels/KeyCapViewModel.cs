@@ -29,6 +29,14 @@ public sealed class KeyCapViewModel : ObservableObject
         set => SetProperty(ref _isMapped, value);
     }
 
+    private bool _isSelected;
+    /// <summary>True for the key the keyboard designer is currently assigning.</summary>
+    public bool IsSelected
+    {
+        get => _isSelected;
+        set => SetProperty(ref _isSelected, value);
+    }
+
     public KeyCapViewModel(int virtualKey, string label)
     {
         VirtualKey = virtualKey;

@@ -67,6 +67,12 @@
                     </ListBoxItem>
                     <ListBoxItem Style="{StaticResource NavItem}">
                         <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="✎" FontSize="16" Width="26" Style="{StaticResource NavText}" />
+                            <TextBlock Text="Keyboards" Style="{StaticResource NavText}" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Style="{StaticResource NavItem}">
+                        <StackPanel Orientation="Horizontal">
                             <TextBlock Text="◈" FontSize="15" Width="26" Style="{StaticResource NavText}" />
                             <TextBlock Text="License" Style="{StaticResource NavText}" />
                         </StackPanel>
@@ -338,6 +344,11 @@
                 <!-- ===== CONVERT ===== -->
                 <TabItem>
                     <views:ConverterView DataContext="{Binding Converter}" />
+                </TabItem>
+
+                <!-- ===== KEYBOARDS ===== -->
+                <TabItem>
+                    <views:KeyboardEditorView DataContext="{Binding Editor}" />
                 </TabItem>
 
                 <!-- ===== LICENSE ===== -->

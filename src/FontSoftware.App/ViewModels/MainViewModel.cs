@@ -285,6 +285,9 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     // ---- FR-4 converter ----
     public ConverterViewModel Converter { get; }
 
+    /// <summary>The keyboard designer (FR-2: keyboards are data, so the user can make their own).</summary>
+    public KeyboardEditorViewModel Editor { get; }
+
     // ---- FR-5 licensing ----
     public LicenseViewModel License { get; }
 
@@ -397,6 +400,13 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             _engine.ExcludedProcesses.Add(name);
 
         Converter = new ConverterViewModel(bundle, fonts);
+
+        // Keyboards the user designed are listed alongside the shipped ones.
+        var keyboards = new UserKeyboards();
+        int mine = keyboards.Attach(bundle);
+        if (mine > 0) log.Info($"Keyboards of your own: {mine}.");
+        Editor = new KeyboardEditorViewModel(bundle, keyboards, log);
+        Editor.Saved += OnKeyboardSaved;
 
         string appVersion = typeof(MainViewModel).Assembly.GetName().Version?.ToString() ?? "1.0.0";
         LicenseApiClient.Log = msg => _log.Warn(msg);
@@ -723,6 +733,13 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         222 => ((char)39, '"'),
         _ => ('\0', '\0'),
     };
+
+    /// <summary>A keyboard was just designed: offer it in the typing screen straight away.</summary>
+    private void OnKeyboardSaved(string languageId, LayoutRef reference)
+    {
+        if (SelectedLanguage?.Id != languageId) return;
+        if (Layouts.All(l => l.Id != reference.Id)) Layouts.Add(reference);
+    }
 
     private void OnEngineToggled(object? sender, ToggleEventArgs e)
     {

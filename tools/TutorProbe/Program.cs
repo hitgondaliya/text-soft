@@ -100,21 +100,23 @@ int loadShape = 0;
 for (int i = 0; i < args.Length; i++) if (args[i] == "--load") loadShape = int.Parse(args[++i]);
 if (loadShape > 0)
 {
-    IntPtr name = Marshal.StringToHGlobalAnsi(Path.GetFileNameWithoutExtension(kbd));
-    IntPtr full = Marshal.StringToHGlobalAnsi(Path.Combine(shree, kbd));
+    string[] forms = { Path.GetFileNameWithoutExtension(kbd), kbd, kbd.ToLowerInvariant(), Path.Combine(shree, kbd) };
+    string text = forms[Math.Clamp(loadShape - 1, 0, forms.Length - 1)];
+    IntPtr which = Marshal.StringToHGlobalAnsi(text);
     var load = Get<LoadKbdOverlayP>(h, "LoadKbdOverlay");
-    IntPtr which = loadShape is 2 or 4 ? full : name;
-    Console.WriteLine($"LoadKbdOverlay shape {loadShape} with '{(loadShape is 2 or 4 ? Path.Combine(shree, kbd) : Path.GetFileNameWithoutExtension(kbd))}'");
-    int r = loadShape <= 2
-        ? load(which, pages[2], pages[3], pages[4])
-        : load(which, pages[2], pages[3], pages[4]);
-    Console.WriteLine($"  returned {r}");
+    Console.WriteLine( LoadKbdOverlay with '{text}'");
+    int r = load(which, pages[2], pages[3], pages[4]);
+    Console.WriteLine(   returned {r}");
     Array.Clear(buf);
     getName(buf, 256);
     Console.WriteLine($"  keyboard now: '{Ascii(buf)}'");
-    var m2 = mapped('k', pages[2], pages[3], pages[4], pages[5], pages[6], pages[7], pages[8]);
-    var ob = new byte[8]; Marshal.Copy(pages[7], ob, 0, 8);
-    Console.WriteLine($"  key 'k' now -> {m2} '{Wide(ob)}'");
+    foreach (char probe in "kafq")
+    {
+        for (int k = 0; k < 16; k++) Marshal.WriteByte(pages[7], k, 0);
+        int m2 = mapped(probe, pages[2], pages[3], pages[4], pages[5], pages[6], pages[7], pages[8]);
+        var ob = new byte[16]; Marshal.Copy(pages[7], ob, 0, 16);
+        Console.WriteLine(   key '{probe}' -> {m2} '{Wide(ob)}'");
+    }
     return 0;
 }
 

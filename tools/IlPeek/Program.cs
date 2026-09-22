@@ -43,7 +43,13 @@ foreach (var th in md.TypeDefinitions)
             continue;
         }
         if (pinvokeOnly) continue;
-        if (isPublic) methods.Add($"    {(attrs.HasFlag(MethodAttributes.Static) ? "static " : "")}{mn}()");
+        // Parameter names say what a delegate expects when the signature blob
+        // would only say "IntPtr" - lpszKbdOverlay is worth more than pointer.
+        var names = m.GetParameters()
+                     .Select(ph => md.GetParameter(ph))
+                     .Where(p => !p.Name.IsNil && p.SequenceNumber > 0)
+                     .Select(p => md.GetString(p.Name));
+        if (isPublic) methods.Add($"    {(attrs.HasFlag(MethodAttributes.Static) ? "static " : "")}{mn}({string.Join(", ", names)})");
     }
 
     if (pinvokeOnly && methods.Count == 0) continue;
