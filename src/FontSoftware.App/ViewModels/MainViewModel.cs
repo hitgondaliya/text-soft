@@ -178,12 +178,57 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     // ---- FR-2 keyboard viewer ----
     public ObservableCollection<ObservableCollection<KeyCapViewModel>> KeyboardRows { get; } = new();
 
-    private bool _showShiftLayer;
+    /// <summary>
+    /// Which layer of the keyboard the viewer is showing. A vendor keyboard has
+    /// four: the two printed ones, the keyboard's own third layer on Ctrl+Space,
+    /// and the symbols every keyboard of the script shares on Ctrl+Shift+1.
+    /// </summary>
+    private KeyLayer _layer = KeyLayer.Normal;
+    public KeyLayer Layer
+    {
+        get => _layer;
+        set
+        {
+            if (!SetProperty(ref _layer, value)) return;
+            OnPropertyChanged(nameof(ShowNormalLayer));
+            OnPropertyChanged(nameof(ShowShiftLayer));
+            OnPropertyChanged(nameof(ShowEscapeLayer));
+            OnPropertyChanged(nameof(ShowSymbolLayer));
+            RefreshKeyboard();
+        }
+    }
+
+    public bool ShowNormalLayer
+    {
+        get => Layer == KeyLayer.Normal;
+        set { if (value) Layer = KeyLayer.Normal; }
+    }
+
     public bool ShowShiftLayer
     {
-        get => _showShiftLayer;
-        set { if (SetProperty(ref _showShiftLayer, value)) RefreshKeyboard(); }
+        get => Layer == KeyLayer.Shift;
+        set { if (value) Layer = KeyLayer.Shift; }
     }
+
+    public bool ShowEscapeLayer
+    {
+        get => Layer == KeyLayer.Escape;
+        set { if (value) Layer = KeyLayer.Escape; }
+    }
+
+    public bool ShowSymbolLayer
+    {
+        get => Layer == KeyLayer.Symbols;
+        set { if (value) Layer = KeyLayer.Symbols; }
+    }
+
+    /// <summary>True when the selected keyboard has a Ctrl+Space layer of its own.</summary>
+    public bool HasEscapeLayer { get => _hasEscapeLayer; private set => SetProperty(ref _hasEscapeLayer, value); }
+    private bool _hasEscapeLayer;
+
+    /// <summary>True when the selected keyboard has the shared Ctrl+Shift+1 symbols.</summary>
+    public bool HasSymbolLayer { get => _hasSymbolLayer; private set => SetProperty(ref _hasSymbolLayer, value); }
+    private bool _hasSymbolLayer;
 
     // ---- FR-3 typing ----
     private bool _typingEnabled;
@@ -600,12 +645,21 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             catch (ConfigException) { layout = null; }
         }
 
+        HasEscapeLayer = layout?.HasEscape ?? false;
+        HasSymbolLayer = layout?.HasSymbols ?? false;
+        if ((Layer == KeyLayer.Escape && !HasEscapeLayer) || (Layer == KeyLayer.Symbols && !HasSymbolLayer))
+            Layer = KeyLayer.Normal;   // this keyboard has no such layer
+
         foreach (var cap in _allKeys)
         {
             var mapping = layout?.Find(cap.VirtualKey);
-            string? mapped = mapping is null
-                ? null
-                : (ShowShiftLayer ? mapping.Shift ?? mapping.Base : mapping.Base);
+            string? mapped = Layer switch
+            {
+                KeyLayer.Escape => EscapeText(layout, cap, symbols: false),
+                KeyLayer.Symbols => EscapeText(layout, cap, symbols: true),
+                KeyLayer.Shift => mapping?.Shift ?? mapping?.Base,
+                _ => mapping?.Base,
+            };
 
             if (!string.IsNullOrEmpty(mapped))
             {
@@ -619,6 +673,38 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             }
         }
     }
+
+    /// <summary>
+    /// What an escape layer puts on this key. Those layers are keyed by the
+    /// character the key types on a US keyboard, and a key can carry an entry on
+    /// its own and another on its shifted twin (ॢ on l, ॣ on k, ₹ on $).
+    /// </summary>
+    private static string? EscapeText(KeyboardLayout? layout, KeyCapViewModel cap, bool symbols)
+    {
+        if (layout is null) return null;
+        (char bas, char shifted) = UsKey(cap.VirtualKey);
+        if (bas == '\0') return null;
+        return layout.EscapeFor(bas.ToString(), symbols) ?? layout.EscapeFor(shifted.ToString(), symbols);
+    }
+
+    /// <summary>The characters a US keyboard puts on a key, unshifted and shifted.</summary>
+    private static (char Base, char Shift) UsKey(int vk) => vk switch
+    {
+        >= 'A' and <= 'Z' => (char.ToLowerInvariant((char)vk), (char)vk),
+        >= '0' and <= '9' => ((char)vk, ")!@#$%^&*("[vk - '0']),
+        186 => (';', ':'),
+        187 => ('=', '+'),
+        188 => (',', '<'),
+        189 => ('-', '_'),
+        190 => ('.', '>'),
+        191 => ('/', '?'),
+        192 => ('`', '~'),
+        219 => ('[', '{'),
+        220 => ((char)92, '|'),
+        221 => (']', '}'),
+        222 => ((char)39, '"'),
+        _ => ('\0', '\0'),
+    };
 
     private void OnEngineToggled(object? sender, ToggleEventArgs e)
     {

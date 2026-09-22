@@ -72,7 +72,7 @@ static bool Formatting(string s) =>
 
 static string Norm(string s) => new(s.Where(char.IsLetterOrDigit).Select(char.ToLowerInvariant).ToArray());
 
-int rebuilt = 0, keysFixed = 0, keysAdded = 0, seqAdded = 0, skipped = 0;
+int rebuilt = 0, keysFixed = 0, keysAdded = 0, seqAdded = 0, escAdded = 0, symAdded = 0, skipped = 0;
 foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p => p))
 {
     if (!byFile.TryGetValue(Path.GetFileName(path), out var meta)) { skipped++; continue; }
@@ -90,6 +90,13 @@ foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p
         .Where(p => p.Key.Length > 0 && p.Uni.Length > 0 && !Formatting(p.Uni))
         .ToList();
     if (pairs.Count == 0) { skipped++; continue; }
+
+    var specials = chartDoc.RootElement.TryGetProperty("Specials", out var sp)
+        ? sp.EnumerateArray()
+            .Select(p => (Key: p.GetProperty("Key").GetString() ?? "", Uni: p.GetProperty("Uni").GetString() ?? ""))
+            .Where(p => p.Key.Length > 0 && p.Uni.Length > 0 && !Formatting(p.Uni))
+            .ToList()
+        : new List<(string Key, string Uni)>();
 
     var layout = JsonSerializer.Deserialize<KeyboardLayout>(File.ReadAllText(path), opts)!;
     var byVk = layout.Keys.ToDictionary(k => k.VirtualKey);
@@ -114,14 +121,22 @@ foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p
         }
     }
 
-    // multi-key runs, longest first so the engine's growth check is cheap to read
-    var seqs = pairs.Where(p => p.Key.Length > 1)
+    // Multi-key runs. Each of the two reach-past-the-keyboard combinations counts
+    // as a keystroke of its own here, exactly as the charts write it, so "Øj" (the
+    // keyboard's own third layer) and "kØqk" are runs like any other.
+    var seqs = pairs.Where(p => p.Key.Length > 1).Concat(specials)
                     .GroupBy(p => p.Key)
                     .Select(g => new KeySequence { Keys = g.Key, To = g.First().Uni })
                     .OrderBy(s => s.Keys.Length).ThenBy(s => s.Keys, StringComparer.Ordinal)
                     .ToList();
     seqAdded += seqs.Count;
     layout.Sequences = seqs;
+
+    // and each layer's one-key entries again, without the mark, for the viewer
+    layout.Escape = OneKeyLayer(seqs, EscapeLayer.Mark);
+    layout.Symbols = OneKeyLayer(seqs, EscapeLayer.SymbolMark);
+    escAdded += layout.Escape.Count;
+    symAdded += layout.Symbols.Count;
 
     // clear anything an earlier pass left that only types an invisible character
     foreach (var m in layout.Keys)
@@ -143,6 +158,8 @@ Console.WriteLine($"layouts rebuilt from the vendor charts : {rebuilt}");
 Console.WriteLine($"  single keys corrected                : {keysFixed}");
 Console.WriteLine($"  single keys added                    : {keysAdded}");
 Console.WriteLine($"  multi-key runs written               : {seqAdded}");
+Console.WriteLine($"  Ctrl+Space layer keys written        : {escAdded}");
+Console.WriteLine($"  Ctrl+Shift+1 layer keys written      : {symAdded}");
 Console.WriteLine($"layouts left alone (no chart)          : {skipped}");
 if (!apply) Console.WriteLine("\ndry run - pass --apply to write the files");
 return 0;
@@ -153,3 +170,10 @@ static string FindRoot()
     while (d is not null && !File.Exists(Path.Combine(d.FullName, "FontSoftware.sln"))) d = d.Parent;
     return d?.FullName ?? throw new InvalidOperationException("solution root not found");
 }
+
+/// <summary>The entries a layer puts on a single key, with the layer's mark taken off.</summary>
+static List<KeySequence> OneKeyLayer(List<KeySequence> seqs, char mark) =>
+    seqs.Where(s => s.Keys.Length == 2 && s.Keys[0] == mark && s.Keys[1] != mark)
+        .Select(s => new KeySequence { Keys = s.Keys[1..], To = s.To })
+        .OrderBy(e => e.Keys, StringComparer.Ordinal)
+        .ToList();

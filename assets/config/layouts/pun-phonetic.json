@@ -352,6 +352,30 @@
       "to": "ਥ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Øm",
+      "to": "ਞ"
+    },
+    {
+      "keys": "Øn",
+      "to": "ਙ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ੴ"
+    },
+    {
       "keys": "kaa",
       "to": "ਕਾ"
     },
@@ -370,7 +394,41 @@
     {
       "keys": "koo",
       "to": "ਕੂ"
+    },
+    {
+      "keys": "kØh",
+      "to": "ਕਃ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "m",
+      "to": "ਞ"
+    },
+    {
+      "keys": "n",
+      "to": "ਙ"
+    },
+    {
+      "keys": "u",
+      "to": "ੴ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

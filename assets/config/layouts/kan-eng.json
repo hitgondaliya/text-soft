@@ -371,11 +371,11 @@
     },
     {
       "keys": "ma",
-      "to": "ಞ"
+      "to": "ಮ"
     },
     {
       "keys": "na",
-      "to": "ಙ"
+      "to": "ನ"
     },
     {
       "keys": "oo",
@@ -410,8 +410,64 @@
       "to": "ಯ"
     },
     {
-      "keys": "za",
-      "to": "ೞ"
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤-",
+      "to": "—"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "¤K",
+      "to": "ೡ"
+    },
+    {
+      "keys": "¤L",
+      "to": "ಌ"
+    },
+    {
+      "keys": "¤R",
+      "to": "ೠ"
+    },
+    {
+      "keys": "¤_",
+      "to": "–"
+    },
+    {
+      "keys": "¤k",
+      "to": "ೣ"
+    },
+    {
+      "keys": "¤l",
+      "to": "ೢ"
+    },
+    {
+      "keys": "¤q",
+      "to": "ಽ"
+    },
+    {
+      "keys": "¤s",
+      "to": "ಶ್ರೀ"
+    },
+    {
+      "keys": "¤|",
+      "to": "॥"
+    },
+    {
+      "keys": "Øc",
+      "to": "ೠ"
+    },
+    {
+      "keys": "Øv",
+      "to": "ಐ"
     },
     {
       "keys": "CCa",
@@ -535,11 +591,11 @@
     },
     {
       "keys": "mma",
-      "to": "ಞ್ಞ"
+      "to": "ಮ್ಮ"
     },
     {
       "keys": "nna",
-      "to": "ಙ್ಙ"
+      "to": "ನ್ನ"
     },
     {
       "keys": "pha",
@@ -574,12 +630,32 @@
       "to": "ಯ್ಯ"
     },
     {
-      "keys": "DhDha",
-      "to": "ಢ್ಢ"
+      "keys": "Øga",
+      "to": "ಜ್ಞ"
     },
     {
-      "keys": "Shree",
-      "to": "ಶ್ರೀ"
+      "keys": "Øma",
+      "to": "ಞ"
+    },
+    {
+      "keys": "Øna",
+      "to": "ಙ"
+    },
+    {
+      "keys": "Øxa",
+      "to": "ಱ"
+    },
+    {
+      "keys": "Øza",
+      "to": "ೞ"
+    },
+    {
+      "keys": "kaØa",
+      "to": "ಕ್‌"
+    },
+    {
+      "keys": "DhDha",
+      "to": "ಢ್ಢ"
     },
     {
       "keys": "ThTha",
@@ -622,25 +698,79 @@
       "to": "ಥ್ಥ"
     },
     {
-      "keys": "Avagraha",
-      "to": "ಽ"
+      "keys": "ØmØma",
+      "to": "ಞ್ಞ"
     },
     {
-      "keys": "RooVowel",
+      "keys": "ØnØna",
+      "to": "ಙ್ಙ"
+    }
+  ],
+  "escape": [
+    {
+      "keys": "c",
       "to": "ೠ"
     },
     {
-      "keys": "lruVowel",
-      "to": "ಌ"
+      "keys": "v",
+      "to": "ಐ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
     },
     {
-      "keys": "lrooVowel",
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "-",
+      "to": "—"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    },
+    {
+      "keys": "K",
       "to": "ೡ"
     },
     {
-      "keys": "DoubleDand",
+      "keys": "L",
+      "to": "ಌ"
+    },
+    {
+      "keys": "R",
+      "to": "ೠ"
+    },
+    {
+      "keys": "_",
+      "to": "–"
+    },
+    {
+      "keys": "k",
+      "to": "ೣ"
+    },
+    {
+      "keys": "l",
+      "to": "ೢ"
+    },
+    {
+      "keys": "q",
+      "to": "ಽ"
+    },
+    {
+      "keys": "s",
+      "to": "ಶ್ರೀ"
+    },
+    {
+      "keys": "|",
       "to": "॥"
     }
   ],
-  "HasSequences": true
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

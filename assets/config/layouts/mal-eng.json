@@ -407,6 +407,34 @@
       "to": "ഴ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "Øa",
+      "to": "അ"
+    },
+    {
+      "keys": "Øi",
+      "to": "ൺ"
+    },
+    {
+      "keys": "Øp",
+      "to": "ൾ"
+    },
+    {
+      "keys": "Ør",
+      "to": "ഋ"
+    },
+    {
+      "keys": "Øt",
+      "to": "ൽ"
+    },
+    {
+      "keys": "Øz",
+      "to": "ൽ"
+    },
+    {
       "keys": "DDa",
       "to": "ഡ്ഡ"
     },
@@ -555,6 +583,10 @@
       "to": "ക്ഷ"
     },
     {
+      "keys": "kØr",
+      "to": "കൃ"
+    },
+    {
       "keys": "lla",
       "to": "ല്ല"
     },
@@ -627,12 +659,28 @@
       "to": "വ്വ"
     },
     {
+      "keys": "Øma",
+      "to": "ഞ"
+    },
+    {
+      "keys": "Øna",
+      "to": "ങ"
+    },
+    {
+      "keys": "Øxa",
+      "to": "ക്ഷ"
+    },
+    {
       "keys": "ccha",
       "to": "ച്ഛ"
     },
     {
       "keys": "ddha",
       "to": "ദ്ധ"
+    },
+    {
+      "keys": "jØma",
+      "to": "ജ്ഞ"
     },
     {
       "keys": "ndha",
@@ -663,9 +711,59 @@
       "to": "ത്ഥ"
     },
     {
+      "keys": "Ømca",
+      "to": "ഞ്ച"
+    },
+    {
+      "keys": "Ønka",
+      "to": "ങ്ക"
+    },
+    {
       "keys": "shsha",
       "to": "ശ്ശ"
+    },
+    {
+      "keys": "ØmØma",
+      "to": "ഞ്ഞ"
+    },
+    {
+      "keys": "ØnØna",
+      "to": "ങ്ങ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "a",
+      "to": "അ"
+    },
+    {
+      "keys": "i",
+      "to": "ൺ"
+    },
+    {
+      "keys": "p",
+      "to": "ൾ"
+    },
+    {
+      "keys": "r",
+      "to": "ഋ"
+    },
+    {
+      "keys": "t",
+      "to": "ൽ"
+    },
+    {
+      "keys": "z",
+      "to": "ൽ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

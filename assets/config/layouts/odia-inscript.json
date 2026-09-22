@@ -220,10 +220,6 @@
       "to": "ଧି"
     },
     {
-      "keys": "Om",
-      "to": "ଓଁ"
-    },
-    {
       "keys": "[]",
       "to": "ଡ଼"
     },
@@ -278,6 +274,102 @@
     {
       "keys": "kx",
       "to": "କଂ"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤-",
+      "to": "—"
+    },
+    {
+      "keys": "¤.",
+      "to": "।"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "¤K",
+      "to": "ୡ"
+    },
+    {
+      "keys": "¤L",
+      "to": "ଌ"
+    },
+    {
+      "keys": "¤R",
+      "to": "ୠ"
+    },
+    {
+      "keys": "¤[",
+      "to": "["
+    },
+    {
+      "keys": "¤]",
+      "to": "]"
+    },
+    {
+      "keys": "¤_",
+      "to": "–"
+    },
+    {
+      "keys": "¤a",
+      "to": "଼"
+    },
+    {
+      "keys": "¤k",
+      "to": "ୣ"
+    },
+    {
+      "keys": "¤l",
+      "to": "ୢ"
+    },
+    {
+      "keys": "¤q",
+      "to": "ଽ"
+    },
+    {
+      "keys": "¤r",
+      "to": "ୄ"
+    },
+    {
+      "keys": "¤u",
+      "to": "ଓଁ"
+    },
+    {
+      "keys": "¤w",
+      "to": "ୱ"
+    },
+    {
+      "keys": "¤y",
+      "to": "୍ୟ"
+    },
+    {
+      "keys": "¤|",
+      "to": "॥"
+    },
+    {
+      "keys": "Øe",
+      "to": "ା"
+    },
+    {
+      "keys": "Øp",
+      "to": "ଜ"
+    },
+    {
+      "keys": "Øq",
+      "to": "ୌ"
+    },
+    {
+      "keys": "Øw",
+      "to": "ୈ"
     },
     {
       "keys": "&dC",
@@ -794,31 +886,109 @@
     {
       "keys": "vdody",
       "to": "ନ୍ଦ୍ବ"
+    }
+  ],
+  "escape": [
+    {
+      "keys": "e",
+      "to": "ା"
     },
     {
-      "keys": "jafulla",
-      "to": "୍ୟ"
+      "keys": "p",
+      "to": "ଜ"
     },
     {
-      "keys": "Avagraha",
-      "to": "ଽ"
+      "keys": "q",
+      "to": "ୌ"
     },
     {
-      "keys": "Lruvowel",
-      "to": "ଌ"
+      "keys": "w",
+      "to": "ୈ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
     },
     {
-      "keys": "Roovowel",
-      "to": "ୠ"
+      "keys": "*",
+      "to": "×"
     },
     {
-      "keys": "Lroovowel",
+      "keys": "-",
+      "to": "—"
+    },
+    {
+      "keys": ".",
+      "to": "।"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    },
+    {
+      "keys": "K",
       "to": "ୡ"
     },
     {
-      "keys": "Singledand",
-      "to": "।"
+      "keys": "L",
+      "to": "ଌ"
+    },
+    {
+      "keys": "R",
+      "to": "ୠ"
+    },
+    {
+      "keys": "[",
+      "to": "["
+    },
+    {
+      "keys": "]",
+      "to": "]"
+    },
+    {
+      "keys": "_",
+      "to": "–"
+    },
+    {
+      "keys": "a",
+      "to": "଼"
+    },
+    {
+      "keys": "k",
+      "to": "ୣ"
+    },
+    {
+      "keys": "l",
+      "to": "ୢ"
+    },
+    {
+      "keys": "q",
+      "to": "ଽ"
+    },
+    {
+      "keys": "r",
+      "to": "ୄ"
+    },
+    {
+      "keys": "u",
+      "to": "ଓଁ"
+    },
+    {
+      "keys": "w",
+      "to": "ୱ"
+    },
+    {
+      "keys": "y",
+      "to": "୍ୟ"
+    },
+    {
+      "keys": "|",
+      "to": "॥"
     }
   ],
-  "HasSequences": true
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

@@ -115,7 +115,7 @@
     },
     {
       "vk": 74,
-      "base": "ઙ",
+      "base": "જ",
       "shift": "ઝ",
       "deadKey": false
     },
@@ -127,7 +127,7 @@
     },
     {
       "vk": 76,
-      "base": "ઋ",
+      "base": "ળ",
       "shift": "લ",
       "deadKey": false
     },
@@ -346,12 +346,36 @@
       "to": "કુ"
     },
     {
-      "keys": "qy",
-      "to": "ટ્ય"
-    },
-    {
       "keys": "sR",
       "to": "સ્ર"
+    },
+    {
+      "keys": "Ø5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øa",
+      "to": "આ"
+    },
+    {
+      "keys": "Øj",
+      "to": "ઙ"
+    },
+    {
+      "keys": "Øk",
+      "to": "ઞ"
+    },
+    {
+      "keys": "Øl",
+      "to": "ઋ"
+    },
+    {
+      "keys": "Øo",
+      "to": "જ્ઞ"
+    },
+    {
+      "keys": "Øx",
+      "to": "ક્ષ"
     },
     {
       "keys": "Aa#",
@@ -438,44 +462,12 @@
       "to": "હ્ય"
     },
     {
-      "keys": "jfG",
-      "to": "ઙ્ઘ"
-    },
-    {
-      "keys": "jfK",
-      "to": "ઙ્ખ"
-    },
-    {
-      "keys": "jfg",
-      "to": "ઙ્ગ"
-    },
-    {
       "keys": "jfj",
       "to": "જ્જ"
     },
     {
-      "keys": "jfk",
-      "to": "ઙ્ક"
-    },
-    {
-      "keys": "jfm",
-      "to": "ઙ્મ"
-    },
-    {
       "keys": "kaE",
       "to": "કૌ"
-    },
-    {
-      "keys": "kcM",
-      "to": "કઁ"
-    },
-    {
-      "keys": "kfc",
-      "to": "ઞ્ચ"
-    },
-    {
-      "keys": "kfj",
-      "to": "ઞ્જ"
     },
     {
       "keys": "kfk",
@@ -494,8 +486,8 @@
       "to": "ટ્ટ"
     },
     {
-      "keys": "sfp",
-      "to": "સ્ત્ર"
+      "keys": "qØy",
+      "to": "ટ્ય"
     },
     {
       "keys": "tft",
@@ -518,21 +510,86 @@
       "to": "ષ્ટ"
     },
     {
-      "keys": "k#orkc",
+      "keys": "kØcM",
+      "to": "કઁ"
+    },
+    {
+      "keys": "sfØp",
+      "to": "સ્ત્ર"
+    },
+    {
+      "keys": "ØjfG",
+      "to": "ઙ્ઘ"
+    },
+    {
+      "keys": "ØjfK",
+      "to": "ઙ્ખ"
+    },
+    {
+      "keys": "Øjfg",
+      "to": "ઙ્ગ"
+    },
+    {
+      "keys": "Øjfk",
+      "to": "ઙ્ક"
+    },
+    {
+      "keys": "Øjfm",
+      "to": "ઙ્મ"
+    },
+    {
+      "keys": "Økfc",
+      "to": "ઞ્ચ"
+    },
+    {
+      "keys": "Økfj",
+      "to": "ઞ્જ"
+    },
+    {
+      "keys": "k#orkØc",
       "to": "કૅ"
     },
     {
-      "keys": "ikorrfk",
+      "keys": "Øikorrfk",
       "to": "ર્ક"
     },
     {
-      "keys": "ka#orkac",
+      "keys": "ka#orkaØc",
       "to": "કૉ"
-    },
-    {
-      "keys": "ka#MorkacM",
-      "to": "કાઁ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "a",
+      "to": "આ"
+    },
+    {
+      "keys": "j",
+      "to": "ઙ"
+    },
+    {
+      "keys": "k",
+      "to": "ઞ"
+    },
+    {
+      "keys": "l",
+      "to": "ઋ"
+    },
+    {
+      "keys": "o",
+      "to": "જ્ઞ"
+    },
+    {
+      "keys": "x",
+      "to": "ક્ષ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

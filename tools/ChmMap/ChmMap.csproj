@@ -6,4 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>chmmap</AssemblyName>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FontSoftware.Core\FontSoftware.Core.csproj" />
+  </ItemGroup>
 </Project>

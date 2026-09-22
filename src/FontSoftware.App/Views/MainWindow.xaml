@@ -259,8 +259,23 @@
                                     </ControlTemplate>
                                 </ToggleButton.Template>
                             </ToggleButton>
-                            <CheckBox Content="Show Shift layer" IsChecked="{Binding ShowShiftLayer}" Margin="20,0,0,6"
-                                      VerticalAlignment="Center" />
+                            <Border Background="{StaticResource Surface}" BorderBrush="{StaticResource Border}" BorderThickness="1" CornerRadius="10" Padding="10,5"
+                                    Margin="20,0,0,6" VerticalAlignment="Center">
+                                <WrapPanel Orientation="Horizontal">
+                                    <TextBlock Text="Layer" FontSize="12" Opacity="0.7" VerticalAlignment="Center"
+                                               Margin="0,0,10,0" />
+                                    <RadioButton Content="Normal" GroupName="KeyLayer" IsChecked="{Binding ShowNormalLayer}"
+                                                 VerticalAlignment="Center" Margin="0,0,12,0" />
+                                    <RadioButton Content="Shift" GroupName="KeyLayer" IsChecked="{Binding ShowShiftLayer}"
+                                                 VerticalAlignment="Center" Margin="0,0,12,0" />
+                                    <RadioButton Content="Ctrl+Space" GroupName="KeyLayer" IsChecked="{Binding ShowEscapeLayer}"
+                                                 IsEnabled="{Binding HasEscapeLayer}" VerticalAlignment="Center" Margin="0,0,12,0"
+                                                 ToolTip="This keyboard's own third layer: the nukta letters and conjuncts" />
+                                    <RadioButton Content="Ctrl+Shift+1" GroupName="KeyLayer" IsChecked="{Binding ShowSymbolLayer}"
+                                                 IsEnabled="{Binding HasSymbolLayer}" VerticalAlignment="Center"
+                                                 ToolTip="The symbols every keyboard of this script shares: ॐ, ।, ₹" />
+                                </WrapPanel>
+                            </Border>
                             <CheckBox Content="Phonetic (type by sound)" IsChecked="{Binding PhoneticMode}"
                                       IsEnabled="{Binding HasPhonetic}" Margin="20,0,0,6" VerticalAlignment="Center"
                                       ToolTip="Type words the way they sound, e.g. namaste → नमस्ते" />

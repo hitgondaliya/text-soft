@@ -236,15 +236,19 @@ public sealed class TypingEngine : IDisposable
         if (IsModifier(e.VirtualKey))
             return;
 
-        // Ctrl+Space is the escape the vendor keyboards use: it ends the run being
-        // typed so the next key starts a fresh one, and puts nothing on screen.
-        if (e.VirtualKey == VK_SPACE && IsDown(VK_CONTROL) && !IsDown(VK_MENU))
+        // Ctrl+Space reaches this keyboard's own third layer - the nukta letters,
+        // the conjuncts, the alternates the two printed layers have no room for -
+        // and Ctrl+Shift+1 the symbols every keyboard of the script shares (ॐ, the
+        // danda, the rupee sign). The vendor charts write both inside the run of
+        // keys like any other keystroke ("Øj", "kØqk"), so that is what they are
+        // here: a mark appended to the run, which puts nothing on screen by itself.
+        if (EscapeMarkFor(e.VirtualKey) is var mark and not '\0')
         {
             e.Handled = true;
             _pendingDead = null;
             _lastEmitted = null;
-            ResetSequence();
-            ResetLegacy();
+            if (_layout.HasSequences) _seqKeys.Append(mark);
+            else ResetLegacy();
             return;
         }
 
@@ -354,6 +358,25 @@ public sealed class TypingEngine : IDisposable
         }
 
         replace = 0;
+
+        // An escape always starts a run of its own when the keys before it lead
+        // nowhere: "f" then Ctrl+Space then "u" is क followed by श्र, not the matra
+        // that "u" types on its own.
+        int mark = Math.Max(grown.LastIndexOf(EscapeLayer.Mark),
+                            grown.LastIndexOf(EscapeLayer.SymbolMark));
+        if (mark > 0 && typed != '\0')
+        {
+            string tail = grown[mark..];
+            string? escaped = _layout!.MatchSequence(tail);
+            if (escaped is not null || _layout.SequenceCanGrow(tail))
+            {
+                _seqKeys.Clear();
+                _seqKeys.Append(tail);
+                _seqOut = escaped ?? single;   // show the plain key until the run finishes
+                return _seqOut;
+            }
+        }
+
         _seqKeys.Clear();
         if (typed != '\0') _seqKeys.Append(typed);
         _seqOut = (typed == '\0' ? null : _layout!.MatchSequence(typed.ToString())) ?? single;
@@ -364,6 +387,18 @@ public sealed class TypingEngine : IDisposable
     {
         _seqKeys.Clear();
         _seqOut = string.Empty;
+    }
+
+    /// <summary>
+    /// The escape: Ctrl+Space, which is what the product's own settings name, and
+    /// Ctrl+Shift+1, which is how the published key charts write it.
+    /// </summary>
+    private static char EscapeMarkFor(int vk)
+    {
+        if (!IsDown(VK_CONTROL) || IsDown(VK_MENU)) return '\0';
+        if (vk == VK_SPACE) return EscapeLayer.Mark;               // this keyboard's third layer
+        if (vk == '1' && IsDown(VK_SHIFT)) return EscapeLayer.SymbolMark;  // the shared symbols
+        return '\0';
     }
 
     /// <summary>

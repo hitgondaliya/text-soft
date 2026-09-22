@@ -301,6 +301,50 @@
       "to": "ਕੁ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Ød",
+      "to": "ੜ"
+    },
+    {
+      "keys": "Øg",
+      "to": "ਗ਼"
+    },
+    {
+      "keys": "Øj",
+      "to": "ਞ"
+    },
+    {
+      "keys": "Øk",
+      "to": "ਖ਼"
+    },
+    {
+      "keys": "Øm",
+      "to": "ਞ"
+    },
+    {
+      "keys": "Øn",
+      "to": "ਙ"
+    },
+    {
+      "keys": "Øt",
+      "to": "ਥ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ਵ"
+    },
+    {
       "keys": "D=h",
       "to": "ਢ"
     },
@@ -313,9 +357,63 @@
       "to": "ਧ"
     },
     {
-      "keys": "Meaning",
+      "keys": "kØo",
+      "to": "ਕੱ"
+    },
+    {
+      "keys": "kØr",
       "to": "ਕੰ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "d",
+      "to": "ੜ"
+    },
+    {
+      "keys": "g",
+      "to": "ਗ਼"
+    },
+    {
+      "keys": "j",
+      "to": "ਞ"
+    },
+    {
+      "keys": "k",
+      "to": "ਖ਼"
+    },
+    {
+      "keys": "m",
+      "to": "ਞ"
+    },
+    {
+      "keys": "n",
+      "to": "ਙ"
+    },
+    {
+      "keys": "t",
+      "to": "ਥ"
+    },
+    {
+      "keys": "u",
+      "to": "ਵ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

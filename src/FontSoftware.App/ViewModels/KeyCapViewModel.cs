@@ -36,3 +36,16 @@ public sealed class KeyCapViewModel : ObservableObject
         _display = label;
     }
 }
+
+/// <summary>
+/// Which layer of the keyboard the viewer shows. A vendor keyboard has four: the
+/// two printed on the keycaps, the keyboard's own third layer on Ctrl+Space, and
+/// the symbols every keyboard of the script shares on Ctrl+Shift+1.
+/// </summary>
+public enum KeyLayer
+{
+    Normal,
+    Shift,
+    Escape,
+    Symbols
+}

@@ -344,7 +344,89 @@
     {
       "keys": "ku",
       "to": "ਕੁ"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Øa",
+      "to": "ਆ"
+    },
+    {
+      "keys": "Øj",
+      "to": "ਙ"
+    },
+    {
+      "keys": "Øk",
+      "to": "ਞ"
+    },
+    {
+      "keys": "Øq",
+      "to": "ੴ"
+    },
+    {
+      "keys": "Øu",
+      "to": "੍ਯ"
+    },
+    {
+      "keys": "Øz",
+      "to": "ੜ"
+    },
+    {
+      "keys": "kØi",
+      "to": "ਕੱ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "a",
+      "to": "ਆ"
+    },
+    {
+      "keys": "j",
+      "to": "ਙ"
+    },
+    {
+      "keys": "k",
+      "to": "ਞ"
+    },
+    {
+      "keys": "q",
+      "to": "ੴ"
+    },
+    {
+      "keys": "u",
+      "to": "੍ਯ"
+    },
+    {
+      "keys": "z",
+      "to": "ੜ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

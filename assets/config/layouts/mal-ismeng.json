@@ -373,6 +373,14 @@
       "to": "യ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "Øa",
+      "to": "ഋ"
+    },
+    {
       "keys": ".ra",
       "to": "റ"
     },
@@ -515,6 +523,10 @@
     {
       "keys": "kta",
       "to": "ക്ത"
+    },
+    {
+      "keys": "kØr",
+      "to": "കൃ"
     },
     {
       "keys": "lla",
@@ -677,5 +689,19 @@
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "a",
+      "to": "ഋ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

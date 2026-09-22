@@ -318,6 +318,78 @@
       "to": "গু"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤-",
+      "to": "—"
+    },
+    {
+      "keys": "¤.",
+      "to": "।"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "¤K",
+      "to": "ৡ"
+    },
+    {
+      "keys": "¤L",
+      "to": "ঌ"
+    },
+    {
+      "keys": "¤Q",
+      "to": "৺"
+    },
+    {
+      "keys": "¤R",
+      "to": "ৠ"
+    },
+    {
+      "keys": "¤[",
+      "to": "["
+    },
+    {
+      "keys": "¤]",
+      "to": "]"
+    },
+    {
+      "keys": "¤_",
+      "to": "–"
+    },
+    {
+      "keys": "¤k",
+      "to": "ৣ"
+    },
+    {
+      "keys": "¤l",
+      "to": "ৢ"
+    },
+    {
+      "keys": "¤q",
+      "to": "ঽ"
+    },
+    {
+      "keys": "¤r",
+      "to": "ৄ"
+    },
+    {
+      "keys": "¤y",
+      "to": "ক্য"
+    },
+    {
+      "keys": "¤|",
+      "to": "॥"
+    },
+    {
       "keys": ":dJ",
       "to": "ষ্ণ"
     },
@@ -814,10 +886,6 @@
       "to": "ব্দ"
     },
     {
-      "keys": "Dand",
-      "to": "।"
-    },
-    {
       "keys": "[dxb",
       "to": "ল্গু"
     },
@@ -856,27 +924,84 @@
     {
       "keys": "vdVdz",
       "to": "চ্ছ্ব"
+    }
+  ],
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
     },
     {
-      "keys": "Jafulla",
-      "to": "ক্য"
+      "keys": "*",
+      "to": "×"
     },
     {
-      "keys": "Avagraha",
-      "to": "ঽ"
+      "keys": "-",
+      "to": "—"
     },
     {
-      "keys": "Lruvowel",
+      "keys": ".",
+      "to": "।"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    },
+    {
+      "keys": "K",
+      "to": "ৡ"
+    },
+    {
+      "keys": "L",
       "to": "ঌ"
     },
     {
-      "keys": "Roovowel",
+      "keys": "Q",
+      "to": "৺"
+    },
+    {
+      "keys": "R",
       "to": "ৠ"
     },
     {
-      "keys": "Lroovowel",
-      "to": "ৡ"
+      "keys": "[",
+      "to": "["
+    },
+    {
+      "keys": "]",
+      "to": "]"
+    },
+    {
+      "keys": "_",
+      "to": "–"
+    },
+    {
+      "keys": "k",
+      "to": "ৣ"
+    },
+    {
+      "keys": "l",
+      "to": "ৢ"
+    },
+    {
+      "keys": "q",
+      "to": "ঽ"
+    },
+    {
+      "keys": "r",
+      "to": "ৄ"
+    },
+    {
+      "keys": "y",
+      "to": "ক্য"
+    },
+    {
+      "keys": "|",
+      "to": "॥"
     }
   ],
-  "HasSequences": true
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

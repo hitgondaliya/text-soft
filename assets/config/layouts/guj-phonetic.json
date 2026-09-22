@@ -351,11 +351,11 @@
     },
     {
       "keys": "ma",
-      "to": "ઞ"
+      "to": "મ"
     },
     {
       "keys": "na",
-      "to": "ઙ"
+      "to": "ન"
     },
     {
       "keys": "oo",
@@ -380,6 +380,14 @@
     {
       "keys": "ya",
       "to": "ય"
+    },
+    {
+      "keys": "Ø-",
+      "to": "ઽ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ૐ"
     },
     {
       "keys": "DDa",
@@ -498,10 +506,6 @@
       "to": "કૌ"
     },
     {
-      "keys": "keM",
-      "to": "કઁ"
-    },
-    {
       "keys": "kee",
       "to": "કી"
     },
@@ -524,26 +528,6 @@
     {
       "keys": "lla",
       "to": "લ્લ"
-    },
-    {
-      "keys": "mca",
-      "to": "ઞ્ચ"
-    },
-    {
-      "keys": "mja",
-      "to": "ઞ્જ"
-    },
-    {
-      "keys": "nga",
-      "to": "ઙ્ગ"
-    },
-    {
-      "keys": "nka",
-      "to": "ઙ્ક"
-    },
-    {
-      "keys": "nma",
-      "to": "ઙ્મ"
     },
     {
       "keys": "nna",
@@ -574,6 +558,14 @@
       "to": "ત્ત"
     },
     {
+      "keys": "Øma",
+      "to": "ઞ"
+    },
+    {
+      "keys": "Øna",
+      "to": "ઙ"
+    },
+    {
       "keys": "DDha",
       "to": "ડ્ઢ"
     },
@@ -594,16 +586,16 @@
       "to": "જ્ઞ"
     },
     {
+      "keys": "kaØa",
+      "to": "ક્‌"
+    },
+    {
       "keys": "ksha",
       "to": "ક્ષ"
     },
     {
-      "keys": "ngha",
-      "to": "ઙ્ઘ"
-    },
-    {
-      "keys": "nkha",
-      "to": "ઙ્ખ"
+      "keys": "kØeM",
+      "to": "કઁ"
     },
     {
       "keys": "shra",
@@ -612,6 +604,26 @@
     {
       "keys": "stra",
       "to": "સ્ત્ર"
+    },
+    {
+      "keys": "Ømca",
+      "to": "ઞ્ચ"
+    },
+    {
+      "keys": "Ømja",
+      "to": "ઞ્જ"
+    },
+    {
+      "keys": "Ønga",
+      "to": "ઙ્ગ"
+    },
+    {
+      "keys": "Ønka",
+      "to": "ઙ્ક"
+    },
+    {
+      "keys": "Ønma",
+      "to": "ઙ્મ"
     },
     {
       "keys": "DhDha",
@@ -634,12 +646,20 @@
       "to": "શ્ર્વ"
     },
     {
-      "keys": "kEorke",
-      "to": "કૅ"
+      "keys": "Øngha",
+      "to": "ઙ્ઘ"
+    },
+    {
+      "keys": "Ønkha",
+      "to": "ઙ્ખ"
     },
     {
       "keys": "vaorwa",
       "to": "વ"
+    },
+    {
+      "keys": "kEorkØe",
+      "to": "કૅ"
     },
     {
       "keys": "phaorfa",
@@ -650,5 +670,18 @@
       "to": "ટ્ય"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "-",
+      "to": "ઽ"
+    },
+    {
+      "keys": "u",
+      "to": "ૐ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

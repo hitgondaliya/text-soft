@@ -390,6 +390,10 @@
       "to": "യ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
       "keys": "DDa",
       "to": "ഡ്ഡ"
     },
@@ -678,5 +682,14 @@
       "to": "ഞ്ഞ"
     }
   ],
-  "HasSequences": true
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

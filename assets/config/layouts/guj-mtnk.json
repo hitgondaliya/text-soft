@@ -290,10 +290,6 @@
       "to": "આ"
     },
     {
-      "keys": "cx",
-      "to": "ઍ"
-    },
-    {
       "keys": "f\"",
       "to": "ર્ક"
     },
@@ -338,14 +334,6 @@
       "to": "કા"
     },
     {
-      "keys": "fp",
-      "to": "ક્‌"
-    },
-    {
-      "keys": "fx",
-      "to": "કૅ"
-    },
-    {
       "keys": "f}",
       "to": "કૂ"
     },
@@ -356,6 +344,22 @@
     {
       "keys": "pf",
       "to": "કિ"
+    },
+    {
+      "keys": "Ø5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øc",
+      "to": "ઊ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ઽ"
+    },
+    {
+      "keys": "Øv",
+      "to": "ઈ"
     },
     {
       "keys": "#Dd",
@@ -426,8 +430,8 @@
       "to": "ઓ"
     },
     {
-      "keys": "chx",
-      "to": "ઑ"
+      "keys": "cØx",
+      "to": "ઍ"
     },
     {
       "keys": "dDd",
@@ -450,8 +454,12 @@
       "to": "કો"
     },
     {
-      "keys": "fhx",
-      "to": "કૉ"
+      "keys": "fØp",
+      "to": "ક્‌"
+    },
+    {
+      "keys": "fØx",
+      "to": "કૅ"
     },
     {
       "keys": "gDd",
@@ -536,7 +544,36 @@
     {
       "keys": "zDz",
       "to": "દ્દ"
+    },
+    {
+      "keys": "chØx",
+      "to": "ઑ"
+    },
+    {
+      "keys": "fhØx",
+      "to": "કૉ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "c",
+      "to": "ઊ"
+    },
+    {
+      "keys": "u",
+      "to": "ઽ"
+    },
+    {
+      "keys": "v",
+      "to": "ઈ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

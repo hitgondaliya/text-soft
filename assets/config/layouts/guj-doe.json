@@ -270,10 +270,6 @@
   "deadKeyCombinations": [],
   "sequences": [
     {
-      "keys": "'x",
-      "to": "ટ્ય"
-    },
-    {
       "keys": "D_",
       "to": "અઃ"
     },
@@ -282,16 +278,8 @@
       "to": "આ"
     },
     {
-      "keys": "Dp",
-      "to": "ઍ"
-    },
-    {
       "keys": "Dx",
       "to": "અં"
-    },
-    {
-      "keys": "Ep",
-      "to": "ઑ"
     },
     {
       "keys": "d\"",
@@ -334,10 +322,6 @@
       "to": "કુ"
     },
     {
-      "keys": "ki",
-      "to": "ક્‌"
-    },
-    {
       "keys": "kr",
       "to": "કી"
     },
@@ -366,12 +350,24 @@
       "to": "સ્ર"
     },
     {
+      "keys": "Ø5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øz",
+      "to": "ૐ"
+    },
+    {
       "keys": "\"d\"",
       "to": "ઠ્ઠ"
     },
     {
       "keys": "'d'",
       "to": "ટ્ટ"
+    },
+    {
+      "keys": "'Øx",
+      "to": "ટ્ય"
     },
     {
       "keys": "*d;",
@@ -384,6 +380,14 @@
     {
       "keys": "*dv",
       "to": "શ્ર્ન"
+    },
+    {
+      "keys": "DØp",
+      "to": "ઍ"
+    },
+    {
+      "keys": "EØp",
+      "to": "ઑ"
     },
     {
       "keys": "UdI",
@@ -440,6 +444,10 @@
     {
       "keys": "kew",
       "to": "કૌ"
+    },
+    {
+      "keys": "kØi",
+      "to": "ક્‌"
     },
     {
       "keys": "ldl",
@@ -526,9 +534,22 @@
       "to": "ઞ્જ"
     },
     {
-      "keys": "kpork`",
+      "keys": "kØpork`",
       "to": "કૅ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "z",
+      "to": "ૐ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

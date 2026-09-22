@@ -292,6 +292,14 @@
       "to": "കു"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "Øp",
+      "to": "ം"
+    },
+    {
       "keys": ",\\,",
       "to": "ള്ള"
     },
@@ -508,5 +516,19 @@
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "p",
+      "to": "ം"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

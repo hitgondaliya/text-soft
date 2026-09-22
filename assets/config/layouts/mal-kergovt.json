@@ -324,6 +324,10 @@
       "to": "കെ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
       "keys": "'d'",
       "to": "ട്ട"
     },
@@ -536,5 +540,14 @@
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

@@ -362,7 +362,36 @@
     {
       "keys": "w{",
       "to": "ਕੈ"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
     }
   ],
-  "HasSequences": true
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

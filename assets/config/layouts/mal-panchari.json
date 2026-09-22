@@ -302,6 +302,30 @@
       "to": "ഐ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "Øa",
+      "to": "ൻ"
+    },
+    {
+      "keys": "Øi",
+      "to": "ൽ"
+    },
+    {
+      "keys": "Øo",
+      "to": "ൾ"
+    },
+    {
+      "keys": "Øp",
+      "to": "ൺ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ർ"
+    },
+    {
       "keys": "'d'",
       "to": "ട്ട"
     },
@@ -526,5 +550,35 @@
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "a",
+      "to": "ൻ"
+    },
+    {
+      "keys": "i",
+      "to": "ൽ"
+    },
+    {
+      "keys": "o",
+      "to": "ൾ"
+    },
+    {
+      "keys": "p",
+      "to": "ൺ"
+    },
+    {
+      "keys": "u",
+      "to": "ർ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

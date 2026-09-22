@@ -15,7 +15,7 @@ using FontSoftware.Core.Fonts;
 // font never had that code. That check needs the installed font file, so the fonts
 // directory is scanned once and indexed by family name.
 //
-//   dotnet run --project tools/FullTest [-- --fonts C:\Windows\Fonts] [--verbose]
+//   dotnet run --project tools/FullTest [-- --fonts <dir>] [--verbose] [--runs]
 
 // Fonts installed for the current user only live in a second folder — a font
 // registered in the config would otherwise be reported as "not installed".
@@ -25,6 +25,10 @@ string[] fontDirs =
     Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Microsoft", "Windows", "Fonts"),
 };
 bool verbose = false;
+// Runs (and the Ctrl+Space / Ctrl+Shift+1 layers) type characters the 1990s legacy
+// fonts never had - the rupee sign, the Vedic accents. Off by default so the
+// figure stays comparable; --runs measures that wider surface.
+bool withRuns = false;
 for (int i = 0; i < args.Length; i++)
 {
     // --fonts may be repeated: fonts a customer owns often sit in their own folder
@@ -32,6 +36,7 @@ for (int i = 0; i < args.Length; i++)
     if (args[i] == "--fonts" && i + 1 < args.Length) fontDirs = fontDirs.Append(args[++i]).ToArray();
     else if (args[i] == "--only-fonts" && i + 1 < args.Length) fontDirs = new[] { args[++i] };
     else if (args[i] == "--verbose") verbose = true;
+    else if (args[i] == "--runs") withRuns = true;
 }
 
 var bundle = new ConfigLoader(Path.Combine(AppContext.BaseDirectory, "config")).Load();
@@ -105,7 +110,9 @@ foreach (var lang in bundle.Languages)
                 continue;
             }
 
-            // press every key, base and shift
+            // press every key, base and shift - and then every run the keyboard
+            // defines, including the two layers reached with Ctrl+Space and
+            // Ctrl+Shift+1, because a typist can type all of those too
             var produced = new List<string>();
             foreach (var k in kl.Keys)
             {
@@ -113,6 +120,9 @@ foreach (var lang in bundle.Languages)
                 if (!string.IsNullOrEmpty(k.Shift)) produced.Add(k.Shift!);
                 if (!string.IsNullOrEmpty(k.AltGr)) produced.Add(k.AltGr!);
             }
+            if (withRuns)
+                foreach (var s in kl.Sequences)
+                    if (!string.IsNullOrEmpty(s.To)) produced.Add(s.To);
             if (produced.Count == 0)
             {
                 Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + kb.Name.PadRight(18) + "layout has no keys");

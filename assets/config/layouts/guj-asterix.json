@@ -271,10 +271,6 @@
   "deadKeyCombinations": [],
   "sequences": [
     {
-      "keys": "'a",
-      "to": "ટ્ય"
-    },
-    {
       "keys": "D!",
       "to": "અઃ"
     },
@@ -347,12 +343,28 @@
       "to": "સ્ર"
     },
     {
+      "keys": "Ø5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øk",
+      "to": "ૐ"
+    },
+    {
+      "keys": "Øs",
+      "to": "ઽ"
+    },
+    {
       "keys": "\"d\"",
       "to": "ઠ્ઠ"
     },
     {
       "keys": "'d'",
       "to": "ટ્ટ"
+    },
+    {
+      "keys": "'Øa",
+      "to": "ટ્ય"
     },
     {
       "keys": "*dI",
@@ -491,10 +503,6 @@
       "to": "કૅ"
     },
     {
-      "keys": "ldlorl",
-      "to": "ત્ત"
-    },
-    {
       "keys": "k`borkB",
       "to": "કઁ"
     },
@@ -505,7 +513,28 @@
     {
       "keys": "keworkq",
       "to": "કૌ"
+    },
+    {
+      "keys": "ldlorØl",
+      "to": "ત્ત"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "k",
+      "to": "ૐ"
+    },
+    {
+      "keys": "s",
+      "to": "ઽ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

@@ -343,7 +343,61 @@
     {
       "keys": "yt",
       "to": "ਆ"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Ø1",
+      "to": "ਵ"
+    },
+    {
+      "keys": "Øq",
+      "to": "ੴ"
+    },
+    {
+      "keys": "Øz",
+      "to": "ੜ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "1",
+      "to": "ਵ"
+    },
+    {
+      "keys": "q",
+      "to": "ੴ"
+    },
+    {
+      "keys": "z",
+      "to": "ੜ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

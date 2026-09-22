@@ -68,6 +68,27 @@ public sealed class KeySequence
 }
 
 /// <summary>
+/// The two combinations that reach past the printed keyboard, written inside a
+/// run of keys as a mark of their own because that is how the vendor charts
+/// write them: "Øj" is the escape and then j.
+/// </summary>
+public static class EscapeLayer
+{
+    /// <summary>
+    /// Ctrl+Space - this keyboard's own third layer, and different on every
+    /// keyboard: the nukta consonants, the conjuncts and the alternate letters
+    /// that the two printed layers have no room for.
+    /// </summary>
+    public const char Mark = 'Ø';
+
+    /// <summary>
+    /// Ctrl+Shift+1 - the symbols every keyboard of a script shares: ॐ, the
+    /// danda, the rupee sign, the accents, the dashes.
+    /// </summary>
+    public const char SymbolMark = '¤';
+}
+
+/// <summary>
 /// A full keyboard layout definition (FR-2). Rendering and the typing engine
 /// (FR-3) are driven entirely by this client-supplied data — no hardcoding.
 /// </summary>
@@ -98,10 +119,25 @@ public sealed class KeyboardLayout
     [JsonPropertyName("sequences")]
     public List<KeySequence> Sequences { get; set; } = new();
 
+    /// <summary>
+    /// What Ctrl+Space puts on a single key, for the keyboard viewer.
+    /// <see cref="KeySequence.Keys"/> is the key pressed after it. The engine does
+    /// not read this - every one of these is also in <see cref="Sequences"/>,
+    /// written the way the charts write it ("Øj").
+    /// </summary>
+    [JsonPropertyName("escape")]
+    public List<KeySequence> Escape { get; set; } = new();
+
+    /// <summary>What Ctrl+Shift+1 puts on a single key. Same arrangement as <see cref="Escape"/>.</summary>
+    [JsonPropertyName("symbols")]
+    public List<KeySequence> Symbols { get; set; } = new();
+
     private Dictionary<int, KeyMapping>? _index;
     private Dictionary<(string, string), string>? _deadIndex;
     private Dictionary<string, string>? _seqIndex;
     private HashSet<string>? _seqPrefixes;
+    private Dictionary<string, string>? _escIndex;
+    private Dictionary<string, string>? _symIndex;
 
     /// <summary>Fast lookup of a key mapping by virtual-key code.</summary>
     public KeyMapping? Find(int virtualKey)
@@ -143,6 +179,18 @@ public sealed class KeyboardLayout
 
     public bool HasSequences => Sequences.Count > 0;
 
+    /// <summary>What Ctrl+Space (or, with <paramref name="symbols"/>, Ctrl+Shift+1) puts on one key.</summary>
+    public string? EscapeFor(string key, bool symbols = false)
+    {
+        BuildEscapeIndex();
+        var index = symbols ? _symIndex! : _escIndex!;
+        return index.TryGetValue(key, out var text) ? text : null;
+    }
+
+    public bool HasEscape => Escape.Count > 0;
+
+    public bool HasSymbols => Symbols.Count > 0;
+
     private void BuildSequenceIndex()
     {
         if (_seqIndex is not null) return;
@@ -158,6 +206,24 @@ public sealed class KeyboardLayout
         _seqPrefixes = prefixes;
     }
 
+    private void BuildEscapeIndex()
+    {
+        if (_escIndex is not null) return;
+        _escIndex = Index(Escape);
+        _symIndex = Index(Symbols);
+
+        static Dictionary<string, string> Index(List<KeySequence> layer)
+        {
+            var index = new Dictionary<string, string>(StringComparer.Ordinal);
+            foreach (var e in layer)
+            {
+                if (string.IsNullOrEmpty(e.Keys) || string.IsNullOrEmpty(e.To)) continue;
+                index[e.Keys] = e.To;
+            }
+            return index;
+        }
+    }
+
     /// <summary>Invalidate the cached lookups after mutating the collections.</summary>
     public void Reindex()
     {
@@ -165,5 +231,7 @@ public sealed class KeyboardLayout
         _deadIndex = null;
         _seqIndex = null;
         _seqPrefixes = null;
+        _escIndex = null;
+        _symIndex = null;
     }
 }

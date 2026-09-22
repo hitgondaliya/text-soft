@@ -348,6 +348,18 @@
       "to": "એ"
     },
     {
+      "keys": "Ø5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øi",
+      "to": "ત્ર"
+    },
+    {
+      "keys": "Øu",
+      "to": "શ્ર"
+    },
+    {
       "keys": "#TD",
       "to": "ઙ્ઘ"
     },
@@ -428,10 +440,6 @@
       "to": "ક્ક"
     },
     {
-      "keys": "fak",
-      "to": "કઁ"
-    },
-    {
       "keys": "fti",
       "to": "કૌ"
     },
@@ -446,10 +454,6 @@
     {
       "keys": "lTl",
       "to": "ન્ન"
-    },
-    {
-      "keys": "mTi",
-      "to": "સ્ત્ર"
     },
     {
       "keys": "nTJ",
@@ -480,18 +484,6 @@
       "to": "જ્જ"
     },
     {
-      "keys": "uTJ",
-      "to": "શ્ર્વ"
-    },
-    {
-      "keys": "uTa",
-      "to": "શ્ર્ચ"
-    },
-    {
-      "keys": "uTl",
-      "to": "શ્ર્ન"
-    },
-    {
       "keys": "vT;",
       "to": "પ્ત"
     },
@@ -520,17 +512,54 @@
       "to": "ડ્ડ"
     },
     {
-      "keys": "ftak",
+      "keys": "fØak",
+      "to": "કઁ"
+    },
+    {
+      "keys": "mTØi",
+      "to": "સ્ત્ર"
+    },
+    {
+      "keys": "ØuTJ",
+      "to": "શ્ર્વ"
+    },
+    {
+      "keys": "ØuTa",
+      "to": "શ્ર્ચ"
+    },
+    {
+      "keys": "ØuTl",
+      "to": "શ્ર્ન"
+    },
+    {
+      "keys": "ftØak",
       "to": "કાઁ"
     },
     {
-      "keys": ";T;oro",
+      "keys": ";T;orØo",
       "to": "ત્ત"
     },
     {
-      "keys": "xporxTg",
+      "keys": "xØporxTg",
       "to": "ટ્ય"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "5",
+      "to": "ૠ"
+    },
+    {
+      "keys": "i",
+      "to": "ત્ર"
+    },
+    {
+      "keys": "u",
+      "to": "શ્ર"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

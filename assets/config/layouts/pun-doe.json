@@ -322,9 +322,91 @@
       "to": "ਜ਼"
     },
     {
-      "keys": "Meaning",
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Øg",
+      "to": "੍ਯ"
+    },
+    {
+      "keys": "Øh",
+      "to": "ੳ"
+    },
+    {
+      "keys": "Øl",
+      "to": "ੜ"
+    },
+    {
+      "keys": "Øq",
+      "to": "ੴ"
+    },
+    {
+      "keys": "Øs",
+      "to": "ਵ"
+    },
+    {
+      "keys": "DØz",
+      "to": "ਅਂ"
+    },
+    {
+      "keys": "kØf",
       "to": "ਕ੍ਹ"
+    },
+    {
+      "keys": "kØo",
+      "to": "ਕ"
+    },
+    {
+      "keys": "kØz",
+      "to": "ਕਂ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "g",
+      "to": "੍ਯ"
+    },
+    {
+      "keys": "h",
+      "to": "ੳ"
+    },
+    {
+      "keys": "l",
+      "to": "ੜ"
+    },
+    {
+      "keys": "q",
+      "to": "ੴ"
+    },
+    {
+      "keys": "s",
+      "to": "ਵ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

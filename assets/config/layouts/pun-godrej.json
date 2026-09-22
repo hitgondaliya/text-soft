@@ -334,9 +334,63 @@
       "to": "ਲ਼"
     },
     {
-      "keys": "Meaning",
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "Øb",
+      "to": "ਙ"
+    },
+    {
+      "keys": "Ød",
+      "to": "।"
+    },
+    {
+      "keys": "dØl",
       "to": "ਕ੍ਹ"
+    },
+    {
+      "keys": "dØz",
+      "to": "ਕੌ"
+    },
+    {
+      "keys": "vØz",
+      "to": "ਔ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "b",
+      "to": "ਙ"
+    },
+    {
+      "keys": "d",
+      "to": "।"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }

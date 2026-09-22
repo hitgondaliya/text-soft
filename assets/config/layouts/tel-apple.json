@@ -339,6 +339,70 @@
       "to": "అం"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤-",
+      "to": "—"
+    },
+    {
+      "keys": "¤.",
+      "to": "।"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
+      "keys": "¤K",
+      "to": "ౡ"
+    },
+    {
+      "keys": "¤L",
+      "to": "ఌ"
+    },
+    {
+      "keys": "¤R",
+      "to": "ౠ"
+    },
+    {
+      "keys": "¤[",
+      "to": "["
+    },
+    {
+      "keys": "¤]",
+      "to": "]"
+    },
+    {
+      "keys": "¤_",
+      "to": "–"
+    },
+    {
+      "keys": "¤k",
+      "to": "ౣ"
+    },
+    {
+      "keys": "¤l",
+      "to": "ౢ"
+    },
+    {
+      "keys": "¤q",
+      "to": "ఽ"
+    },
+    {
+      "keys": "¤s",
+      "to": "శ్రీ"
+    },
+    {
+      "keys": "¤|",
+      "to": "॥"
+    },
+    {
       "keys": "\"h\"",
       "to": "ష్ష"
     },
@@ -495,41 +559,82 @@
       "to": "ష్ట్ర"
     },
     {
-      "keys": "Shree",
-      "to": "శ్రీ"
-    },
-    {
       "keys": "\"hzhkr",
       "to": "ష్ట్రి"
     },
     {
       "keys": "\"hzhkw",
       "to": "ష్ట్రీ"
+    }
+  ],
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
     },
     {
-      "keys": "Avagraha",
-      "to": "ఽ"
+      "keys": "*",
+      "to": "×"
     },
     {
-      "keys": "Roovowel",
-      "to": "ౠ"
+      "keys": "-",
+      "to": "—"
     },
     {
-      "keys": "lruvowel",
-      "to": "ఌ"
+      "keys": ".",
+      "to": "।"
     },
     {
-      "keys": "lroovowel",
+      "keys": "/",
+      "to": "÷"
+    },
+    {
+      "keys": "K",
       "to": "ౡ"
     },
     {
-      "keys": "Doubledand",
-      "to": "॥"
+      "keys": "L",
+      "to": "ఌ"
     },
     {
-      "keys": "Singledand",
-      "to": "।"
+      "keys": "R",
+      "to": "ౠ"
+    },
+    {
+      "keys": "[",
+      "to": "["
+    },
+    {
+      "keys": "]",
+      "to": "]"
+    },
+    {
+      "keys": "_",
+      "to": "–"
+    },
+    {
+      "keys": "k",
+      "to": "ౣ"
+    },
+    {
+      "keys": "l",
+      "to": "ౢ"
+    },
+    {
+      "keys": "q",
+      "to": "ఽ"
+    },
+    {
+      "keys": "s",
+      "to": "శ్రీ"
+    },
+    {
+      "keys": "|",
+      "to": "॥"
     }
   ],
-  "HasSequences": true
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

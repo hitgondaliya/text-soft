@@ -186,7 +186,7 @@
     },
     {
       "vk": 86,
-      "base": "ૠ",
+      "base": "ન",
       "deadKey": false
     },
     {
@@ -357,6 +357,14 @@
       "to": "ક્"
     },
     {
+      "keys": "Øv",
+      "to": "ૠ"
+    },
+    {
+      "keys": "Øx",
+      "to": "ઽ"
+    },
+    {
       "keys": "\"d\"",
       "to": "ઠ્ઠ"
     },
@@ -517,5 +525,18 @@
       "to": "ટ્ય"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "v",
+      "to": "ૠ"
+    },
+    {
+      "keys": "x",
+      "to": "ઽ"
+    }
+  ],
+  "symbols": [],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": false
 }

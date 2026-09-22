@@ -266,6 +266,10 @@
       "to": "ഓ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
       "keys": ".].",
       "to": "ള്ള"
     },
@@ -450,12 +454,24 @@
       "to": "ഹ്ല"
     },
     {
+      "keys": "[Øf",
+      "to": "ഔ"
+    },
+    {
       "keys": "`]C",
       "to": "ജ്ഞ"
     },
     {
       "keys": "`]`",
       "to": "ജ്ജ"
+    },
+    {
+      "keys": "oØf",
+      "to": "ഈ"
+    },
+    {
+      "keys": "pØf",
+      "to": "ഊ"
     },
     {
       "keys": "~]W",
@@ -466,9 +482,30 @@
       "to": "ങ്ങ"
     },
     {
+      "keys": "ØgW",
+      "to": "കേ"
+    },
+    {
+      "keys": "?WØf",
+      "to": "കൌ"
+    },
+    {
+      "keys": "ØgWE",
+      "to": "കോ"
+    },
+    {
       "keys": "S]X]X",
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": false,
+  "HasSymbols": true
 }

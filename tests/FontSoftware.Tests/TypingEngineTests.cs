@@ -34,10 +34,12 @@ internal sealed class RecordingInjector : InputInjector
 public class TypingEngineTests : IDisposable
 {
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,
-                      VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55, VkF = 0x46, VkO = 0x4F;
+                      Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
+                      VkF = 0x46, VkO = 0x4F, VkI = 0x49;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
+    private readonly AssetBundle _config;
     private readonly TypingEngine _engine;
     private readonly HashSet<int> _down = new();
 
@@ -45,13 +47,31 @@ public class TypingEngineTests : IDisposable
     {
         TypingEngine.KeyDownProbe = vk => _down.Contains(vk);
 
-        var bundle = new ConfigLoader(Path.Combine(AppContext.BaseDirectory, "config")).Load();
-        var gujarati = bundle.Languages.First(l => l.Id == "gu");
-        var layout = bundle.GetLayout(gujarati.Layouts.First(l => l.Id == "guj-itr"));
+        _config = new ConfigLoader(Path.Combine(AppContext.BaseDirectory, "config")).Load();
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        var layout = _config.GetLayout(gujarati.Layouts.First(l => l.Id == "guj-itr"));
 
         _engine = new TypingEngine(_hook, _injector);
         _engine.SetProfile(layout, gujarati.Name, "Unicode");
         _engine.SetEnabled(true);
+    }
+
+    /// <summary>Switch to a keyboard that has the vendor's third layer.</summary>
+    private void UseHindiItr()
+    {
+        var hindi = _config.Languages.First(l => l.Id == "hi");
+        _engine.SetProfile(_config.GetLayout(hindi.Layouts.First(l => l.Id == "dev-itr")),
+                           hindi.Name, "Unicode");
+    }
+
+    /// <summary>Press the escape combination the vendor keyboards use.</summary>
+    private void Escape(int vk = VkSpace, bool shift = false)
+    {
+        _down.Add(VkControl);
+        if (shift) _down.Add(VkShift);
+        Assert.True(Press(vk), "the escape belongs to the engine, not to the application");
+        _down.Remove(VkControl);
+        if (shift) _down.Remove(VkShift);
     }
 
     public void Dispose()
@@ -149,12 +169,71 @@ public class TypingEngineTests : IDisposable
     public void CtrlSpaceEndsTheRunAndTypesNothing()
     {
         Press(VkY);                       // અ
-        _down.Add(VkControl);
-        Assert.True(Press(VkSpace), "Ctrl+Space is the vendor escape; the engine swallows it");
-        _down.Remove(VkControl);
+        Escape();                         // the Gujarati keyboards have no third layer
         Assert.Equal("અ", _injector.Text);
 
         Press(VkT);                       // no longer part of the run, so it is the bare matra
         Assert.Equal("અા", _injector.Text);
+    }
+
+    // ---- the two layers past the printed keyboard ----
+
+    [Fact]
+    public void CtrlSpaceReachesTheKeyboardsOwnThirdLayer()
+    {
+        UseHindiItr();
+        Press(VkU);                       // u on its own is the e-matra
+        Assert.Equal("े", _injector.Text);
+
+        Escape();
+        Assert.True(Press(VkU));          // and on this keyboard's third layer it is shra
+        Assert.Equal("ेश्र", _injector.Text);
+    }
+
+    [Fact]
+    public void CtrlShiftOneReachesTheSharedSymbols()
+    {
+        UseHindiItr();
+        Escape(Vk1, shift: true);         // the layer the charts print as "Ctrl+shift+1, u"
+        Assert.True(Press(VkU));
+        Assert.Equal("ॐ", _injector.Text);
+    }
+
+    [Fact]
+    public void TheThirdLayerCarriesTheConjuncts()
+    {
+        UseHindiItr();
+        Escape();
+        Press(VkI);                       // i is the ai-matra; on the third layer it is त्र
+        Assert.Equal("त्र", _injector.Text);
+    }
+
+    [Fact]
+    public void AKeyTheThirdLayerDoesNotDefineTypesNormally()
+    {
+        UseHindiItr();
+        Escape();
+        Assert.True(Press(VkY));          // nothing on the layer, so y is still अ
+        Assert.Equal("अ", _injector.Text);
+    }
+
+    [Fact]
+    public void TheEscapeLastsForOneKeyOnly()
+    {
+        UseHindiItr();
+        Escape();
+        Press(VkU);                       // श्र
+        Press(VkU);                       // back to the keyboard
+        Assert.Equal("श्रे", _injector.Text);
+    }
+
+    [Fact]
+    public void TheEscapeStartsItsOwnRunAfterALetter()
+    {
+        UseHindiItr();
+        Press(VkF);                       // क
+        Escape();
+        Press(VkU);                       // "fØu" is not a run of its own, so this is क then श्र
+        Assert.Equal("कश्र", _injector.Text);
     }
 }

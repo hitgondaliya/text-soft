@@ -293,6 +293,38 @@
       "to": "കേ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "Øb",
+      "to": "ൾ"
+    },
+    {
+      "keys": "Øf",
+      "to": "ൺ"
+    },
+    {
+      "keys": "Øg",
+      "to": "ര"
+    },
+    {
+      "keys": "Øh",
+      "to": "ർ"
+    },
+    {
+      "keys": "Øi",
+      "to": "ൻ"
+    },
+    {
+      "keys": "Øl",
+      "to": "ൽ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ക്ഷ"
+    },
+    {
       "keys": "\"y\"",
       "to": "ഞ്ഞ"
     },
@@ -413,6 +445,10 @@
       "to": "ക്ത"
     },
     {
+      "keys": "fØd",
+      "to": "ക്‌"
+    },
+    {
       "keys": "gyg",
       "to": "ല്ല"
     },
@@ -501,13 +537,63 @@
       "to": "ഡ്ഡ"
     },
     {
-      "keys": "link",
-      "to": "ക്‌"
+      "keys": "Øof",
+      "to": "കെ"
+    },
+    {
+      "keys": "Øo{",
+      "to": "ഐ"
+    },
+    {
+      "keys": "Øofp",
+      "to": "കൌ"
+    },
+    {
+      "keys": "Øoft",
+      "to": "കൊ"
     },
     {
       "keys": "myhyh",
       "to": "സ്റ്റ"
     }
   ],
-  "HasSequences": true
+  "escape": [
+    {
+      "keys": "b",
+      "to": "ൾ"
+    },
+    {
+      "keys": "f",
+      "to": "ൺ"
+    },
+    {
+      "keys": "g",
+      "to": "ര"
+    },
+    {
+      "keys": "h",
+      "to": "ർ"
+    },
+    {
+      "keys": "i",
+      "to": "ൻ"
+    },
+    {
+      "keys": "l",
+      "to": "ൽ"
+    },
+    {
+      "keys": "u",
+      "to": "ക്ഷ"
+    }
+  ],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    }
+  ],
+  "HasSequences": true,
+  "HasEscape": true,
+  "HasSymbols": true
 }
