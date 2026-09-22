@@ -110,6 +110,7 @@
     {
       "vk": 73,
       "base": "ಎ",
+      "shift": "ಐ",
       "deadKey": false
     },
     {
@@ -127,6 +128,7 @@
     {
       "vk": 76,
       "base": "ಲ",
+      "shift": "ಎ",
       "deadKey": false
     },
     {
@@ -155,6 +157,7 @@
     {
       "vk": 81,
       "base": "ಶ",
+      "shift": "ರ",
       "deadKey": false
     },
     {
@@ -211,6 +214,12 @@
       "deadKey": false
     },
     {
+      "vk": 186,
+      "base": "ಈ",
+      "shift": "ಒ",
+      "deadKey": false
+    },
+    {
       "vk": 187,
       "base": "ಧ್ಧ",
       "shift": "+",
@@ -247,7 +256,13 @@
     },
     {
       "vk": 221,
+      "base": "ಊ",
       "shift": "ಋ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "ಇ",
       "deadKey": false
     }
   ],

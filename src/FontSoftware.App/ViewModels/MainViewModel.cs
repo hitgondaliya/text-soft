@@ -681,7 +681,12 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             }
             else
             {
-                cap.Display = cap.Label; // fall back to English (FR-2 rule)
+                // A letter key this keyboard does not use types nothing at all, so
+                // printing the English letter on it is a lie - that is what made a
+                // Gujarati keyboard look like it had a Z on it. Digits, punctuation
+                // and the symbol keys do pass through, so they keep their label.
+                bool letter = cap.VirtualKey is >= 'A' and <= 'Z';
+                cap.Display = letter ? string.Empty : cap.Label;
                 cap.IsMapped = false;
             }
         }

@@ -35,7 +35,7 @@ public class TypingEngineTests : IDisposable
 {
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,
                       Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
-                      VkF = 0x46, VkO = 0x4F, VkI = 0x49;
+                      VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
@@ -174,6 +174,19 @@ public class TypingEngineTests : IDisposable
 
         Press(VkT);                       // no longer part of the run, so it is the bare matra
         Assert.Equal("અા", _injector.Text);
+    }
+
+    [Fact]
+    public void ALetterKeyTheKeyboardDoesNotUseTypesNothing()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Id == "gu-inscript")),
+                           gujarati.Name, "Unicode");
+
+        // Shree's own Gujarati InScript leaves z empty; typing an English z into
+        // Gujarati text is never what the typist meant.
+        Assert.True(Press(VkZ), "the engine owns the key, it just types nothing");
+        Assert.Equal("", _injector.Text);
     }
 
     // ---- the two layers past the printed keyboard ----

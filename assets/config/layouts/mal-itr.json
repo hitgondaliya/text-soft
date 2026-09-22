@@ -12,7 +12,7 @@
     {
       "vk": 49,
       "base": "1",
-      "shift": "ഹ്ല",
+      "shift": "!",
       "deadKey": false
     },
     {
@@ -34,7 +34,7 @@
     {
       "vk": 53,
       "base": "5",
-      "shift": "ക്ഷ",
+      "shift": "%",
       "deadKey": false
     },
     {
@@ -87,6 +87,7 @@
     },
     {
       "vk": 69,
+      "base": "ഈ",
       "shift": "ങ",
       "deadKey": false
     },
@@ -127,6 +128,7 @@
     {
       "vk": 76,
       "base": "ന",
+      "shift": "ൻ",
       "deadKey": false
     },
     {
@@ -142,13 +144,25 @@
       "deadKey": false
     },
     {
+      "vk": 79,
+      "base": "എ",
+      "shift": "ഏ",
+      "deadKey": false
+    },
+    {
       "vk": 80,
       "base": "ൽ",
       "shift": "ൾ",
       "deadKey": false
     },
     {
+      "vk": 81,
+      "base": "ഊ",
+      "deadKey": false
+    },
+    {
       "vk": 82,
+      "base": "ഇ",
       "shift": "ഇ",
       "deadKey": false
     },
@@ -156,6 +170,11 @@
       "vk": 83,
       "base": "ജ",
       "shift": "ഝ",
+      "deadKey": false
+    },
+    {
+      "vk": 84,
+      "base": "അ",
       "deadKey": false
     },
     {
@@ -172,6 +191,7 @@
     },
     {
       "vk": 87,
+      "base": "ഉ",
       "shift": "ഉ",
       "deadKey": false
     },

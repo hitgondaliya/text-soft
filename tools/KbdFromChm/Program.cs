@@ -15,13 +15,15 @@ using FontSoftware.Core.Models;
 //   dotnet run --project tools/KbdFromChm -- --chm <dir> [--apply]
 
 string chmDir = "";
+string schemeDir = "";
 bool apply = false;
 for (int i = 0; i < args.Length; i++)
 {
     if (args[i] == "--chm") chmDir = args[++i];
+    else if (args[i] == "--scheme") schemeDir = args[++i];
     else if (args[i] == "--apply") apply = true;
 }
-if (chmDir.Length == 0) { Console.Error.WriteLine("usage: kbdfromchm --chm <dir> [--apply]"); return 1; }
+if (chmDir.Length == 0) { Console.Error.WriteLine("usage: kbdfromchm --chm <dir> [--scheme <dir>] [--apply]"); return 1; }
 
 string repo = FindRoot();
 string layoutsDir = Path.Combine(repo, "assets", "config", "layouts");
@@ -72,7 +74,90 @@ static bool Formatting(string s) =>
 
 static string Norm(string s) => new(s.Where(char.IsLetterOrDigit).Select(char.ToLowerInvariant).ToArray());
 
+// ---- the keys the charts do not print ----
+//
+// A published chart documents the keystrokes a typist is taught, not every key
+// of the keyboard: the Gujarati InScript chart lists 50 of them. The vendor's own
+// runtime file for that keyboard (INSCRIPT.GUJ) does have an entry for every key,
+// but it holds an internal code, not Unicode and not the font's byte - every one
+// of our six Gujarati font tables scores 0 against the vendor's chart on those
+// codes, so they cannot simply be looked up.
+//
+// They can be learned instead. Each script has ~20 keyboards, all of them
+// arrangements of the same internal codes, so joining a chart (key -> character)
+// with its own runtime file (key -> code) on every key a chart does print gives
+// code -> character; a code a chart never prints on one keyboard is usually
+// printed on another. Where the keyboards disagree the reading with the most
+// keyboards behind it wins.
+static Dictionary<int, string> LearnCodes(string schemeDir, string chmScriptDir, string extension)
+{
+    var votes = new Dictionary<int, Dictionary<string, int>>();
+    if (!Directory.Exists(schemeDir) || !Directory.Exists(chmScriptDir)) return new();
+
+    foreach (string scheme in Directory.EnumerateFiles(schemeDir, "*" + extension))
+    {
+        string chart = Path.Combine(chmScriptDir, Path.GetFileNameWithoutExtension(scheme).ToLowerInvariant() + ".json");
+        if (!File.Exists(chart)) continue;
+
+        byte[] codes = File.ReadAllBytes(scheme);
+        if (codes.Length < 128) continue;
+        using var doc = JsonDocument.Parse(File.ReadAllText(chart));
+
+        var seen = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var p in doc.RootElement.GetProperty("Pairs").EnumerateArray())
+        {
+            string key = p.GetProperty("Key").GetString() ?? "";
+            string uni = p.GetProperty("Uni").GetString() ?? "";
+            if (key.Length != 1 || uni.Length == 0 || !seen.Add(key)) continue;
+            if (key[0] is < '!' or > '~') continue;
+
+            int code = codes[key[0]];
+            if (code is 0 or 0x20) continue;   // the vendor leaves this key empty
+            var reading = votes.TryGetValue(code, out var r) ? r : votes[code] = new(StringComparer.Ordinal);
+            reading[uni] = reading.GetValueOrDefault(uni) + 1;
+        }
+    }
+
+    // Only readings several keyboards agree on. A code seen once, or one the
+    // keyboards are split over, is a guess - and a guess on a key is worse than
+    // a key that types nothing.
+    var settled = new Dictionary<int, string>();
+    foreach (var (code, reading) in votes)
+    {
+        var ranked = reading.OrderByDescending(r => r.Value).ToList();
+        int total = ranked.Sum(r => r.Value);
+        if (ranked[0].Value >= 2 && ranked[0].Value * 2 > total) settled[code] = ranked[0].Key;
+    }
+    return settled;
+}
+
+// the vendor names its runtime keyboard files by script
+var schemeExt = new Dictionary<string, string>
+{
+    ["dev"] = ".DEV", ["guj"] = ".GUJ", ["ban"] = ".BAN", ["pun"] = ".PUN", ["tel"] = ".TEL",
+    ["kan"] = ".KAN", ["mal"] = ".MAL", ["ori"] = ".ORI", ["tam"] = ".TAM",
+};
+var learnedCache = new Dictionary<string, Dictionary<int, string>>();
+
+Dictionary<int, string> Learned(string script)
+{
+    if (learnedCache.TryGetValue(script, out var known)) return known;
+    known = schemeExt.TryGetValue(script, out string? ext)
+        ? LearnCodes(schemeDir, Path.Combine(chmDir, script), ext)
+        : new Dictionary<int, string>();
+    learnedCache[script] = known;
+    return known;
+}
+
+string? SchemeFor(string script, string layoutName)
+{
+    if (schemeDir.Length == 0 || !schemeExt.TryGetValue(script, out string? ext)) return null;
+    return Directory.EnumerateFiles(schemeDir, "*" + ext)
+        .FirstOrDefault(f => Norm(Path.GetFileNameWithoutExtension(f)) == Norm(layoutName));
+}
+
 int rebuilt = 0, keysFixed = 0, keysAdded = 0, seqAdded = 0, escAdded = 0, symAdded = 0, skipped = 0;
+int filled = 0, blankInShree = 0, stillUnknown = 0;
 foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p => p))
 {
     if (!byFile.TryGetValue(Path.GetFileName(path), out var meta)) { skipped++; continue; }
@@ -138,6 +223,35 @@ foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p
     escAdded += layout.Escape.Count;
     symAdded += layout.Symbols.Count;
 
+    // The chart has had its say; the keys it never printed come from the vendor's
+    // own runtime file for this keyboard. Only keys that are still empty are
+    // filled: a chart, and the decode this layout already carried, both outrank a
+    // reading pieced together from the other keyboards.
+    if (SchemeFor(script, name) is { } schemeFile)
+    {
+        byte[] codes = File.ReadAllBytes(schemeFile);
+        var known = Learned(script);
+        foreach (var (ch, pos) in toKey)
+        {
+            if (ch is < '!' or > '~') continue;
+            byVk.TryGetValue(pos.Vk, out var m);
+            if (!string.IsNullOrEmpty(pos.Shift ? m?.Shift : m?.Base)) continue;
+
+            int code = codes[ch];
+            if (code is 0 or 0x20) { blankInShree++; continue; }  // the vendor types nothing here either
+            if (!known.TryGetValue(code, out string? uni) || Formatting(uni)) { stillUnknown++; continue; }
+
+            if (m is null)
+            {
+                m = new KeyMapping { VirtualKey = pos.Vk };
+                byVk[pos.Vk] = m;
+                layout.Keys.Add(m);
+            }
+            if (pos.Shift) m.Shift = uni; else m.Base = uni;
+            filled++;
+        }
+    }
+
     // clear anything an earlier pass left that only types an invisible character
     foreach (var m in layout.Keys)
     {
@@ -160,6 +274,7 @@ Console.WriteLine($"  single keys added                    : {keysAdded}");
 Console.WriteLine($"  multi-key runs written               : {seqAdded}");
 Console.WriteLine($"  Ctrl+Space layer keys written        : {escAdded}");
 Console.WriteLine($"  Ctrl+Shift+1 layer keys written      : {symAdded}");
+Console.WriteLine($"  keys the charts never printed        : filled {filled}, empty in Shree too {blankInShree}, still unnamed {stillUnknown}");
 Console.WriteLine($"layouts left alone (no chart)          : {skipped}");
 if (!apply) Console.WriteLine("\ndry run - pass --apply to write the files");
 return 0;

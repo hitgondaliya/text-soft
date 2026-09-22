@@ -11,7 +11,6 @@
     {
       "vk": 49,
       "base": "१",
-      "shift": "श्र",
       "deadKey": false
     },
     {
@@ -200,6 +199,7 @@
     {
       "vk": 89,
       "base": "य",
+      "shift": "्य",
       "deadKey": false
     },
     {
@@ -226,13 +226,19 @@
       "deadKey": false
     },
     {
+      "vk": 192,
+      "shift": "श्र",
+      "deadKey": false
+    },
+    {
       "vk": 219,
-      "base": "॒",
+      "base": "ृ",
       "deadKey": false
     },
     {
       "vk": 221,
       "base": "ॅ",
+      "shift": "ल",
       "deadKey": false
     }
   ],

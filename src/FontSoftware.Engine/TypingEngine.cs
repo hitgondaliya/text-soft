@@ -280,7 +280,14 @@ public sealed class TypingEngine : IDisposable
             _lastEmitted = null;  // navigation/space/punctuation breaks the chain
             ResetSequence();      // and ends the run being typed
             ResetLegacy();        // and commits the current legacy word
-            return;               // nothing to type → default English behaviour
+
+            // A letter key the active keyboard does not use types nothing on the
+            // vendor's software, and nothing here: an English letter dropped into
+            // Indic text is never what the typist meant. Everything else - digits,
+            // punctuation, space, the navigation keys - still passes through.
+            if (e.VirtualKey is >= 'A' and <= 'Z')
+                e.Handled = true;
+            return;
         }
 
         // Respect per-app exclusions only when we would otherwise inject.

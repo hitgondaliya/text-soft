@@ -62,6 +62,7 @@
     },
     {
       "vk": 65,
+      "base": "எ",
       "shift": "எ",
       "deadKey": false
     },
@@ -89,6 +90,7 @@
     },
     {
       "vk": 70,
+      "base": "இ",
       "shift": "இ",
       "deadKey": false
     },
@@ -158,16 +160,19 @@
     },
     {
       "vk": 82,
+      "base": "ஈ",
       "shift": "ஈ",
       "deadKey": false
     },
     {
       "vk": 83,
+      "base": "ஏ",
       "shift": "ஏ",
       "deadKey": false
     },
     {
       "vk": 84,
+      "base": "ஊ",
       "shift": "ஊ",
       "deadKey": false
     },
@@ -213,7 +218,7 @@
     },
     {
       "vk": 187,
-      "base": "௸",
+      "base": "=",
       "shift": "+",
       "deadKey": false
     },
@@ -254,6 +259,11 @@
     {
       "vk": 221,
       "base": "ஞ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "shift": "னா",
       "deadKey": false
     }
   ],
