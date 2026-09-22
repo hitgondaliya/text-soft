@@ -476,6 +476,14 @@ public sealed class MainViewModel : ObservableObject, IDisposable
 
     private void OnLanguageChanged()
     {
+        // Read the saved selection before touching anything. Filling the lists
+        // below picks each list's first entry, and those picks write themselves
+        // back as the new defaults - over the very ids about to be restored.
+        bool sameAsSaved = SelectedLanguage is not null && SelectedLanguage.Id == _settings.DefaultLanguageId;
+        string? savedFontLayout = _settings.DefaultFontLayoutId;
+        string? savedFont = _settings.DefaultFontId;
+        string? savedLayout = _settings.DefaultLayoutId;
+
         Fonts.Clear();
         Layouts.Clear();
         FontLayouts.Clear();
@@ -526,10 +534,15 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         // Setting this drives the render font via OnFontLayoutChanged (defaults to Unicode).
         SelectedFontLayout = FontLayouts.FirstOrDefault();
 
-        if (_restoring)
+        if (_restoring || sameAsSaved)
         {
-            // Launch: put back the font layout, font and keyboard the user last used.
-            RestoreDefaultsForLanguage();
+            // Put back the font layout, font and keyboard last used with this
+            // language. This has to run on every pass over the saved language, not
+            // only the first: while the window is coming up WPF rebinds the
+            // language box, which re-enters this method, and the fresh defaults
+            // above would otherwise stand - which is why the app kept reopening on
+            // a keyboard the user had never chosen.
+            RestoreDefaultsForLanguage(savedFontLayout, savedFont, savedLayout);
         }
         else
         {
@@ -768,23 +781,23 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         return lang;
     }
 
-    private void RestoreDefaultsForLanguage()
+    private void RestoreDefaultsForLanguage(string? fontLayoutId, string? fontId, string? layoutId)
     {
         // Font Layout first: choosing one repoints the render font, so applying it
         // after the saved font would undo that font.
-        if (_settings.DefaultFontLayoutId is not null)
+        if (fontLayoutId is not null)
         {
-            var fl = FontLayouts.FirstOrDefault(x => x.Id == _settings.DefaultFontLayoutId);
+            var fl = FontLayouts.FirstOrDefault(x => x.Id == fontLayoutId);
             if (fl is not null) SelectedFontLayout = fl;
         }
-        if (_settings.DefaultFontId is not null)
+        if (fontId is not null)
         {
-            var f = Fonts.FirstOrDefault(x => x.Id == _settings.DefaultFontId);
+            var f = Fonts.FirstOrDefault(x => x.Id == fontId);
             if (f is not null) SelectedFont = f;
         }
-        if (_settings.DefaultLayoutId is not null)
+        if (layoutId is not null)
         {
-            var l = Layouts.FirstOrDefault(x => x.Id == _settings.DefaultLayoutId);
+            var l = Layouts.FirstOrDefault(x => x.Id == layoutId);
             if (l is not null) SelectedLayout = l;
         }
     }
