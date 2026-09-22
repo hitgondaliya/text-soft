@@ -1,53 +1,471 @@
 {
-  "$comment": "Auto-generated from Shree-Lipi AVENUE.KAN via InScript Rosetta decode.",
   "id": "kan-avenue",
   "name": "Avenue",
   "fontId": "tunga",
   "keys": [
-    { "vk": 48, "base": "ಝ", "shift": "೦" },
-    { "vk": 49, "base": "ಟ" },
-    { "vk": 50, "base": "ಖ" },
-    { "vk": 51, "base": "ಧ" },
-    { "vk": 52, "base": "ಛ" },
-    { "vk": 53, "base": "ಭ" },
-    { "vk": 54, "base": "ಥ" },
-    { "vk": 55, "base": "ಘ" },
-    { "vk": 56, "base": "ಠ" },
-    { "vk": 57, "base": "ಢ", "shift": "೯" },
-    { "vk": 65, "shift": "ಓ" },
-    { "vk": 66, "shift": "ಬ" },
-    { "vk": 67, "base": "ೠ" },
-    { "vk": 68, "shift": "ದ" },
-    { "vk": 69, "base": "ಅ", "shift": "ಆ" },
-    { "vk": 70, "shift": "ನ" },
-    { "vk": 71, "base": "ಋ", "shift": "ಣ" },
-    { "vk": 72, "base": "ಽ", "shift": "ಮ" },
-    { "vk": 73, "base": "ಳ", "shift": "ಲ" },
-    { "vk": 74, "base": "ಜ್ಞ", "shift": "ಗ" },
-    { "vk": 75, "base": "ಉ", "shift": "ಏ" },
-    { "vk": 76, "shift": "ಈ" },
-    { "vk": 77, "shift": "ಎ" },
-    { "vk": 78, "shift": "ಪ" },
-    { "vk": 79, "base": "ಈ", "shift": "ಇ" },
-    { "vk": 80, "base": "ಇ", "shift": "ಉ" },
-    { "vk": 81, "base": "ಕ್ಷ", "shift": "ಷ" },
-    { "vk": 82, "shift": "ವ" },
-    { "vk": 83, "shift": "ಸ" },
-    { "vk": 84, "shift": "ರ" },
-    { "vk": 85, "shift": "ಯ" },
-    { "vk": 86, "shift": "ಚ" },
-    { "vk": 87, "shift": "ಕ" },
-    { "vk": 88, "shift": "ಐ" },
-    { "vk": 89, "shift": "ತ" },
-    { "vk": 90, "base": "ಊ", "shift": "ಹ" },
-    { "vk": 186, "base": "ಊ" },
-    { "vk": 189, "base": "।" },
-    { "vk": 190, "base": "ಒ" },
-    { "vk": 191, "base": "ಷ್ಷ", "shift": "ಔ" },
-    { "vk": 192, "base": "ಡ", "shift": "ಙ" },
-    { "vk": 219, "base": "ಜ", "shift": "ಫ" },
-    { "vk": 221, "base": "ಞ" },
-    { "vk": 222, "shift": "ಋ" }
+    {
+      "vk": 48,
+      "base": "ಝ",
+      "shift": "೦",
+      "deadKey": false
+    },
+    {
+      "vk": 49,
+      "base": "ಟ",
+      "deadKey": false
+    },
+    {
+      "vk": 50,
+      "base": "ಖ",
+      "deadKey": false
+    },
+    {
+      "vk": 51,
+      "base": "ಧ",
+      "deadKey": false
+    },
+    {
+      "vk": 52,
+      "base": "ಛ",
+      "deadKey": false
+    },
+    {
+      "vk": 53,
+      "base": "ಭ",
+      "deadKey": false
+    },
+    {
+      "vk": 54,
+      "base": "ಥ",
+      "deadKey": false
+    },
+    {
+      "vk": 55,
+      "base": "ಘ",
+      "deadKey": false
+    },
+    {
+      "vk": 56,
+      "base": "ಠ",
+      "deadKey": false
+    },
+    {
+      "vk": 57,
+      "base": "ಢ",
+      "shift": "೯",
+      "deadKey": false
+    },
+    {
+      "vk": 65,
+      "shift": "ಓ",
+      "deadKey": false
+    },
+    {
+      "vk": 66,
+      "shift": "ಬ",
+      "deadKey": false
+    },
+    {
+      "vk": 67,
+      "base": "ೠ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "shift": "ದ",
+      "deadKey": false
+    },
+    {
+      "vk": 69,
+      "base": "ಅ",
+      "shift": "ಆ",
+      "deadKey": false
+    },
+    {
+      "vk": 70,
+      "shift": "ನ",
+      "deadKey": false
+    },
+    {
+      "vk": 71,
+      "base": "ಋ",
+      "shift": "ಣ",
+      "deadKey": false
+    },
+    {
+      "vk": 72,
+      "base": "ಽ",
+      "shift": "ಮ",
+      "deadKey": false
+    },
+    {
+      "vk": 73,
+      "base": "ಳ",
+      "shift": "ಲ",
+      "deadKey": false
+    },
+    {
+      "vk": 74,
+      "base": "ಽ",
+      "shift": "ಗ",
+      "deadKey": false
+    },
+    {
+      "vk": 75,
+      "base": "ಉ",
+      "shift": "ಏ",
+      "deadKey": false
+    },
+    {
+      "vk": 76,
+      "shift": "ಈ",
+      "deadKey": false
+    },
+    {
+      "vk": 77,
+      "shift": "ಎ",
+      "deadKey": false
+    },
+    {
+      "vk": 78,
+      "shift": "ಪ",
+      "deadKey": false
+    },
+    {
+      "vk": 79,
+      "base": "ಈ",
+      "shift": "ಇ",
+      "deadKey": false
+    },
+    {
+      "vk": 80,
+      "base": "ಇ",
+      "shift": "ಉ",
+      "deadKey": false
+    },
+    {
+      "vk": 81,
+      "base": "ಕ್ಷ",
+      "shift": "ಷ",
+      "deadKey": false
+    },
+    {
+      "vk": 82,
+      "shift": "ವ",
+      "deadKey": false
+    },
+    {
+      "vk": 83,
+      "shift": "ಸ",
+      "deadKey": false
+    },
+    {
+      "vk": 84,
+      "shift": "ರ",
+      "deadKey": false
+    },
+    {
+      "vk": 85,
+      "shift": "ಯ",
+      "deadKey": false
+    },
+    {
+      "vk": 86,
+      "shift": "ಚ",
+      "deadKey": false
+    },
+    {
+      "vk": 87,
+      "shift": "ಕ",
+      "deadKey": false
+    },
+    {
+      "vk": 88,
+      "shift": "ಐ",
+      "deadKey": false
+    },
+    {
+      "vk": 89,
+      "shift": "ತ",
+      "deadKey": false
+    },
+    {
+      "vk": 90,
+      "base": "ಊ",
+      "shift": "ಹ",
+      "deadKey": false
+    },
+    {
+      "vk": 186,
+      "base": "ಊ",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "।",
+      "deadKey": false
+    },
+    {
+      "vk": 190,
+      "base": "ಒ",
+      "deadKey": false
+    },
+    {
+      "vk": 191,
+      "base": "ಷ್ಷ",
+      "shift": "ಔ",
+      "deadKey": false
+    },
+    {
+      "vk": 192,
+      "base": "ಡ",
+      "shift": "ಙ",
+      "deadKey": false
+    },
+    {
+      "vk": 219,
+      "base": "ಜ",
+      "shift": "ಫ",
+      "deadKey": false
+    },
+    {
+      "vk": 220,
+      "base": "ಶ",
+      "deadKey": false
+    },
+    {
+      "vk": 221,
+      "base": "ಞ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "shift": "ಋ",
+      "deadKey": false
+    }
   ],
-  "deadKeyCombinations": []
+  "deadKeyCombinations": [],
+  "sequences": [
+    {
+      "keys": "W\"",
+      "to": "ಕೃ"
+    },
+    {
+      "keys": "W:",
+      "to": "ಕೆ"
+    },
+    {
+      "keys": "W;",
+      "to": "ಕೂ"
+    },
+    {
+      "keys": "Wf",
+      "to": "ಕಂ"
+    },
+    {
+      "keys": "Wi",
+      "to": "ಕಃ"
+    },
+    {
+      "keys": "Wk",
+      "to": "ಕು"
+    },
+    {
+      "keys": "Wl",
+      "to": "ಕೊ"
+    },
+    {
+      "keys": "Wn",
+      "to": "ಕ್‌"
+    },
+    {
+      "keys": "Wo",
+      "to": "ಕಾ"
+    },
+    {
+      "keys": "Wp",
+      "to": "ಕಿ"
+    },
+    {
+      "keys": "Wx",
+      "to": "ಕೈ"
+    },
+    {
+      "keys": "ef",
+      "to": "ಅಂ"
+    },
+    {
+      "keys": "ei",
+      "to": "ಅಃ"
+    },
+    {
+      "keys": "0/0",
+      "to": "ಝ್ಝ"
+    },
+    {
+      "keys": "1/1",
+      "to": "ಟ್ಟ"
+    },
+    {
+      "keys": "2/2",
+      "to": "ಖ್ಖ"
+    },
+    {
+      "keys": "3/3",
+      "to": "ಧ್ಧ"
+    },
+    {
+      "keys": "4/4",
+      "to": "ಛ್ಛ"
+    },
+    {
+      "keys": "5/5",
+      "to": "ಭ್ಭ"
+    },
+    {
+      "keys": "6/6",
+      "to": "ಥ್ಥ"
+    },
+    {
+      "keys": "7/7",
+      "to": "ಘ್ಘ"
+    },
+    {
+      "keys": "8/8",
+      "to": "ಠ್ಠ"
+    },
+    {
+      "keys": "9/9",
+      "to": "ಢ್ಢ"
+    },
+    {
+      "keys": "B/B",
+      "to": "ಬ್ಬ"
+    },
+    {
+      "keys": "D/D",
+      "to": "ದ್ದ"
+    },
+    {
+      "keys": "F/F",
+      "to": "ನ್ನ"
+    },
+    {
+      "keys": "G/G",
+      "to": "ಣ್ಣ"
+    },
+    {
+      "keys": "H/H",
+      "to": "ಮ್ಮ"
+    },
+    {
+      "keys": "I/I",
+      "to": "ಲ್ಲ"
+    },
+    {
+      "keys": "J/J",
+      "to": "ಗ್ಗ"
+    },
+    {
+      "keys": "N/N",
+      "to": "ಪ್ಪ"
+    },
+    {
+      "keys": "Q/Q",
+      "to": "ಷ್ಷ"
+    },
+    {
+      "keys": "R/R",
+      "to": "ವ್ವ"
+    },
+    {
+      "keys": "S/S",
+      "to": "ಸ್ಸ"
+    },
+    {
+      "keys": "U/U",
+      "to": "ಯ್ಯ"
+    },
+    {
+      "keys": "V/V",
+      "to": "ಚ್ಚ"
+    },
+    {
+      "keys": "W/W",
+      "to": "ಕ್ಕ"
+    },
+    {
+      "keys": "W:o",
+      "to": "ಕೇ"
+    },
+    {
+      "keys": "Wlo",
+      "to": "ಕೋ"
+    },
+    {
+      "keys": "Wpo",
+      "to": "ಕೀ"
+    },
+    {
+      "keys": "Y/Y",
+      "to": "ತ್ತ"
+    },
+    {
+      "keys": "Z/Z",
+      "to": "ಹ್ಹ"
+    },
+    {
+      "keys": "[/[",
+      "to": "ಜ್ಜ"
+    },
+    {
+      "keys": "\\/\\",
+      "to": "ಶ್ಶ"
+    },
+    {
+      "keys": "]/]",
+      "to": "ಞ್ಞ"
+    },
+    {
+      "keys": "`/`",
+      "to": "ಡ್ಡ"
+    },
+    {
+      "keys": "i/i",
+      "to": "ಳ್ಳ"
+    },
+    {
+      "keys": "{/{",
+      "to": "ಫ್ಫ"
+    },
+    {
+      "keys": "~/~",
+      "to": "ಙ್ಙ"
+    },
+    {
+      "keys": "Shree",
+      "to": "ಶ್ರೀ"
+    },
+    {
+      "keys": "Avagraha",
+      "to": "ಽ"
+    },
+    {
+      "keys": "RooVowel",
+      "to": "ೠ"
+    },
+    {
+      "keys": "lruVowel",
+      "to": "ಌ"
+    },
+    {
+      "keys": "lrooVowel",
+      "to": "ೡ"
+    },
+    {
+      "keys": "DoubleDand",
+      "to": "॥"
+    }
+  ],
+  "HasSequences": true
 }

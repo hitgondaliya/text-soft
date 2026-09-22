@@ -1,48 +1,486 @@
 {
-  "$comment": "Auto-generated from Shree-Lipi ROMA.MAL via InScript Rosetta decode.",
   "id": "mal-roma",
   "name": "Roma",
   "fontId": "kartika",
   "keys": [
-    { "vk": 48, "base": "0", "shift": ")" },
-    { "vk": 49, "base": "1", "shift": "!" },
-    { "vk": 50, "base": "2", "shift": "ഴ" },
-    { "vk": 51, "base": "3" },
-    { "vk": 52, "base": "4" },
-    { "vk": 53, "base": "5", "shift": "%" },
-    { "vk": 54, "base": "6" },
-    { "vk": 55, "base": "7" },
-    { "vk": 56, "base": "8", "shift": "*" },
-    { "vk": 57, "base": "9", "shift": "(" },
-    { "vk": 65, "shift": "അ" },
-    { "vk": 66, "base": "ബ", "shift": "ഭ" },
-    { "vk": 67, "base": "ച", "shift": "ഛ" },
-    { "vk": 68, "base": "ദ", "shift": "ധ" },
-    { "vk": 71, "base": "ഗ", "shift": "ഘ" },
-    { "vk": 72, "base": "ഹ", "shift": "ഃ" },
-    { "vk": 74, "base": "ജ", "shift": "ഝ" },
-    { "vk": 75, "base": "ക", "shift": "ഖ" },
-    { "vk": 76, "base": "ള", "shift": "ല" },
-    { "vk": 77, "base": "മ", "shift": "ം" },
-    { "vk": 78, "base": "ന", "shift": "ണ" },
-    { "vk": 80, "base": "പ", "shift": "ഫ" },
-    { "vk": 81, "base": "ട", "shift": "ഠ" },
-    { "vk": 82, "base": "റ", "shift": "ര" },
-    { "vk": 83, "base": "സ", "shift": "ശ" },
-    { "vk": 84, "base": "ത", "shift": "ഥ" },
-    { "vk": 86, "base": "വ" },
-    { "vk": 87, "base": "ഢ", "shift": "ഢ" },
-    { "vk": 88, "base": "ഷ" },
-    { "vk": 89, "base": "യ", "shift": "എ" },
-    { "vk": 90, "base": "ഏ" },
-    { "vk": 186, "base": ";", "shift": ":" },
-    { "vk": 187, "base": "=", "shift": "+" },
-    { "vk": 188, "base": ",", "shift": "ഇ" },
-    { "vk": 189, "base": "-" },
-    { "vk": 190, "base": ".", "shift": "ഓ" },
-    { "vk": 191, "base": "/", "shift": "?" },
-    { "vk": 219, "base": "ഉ", "shift": "ഊ" },
-    { "vk": 222, "base": "'", "shift": "\"" }
+    {
+      "vk": 48,
+      "base": "0",
+      "shift": ")",
+      "deadKey": false
+    },
+    {
+      "vk": 49,
+      "base": "1",
+      "shift": "!",
+      "deadKey": false
+    },
+    {
+      "vk": 50,
+      "base": "2",
+      "shift": "ഴ",
+      "deadKey": false
+    },
+    {
+      "vk": 51,
+      "base": "3",
+      "deadKey": false
+    },
+    {
+      "vk": 52,
+      "base": "4",
+      "deadKey": false
+    },
+    {
+      "vk": 53,
+      "base": "5",
+      "shift": "ക്ഷ",
+      "deadKey": false
+    },
+    {
+      "vk": 54,
+      "base": "6",
+      "deadKey": false
+    },
+    {
+      "vk": 55,
+      "base": "7",
+      "deadKey": false
+    },
+    {
+      "vk": 56,
+      "base": "8",
+      "shift": "*",
+      "deadKey": false
+    },
+    {
+      "vk": 57,
+      "base": "9",
+      "shift": "(",
+      "deadKey": false
+    },
+    {
+      "vk": 65,
+      "shift": "അ",
+      "deadKey": false
+    },
+    {
+      "vk": 66,
+      "base": "ബ",
+      "shift": "ഭ",
+      "deadKey": false
+    },
+    {
+      "vk": 67,
+      "base": "ച",
+      "shift": "ഛ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "base": "ദ",
+      "shift": "ധ",
+      "deadKey": false
+    },
+    {
+      "vk": 71,
+      "base": "ഗ",
+      "shift": "ഘ",
+      "deadKey": false
+    },
+    {
+      "vk": 72,
+      "base": "ഹ",
+      "shift": "ഃ",
+      "deadKey": false
+    },
+    {
+      "vk": 74,
+      "base": "ജ",
+      "shift": "ഝ",
+      "deadKey": false
+    },
+    {
+      "vk": 75,
+      "base": "ക",
+      "shift": "ഖ",
+      "deadKey": false
+    },
+    {
+      "vk": 76,
+      "base": "ള",
+      "shift": "ല",
+      "deadKey": false
+    },
+    {
+      "vk": 77,
+      "base": "മ",
+      "shift": "ം",
+      "deadKey": false
+    },
+    {
+      "vk": 78,
+      "base": "ന",
+      "shift": "ണ",
+      "deadKey": false
+    },
+    {
+      "vk": 80,
+      "base": "പ",
+      "shift": "ഫ",
+      "deadKey": false
+    },
+    {
+      "vk": 81,
+      "base": "ട",
+      "shift": "ഠ",
+      "deadKey": false
+    },
+    {
+      "vk": 82,
+      "base": "റ",
+      "shift": "ര",
+      "deadKey": false
+    },
+    {
+      "vk": 83,
+      "base": "സ",
+      "shift": "ശ",
+      "deadKey": false
+    },
+    {
+      "vk": 84,
+      "base": "ത",
+      "shift": "ഥ",
+      "deadKey": false
+    },
+    {
+      "vk": 86,
+      "base": "വ",
+      "deadKey": false
+    },
+    {
+      "vk": 87,
+      "base": "ഡ",
+      "shift": "ഢ",
+      "deadKey": false
+    },
+    {
+      "vk": 88,
+      "base": "ഷ",
+      "deadKey": false
+    },
+    {
+      "vk": 89,
+      "base": "യ",
+      "shift": "എ",
+      "deadKey": false
+    },
+    {
+      "vk": 90,
+      "base": "ഏ",
+      "deadKey": false
+    },
+    {
+      "vk": 186,
+      "base": ";",
+      "shift": ":",
+      "deadKey": false
+    },
+    {
+      "vk": 187,
+      "base": "=",
+      "shift": "+",
+      "deadKey": false
+    },
+    {
+      "vk": 188,
+      "base": ",",
+      "shift": "ഇ",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "-",
+      "deadKey": false
+    },
+    {
+      "vk": 190,
+      "base": ".",
+      "shift": "ഈ",
+      "deadKey": false
+    },
+    {
+      "vk": 191,
+      "base": "/",
+      "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 219,
+      "base": "ഉ",
+      "shift": "ഊ",
+      "deadKey": false
+    },
+    {
+      "vk": 220,
+      "base": "ഒ",
+      "shift": "ഔ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "'",
+      "shift": "\"",
+      "deadKey": false
+    }
   ],
-  "deadKeyCombinations": []
+  "deadKeyCombinations": [],
+  "sequences": [
+    {
+      "keys": "Ek",
+      "to": "കേ"
+    },
+    {
+      "keys": "\\a",
+      "to": "ഓ"
+    },
+    {
+      "keys": "`k",
+      "to": "കൈ"
+    },
+    {
+      "keys": "ek",
+      "to": "കെ"
+    },
+    {
+      "keys": "kF",
+      "to": "ക്‌"
+    },
+    {
+      "keys": "kI",
+      "to": "കീ"
+    },
+    {
+      "keys": "kU",
+      "to": "കൂ"
+    },
+    {
+      "keys": "ka",
+      "to": "കാ"
+    },
+    {
+      "keys": "ki",
+      "to": "കി"
+    },
+    {
+      "keys": "ku",
+      "to": "കു"
+    },
+    {
+      "keys": "k~",
+      "to": "കൃ"
+    },
+    {
+      "keys": "Eka",
+      "to": "കോ"
+    },
+    {
+      "keys": "LfL",
+      "to": "ല്ല"
+    },
+    {
+      "keys": "NfN",
+      "to": "ണ്ണ"
+    },
+    {
+      "keys": "Nfm",
+      "to": "ണ്മ"
+    },
+    {
+      "keys": "Nfq",
+      "to": "ണ്ട"
+    },
+    {
+      "keys": "Nfw",
+      "to": "ണ്ഡ"
+    },
+    {
+      "keys": "SfL",
+      "to": "ശ്ല"
+    },
+    {
+      "keys": "SfS",
+      "to": "ശ്ശ"
+    },
+    {
+      "keys": "bfL",
+      "to": "ബ്ല"
+    },
+    {
+      "keys": "bfb",
+      "to": "ബ്ബ"
+    },
+    {
+      "keys": "cfC",
+      "to": "ച്ഛ"
+    },
+    {
+      "keys": "cfc",
+      "to": "ച്ച"
+    },
+    {
+      "keys": "dfD",
+      "to": "ദ്ധ"
+    },
+    {
+      "keys": "dfd",
+      "to": "ദ്ദ"
+    },
+    {
+      "keys": "ekV",
+      "to": "കൌ"
+    },
+    {
+      "keys": "eka",
+      "to": "കൊ"
+    },
+    {
+      "keys": "gfL",
+      "to": "ഗ്ല"
+    },
+    {
+      "keys": "gfg",
+      "to": "ഗ്ഗ"
+    },
+    {
+      "keys": "gfn",
+      "to": "ഗ്ന"
+    },
+    {
+      "keys": "hfL",
+      "to": "ഹ്ല"
+    },
+    {
+      "keys": "hfm",
+      "to": "ഹ്മ"
+    },
+    {
+      "keys": "hfn",
+      "to": "ഹ്ന"
+    },
+    {
+      "keys": "jfj",
+      "to": "ജ്ജ"
+    },
+    {
+      "keys": "kfL",
+      "to": "ക്ല"
+    },
+    {
+      "keys": "kfk",
+      "to": "ക്ക"
+    },
+    {
+      "keys": "kft",
+      "to": "ക്ത"
+    },
+    {
+      "keys": "lfl",
+      "to": "ള്ള"
+    },
+    {
+      "keys": "mfL",
+      "to": "മ്ല"
+    },
+    {
+      "keys": "mfm",
+      "to": "മ്മ"
+    },
+    {
+      "keys": "nfD",
+      "to": "ന്ധ"
+    },
+    {
+      "keys": "nfT",
+      "to": "ന്ഥ"
+    },
+    {
+      "keys": "nfd",
+      "to": "ന്ദ"
+    },
+    {
+      "keys": "nfm",
+      "to": "ന്മ"
+    },
+    {
+      "keys": "nfn",
+      "to": "ന്ന"
+    },
+    {
+      "keys": "nft",
+      "to": "ന്ത"
+    },
+    {
+      "keys": "pfL",
+      "to": "പ്ല"
+    },
+    {
+      "keys": "pfp",
+      "to": "പ്പ"
+    },
+    {
+      "keys": "qfq",
+      "to": "ട്ട"
+    },
+    {
+      "keys": "rfr",
+      "to": "റ്റ"
+    },
+    {
+      "keys": "sfL",
+      "to": "സ്ല"
+    },
+    {
+      "keys": "sfT",
+      "to": "സ്ഥ"
+    },
+    {
+      "keys": "tfT",
+      "to": "ത്ഥ"
+    },
+    {
+      "keys": "tfm",
+      "to": "ത്മ"
+    },
+    {
+      "keys": "tft",
+      "to": "ത്ത"
+    },
+    {
+      "keys": "vfL",
+      "to": "വ്ല"
+    },
+    {
+      "keys": "vfv",
+      "to": "വ്വ"
+    },
+    {
+      "keys": "wfw",
+      "to": "ഡ്ഡ"
+    },
+    {
+      "keys": "xfq",
+      "to": "ഷ്ട"
+    },
+    {
+      "keys": "yfy",
+      "to": "യ്യ"
+    },
+    {
+      "keys": "sfrfr",
+      "to": "സ്റ്റ"
+    }
+  ],
+  "HasSequences": true
 }

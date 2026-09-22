@@ -1,49 +1,356 @@
 {
-  "$comment": "Auto-generated from Shree-Lipi NEWROMA.TAM via InScript Rosetta decode.",
   "id": "tam-newroma",
   "name": "Newroma",
   "fontId": "latha",
   "keys": [
-    { "vk": 48, "base": "0", "shift": ")" },
-    { "vk": 49, "base": "1", "shift": "க்ஷ" },
-    { "vk": 50, "base": "2" },
-    { "vk": 51, "base": "3" },
-    { "vk": 52, "base": "4" },
-    { "vk": 53, "base": "5", "shift": "%" },
-    { "vk": 54, "base": "6" },
-    { "vk": 55, "base": "7" },
-    { "vk": 56, "base": "8", "shift": "*" },
-    { "vk": 57, "base": "9", "shift": "(" },
-    { "vk": 65, "shift": "அ" },
-    { "vk": 66, "base": "ப" },
-    { "vk": 67, "base": "ச" },
-    { "vk": 68, "base": "த", "shift": "ட" },
-    { "vk": 69, "base": "எ", "shift": "ஏ" },
-    { "vk": 71, "base": "க", "shift": "௺" },
-    { "vk": 72, "base": "ஹ" },
-    { "vk": 73, "base": "இ", "shift": "ஈ" },
-    { "vk": 74, "base": "ஜ" },
-    { "vk": 75, "base": "க" },
-    { "vk": 76, "base": "ல", "shift": "ள" },
-    { "vk": 77, "base": "ம", "shift": "ங" },
-    { "vk": 78, "base": "ந", "shift": "ண" },
-    { "vk": 79, "base": "ஒ", "shift": "ஓ" },
-    { "vk": 80, "base": "ப" },
-    { "vk": 82, "base": "ர", "shift": "ற" },
-    { "vk": 83, "base": "ச", "shift": "ஸ" },
-    { "vk": 84, "base": "த", "shift": "ட" },
-    { "vk": 85, "base": "உ", "shift": "ஊ" },
-    { "vk": 86, "base": "வ" },
-    { "vk": 87, "base": "வ", "shift": "ணா" },
-    { "vk": 88, "base": "க்ஷ", "shift": "ஸ்ரீ" },
-    { "vk": 89, "base": "ய", "shift": "யு" },
-    { "vk": 90, "base": "ழ", "shift": "ழ" },
-    { "vk": 186, "base": ";", "shift": ":" },
-    { "vk": 187, "base": "௸" },
-    { "vk": 188, "base": "," },
-    { "vk": 189, "base": "-" },
-    { "vk": 191, "base": "/", "shift": "?" },
-    { "vk": 222, "base": "'", "shift": "\"" }
+    {
+      "vk": 48,
+      "base": "0",
+      "shift": ")",
+      "deadKey": false
+    },
+    {
+      "vk": 49,
+      "base": "1",
+      "shift": "க்ஷ",
+      "deadKey": false
+    },
+    {
+      "vk": 50,
+      "base": "2",
+      "deadKey": false
+    },
+    {
+      "vk": 51,
+      "base": "3",
+      "deadKey": false
+    },
+    {
+      "vk": 52,
+      "base": "4",
+      "deadKey": false
+    },
+    {
+      "vk": 53,
+      "base": "5",
+      "shift": "%",
+      "deadKey": false
+    },
+    {
+      "vk": 54,
+      "base": "6",
+      "deadKey": false
+    },
+    {
+      "vk": 55,
+      "base": "7",
+      "deadKey": false
+    },
+    {
+      "vk": 56,
+      "base": "8",
+      "shift": "*",
+      "deadKey": false
+    },
+    {
+      "vk": 57,
+      "base": "9",
+      "shift": "(",
+      "deadKey": false
+    },
+    {
+      "vk": 65,
+      "shift": "அ",
+      "deadKey": false
+    },
+    {
+      "vk": 66,
+      "base": "ப",
+      "deadKey": false
+    },
+    {
+      "vk": 67,
+      "base": "ச",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "base": "த",
+      "shift": "ட",
+      "deadKey": false
+    },
+    {
+      "vk": 69,
+      "base": "எ",
+      "shift": "ஏ",
+      "deadKey": false
+    },
+    {
+      "vk": 71,
+      "base": "க",
+      "shift": "௺",
+      "deadKey": false
+    },
+    {
+      "vk": 72,
+      "base": "ஹ",
+      "deadKey": false
+    },
+    {
+      "vk": 73,
+      "base": "இ",
+      "shift": "ஈ",
+      "deadKey": false
+    },
+    {
+      "vk": 74,
+      "base": "ஜ",
+      "deadKey": false
+    },
+    {
+      "vk": 75,
+      "base": "க",
+      "deadKey": false
+    },
+    {
+      "vk": 76,
+      "base": "ல",
+      "shift": "ள",
+      "deadKey": false
+    },
+    {
+      "vk": 77,
+      "base": "ம",
+      "shift": "ங",
+      "deadKey": false
+    },
+    {
+      "vk": 78,
+      "base": "ந",
+      "shift": "ண",
+      "deadKey": false
+    },
+    {
+      "vk": 79,
+      "base": "ஒ",
+      "shift": "ஓ",
+      "deadKey": false
+    },
+    {
+      "vk": 80,
+      "base": "ப",
+      "deadKey": false
+    },
+    {
+      "vk": 82,
+      "base": "ர",
+      "shift": "ற",
+      "deadKey": false
+    },
+    {
+      "vk": 83,
+      "base": "ச",
+      "shift": "ஸ",
+      "deadKey": false
+    },
+    {
+      "vk": 84,
+      "base": "த",
+      "shift": "ட",
+      "deadKey": false
+    },
+    {
+      "vk": 85,
+      "base": "உ",
+      "shift": "ஊ",
+      "deadKey": false
+    },
+    {
+      "vk": 86,
+      "base": "வ",
+      "deadKey": false
+    },
+    {
+      "vk": 87,
+      "base": "வ",
+      "shift": "ணா",
+      "deadKey": false
+    },
+    {
+      "vk": 88,
+      "base": "க்ஷ",
+      "shift": "ஸ்ரீ",
+      "deadKey": false
+    },
+    {
+      "vk": 89,
+      "base": "ய",
+      "shift": "யு",
+      "deadKey": false
+    },
+    {
+      "vk": 90,
+      "base": "ழ",
+      "shift": "ழ",
+      "deadKey": false
+    },
+    {
+      "vk": 186,
+      "base": ";",
+      "shift": ":",
+      "deadKey": false
+    },
+    {
+      "vk": 187,
+      "base": "௸",
+      "deadKey": false
+    },
+    {
+      "vk": 188,
+      "base": ",",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "-",
+      "deadKey": false
+    },
+    {
+      "vk": 190,
+      "shift": "।",
+      "deadKey": false
+    },
+    {
+      "vk": 191,
+      "base": "/",
+      "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "'",
+      "shift": "\"",
+      "deadKey": false
+    }
   ],
-  "deadKeyCombinations": []
+  "deadKeyCombinations": [],
+  "sequences": [
+    {
+      "keys": "Lu",
+      "to": "ளு"
+    },
+    {
+      "keys": "Nu",
+      "to": "ணு"
+    },
+    {
+      "keys": "Om",
+      "to": "ௐ"
+    },
+    {
+      "keys": "Ru",
+      "to": "று"
+    },
+    {
+      "keys": "Tu",
+      "to": "டு"
+    },
+    {
+      "keys": "bu",
+      "to": "பு"
+    },
+    {
+      "keys": "gu",
+      "to": "கு"
+    },
+    {
+      "keys": "kE",
+      "to": "கே"
+    },
+    {
+      "keys": "kH",
+      "to": "கஃ"
+    },
+    {
+      "keys": "kI",
+      "to": "கீ"
+    },
+    {
+      "keys": "kO",
+      "to": "கோ"
+    },
+    {
+      "keys": "kU",
+      "to": "கூ"
+    },
+    {
+      "keys": "ka",
+      "to": "கா"
+    },
+    {
+      "keys": "ke",
+      "to": "கெ"
+    },
+    {
+      "keys": "kf",
+      "to": "க்"
+    },
+    {
+      "keys": "ki",
+      "to": "கி"
+    },
+    {
+      "keys": "ko",
+      "to": "கொ"
+    },
+    {
+      "keys": "ku",
+      "to": "கு"
+    },
+    {
+      "keys": "mu",
+      "to": "மு"
+    },
+    {
+      "keys": "nu",
+      "to": "நு"
+    },
+    {
+      "keys": "oL",
+      "to": "ஒள"
+    },
+    {
+      "keys": "ru",
+      "to": "ரு"
+    },
+    {
+      "keys": "su",
+      "to": "சு"
+    },
+    {
+      "keys": "tu",
+      "to": "து"
+    },
+    {
+      "keys": "vu",
+      "to": "வு"
+    },
+    {
+      "keys": "keL",
+      "to": "கெள"
+    },
+    {
+      "keys": "Tamil-Naa",
+      "to": "ணா"
+    },
+    {
+      "keys": "Tamil-Raa",
+      "to": "றா"
+    },
+    {
+      "keys": "Tamil-naa",
+      "to": "னா"
+    }
+  ],
+  "HasSequences": true
 }

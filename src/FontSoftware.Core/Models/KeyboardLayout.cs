@@ -52,6 +52,22 @@ public sealed class DeadKeyCombination
 }
 
 /// <summary>
+/// A run of keys that together produce one piece of text, the way the vendor
+/// layouts are actually documented: on the ITR Gujarati keyboard "y" gives અ and
+/// "yt" gives આ, replacing it. Keys are written as the characters a US keyboard
+/// produces (so "Y" means Shift+y), because that is the notation the vendor
+/// charts use.
+/// </summary>
+public sealed class KeySequence
+{
+    [JsonPropertyName("keys")]
+    public string Keys { get; set; } = string.Empty;
+
+    [JsonPropertyName("to")]
+    public string To { get; set; } = string.Empty;
+}
+
+/// <summary>
 /// A full keyboard layout definition (FR-2). Rendering and the typing engine
 /// (FR-3) are driven entirely by this client-supplied data — no hardcoding.
 /// </summary>
@@ -74,8 +90,18 @@ public sealed class KeyboardLayout
     [JsonPropertyName("deadKeyCombinations")]
     public List<DeadKeyCombination> DeadKeyCombinations { get; set; } = new();
 
+    /// <summary>
+    /// Multi-key runs for this layout (see <see cref="KeySequence"/>). Most vendor
+    /// keyboards need them: about two thirds of the entries in the published charts
+    /// are two or more keystrokes.
+    /// </summary>
+    [JsonPropertyName("sequences")]
+    public List<KeySequence> Sequences { get; set; } = new();
+
     private Dictionary<int, KeyMapping>? _index;
     private Dictionary<(string, string), string>? _deadIndex;
+    private Dictionary<string, string>? _seqIndex;
+    private HashSet<string>? _seqPrefixes;
 
     /// <summary>Fast lookup of a key mapping by virtual-key code.</summary>
     public KeyMapping? Find(int virtualKey)
@@ -98,10 +124,46 @@ public sealed class KeyboardLayout
         return _deadIndex.TryGetValue((dead, next), out var r) ? r : null;
     }
 
+    /// <summary>The text a run of keys produces, or null when the layout has no such run.</summary>
+    public string? MatchSequence(string keys)
+    {
+        BuildSequenceIndex();
+        return _seqIndex!.TryGetValue(keys, out var text) ? text : null;
+    }
+
+    /// <summary>
+    /// True when more keys could still extend this run into a longer one, so the
+    /// engine keeps composing instead of committing what is on screen.
+    /// </summary>
+    public bool SequenceCanGrow(string keys)
+    {
+        BuildSequenceIndex();
+        return _seqPrefixes!.Contains(keys);
+    }
+
+    public bool HasSequences => Sequences.Count > 0;
+
+    private void BuildSequenceIndex()
+    {
+        if (_seqIndex is not null) return;
+        var index = new Dictionary<string, string>(StringComparer.Ordinal);
+        var prefixes = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var s in Sequences)
+        {
+            if (string.IsNullOrEmpty(s.Keys) || string.IsNullOrEmpty(s.To)) continue;
+            index[s.Keys] = s.To;
+            for (int i = 1; i < s.Keys.Length; i++) prefixes.Add(s.Keys[..i]);
+        }
+        _seqIndex = index;
+        _seqPrefixes = prefixes;
+    }
+
     /// <summary>Invalidate the cached lookups after mutating the collections.</summary>
     public void Reindex()
     {
         _index = null;
         _deadIndex = null;
+        _seqIndex = null;
+        _seqPrefixes = null;
     }
 }

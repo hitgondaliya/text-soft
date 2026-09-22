@@ -1,53 +1,895 @@
 {
-  "$comment": "Auto-generated from Shree-Lipi BIJOY.BAN via InScript Rosetta decode.",
   "id": "ban-bijoy",
   "name": "Bijoy",
   "fontId": "vrinda",
   "keys": [
-    { "vk": 48, "base": "০", "shift": ")" },
-    { "vk": 49, "base": "১", "shift": "!" },
-    { "vk": 50, "base": "২", "shift": "ঁ" },
-    { "vk": 51, "base": "৩" },
-    { "vk": 52, "base": "৪", "shift": "ট" },
-    { "vk": 53, "base": "৫" },
-    { "vk": 54, "base": "৬" },
-    { "vk": 55, "base": "৭", "shift": "ঁ" },
-    { "vk": 56, "base": "৮", "shift": "*" },
-    { "vk": 57, "base": "৯", "shift": "(" },
-    { "vk": 65, "base": "ৃ" },
-    { "vk": 66, "base": "ন", "shift": "ণ" },
-    { "vk": 67, "base": "ে", "shift": "ৈ" },
-    { "vk": 68, "base": "ি", "shift": "ী" },
-    { "vk": 69, "base": "ড", "shift": "ঢ" },
-    { "vk": 70, "base": "া", "shift": "অ" },
-    { "vk": 71, "base": "্", "shift": "।" },
-    { "vk": 72, "base": "ব", "shift": "ভ" },
-    { "vk": 73, "base": "হ", "shift": "ঞ" },
-    { "vk": 74, "base": "ক", "shift": "খ" },
-    { "vk": 75, "base": "ত", "shift": "থ" },
-    { "vk": 76, "base": "দ", "shift": "ধ" },
-    { "vk": 77, "base": "ম", "shift": "শ" },
-    { "vk": 78, "base": "স", "shift": "ষ" },
-    { "vk": 79, "base": "গ", "shift": "ঘ" },
-    { "vk": 80, "base": "ড়" },
-    { "vk": 81, "base": "ঙ", "shift": "ং" },
-    { "vk": 82, "base": "প", "shift": "ফ" },
-    { "vk": 83, "base": "ু", "shift": "ূ" },
-    { "vk": 84, "base": "ট", "shift": "ঠ" },
-    { "vk": 85, "base": "জ", "shift": "ঝ" },
-    { "vk": 86, "base": "র", "shift": "ল" },
-    { "vk": 87, "base": "য়", "shift": "য" },
-    { "vk": 88, "base": "ও" },
-    { "vk": 89, "base": "চ", "shift": "ছ" },
-    { "vk": 186, "base": ";" },
-    { "vk": 187, "base": "=", "shift": "+" },
-    { "vk": 188, "base": "," },
-    { "vk": 189, "base": "-" },
-    { "vk": 190, "base": "." },
-    { "vk": 191, "base": "/", "shift": "?" },
-    { "vk": 219, "shift": "ঔ" },
-    { "vk": 221, "base": "ৱ" },
-    { "vk": 222, "base": "'", "shift": "\"" }
+    {
+      "vk": 48,
+      "base": "০",
+      "shift": ")",
+      "deadKey": false
+    },
+    {
+      "vk": 49,
+      "base": "১",
+      "shift": "!",
+      "deadKey": false
+    },
+    {
+      "vk": 50,
+      "base": "২",
+      "shift": "ঁ",
+      "deadKey": false
+    },
+    {
+      "vk": 51,
+      "base": "৩",
+      "deadKey": false
+    },
+    {
+      "vk": 52,
+      "base": "৪",
+      "shift": "ট",
+      "deadKey": false
+    },
+    {
+      "vk": 53,
+      "base": "৫",
+      "deadKey": false
+    },
+    {
+      "vk": 54,
+      "base": "৬",
+      "deadKey": false
+    },
+    {
+      "vk": 55,
+      "base": "৭",
+      "shift": "ঁ",
+      "deadKey": false
+    },
+    {
+      "vk": 56,
+      "base": "৮",
+      "shift": "*",
+      "deadKey": false
+    },
+    {
+      "vk": 57,
+      "base": "৯",
+      "shift": "(",
+      "deadKey": false
+    },
+    {
+      "vk": 65,
+      "base": "ৃ",
+      "deadKey": false
+    },
+    {
+      "vk": 66,
+      "base": "ঊ",
+      "shift": "ণ",
+      "deadKey": false
+    },
+    {
+      "vk": 67,
+      "base": "এ",
+      "shift": "ৈ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "base": "ি",
+      "shift": "ী",
+      "deadKey": false
+    },
+    {
+      "vk": 69,
+      "base": "ড",
+      "shift": "ঢ",
+      "deadKey": false
+    },
+    {
+      "vk": 70,
+      "base": "া",
+      "shift": "অ",
+      "deadKey": false
+    },
+    {
+      "vk": 71,
+      "base": "্",
+      "shift": "।",
+      "deadKey": false
+    },
+    {
+      "vk": 72,
+      "base": "ব",
+      "shift": "ভ",
+      "deadKey": false
+    },
+    {
+      "vk": 73,
+      "base": "হ",
+      "shift": "ঞ",
+      "deadKey": false
+    },
+    {
+      "vk": 74,
+      "base": "ক",
+      "shift": "খ",
+      "deadKey": false
+    },
+    {
+      "vk": 75,
+      "base": "ত",
+      "shift": "থ",
+      "deadKey": false
+    },
+    {
+      "vk": 76,
+      "base": "উ",
+      "shift": "ধ",
+      "deadKey": false
+    },
+    {
+      "vk": 77,
+      "base": "ঋ",
+      "shift": "শ",
+      "deadKey": false
+    },
+    {
+      "vk": 78,
+      "base": "স",
+      "shift": "ষ",
+      "deadKey": false
+    },
+    {
+      "vk": 79,
+      "base": "গ",
+      "shift": "ঘ",
+      "deadKey": false
+    },
+    {
+      "vk": 80,
+      "base": "ড়",
+      "deadKey": false
+    },
+    {
+      "vk": 81,
+      "base": "ঙ",
+      "shift": "ং",
+      "deadKey": false
+    },
+    {
+      "vk": 82,
+      "base": "প",
+      "shift": "ফ",
+      "deadKey": false
+    },
+    {
+      "vk": 83,
+      "base": "ু",
+      "shift": "ূ",
+      "deadKey": false
+    },
+    {
+      "vk": 84,
+      "base": "ট",
+      "shift": "ঠ",
+      "deadKey": false
+    },
+    {
+      "vk": 85,
+      "base": "জ",
+      "shift": "ঝ",
+      "deadKey": false
+    },
+    {
+      "vk": 86,
+      "base": "ঐ",
+      "shift": "ল",
+      "deadKey": false
+    },
+    {
+      "vk": 87,
+      "base": "য",
+      "shift": "য়",
+      "deadKey": false
+    },
+    {
+      "vk": 88,
+      "base": "ঈ",
+      "deadKey": false
+    },
+    {
+      "vk": 89,
+      "base": "চ",
+      "shift": "ছ",
+      "deadKey": false
+    },
+    {
+      "vk": 186,
+      "base": ";",
+      "deadKey": false
+    },
+    {
+      "vk": 187,
+      "base": "=",
+      "shift": "+",
+      "deadKey": false
+    },
+    {
+      "vk": 188,
+      "base": ",",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "-",
+      "deadKey": false
+    },
+    {
+      "vk": 190,
+      "base": ".",
+      "deadKey": false
+    },
+    {
+      "vk": 191,
+      "base": "/",
+      "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 219,
+      "shift": "ঔ",
+      "deadKey": false
+    },
+    {
+      "vk": 221,
+      "base": "ৱ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "'",
+      "shift": "\"",
+      "deadKey": false
+    }
   ],
-  "deadKeyCombinations": []
+  "deadKeyCombinations": [],
+  "sequences": [
+    {
+      "keys": "Cj",
+      "to": "কৈ"
+    },
+    {
+      "keys": "FQ",
+      "to": "অং"
+    },
+    {
+      "keys": "Ff",
+      "to": "আ"
+    },
+    {
+      "keys": "Fk",
+      "to": "অঃ"
+    },
+    {
+      "keys": "Hz",
+      "to": "ভ্র"
+    },
+    {
+      "keys": "Ms",
+      "to": "শু"
+    },
+    {
+      "keys": "cj",
+      "to": "কে"
+    },
+    {
+      "keys": "dj",
+      "to": "কি"
+    },
+    {
+      "keys": "ia",
+      "to": "হৃ"
+    },
+    {
+      "keys": "is",
+      "to": "হু"
+    },
+    {
+      "keys": "j#",
+      "to": "ক্‌"
+    },
+    {
+      "keys": "j@",
+      "to": "কঁ"
+    },
+    {
+      "keys": "jD",
+      "to": "কী"
+    },
+    {
+      "keys": "jS",
+      "to": "কূ"
+    },
+    {
+      "keys": "ja",
+      "to": "কৃ"
+    },
+    {
+      "keys": "jf",
+      "to": "কা"
+    },
+    {
+      "keys": "jk",
+      "to": "কঃ"
+    },
+    {
+      "keys": "js",
+      "to": "কু"
+    },
+    {
+      "keys": "jz",
+      "to": "ক্র"
+    },
+    {
+      "keys": "lz",
+      "to": "দ্র"
+    },
+    {
+      "keys": "os",
+      "to": "গু"
+    },
+    {
+      "keys": "rz",
+      "to": "প্র"
+    },
+    {
+      "keys": "uz",
+      "to": "জ্র"
+    },
+    {
+      "keys": "BgB",
+      "to": "ণ্ণ"
+    },
+    {
+      "keys": "BgE",
+      "to": "ণ্ঢ"
+    },
+    {
+      "keys": "BgT",
+      "to": "ণ্ঠ"
+    },
+    {
+      "keys": "Bge",
+      "to": "ণ্ড"
+    },
+    {
+      "keys": "Bgh",
+      "to": "ণ্ব"
+    },
+    {
+      "keys": "Bgm",
+      "to": "ণ্ম"
+    },
+    {
+      "keys": "Bgt",
+      "to": "ণ্ট"
+    },
+    {
+      "keys": "HgV",
+      "to": "ভ্ল"
+    },
+    {
+      "keys": "IgU",
+      "to": "ঞ্ঝ"
+    },
+    {
+      "keys": "IgY",
+      "to": "ঞ্ছ"
+    },
+    {
+      "keys": "Igu",
+      "to": "ঞ্জ"
+    },
+    {
+      "keys": "Igy",
+      "to": "ঞ্চ"
+    },
+    {
+      "keys": "Lgb",
+      "to": "ধ্ন"
+    },
+    {
+      "keys": "MgV",
+      "to": "শ্ল"
+    },
+    {
+      "keys": "MgY",
+      "to": "শ্ছ"
+    },
+    {
+      "keys": "Mgb",
+      "to": "শ্ন"
+    },
+    {
+      "keys": "Mgh",
+      "to": "শ্ব"
+    },
+    {
+      "keys": "Mgm",
+      "to": "শ্ম"
+    },
+    {
+      "keys": "Mgy",
+      "to": "শ্চ"
+    },
+    {
+      "keys": "NgB",
+      "to": "ষ্ণ"
+    },
+    {
+      "keys": "NgR",
+      "to": "ষ্ফ"
+    },
+    {
+      "keys": "NgT",
+      "to": "ষ্ঠ"
+    },
+    {
+      "keys": "Ngh",
+      "to": "ষ্ব"
+    },
+    {
+      "keys": "Ngj",
+      "to": "ষ্ক"
+    },
+    {
+      "keys": "Ngm",
+      "to": "ষ্ম"
+    },
+    {
+      "keys": "Ngr",
+      "to": "ষ্প"
+    },
+    {
+      "keys": "Ngt",
+      "to": "ষ্ট"
+    },
+    {
+      "keys": "Ogb",
+      "to": "ঘ্ন"
+    },
+    {
+      "keys": "RgV",
+      "to": "ফ্ল"
+    },
+    {
+      "keys": "VgV",
+      "to": "ল্ল"
+    },
+    {
+      "keys": "Vge",
+      "to": "ল্ড"
+    },
+    {
+      "keys": "Vgh",
+      "to": "ল্ব"
+    },
+    {
+      "keys": "Vgj",
+      "to": "ল্ক"
+    },
+    {
+      "keys": "Vgo",
+      "to": "ল্গ"
+    },
+    {
+      "keys": "Vgr",
+      "to": "ল্প"
+    },
+    {
+      "keys": "Vgt",
+      "to": "ল্ট"
+    },
+    {
+      "keys": "bgK",
+      "to": "ন্থ"
+    },
+    {
+      "keys": "bgL",
+      "to": "ন্ধ"
+    },
+    {
+      "keys": "bgT",
+      "to": "ন্ঠ"
+    },
+    {
+      "keys": "bgb",
+      "to": "ন্ন"
+    },
+    {
+      "keys": "bge",
+      "to": "ন্ড"
+    },
+    {
+      "keys": "bgh",
+      "to": "ন্ব"
+    },
+    {
+      "keys": "bgk",
+      "to": "ন্ত"
+    },
+    {
+      "keys": "bgl",
+      "to": "ন্দ"
+    },
+    {
+      "keys": "bgm",
+      "to": "ন্ম"
+    },
+    {
+      "keys": "bgt",
+      "to": "ন্ট"
+    },
+    {
+      "keys": "cjX",
+      "to": "কৌ"
+    },
+    {
+      "keys": "cjf",
+      "to": "কো"
+    },
+    {
+      "keys": "ege",
+      "to": "ড্ড"
+    },
+    {
+      "keys": "hgL",
+      "to": "ব্ধ"
+    },
+    {
+      "keys": "hgV",
+      "to": "ব্ল"
+    },
+    {
+      "keys": "hgl",
+      "to": "ব্দ"
+    },
+    {
+      "keys": "hgu",
+      "to": "ব্জ"
+    },
+    {
+      "keys": "igB",
+      "to": "হ্ণ"
+    },
+    {
+      "keys": "igV",
+      "to": "হ্ল"
+    },
+    {
+      "keys": "igh",
+      "to": "হ্ব"
+    },
+    {
+      "keys": "igm",
+      "to": "হ্ম"
+    },
+    {
+      "keys": "jgV",
+      "to": "ক্ল"
+    },
+    {
+      "keys": "jgb",
+      "to": "ক্ন"
+    },
+    {
+      "keys": "jgh",
+      "to": "ক্ব"
+    },
+    {
+      "keys": "jgj",
+      "to": "ক্ক"
+    },
+    {
+      "keys": "jgk",
+      "to": "ক্ত"
+    },
+    {
+      "keys": "jgm",
+      "to": "ক্ম"
+    },
+    {
+      "keys": "jgn",
+      "to": "ক্স"
+    },
+    {
+      "keys": "jgt",
+      "to": "ক্ট"
+    },
+    {
+      "keys": "kgK",
+      "to": "ত্থ"
+    },
+    {
+      "keys": "kgb",
+      "to": "ত্ন"
+    },
+    {
+      "keys": "kgh",
+      "to": "ত্ব"
+    },
+    {
+      "keys": "kgk",
+      "to": "ত্ত"
+    },
+    {
+      "keys": "kgm",
+      "to": "ত্ম"
+    },
+    {
+      "keys": "lgL",
+      "to": "দ্ধ"
+    },
+    {
+      "keys": "lgO",
+      "to": "দ্ঘ"
+    },
+    {
+      "keys": "lgh",
+      "to": "দ্ব"
+    },
+    {
+      "keys": "lgl",
+      "to": "দ্দ"
+    },
+    {
+      "keys": "lgm",
+      "to": "দ্ম"
+    },
+    {
+      "keys": "lgo",
+      "to": "দ্গ"
+    },
+    {
+      "keys": "mgH",
+      "to": "ম্ভ"
+    },
+    {
+      "keys": "mgR",
+      "to": "ম্ফ"
+    },
+    {
+      "keys": "mgV",
+      "to": "ম্ল"
+    },
+    {
+      "keys": "mgb",
+      "to": "ম্ন"
+    },
+    {
+      "keys": "mgh",
+      "to": "ম্ব"
+    },
+    {
+      "keys": "mgm",
+      "to": "ম্ম"
+    },
+    {
+      "keys": "mgr",
+      "to": "ম্প"
+    },
+    {
+      "keys": "ngJ",
+      "to": "স্খ"
+    },
+    {
+      "keys": "ngK",
+      "to": "স্থ"
+    },
+    {
+      "keys": "ngR",
+      "to": "স্ফ"
+    },
+    {
+      "keys": "ngV",
+      "to": "স্ল"
+    },
+    {
+      "keys": "ngb",
+      "to": "স্ন"
+    },
+    {
+      "keys": "ngj",
+      "to": "স্ক"
+    },
+    {
+      "keys": "ngk",
+      "to": "স্ত"
+    },
+    {
+      "keys": "ngm",
+      "to": "স্ম"
+    },
+    {
+      "keys": "ngt",
+      "to": "স্ট"
+    },
+    {
+      "keys": "ogL",
+      "to": "গ্ধ"
+    },
+    {
+      "keys": "ogV",
+      "to": "গ্ল"
+    },
+    {
+      "keys": "ogb",
+      "to": "গ্ন"
+    },
+    {
+      "keys": "ogh",
+      "to": "গ্ব"
+    },
+    {
+      "keys": "ogl",
+      "to": "গ্দ"
+    },
+    {
+      "keys": "ogm",
+      "to": "গ্ম"
+    },
+    {
+      "keys": "ogo",
+      "to": "গ্গ"
+    },
+    {
+      "keys": "qgJ",
+      "to": "ঙ্খ"
+    },
+    {
+      "keys": "qgO",
+      "to": "ঙ্ঘ"
+    },
+    {
+      "keys": "qgj",
+      "to": "ঙ্ক"
+    },
+    {
+      "keys": "qgm",
+      "to": "ঙ্ম"
+    },
+    {
+      "keys": "qgn",
+      "to": "ঙ্ক্ষ"
+    },
+    {
+      "keys": "qgo",
+      "to": "ঙ্গ"
+    },
+    {
+      "keys": "rgb",
+      "to": "প্ন"
+    },
+    {
+      "keys": "rgk",
+      "to": "প্ত"
+    },
+    {
+      "keys": "rgn",
+      "to": "প্স"
+    },
+    {
+      "keys": "rgr",
+      "to": "প্প"
+    },
+    {
+      "keys": "rgt",
+      "to": "প্ট"
+    },
+    {
+      "keys": "tgt",
+      "to": "ট্ট"
+    },
+    {
+      "keys": "ugI",
+      "to": "জ্ঞ"
+    },
+    {
+      "keys": "ugU",
+      "to": "জ্ঝ"
+    },
+    {
+      "keys": "ugh",
+      "to": "জ্ব"
+    },
+    {
+      "keys": "ugu",
+      "to": "জ্জ"
+    },
+    {
+      "keys": "ygI",
+      "to": "চ্ঞ"
+    },
+    {
+      "keys": "ygY",
+      "to": "চ্ছ"
+    },
+    {
+      "keys": "ygy",
+      "to": "চ্চ"
+    },
+    {
+      "keys": "Dand",
+      "to": "।"
+    },
+    {
+      "keys": "Ngtz",
+      "to": "ষ্ট্র"
+    },
+    {
+      "keys": "Vgos",
+      "to": "ল্গু"
+    },
+    {
+      "keys": "bgkgh",
+      "to": "ন্ত্ব"
+    },
+    {
+      "keys": "bglgh",
+      "to": "ন্দ্ব"
+    },
+    {
+      "keys": "jgkgh",
+      "to": "ক্ত্ব"
+    },
+    {
+      "keys": "lgLgh",
+      "to": "দ্ধ্ব"
+    },
+    {
+      "keys": "lglgh",
+      "to": "দ্দ্ব"
+    },
+    {
+      "keys": "ngkgh",
+      "to": "স্ত্ব"
+    },
+    {
+      "keys": "ugugh",
+      "to": "জ্জ্ব"
+    },
+    {
+      "keys": "ygYgh",
+      "to": "চ্ছ্ব"
+    },
+    {
+      "keys": "Jafulla",
+      "to": "ক্য"
+    },
+    {
+      "keys": "Shift+\\",
+      "to": "ৎ"
+    },
+    {
+      "keys": "Avagraha",
+      "to": "ঽ"
+    },
+    {
+      "keys": "Lruvowel",
+      "to": "ঌ"
+    },
+    {
+      "keys": "Roovowel",
+      "to": "ৠ"
+    },
+    {
+      "keys": "Lroovowel",
+      "to": "ৡ"
+    }
+  ],
+  "HasSequences": true
 }

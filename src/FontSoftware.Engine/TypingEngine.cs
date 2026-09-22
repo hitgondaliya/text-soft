@@ -44,6 +44,13 @@ public sealed class TypingEngine : IDisposable
     private readonly StringBuilder _roman = new();   // roman letters typed for the current word
     private string _phoneticOut = string.Empty;      // script currently shown for that buffer
 
+    // ---- Multi-key runs (see KeySequence) ----
+    // Vendor keyboards map runs of keys, not single keys: on ITR Gujarati "y" is
+    // અ and "yt" is આ, replacing it. These hold the keys typed for the run in
+    // progress and the text they produced, so the next key can replace it.
+    private readonly StringBuilder _seqKeys = new();
+    private string _seqOut = string.Empty;
+
     // ---- Legacy Font Layout output (e.g. ShreeLipi-Ex) ----
     // When a legacy font layout is active, keys still map to Unicode, but we then
     // convert the current word Unicode→legacy bytes and inject THAT, so the text
@@ -94,6 +101,7 @@ public sealed class TypingEngine : IDisposable
         _pendingDead = null;
         _lastEmitted = null;
         ResetPhonetic();
+        ResetSequence();
         ResetLegacy();
         _log.Info($"Profile set: {languageName} / {fontName} / layout '{layout.Name}'.");
     }
@@ -166,6 +174,7 @@ public sealed class TypingEngine : IDisposable
         _pendingDead = null;
         _lastEmitted = null;
         ResetPhonetic();
+        ResetSequence();
         ResetLegacy();
         _log.Info($"Typing {(enabled ? "ON" : "OFF")}.");
         Toggled?.Invoke(this, new ToggleEventArgs
@@ -227,13 +236,20 @@ public sealed class TypingEngine : IDisposable
         if (IsModifier(e.VirtualKey))
             return;
 
-        var mapping = _layout.Find(e.VirtualKey);
-        if (mapping is null)
+        // Ctrl+Space is the escape the vendor keyboards use: it ends the run being
+        // typed so the next key starts a fresh one, and puts nothing on screen.
+        if (e.VirtualKey == VK_SPACE && IsDown(VK_CONTROL) && !IsDown(VK_MENU))
         {
-            _lastEmitted = null; // navigation/space/etc. breaks the cluster chain
-            ResetLegacy();       // and commits the current legacy word
-            return;              // unmapped key → default English behaviour
+            e.Handled = true;
+            _pendingDead = null;
+            _lastEmitted = null;
+            ResetSequence();
+            ResetLegacy();
+            return;
         }
+
+        var mapping = _layout.Find(e.VirtualKey);
+        char typed = KeyChar(e.VirtualKey);
 
         // Ctrl+A, Ctrl+S, Alt+F, Win+E and the rest are commands, not text. Without
         // this the layout would swallow them and type a letter instead, so no
@@ -242,15 +258,25 @@ public sealed class TypingEngine : IDisposable
         {
             _pendingDead = null;
             _lastEmitted = null;
+            ResetSequence();
             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
             return;
         }
 
-        string? output = SelectOutput(mapping);
-        if (string.IsNullOrEmpty(output))
+        // A key with no glyph of its own can still finish a run: on the ITR Gujarati
+        // keyboard "o" types nothing alone, but "fo" is ર્ક. So the run is resolved
+        // before an unmapped key is handed back to the application.
+        string output = mapping is null ? string.Empty : SelectOutput(mapping) ?? string.Empty;
+        int replace = 0;
+        if (_layout.HasSequences)
+            output = ResolveSequence(typed, output, out replace);
+
+        if (string.IsNullOrEmpty(output) && replace == 0)
         {
-            _lastEmitted = null;
-            return; // no glyph for this modifier combo → pass through
+            _lastEmitted = null;  // navigation/space/punctuation breaks the chain
+            ResetSequence();      // and ends the run being typed
+            ResetLegacy();        // and commits the current legacy word
+            return;               // nothing to type → default English behaviour
         }
 
         // Respect per-app exclusions only when we would otherwise inject.
@@ -258,6 +284,7 @@ public sealed class TypingEngine : IDisposable
         {
             _pendingDead = null;
             _lastEmitted = null;
+            ResetSequence();
             ResetLegacy();
             return; // don't suppress — let the app receive the raw key
         }
@@ -265,7 +292,7 @@ public sealed class TypingEngine : IDisposable
         // Suppress the original key and inject the mapped character(s).
         e.Handled = true;
 
-        if (mapping.DeadKey)
+        if (mapping is { DeadKey: true })
         {
             _pendingDead = output; // hold; combine with the next character
             return;
@@ -278,18 +305,94 @@ public sealed class TypingEngine : IDisposable
             _pendingDead = null;
         }
 
+        Emit(output, replace);
+    }
+
+    /// <summary>
+    /// Put <paramref name="output"/> on screen, first removing
+    /// <paramref name="replace"/> characters this layout had produced for the run
+    /// in progress.
+    /// </summary>
+    private void Emit(string output, int replace)
+    {
         // Legacy Font Layout: buffer the Unicode word, convert to the legacy
         // encoding, and inject that so it renders in the legacy font.
         if (_legacyConv is not null)
         {
+            if (replace > 0)
+                _uniWord.Length = Math.Max(0, _uniWord.Length - replace);
             _uniWord.Append(output);
             RerenderLegacy();
             _lastEmitted = null; // the legacy path owns backspacing for this word
             return;
         }
 
-        _injector.SendText(output);
+        if (replace > 0)
+            _injector.SendBackspace(replace);
+        if (output.Length > 0)
+            _injector.SendText(output);
         _lastEmitted = output;
+    }
+
+    /// <summary>
+    /// Fold this keystroke into the run being typed. While the keys so far can
+    /// still grow into a longer run the engine keeps composing, replacing what it
+    /// showed before; when they cannot, the run ends and a new one starts with
+    /// this key.
+    /// </summary>
+    private string ResolveSequence(char typed, string single, out int replace)
+    {
+        string grown = _seqKeys.ToString() + typed;
+        if (typed != '\0' && (_layout!.SequenceCanGrow(grown) || _layout.MatchSequence(grown) is not null))
+        {
+            string text = _layout.MatchSequence(grown) ?? _seqOut + single;
+            replace = _seqOut.Length;
+            _seqKeys.Clear();
+            _seqKeys.Append(grown);
+            _seqOut = text;
+            return text;
+        }
+
+        replace = 0;
+        _seqKeys.Clear();
+        if (typed != '\0') _seqKeys.Append(typed);
+        _seqOut = (typed == '\0' ? null : _layout!.MatchSequence(typed.ToString())) ?? single;
+        return _seqOut;
+    }
+
+    private void ResetSequence()
+    {
+        _seqKeys.Clear();
+        _seqOut = string.Empty;
+    }
+
+    /// <summary>
+    /// The character a US keyboard puts on this key, with the current Shift state -
+    /// the notation the vendor charts use for their runs ("Y" means Shift+y).
+    /// </summary>
+    private char KeyChar(int vk)
+    {
+        // CapsLock only counts when it is not the toggle key, exactly as it does
+        // when the single-key glyph is chosen.
+        bool caps = IsToggled(VK_CAPITAL) && ToggleKey != VK_CAPITAL && vk is >= 'A' and <= 'Z';
+        bool shift = IsDown(VK_SHIFT) ^ caps;
+        if (vk is >= 'A' and <= 'Z') return shift ? (char)vk : char.ToLowerInvariant((char)vk);
+        if (vk is >= '0' and <= '9') return shift ? ")!@#$%^&*("[vk - '0'] : (char)vk;
+        return vk switch
+        {
+            186 => shift ? ':' : ';',
+            187 => shift ? '+' : '=',
+            188 => shift ? '<' : ',',
+            189 => shift ? '_' : '-',
+            190 => shift ? '>' : '.',
+            191 => shift ? '?' : '/',
+            192 => shift ? '~' : '`',
+            219 => shift ? '{' : '[',
+            220 => shift ? '|' : (char)92,
+            221 => shift ? '}' : ']',
+            222 => shift ? '"' : (char)39,
+            _ => '\0',
+        };
     }
 
     // Replace the legacy text shown for the current word with the conversion of the

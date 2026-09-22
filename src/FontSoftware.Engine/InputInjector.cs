@@ -9,7 +9,7 @@ namespace FontSoftware.Engine;
 /// as Unicode via SendInput so mapped script characters land correctly in Word,
 /// Notepad, browsers, etc. regardless of the OS keyboard layout.
 /// </summary>
-public sealed class InputInjector
+public class InputInjector
 {
     private readonly IAppLog _log;
 
@@ -22,7 +22,7 @@ public sealed class InputInjector
     public static readonly IntPtr InjectionSignature = new(0x46_53_54_31); // "FST1"
 
     /// <summary>Inject a string of Unicode text into the focused window.</summary>
-    public void SendText(string text)
+    public virtual void SendText(string text)
     {
         if (string.IsNullOrEmpty(text))
             return;
@@ -47,7 +47,7 @@ public sealed class InputInjector
     /// the user touching the font box. Whatever text was on the clipboard before is
     /// put back shortly after the paste.
     /// </summary>
-    public void SendRichText(string text, string fontName)
+    public virtual void SendRichText(string text, string fontName)
     {
         if (string.IsNullOrEmpty(text))
             return;
@@ -74,7 +74,7 @@ public sealed class InputInjector
     }
 
     /// <summary>Send <paramref name="count"/> backspace key presses.</summary>
-    public void SendBackspace(int count = 1)
+    public virtual void SendBackspace(int count = 1)
     {
         if (count <= 0)
             return;
