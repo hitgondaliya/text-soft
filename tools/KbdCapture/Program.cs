@@ -218,6 +218,57 @@ if (args.Contains("--alter"))
     return 0;
 }
 
+// Rosetta: the same keyboard read twice, once by the Unicode composer and once
+// by a legacy-font one. The key is the join - whatever key 'k' types, the two
+// answers are the same character in two encodings, which is exactly the pair a
+// mapping table is made of, straight from the vendor.
+if (args.Contains("--rosetta"))
+{
+    string legacyFamily = "X";
+    for (int i = 0; i < args.Length; i++) if (args[i] == "--legacy") legacyFamily = args[++i];
+
+    string otherName = "S8" + char.ToUpperInvariant(script[0]) + script[1..].ToLowerInvariant() + legacyFamily + "64.dll";
+    IntPtr other = LoadLibrary(Path.Combine(shree, otherName));
+    if (other == IntPtr.Zero) { Console.Error.WriteLine($"cannot load {otherName}"); return 1; }
+
+    // the Shree-Lipi 7 composers answer in bytes and drop the W from the name
+    IntPtr proc = GetProcAddress(other, "TutorGetMappedCodeW");
+    if (proc == IntPtr.Zero) proc = GetProcAddress(other, "TutorGetMappedCode");
+    if (proc == IntPtr.Zero) { Console.Error.WriteLine($"{otherName} has no mapped-code export"); return 1; }
+    var legacyMapped = Marshal.GetDelegateForFunctionPointer<GetMappedCode>(proc);
+
+    var legacyLoad = Marshal.GetDelegateForFunctionPointer<LoadKbd>(GetProcAddress(other, "LoadKbdOverlay"));
+    if (kbd is not null)
+        legacyLoad(Marshal.StringToHGlobalAnsi(Path.Combine(shree, kbd)), page[2], page[3], page[4]);
+
+    var pairs = new SortedDictionary<string, string>(StringComparer.Ordinal);
+    for (char key = '!'; key <= '~'; key++)
+    {
+        string? uni = Press(key, 0);
+        if (uni is null) continue;
+
+        for (int k = 0; k < 32; k++) Marshal.WriteByte(page[7], k, 0);
+        int units = legacyMapped(new IntPtr(key), page[2], page[3], page[4], page[5],
+                                 IntPtr.Zero, page[7], page[8]);
+        if (units <= 0) continue;
+        var bytes = new byte[Math.Min(units * 2, 30)];
+        Marshal.Copy(page[7], bytes, 0, bytes.Length);
+        string legacy = Encoding.Unicode.GetString(bytes).TrimEnd('\0');
+        if (legacy.Length == 0 || legacy == uni) continue;
+        pairs[uni] = legacy;
+    }
+
+    Console.WriteLine($"{Path.GetFileNameWithoutExtension(kbd ?? before)}: {pairs.Count} pairs");
+    if (outPath is not null)
+        File.WriteAllText(outPath, JsonSerializer.Serialize(new { script, family = legacyFamily, pairs },
+            new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping }),
+            new UTF8Encoding(false));
+    else
+        foreach (var (u, l) in pairs.Take(20))
+            Console.WriteLine($"  {u} = {string.Join(' ', l.Select(c => ((int)c).ToString("X4")))}");
+    return 0;
+}
+
 // Press every printable key and write down what the composer says it types.
 // The sixth argument is the layer: 0 is the printed keyboard (the key's own
 // character carries the shift state), 1 is the third layer the vendor reaches
