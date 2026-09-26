@@ -6,6 +6,7 @@
     {
       "vk": 48,
       "base": "੦",
+      "shift": "!",
       "deadKey": false
     },
     {
@@ -23,26 +24,31 @@
     {
       "vk": 51,
       "base": "੩",
+      "shift": "‘",
       "deadKey": false
     },
     {
       "vk": 52,
       "base": "੪",
+      "shift": "’",
       "deadKey": false
     },
     {
       "vk": 53,
       "base": "੫",
+      "shift": "੍ਹ",
       "deadKey": false
     },
     {
       "vk": 54,
       "base": "੬",
+      "shift": ":",
       "deadKey": false
     },
     {
       "vk": 55,
       "base": "੭",
+      "shift": ";",
       "deadKey": false
     },
     {
@@ -54,6 +60,7 @@
     {
       "vk": 57,
       "base": "੯",
+      "shift": "?",
       "deadKey": false
     },
     {
@@ -77,6 +84,7 @@
     {
       "vk": 68,
       "base": "ਿ",
+      "shift": "-",
       "deadKey": false
     },
     {
@@ -94,11 +102,13 @@
     {
       "vk": 71,
       "base": "ੀ",
+      "shift": "ਂ",
       "deadKey": false
     },
     {
       "vk": 72,
       "base": "ਹ",
+      "shift": "ੲ",
       "deadKey": false
     },
     {
@@ -110,13 +120,13 @@
     {
       "vk": 74,
       "base": "ਾ",
-      "shift": "ਸ਼",
+      "shift": "ਾਂ",
       "deadKey": false
     },
     {
       "vk": 75,
-      "base": "ਉ",
-      "shift": "੍",
+      "base": "ੀਂ",
+      "shift": "ੱ",
       "deadKey": false
     },
     {
@@ -128,6 +138,7 @@
     {
       "vk": 77,
       "base": "।",
+      "shift": "ਉਂ",
       "deadKey": false
     },
     {
@@ -211,34 +222,36 @@
     {
       "vk": 186,
       "base": "ਵ",
-      "shift": "ਵ",
+      "shift": "੍ਵ",
       "deadKey": false
     },
     {
       "vk": 187,
       "base": "=",
+      "shift": "੍ਰ",
       "deadKey": false
     },
     {
       "vk": 188,
-      "base": "੍",
+      "base": "ੱ",
       "deadKey": false
     },
     {
       "vk": 189,
       "base": "-",
-      "shift": "ਈ",
+      "shift": "ਲ਼",
       "deadKey": false
     },
     {
       "vk": 190,
       "base": ".",
-      "shift": "ਂ",
+      "shift": "ੰ",
       "deadKey": false
     },
     {
       "vk": 191,
       "base": "ਜ਼",
+      "shift": "ਜ਼",
       "deadKey": false
     },
     {
@@ -254,8 +267,14 @@
       "deadKey": false
     },
     {
+      "vk": 220,
+      "base": "(",
+      "shift": ")",
+      "deadKey": false
+    },
+    {
       "vk": 221,
-      "base": "ਇ",
+      "base": "ਹੈ",
       "shift": "ਖ਼",
       "deadKey": false
     },
@@ -375,9 +394,66 @@
     {
       "keys": "¤/",
       "to": "÷"
+    },
+    {
+      "keys": "Ø-",
+      "to": "–"
+    },
+    {
+      "keys": "Ø=",
+      "to": "—"
+    },
+    {
+      "keys": "Øe",
+      "to": "÷"
+    },
+    {
+      "keys": "Øq",
+      "to": "%"
+    },
+    {
+      "keys": "Ør",
+      "to": "/"
+    },
+    {
+      "keys": "Øt",
+      "to": "+"
+    },
+    {
+      "keys": "Øw",
+      "to": "×"
     }
   ],
-  "escape": [],
+  "escape": [
+    {
+      "keys": "-",
+      "to": "–"
+    },
+    {
+      "keys": "=",
+      "to": "—"
+    },
+    {
+      "keys": "e",
+      "to": "÷"
+    },
+    {
+      "keys": "q",
+      "to": "%"
+    },
+    {
+      "keys": "r",
+      "to": "/"
+    },
+    {
+      "keys": "t",
+      "to": "+"
+    },
+    {
+      "keys": "w",
+      "to": "×"
+    }
+  ],
   "symbols": [
     {
       "keys": "$",
@@ -393,6 +469,6 @@
     }
   ],
   "HasSequences": true,
-  "HasEscape": false,
+  "HasEscape": true,
   "HasSymbols": true
 }

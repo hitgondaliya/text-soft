@@ -18,16 +18,19 @@
     {
       "vk": 50,
       "base": "౨",
+      "shift": "?",
       "deadKey": false
     },
     {
       "vk": 51,
       "base": "౩",
+      "shift": "!",
       "deadKey": false
     },
     {
       "vk": 52,
       "base": "౪",
+      "shift": "/",
       "deadKey": false
     },
     {
@@ -39,11 +42,13 @@
     {
       "vk": 54,
       "base": "౬",
+      "shift": "+",
       "deadKey": false
     },
     {
       "vk": 55,
       "base": "౭",
+      "shift": "్ర",
       "deadKey": false
     },
     {
@@ -60,13 +65,13 @@
     },
     {
       "vk": 65,
-      "base": "ా",
+      "base": "ఆ",
       "shift": "ఆ",
       "deadKey": false
     },
     {
       "vk": 66,
-      "base": "ె",
+      "base": "ఎ",
       "shift": "ఎ",
       "deadKey": false
     },
@@ -79,7 +84,7 @@
     {
       "vk": 68,
       "base": "్",
-      "shift": "D",
+      "shift": "్",
       "deadKey": false
     },
     {
@@ -90,6 +95,7 @@
     },
     {
       "vk": 70,
+      "base": "ం",
       "shift": "ణ",
       "deadKey": false
     },
@@ -125,19 +131,19 @@
     },
     {
       "vk": 76,
-      "base": "ు",
+      "base": "ఉ",
       "shift": "ఉ",
       "deadKey": false
     },
     {
       "vk": 77,
-      "base": "ై",
+      "base": "ఐ",
       "shift": "ఐ",
       "deadKey": false
     },
     {
       "vk": 78,
-      "base": "ే",
+      "base": "ఏ",
       "shift": "ఏ",
       "deadKey": false
     },
@@ -149,7 +155,7 @@
     },
     {
       "vk": 80,
-      "base": "ో",
+      "base": "ఓ",
       "shift": "ఓ",
       "deadKey": false
     },
@@ -166,7 +172,7 @@
     },
     {
       "vk": 83,
-      "base": "ి",
+      "base": "ఇ",
       "shift": "ఇ",
       "deadKey": false
     },
@@ -184,7 +190,7 @@
     },
     {
       "vk": 86,
-      "base": "ీ",
+      "base": "ఈ",
       "shift": "ఈ",
       "deadKey": false
     },
@@ -208,7 +214,7 @@
     },
     {
       "vk": 90,
-      "base": "ృ",
+      "base": "ఋ",
       "shift": "ఋ",
       "deadKey": false
     },
@@ -216,6 +222,12 @@
       "vk": 186,
       "base": "స",
       "shift": "హ",
+      "deadKey": false
+    },
+    {
+      "vk": 187,
+      "base": ":",
+      "shift": ";",
       "deadKey": false
     },
     {
@@ -227,11 +239,12 @@
     {
       "vk": 189,
       "base": "-",
+      "shift": "=",
       "deadKey": false
     },
     {
       "vk": 190,
-      "base": "ూ",
+      "base": "ఊ",
       "shift": "ఊ",
       "deadKey": false
     },
@@ -242,8 +255,14 @@
       "deadKey": false
     },
     {
+      "vk": 192,
+      "base": "‘",
+      "shift": "’",
+      "deadKey": false
+    },
+    {
       "vk": 219,
-      "base": "ౌ",
+      "base": "ఔ",
       "shift": "ఔ",
       "deadKey": false
     },
@@ -255,6 +274,7 @@
     },
     {
       "vk": 221,
+      "base": "ః",
       "shift": "ష",
       "deadKey": false
     },
@@ -408,7 +428,31 @@
       "to": "॥"
     },
     {
+      "keys": "Ø-",
+      "to": "–"
+    },
+    {
+      "keys": "Ø=",
+      "to": "—"
+    },
+    {
+      "keys": "Øh",
+      "to": "ఁ"
+    },
+    {
       "keys": "Øk",
+      "to": "ౠ"
+    },
+    {
+      "keys": "Øl",
+      "to": "ఽ"
+    },
+    {
+      "keys": "Øu",
+      "to": "।"
+    },
+    {
+      "keys": "Øx",
       "to": "ౠ"
     },
     {
@@ -574,7 +618,31 @@
   ],
   "escape": [
     {
+      "keys": "-",
+      "to": "–"
+    },
+    {
+      "keys": "=",
+      "to": "—"
+    },
+    {
+      "keys": "h",
+      "to": "ఁ"
+    },
+    {
       "keys": "k",
+      "to": "ౠ"
+    },
+    {
+      "keys": "l",
+      "to": "ఽ"
+    },
+    {
+      "keys": "u",
+      "to": "।"
+    },
+    {
+      "keys": "x",
       "to": "ౠ"
     }
   ],

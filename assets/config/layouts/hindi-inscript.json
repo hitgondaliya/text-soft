@@ -6,6 +6,7 @@
     {
       "vk": 48,
       "base": "०",
+      "shift": ")",
       "deadKey": false
     },
     {
@@ -23,12 +24,13 @@
     {
       "vk": 51,
       "base": "३",
+      "shift": "्र",
       "deadKey": false
     },
     {
       "vk": 52,
       "base": "४",
-      "shift": "ज्ञ",
+      "shift": "र्",
       "deadKey": false
     },
     {
@@ -58,6 +60,7 @@
     {
       "vk": 57,
       "base": "९",
+      "shift": "(",
       "deadKey": false
     },
     {
@@ -69,7 +72,7 @@
     {
       "vk": 66,
       "base": "व",
-      "shift": "ऴ",
+      "shift": "‍",
       "deadKey": false
     },
     {
@@ -236,8 +239,8 @@
     },
     {
       "vk": 189,
-      "base": "ऋ",
-      "shift": "ॠ",
+      "base": "-",
+      "shift": "ः",
       "deadKey": false
     },
     {
@@ -253,6 +256,12 @@
       "deadKey": false
     },
     {
+      "vk": 192,
+      "base": "ॊ",
+      "shift": "ऒ",
+      "deadKey": false
+    },
+    {
       "vk": 219,
       "base": "ड",
       "shift": "ढ",
@@ -260,6 +269,7 @@
     },
     {
       "vk": 220,
+      "base": "ॉ",
       "shift": "ऑ",
       "deadKey": false
     },
@@ -499,6 +509,42 @@
       "to": "॥"
     },
     {
+      "keys": "Øa",
+      "to": "ऽ"
+    },
+    {
+      "keys": "Øe",
+      "to": "’"
+    },
+    {
+      "keys": "Øi",
+      "to": "-"
+    },
+    {
+      "keys": "Øq",
+      "to": "%"
+    },
+    {
+      "keys": "Ør",
+      "to": ";"
+    },
+    {
+      "keys": "Øt",
+      "to": "!"
+    },
+    {
+      "keys": "Øu",
+      "to": "+"
+    },
+    {
+      "keys": "Øw",
+      "to": "‘"
+    },
+    {
+      "keys": "Øy",
+      "to": "-"
+    },
+    {
       "keys": "'d'",
       "to": "ट्ट"
     },
@@ -703,7 +749,44 @@
       "to": "स्र"
     }
   ],
-  "escape": [],
+  "escape": [
+    {
+      "keys": "a",
+      "to": "ऽ"
+    },
+    {
+      "keys": "e",
+      "to": "’"
+    },
+    {
+      "keys": "i",
+      "to": "-"
+    },
+    {
+      "keys": "q",
+      "to": "%"
+    },
+    {
+      "keys": "r",
+      "to": ";"
+    },
+    {
+      "keys": "t",
+      "to": "!"
+    },
+    {
+      "keys": "u",
+      "to": "+"
+    },
+    {
+      "keys": "w",
+      "to": "‘"
+    },
+    {
+      "keys": "y",
+      "to": "-"
+    }
+  ],
   "symbols": [
     {
       "keys": "$",
@@ -795,6 +878,6 @@
     }
   ],
   "HasSequences": true,
-  "HasEscape": false,
+  "HasEscape": true,
   "HasSymbols": true
 }

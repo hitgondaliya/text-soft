@@ -19,7 +19,7 @@ using System.Text.Json;
 string shree = @"C:\Shree-Lipi nxt";
 string script = "guj";
 string? kbd = null;
-int form = 2;
+int form = 4;   // full path with extension - the form that actually switches
 string? outPath = null;
 bool quiet = false;
 for (int i = 0; i < args.Length; i++)
@@ -36,7 +36,11 @@ for (int i = 0; i < args.Length; i++)
 }
 
 // S8 + script + U (Unicode output) + 64
-string dllName = "S8" + char.ToUpperInvariant(script[0]) + script[1..].ToLowerInvariant() + "U64.dll";
+string family = "U";
+for (int i = 0; i < args.Length; i++) if (args[i] == "--family") family = args[++i];
+// U is the Unicode composer; 7, X and G are the legacy font families, which
+// answer with the bytes those fonts draw instead of Unicode.
+string dllName = "S8" + char.ToUpperInvariant(script[0]) + script[1..].ToLowerInvariant() + family + "64.dll";
 string dllPath = Path.Combine(shree, dllName);
 if (!File.Exists(dllPath)) { Console.Error.WriteLine($"no composer for '{script}': {dllPath}"); return 1; }
 
@@ -87,8 +91,39 @@ if (args.Contains("--inspect"))
     return 0;
 }
 
+// Their own host (Compose64.exe) runs InitializeComposeDLL, then SetHook, then
+// LoadKeyboard. Which of those the composer actually needs before it will take
+// a different keyboard is what --pre sweeps.
+string? pre = null;
+for (int i = 0; i < args.Length; i++) if (args[i] == "--pre") pre = args[++i];
+if (pre is not null)
+{
+    foreach (string step in pre.Split(','))
+    {
+        try
+        {
+            switch (step)
+            {
+                case "control0": Bind<Control>(lib, "ControlDll")(IntPtr.Zero); break;
+                case "control1": Bind<Control>(lib, "ControlDll")(new IntPtr(1)); break;
+                case "hook":
+                    Bind<Hook>(lib, "SetHook")(page[1], IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
+                    break;
+                case "hookname":
+                    Bind<Hook>(lib, "SetHook")(Marshal.StringToHGlobalAnsi(dllName), IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
+                    break;
+                case "ilreset": Bind<Control>(lib, "ILRESET")(IntPtr.Zero); break;
+            }
+            if (!quiet) Console.WriteLine($"  pre-step '{step}' ok");
+        }
+        catch (Exception ex) { if (!quiet) Console.WriteLine($"  pre-step '{step}' failed: {ex.GetType().Name}"); }
+    }
+}
+
 if (kbd is not null)
 {
+    string? exact = null;
+    for (int i = 0; i < args.Length; i++) if (args[i] == "--name") exact = args[++i];
     string[] forms =
     {
         Path.GetFileNameWithoutExtension(kbd),
@@ -99,28 +134,128 @@ if (kbd is not null)
     // Their own host declares LoadKbdOverlay(lpszKbdOverlay) - one string. The
     // only question left is whether it wants it narrow or wide.
     bool wide = args.Contains("--wide");
-    string text = forms[Math.Clamp(form - 1, 0, forms.Length - 1)];
+    string text = exact ?? forms[Math.Clamp(form - 1, 0, forms.Length - 1)];
+    // ANSI, and the FULL path with extension: that is the one form the composer takes.
     IntPtr name = wide ? Marshal.StringToHGlobalUni(text) : Marshal.StringToHGlobalAnsi(text);
     int r = loadKbd(name, page[2], page[3], page[4]);
     if (!quiet) Console.WriteLine($"LoadKbdOverlay({(wide ? "wide" : "ansi")} '{text}') returned {r}; keyboard is now '{Loaded()}'");
 }
 
-// Press every printable key, unshifted and shifted, and write down what the
-// composer says it types.
-var keys = new SortedDictionary<string, string>(StringComparer.Ordinal);
-for (char key = '!'; key <= '~'; key++)
+// The composer's built-in keyboard is only one of twenty-one. But a keyboard
+// file holds key -> internal code, and TutorGetAkshar looks like code ->
+// character: with that table every keyboard file decodes, without ever having
+// to make the composer switch.
+if (args.Contains("--akshar"))
+{
+    var akshar = Bind<GetAkshar>(lib, "TutorGetAkshar");
+    Console.WriteLine("code -> character, as the composer names it:");
+    int named = 0;
+    for (int code = 0; code <= 255; code++)
+    {
+        for (int k = 0; k < 64; k++) { Marshal.WriteByte(page[2], k, 0); Marshal.WriteByte(page[3], k, 0); }
+        int units;
+        try { units = akshar(new IntPtr(code), page[2], page[3]); }
+        catch (Exception ex) { Console.WriteLine($"  {code:X2}: {ex.GetType().Name}"); break; }
+
+        var written = new List<string>();
+        foreach (int slot in new[] { 2, 3 })
+        {
+            var bytes = new byte[24];
+            Marshal.Copy(page[slot], bytes, 0, 24);
+            if (bytes.Any(b => b != 0))
+            {
+                string text = Encoding.Unicode.GetString(bytes).TrimEnd('\0').Trim();
+                written.Add($"arg{slot}='{text}' [{string.Join(' ', bytes.Take(6).Select(b => b.ToString("X2")))}]");
+            }
+        }
+        if (units != 0 || written.Count > 0)
+        {
+            named++;
+            if (named <= 40) Console.WriteLine($"  {code:X2}: returned {units}  {string.Join("  ", written)}");
+        }
+    }
+    Console.WriteLine($"codes that answered: {named}");
+    return 0;
+}
+
+// The third layer. The published Modular chart documents exactly one entry for
+// it - Ctrl+Space then 'v' is ૠ - which is enough of an oracle to recognise the
+// layer when a call shape finally produces it.
+if (args.Contains("--alter"))
+{
+    var alterCode = Bind<AlterCode>(lib, "TutorGetAlterCode");
+    int slot = 0, value = 0;
+    string probe = "v";
+    for (int i = 0; i < args.Length; i++)
+    {
+        if (args[i] == "--altslot") slot = int.Parse(args[++i]);
+        else if (args[i] == "--altval") value = Convert.ToInt32(args[++i], 16);
+        else if (args[i] == "--altkey") probe = args[++i];
+    }
+
+    if (slot == 0)
+    {
+        Console.WriteLine("TutorGetAlterCode per key:");
+        foreach (char c in "abcdefghijklmnopqrstuvwxyz")
+            Console.Write($" {c}={alterCode(c):X2}");
+        Console.WriteLine();
+        return 0;
+    }
+
+    var call = new IntPtr[9];
+    for (int i = 1; i <= 8; i++) call[i] = page[i];
+    call[slot] = new IntPtr(value);
+    foreach (char c in probe)
+    {
+        call[1] = new IntPtr(c);
+        for (int k = 0; k < 32; k++) Marshal.WriteByte(page[7], k, 0);
+        int units = mapped(call[1], call[2], call[3], call[4], call[5], call[6], call[7], call[8]);
+        var bytes = new byte[24];
+        Marshal.Copy(page[7], bytes, 0, 24);
+        string text = Encoding.Unicode.GetString(bytes).TrimEnd('\0').Trim();
+        Console.WriteLine($"ALT slot {slot} = 0x{value:X} : key '{c}' -> {units} '{text}'");
+    }
+    return 0;
+}
+
+// Press every printable key and write down what the composer says it types.
+// The sixth argument is the layer: 0 is the printed keyboard (the key's own
+// character carries the shift state), 1 is the third layer the vendor reaches
+// with Ctrl+Space. Their Modular chart documents one entry for it - Ctrl+Space
+// then 'v' is ૠ - and that is exactly what layer 1 returns.
+string? Press(char key, int layer)
 {
     for (int k = 0; k < 32; k++) Marshal.WriteByte(page[7], k, 0);
-    int units = mapped(key, page[2], page[3], page[4], page[5], page[6], page[7], page[8]);
-    if (units <= 0) continue;
+    int units = mapped(new IntPtr(key), page[2], page[3], page[4], page[5],
+                       new IntPtr(layer), page[7], page[8]);
+    if (units <= 0) return null;
 
     var bytes = new byte[Math.Min(units * 2, 30)];
     Marshal.Copy(page[7], bytes, 0, bytes.Length);
-    // A key that types a matra comes back with a leading space - the dotted-circle
-    // carrier a lone vowel sign is shown on, not part of the character.
-    string text = Encoding.Unicode.GetString(bytes).TrimEnd('\0').TrimStart(' ');
-    if (text.Length == 0) continue;
-    keys[key.ToString()] = text;
+    string text = Encoding.Unicode.GetString(bytes).TrimEnd('\0');
+    if (text.Length == 0) return null;
+
+    // A lone vowel sign is shown sitting on a carrier - a space or a dot - the
+    // way a chart prints it on a dotted circle. The carrier is not part of the
+    // character.
+    if (text.Any(c => c is >= 'ऀ' and <= '෿'))
+        text = new string(text.Where(c => c > '~').ToArray());
+    // Some keys come back as the tutor's own placeholder instead of text at all
+    // ("Lk" for the virama). Two or more bare Latin letters is never a keyboard's
+    // answer in an Indian script, so say nothing rather than something wrong.
+    else if (text.Length > 1 && text.All(char.IsAsciiLetter))
+        return null;
+
+    return text.Trim().Length == 0 ? null : text.Trim();
+}
+
+var keys = new SortedDictionary<string, string>(StringComparer.Ordinal);
+var alter = new SortedDictionary<string, string>(StringComparer.Ordinal);
+for (char key = '!'; key <= '~'; key++)
+{
+    if (Press(key, 0) is { } normal) keys[key.ToString()] = normal;
+    if (Press(key, 1) is { } third && third != keys.GetValueOrDefault(key.ToString()))
+        alter[key.ToString()] = third;
 }
 
 if (!quiet)
@@ -128,6 +263,56 @@ if (!quiet)
     Console.WriteLine($"keys that type something: {keys.Count}");
     foreach (var row in new[] { "qwertyuiop", "asdfghjkl", "zxcvbnm", "QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM" })
         Console.WriteLine("  " + string.Join("  ", row.Select(c => $"{c}={(keys.TryGetValue(c.ToString(), out var v) ? v : "·")}")));
+}
+
+// Score the capture against a published chart for the same keyboard. The charts
+// are the oracle: a load that really switched the keyboard scores near 100, one
+// that did nothing keeps scoring against whatever was loaded before.
+string? chart = null;
+for (int i = 0; i < args.Length; i++) if (args[i] == "--score") chart = args[++i];
+if (chart is not null)
+{
+    using var doc = JsonDocument.Parse(File.ReadAllText(chart));
+    var printed = new Dictionary<string, string>(StringComparer.Ordinal);
+    foreach (var p in doc.RootElement.GetProperty("Pairs").EnumerateArray())
+    {
+        string k = p.GetProperty("Key").GetString() ?? "";
+        string u = p.GetProperty("Uni").GetString() ?? "";
+        if (k.Length == 1 && u.Length > 0 && !printed.ContainsKey(k)) printed[k] = u;
+    }
+
+    // the chart writes the third layer as Ø + key, the same mark our layouts use
+    var thirdLayer = new Dictionary<string, string>(StringComparer.Ordinal);
+    foreach (var p in doc.RootElement.GetProperty("Pairs").EnumerateArray())
+    {
+        string k = p.GetProperty("Key").GetString() ?? "";
+        string u = p.GetProperty("Uni").GetString() ?? "";
+        if (k.Length == 2 && k[0] == 'Ø' && u.Length > 0) thirdLayer[k[1..]] = u;
+    }
+    if (thirdLayer.Count > 0)
+    {
+        int hit = thirdLayer.Count(t => alter.TryGetValue(t.Key, out var mine) && mine == t.Value);
+        Console.WriteLine($"  third layer (Ctrl+Space): {hit}/{thirdLayer.Count} same");
+        foreach (var (k, u) in thirdLayer.Take(4))
+            Console.WriteLine($"    Ctrl+Space {k}: chart {u} / composer {alter.GetValueOrDefault(k, "-")}");
+    }
+
+    int same = 0, differ = 0, absent = 0;
+    var examples = new List<string>();
+    foreach (var (k, u) in printed)
+    {
+        if (!keys.TryGetValue(k, out string? mine)) { absent++; continue; }
+        if (mine == u) same++;
+        else
+        {
+            differ++;
+            if (examples.Count < 6) examples.Add($"{k}: chart {u} / composer {mine}");
+        }
+    }
+    int total = same + differ + absent;
+    Console.WriteLine($"SCORE {Path.GetFileNameWithoutExtension(chart)}: {same}/{total} " +
+                      $"({(total == 0 ? 0 : 100.0 * same / total):F0}%) same, {differ} differ, {absent} not captured");
+    foreach (string e in examples) Console.WriteLine("    " + e);
 }
 
 // Which of our own keyboards is this, and do we type it the same way?
@@ -160,8 +345,8 @@ if (args.Contains("--compare"))
 
 if (outPath is not null)
 {
-    var doc = new { script, keyboard = kbd ?? before, dll = dllName, keys };
-    File.WriteAllText(outPath, JsonSerializer.Serialize(doc, new JsonSerializerOptions
+    var doc2 = new { script, keyboard = kbd ?? before, dll = dllName, keys, alter };
+    File.WriteAllText(outPath, JsonSerializer.Serialize(doc2, new JsonSerializerOptions
     {
         WriteIndented = true,
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
@@ -224,3 +409,15 @@ delegate int GetMappedCode(IntPtr key, IntPtr a2, IntPtr a3, IntPtr a4, IntPtr a
 [UnmanagedFunctionPointer(CallingConvention.StdCall)]
 delegate int LoadKbd(IntPtr name, IntPtr a2, IntPtr a3, IntPtr a4);
 
+
+[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+delegate int Control(IntPtr arg);
+
+[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+delegate int Hook(IntPtr a1, IntPtr a2, IntPtr a3, IntPtr a4);
+
+[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+delegate int GetAkshar(IntPtr code, IntPtr a2, IntPtr a3);
+
+[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+delegate int AlterCode(IntPtr code);

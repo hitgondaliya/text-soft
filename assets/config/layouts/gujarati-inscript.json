@@ -6,6 +6,7 @@
     {
       "vk": 48,
       "base": "૦",
+      "shift": ")",
       "deadKey": false
     },
     {
@@ -23,12 +24,13 @@
     {
       "vk": 51,
       "base": "૩",
+      "shift": "્ર",
       "deadKey": false
     },
     {
       "vk": 52,
       "base": "૪",
-      "shift": "જ્ઞ",
+      "shift": "ર્",
       "deadKey": false
     },
     {
@@ -58,6 +60,7 @@
     {
       "vk": 57,
       "base": "૯",
+      "shift": "(",
       "deadKey": false
     },
     {
@@ -69,6 +72,7 @@
     {
       "vk": 66,
       "base": "વ",
+      "shift": "’",
       "deadKey": false
     },
     {
@@ -187,6 +191,7 @@
     {
       "vk": 86,
       "base": "ન",
+      "shift": "‘",
       "deadKey": false
     },
     {
@@ -205,6 +210,11 @@
       "vk": 89,
       "base": "બ",
       "shift": "ભ",
+      "deadKey": false
+    },
+    {
+      "vk": 90,
+      "shift": "્ય",
       "deadKey": false
     },
     {
@@ -227,8 +237,8 @@
     },
     {
       "vk": 189,
-      "base": "ઋ",
-      "shift": "ૠ",
+      "base": "-",
+      "shift": "ઃ",
       "deadKey": false
     },
     {
@@ -240,6 +250,13 @@
     {
       "vk": 191,
       "base": "ય",
+      "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 192,
+      "base": "*",
+      "shift": "!",
       "deadKey": false
     },
     {
@@ -250,6 +267,7 @@
     },
     {
       "vk": 220,
+      "base": "ૉ",
       "shift": "ઑ",
       "deadKey": false
     },
@@ -357,12 +375,48 @@
       "to": "ક્"
     },
     {
+      "keys": "Øb",
+      "to": "÷"
+    },
+    {
+      "keys": "Øe",
+      "to": "’"
+    },
+    {
+      "keys": "Øn",
+      "to": "×"
+    },
+    {
+      "keys": "Øq",
+      "to": "%"
+    },
+    {
+      "keys": "Ør",
+      "to": ";"
+    },
+    {
+      "keys": "Øt",
+      "to": "–"
+    },
+    {
       "keys": "Øv",
       "to": "ૠ"
     },
     {
+      "keys": "Øw",
+      "to": "‘"
+    },
+    {
       "keys": "Øx",
       "to": "ઽ"
+    },
+    {
+      "keys": "Øy",
+      "to": "-"
+    },
+    {
+      "keys": "Øz",
+      "to": "–"
     },
     {
       "keys": "\"d\"",
@@ -527,12 +581,48 @@
   ],
   "escape": [
     {
+      "keys": "b",
+      "to": "÷"
+    },
+    {
+      "keys": "e",
+      "to": "’"
+    },
+    {
+      "keys": "n",
+      "to": "×"
+    },
+    {
+      "keys": "q",
+      "to": "%"
+    },
+    {
+      "keys": "r",
+      "to": ";"
+    },
+    {
+      "keys": "t",
+      "to": "–"
+    },
+    {
       "keys": "v",
       "to": "ૠ"
     },
     {
+      "keys": "w",
+      "to": "‘"
+    },
+    {
       "keys": "x",
       "to": "ઽ"
+    },
+    {
+      "keys": "y",
+      "to": "-"
+    },
+    {
+      "keys": "z",
+      "to": "–"
     }
   ],
   "symbols": [],

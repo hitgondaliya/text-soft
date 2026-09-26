@@ -12,6 +12,7 @@
     {
       "vk": 49,
       "base": "૧",
+      "shift": "–",
       "deadKey": false
     },
     {
@@ -102,7 +103,7 @@
     {
       "vk": 72,
       "base": "હ",
-      "shift": "ૠ",
+      "shift": "ઃ",
       "deadKey": false
     },
     {
@@ -204,6 +205,12 @@
     {
       "vk": 89,
       "base": "ય",
+      "shift": "્ય",
+      "deadKey": false
+    },
+    {
+      "vk": 90,
+      "shift": "!",
       "deadKey": false
     },
     {
@@ -215,6 +222,7 @@
     {
       "vk": 187,
       "base": "્",
+      "shift": "=",
       "deadKey": false
     },
     {
@@ -225,7 +233,8 @@
     },
     {
       "vk": 189,
-      "base": "ઋ",
+      "base": "-",
+      "shift": "+",
       "deadKey": false
     },
     {
@@ -236,6 +245,23 @@
     {
       "vk": 191,
       "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 192,
+      "shift": "–",
+      "deadKey": false
+    },
+    {
+      "vk": 220,
+      "base": "×",
+      "shift": "÷",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "‘",
+      "shift": "’",
       "deadKey": false
     }
   ],
@@ -298,6 +324,10 @@
       "to": "કુ"
     },
     {
+      "keys": "Øa",
+      "to": "આ"
+    },
+    {
       "keys": "Øe",
       "to": "ઊ"
     },
@@ -318,8 +348,24 @@
       "to": "ઙ"
     },
     {
+      "keys": "Øo",
+      "to": "ૅ"
+    },
+    {
+      "keys": "Ør",
+      "to": "ૃ"
+    },
+    {
       "keys": "Øs",
       "to": "ષ"
+    },
+    {
+      "keys": "Øu",
+      "to": "ૄ"
+    },
+    {
+      "keys": "Øx",
+      "to": "–––"
     },
     {
       "keys": "Øz",
@@ -528,6 +574,10 @@
   ],
   "escape": [
     {
+      "keys": "a",
+      "to": "આ"
+    },
+    {
       "keys": "e",
       "to": "ઊ"
     },
@@ -548,8 +598,24 @@
       "to": "ઙ"
     },
     {
+      "keys": "o",
+      "to": "ૅ"
+    },
+    {
+      "keys": "r",
+      "to": "ૃ"
+    },
+    {
       "keys": "s",
       "to": "ષ"
+    },
+    {
+      "keys": "u",
+      "to": "ૄ"
+    },
+    {
+      "keys": "x",
+      "to": "–––"
     },
     {
       "keys": "z",

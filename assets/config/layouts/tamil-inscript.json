@@ -4,28 +4,66 @@
   "fontId": "latha",
   "keys": [
     {
+      "vk": 48,
+      "base": "௦",
+      "shift": ")",
+      "deadKey": false
+    },
+    {
       "vk": 49,
-      "shift": "க்ஷ",
+      "base": "௧",
+      "shift": "!",
+      "deadKey": false
+    },
+    {
+      "vk": 50,
+      "base": "௨",
+      "deadKey": false
+    },
+    {
+      "vk": 51,
+      "base": "௩",
+      "deadKey": false
+    },
+    {
+      "vk": 52,
+      "base": "௪",
+      "shift": "ு",
+      "deadKey": false
+    },
+    {
+      "vk": 53,
+      "base": "௫",
+      "shift": "%",
       "deadKey": false
     },
     {
       "vk": 54,
+      "base": "௬",
       "shift": "ஓ",
       "deadKey": false
     },
     {
       "vk": 55,
+      "base": "௭",
       "shift": "ஸ்ரீ",
       "deadKey": false
     },
     {
       "vk": 56,
-      "shift": "ஒள",
+      "base": "௮",
+      "shift": "ோ",
+      "deadKey": false
+    },
+    {
+      "vk": 57,
+      "base": "௯",
+      "shift": "(",
       "deadKey": false
     },
     {
       "vk": 65,
-      "base": "ஒள",
+      "base": "ோ",
       "shift": "ஓ",
       "deadKey": false
     },
@@ -43,29 +81,32 @@
     },
     {
       "vk": 68,
+      "base": "்",
       "shift": "அ",
       "deadKey": false
     },
     {
       "vk": 69,
+      "base": "ா",
       "shift": "ஆ",
       "deadKey": false
     },
     {
       "vk": 70,
-      "base": "இ",
+      "base": "ி",
       "shift": "இ",
       "deadKey": false
     },
     {
       "vk": 71,
-      "base": "உ",
+      "base": "ூ",
       "shift": "உ",
       "deadKey": false
     },
     {
       "vk": 72,
       "base": "ப",
+      "shift": "ை",
       "deadKey": false
     },
     {
@@ -77,11 +118,13 @@
     {
       "vk": 75,
       "base": "க",
+      "shift": "/",
       "deadKey": false
     },
     {
       "vk": 76,
       "base": "த",
+      "shift": ";",
       "deadKey": false
     },
     {
@@ -102,25 +145,25 @@
     },
     {
       "vk": 81,
-      "base": "ஒ",
-      "shift": "ஓ",
+      "base": "ௌ",
+      "shift": "ஒள",
       "deadKey": false
     },
     {
       "vk": 82,
-      "base": "ஈ",
+      "base": "ீ",
       "shift": "ஈ",
       "deadKey": false
     },
     {
       "vk": 83,
-      "base": "ஏ",
+      "base": "ே",
       "shift": "ஏ",
       "deadKey": false
     },
     {
       "vk": 84,
-      "base": "ஊ",
+      "base": "ூ",
       "shift": "ஊ",
       "deadKey": false
     },
@@ -138,38 +181,67 @@
     },
     {
       "vk": 87,
+      "base": "ை",
       "shift": "ஐ",
       "deadKey": false
     },
     {
       "vk": 88,
+      "base": "்",
       "shift": "௵",
       "deadKey": false
     },
     {
       "vk": 90,
-      "base": "எ",
+      "base": "ெ",
       "shift": "எ",
       "deadKey": false
     },
     {
       "vk": 186,
       "base": "ச",
+      "shift": ":",
+      "deadKey": false
+    },
+    {
+      "vk": 187,
+      "base": "=",
+      "shift": "+",
       "deadKey": false
     },
     {
       "vk": 188,
+      "base": ",",
       "shift": "ஷ",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "–",
+      "shift": "ஃ",
+      "deadKey": false
+    },
+    {
+      "vk": 190,
+      "base": ".",
+      "shift": ".",
       "deadKey": false
     },
     {
       "vk": 191,
       "base": "ய",
+      "shift": "?",
       "deadKey": false
     },
     {
       "vk": 192,
+      "base": "ொ",
       "shift": "ஒ",
+      "deadKey": false
+    },
+    {
+      "vk": 219,
+      "base": "ூ",
       "deadKey": false
     },
     {
@@ -400,6 +472,10 @@
       "to": "௺"
     },
     {
+      "keys": "Øe",
+      "to": "’"
+    },
+    {
       "keys": "Øf",
       "to": "ௐ"
     },
@@ -428,8 +504,20 @@
       "to": "ஶ"
     },
     {
+      "keys": "Øq",
+      "to": "%"
+    },
+    {
+      "keys": "Ør",
+      "to": ";"
+    },
+    {
       "keys": "Øs",
       "to": "௴"
+    },
+    {
+      "keys": "Øw",
+      "to": "‘"
     }
   ],
   "escape": [
@@ -448,6 +536,10 @@
     {
       "keys": "d",
       "to": "௺"
+    },
+    {
+      "keys": "e",
+      "to": "’"
     },
     {
       "keys": "f",
@@ -478,8 +570,20 @@
       "to": "ஶ"
     },
     {
+      "keys": "q",
+      "to": "%"
+    },
+    {
+      "keys": "r",
+      "to": ";"
+    },
+    {
       "keys": "s",
       "to": "௴"
+    },
+    {
+      "keys": "w",
+      "to": "‘"
     }
   ],
   "symbols": [

@@ -47,6 +47,7 @@ Console.WriteLine("Indexed " + cmaps.Count + " installed font families from " + 
 Console.WriteLine();
 
 var problems = new List<string>();
+var allUnmapped = new Dictionary<string, int>(StringComparer.Ordinal);
 int comboOk = 0, comboTotal = 0;
 
 foreach (var lang in bundle.Languages)
@@ -167,6 +168,7 @@ foreach (var lang in bundle.Languages)
                     missingByFont.Add(f.Family + " missing " + string.Join(",", gone.Select(c => "U+" + ((int)c).ToString("X4"))) + " of " + outChars.Count);
             }
 
+            foreach (string u in unmapped) allUnmapped[font.ConversionKey + "	" + u] = allUnmapped.GetValueOrDefault(font.ConversionKey + "	" + u) + 1;
             bool ok = unmapped.Count == 0 && missingByFont.Count == 0;
             if (ok) comboOk++;
 
@@ -199,6 +201,13 @@ Console.WriteLine("font families listed: " + listedFamilies.Count + ", present h
 foreach (string f in absent) Console.WriteLine("  not on this machine: " + f);
 Console.WriteLine();
 
+// Which characters the keyboards can type that no mapping table can express -
+// the whole of the gap, named, so it can be closed rather than guessed at.
+Console.WriteLine("==== characters the keyboards type that no table covers ====");
+foreach (var g in allUnmapped.GroupBy(u => u.Key.Split('\t')[0]).OrderByDescending(g => g.Count()))
+    Console.WriteLine($"  {g.Key,-22} {g.Count(),3} : " +
+                      string.Join(" ", g.Select(x => x.Key.Split('\t')[1]).Take(28)));
+Console.WriteLine();
 Console.WriteLine("==== combinations " + comboOk + "/" + comboTotal + " fully working ====");
 if (problems.Count > 0)
 {

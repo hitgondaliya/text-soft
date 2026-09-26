@@ -102,6 +102,7 @@
     {
       "vk": 72,
       "base": "ह",
+      "shift": ":",
       "deadKey": false
     },
     {
@@ -142,8 +143,8 @@
     },
     {
       "vk": 79,
-      "base": "ऍ",
-      "shift": "ओ",
+      "base": "ो",
+      "shift": "ौ",
       "deadKey": false
     },
     {
@@ -207,7 +208,7 @@
     {
       "vk": 90,
       "base": "ए",
-      "shift": "ौ",
+      "shift": "अै",
       "deadKey": false
     },
     {
@@ -219,11 +220,19 @@
     {
       "vk": 187,
       "base": "्",
+      "shift": "=",
       "deadKey": false
     },
     {
       "vk": 188,
+      "base": "्‌",
       "shift": ".",
+      "deadKey": false
+    },
+    {
+      "vk": 189,
+      "base": "–",
+      "shift": "+",
       "deadKey": false
     },
     {
@@ -245,9 +254,21 @@
       "deadKey": false
     },
     {
+      "vk": 220,
+      "base": "×",
+      "shift": "÷",
+      "deadKey": false
+    },
+    {
       "vk": 221,
       "base": "इ",
-      "shift": "आ",
+      "shift": "ई",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "‘",
+      "shift": "’",
       "deadKey": false
     }
   ],
@@ -402,6 +423,10 @@
       "to": "ॠ"
     },
     {
+      "keys": "Øa",
+      "to": "आ"
+    },
+    {
       "keys": "Øb",
       "to": "क्‍"
     },
@@ -412,6 +437,14 @@
     {
       "keys": "Ød",
       "to": "ग़"
+    },
+    {
+      "keys": "Øe",
+      "to": "ॅ"
+    },
+    {
+      "keys": "Øf",
+      "to": "फ़"
     },
     {
       "keys": "Øg",
@@ -446,8 +479,16 @@
       "to": "ष"
     },
     {
+      "keys": "Øu",
+      "to": "ृ"
+    },
+    {
       "keys": "Øx",
       "to": "ढ़"
+    },
+    {
+      "keys": "Øy",
+      "to": "श्र्ा"
     },
     {
       "keys": "Øz",
@@ -696,6 +737,10 @@
       "to": "ॠ"
     },
     {
+      "keys": "a",
+      "to": "आ"
+    },
+    {
       "keys": "b",
       "to": "क्‍"
     },
@@ -706,6 +751,14 @@
     {
       "keys": "d",
       "to": "ग़"
+    },
+    {
+      "keys": "e",
+      "to": "ॅ"
+    },
+    {
+      "keys": "f",
+      "to": "फ़"
     },
     {
       "keys": "g",
@@ -740,8 +793,16 @@
       "to": "ष"
     },
     {
+      "keys": "u",
+      "to": "ृ"
+    },
+    {
       "keys": "x",
       "to": "ढ़"
+    },
+    {
+      "keys": "y",
+      "to": "श्र्ा"
     },
     {
       "keys": "z",

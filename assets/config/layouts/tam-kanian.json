@@ -5,56 +5,56 @@
   "keys": [
     {
       "vk": 48,
-      "base": "0",
+      "base": "௦",
       "shift": ")",
       "deadKey": false
     },
     {
       "vk": 49,
-      "base": "1",
-      "shift": "க்ஷ",
+      "base": "௧",
+      "shift": "!",
       "deadKey": false
     },
     {
       "vk": 50,
-      "base": "2",
+      "base": "௨",
       "deadKey": false
     },
     {
       "vk": 51,
-      "base": "3",
+      "base": "௩",
       "deadKey": false
     },
     {
       "vk": 52,
-      "base": "4",
+      "base": "௪",
       "deadKey": false
     },
     {
       "vk": 53,
-      "base": "5",
+      "base": "௫",
       "deadKey": false
     },
     {
       "vk": 54,
-      "base": "6",
+      "base": "௬",
       "shift": "௸",
       "deadKey": false
     },
     {
       "vk": 55,
-      "base": "7",
+      "base": "௭",
       "deadKey": false
     },
     {
       "vk": 56,
-      "base": "8",
+      "base": "௮",
       "shift": "*",
       "deadKey": false
     },
     {
       "vk": 57,
-      "base": "9",
+      "base": "௯",
       "shift": "(",
       "deadKey": false
     },
@@ -95,6 +95,7 @@
     },
     {
       "vk": 71,
+      "base": "்",
       "shift": "௲",
       "deadKey": false
     },
@@ -197,6 +198,7 @@
     {
       "vk": 88,
       "base": "ஔ",
+      "shift": "ஒள",
       "deadKey": false
     },
     {
@@ -207,6 +209,7 @@
     },
     {
       "vk": 90,
+      "base": "ஃ",
       "shift": "ணா",
       "deadKey": false
     },
@@ -228,18 +231,25 @@
     },
     {
       "vk": 189,
-      "base": "-",
+      "base": "–",
       "deadKey": false
     },
     {
       "vk": 190,
       "base": ".",
+      "shift": "/",
       "deadKey": false
     },
     {
       "vk": 191,
       "base": "ச",
       "shift": "?",
+      "deadKey": false
+    },
+    {
+      "vk": 192,
+      "base": ";",
+      "shift": "’",
       "deadKey": false
     },
     {
@@ -262,7 +272,7 @@
     {
       "vk": 222,
       "base": "ந",
-      "shift": "\"",
+      "shift": "‘",
       "deadKey": false
     }
   ],

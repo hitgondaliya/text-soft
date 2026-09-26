@@ -5,56 +5,61 @@
   "keys": [
     {
       "vk": 48,
-      "base": "0",
+      "base": "௦",
       "shift": ")",
       "deadKey": false
     },
     {
       "vk": 49,
-      "base": "1",
-      "shift": "க்ஷ",
+      "base": "௧",
+      "shift": "!",
       "deadKey": false
     },
     {
       "vk": 50,
-      "base": "2",
+      "base": "௨",
+      "shift": ":",
       "deadKey": false
     },
     {
       "vk": 51,
-      "base": "3",
+      "base": "௩",
+      "shift": ";",
       "deadKey": false
     },
     {
       "vk": 52,
-      "base": "4",
+      "base": "௪",
+      "shift": "ு",
       "deadKey": false
     },
     {
       "vk": 53,
-      "base": "5",
+      "base": "௫",
       "shift": "%",
       "deadKey": false
     },
     {
       "vk": 54,
-      "base": "6",
+      "base": "௬",
+      "shift": "‘",
       "deadKey": false
     },
     {
       "vk": 55,
-      "base": "7",
+      "base": "௭",
+      "shift": "’",
       "deadKey": false
     },
     {
       "vk": 56,
-      "base": "8",
+      "base": "௮",
       "shift": "*",
       "deadKey": false
     },
     {
       "vk": 57,
-      "base": "9",
+      "base": "௯",
       "shift": "(",
       "deadKey": false
     },
@@ -84,6 +89,7 @@
     },
     {
       "vk": 69,
+      "base": "ா",
       "shift": "ஆ",
       "deadKey": false
     },
@@ -105,6 +111,7 @@
     },
     {
       "vk": 73,
+      "base": "ை",
       "shift": "௵",
       "deadKey": false
     },
@@ -187,7 +194,14 @@
     },
     {
       "vk": 87,
+      "base": "ை",
       "shift": "ஐ",
+      "deadKey": false
+    },
+    {
+      "vk": 88,
+      "base": "்",
+      "shift": "ஃ",
       "deadKey": false
     },
     {
@@ -220,7 +234,7 @@
     },
     {
       "vk": 189,
-      "base": "-",
+      "base": "–",
       "shift": "சு",
       "deadKey": false
     },
@@ -245,6 +259,11 @@
       "vk": 219,
       "base": "ட",
       "shift": "க்ஷ",
+      "deadKey": false
+    },
+    {
+      "vk": 220,
+      "base": "/",
       "deadKey": false
     },
     {
@@ -443,9 +462,18 @@
     {
       "keys": "¤|",
       "to": "||"
+    },
+    {
+      "keys": "Ø-",
+      "to": "\u001F"
     }
   ],
-  "escape": [],
+  "escape": [
+    {
+      "keys": "-",
+      "to": "\u001F"
+    }
+  ],
   "symbols": [
     {
       "keys": "#",
@@ -537,6 +565,6 @@
     }
   ],
   "HasSequences": true,
-  "HasEscape": false,
+  "HasEscape": true,
   "HasSymbols": true
 }

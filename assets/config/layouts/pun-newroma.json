@@ -18,12 +18,13 @@
     {
       "vk": 50,
       "base": "੨",
-      "shift": "ਵ",
+      "shift": "–",
       "deadKey": false
     },
     {
       "vk": 51,
       "base": "੩",
+      "shift": "—",
       "deadKey": false
     },
     {
@@ -45,6 +46,7 @@
     {
       "vk": 55,
       "base": "੭",
+      "shift": "੍",
       "deadKey": false
     },
     {
@@ -104,6 +106,7 @@
     {
       "vk": 72,
       "base": "ਹ",
+      "shift": "੍ਹ",
       "deadKey": false
     },
     {
@@ -133,6 +136,7 @@
     {
       "vk": 77,
       "base": "ਮ",
+      "shift": "ੰ",
       "deadKey": false
     },
     {
@@ -214,6 +218,11 @@
       "deadKey": false
     },
     {
+      "vk": 187,
+      "base": "੍",
+      "deadKey": false
+    },
+    {
       "vk": 188,
       "base": ",",
       "deadKey": false
@@ -221,6 +230,7 @@
     {
       "vk": 189,
       "base": "-",
+      "shift": "+",
       "deadKey": false
     },
     {
@@ -241,8 +251,20 @@
       "deadKey": false
     },
     {
+      "vk": 220,
+      "base": "×",
+      "shift": "÷",
+      "deadKey": false
+    },
+    {
       "vk": 221,
       "base": "]",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "‘",
+      "shift": "’",
       "deadKey": false
     }
   ],
@@ -317,8 +339,16 @@
       "to": "ੜ"
     },
     {
+      "keys": "Øe",
+      "to": "ਕ"
+    },
+    {
       "keys": "Øg",
       "to": "ਗ਼"
+    },
+    {
+      "keys": "Øi",
+      "to": "ੲ"
     },
     {
       "keys": "Øj",
@@ -335,6 +365,14 @@
     {
       "keys": "Øn",
       "to": "ਙ"
+    },
+    {
+      "keys": "Øo",
+      "to": "ੱ"
+    },
+    {
+      "keys": "Ør",
+      "to": "ੰ"
     },
     {
       "keys": "Øt",
@@ -371,8 +409,16 @@
       "to": "ੜ"
     },
     {
+      "keys": "e",
+      "to": "ਕ"
+    },
+    {
       "keys": "g",
       "to": "ਗ਼"
+    },
+    {
+      "keys": "i",
+      "to": "ੲ"
     },
     {
       "keys": "j",
@@ -389,6 +435,14 @@
     {
       "keys": "n",
       "to": "ਙ"
+    },
+    {
+      "keys": "o",
+      "to": "ੱ"
+    },
+    {
+      "keys": "r",
+      "to": "ੰ"
     },
     {
       "keys": "t",
