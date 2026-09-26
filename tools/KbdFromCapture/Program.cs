@@ -71,6 +71,7 @@ static string Norm(string s) => new(s.Where(char.IsLetterOrDigit).Select(char.To
 int matched = 0, noCapture = 0;
 int keysSame = 0, keysFixed = 0, keysAdded = 0, keysCleared = 0, thirdWritten = 0, keysFromChart = 0;
 var examples = new List<string>();
+var missing = new List<string>();
 
 foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p => p))
 {
@@ -79,9 +80,18 @@ foreach (string path in Directory.EnumerateFiles(layoutsDir, "*.json").OrderBy(p
 
     string dir = Path.Combine(captureDir, script);
     if (!Directory.Exists(dir)) { noCapture++; continue; }
+
+    // Match on the layout's own file name as well as its display name: our files
+    // are named after the vendor's keyboard files, so guj-typewrit.json finds
+    // TYPEWRIT.GUJ where the display name "Typewriter" does not.
+    string stem = Path.GetFileNameWithoutExtension(path);
+    int dash = stem.IndexOf('-');
+    string[] candidates = dash > 0
+        ? new[] { Norm(name), Norm(stem[(dash + 1)..]) }
+        : new[] { Norm(name) };
     string? file = Directory.EnumerateFiles(dir, "*.json")
-        .FirstOrDefault(f => Norm(Path.GetFileNameWithoutExtension(f)) == Norm(name));
-    if (file is null) { noCapture++; continue; }
+        .FirstOrDefault(f => candidates.Contains(Norm(Path.GetFileNameWithoutExtension(f))));
+    if (file is null) { noCapture++; missing.Add($"{script}/{name}"); continue; }
 
     using var doc = JsonDocument.Parse(File.ReadAllText(file));
     var typed = Read(doc.RootElement, "keys");
@@ -191,6 +201,7 @@ Console.WriteLine($"  keys added                      : {keysAdded}");
 Console.WriteLine($"  keys the composer had no word for: {keysCleared} (left as the chart had them)");
 Console.WriteLine($"  Ctrl+Space entries written      : {thirdWritten}");
 Console.WriteLine($"layouts with no capture           : {noCapture}");
+if (missing.Count > 0) Console.WriteLine("  " + string.Join(", ", missing.Take(20)));
 if (examples.Count > 0)
 {
     Console.WriteLine("\nwhat the composer disagreed with:");
