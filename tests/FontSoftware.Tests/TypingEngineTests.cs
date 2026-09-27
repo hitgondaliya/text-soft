@@ -42,7 +42,8 @@ public class TypingEngineTests : IDisposable
 {
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,
                       Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
-                      VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A, VkD = 0x44;
+                      VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A, VkD = 0x44,
+                      VkV = 0x56, VkK = 0x4B, VkS = 0x53;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
@@ -275,5 +276,29 @@ public class TypingEngineTests : IDisposable
         Escape();
         Press(VkU);                       // "fØu" is not a run of its own, so this is क then श्र
         Assert.Equal("कश्र", _injector.Text);
+    }
+
+    /// <summary>The Gujarati keyboards do have a third layer, and it has to type.</summary>
+    [Fact]
+    public void CtrlSpaceTypesOnGujaratiInScript()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Name == "InScript")),
+                           gujarati.Name, "Unicode");
+        Escape();
+        Assert.True(Press(VkV));          // Ctrl+Space then v is the vocalic RR
+        Assert.Equal("ૠ", _injector.Text);
+    }
+
+    /// <summary>Choosing the Eng keyboard is choosing to type by sound.</summary>
+    [Fact]
+    public void TheEngKeyboardTypesBySound()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        _engine.SetTransliterator(_config.GetTransliterator(gujarati));
+        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Name == "Eng")),
+                           gujarati.Name, "Unicode");
+        foreach (int vk in new[] { VkV, VkI, VkK, VkA, VkA, VkS, VkA }) Press(vk);
+        Assert.Equal("વિકાસ", _injector.Text);   // વિકાસ
     }
 }

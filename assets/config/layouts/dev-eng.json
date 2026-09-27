@@ -1,6 +1,7 @@
 {
   "id": "dev-eng",
   "name": "Eng",
+  "phonetic": true,
   "fontId": "mangal",
   "keys": [
     {
@@ -1034,8 +1035,5 @@
       "keys": "|",
       "to": "॥"
     }
-  ],
-  "HasSequences": true,
-  "HasEscape": true,
-  "HasSymbols": true
+  ]
 }

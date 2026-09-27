@@ -1,6 +1,7 @@
 {
   "id": "ban-eng",
   "name": "Eng",
+  "phonetic": true,
   "fontId": "vrinda",
   "keys": [
     {
@@ -1495,8 +1496,5 @@
       "keys": "|",
       "to": "॥"
     }
-  ],
-  "HasSequences": true,
-  "HasEscape": true,
-  "HasSymbols": true
+  ]
 }

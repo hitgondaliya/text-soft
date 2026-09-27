@@ -104,6 +104,16 @@ public sealed class KeyboardLayout
     [JsonPropertyName("fontId")]
     public string? FontId { get; set; }
 
+    /// <summary>
+    /// Shree's romanised keyboard: you type the sound and the letters follow. It is
+    /// not a fixed key map, and no table of key combinations can stand in for one -
+    /// thirty-odd consonants against a dozen vowels, before the conjuncts - so the
+    /// language's phonetic scheme drives it instead of <see cref="Keys"/>. The key
+    /// map is still what the on-screen keyboard draws.
+    /// </summary>
+    [JsonPropertyName("phonetic")]
+    public bool Phonetic { get; set; }
+
     [JsonPropertyName("keys")]
     public List<KeyMapping> Keys { get; set; } = new();
 

@@ -1,6 +1,7 @@
 {
   "id": "tel-eng",
   "name": "Eng",
+  "phonetic": true,
   "fontId": "gautami",
   "keys": [
     {
@@ -887,8 +888,5 @@
       "keys": "|",
       "to": "॥"
     }
-  ],
-  "HasSequences": true,
-  "HasEscape": true,
-  "HasSymbols": true
+  ]
 }

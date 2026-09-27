@@ -1,6 +1,7 @@
 {
   "id": "mal-ismeng",
   "name": "Ismeng",
+  "phonetic": true,
   "fontId": "kartika",
   "keys": [
     {
@@ -755,8 +756,5 @@
       "keys": "$",
       "to": "₹"
     }
-  ],
-  "HasSequences": true,
-  "HasEscape": true,
-  "HasSymbols": true
+  ]
 }

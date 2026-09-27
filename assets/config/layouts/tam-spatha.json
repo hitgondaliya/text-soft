@@ -465,13 +465,13 @@
     },
     {
       "keys": "Ø-",
-      "to": "\u001F"
+      "to": "\u001f"
     }
   ],
   "escape": [
     {
       "keys": "-",
-      "to": "\u001F"
+      "to": "\u001f"
     }
   ],
   "symbols": [
@@ -563,8 +563,5 @@
       "keys": "|",
       "to": "||"
     }
-  ],
-  "HasSequences": true,
-  "HasEscape": true,
-  "HasSymbols": true
+  ]
 }

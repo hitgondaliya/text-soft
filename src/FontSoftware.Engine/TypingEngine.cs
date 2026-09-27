@@ -63,6 +63,10 @@ public sealed class TypingEngine : IDisposable
     /// <summary>When true (and a scheme is set), keys are transliterated by sound instead of the layout.</summary>
     public bool PhoneticMode { get; private set; }
 
+    // The Eng keyboard IS type-by-sound - that is what the vendor’s chart describes -
+    // so choosing it turns transliteration on whether or not the toggle is set.
+    private bool _layoutIsPhonetic;
+
     public bool Enabled { get; private set; }
 
     /// <summary>
@@ -96,6 +100,7 @@ public sealed class TypingEngine : IDisposable
     public void SetProfile(KeyboardLayout layout, string languageName, string fontName)
     {
         _layout = layout ?? throw new ArgumentNullException(nameof(layout));
+        _layoutIsPhonetic = layout.Phonetic;
         _languageName = languageName;
         _fontName = fontName;
         _pendingDead = null;
@@ -220,7 +225,7 @@ public sealed class TypingEngine : IDisposable
         }
 
         // Phonetic "type by sound" mode intercepts before the fixed-key layout.
-        if (PhoneticMode && _translit is not null)
+        if ((PhoneticMode || _layoutIsPhonetic) && _translit is not null)
         {
             HandlePhonetic(e);
             return;
