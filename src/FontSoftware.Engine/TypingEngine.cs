@@ -503,8 +503,15 @@ public sealed class TypingEngine : IDisposable
         {
             // Word: talk to it directly — a paste there may lose the font (Word's own
             // paste options), the object model never does.
-            if (app == "winword" && WordAutomation.TryType(add, remove, LegacyFontName!))
-                return;
+            bool wordRefusedUs = false;
+            if (app == "winword")
+            {
+                if (WordAutomation.TryType(add, remove, LegacyFontName!))
+                    return;
+                wordRefusedUs = true;
+                _log.Info($"Word: typing into it directly did not happen - {WordAutomation.LastRefusal}; " +
+                          "typing the characters instead, which means they take the font of the text around them.");
+            }
 
             if (remove > 0)
                 _injector.SendBackspace(remove);
@@ -516,7 +523,14 @@ public sealed class TypingEngine : IDisposable
             // the first keystroke of a word, and any later one that rewrites the
             // word from its start; the rest type on in the font already there,
             // which spares a clipboard round trip per key in a word processor.
-            if (rich && keep == 0)
+            //
+            // Not for Word, though. Carrying the font means putting the text on the
+            // clipboard and pressing Ctrl+V, and Word is slow enough to start that
+            // the typist's own last copy can win the race and land in the document
+            // instead. A letter in the wrong font is a nuisance; somebody else's
+            // paragraph pasted into their work is not. When Word will not talk to
+            // us, the characters are typed and the font is the typist's to set.
+            if (rich && keep == 0 && !wordRefusedUs)
                 _injector.SendRichText(add, LegacyFontName!);
             else
                 _injector.SendText(add);

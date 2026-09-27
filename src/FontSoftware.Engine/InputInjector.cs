@@ -123,7 +123,20 @@ public class InputInjector
 
         Post(() =>
         {
-            string? previous = RichTextClipboard.Set(text, fontName);
+            var handover = RichTextClipboard.Set(text, fontName);
+
+            // Ctrl+V pastes whatever is on the clipboard. If ours did not get on to
+            // it - another program was holding it - then pasting sends the typist's
+            // own last copy into their document instead of the letter they typed.
+            // Type the characters one by one instead and let them take the font
+            // from the text around them.
+            if (!handover.Taken)
+            {
+                _log.Info($"The clipboard was not free, so '{text}' was typed rather than pasted; " +
+                          "it takes the font of the text it lands in.");
+                SendText(text);
+                return;
+            }
 
             // Scan codes as well as virtual keys: some editors only honour a shortcut
             // that carries the physical key.
@@ -134,12 +147,21 @@ public class InputInjector
             inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D);
             Send(inputs, $"rich paste '{text}' in {fontName}");
 
-            if (previous is not null)
+            if (handover.Previous is not null)
             {
-                // Give the target app time to read the clipboard, then restore the user's text.
-                _ = Task.Delay(400).ContinueWith(_ =>
+                // Give the target app time to read the clipboard, then put the
+                // typist's own text back - but only while the clipboard still holds
+                // ours. If something else has changed it since, that something is
+                // the typist copying again, and overwriting it would be the second
+                // way to lose what they copied.
+                _ = Task.Delay(1500).ContinueWith(_ =>
                 {
-                    try { RichTextClipboard.SetText(previous); } catch { /* best effort */ }
+                    try
+                    {
+                        if (RichTextClipboard.HoldsText(text))
+                            RichTextClipboard.SetText(handover.Previous);
+                    }
+                    catch { /* best effort */ }
                 });
             }
         });

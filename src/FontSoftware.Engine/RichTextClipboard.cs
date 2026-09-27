@@ -46,23 +46,42 @@ internal static class RichTextClipboard
 
     private static string Escape(string s) => s.Replace("\\", "").Replace("{", "").Replace("}", "").Replace(";", "");
 
-    /// <summary>Replace the clipboard with RTF + text. Returns the previous plain text (or null).</summary>
-    public static string? Set(string text, string fontName)
+    /// <summary>What happened when we tried to take the clipboard over.</summary>
+    public readonly record struct Handover(bool Taken, string? Previous);
+
+    /// <summary>
+    /// Replace the clipboard with RTF + text, and say whether it worked. It can
+    /// fail: another program - Word itself, a clipboard manager - holds the
+    /// clipboard for a moment and will not let go. The caller must not paste when
+    /// it did not work, or the typist gets whatever they last copied pasted into
+    /// their document instead of the letter they just typed.
+    /// </summary>
+    public static Handover Set(string text, string fontName)
     {
-        string? previous = null;
-        if (!Open()) return null;
+        if (!Open()) return new Handover(false, null);
+        string? previous;
+        bool taken;
         try
         {
             previous = ReadText();
             EmptyClipboard();
-            PutBytes(CfRtf, Encoding.ASCII.GetBytes(BuildRtf(text, fontName) + "\0"));
-            PutBytes(CF_UNICODETEXT, Encoding.Unicode.GetBytes(text + "\0"));
+            bool rtf = PutBytes(CfRtf, Encoding.ASCII.GetBytes(BuildRtf(text, fontName) + "\0"));
+            bool plain = PutBytes(CF_UNICODETEXT, Encoding.Unicode.GetBytes(text + "\0"));
+            taken = rtf && plain;
         }
         finally
         {
             CloseClipboard();
         }
-        return previous;
+        return new Handover(taken, previous);
+    }
+
+    /// <summary>Is this still the text we put on the clipboard?</summary>
+    public static bool HoldsText(string text)
+    {
+        if (!Open()) return false;
+        try { return ReadText() == text; }
+        finally { CloseClipboard(); }
     }
 
     /// <summary>Put plain text back (used to restore what the user had copied).</summary>
@@ -102,15 +121,17 @@ internal static class RichTextClipboard
         finally { GlobalUnlock(h); }
     }
 
-    private static void PutBytes(uint format, byte[] bytes)
+    private static bool PutBytes(uint format, byte[] bytes)
     {
         IntPtr h = GlobalAlloc(GMEM_MOVEABLE, (UIntPtr)bytes.Length);
-        if (h == IntPtr.Zero) return;
+        if (h == IntPtr.Zero) return false;
         IntPtr p = GlobalLock(h);
-        if (p == IntPtr.Zero) { GlobalFree(h); return; }
+        if (p == IntPtr.Zero) { GlobalFree(h); return false; }
         Marshal.Copy(bytes, 0, p, bytes.Length);
         GlobalUnlock(h);
-        if (SetClipboardData(format, h) == IntPtr.Zero) GlobalFree(h); // ownership passes on success
+        if (SetClipboardData(format, h) != IntPtr.Zero) return true;   // ownership passes on success
+        GlobalFree(h);
+        return false;
     }
 
     [DllImport("user32.dll", SetLastError = true)] private static extern bool OpenClipboard(IntPtr hWndNewOwner);

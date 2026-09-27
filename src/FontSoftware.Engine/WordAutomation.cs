@@ -22,19 +22,27 @@ internal static class WordAutomation
     /// <paramref name="text"/> in <paramref name="fontName"/>. False when Word is not
     /// reachable (caller falls back to keystrokes / paste).
     /// </summary>
+    /// <summary>Why the last attempt to talk to Word did not happen, for the log.</summary>
+    public static string LastRefusal { get; private set; } = string.Empty;
+
     public static bool TryType(string text, int backspaces, string fontName)
     {
-        if (WordClsid == Guid.Empty || DateTime.UtcNow < _nextTry) return false;
+        if (WordClsid == Guid.Empty) { LastRefusal = "Word is not installed"; return false; }
+        if (DateTime.UtcNow < _nextTry) { LastRefusal = "waiting before asking Word again"; return false; }
         try
         {
             if (GetActiveObject(WordClsid, IntPtr.Zero, out object app) != 0 || app is null)
             {
                 _nextTry = DateTime.UtcNow.AddSeconds(5); // no running Word to talk to; don't retry per key
+                LastRefusal = "no running Word registered itself for automation";
                 return false;
             }
             dynamic word = app;
             if (!OwnsForegroundWindow(word))
+            {
+                LastRefusal = "the Word we can talk to is not the window in front";
                 return false;   // a different Word - type into the focused window instead
+            }
 
             dynamic sel = word.Selection;
             for (int i = 0; i < backspaces; i++) sel.TypeBackspace();
@@ -49,9 +57,10 @@ internal static class WordAutomation
             }
             return true;
         }
-        catch
+        catch (Exception ex)
         {
-            // Word busy (dialog open, RPC rejected) — let the keystroke path handle it.
+            // Word busy (dialog open, RPC rejected) - let the keystroke path handle it.
+            LastRefusal = "Word would not answer: " + ex.Message;
             return false;
         }
     }
