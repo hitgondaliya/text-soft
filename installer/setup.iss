@@ -52,6 +52,14 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional icons:"
 Name: "autostart";   Description: "Start {#AppName} automatically when I sign in"; GroupDescription: "Startup:"; Flags: unchecked
 
+[InstallDelete]
+; An upgrade overwrites every file it ships but cannot know about one it has
+; stopped shipping: a keyboard layout we dropped would sit in the folder for ever.
+; Clear the layouts and mappings first so what is installed is exactly what this
+; build carries. The user's own keyboards live in %AppData%, not here.
+Type: filesandordirs; Name: "{app}\config\layouts"
+Type: filesandordirs; Name: "{app}\config\mappings"
+
 [Files]
 ; Everything from the publish folder (exe, .NET runtime, and config\ assets).
 Source: "{#PublishDir}\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion

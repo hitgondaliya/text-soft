@@ -22,6 +22,10 @@ internal sealed class RecordingInjector : InputInjector
 
     public override void SendBackspace(int count = 1)
         => _text.Length = Math.Max(0, _text.Length - count);
+
+    // The real injector hands this to its own thread so the keyboard hook can
+    // return; a test wants the letters on the page before it looks at them.
+    public override void Run(Action work) => work();
 }
 
 /// <summary>
@@ -31,6 +35,9 @@ internal sealed class RecordingInjector : InputInjector
 /// of selecting all, and "y" then "t" on the ITR Gujarati keyboard used to leave
 /// અ ા on screen where the vendor keyboard gives આ.
 /// </summary>
+// One keyboard hook, one static key-state probe: these two classes share both,
+// so they must not run at the same time.
+[Collection("typing engine")]
 public class TypingEngineTests : IDisposable
 {
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,

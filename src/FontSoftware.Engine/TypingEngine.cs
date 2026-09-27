@@ -144,6 +144,14 @@ public sealed class TypingEngine : IDisposable
         "soffice", "soffice.bin", "swriter", "wps", "wpp", "et", "notepad++", "textmaker"
     };
 
+    /// <summary>
+    /// The application is about to receive this keystroke itself - a space, a
+    /// punctuation mark, a shortcut. Anything we have typed for the word must be
+    /// on screen before it lands, or the space could arrive between the last two
+    /// letters. Only word boundaries wait like this, never a letter.
+    /// </summary>
+    private void FlushBeforeKey() => _injector.Drain(200);
+
     private void ResetLegacy()
     {
         _uniWord.Clear();
@@ -264,6 +272,7 @@ public sealed class TypingEngine : IDisposable
             _lastEmitted = null;
             ResetSequence();
             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
+            FlushBeforeKey();
             return;
         }
 
@@ -287,6 +296,8 @@ public sealed class TypingEngine : IDisposable
             // punctuation, space, the navigation keys - still passes through.
             if (e.VirtualKey is >= 'A' and <= 'Z')
                 e.Handled = true;
+            else
+                FlushBeforeKey();
             return;
         }
 
@@ -297,6 +308,7 @@ public sealed class TypingEngine : IDisposable
             _lastEmitted = null;
             ResetSequence();
             ResetLegacy();
+            FlushBeforeKey();
             return; // don't suppress — let the app receive the raw key
         }
 
@@ -338,10 +350,22 @@ public sealed class TypingEngine : IDisposable
             return;
         }
 
+        // Replacing the run in progress: only the part that actually changed needs
+        // to go. "k" then "i" on a phonetic keyboard shows क and then कि - one more
+        // character, not both of them again.
         if (replace > 0)
-            _injector.SendBackspace(replace);
-        if (output.Length > 0)
+        {
+            string shown = _lastEmitted is not null && _lastEmitted.Length == replace ? _lastEmitted : string.Empty;
+            int keep = CommonPrefix(shown, output);
+            if (replace > keep)
+                _injector.SendBackspace(replace - keep);
+            if (output.Length > keep)
+                _injector.SendText(output[keep..]);
+        }
+        else if (output.Length > 0)
+        {
             _injector.SendText(output);
+        }
         _lastEmitted = output;
     }
 
@@ -443,26 +467,54 @@ public sealed class TypingEngine : IDisposable
     private void RerenderLegacy()
     {
         string next = _legacyConv!.ConvertText(_uniWord.ToString());
-        string? app = LegacyFontName is null ? null : ForegroundApp.GetProcessName();
+        string shown = _legacyOut;
+        if (string.Equals(next, shown, StringComparison.Ordinal))
+            return;                        // the keystroke changed nothing on screen
 
-        // Word: talk to it directly — a paste there may lose the font (Word's own
-        // paste options), the object model never does.
-        if (app == "winword" && WordAutomation.TryType(next, _legacyOut.Length, LegacyFontName!))
-        {
-            _legacyOut = next;
-            return;
-        }
-
-        if (_legacyOut.Length > 0)
-            _injector.SendBackspace(_legacyOut.Length);
-        if (next.Length > 0)
-        {
-            if (app is not null && RichTextApps.Contains(app))
-                _injector.SendRichText(next, LegacyFontName!);
-            else
-                _injector.SendText(next);
-        }
+        // One keystroke usually only adds to the end of the word, even though the
+        // whole word has to be re-converted to find that out: the legacy byte order
+        // of what came before can change when a matra arrives. So send the
+        // difference, not the word. Erasing and retyping the whole word on every
+        // key is what made the text visibly redraw itself, and on a slow machine
+        // what made it lag: a ten-letter word cost twenty injected events per key.
         _legacyOut = next;
+        int keep = CommonPrefix(shown, next);
+        int remove = shown.Length - keep;
+        string add = next[keep..];
+
+        string? app = LegacyFontName is null ? null : ForegroundApp.GetProcessName();
+        bool rich = app is not null && RichTextApps.Contains(app);
+
+        _injector.Run(() =>
+        {
+            // Word: talk to it directly — a paste there may lose the font (Word's own
+            // paste options), the object model never does.
+            if (app == "winword" && WordAutomation.TryType(add, remove, LegacyFontName!))
+                return;
+
+            if (remove > 0)
+                _injector.SendBackspace(remove);
+            if (add.Length == 0)
+                return;
+
+            // The font has to travel with the text only when nothing of this word
+            // is left in front of the caret for it to be inherited from. That is
+            // the first keystroke of a word, and any later one that rewrites the
+            // word from its start; the rest type on in the font already there,
+            // which spares a clipboard round trip per key in a word processor.
+            if (rich && keep == 0)
+                _injector.SendRichText(add, LegacyFontName!);
+            else
+                _injector.SendText(add);
+        });
+    }
+
+    /// <summary>How much of the start of the two strings is the same.</summary>
+    private static int CommonPrefix(string a, string b)
+    {
+        int n = Math.Min(a.Length, b.Length), i = 0;
+        while (i < n && a[i] == b[i]) i++;
+        return i;
     }
 
     private void HandleBackspace(HookKeyEventArgs e)
@@ -640,5 +692,7 @@ public sealed class TypingEngine : IDisposable
     public void Dispose()
     {
         _hook.KeyEvent -= OnKey;
+        // The injection thread may still have the last keystroke in hand.
+        _injector.Drain();
     }
 }

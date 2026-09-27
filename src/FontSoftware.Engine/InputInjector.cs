@@ -21,23 +21,92 @@ public class InputInjector
     /// </summary>
     public static readonly IntPtr InjectionSignature = new(0x46_53_54_31); // "FST1"
 
+    // ---- the injection thread ----
+    //
+    // Every one of these calls is made from inside the low-level keyboard hook,
+    // and until that callback returns the whole system's keyboard input waits on
+    // it. Sending the input from there means the keystroke the typist just pressed
+    // is held up by our own SendInput, the target app's repaint, and - in a word
+    // processor - a clipboard round trip. So the hook only decides what to type;
+    // one thread does the typing, in the order the decisions were made.
+    //
+    // The thread is STA because the clipboard and Word's automation object expect
+    // it, and it is created on first use so nothing pays for it until typing is on.
+
+    private readonly object _gate = new();
+    private System.Collections.Concurrent.BlockingCollection<Action>? _queue;
+    private int _pumpThread;
+
+    /// <summary>
+    /// Run <paramref name="work"/> on the injection thread, in its turn among
+    /// everything else queued. Work posted from inside that thread runs where it
+    /// stands, so a step that sends several things keeps them together instead of
+    /// letting the next keystroke's output slip in between.
+    /// </summary>
+    public virtual void Run(Action work) => Post(work);
+
+    private void Post(Action work)
+    {
+        if (Environment.CurrentManagedThreadId == _pumpThread) { work(); return; }
+
+        var queue = _queue;
+        if (queue is null)
+            lock (_gate)
+            {
+                if (_queue is null)
+                {
+                    _queue = new System.Collections.Concurrent.BlockingCollection<Action>();
+                    var thread = new Thread(Pump) { IsBackground = true, Name = "TextSoft input" };
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                }
+                queue = _queue;
+            }
+
+        try { queue.Add(work); }
+        catch (InvalidOperationException) { work(); }   // shutting down: do it here
+    }
+
+    private void Pump()
+    {
+        _pumpThread = Environment.CurrentManagedThreadId;
+        foreach (var work in _queue!.GetConsumingEnumerable())
+        {
+            try { work(); }
+            catch (Exception ex) { _log.Error($"input injection failed: {ex.Message}"); }
+        }
+    }
+
+    /// <summary>Wait for everything queued so far to be sent. For tests and shutdown.</summary>
+    public void Drain(int millisecondsTimeout = 2000)
+    {
+        var queue = _queue;
+        if (queue is null) return;
+        using var done = new ManualResetEventSlim(false);
+        try { queue.Add(() => done.Set()); } catch (InvalidOperationException) { return; }
+        done.Wait(millisecondsTimeout);
+    }
+
     /// <summary>Inject a string of Unicode text into the focused window.</summary>
     public virtual void SendText(string text)
     {
         if (string.IsNullOrEmpty(text))
             return;
 
-        // Each UTF-16 code unit (including surrogate halves) is one keydown +
-        // keyup Unicode event.
-        var inputs = new INPUT[text.Length * 2];
-        int n = 0;
-        foreach (char c in text)
+        Post(() =>
         {
-            inputs[n++] = UnicodeInput(c, keyUp: false);
-            inputs[n++] = UnicodeInput(c, keyUp: true);
-        }
+            // Each UTF-16 code unit (including surrogate halves) is one keydown +
+            // keyup Unicode event.
+            var inputs = new INPUT[text.Length * 2];
+            int n = 0;
+            foreach (char c in text)
+            {
+                inputs[n++] = UnicodeInput(c, keyUp: false);
+                inputs[n++] = UnicodeInput(c, keyUp: true);
+            }
 
-        Send(inputs, $"text '{text}'");
+            Send(inputs, $"text '{text}'");
+        });
     }
 
     /// <summary>
@@ -52,25 +121,28 @@ public class InputInjector
         if (string.IsNullOrEmpty(text))
             return;
 
-        string? previous = RichTextClipboard.Set(text, fontName);
-
-        // Scan codes as well as virtual keys: some editors only honour a shortcut
-        // that carries the physical key.
-        var inputs = new INPUT[4];
-        inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D);
-        inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F);
-        inputs[2] = VirtualKeyInput(0x56, keyUp: true, scan: 0x2F);
-        inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D);
-        Send(inputs, $"rich paste '{text}' in {fontName}");
-
-        if (previous is not null)
+        Post(() =>
         {
-            // Give the target app time to read the clipboard, then restore the user's text.
-            _ = Task.Delay(400).ContinueWith(_ =>
+            string? previous = RichTextClipboard.Set(text, fontName);
+
+            // Scan codes as well as virtual keys: some editors only honour a shortcut
+            // that carries the physical key.
+            var inputs = new INPUT[4];
+            inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D);
+            inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F);
+            inputs[2] = VirtualKeyInput(0x56, keyUp: true, scan: 0x2F);
+            inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D);
+            Send(inputs, $"rich paste '{text}' in {fontName}");
+
+            if (previous is not null)
             {
-                try { RichTextClipboard.SetText(previous); } catch { /* best effort */ }
-            });
-        }
+                // Give the target app time to read the clipboard, then restore the user's text.
+                _ = Task.Delay(400).ContinueWith(_ =>
+                {
+                    try { RichTextClipboard.SetText(previous); } catch { /* best effort */ }
+                });
+            }
+        });
     }
 
     /// <summary>Send <paramref name="count"/> backspace key presses.</summary>
@@ -79,15 +151,18 @@ public class InputInjector
         if (count <= 0)
             return;
 
-        var inputs = new INPUT[count * 2];
-        int n = 0;
-        for (int i = 0; i < count; i++)
+        Post(() =>
         {
-            inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: false);
-            inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: true);
-        }
+            var inputs = new INPUT[count * 2];
+            int n = 0;
+            for (int i = 0; i < count; i++)
+            {
+                inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: false);
+                inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: true);
+            }
 
-        Send(inputs, $"{count} backspace(s)");
+            Send(inputs, $"{count} backspace(s)");
+        });
     }
 
     /// <summary>
