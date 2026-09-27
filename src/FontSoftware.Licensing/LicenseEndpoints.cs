@@ -12,7 +12,7 @@
 /// </summary>
 public static class LicenseEndpoints
 {
-    // TODO(client): DEV value. set-prod-config.ps1 replaces this with https://api.<yourdomain>.
+    // The live licence server. scripts\set-prod-config.ps1 stamps this.
     public const string BaseUrl = "https://admin.text-soft.com";
 
     public static string Resolve()

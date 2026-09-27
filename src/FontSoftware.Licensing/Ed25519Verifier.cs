@@ -13,8 +13,12 @@ namespace FontSoftware.Licensing;
 /// </summary>
 public sealed class Ed25519Verifier
 {
-    // TODO(client): DEV key for the generated dev keypair. Replace with your
-    // PRODUCTION public key (from `npm run genkeys`) before shipping real builds.
+    // The PRODUCTION public key, stamped in for the 13 Sep 2026 release: its
+    // private half lives only in the deployed server's .env. Do not "restore" a
+    // dev key here - every licence the live server has issued verifies against
+    // this one, and changing it locks every customer out until they are reissued.
+    // A new keypair means: npm run genkeys -> the server's .env ->
+    // scripts\set-prod-config.ps1 -> installer\build-release.ps1.
     public const string DefaultPublicKeyBase64 = "OvrGren3lqZss8fLcfI5M2/otEqL4TtHbXaYrlUqeqc=";
 
     private readonly Ed25519PublicKeyParameters _key;
