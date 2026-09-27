@@ -100,6 +100,63 @@ if (args.Length >= 1 && args[0] == "--prune")
     return 0;
 }
 
+// --fix <file.json>: set what a pair says, whichever way round it is read. A pair
+// that is merely missing is an --plan job; this is for the ones the table already
+// has and has wrong. Characters are written as hex so nothing depends on how a
+// text editor treats them:
+//
+//   { "shree-tel7": { "toUnicode": [ { "fromHex": "007B", "toHex": "0C4D 0C30", "why": "..." } ],
+//                     "toLegacy":  [ { "fromHex": "0C4D 0C30", "toHex": "007B", "why": "..." } ] } }
+if (args.Length >= 2 && args[0] == "--fix")
+{
+    string fixPath = args[1];
+    bool fixDry = args.Contains("--dry-run");
+    string fixDir = Path.Combine("assets", "config", "mappings");
+    var fixWriter = new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() };
+    var fixPlan = JsonNode.Parse(File.ReadAllText(fixPath))!.AsObject();
+    int changed = 0, appended = 0;
+
+    static string FromHex(string hex) =>
+        new string(hex.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(h => (char)Convert.ToInt32(h, 16)).ToArray());
+
+    foreach (var (encoding, node) in fixPlan)
+    {
+        foreach (string side in new[] { "toUnicode", "toLegacy" })
+        {
+            var edits = node?[side]?.AsArray();
+            if (edits is null || edits.Count == 0) continue;
+            string file = Path.Combine(fixDir, side == "toUnicode" ? encoding + "-to-unicode.json" : "unicode-to-" + encoding + ".json");
+            if (!File.Exists(file)) { Console.Error.WriteLine("  no table " + file); continue; }
+            var doc = JsonNode.Parse(File.ReadAllText(file))!.AsObject();
+            var pairs = doc["pairs"]!.AsArray();
+            foreach (var edit in edits)
+            {
+                string from = FromHex((string?)edit!["fromHex"] ?? ""), to = FromHex((string?)edit["toHex"] ?? "");
+                if (from.Length == 0 || to.Length == 0) continue;
+                var existing = pairs.FirstOrDefault(x => (string?)x!["from"] == from);
+                if (existing is not null)
+                {
+                    string was = (string?)existing["to"] ?? "";
+                    if (was == to) continue;
+                    existing["to"] = to;
+                    changed++;
+                    Console.WriteLine($"  ~ {encoding,-14} {side,-10} {Describe(from)}: {Describe(was)} -> {Describe(to)}   {(string?)edit["why"]}");
+                }
+                else
+                {
+                    pairs.Add(new JsonObject { ["from"] = from, ["to"] = to });
+                    appended++;
+                    Console.WriteLine($"  + {encoding,-14} {side,-10} {Describe(from)} -> {Describe(to)}   {(string?)edit["why"]}");
+                }
+            }
+            if (!fixDry) File.WriteAllText(file, doc.ToJsonString(fixWriter));
+        }
+    }
+    Console.WriteLine($"{(fixDry ? "would change" : "changed")} {changed} pair(s), added {appended}");
+    return 0;
+}
+
 // --drop <encoding> <U+XXXX> [...]: take out every pair whose legacy side carries a
 // character the encoding cannot really hold. A capture reads a combining mark off a
 // carrier - the vendor draws the mark on a space or a dotted circle - and the carrier
