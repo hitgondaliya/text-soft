@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\Shared\Vendor.cs" Link="Vendor.cs" />
     <ProjectReference Include="..\..\src\FontSoftware.Core\FontSoftware.Core.csproj" />
   </ItemGroup>
 </Project>

@@ -1023,16 +1023,6 @@
           "file": "layouts/dev-apple.json"
         },
         {
-          "id": "dev-aps-1",
-          "name": "Aps 1",
-          "file": "layouts/dev-aps-1.json"
-        },
-        {
-          "id": "dev-aps-2",
-          "name": "Aps 2",
-          "file": "layouts/dev-aps-2.json"
-        },
-        {
           "id": "dev-asterix",
           "name": "Asterix",
           "file": "layouts/dev-asterix.json"
@@ -1106,6 +1096,11 @@
           "id": "dev-marathi",
           "name": "Marathi",
           "file": "layouts/dev-marathi.json"
+        },
+        {
+          "id": "dev-modular",
+          "name": "Modular",
+          "file": "layouts/dev-modular.json"
         },
         {
           "id": "dev-mtnk",
@@ -2209,16 +2204,6 @@
           "file": "layouts/dev-apple.json"
         },
         {
-          "id": "dev-aps-1",
-          "name": "Aps 1",
-          "file": "layouts/dev-aps-1.json"
-        },
-        {
-          "id": "dev-aps-2",
-          "name": "Aps 2",
-          "file": "layouts/dev-aps-2.json"
-        },
-        {
           "id": "dev-asterix",
           "name": "Asterix",
           "file": "layouts/dev-asterix.json"
@@ -2292,6 +2277,11 @@
           "id": "dev-marathi",
           "name": "Marathi",
           "file": "layouts/dev-marathi.json"
+        },
+        {
+          "id": "dev-modular",
+          "name": "Modular",
+          "file": "layouts/dev-modular.json"
         },
         {
           "id": "dev-mtnk",
@@ -3387,6 +3377,11 @@
           "file": "layouts/san-marathi.json"
         },
         {
+          "id": "san-modular",
+          "name": "Modular",
+          "file": "layouts/san-modular.json"
+        },
+        {
           "id": "san-mtnk",
           "name": "Mtnk",
           "file": "layouts/san-mtnk.json"
@@ -3681,6 +3676,11 @@
           "id": "pun-itr",
           "name": "Itr",
           "file": "layouts/pun-itr.json"
+        },
+        {
+          "id": "pun-modular",
+          "name": "Modular",
+          "file": "layouts/pun-modular.json"
         },
         {
           "id": "pun-newroma",
@@ -4226,6 +4226,11 @@
           "id": "ban-linotype",
           "name": "Linotype",
           "file": "layouts/ban-linotype.json"
+        },
+        {
+          "id": "ban-modular",
+          "name": "Modular",
+          "file": "layouts/ban-modular.json"
         },
         {
           "id": "ban-monotype",
@@ -6535,6 +6540,11 @@
           "file": "layouts/tel-micro.json"
         },
         {
+          "id": "tel-modular",
+          "name": "Modular",
+          "file": "layouts/tel-modular.json"
+        },
+        {
           "id": "tel-mono",
           "name": "Mono",
           "file": "layouts/tel-mono.json"
@@ -7291,6 +7301,11 @@
           "file": "layouts/guj-doe.json"
         },
         {
+          "id": "guj-ekl",
+          "name": "Ekl",
+          "file": "layouts/guj-ekl.json"
+        },
+        {
           "id": "guj-eng",
           "name": "Eng",
           "file": "layouts/guj-eng.json"
@@ -7304,6 +7319,11 @@
           "id": "guj-itr",
           "name": "Itr",
           "file": "layouts/guj-itr.json"
+        },
+        {
+          "id": "guj-modular",
+          "name": "Modular",
+          "file": "layouts/guj-modular.json"
         },
         {
           "id": "guj-mtnk",
@@ -7349,16 +7369,6 @@
           "id": "guj-script",
           "name": "Script",
           "file": "layouts/guj-script.json"
-        },
-        {
-          "id": "guj-sulekh-1",
-          "name": "Sulekh 1",
-          "file": "layouts/guj-sulekh-1.json"
-        },
-        {
-          "id": "guj-sulekh-2",
-          "name": "Sulekh 2",
-          "file": "layouts/guj-sulekh-2.json"
         },
         {
           "id": "guj-typewrit",
@@ -7850,6 +7860,11 @@
           "file": "layouts/kan-kgpnew.json"
         },
         {
+          "id": "kan-modular",
+          "name": "Modular",
+          "file": "layouts/kan-modular.json"
+        },
+        {
           "id": "kan-newroma",
           "name": "Newroma",
           "file": "layouts/kan-newroma.json"
@@ -8219,6 +8234,11 @@
           "id": "mal-kergovt",
           "name": "Kergovt",
           "file": "layouts/mal-kergovt.json"
+        },
+        {
+          "id": "mal-modular",
+          "name": "Modular",
+          "file": "layouts/mal-modular.json"
         },
         {
           "id": "mal-newroma",
@@ -8717,6 +8737,11 @@
           "id": "ori-eng",
           "name": "Eng",
           "file": "layouts/ori-eng.json"
+        },
+        {
+          "id": "ori-modular",
+          "name": "Modular",
+          "file": "layouts/ori-modular.json"
         },
         {
           "id": "ori-newroma",
@@ -11959,6 +11984,11 @@
           "file": "layouts/tam-keyman.json"
         },
         {
+          "id": "tam-modular",
+          "name": "Modular",
+          "file": "layouts/tam-modular.json"
+        },
+        {
           "id": "tam-mono",
           "name": "Mono",
           "file": "layouts/tam-mono.json"
@@ -12440,9 +12470,9 @@
       ],
       "layouts": [
         {
-          "id": "as-inscript",
+          "id": "ass-inscript",
           "name": "InScript",
-          "file": "layouts/bengali-inscript.json"
+          "file": "layouts/ass-inscript.json"
         },
         {
           "id": "ass-akadami",
@@ -12521,7 +12551,7 @@
         },
         {
           "id": "ass-modban",
-          "name": "Modban",
+          "name": "Modular",
           "file": "layouts/ass-modban.json"
         },
         {
@@ -12543,6 +12573,11 @@
           "id": "ass-phonet86",
           "name": "Phonetic 86",
           "file": "layouts/ass-phonet86.json"
+        },
+        {
+          "id": "ass-piyali",
+          "name": "Piyali",
+          "file": "layouts/ass-piyali.json"
         },
         {
           "id": "ass-roma",
@@ -13064,6 +13099,11 @@
           "id": "mni-ban-linotype",
           "name": "Linotype",
           "file": "layouts/ban-linotype.json"
+        },
+        {
+          "id": "ban-modular",
+          "name": "Modular",
+          "file": "layouts/ban-modular.json"
         },
         {
           "id": "mni-ban-monotype",

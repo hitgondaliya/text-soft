@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>kbdaudit</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Shared\Vendor.cs" Link="Vendor.cs" />
+    <ProjectReference Include="..\..\src\FontSoftware.Core\FontSoftware.Core.csproj" />
+  </ItemGroup>
+</Project>

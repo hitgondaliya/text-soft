@@ -288,6 +288,110 @@
   "deadKeyCombinations": [],
   "sequences": [
     {
+      "keys": "J/",
+      "to": "ਏ"
+    },
+    {
+      "keys": "Jh",
+      "to": "ਈ"
+    },
+    {
+      "keys": "T[",
+      "to": "ਉ"
+    },
+    {
+      "keys": "T{",
+      "to": "ਊ"
+    },
+    {
+      "keys": "e\"",
+      "to": "ਕੌ"
+    },
+    {
+      "keys": "e'",
+      "to": "ਕੋ"
+    },
+    {
+      "keys": "e/",
+      "to": "ਕੇ"
+    },
+    {
+      "keys": "e?",
+      "to": "ਕੈ"
+    },
+    {
+      "keys": "eK",
+      "to": "ਕਾਂ"
+    },
+    {
+      "keys": "eL",
+      "to": "ਕ"
+    },
+    {
+      "keys": "eQ",
+      "to": "ਕ੍ਹ"
+    },
+    {
+      "keys": "e[",
+      "to": "ਕੁ"
+    },
+    {
+      "keys": "e]",
+      "to": "ਕੀਂ"
+    },
+    {
+      "keys": "eh",
+      "to": "ਕੀ"
+    },
+    {
+      "keys": "ek",
+      "to": "ਕਾ"
+    },
+    {
+      "keys": "ez",
+      "to": "ਕੰ"
+    },
+    {
+      "keys": "e{",
+      "to": "ਕੂ"
+    },
+    {
+      "keys": "fJ",
+      "to": "ਇ"
+    },
+    {
+      "keys": "fe",
+      "to": "ਕਿ"
+    },
+    {
+      "keys": "n\"",
+      "to": "ਔ"
+    },
+    {
+      "keys": "n?",
+      "to": "ਐ"
+    },
+    {
+      "keys": "n_",
+      "to": "ਅਂ"
+    },
+    {
+      "keys": "nk",
+      "to": "ਆ"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
       "keys": "Ø1",
       "to": "ੁ"
     },
@@ -322,6 +426,26 @@
     {
       "keys": "Øz",
       "to": "਼"
+    },
+    {
+      "keys": ";Øz",
+      "to": "ਸ਼"
+    },
+    {
+      "keys": "cØz",
+      "to": "ਫ਼"
+    },
+    {
+      "keys": "iØz",
+      "to": "ਜ਼"
+    },
+    {
+      "keys": "rØz",
+      "to": "ਗ਼"
+    },
+    {
+      "keys": "Ø4Øz",
+      "to": "ਖ਼"
     }
   ],
   "escape": [
@@ -362,8 +486,21 @@
       "to": "਼"
     }
   ],
-  "symbols": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
   "HasSequences": true,
   "HasEscape": true,
-  "HasSymbols": false
+  "HasSymbols": true
 }

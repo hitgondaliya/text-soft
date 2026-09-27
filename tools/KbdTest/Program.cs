@@ -45,12 +45,18 @@ foreach (var lang in bundle.Languages)
         if (scheme is null) continue;
         byte[] d = File.ReadAllBytes(scheme);
 
+        // 0, a space and 0xFF are the vendor's three ways of writing "this key is
+        // empty"; the rest is a code, though not every code is a character - some
+        // are combiners that only change the letter before them, and the vendor's
+        // own composer declines to answer for those too.
+        static bool Defined(byte[] d, char key) => key < d.Length && d[key] is not (0 or 0x20 or 0xFF);
+
         int defined = 0, carried = 0;
         foreach (var (vk, plain, shift) in keys)
         {
             var m = layout.Find(vk);
-            if (plain < d.Length && d[plain] != 0xFF) { defined++; if (!string.IsNullOrEmpty(m?.Base)) carried++; }
-            if (shift < d.Length && d[shift] != 0xFF) { defined++; if (!string.IsNullOrEmpty(m?.Shift)) carried++; }
+            if (Defined(d, plain)) { defined++; if (!string.IsNullOrEmpty(m?.Base)) carried++; }
+            if (Defined(d, shift)) { defined++; if (!string.IsNullOrEmpty(m?.Shift)) carried++; }
         }
         totalDefined += defined;
         totalCarried += carried;

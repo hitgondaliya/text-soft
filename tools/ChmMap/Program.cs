@@ -266,10 +266,21 @@ static char Shifted(char c)
     };
 }
 
+/// <summary>
+/// Drop the HTML tags and leave the text - including a keystroke that is itself a
+/// less-than sign. "&lt;d&lt;" is three keys on a Kannada keyboard, and a plain
+/// "&lt;[^&gt;]*&gt;" swallows it together with the &lt;/td&gt; that follows,
+/// which is how "&lt;d&lt;" became the key "d" and put a conjunct on the virama
+/// key. A tag starts with a letter, a slash or a bang and holds no further "&lt;".
+/// </summary>
+static string DropTags(string html, string with) =>
+    Regex.Replace(Regex.Replace(html, "<!--.*?-->", with, RegexOptions.Singleline),
+                  "</?[A-Za-z!?][^<>]*>", with);
+
 /// <summary>The text of one table cell: tags dropped, entities decoded, runs of space collapsed.</summary>
 static string CellText(string cell)
 {
-    string s = Regex.Replace(cell, "<[^>]*>", "");
+    string s = DropTags(cell, "");
     s = Regex.Replace(s, "&#x?([0-9A-Fa-f]+);", m =>
     {
         bool hex = m.Value.StartsWith("&#x", StringComparison.OrdinalIgnoreCase);
@@ -302,21 +313,36 @@ static List<Pair> ParsePairs(string html)
 
     foreach (var raw in cells)
     {
-        string stripped = Regex.Replace(raw, "<[^>]*>", " ");        // drop tags
+        string stripped = DropTags(raw, " ");
         // unicode numeric entities -> the actual characters
         var sb = new StringBuilder();
         foreach (Match m in Regex.Matches(stripped, "&#x?([0-9A-Fa-f]+);"))
         {
             string digits = m.Groups[1].Value;
             bool hex = m.Value.StartsWith("&#x", StringComparison.OrdinalIgnoreCase);
-            if (int.TryParse(digits, hex ? NumberStyles.HexNumber : NumberStyles.Integer,
-                             CultureInfo.InvariantCulture, out int cp) && cp > 0 && cp <= 0x10FFFF)
-                sb.Append(char.ConvertFromUtf32(cp));
+            if (!int.TryParse(digits, hex ? NumberStyles.HexNumber : NumberStyles.Integer,
+                              CultureInfo.InvariantCulture, out int cp) || cp <= 0 || cp > 0x10FFFF)
+                continue;
+            // A control character is a glyph number in some symbol font the page
+            // once used, not a character: "&#154;" left a stray U+009A sitting on
+            // the end of a Tamil key. Nothing types those.
+            if (cp is < 0x20 or (>= 0x7F and <= 0x9F)) continue;
+            sb.Append(char.ConvertFromUtf32(cp));
         }
         string uni = sb.ToString();
 
-        // residual text with entities removed -> potential keystroke
-        string text = Regex.Replace(stripped, "&#x?[0-9A-Fa-f]+;", " ");
+        // Residual text -> potential keystroke. A keystroke that is punctuation is
+        // written as an entity like the characters are (&#60; is the key "<"), so
+        // decode the ASCII ones into the keystroke instead of dropping them: doing
+        // otherwise turned the three keys "<d<" into "d" and put a conjunct on the
+        // virama key of every Kannada keyboard.
+        string text = Regex.Replace(stripped, "&#x?([0-9A-Fa-f]+);", m =>
+        {
+            bool hex = m.Value.StartsWith("&#x", StringComparison.OrdinalIgnoreCase);
+            return int.TryParse(m.Groups[1].Value, hex ? NumberStyles.HexNumber : NumberStyles.Integer,
+                                CultureInfo.InvariantCulture, out int cp) && cp is > 0x20 and <= 0x7E
+                   ? ((char)cp).ToString() : " ";
+        });
         text = DecodeBasicEntities(text);
         bool isLabel = labels.Contains(Regex.Replace(text, "\\s+", " ").Trim());
         // Keystrokes never contain spaces; the CHM sometimes formats them with one

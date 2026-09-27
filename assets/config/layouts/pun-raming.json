@@ -284,6 +284,122 @@
   "deadKeyCombinations": [],
   "sequences": [
     {
+      "keys": ";a",
+      "to": "ਸ਼"
+    },
+    {
+      "keys": "Ea",
+      "to": "ਖ਼"
+    },
+    {
+      "keys": "J/",
+      "to": "ਏ"
+    },
+    {
+      "keys": "Jh",
+      "to": "ਈ"
+    },
+    {
+      "keys": "T[",
+      "to": "ਊ"
+    },
+    {
+      "keys": "T{",
+      "to": "ਉ"
+    },
+    {
+      "keys": "ca",
+      "to": "ਫ਼"
+    },
+    {
+      "keys": "e\"",
+      "to": "ਕੌ"
+    },
+    {
+      "keys": "e'",
+      "to": "ਕੋ"
+    },
+    {
+      "keys": "e/",
+      "to": "ਕੇ"
+    },
+    {
+      "keys": "e?",
+      "to": "ਕੈ"
+    },
+    {
+      "keys": "eH",
+      "to": "ਕਂ"
+    },
+    {
+      "keys": "eL",
+      "to": "ਕ"
+    },
+    {
+      "keys": "e[",
+      "to": "ਕੁ"
+    },
+    {
+      "keys": "eh",
+      "to": "ਕੀ"
+    },
+    {
+      "keys": "ek",
+      "to": "ਕਾ"
+    },
+    {
+      "keys": "eq",
+      "to": "ਕ੍ਹ"
+    },
+    {
+      "keys": "e{",
+      "to": "ਕੂ"
+    },
+    {
+      "keys": "fJ",
+      "to": "ਇ"
+    },
+    {
+      "keys": "fe",
+      "to": "ਕਿ"
+    },
+    {
+      "keys": "ia",
+      "to": "ਜ਼"
+    },
+    {
+      "keys": "n\"",
+      "to": "ਔ"
+    },
+    {
+      "keys": "n?",
+      "to": "ਐ"
+    },
+    {
+      "keys": "nH",
+      "to": "ਅਂ"
+    },
+    {
+      "keys": "nk",
+      "to": "ਆ"
+    },
+    {
+      "keys": "ra",
+      "to": "ਗ਼"
+    },
+    {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
+      "keys": "¤*",
+      "to": "×"
+    },
+    {
+      "keys": "¤/",
+      "to": "÷"
+    },
+    {
       "keys": "Ø-",
       "to": "–"
     },
@@ -342,8 +458,21 @@
       "to": "ੴ"
     }
   ],
-  "symbols": [],
+  "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
+    {
+      "keys": "*",
+      "to": "×"
+    },
+    {
+      "keys": "/",
+      "to": "÷"
+    }
+  ],
   "HasSequences": true,
   "HasEscape": true,
-  "HasSymbols": false
+  "HasSymbols": true
 }
