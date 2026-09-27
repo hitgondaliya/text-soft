@@ -29,6 +29,7 @@ bool verbose = false;
 // fonts never had - the rupee sign, the Vedic accents. Off by default so the
 // figure stays comparable; --runs measures that wider surface.
 bool withRuns = false;
+string? cmapDump = null;
 for (int i = 0; i < args.Length; i++)
 {
     // --fonts may be repeated: fonts a customer owns often sit in their own folder
@@ -37,6 +38,11 @@ for (int i = 0; i < args.Length; i++)
     else if (args[i] == "--only-fonts" && i + 1 < args.Length) fontDirs = new[] { args[++i] };
     else if (args[i] == "--verbose") verbose = true;
     else if (args[i] == "--runs") withRuns = true;
+    // The code points each font actually draws, written out for the tools that
+    // close the gaps this run reports: a character the font has at its own code
+    // point needs no table entry, and one the font does not have at all is a limit
+    // of the encoding rather than a missing mapping.
+    else if (args[i] == "--cmaps" && i + 1 < args.Length) cmapDump = args[++i];
 }
 
 var bundle = new ConfigLoader(Path.Combine(AppContext.BaseDirectory, "config")).Load();
@@ -44,6 +50,12 @@ Console.WriteLine("Loaded " + bundle.Languages.Count + " languages, " + bundle.M
 
 var cmaps = FontIndex.Build(fontDirs);
 Console.WriteLine("Indexed " + cmaps.Count + " installed font families from " + string.Join(" + ", fontDirs));
+if (cmapDump is not null)
+{
+    var dump = cmaps.ToDictionary(p => p.Key, p => p.Value.Where(c => c >= 0x20).OrderBy(c => c).Select(c => ((int)c).ToString("X4")).ToArray());
+    File.WriteAllText(cmapDump, System.Text.Json.JsonSerializer.Serialize(dump));
+    Console.WriteLine("Wrote the code points of " + dump.Count + " families to " + cmapDump);
+}
 Console.WriteLine();
 
 var problems = new List<string>();

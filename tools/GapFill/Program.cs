@@ -44,9 +44,87 @@ if (args.Length >= 1 && args[0] == "--prune")
     return 0;
 }
 
+// --plan <file.json>: add pairs worked out from evidence that is already on disk
+// rather than from a fresh capture. The plan says, per encoding, which pairs to add
+// and which characters the encoding has no room for:
+//
+//   { "shree-tam7": { "pairs": [ { "from": "ொ", "to": "…", "why": "…" } ],
+//                     "limits": [ "0BE6", "0BE7" ] } }
+//
+// Everything it writes has to be derivable from something the repository can show:
+// the same table read the other way, the two pieces a two-part matra is written
+// from, or the font's own cmap. See the tool that builds the plan.
+if (args.Length >= 2 && args[0] == "--plan")
+{
+    string planPath = args[1];
+    string dir = Path.Combine("assets", "config", "mappings");
+    bool dry = args.Contains("--dry-run");
+    for (int i = 2; i < args.Length; i++) if (args[i] == "--map-dir" && i + 1 < args.Length) dir = args[++i];
+
+    var writer = new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() };
+    var plan = JsonNode.Parse(File.ReadAllText(planPath))!.AsObject();
+    string limitsFile = Path.Combine(Path.GetDirectoryName(dir.TrimEnd(Path.DirectorySeparatorChar)) ?? ".", "encoding-limits.json");
+    var limitsDoc = File.Exists(limitsFile) ? JsonNode.Parse(File.ReadAllText(limitsFile))!.AsObject() : new JsonObject();
+    int totalPairs = 0, totalLimits = 0, tables = 0;
+
+    foreach (var (encoding, node) in plan)
+    {
+        string toLegacyFile = Path.Combine(dir, "unicode-to-" + encoding + ".json");
+        string toUnicodeFile = Path.Combine(dir, encoding + "-to-unicode.json");
+        if (!File.Exists(toLegacyFile) || !File.Exists(toUnicodeFile))
+        { Console.Error.WriteLine("  no table pair for " + encoding); continue; }
+
+        var toLegacyDoc = JsonNode.Parse(File.ReadAllText(toLegacyFile))!.AsObject();
+        var toUnicodeDoc = JsonNode.Parse(File.ReadAllText(toUnicodeFile))!.AsObject();
+        var toLegacyPairs = toLegacyDoc["pairs"]!.AsArray();
+        var toUnicodePairs = toUnicodeDoc["pairs"]!.AsArray();
+        var haveUnicode = new HashSet<string>(toLegacyPairs.Select(p => (string?)p!["from"] ?? ""), StringComparer.Ordinal);
+        var haveLegacy = new HashSet<string>(toUnicodePairs.Select(p => (string?)p!["from"] ?? ""), StringComparer.Ordinal);
+
+        int here = 0;
+        foreach (var p in node?["pairs"]?.AsArray() ?? new JsonArray())
+        {
+            string from = (string?)p!["from"] ?? "", to = (string?)p["to"] ?? "";
+            if (from.Length == 0 || to.Length == 0 || haveUnicode.Contains(from)) continue;
+            toLegacyPairs.Add(new JsonObject { ["from"] = from, ["to"] = to });
+            haveUnicode.Add(from);
+            here++;
+            Console.WriteLine($"  + {encoding,-22} {Describe(from)} -> {Describe(to)}   {(string?)p["why"]}");
+            if (!haveLegacy.Contains(to))
+            { toUnicodePairs.Add(new JsonObject { ["from"] = to, ["to"] = from }); haveLegacy.Add(to); }
+        }
+
+        var noRoom = new SortedSet<string>(StringComparer.Ordinal);
+        if (limitsDoc[encoding] is JsonArray existing) foreach (var v in existing) noRoom.Add((string?)v! ?? "");
+        int before = noRoom.Count;
+        foreach (var v in node?["limits"]?.AsArray() ?? new JsonArray()) noRoom.Add((string?)v! ?? "");
+        if (noRoom.Count != before)
+        {
+            var arr = new JsonArray();
+            foreach (string h in noRoom) arr.Add(h);
+            limitsDoc[encoding] = arr;
+            totalLimits += noRoom.Count - before;
+        }
+
+        if (here > 0 && !dry)
+        {
+            File.WriteAllText(toLegacyFile, toLegacyDoc.ToJsonString(writer));
+            File.WriteAllText(toUnicodeFile, toUnicodeDoc.ToJsonString(writer));
+            tables++;
+        }
+        totalPairs += here;
+    }
+
+    if (!dry && totalLimits > 0) File.WriteAllText(limitsFile, limitsDoc.ToJsonString(writer));
+    Console.WriteLine($"\n{totalPairs} pair(s) added across {tables} table(s), {totalLimits} encoding limit(s) recorded");
+    if (dry) Console.WriteLine("(dry run - nothing written)");
+    return 0;
+}
+
 if (args.Length < 3)
 {
     Console.Error.WriteLine("usage: gapfill <units.txt> <converted.txt> <encoding> [--map-dir <dir>] [--dry-run]");
+    Console.Error.WriteLine("       gapfill --plan <plan.json> [--map-dir <dir>] [--dry-run]");
     Console.Error.WriteLine("       gapfill --prune [<mappings dir>]");
     return 1;
 }
