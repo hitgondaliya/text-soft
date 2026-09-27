@@ -141,13 +141,28 @@ if (args.Length >= 2 && args[0] == "--plan")
         foreach (var p in node?["pairs"]?.AsArray() ?? new JsonArray())
         {
             string from = (string?)p!["from"] ?? "", to = (string?)p["to"] ?? "";
-            if (from.Length == 0 || to.Length == 0 || haveUnicode.Contains(from)) continue;
-            toLegacyPairs.Add(new JsonObject { ["from"] = from, ["to"] = to });
-            haveUnicode.Add(from);
+            if (from.Length == 0 || to.Length == 0) continue;
+
+            // The two directions live in two tables and are judged apart. A
+            // character the Unicode->legacy table already writes can still be one
+            // the legacy->Unicode table cannot read: that is exactly how a byte
+            // ends up falling through a conversion as a Latin "$".
+            bool wrote = false;
+            if (!haveUnicode.Contains(from))
+            {
+                toLegacyPairs.Add(new JsonObject { ["from"] = from, ["to"] = to });
+                haveUnicode.Add(from);
+                wrote = true;
+            }
+            if (!haveLegacy.Contains(to))
+            {
+                toUnicodePairs.Add(new JsonObject { ["from"] = to, ["to"] = from });
+                haveLegacy.Add(to);
+                wrote = true;
+            }
+            if (!wrote) continue;
             here++;
             Console.WriteLine($"  + {encoding,-22} {Describe(from)} -> {Describe(to)}   {(string?)p["why"]}");
-            if (!haveLegacy.Contains(to))
-            { toUnicodePairs.Add(new JsonObject { ["from"] = to, ["to"] = from }); haveLegacy.Add(to); }
         }
 
         var noRoom = new SortedSet<string>(StringComparer.Ordinal);

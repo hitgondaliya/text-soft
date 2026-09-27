@@ -251,9 +251,17 @@ if (args.Contains("--rosetta"))
         int units = legacyMapped(new IntPtr(key), page[2], page[3], page[4], page[5],
                                  IntPtr.Zero, page[7], page[8]);
         if (units <= 0) continue;
+
+        // The two legacy families answer in different widths. The Ex composers
+        // write UTF-16 code units, like the Unicode one; the Shree-Lipi 7 ones
+        // write the font's bytes, one per unit - and reading those as UTF-16
+        // glues each pair of bytes into one nonsense character ("$L" came back as
+        // U+244C), which then went into the tables as a character no font has.
         var bytes = new byte[Math.Min(units * 2, 30)];
         Marshal.Copy(page[7], bytes, 0, bytes.Length);
-        string legacy = Encoding.Unicode.GetString(bytes).TrimEnd('\0');
+        string legacy = legacyFamily == "7"
+            ? new string(bytes.Take(units).Select(b => (char)b).ToArray()).TrimEnd('\0')
+            : Encoding.Unicode.GetString(bytes).TrimEnd('\0');
         if (legacy.Length == 0 || legacy == uni) continue;
         pairs[uni] = legacy;
     }
