@@ -309,6 +309,9 @@ public sealed class ConverterViewModel : ObservableObject
             bool tgtUni = SelectedOutputLayout.Key.IsUnicode || !_pipeline.IsByteEncoding(SelectedOutputLayout.Key.Encoding);
             var font = OutputFontFamily;
             string fontName = TargetFontName;
+            // Two files picked from two folders can share a name; the second must not
+            // quietly replace the first in the output folder.
+            var taken = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             for (int i = 0; i < Files.Count; i++)
             {
                 var f = Files[i];
@@ -320,6 +323,7 @@ public sealed class ConverterViewModel : ObservableObject
                     string outPath = Path.Combine(OutputFolder, f.Name);
                     if (string.Equals(Path.GetFullPath(outPath), Path.GetFullPath(f.Path), StringComparison.OrdinalIgnoreCase))
                         outPath = Path.Combine(OutputFolder, Path.GetFileNameWithoutExtension(f.Name) + "-converted" + Path.GetExtension(f.Name));
+                    outPath = Unused(outPath, taken);
                     FileConversion.ConvertFile(f.Path, outPath, ConvertText, srcUni, tgtUni, font, fontName, PlainText);
                     f.Status = "Done";
                     ok++;
@@ -339,6 +343,15 @@ public sealed class ConverterViewModel : ObservableObject
         {
             IsBusy = false;
         }
+    }
+
+    /// <summary>A path in the output folder nothing has written to yet this batch.</summary>
+    private static string Unused(string path, HashSet<string> taken)
+    {
+        string dir = Path.GetDirectoryName(path)!, name = Path.GetFileNameWithoutExtension(path), ext = Path.GetExtension(path);
+        string candidate = path;
+        for (int n = 2; !taken.Add(candidate); n++) candidate = Path.Combine(dir, $"{name} ({n}){ext}");
+        return candidate;
     }
 
     public void AddFiles(IEnumerable<string> paths)

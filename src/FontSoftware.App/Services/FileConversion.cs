@@ -104,32 +104,89 @@ public static class FileConversion
     }
 
     /// <summary>
-    /// The old binary Word format, through Word itself: .doc to .docx, convert that,
-    /// and back to .doc. Word is the only thing on the machine that can read a .doc,
-    /// and anyone with .doc files has it.
+    /// The old binary Word format. Word is the only thing on the machine that can read
+    /// a .doc, and anyone with .doc files has it - but Word is asked only to open the
+    /// file and to save it again where it already is. It is never asked to change a
+    /// file's format, because that is a "Save as", and a Save as can stop on a save
+    /// dialog that nobody can see: with Word hidden, the conversion would simply hang.
+    /// The document's own XML comes out of Word, goes through the same conversion every
+    /// .docx gets, and goes back in.
     /// </summary>
     private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)
     {
-        string work = Path.Combine(Path.GetTempPath(), "TextSoft", Guid.NewGuid().ToString("N"));
-        Directory.CreateDirectory(work);
-        string asDocx = Path.Combine(work, "in.docx");
-        string converted = Path.Combine(work, "out.docx");
-        try
+        File.Copy(inputPath, outputPath, overwrite: true);
+        WordDocFormat.ConvertInPlace(outputPath, xml => ConvertFlatOpc(xml, convert, targetFontName));
+    }
+
+    /// <summary>A whole Word document as one XML string - the shape Word hands its own
+    /// content over in - converted and handed back.</summary>
+    public static string ConvertFlatOpc(string flatOpc, Func<string, string> convert, string targetFontName)
+    {
+        using var doc = WordprocessingDocument.FromFlatOpcString(flatOpc);
+        ConvertParts(doc, convert, targetFontName);
+        return doc.ToFlatOpcString();
+    }
+
+    /// <summary>
+    /// Runs that sit next to each other, hold nothing but text and are formatted the
+    /// same way, grouped so they can be converted as one piece. Word splits a word
+    /// into several runs for reasons of its own - an editing session, a spell-check
+    /// pass - and the split falls anywhere, including inside a conjunct.
+    /// </summary>
+    private static IEnumerable<List<Run>> RunGroups(OpenXmlElement root)
+    {
+        foreach (var parent in root.Descendants<Run>().Select(r => r.Parent!).Distinct().ToList())
         {
-            WordDocFormat.SaveAs(inputPath, asDocx, asDocx: true);
-            ConvertDocx(asDocx, converted, convert, targetFontName);
-            WordDocFormat.SaveAs(converted, outputPath, asDocx: false);
+            List<Run>? group = null;
+            string? groupKey = null;
+            foreach (var child in parent.ChildElements.ToList())
+            {
+                bool plain = child is Run r0 && r0.ChildElements.All(c => c is Text or RunProperties);
+                if (!plain)
+                {
+                    if (group is not null) { yield return group; group = null; groupKey = null; }
+                    continue;
+                }
+                var run = (Run)child;
+                string key = FormattingKey(run);
+                if (group is not null && key == groupKey) group.Add(run);
+                else
+                {
+                    if (group is not null) yield return group;
+                    group = new List<Run> { run };
+                    groupKey = key;
+                }
+            }
+            if (group is not null) yield return group;
         }
-        finally
-        {
-            try { Directory.Delete(work, true); } catch { /* a temp folder left behind is not worth an error */ }
-        }
+    }
+
+    /// <summary>
+    /// What makes two runs look the same on the page. The font is left out because the
+    /// conversion restamps it anyway, and so are the spell-check and language hints
+    /// Word sprinkles through a document without changing how it looks.
+    /// </summary>
+    private static string FormattingKey(Run run)
+    {
+        var props = run.RunProperties;
+        if (props is null) return "";
+        var copy = (RunProperties)props.CloneNode(true);
+        foreach (var ignorable in copy.ChildElements.Where(c => c is RunFonts or Languages or NoProof).ToList())
+            ignorable.Remove();
+        return copy.OuterXml;
     }
 
     private static void ConvertDocx(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)
     {
         File.Copy(inputPath, outputPath, overwrite: true);
         using var doc = WordprocessingDocument.Open(outputPath, isEditable: true);
+        ConvertParts(doc, convert, targetFontName);
+    }
+
+    /// <summary>Convert the text of every part of a Word document that holds any: the
+    /// body, the headers and footers, the footnotes and the endnotes.</summary>
+    private static void ConvertParts(WordprocessingDocument doc, Func<string, string> convert, string targetFontName)
+    {
         var main = doc.MainDocumentPart ?? throw new InvalidDataException("Not a Word document.");
         var parts = new List<OpenXmlPart> { main };
         parts.AddRange(main.HeaderParts);
@@ -150,16 +207,21 @@ public static class FileConversion
             };
             if (root is null) continue;
 
-            foreach (var run in root.Descendants<Run>().ToList())
+            foreach (var group in RunGroups(root))
             {
-                var texts = run.Elements<Text>().ToList();
+                var texts = group.SelectMany(r => r.Elements<Text>()).ToList();
                 if (texts.Count == 0) continue;
+                // A word Word split across runs is still one word: convert the whole
+                // seam at once, or a vowel sign that is drawn before its consonant
+                // ends up on the wrong side of it.
                 string joined = string.Concat(texts.Select(t => t.Text));
                 string converted = convert(joined);
                 texts[0].Text = converted;
                 texts[0].Space = SpaceProcessingModeValues.Preserve;
                 for (int i = 1; i < texts.Count; i++) texts[i].Remove();
+                foreach (var extra in group.Skip(1)) extra.Remove();
 
+                var run = group[0];
                 var props = run.RunProperties ?? run.PrependChild(new RunProperties());
                 var fonts = props.RunFonts ?? props.PrependChild(new RunFonts());
                 fonts.Ascii = targetFontName;

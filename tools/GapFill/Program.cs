@@ -100,6 +100,40 @@ if (args.Length >= 1 && args[0] == "--prune")
     return 0;
 }
 
+// --drop <encoding> <U+XXXX> [...]: take out every pair whose legacy side carries a
+// character the encoding cannot really hold. A capture reads a combining mark off a
+// carrier - the vendor draws the mark on a space or a dotted circle - and the carrier
+// comes back as part of the answer. Left in the table, the writing direction puts
+// that carrier into the document.
+if (args.Length >= 3 && args[0] == "--drop")
+{
+    string dropEncoding = args[1];
+    var dropChars = args.Skip(2).Where(a => !a.StartsWith("--"))
+        .Select(a => (char)Convert.ToInt32(a.Replace("U+", ""), 16)).ToArray();
+    bool dropDry = args.Contains("--dry-run");
+    string dropDir = Path.Combine("assets", "config", "mappings");
+    var dropWriter = new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() };
+    int droppedPairs = 0;
+
+    foreach (string file in new[] { Path.Combine(dropDir, "unicode-to-" + dropEncoding + ".json"), Path.Combine(dropDir, dropEncoding + "-to-unicode.json") })
+    {
+        if (!File.Exists(file)) continue;
+        var doc = JsonNode.Parse(File.ReadAllText(file))!.AsObject();
+        var pairs = doc["pairs"]!.AsArray();
+        for (int i = pairs.Count - 1; i >= 0; i--)
+        {
+            string from = (string?)pairs[i]!["from"] ?? "", to = (string?)pairs[i]!["to"] ?? "";
+            if (!dropChars.Any(c => from.Contains(c) || to.Contains(c))) continue;
+            Console.WriteLine($"  - {Path.GetFileName(file),-34} {Describe(from)} -> {Describe(to)}");
+            pairs.RemoveAt(i);
+            droppedPairs++;
+        }
+        if (!dropDry) File.WriteAllText(file, doc.ToJsonString(dropWriter));
+    }
+    Console.WriteLine($"{(dropDry ? "would drop" : "dropped")} {droppedPairs} pair(s) from {dropEncoding}");
+    return 0;
+}
+
 // --plan <file.json>: add pairs worked out from evidence that is already on disk
 // rather than from a fresh capture. The plan says, per encoding, which pairs to add
 // and which characters the encoding has no room for:
