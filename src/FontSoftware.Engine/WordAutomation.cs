@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using static FontSoftware.Engine.NativeMethods;
 
 namespace FontSoftware.Engine;
 
@@ -13,6 +14,8 @@ internal static class WordAutomation
 {
     private static readonly Guid WordClsid = ClsidOf("Word.Application");
     private static DateTime _nextTry = DateTime.MinValue;
+    private static IntPtr _checkedWindow;
+    private static bool _checkedOwns;
 
     /// <summary>
     /// Delete <paramref name="backspaces"/> characters before the caret, then insert
@@ -30,6 +33,9 @@ internal static class WordAutomation
                 return false;
             }
             dynamic word = app;
+            if (!OwnsForegroundWindow(word))
+                return false;   // a different Word - type into the focused window instead
+
             dynamic sel = word.Selection;
             for (int i = 0; i < backspaces; i++) sel.TypeBackspace();
             if (text.Length > 0)
@@ -48,6 +54,44 @@ internal static class WordAutomation
             // Word busy (dialog open, RPC rejected) — let the keystroke path handle it.
             return false;
         }
+    }
+
+    /// <summary>
+    /// Is the Word we reached the one the typist is looking at?
+    ///
+    /// GetActiveObject hands back whichever Word registered itself first, which is
+    /// not necessarily the window in front: a second Word process, or a hidden one
+    /// left behind by a crash, takes every keystroke into a document nobody can
+    /// see - and this method used to report success while the typist watched
+    /// nothing appear. Comparing the process behind Word's own active window with
+    /// the process behind the foreground window settles it; when they differ the
+    /// caller falls back to keystrokes, which always go where the focus is.
+    ///
+    /// The answer is remembered per foreground window: it is a COM round trip, and
+    /// the window in front rarely changes between two keystrokes.
+    /// </summary>
+    private static bool OwnsForegroundWindow(dynamic word)
+    {
+        IntPtr front = GetForegroundWindow();
+        if (front == IntPtr.Zero) return false;
+        if (front == _checkedWindow) return _checkedOwns;
+
+        bool owns = false;
+        try
+        {
+            IntPtr wordWindow = new((int)word.ActiveWindow.Hwnd);
+            _ = GetWindowThreadProcessId(wordWindow, out uint wordPid);
+            _ = GetWindowThreadProcessId(front, out uint frontPid);
+            owns = wordPid != 0 && wordPid == frontPid;
+        }
+        catch
+        {
+            owns = false;   // no document open, or Word is busy - keystrokes it is
+        }
+
+        _checkedWindow = front;
+        _checkedOwns = owns;
+        return owns;
     }
 
     private static Guid ClsidOf(string progId)
