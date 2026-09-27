@@ -114,6 +114,17 @@ internal static class NativeMethods
     [DllImport("user32.dll")]
     public static extern short GetKeyState(int nVirtKey);
 
+    /// <summary>
+    /// Whether a key is physically down, right now. <see cref="GetKeyState"/>
+    /// answers from the CALLING THREAD's input state, which is only brought up to
+    /// date as that thread reads key messages - and the thread that owns a global
+    /// hook never receives the keys another window is being sent. Asked from inside
+    /// the hook, it answers about whatever our own window last saw, so a Ctrl the
+    /// typist is holding reads as not held.
+    /// </summary>
+    [DllImport("user32.dll")]
+    public static extern short GetAsyncKeyState(int nVirtKey);
+
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern IntPtr GetModuleHandle(string? lpModuleName);
 

@@ -698,7 +698,7 @@ public sealed class TypingEngine : IDisposable
     /// shortcut behaviour can be tested without a real keyboard; production code
     /// never changes it.
     /// </summary>
-    public static Func<int, bool> KeyDownProbe { get; set; } = vk => (GetKeyState(vk) & 0x8000) != 0;
+    public static Func<int, bool> KeyDownProbe { get; set; } = vk => (GetAsyncKeyState(vk) & 0x8000) != 0;
 
     private static bool IsDown(int vk) => KeyDownProbe(vk);
     private static bool IsToggled(int vk) => (GetKeyState(vk) & 0x0001) != 0;
