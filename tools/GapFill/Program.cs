@@ -15,6 +15,62 @@ using System.Text.Json.Serialization.Metadata;
 //
 //   gapfill <units.txt> <converted.txt> <encoding-id> [--map-dir assets/config/mappings] [--dry-run]
 
+// --strip-joiners [<dir>]: take the zero-width joiners out of the legacy side of
+// every pair. A joiner is a Unicode instruction about shaping; a legacy encoding is
+// bytes a font draws, and has no such thing. They arrived from captures of Shree's
+// own converter, which writes a half letter as "क्‍" - with a joiner - and every
+// half-letter pair in twelve tables ended up with one sitting on the legacy side.
+// The damage: typing a half letter in Hindi put U+200D into the document, where no
+// legacy font has a glyph, and reading legacy text back never matched the pair at
+// all, because real legacy text has no joiner in it. Gujarati was unaffected only
+// because its half letters are single glyphs that came from a different capture.
+//
+// U+00AD is deliberately left alone: in ISFOC and Akruti that byte draws a letter.
+if (args.Length >= 1 && args[0] == "--strip-joiners")
+{
+    string dir = args.Length > 1 && !args[1].StartsWith("--") ? args[1] : Path.Combine("assets", "config", "mappings");
+    bool dry = args.Contains("--dry-run");
+    var writer = new JsonSerializerOptions { WriteIndented = true, TypeInfoResolver = new DefaultJsonTypeInfoResolver() };
+    char[] joiners = { '​', '‌', '‍', '‎', '‏', '﻿' };
+    int touched = 0, cleaned = 0, removedPairs = 0;
+
+    foreach (string p in Directory.EnumerateFiles(dir, "*.json").OrderBy(x => x, StringComparer.Ordinal))
+    {
+        var doc = JsonNode.Parse(File.ReadAllText(p))!.AsObject();
+        if (doc["pairs"] is not JsonArray pairs) continue;
+        // In a unicode-to-<enc> table the legacy text is "to"; in <enc>-to-unicode it is "from".
+        string side = Path.GetFileName(p).StartsWith("unicode-to-", StringComparison.OrdinalIgnoreCase) ? "to" : "from";
+        var seen = new HashSet<string>(StringComparer.Ordinal);
+        int here = 0, gone = 0;
+
+        for (int i = pairs.Count - 1; i >= 0; i--)
+        {
+            string legacy = (string?)pairs[i]![side] ?? "";
+            if (legacy.IndexOfAny(joiners) < 0) continue;
+            string clean = new(legacy.Where(c => Array.IndexOf(joiners, c) < 0).ToArray());
+            if (clean.Length == 0) { pairs.RemoveAt(i); gone++; continue; }
+            pairs[i]![side] = clean;
+            here++;
+        }
+        // Cleaning can make two pairs say the same thing; the first one wins, as everywhere.
+        for (int i = 0; i < pairs.Count; i++)
+        {
+            string key = ((string?)pairs[i]!["from"] ?? "") + "\u0001" + ((string?)pairs[i]!["to"] ?? "");
+            if (seen.Add(key)) continue;
+            pairs.RemoveAt(i--); gone++;
+        }
+        if (here == 0 && gone == 0) continue;
+
+        Console.WriteLine($"  {Path.GetFileName(p),-36} cleaned {here,4}   dropped {gone}");
+        cleaned += here; removedPairs += gone; touched++;
+        if (!dry) File.WriteAllText(p, doc.ToJsonString(writer));
+    }
+
+    Console.WriteLine($"\n{cleaned} pair(s) cleaned and {removedPairs} removedPairs across {touched} table(s)");
+    if (dry) Console.WriteLine("(dry run - nothing written)");
+    return 0;
+}
+
 // --prune <dir>: drop pairs that map a character to nothing. A capture that came
 // back blank for a unit was once stored as from="(" to="", which does not leave
 // the character alone — it deletes it, so a Bangla document lost its brackets on
