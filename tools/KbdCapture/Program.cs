@@ -242,14 +242,19 @@ if (args.Contains("--rosetta"))
         legacyLoad(Marshal.StringToHGlobalAnsi(Path.Combine(shree, kbd)), page[2], page[3], page[4]);
 
     var pairs = new SortedDictionary<string, string>(StringComparer.Ordinal);
+    // A keyboard is more than the keys printed on it. Layer 0 is what the keycaps
+    // say; the vendor reaches two more layers with Ctrl+Space and Ctrl+Shift+1, and
+    // that is where the characters a script needs rarely - and a table is most
+    // likely to be missing - actually live.
+    for (int layer = 0; layer <= 2; layer++)
     for (char key = '!'; key <= '~'; key++)
     {
-        string? uni = Press(key, 0);
+        string? uni = Press(key, layer);
         if (uni is null) continue;
 
         for (int k = 0; k < 32; k++) Marshal.WriteByte(page[7], k, 0);
         int units = legacyMapped(new IntPtr(key), page[2], page[3], page[4], page[5],
-                                 IntPtr.Zero, page[7], page[8]);
+                                 new IntPtr(layer), page[7], page[8]);
         if (units <= 0) continue;
 
         // The two legacy families answer in different widths. The Ex composers
@@ -263,7 +268,7 @@ if (args.Contains("--rosetta"))
             ? new string(bytes.Take(units).Select(b => (char)b).ToArray()).TrimEnd('\0')
             : Encoding.Unicode.GetString(bytes).TrimEnd('\0');
         if (legacy.Length == 0 || legacy == uni) continue;
-        pairs[uni] = legacy;
+        if (!pairs.ContainsKey(uni)) pairs[uni] = legacy;
     }
 
     Console.WriteLine($"{Path.GetFileNameWithoutExtension(kbd ?? before)}: {pairs.Count} pairs");
