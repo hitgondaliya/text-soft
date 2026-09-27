@@ -1,4 +1,5 @@
 using FontSoftware.Core.Config;
+using FontSoftware.Core.Conversion;
 using Xunit;
 
 namespace FontSoftware.Tests;
@@ -154,5 +155,24 @@ public class ConverterTests
                     $"{lang.Name}: no unicode->legacy for {legacy.ConversionKey}");
             }
         }
+    }
+
+    /// <summary>
+    /// A legacy font has one glyph for ड़, so the table answers with the single
+    /// character U+095D. Unicode excludes that one from composition, so a document
+    /// that went out through the converter and came back used to change spelling
+    /// even though it read the same.
+    /// </summary>
+    [Theory]
+    [InlineData("shree-dev456", "विद्यालय में पढ़ाई")]
+    [InlineData("shree-devx", "ख़बर क़लम")]
+    [InlineData("shree-ban7", "বিদ্যালয় ভারত")]
+    [InlineData("shree-banx", "বিদ্যালয় ভারত")]
+    public void NuktaLettersKeepTheirNormalSpelling(string enc, string word)
+    {
+        var p = new ConversionPipeline(Bundle());
+        var legacy = LayoutKey.Legacy(enc);
+        string there = p.Convert(word, LayoutKey.Unicode, legacy).Text;
+        Assert.Equal(word, p.Convert(there, legacy, LayoutKey.Unicode).Text);
     }
 }

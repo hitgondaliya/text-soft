@@ -67,7 +67,7 @@ public sealed class ConversionPipeline
 
         // Hop 2: out of Unicode.
         if (target.IsUnicode)
-            return new ConversionResult { Text = uni, UnmappedCharacters = unmapped.Distinct().ToArray() };
+            return new ConversionResult { Text = Nukta.Spell(uni), UnmappedCharacters = unmapped.Distinct().ToArray() };
 
         var to = FromUnicode(target.Encoding) ?? throw new InvalidOperationException($"No table for Unicode → {target.Encoding}.");
         var r2 = to.Convert(uni);
