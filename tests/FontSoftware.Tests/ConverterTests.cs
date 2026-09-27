@@ -72,6 +72,22 @@ public class ConverterTests
     [InlineData("shree-malx", "kartika", "വിദ്യ")]
     [InlineData("shree-orix", "kalinga", "ବିଦ୍ୟା")]
     [InlineData("shree-tamx", "latha",   "வித்தை")]
+    // A plain ra after a vowel sign is a ra, not a reph. Fused write pairs used to
+    // swallow it, and these are the everyday words that came back without it.
+    [InlineData("shree-gujx", "shruti",  "શેરી")]
+    [InlineData("shree-gujx", "shruti",  "મોર")]
+    [InlineData("shree-gujx", "shruti",  "દોરી")]
+    [InlineData("shree-gujx", "shruti",  "કર્મ")]
+    [InlineData("shree-guj7", "shruti",  "શેરી")]
+    [InlineData("shree-guj7", "shruti",  "ધીરજ")]
+    [InlineData("shree-orix", "kalinga", "ଶିର")]
+    [InlineData("shree-ori7", "kalinga", "ଶିର")]
+    // Hindi writes its half letters as single glyphs and its i-matra in two widths.
+    [InlineData("shree-dev456", "mangal", "दस्तावेज")]
+    [InlineData("shree-dev456", "mangal", "कर्म")]
+    [InlineData("shree-dev456", "mangal", "विद्यालय")]
+    [InlineData("shree-tel7", "gautami", "విద్య")]
+    [InlineData("shree-telx", "gautami", "ద్దాత")]
     public void ShreeRoundTripNoUnmapped(string enc, string uni, string word)
     {
         var b = Bundle();

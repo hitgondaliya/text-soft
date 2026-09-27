@@ -133,8 +133,16 @@ if (args.Length >= 2 && args[0] == "--fix")
             foreach (var edit in edits)
             {
                 string from = FromHex((string?)edit!["fromHex"] ?? ""), to = FromHex((string?)edit["toHex"] ?? "");
-                if (from.Length == 0 || to.Length == 0) continue;
+                if (from.Length == 0 || (to.Length == 0 && (bool?)edit["remove"] != true)) continue;
                 var existing = pairs.FirstOrDefault(x => (string?)x!["from"] == from);
+                if ((bool?)edit["remove"] == true)
+                {
+                    if (existing is null) continue;
+                    Console.WriteLine($"  - {encoding,-14} {side,-10} {Describe(from)} -> {Describe((string?)existing["to"] ?? "")}   {(string?)edit["why"]}");
+                    pairs.Remove(existing);
+                    changed++;
+                    continue;
+                }
                 if (existing is not null)
                 {
                     string was = (string?)existing["to"] ?? "";
