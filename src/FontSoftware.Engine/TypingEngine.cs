@@ -262,11 +262,17 @@ public sealed class TypingEngine : IDisposable
             _lastEmitted = null;
             if (_layout.HasSequences) _seqKeys.Append(mark);
             else ResetLegacy();
+            // An escape puts nothing on screen, so when one does not work there is
+            // nothing to look at. Write down that it was seen and what it opened.
+            _log.Info($"Escape: {(mark == EscapeLayer.Mark ? "Ctrl+Space" : "Ctrl+Shift+1")} on '{_layout.Name}' " +
+                      $"({_layout.Escape.Count} keys on its own layer, {_layout.Symbols.Count} on the shared one); waiting on '{_seqKeys}'.");
             return;
         }
 
         var mapping = _layout.Find(e.VirtualKey);
         char typed = KeyChar(e.VirtualKey);
+        if (_seqKeys.Length > 0 && (_seqKeys[^1] == EscapeLayer.Mark || _seqKeys[^1] == EscapeLayer.SymbolMark))
+            _log.Info($"Escape: then '{typed}' -> {(_layout.MatchSequence(_seqKeys.ToString() + typed) is { } t ? "'" + t + "'" : "nothing on that layer")}.");
 
         // Ctrl+A, Ctrl+S, Alt+F, Win+E and the rest are commands, not text. Without
         // this the layout would swallow them and type a letter instead, so no
