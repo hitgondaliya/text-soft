@@ -161,7 +161,7 @@
                                 </GridView>
                             </ListView.View>
                         </ListView>
-                        <TextBlock Text="Drop .txt, .rtf or .docx files here, or use Add Files / Add Folder."
+                        <TextBlock Text="Drop .txt, .rtf, .docx or .doc files here, or use Add Files / Add Folder."
                                    HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock" BasedOn="{StaticResource Hint}">

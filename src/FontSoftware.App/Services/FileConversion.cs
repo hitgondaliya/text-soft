@@ -15,7 +15,7 @@ namespace FontSoftware.App.Services;
 /// </summary>
 public static class FileConversion
 {
-    public static readonly string[] Extensions = { ".txt", ".rtf", ".docx" };
+    public static readonly string[] Extensions = { ".txt", ".rtf", ".docx", ".doc" };
 
     private static readonly Encoding Cp1252 = GetCp1252();
 
@@ -63,6 +63,9 @@ public static class FileConversion
             case ".docx":
                 ConvertDocx(inputPath, outputPath, convert, targetFontName);
                 break;
+            case ".doc":
+                ConvertDoc(inputPath, outputPath, convert, targetFontName);
+                break;
             default:
                 throw new NotSupportedException($"Unsupported file type: {Path.GetExtension(inputPath)}");
         }
@@ -98,6 +101,29 @@ public static class FileConversion
         var doc = RichTextConversion.FromRtf(File.ReadAllText(inputPath, Cp1252));
         var outDoc = RichTextConversion.Convert(doc, convert, targetFont, null, plainText: false);
         File.WriteAllText(outputPath, RichTextConversion.ToRtf(outDoc), Cp1252);
+    }
+
+    /// <summary>
+    /// The old binary Word format, through Word itself: .doc to .docx, convert that,
+    /// and back to .doc. Word is the only thing on the machine that can read a .doc,
+    /// and anyone with .doc files has it.
+    /// </summary>
+    private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)
+    {
+        string work = Path.Combine(Path.GetTempPath(), "TextSoft", Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(work);
+        string asDocx = Path.Combine(work, "in.docx");
+        string converted = Path.Combine(work, "out.docx");
+        try
+        {
+            WordDocFormat.SaveAs(inputPath, asDocx, asDocx: true);
+            ConvertDocx(asDocx, converted, convert, targetFontName);
+            WordDocFormat.SaveAs(converted, outputPath, asDocx: false);
+        }
+        finally
+        {
+            try { Directory.Delete(work, true); } catch { /* a temp folder left behind is not worth an error */ }
+        }
     }
 
     private static void ConvertDocx(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)

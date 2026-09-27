@@ -186,14 +186,14 @@ public partial class ConverterView : UserControl
         {
             Multiselect = true,
             Title = "Add files to convert",
-            Filter = "Documents (*.txt;*.rtf;*.docx)|*.txt;*.rtf;*.docx|Text files (*.txt)|*.txt|Rich Text (*.rtf)|*.rtf|Word (*.docx)|*.docx|All files (*.*)|*.*",
+            Filter = "Documents (*.txt;*.rtf;*.docx;*.doc)|*.txt;*.rtf;*.docx;*.doc|Text files (*.txt)|*.txt|Rich Text (*.rtf)|*.rtf|Word (*.docx;*.doc)|*.docx;*.doc|All files (*.*)|*.*",
         };
         if (dlg.ShowDialog() == true) _vm?.AddFiles(dlg.FileNames);
     }
 
     private void AddFolderClick(object sender, RoutedEventArgs e)
     {
-        var dlg = new OpenFolderDialog { Title = "Add every .txt / .rtf / .docx in a folder" };
+        var dlg = new OpenFolderDialog { Title = "Add every .txt / .rtf / .docx / .doc in a folder" };
         if (dlg.ShowDialog() == true) _vm?.AddFolder(dlg.FolderName);
     }
 

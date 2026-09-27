@@ -351,7 +351,7 @@ public sealed class ConverterViewModel : ObservableObject
             Files.Add(new ConvertFileItem { Path = p });
             added++;
         }
-        Status = skipped > 0 ? $"Added {added}. Skipped {skipped} (only .txt, .rtf and .docx can be converted)." : $"Added {added} file{(added == 1 ? "" : "s")}.";
+        Status = skipped > 0 ? $"Added {added}. Skipped {skipped} (only .txt, .rtf, .docx and .doc can be converted)." : $"Added {added} file{(added == 1 ? "" : "s")}.";
         StatusIsError = false;
         RefreshCanConvert();
     }
