@@ -1,0 +1,91 @@
+# Where the keyboards come from
+
+Every keyboard TextSoft types with is the vendor's own. Nothing in
+`assets/config/layouts/` is hand-written or guessed; each key traces back to one
+of Shree-Lipi's two accounts of itself, and `tools/KbdAudit` prints the ledger.
+
+## The two sources
+
+**The published charts.** Each keyboard has a help file in the install
+(`C:\Shree-Lipi nxt\data\<script>\TypewritGUJ.chm`) whose pages are a table of
+keystroke → character: single keys, multi-key runs ("jf" → જિ), the third layer
+written as `Ø` + key, and a "special keys" table for the symbols every keyboard
+of a script shares (Ctrl+Shift+1). This is what a typist is taught.
+`tools/ChmMap` extracts them.
+
+**The composer.** Each script has a DLL (`S8GujU64.dll`) whose Tutor exports
+answer, key by key, what the loaded keyboard types — including the keys no chart
+prints. It loads standalone: no SLNXT, no hook, no window, so a capture runs
+while the machine is in use. `tools/KbdCapture` asks it; see the
+`shree-tutor-api` memory for the call shapes.
+
+A keyboard's runtime file (`INSCRIPT.GUJ`) is the third voice. It holds an
+internal code per key rather than Unicode, but joining every chart of a script
+with its own runtime file gives code → character, and that reading settles ties.
+
+## Which one wins
+
+The chart, by default. Asked about one key on its own the composer answers with
+the state that key leaves the text in — a matra where a typist is taught the
+vowel, a half form where the chart prints the letter — and our multi-key runs are
+built on the chart's reading.
+
+The exception is a chart row that repeats itself: one character on two
+keystrokes, or one keystroke with two characters. One of those rows has lost its
+own character, and then the composer is the one that still knows what the key
+types. That tell, plus the runtime file as a third voice, is what puts the nukta
+back on the Kannada `]` (the charts print an avagraha), the subjoined consonants
+on the Punjabi keyboards (no Punjabi chart writes them down), the reph on the
+Kannada `@`, and the half forms on the Punjabi Eng keyboard whose backtick the
+chart itself uses to undo them.
+
+`Vendor.Compare` in `tools/Shared/Vendor.cs` names every kind of difference and
+`Vendor.ComposerWins` holds the rule.
+
+## Languages with a file of their own
+
+Assamese has fifteen keyboard files beside the Bengali ones — `INSCRIPT.ASS` is
+`INSCRIPT.BAN` with ৱ where Bengali has ব — and the vendor writes one help file
+for the two. Captures of those live under `capture/ass/`, this language's own
+file has the last word on the keys where the two differ, and the letters it
+changes change inside the Bengali chart's runs as well.
+
+Sanskrit has its own composer (`S8SanU64.dll`) but answers exactly as Devanagari
+does, so the Sanskrit layouts are the Devanagari ones.
+
+## Running it
+
+```bash
+# 1. the charts, out of the help files (needs 7-Zip)
+dotnet run --project tools/ChmMap -- --shree "C:\Shree-Lipi nxt" --out <chm dir>
+
+# 2. the composer, keyboard by keyboard
+dotnet run --project tools/KbdCapture -- --script guj --kbd INSCRIPT.GUJ \
+    --out <capture dir>/guj/INSCRIPT.json
+
+# 3. the charts into the layouts, then the composer over them - in that order
+dotnet run --project tools/KbdFromChm -- --chm <chm dir> --scheme "C:\Shree-Lipi nxt" --apply
+dotnet run --project tools/KbdFromCapture -- --chm <chm dir> --capture <capture dir> \
+    --scheme "C:\Shree-Lipi nxt" --apply
+
+# 4. the ledger
+dotnet run --project tools/KbdAudit -- --chm <chm dir> --capture <capture dir>
+```
+
+`KbdFromChm` writes the chart's reading everywhere; `KbdFromCapture` then fills
+the keys no chart prints and applies the exceptions above. Running the second
+without the first leaves the exceptions unapplied, and the audit will say so.
+
+## Where it stands
+
+327 keyboards across 13 languages. Against the charts: 13,741 single keys and
+37,960 multi-key runs, none different, none missing. Against the composer: 27,989
+keys and 7,529 Ctrl+Space keys, three different, none missing.
+
+Those three are keys where the help file and the composer name different
+characters and nothing breaks the tie — Bengali Akruti's Ctrl+Space `d`, Telugu
+Itr's `J`, Kannada Surabhi's `&`. The chart stands on all three.
+
+Sixteen keyboards have a chart but no capture: the vendor documents them and
+ships no runtime file for them (Modular in every script, Gujarati Ekl, Malayalam
+Typewri1, Telugu Applen). They are complete from their charts.
