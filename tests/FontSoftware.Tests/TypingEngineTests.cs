@@ -42,7 +42,7 @@ public class TypingEngineTests : IDisposable
 {
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,
                       Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
-                      VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A;
+                      VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A, VkD = 0x44;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
@@ -61,6 +61,26 @@ public class TypingEngineTests : IDisposable
         _engine = new TypingEngine(_hook, _injector);
         _engine.SetProfile(layout, gujarati.Name, "Unicode");
         _engine.SetEnabled(true);
+    }
+
+    /// <summary>
+    /// The keys the vendor's charts put on the shifted letters are as much a part
+    /// of a keyboard as the plain ones, and a build that shipped them empty typed
+    /// nothing at all there: Shift+D on the Gujarati Typewriter keyboard is the
+    /// half ka, not silence.
+    /// </summary>
+    [Fact]
+    public void ShiftedLettersTypeWhatTheChartPrints()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Name == "Typewriter")),
+                           gujarati.Name, "Unicode");
+
+        _down.Add(VkShift);
+        Assert.True(Press(VkD), "a mapped key belongs to the engine");
+        _down.Remove(VkShift);
+
+        Assert.Equal("ક્‍", _injector.Text);
     }
 
     /// <summary>Switch to a keyboard that has the vendor's third layer.</summary>
