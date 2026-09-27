@@ -78,8 +78,13 @@ public sealed class LowLevelKeyboardHook : IDisposable
 
         if (isDown || isUp)
         {
-            bool injected = (data.flags & LLKHF_INJECTED) != 0
-                            || data.dwExtraInfo == InputInjector.InjectionSignature;
+            // Ours, and only ours. Every event the injector sends carries its
+            // signature, so that alone stops the engine reading its own output.
+            // Judging by the system's "injected" flag instead disowned everyone
+            // else's synthesized keys too - the Windows on-screen keyboard, a
+            // remapper, a remote session - and the product simply did not type for
+            // anyone using one.
+            bool injected = data.dwExtraInfo == InputInjector.InjectionSignature;
 
             var args = new HookKeyEventArgs
             {

@@ -279,6 +279,9 @@ public sealed class TypingEngine : IDisposable
         // shortcut worked while typing was on.
         if (IsShortcut(mapping))
         {
+            if (_seqKeys.Length > 0)
+                _log.Info($"Escape: the run '{_seqKeys}' was dropped - '{typed}' arrived looking like a shortcut " +
+                          $"(ctrl={IsDown(VK_CONTROL)}, alt={IsDown(VK_MENU)}).");
             _pendingDead = null;
             _lastEmitted = null;
             ResetSequence();
