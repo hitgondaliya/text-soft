@@ -52,17 +52,36 @@ public sealed class TypingEngine : IDisposable
     private string _seqOut = string.Empty;
     private int _seqMatched;   // how much of _seqKeys the text in _seqOut accounts for (Eng keyboard escape runs)
 
-    // Windows' own key state is the truth about Ctrl: the injector lifts a held
-    // Ctrl only for the length of what it types, and puts it back down in the
-    // same breath (InputInjector.WithCtrlLifted), so it never reads "up" while
-    // the finger is still on it.
-    private static bool CtrlDown => IsDown(VK_CONTROL);
+    // Ctrl as the finger has it. Before typing, the injector lets go of a Ctrl
+    // the typist is holding and never presses it back (a key we press can stay
+    // stuck; see InputInjector.AfterLiftingCtrl), so from then on Windows reads it
+    // as up while the finger is still on it - and a second Ctrl+Space on the same
+    // hold, which Shree takes, went through as a plain space. The hook sees our
+    // lift (its own tag) and, if Windows still had that Ctrl down at that point in
+    // the input, the finger was on it: it counts as held until any real Ctrl event
+    // comes along. A Ctrl-up the hook never sees (let go over an elevated window)
+    // is covered by a time limit longer than anyone holds a chord.
+    private bool _ctrlLifted;
+    private long _ctrlLiftedAt;
+    private const long CtrlLiftLimitMs = 8000;
+
+    private bool CtrlDown => IsDown(VK_CONTROL) || CtrlOnlyByLift;
+
+    /// <summary>Ctrl is held by the finger, but Windows reads it as up because we lifted it.</summary>
+    private bool CtrlOnlyByLift =>
+        _ctrlLifted && !IsDown(VK_CONTROL) && Environment.TickCount64 - _ctrlLiftedAt < CtrlLiftLimitMs;
 
     // The key a run on the layer took while Ctrl was held. Held past the repeat
     // delay it repeats, and each repeat arrives with Ctrl still down - as Ctrl+V,
     // which pasted the clipboard thirty times a second. Its repeats are swallowed
     // until it comes up.
     private int _layerKey;
+
+    // The escape key itself (Space, or the 1 of Ctrl+Shift+1) while it is down.
+    // Held past the repeat delay it repeats too, and a repeat looked like the
+    // second press that takes an escape back - the layer closed, and the V after
+    // it went out as Ctrl+V.
+    private int _escapeKey;
 
     // ---- Legacy Font Layout output (e.g. ShreeLipi-Ex) ----
     // When a legacy font layout is active, keys still map to Unicode, but we then
@@ -216,8 +235,22 @@ public sealed class TypingEngine : IDisposable
 
     private void OnKey(object? sender, HookKeyEventArgs e)
     {
+        if (e.VirtualKey is VK_CONTROL or VK_LCONTROL or VK_RCONTROL)
+        {
+            if (e.Lift)
+            {
+                // Our key-up for a held Ctrl. Only if Windows still had it down at
+                // this point was the finger on it; a finger that let go just before
+                // left nothing to lift.
+                if (!e.IsKeyDown && IsDown(e.VirtualKey)) { _ctrlLifted = true; _ctrlLiftedAt = Environment.TickCount64; }
+            }
+            else if (!e.Injected) _ctrlLifted = false;   // the finger moved: Windows' state is the truth again
+        }
+
         if (!e.Injected && !e.IsKeyDown && e.VirtualKey == _layerKey)
             _layerKey = 0;
+        if (!e.Injected && !e.IsKeyDown && e.VirtualKey == _escapeKey)
+            _escapeKey = 0;
 
         // Never react to our own injected input.
         if (e.Injected)
@@ -297,6 +330,8 @@ public sealed class TypingEngine : IDisposable
         if (EscapeMarkFor(e.VirtualKey) is var mark and not '\0')
         {
             e.Handled = true;
+            if (e.VirtualKey == _escapeKey) return;   // its auto-repeat, not a second press
+            _escapeKey = e.VirtualKey;
             _pendingDead = null;
             _lastEmitted = null;
             // Pressed twice, the escape takes itself back: on Shree, Ctrl+Space
@@ -335,6 +370,7 @@ public sealed class TypingEngine : IDisposable
         if (looksLikeShortcut && !OnEscapedLayer(typed))
         {
             if (RepeatOfLayerKey(e)) return;
+            if (ShortcutOnALiftedCtrl(e)) return;
             if (_seqKeys.Length > 0)
                 _log.Info($"Escape: the run '{_seqKeys}' was dropped - '{typed}' arrived looking like a shortcut " +
                           $"(ctrl={CtrlDown}, alt={IsDown(VK_MENU)}).");
@@ -496,7 +532,7 @@ public sealed class TypingEngine : IDisposable
     /// The escape: Ctrl+Space, which is what the product's own settings name, and
     /// Ctrl+Shift+1, which is how the published key charts write it.
     /// </summary>
-    private static char EscapeMarkFor(int vk)
+    private char EscapeMarkFor(int vk)
     {
         if (!CtrlDown || IsDown(VK_MENU)) return '\0';
         if (vk == VK_SPACE) return EscapeLayer.Mark;               // this keyboard's third layer
@@ -534,6 +570,20 @@ public sealed class TypingEngine : IDisposable
     {
         if (e.VirtualKey != _layerKey) return false;
         e.Handled = true;
+        return true;
+    }
+
+    /// <summary>
+    /// A shortcut on a Ctrl we lifted. Windows no longer has that Ctrl down, so the
+    /// application would get a plain letter - typed into the document where the
+    /// typist meant Ctrl+S. It is swallowed instead; pressing Ctrl again makes it
+    /// a shortcut as usual.
+    /// </summary>
+    private bool ShortcutOnALiftedCtrl(HookKeyEventArgs e)
+    {
+        if (!CtrlOnlyByLift || IsDown(VK_MENU) || IsDown(VK_LWIN) || IsDown(VK_RWIN)) return false;
+        e.Handled = true;
+        _log.Info($"Key {e.VirtualKey:X2} with a Ctrl we had let go of for the typist - not passed on as a letter.");
         return true;
     }
 
@@ -756,6 +806,7 @@ public sealed class TypingEngine : IDisposable
         {
             if (!e.IsKeyDown) return;
             if (RepeatOfLayerKey(e)) return;
+            if (ShortcutOnALiftedCtrl(e)) { ResetPhonetic(); return; }
             ResetPhonetic();
             FlushBeforeKey();
             return;
@@ -852,7 +903,7 @@ public sealed class TypingEngine : IDisposable
     /// Ctrl+Alt is AltGr on European keyboards, so that pair counts as text only
     /// when the layout actually defines an AltGr glyph for the key.
     /// </summary>
-    private static bool IsShortcut(KeyMapping? mapping)
+    private bool IsShortcut(KeyMapping? mapping)
     {
         if (IsDown(VK_LWIN) || IsDown(VK_RWIN))
             return true;

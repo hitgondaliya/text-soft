@@ -21,6 +21,13 @@ public class InputInjector
     /// </summary>
     public static readonly IntPtr InjectionSignature = new(0x46_53_54_31); // "FST1"
 
+    /// <summary>
+    /// Tag on the key-up we send for a Ctrl the typist is still holding
+    /// (<see cref="AfterLiftingCtrl"/>). The engine reads it to know the finger is
+    /// still down while Windows now says the key is up.
+    /// </summary>
+    public static readonly IntPtr LiftSignature = new(0x46_53_54_32);     // "FST2"
+
     // ---- the injection thread ----
     //
     // Every one of these calls is made from inside the low-level keyboard hook,
@@ -105,7 +112,7 @@ public class InputInjector
                 inputs[n++] = UnicodeInput(c, keyUp: true);
             }
 
-            Send(WithCtrlLifted(inputs), $"text '{text}'");
+            Send(AfterLiftingCtrl(inputs), $"text '{text}'");
         });
     }
 
@@ -140,16 +147,30 @@ public class InputInjector
 
             // Scan codes as well as virtual keys: some editors only honour a shortcut
             // that carries the physical key.
-            // A Ctrl the typist is holding (through a Ctrl+Space run) is already
-            // down: pressing and releasing ours around the V would leave Windows
-            // reading it as up while their finger is still on it.
-            bool held = (GetAsyncKeyState(VK_LCONTROL) & 0x8000) != 0 || (GetAsyncKeyState(VK_RCONTROL) & 0x8000) != 0;
-            var inputs = new List<INPUT>(4);
-            if (!held) inputs.Add(VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D));
-            inputs.Add(VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F));
-            inputs.Add(VirtualKeyInput(0x56, keyUp: true, scan: 0x2F));
-            if (!held) inputs.Add(VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D));
-            Send(inputs.ToArray(), $"rich paste '{text}' in {fontName}");
+            //
+            // The paste must not pick up a modifier the typist is holding. A held
+            // Ctrl (through a Ctrl+Space run) is lifted first, like before any
+            // typing. A held Shift - the word began on a shifted key, Shift+E for
+            // આ - would turn Ctrl+V into Ctrl+Shift+V: plain-text paste in Office,
+            // values only in Excel, the Paste Special dialog in LibreOffice. So with
+            // Shift down the paste is Shift+Insert instead, on the Shift already
+            // there. Nothing is ever pressed that the typist is not holding, and no
+            // key of theirs is pressed back down.
+            bool shift = IsDown(VK_LSHIFT) || IsDown(VK_RSHIFT);
+            var paste = shift
+                ? new[]
+                {
+                    VirtualKeyInput(VK_INSERT, keyUp: false, scan: 0x52, extended: true),
+                    VirtualKeyInput(VK_INSERT, keyUp: true, scan: 0x52, extended: true),
+                }
+                : new[]
+                {
+                    VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D),
+                    VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F),
+                    VirtualKeyInput(0x56, keyUp: true, scan: 0x2F),
+                    VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D),
+                };
+            Send(AfterLiftingCtrl(paste), $"rich paste '{text}' in {fontName}{(shift ? " (Shift+Insert)" : "")}");
 
             if (handover.Previous is not null)
             {
@@ -187,34 +208,34 @@ public class InputInjector
                 inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: true);
             }
 
-            Send(WithCtrlLifted(inputs), $"{count} backspace(s)");
+            Send(AfterLiftingCtrl(inputs), $"{count} backspace(s)");
         });
     }
 
+    private static bool IsDown(int vk) => (GetAsyncKeyState(vk) & 0x8000) != 0;
+
     /// <summary>
-    /// What we type, with a Ctrl the typist is holding lifted around it.
+    /// What we type, after letting go of a Ctrl the typist is holding.
     ///
     /// Ctrl+Space is a chord, and after it the typist may keep Ctrl down through
     /// the next key. What we type for that key would then arrive with Ctrl held:
     /// our Backspace would be Ctrl+Backspace, which deletes the whole word before
-    /// the caret, and a word processor may read a character as a shortcut. So the
-    /// held side (left, right, or both) comes up just before and goes back down
-    /// just after, in the one SendInput call - nothing can come between, and
-    /// Windows never reads Ctrl as up while the finger is on it. Only a Ctrl that
-    /// is down the moment this runs is lifted, so none is ever pressed that the
-    /// typist is not holding.
+    /// the caret, and a browser drops a character typed under Ctrl. So the held
+    /// side comes up first - tagged <see cref="LiftSignature"/>, so the engine
+    /// knows the finger is still on it - and is never pressed back down: a key we
+    /// press can stay down after the finger has left it (the finger can lift
+    /// between the moment we look and the moment we send), and a stuck Ctrl turns
+    /// every later key into a shortcut. A key-up can never be stuck.
     /// </summary>
-    private static INPUT[] WithCtrlLifted(INPUT[] inputs)
+    private static INPUT[] AfterLiftingCtrl(INPUT[] inputs)
     {
-        bool left = (GetAsyncKeyState(VK_LCONTROL) & 0x8000) != 0;
-        bool right = (GetAsyncKeyState(VK_RCONTROL) & 0x8000) != 0;
+        bool left = IsDown(VK_LCONTROL);
+        bool right = IsDown(VK_RCONTROL);
         if (!left && !right) return inputs;
-        var all = new List<INPUT>(inputs.Length + 4);
-        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D));
-        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true));
+        var all = new List<INPUT>(inputs.Length + 2);
+        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D, extra: LiftSignature));
+        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true, extra: LiftSignature));
         all.AddRange(inputs);
-        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: false, scan: 0x1D));
-        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: false, scan: 0x1D, extended: true));
         return all.ToArray();
     }
 
@@ -248,7 +269,7 @@ public class InputInjector
         }
     };
 
-    private static INPUT VirtualKeyInput(int vk, bool keyUp, ushort scan = 0, bool extended = false) => new()
+    private static INPUT VirtualKeyInput(int vk, bool keyUp, ushort scan = 0, bool extended = false, IntPtr extra = default) => new()
     {
         type = INPUT_KEYBOARD,
         U = new InputUnion
@@ -259,7 +280,7 @@ public class InputInjector
                 wScan = scan,
                 dwFlags = (keyUp ? KEYEVENTF_KEYUP : 0) | (extended ? KEYEVENTF_EXTENDEDKEY : 0),
                 time = 0,
-                dwExtraInfo = InjectionSignature
+                dwExtraInfo = extra == IntPtr.Zero ? InjectionSignature : extra
             }
         }
     };

@@ -34,6 +34,9 @@ internal static class NativeMethods
     public const int VK_MENU = 0x12;    // Alt
     public const int VK_BACK = 0x08;
     public const int VK_SPACE = 0x20;
+    public const int VK_INSERT = 0x2D;
+    public const int VK_LSHIFT = 0xA0;
+    public const int VK_RSHIFT = 0xA1;
     public const int VK_LCONTROL = 0xA2;
     public const int VK_RCONTROL = 0xA3;
     public const int VK_LWIN = 0x5B;

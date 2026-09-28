@@ -13,6 +13,12 @@ public sealed class HookKeyEventArgs : EventArgs
     public bool Injected { get; init; }
 
     /// <summary>
+    /// One of ours: the key-up the injector sends for a Ctrl the typist is still
+    /// holding (see InputInjector.LiftSignature). Always also <see cref="Injected"/>.
+    /// </summary>
+    public bool Lift { get; init; }
+
+    /// <summary>
     /// Set to true to swallow the original keystroke so it never reaches the
     /// focused app (FR-3: "original key suppressed").
     /// </summary>
@@ -84,13 +90,15 @@ public sealed class LowLevelKeyboardHook : IDisposable
             // else's synthesized keys too - the Windows on-screen keyboard, a
             // remapper, a remote session - and the product simply did not type for
             // anyone using one.
-            bool injected = data.dwExtraInfo == InputInjector.InjectionSignature;
+            bool lift = data.dwExtraInfo == InputInjector.LiftSignature;
+            bool injected = lift || data.dwExtraInfo == InputInjector.InjectionSignature;
 
             var args = new HookKeyEventArgs
             {
                 VirtualKey = (int)data.vkCode,
                 IsKeyDown = isDown,
-                Injected = injected
+                Injected = injected,
+                Lift = lift
             };
 
             try

@@ -99,6 +99,7 @@ public class TypingEngineTests : IDisposable
         _down.Add(VkControl);
         if (shift) _down.Add(VkShift);
         Assert.True(Press(vk), "the escape belongs to the engine, not to the application");
+        Send(vk, down: false);
         _down.Remove(VkControl);
         if (shift) _down.Remove(VkShift);
     }
@@ -114,9 +115,9 @@ public class TypingEngineTests : IDisposable
     private bool Press(int vk) => Send(vk, down: true);
 
     /// <summary>Any key event: down or up, the typist's or one of our own injected ones.</summary>
-    private bool Send(int vk, bool down, bool injected = false)
+    private bool Send(int vk, bool down, bool injected = false, bool lift = false)
     {
-        var args = new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = down, Injected = injected };
+        var args = new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = down, Injected = injected || lift, Lift = lift };
         var field = typeof(LowLevelKeyboardHook)
             .GetField("KeyEvent", BindingFlags.Instance | BindingFlags.NonPublic)!;
         var handler = (EventHandler<HookKeyEventArgs>?)field.GetValue(_hook);
@@ -398,12 +399,13 @@ public class TypingEngineTests : IDisposable
     }
 
     // ---- the Ctrl the typist holds ----
-    // The injector lifts a held Ctrl only around what it types, in the same
-    // SendInput call, so Windows keeps reading it as down: these hold it for the
-    // whole of each test the way the finger does.
+    // Before it types, the real injector lets go of a held Ctrl (tagged as a lift)
+    // and never presses it back, so Windows then reads Ctrl as up while the finger
+    // is still on it. WeLiftCtrl models exactly that.
 
-    private void HoldCtrl() { _down.Add(VkControl); Send(VkLControl, down: true); }
-    private void ReleaseCtrl() { Send(VkLControl, down: false); _down.Remove(VkControl); }
+    private void HoldCtrl() { _down.Add(VkControl); _down.Add(VkLControl); Send(VkLControl, down: true); }
+    private void WeLiftCtrl() { Send(VkLControl, down: false, lift: true); _down.Remove(VkControl); _down.Remove(VkLControl); }
+    private void ReleaseCtrl() { Send(VkLControl, down: false); _down.Remove(VkControl); _down.Remove(VkLControl); }
 
     /// <summary>A second Ctrl+Space on the same hold is an escape again.</summary>
     [Fact]
@@ -412,7 +414,9 @@ public class TypingEngineTests : IDisposable
         UseGujarati("InScript");
         HoldCtrl();
         Press(VkSpace);
+        Send(VkSpace, down: false);
         Assert.True(Press(VkV));
+        WeLiftCtrl();
         Send(VkV, down: false);
         Assert.True(Press(VkSpace), "the finger is still on Ctrl: this is Ctrl+Space");
         Assert.True(Press(VkV));
@@ -446,13 +450,84 @@ public class TypingEngineTests : IDisposable
         UseGujarati("Typewriter");
         HoldCtrl();
         Press(VkSpace);
+        Send(VkSpace, down: false);
         Press(VkX);                                   // ઙ
+        WeLiftCtrl();
         Send(VkX, down: false);
         Press(VkSpace);
         ReleaseCtrl();
         Press(VkD);
         Press(VkX);                                   // ØxØdx -> ઙ્ગ
         Assert.Equal("ઙ્ગ", _injector.Text);
+    }
+
+    /// <summary>
+    /// Space held past the repeat delay during Ctrl+Space repeats; the repeat is
+    /// not the second press that takes the escape back, so V is still ૠ - not
+    /// Ctrl+V pasting the clipboard.
+    /// </summary>
+    [Fact]
+    public void AHeldEscapeKeyDoesNotTakeItselfBack()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Press(VkSpace);                               // auto-repeat, no key-up between
+        Press(VkSpace);
+        Send(VkSpace, down: false);
+        Assert.True(Press(VkV), "the layer is still open");
+        ReleaseCtrl();
+        Assert.Equal("ૠ", _injector.Text);
+    }
+
+    /// <summary>A real second press - Space let go and pressed again - still takes the escape back.</summary>
+    [Fact]
+    public void ASecondRealPressStillTakesTheEscapeBack()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Send(VkSpace, down: false);
+        Press(VkSpace);
+        Send(VkSpace, down: false);
+        ReleaseCtrl();
+        Assert.True(Press(VkV));
+        Assert.Equal("ન", _injector.Text);
+    }
+
+    /// <summary>
+    /// After we have let go of the held Ctrl, a shortcut on that same hold would
+    /// reach the application as a plain letter; it is swallowed, not typed.
+    /// </summary>
+    [Fact]
+    public void AShortcutOnACtrlWeLetGoOfIsNotTypedAsALetter()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Send(VkSpace, down: false);
+        Press(VkV);
+        WeLiftCtrl();
+        Send(VkV, down: false);
+        Assert.True(Press(VkJ), "J is not passed on without its Ctrl");
+        ReleaseCtrl();
+        Assert.Equal("ૠ", _injector.Text);
+        Assert.True(Press(VkJ), "after the finger lets go, J is the keyboard's again");
+        Assert.Equal("ૠર", _injector.Text);
+    }
+
+    /// <summary>
+    /// Our lift arriving after the finger already let go (it was on its way) must
+    /// not leave a phantom Ctrl behind: plain Space is then a space, not an escape.
+    /// </summary>
+    [Fact]
+    public void ALiftAfterTheFingerLetGoLeavesNoPhantomCtrl()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        ReleaseCtrl();                                // the real key-up comes first...
+        Send(VkLControl, down: false, lift: true);    // ...then our lift, with nothing left to lift
+        Assert.False(Press(VkSpace), "Space with no Ctrl is the application's");
     }
 
     /// <summary>A shortcut on the same hold, once the layer run is over, is the application's.</summary>
