@@ -4,6 +4,7 @@ using System.Windows.Input;
 using FontSoftware.App.Services;
 using FontSoftware.Core.Config;
 using FontSoftware.Core.Diagnostics;
+using FontSoftware.Core.Keyboards;
 using FontSoftware.Core.Models;
 
 namespace FontSoftware.App.ViewModels;
@@ -359,6 +360,72 @@ public sealed class KeyboardEditorViewModel : ObservableObject
             Dead = d.Dead, Next = d.Next, Result = d.Result,
         }).ToList(),
     };
+
+    /// <summary>
+    /// Bring in a keyboard made in Shree-Lipi's own Keyboard Generator (the file
+    /// it saves - MYKBD.GUJ, NEW.DEV - which Shree's help says to copy into its
+    /// folder). Its three layers and its conjuncts come across, it goes into the
+    /// keyboard list at once, and it stays open here to be looked over or changed.
+    /// </summary>
+    public bool Import(string path)
+    {
+        string? script = ShreeKeyboardFile.ScriptOf(path);
+        if (script is null)
+        {
+            Status = $"'{System.IO.Path.GetFileName(path)}' is not a Shree-Lipi keyboard: those end in .GUJ, .DEV, .SAN, .PUN, .BAN, .ASS, .ORI, .TAM, .TEL, .KAN or .MAL.";
+            return false;
+        }
+        var table = _bundle.GetShreeCodeTable(script);
+        if (table is null)
+        {
+            Status = $"This version cannot read .{script} keyboards yet.";
+            return false;
+        }
+
+        ShreeKeyboard read;
+        try
+        {
+            read = ShreeKeyboardFile.Decode(System.IO.File.ReadAllBytes(path), table);
+        }
+        catch (Exception ex) when (ex is System.IO.IOException or System.IO.InvalidDataException or UnauthorizedAccessException)
+        {
+            Status = $"Could not read '{System.IO.Path.GetFileName(path)}': {ex.Message}";
+            return false;
+        }
+
+        // The file names its script, not its language: stay on the language shown
+        // if it writes that script, otherwise move to the one that does.
+        var ids = ShreeKeyboardFile.LanguagesFor(script);
+        if (SelectedLanguage is null || !ids.Contains(SelectedLanguage.Id))
+            SelectedLanguage = Languages.FirstOrDefault(l => l.Id == ids[0]) ?? SelectedLanguage;
+        if (SelectedLanguage is null) return false;
+
+        // The Ctrl+Shift+1 symbols are the script's, not the file's: take them
+        // from this language's InScript keyboard.
+        KeyboardLayout? sameScript = null;
+        var inscript = SelectedLanguage.Layouts.FirstOrDefault(l => l.Name.Equals("InScript", StringComparison.OrdinalIgnoreCase))
+                       ?? SelectedLanguage.Layouts.FirstOrDefault();
+        if (inscript is not null)
+            try { sameScript = _bundle.GetLayout(inscript); } catch (ConfigException) { }
+
+        string name = System.IO.Path.GetFileNameWithoutExtension(path);
+        _layout = ShreeKeyboardFile.ToLayout(read, name, sameScript);
+        _layout.FontId = SelectedLanguage.Fonts.FirstOrDefault()?.Id;
+        Name = name;
+        SelectedKey = null;
+        EndConjunct();
+        RefreshKeyboard();
+        OnPropertyChanged(nameof(ConjunctCountText));
+        Save();
+
+        string summary = $"Imported '{name}' from Shree-Lipi: {read.Keys.Count} keys, {read.Escape.Count} on Ctrl+Space, " +
+                         $"{read.ConjunctKeys} conjunct keys. It is in the {SelectedLanguage.Name} keyboard list now.";
+        if (read.Unreadable.Count > 0)
+            summary += $" {read.Unreadable.Count} key(s) hold a code this version cannot read and were left empty: {string.Join(" ", read.Unreadable)}.";
+        Status = summary;
+        _log.Info($"Shree-Lipi keyboard imported: {path} -> {summary}");
+        return true;
+    }
 
     private void Save()
     {

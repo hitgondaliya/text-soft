@@ -33,8 +33,9 @@
                         <Button Content="New" Command="{Binding NewCommand}" MinWidth="76" Margin="0,0,8,0" Style="{StaticResource Secondary}" />
                         <Button Content="Open" Command="{Binding OpenCommand}" MinWidth="76" Margin="0,0,8,0" Style="{StaticResource Secondary}"
                                 ToolTip="Load the selected keyboard so it can be modified" />
-                        <Button Content="Save" Command="{Binding SaveCommand}" MinWidth="86"
-                                 />
+                        <Button Content="Save" Command="{Binding SaveCommand}" MinWidth="86" Margin="0,0,8,0" />
+                        <Button Content="Import Shree-Lipi file…" Click="ImportClick" MinWidth="150" Style="{StaticResource Secondary}"
+                                ToolTip="Bring in a keyboard made in Shree-Lipi's Keyboard Generator (.GUJ, .DEV, .SAN, .PUN, .BAN, .ASS, .ORI, .TAM, .TEL, .KAN, .MAL)" />
                     </StackPanel>
                 </WrapPanel>
             </StackPanel>

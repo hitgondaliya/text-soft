@@ -76,6 +76,16 @@ public sealed class ConfigLoader
         return Deserialize<MappingTable>(path, $"mapping table '{relativePath}'");
     }
 
+    /// <summary>
+    /// Shree-Lipi's internal character codes for one script (GUJ, DEV, ...), the
+    /// key to reading its keyboard files. Null when this build has no table for it.
+    /// </summary>
+    public Keyboards.ShreeCodeTable? LoadShreeCodeTable(string script)
+    {
+        string path = Path.Combine(_configRoot, "shree-kbd", script.ToUpperInvariant() + ".json");
+        return File.Exists(path) ? Deserialize<Keyboards.ShreeCodeTable>(path, $"Shree-Lipi code table '{script}'") : null;
+    }
+
     /// <summary>Load a phonetic "type by sound" scheme referenced by a language.</summary>
     public TransliterationScheme LoadScheme(string relativePath)
     {

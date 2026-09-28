@@ -14,6 +14,7 @@ public sealed class AssetBundle
     private readonly Dictionary<string, KeyboardLayout> _layoutCache = new();
     private readonly Dictionary<string, Transliterator> _schemeCache = new();
     private readonly Dictionary<string, MappingTable> _mappingsById;
+    private readonly Dictionary<string, Keyboards.ShreeCodeTable?> _shreeTables = new(StringComparer.OrdinalIgnoreCase);
 
     public AssetCatalog Catalog { get; }
     public IReadOnlyList<MappingTable> MappingTables { get; }
@@ -49,6 +50,14 @@ public sealed class AssetBundle
         var translit = new Transliterator(scheme);
         _schemeCache[language.SchemeFile] = translit;
         return translit;
+    }
+
+    /// <summary>The table that reads Shree-Lipi keyboard files of a script (GUJ, DEV, ...), or null.</summary>
+    public Keyboards.ShreeCodeTable? GetShreeCodeTable(string script)
+    {
+        if (!_shreeTables.TryGetValue(script, out var table))
+            _shreeTables[script] = table = _loader.LoadShreeCodeTable(script);
+        return table;
     }
 
     /// <summary>Load (and cache) a full keyboard layout by its reference.</summary>
