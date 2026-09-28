@@ -30,6 +30,67 @@ string repo = FindRoot();
 string tables = Path.Combine(repo, "assets", "config", "shree-kbd");
 Directory.CreateDirectory(tables);
 
+// --compare-layouts <out.json>: read every keyboard Shree ships with the importer and
+// set it beside the keyboard of ours that stands for it. What Shree's own file puts
+// on the Ctrl+Space layer and ours does not have is written out as additions; keys
+// where the two disagree are listed, not changed - ours came from the charts and
+// the composer, and a disagreement needs a look, not an overwrite.
+int cmpAt = Array.IndexOf(args, "--compare-layouts");
+if (cmpAt >= 0)
+{
+    string outFile = args[cmpAt + 1];
+    var bundle = new FontSoftware.Core.Config.ConfigLoader(Path.Combine(repo, "assets", "config")).Load();
+    var additions = new List<object>();
+    int files = 0, matched = 0, escSame = 0, escMissing = 0, escDiffer = 0;
+    var differ = new List<string>();
+    foreach (string script in ShreeKeyboardFile.Scripts)
+    {
+        if (bundle.GetShreeCodeTable(script) is not { } codeTable) continue;
+        foreach (string file in Directory.EnumerateFiles(shree, "*." + script).OrderBy(f => f))
+        {
+            byte[] bytes = File.ReadAllBytes(file);
+            if (bytes.Length != ShreeKeyboardFile.Length) continue;
+            files++;
+            string name = Path.GetFileNameWithoutExtension(file).ToUpperInvariant();
+            if (name is "ENG" or "PHONETIC" or "ISMENG") continue;
+            var read = ShreeKeyboardFile.Decode(bytes, codeTable);
+            string slug = new string(name.ToLowerInvariant().Select(c => char.IsLetterOrDigit(c) ? c : '-').ToArray());
+            foreach (string lang in ShreeKeyboardFile.LanguagesFor(script))
+            {
+                var language = bundle.Languages.FirstOrDefault(l => l.Id == lang);
+                if (language is null) continue;
+                string prefix = script.ToLowerInvariant();
+                var reference = language.Layouts.FirstOrDefault(l =>
+                    l.Id == $"{prefix}-{slug}" || l.Id == $"{lang}-{slug}" ||
+                    (name == "INSCRIPT" && l.Id == $"{lang}-inscript") ||
+                    l.Id.EndsWith("-" + lang + "-" + slug) || l.Id == $"mni-{prefix}-{slug}");
+                if (reference is null) continue;
+                matched++;
+                var ours = bundle.GetLayout(reference);
+                foreach (var (key, text) in read.Escape)
+                {
+                    string? mine = ours.MatchSequence(FontSoftware.Core.Models.EscapeLayer.Mark + key.ToString());
+                    if (mine == text) { escSame++; continue; }
+                    if (mine is null && text.All(c => c >= ' '))
+                    {
+                        escMissing++;
+                        additions.Add(new { file = reference.File, layout = reference.Id, key = key.ToString(), to = text });
+                    }
+                    else if (mine is not null)
+                    {
+                        escDiffer++;
+                        differ.Add($"{reference.Id} Ctrl+Space {key}: ours {Show(mine)} / Shree's file {Show(text)}");
+                    }
+                }
+            }
+        }
+    }
+    File.WriteAllText(outFile, JsonSerializer.Serialize(additions, new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping }), new UTF8Encoding(false));
+    Console.WriteLine($"{files} Shree keyboards, {matched} matched to ours. Ctrl+Space layer: {escSame} the same, {escMissing} missing from ours, {escDiffer} different.");
+    foreach (string d in differ.Take(60)) Console.WriteLine("   " + d);
+    return 0;
+}
+
 int worst = 0;
 foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s == only))
 {
@@ -441,6 +502,9 @@ sealed class Composer
         // The Bengali composer's "nothing": it answers ৻ for a key with no character.
         if (raw == "৻" && _script is "BAN" or "ASS") return null;
         if (raw == "Hf") return virama + "\u200D";
+        // The Kannada reph cannot stand alone, and the composer shows it on a \u0C95 -
+        // the same \u0C95 every time. The key types the reph.
+        if (_script == "KAN" && raw == "\u0CB0\u0CCD\u0C95") return "\u0CB0\u0CCD";
         // In a longer answer the same names stand for the same signs: ଜ Lk ଞ is ଜ୍ଞ.
         // Dropping them with the other Latin carriers left ଜଞ.
         if (raw.Any(c => c is >= '\u0900' and <= '\u0DFF'))
