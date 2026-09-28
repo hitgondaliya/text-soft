@@ -25,7 +25,10 @@ const int VK_CAPITAL = 0x14, VK_CONTROL = 0x11, VK_SHIFT = 0x10, VK_SPACE = 0x20
 [DllImport("user32.dll")] static extern IntPtr FindWindowExW(IntPtr parent, IntPtr after, string? cls, string? title);
 [DllImport("user32.dll", CharSet = CharSet.Unicode)] static extern IntPtr SendMessageW(IntPtr h, uint msg, IntPtr wp, StringBuilder lp);
 
-if (Process.GetProcessesByName("TextSoft").Length == 0)
+// --any drives whatever keyboard software is running - Shree-Lipi, to see what
+// it does with the same keys - instead of insisting on ours.
+bool any = args.Contains("--any");
+if (!any && Process.GetProcessesByName("TextSoft").Length == 0)
 {
     Console.Error.WriteLine("TextSoft is not running - start it first, this is a test of the real thing.");
     return 1;
@@ -35,7 +38,7 @@ if (Process.GetProcessesByName("TextSoft").Length == 0)
 // because a legacy font reaches it by a different road - through the clipboard.
 bool word = args.Contains("--word");
 string? shot = args.FirstOrDefault(a => a.StartsWith("--shot="))?.Substring(7);
-args = args.Where(a => a != "--word" && !a.StartsWith("--shot=")).ToArray();
+args = args.Where(a => a != "--word" && a != "--any" && !a.StartsWith("--shot=")).ToArray();
 // /w opens Word on a blank document rather than its start screen, which has
 // nowhere to type.
 var start = word ? new ProcessStartInfo("winword.exe", "/w") : new ProcessStartInfo("notepad.exe");
@@ -46,12 +49,12 @@ pad.Refresh();
 
 // Get our own window out of the way first - it is on top, and every attempt to
 // focus the target lands on us instead.
-foreach (var ts in Process.GetProcessesByName("TextSoft"))
+foreach (var ts in Process.GetProcessesByName("TextSoft").Concat(Process.GetProcessesByName("SLNXT")))
     if (ts.MainWindowHandle != IntPtr.Zero) ShowWindow(ts.MainWindowHandle, 6);   // SW_MINIMIZE
 Thread.Sleep(600);
 
 // Word's own frame window, which is there before the process reports a main one.
-IntPtr target = word ? FindWindowW("OpusApp", null) : pad.MainWindowHandle;
+IntPtr target = FindWindowW(word ? "OpusApp" : "Notepad", null);
 if (target == IntPtr.Zero) target = pad.MainWindowHandle;
 ShowWindow(target, 9);   // SW_RESTORE
 SetForegroundWindow(target);
@@ -71,6 +74,15 @@ if (GetWindowRect(target, out RECT wr))
 static INPUT Key(ushort vk, bool up) => new() { type = 1, u = new InputUnion { ki = new KEYBDINPUT { wVk = vk, dwFlags = up ? 2u : 0u } } };
 static void Send(INPUT i) { SendInput(1, new[] { i }, Marshal.SizeOf<INPUT>()); Thread.Sleep(60); }
 
+static ushort Named(string name) => name.ToLowerInvariant() switch
+{
+    "ctrl" => VK_CONTROL, "shift" => VK_SHIFT, "alt" => 0x12, "space" => VK_SPACE,
+    "caps" => VK_CAPITAL, "enter" => 0x0D, "back" => 0x08, "esc" => 0x1B,
+    var f when f.Length > 1 && f[0] == 'f' && int.TryParse(f[1..], out int n) => (ushort)(0x6F + n),
+    var c when c.Length == 1 => VkOf(c[0]),
+    _ => throw new ArgumentException("no such key: " + name)
+};
+
 static ushort VkOf(char c) => char.IsAsciiLetter(c) ? (ushort)char.ToUpperInvariant(c)
                             : c == ' ' ? (ushort)VK_SPACE : (ushort)c;
 
@@ -81,6 +93,23 @@ Console.WriteLine($"focus: {(fg == 0 ? "?" : Process.GetProcessById(fg).ProcessN
 
 foreach (string stroke in args)
 {
+    // {ctrl down} ... {ctrl up} holds a key across other strokes, which is the only
+    // way to ask whether Ctrl+Space then V works with Ctrl still held.
+    if (stroke.StartsWith('{') && stroke.EndsWith('}'))
+    {
+        string[] part = stroke.Trim('{', '}').Split(' ');
+        ushort vk = Named(part[0]);
+        string how = part.Length > 1 ? part[1] : "tap";
+        if (how != "up") Send(Key(vk, false));
+        if (how != "down") Send(Key(vk, true));
+        Thread.Sleep(150);
+        continue;
+    }
+    if (stroke.StartsWith("wait="))
+    {
+        Thread.Sleep(int.Parse(stroke[5..]));
+        continue;
+    }
     if (stroke.Equals("caps", StringComparison.OrdinalIgnoreCase))
     {
         Send(Key(VK_CAPITAL, false)); Send(Key(VK_CAPITAL, true));

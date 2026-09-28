@@ -97,8 +97,10 @@ public class InputInjector
         {
             // Each UTF-16 code unit (including surrogate halves) is one keydown +
             // keyup Unicode event.
-            var inputs = new INPUT[text.Length * 2];
-            int n = 0;
+            var held = ReleaseHeldCtrl();
+            var inputs = new INPUT[held.Length + text.Length * 2];
+            held.CopyTo(inputs, 0);
+            int n = held.Length;
             foreach (char c in text)
             {
                 inputs[n++] = UnicodeInput(c, keyUp: false);
@@ -175,8 +177,10 @@ public class InputInjector
 
         Post(() =>
         {
-            var inputs = new INPUT[count * 2];
-            int n = 0;
+            var held = ReleaseHeldCtrl();
+            var inputs = new INPUT[held.Length + count * 2];
+            held.CopyTo(inputs, 0);
+            int n = held.Length;
             for (int i = 0; i < count; i++)
             {
                 inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: false);
@@ -185,6 +189,28 @@ public class InputInjector
 
             Send(inputs, $"{count} backspace(s)");
         });
+    }
+
+    /// <summary>
+    /// Key-ups for a Ctrl the typist is still holding down.
+    ///
+    /// Ctrl+Space is a chord, and after it the typist may keep Ctrl down through
+    /// the next key. What we type for that key then arrives with Ctrl held: our
+    /// Backspace becomes Ctrl+Backspace, which deletes the whole word before the
+    /// caret, and a word processor may read the character as a shortcut. Letting
+    /// go of Ctrl for them first is what the typist would have done; nothing
+    /// presses it again, because by the time it could they may have let go
+    /// themselves and a Ctrl pressed by us would then stay down.
+    /// </summary>
+    private static INPUT[] ReleaseHeldCtrl()
+    {
+        bool left = (GetAsyncKeyState(VK_LCONTROL) & 0x8000) != 0;
+        bool right = (GetAsyncKeyState(VK_RCONTROL) & 0x8000) != 0;
+        if (!left && !right) return Array.Empty<INPUT>();
+        var up = new List<INPUT>(2);
+        if (left) up.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D));
+        if (right) up.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true));
+        return up.ToArray();
     }
 
     /// <summary>
@@ -217,7 +243,7 @@ public class InputInjector
         }
     };
 
-    private static INPUT VirtualKeyInput(int vk, bool keyUp, ushort scan = 0) => new()
+    private static INPUT VirtualKeyInput(int vk, bool keyUp, ushort scan = 0, bool extended = false) => new()
     {
         type = INPUT_KEYBOARD,
         U = new InputUnion
@@ -226,7 +252,7 @@ public class InputInjector
             {
                 wVk = (ushort)vk,
                 wScan = scan,
-                dwFlags = keyUp ? KEYEVENTF_KEYUP : 0,
+                dwFlags = (keyUp ? KEYEVENTF_KEYUP : 0) | (extended ? KEYEVENTF_EXTENDEDKEY : 0),
                 time = 0,
                 dwExtraInfo = InjectionSignature
             }

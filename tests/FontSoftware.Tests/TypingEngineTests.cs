@@ -43,7 +43,8 @@ public class TypingEngineTests : IDisposable
     private const int VkShift = 0x10, VkControl = 0x11, VkMenu = 0x12, VkSpace = 0x20,
                       Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
                       VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A, VkD = 0x44,
-                      VkV = 0x56, VkK = 0x4B, VkS = 0x53;
+                      VkV = 0x56, VkK = 0x4B, VkS = 0x53, VkN = 0x4E, VkG = 0x47, VkM = 0x4D,
+                      VkL = 0x4C, VkE = 0x45;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
@@ -288,6 +289,109 @@ public class TypingEngineTests : IDisposable
         Escape();
         Assert.True(Press(VkV));          // Ctrl+Space then v is the vocalic RR
         Assert.Equal("ૠ", _injector.Text);
+    }
+
+    private void UseGujarati(string keyboard, bool bySound = false)
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        if (bySound) _engine.SetTransliterator(_config.GetTransliterator(gujarati));
+        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Name == keyboard)),
+                           gujarati.Name, "Unicode");
+    }
+
+    /// <summary>
+    /// Ctrl+Space is a chord, and most typists keep Ctrl down through the next key.
+    /// Shree types the layer's letter all three ways of pressing it; this used to
+    /// see Ctrl+V, hand it to Windows, and the typist's clipboard was pasted into
+    /// the document instead of ૠ.
+    /// </summary>
+    [Fact]
+    public void CtrlHeldThroughTheNextKeyStillTypesTheLayer()
+    {
+        UseGujarati("InScript");
+        _down.Add(VkControl);
+        Assert.True(Press(VkSpace));
+        Assert.True(Press(VkV), "with Ctrl still down, V after Ctrl+Space is the layer's key, not Ctrl+V");
+        _down.Remove(VkControl);
+        Assert.Equal("ૠ", _injector.Text);
+    }
+
+    /// <summary>...and a key that has nothing on the layer is still the shortcut it looks like.</summary>
+    [Fact]
+    public void CtrlHeldOnAKeyTheLayerDoesNotHaveIsStillAShortcut()
+    {
+        UseGujarati("InScript");
+        _down.Add(VkControl);
+        Assert.True(Press(VkSpace));
+        Assert.False(Press(VkS), "Ctrl+S with nothing on the layer belongs to the application");
+        _down.Remove(VkControl);
+        Assert.Equal("", _injector.Text);
+    }
+
+    /// <summary>Pressed twice, the escape takes itself back - Shree then types the plain key.</summary>
+    [Fact]
+    public void CtrlSpaceTwiceTakesTheEscapeBack()
+    {
+        UseGujarati("InScript");
+        Escape();
+        Escape();
+        Assert.True(Press(VkV));
+        Assert.Equal("ન", _injector.Text);    // InScript v, not ૠ
+    }
+
+    /// <summary>
+    /// The Eng keyboard has the same extra layers as every other, and the escape
+    /// used to be treated as a shortcut there: Ctrl+Space went to the application
+    /// and the key after it was typed by sound.
+    /// </summary>
+    [Fact]
+    public void CtrlSpaceWorksOnTheEngKeyboard()
+    {
+        UseGujarati("Eng", bySound: true);
+        Escape();
+        Assert.True(Press(VkU));
+        Assert.Equal("ૐ", _injector.Text);
+    }
+
+    /// <summary>A run on the layer grows like any other, and sound typing picks up after it.</summary>
+    [Fact]
+    public void AnEscapedRunOnTheEngKeyboardGrowsThenHandsBackToSound()
+    {
+        UseGujarati("Eng", bySound: true);
+        Escape();
+        foreach (int vk in new[] { VkN, VkG, VkA }) Press(vk);     // Ønga -> ઙ્ગ
+        foreach (int vk in new[] { VkK, VkA }) Press(vk);          // then ka by sound
+        Assert.Equal("ઙ્ગક", _injector.Text);
+    }
+
+    /// <summary>Ctrl held through the key works on the Eng keyboard too.</summary>
+    [Fact]
+    public void CtrlHeldOnTheEngKeyboardTypesTheLayer()
+    {
+        UseGujarati("Eng", bySound: true);
+        foreach (int vk in new[] { VkK, VkA }) Press(vk);          // ક
+        _down.Add(VkControl);
+        Press(VkSpace);
+        Assert.True(Press(VkE));                                   // Øe -> the candra e
+        _down.Remove(VkControl);
+        Assert.Equal("કૅ", _injector.Text);
+    }
+
+    /// <summary>
+    /// A legacy font draws its own encoding. The Eng keyboard used to type Unicode
+    /// into it regardless, and every letter came out as the wrong glyph.
+    /// </summary>
+    [Fact]
+    public void TheEngKeyboardTypesTheLegacyEncodingInALegacyFont()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        UseGujarati("Eng", bySound: true);
+        var toLegacy = _config.CreateConverterToLegacy("shree-gujx")!;
+        _engine.SetLegacyConverter(toLegacy, "SHREE-GUJX-1120");
+
+        foreach (int vk in new[] { VkK, VkA, VkM, VkA, VkL, VkA }) Press(vk);   // kamala
+        Assert.Equal(toLegacy.ConvertText("કમલ"), _injector.Text);
+        Assert.DoesNotContain(_injector.Text, c => c is >= '\u0A80' and <= '\u0AFF');
     }
 
     /// <summary>Choosing the Eng keyboard is choosing to type by sound.</summary>

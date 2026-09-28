@@ -174,6 +174,9 @@ public sealed class TypingEngine : IDisposable
     {
         _roman.Clear();
         _phoneticOut = string.Empty;
+        // In a legacy font the word being typed by sound is also the legacy word
+        // on screen; once it is finished it is no longer ours to rewrite.
+        if (PhoneticMode || _layoutIsPhonetic) ResetLegacy();
     }
 
     /// <summary>Force the engine on/off (e.g. from a UI button).</summary>
@@ -224,11 +227,23 @@ public sealed class TypingEngine : IDisposable
             return;
         }
 
-        // Phonetic "type by sound" mode intercepts before the fixed-key layout.
+        // Phonetic "type by sound" mode intercepts before the fixed-key layout -
+        // except for Ctrl+Space and Ctrl+Shift+1. Those open the same extra layers
+        // on the Eng keyboard as on every other (Shree's Eng chart has 24 keys on
+        // them in Gujarati alone), and what is on them is fixed keys, not sounds.
+        // Treating the escape as a shortcut, as this used to, sent Ctrl+Space on to
+        // the application and the key after it typed by sound.
         if ((PhoneticMode || _layoutIsPhonetic) && _translit is not null)
         {
-            HandlePhonetic(e);
-            return;
+            if (_seqKeys.Length > 0 && ContinuePhoneticEscape(e))
+                return;
+            bool opensLayer = e.IsKeyDown && _layout is { HasSequences: true } && EscapeMarkFor(e.VirtualKey) != '\0';
+            if (!opensLayer)
+            {
+                HandlePhonetic(e);
+                return;
+            }
+            ResetPhonetic();   // the word typed so far stays as it is on screen
         }
 
         if (_layout is null)
@@ -260,6 +275,15 @@ public sealed class TypingEngine : IDisposable
             e.Handled = true;
             _pendingDead = null;
             _lastEmitted = null;
+            // Pressed twice, the escape takes itself back: on Shree, Ctrl+Space
+            // Ctrl+Space v types the plain v.
+            if (_seqKeys.Length > 0 && _seqKeys[^1] == mark)
+            {
+                _seqKeys.Length--;
+                if (_seqKeys.Length == 0) _seqOut = string.Empty;
+                _log.Info($"Escape: {(mark == EscapeLayer.Mark ? "Ctrl+Space" : "Ctrl+Shift+1")} pressed again - taken back.");
+                return;
+            }
             if (_layout.HasSequences) _seqKeys.Append(mark);
             else ResetLegacy();
             // An escape puts nothing on screen, so when one does not work there is
@@ -277,7 +301,13 @@ public sealed class TypingEngine : IDisposable
         // Ctrl+A, Ctrl+S, Alt+F, Win+E and the rest are commands, not text. Without
         // this the layout would swallow them and type a letter instead, so no
         // shortcut worked while typing was on.
-        if (IsShortcut(mapping))
+        //
+        // Except straight after an escape. Ctrl+Space is a chord, and a typist
+        // who holds Ctrl down through the next key - Ctrl, Space, V, let go - means
+        // the V on that layer: Shree types it that way, all three ways of pressing
+        // it. Here that V used to arrive as Ctrl+V, and Windows pasted whatever the
+        // typist had last copied into the document instead of the letter.
+        if (IsShortcut(mapping) && !OnEscapedLayer(typed))
         {
             if (_seqKeys.Length > 0)
                 _log.Info($"Escape: the run '{_seqKeys}' was dropped - '{typed}' arrived looking like a shortcut " +
@@ -444,6 +474,63 @@ public sealed class TypingEngine : IDisposable
         if (vk == VK_SPACE) return EscapeLayer.Mark;               // this keyboard's third layer
         if (vk == '1' && IsDown(VK_SHIFT)) return EscapeLayer.SymbolMark;  // the shared symbols
         return '\0';
+    }
+
+    /// <summary>
+    /// Is this key, pressed now, the one an escape just opened a layer for? Only
+    /// when the run ends in an escape mark, the layer has something on the key,
+    /// and the only other key held is the Ctrl (and Shift) of the escape itself -
+    /// Alt or the Windows key still make it a shortcut.
+    /// </summary>
+    private bool OnEscapedLayer(char typed)
+    {
+        if (typed == '\0' || _layout is null || _seqKeys.Length == 0) return false;
+        char last = _seqKeys[^1];
+        if (last != EscapeLayer.Mark && last != EscapeLayer.SymbolMark) return false;
+        if (IsDown(VK_MENU) || IsDown(VK_LWIN) || IsDown(VK_RWIN)) return false;
+        string grown = _seqKeys.ToString() + typed;
+        return _layout.MatchSequence(grown) is not null || _layout.SequenceCanGrow(grown);
+    }
+
+    /// <summary>
+    /// The Eng keyboard after Ctrl+Space: keys go to the chart's fixed runs on that
+    /// layer ("Øn" ઙ્, "Ønga" ઙ) for as long as they keep making one, and the first
+    /// key that does not is typed by sound again. True when this key was taken.
+    /// </summary>
+    private bool ContinuePhoneticEscape(HookKeyEventArgs e)
+    {
+        if (!e.IsKeyDown || IsModifier(e.VirtualKey)) return false;
+        if (EscapeMarkFor(e.VirtualKey) != '\0') return false;    // a second escape: the usual handling
+
+        char typed = KeyChar(e.VirtualKey);
+        string grown = _seqKeys.ToString() + typed;
+        string? hit = typed == '\0' ? null : _layout!.MatchSequence(grown);
+        bool grows = typed != '\0' && _layout!.SequenceCanGrow(grown);
+        if (hit is null && !grows)
+        {
+            if (_seqKeys[^1] == EscapeLayer.Mark || _seqKeys[^1] == EscapeLayer.SymbolMark)
+                _log.Info($"Escape: then '{typed}' -> nothing on that layer.");
+            ResetSequence();
+            ResetLegacy();
+            return false;                                          // typed by sound
+        }
+
+        if (IsForegroundExcluded()) { ResetSequence(); return false; }
+
+        e.Handled = true;
+        string text = hit ?? _seqOut;          // until the run finishes, keep what it shows
+        int replace = _seqOut.Length;
+        _log.Info($"Escape: then '{typed}' -> '{text}'.");
+        _seqKeys.Clear();
+        _seqKeys.Append(grown);
+        _seqOut = text;
+        Emit(text, replace);
+        if (!grows)
+        {
+            ResetSequence();                   // the run is complete
+            ResetLegacy();
+        }
+        return true;
     }
 
     /// <summary>
@@ -638,6 +725,19 @@ public sealed class TypingEngine : IDisposable
     private void Rerender()
     {
         string next = _translit!.Convert(_roman.ToString());
+
+        // A legacy font draws its own encoding, not Unicode: the word goes through
+        // the same conversion the fixed keyboards use. Without this the Eng
+        // keyboard typed Unicode into a Shree font and every letter came out wrong.
+        if (_legacyConv is not null)
+        {
+            _uniWord.Clear();
+            _uniWord.Append(next);
+            RerenderLegacy();
+            _phoneticOut = next;
+            return;
+        }
+
         if (_phoneticOut.Length > 0)
             _injector.SendBackspace(_phoneticOut.Length);
         if (next.Length > 0)

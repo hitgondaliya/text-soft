@@ -22,6 +22,7 @@ internal static class NativeMethods
 
     // SendInput
     public const uint INPUT_KEYBOARD = 1;
+    public const uint KEYEVENTF_EXTENDEDKEY = 0x0001;
     public const uint KEYEVENTF_KEYUP = 0x0002;
     public const uint KEYEVENTF_UNICODE = 0x0004;
     public const uint KEYEVENTF_SCANCODE = 0x0008;
@@ -33,6 +34,8 @@ internal static class NativeMethods
     public const int VK_MENU = 0x12;    // Alt
     public const int VK_BACK = 0x08;
     public const int VK_SPACE = 0x20;
+    public const int VK_LCONTROL = 0xA2;
+    public const int VK_RCONTROL = 0xA3;
     public const int VK_LWIN = 0x5B;
     public const int VK_RWIN = 0x5C;
 
