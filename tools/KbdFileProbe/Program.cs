@@ -182,7 +182,7 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
                 mine.Keys.TryGetValue(c, out string? ours);
                 if (theirs is null && ours is null) continue;
                 keys++;
-                if (theirs == ours || Carrier(theirs, ours)) same++;
+                if (theirs == ours || Carrier(theirs, ours) || KannadaReph(theirs, ours)) same++;
                 else wrong.Add($"{name} {c}: shree {Show(theirs)} / ours {Show(ours)}");
             }
             foreach (char c in ShreeKeyboardFile.EscapeKeys)
@@ -194,7 +194,7 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
                 // printed character; the file has 0xFF there and so do we.
                 if (ours is null && theirs == composer.Ask(c, 0)) continue;
                 keys++;
-                if (theirs == ours || Carrier(theirs, ours)) same++;
+                if (theirs == ours || Carrier(theirs, ours) || KannadaReph(theirs, ours)) same++;
                 else wrong.Add($"{name} Ctrl+Space {c}: shree {Show(theirs)} / ours {Show(ours)}");
             }
         }
@@ -210,6 +210,9 @@ return worst == 0 ? 0 : 2;
 // on - a dot, a comma, or nothing - and not the sign: its answer for the same key
 // changes from one run to the next. The file's code is the sign, and a chart
 // prints the sign, so that is not a difference in what the keyboard types.
+// Asked about a key alone, the Kannada composer shows the reph on a carrier ಕ.
+static bool KannadaReph(string? theirs, string? ours) => ours == "ರ್" && theirs == "ರ್ಕ";
+
 static bool Carrier(string? theirs, string? ours) =>
     ours is { Length: 1 } && char.GetUnicodeCategory(ours[0]) is System.Globalization.UnicodeCategory.NonSpacingMark
                                                                or System.Globalization.UnicodeCategory.SpacingCombiningMark
@@ -298,6 +301,13 @@ sealed class Composer
                 if (Ask(keys[i], 0) is { } text) answers[code] = text;
             }
         }
+
+        // The Kannada reph cannot stand alone, and asked about by itself the
+        // composer shows it on a carrier ಕ - the same ಕ every time. The code is
+        // the reph. Only here: beside a real ಕ in a conjunct, ರ್ಕ is the answer.
+        if (_script == "KAN")
+            foreach (var (code, text) in answers.ToList())
+                if (text == "ರ್ಕ") answers[code] = "ರ್";
 
         // A sign that cannot stand alone is not always shown alone: asked by
         // itself, the Gujarati i sign has come back as the dot it sits on, and on
@@ -502,9 +512,6 @@ sealed class Composer
         // The Bengali composer's "nothing": it answers ৻ for a key with no character.
         if (raw == "৻" && _script is "BAN" or "ASS") return null;
         if (raw == "Hf") return virama + "\u200D";
-        // The Kannada reph cannot stand alone, and the composer shows it on a \u0C95 -
-        // the same \u0C95 every time. The key types the reph.
-        if (_script == "KAN" && raw == "\u0CB0\u0CCD\u0C95") return "\u0CB0\u0CCD";
         // In a longer answer the same names stand for the same signs: ଜ Lk ଞ is ଜ୍ଞ.
         // Dropping them with the other Latin carriers left ଜଞ.
         if (raw.Any(c => c is >= '\u0900' and <= '\u0DFF'))

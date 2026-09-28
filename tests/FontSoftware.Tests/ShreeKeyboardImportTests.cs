@@ -135,16 +135,21 @@ public class ShreeKeyboardImportTests : IDisposable
         throw new InvalidOperationException("every code is known");
     }
 
-    /// <summary>
-    /// A piece this version cannot read loses the conjunct rather than typing the
-    /// rest of it: on Shree's Tamil Typewriter such keys type nothing or something
-    /// else, never the leftovers.
-    /// </summary>
+    /// <summary>A piece this version cannot read adds nothing: Shree types ం and an unread piece as ం.</summary>
     [Fact]
-    public void AnUnreadablePieceLosesTheConjunct()
+    public void AnUnreadablePieceBesideALetterIsLeftOut()
     {
         var table = Table("GUJ");
-        Assert.Null(ShreeKeyboardFile.Join(new byte[] { 0x73, Unknown(table) }, table));
+        Assert.Equal("ક", ShreeKeyboardFile.Join(new byte[] { 0x73, Unknown(table) }, table));
+    }
+
+    /// <summary>...but when only punctuation is left, the conjunct is lost rather than typing "#$".</summary>
+    [Fact]
+    public void AnUnreadablePieceWithOnlyPunctuationLeftLosesTheConjunct()
+    {
+        var table = Table("GUJ");
+        byte hash = (byte)Convert.ToInt32(table.Codes.First(kv => kv.Value == "(").Key, 16);
+        Assert.Null(ShreeKeyboardFile.Join(new[] { hash, Unknown(table) }, table));
     }
 
     /// <summary>A key whose conjunct has nothing readable in it is lost - and the typist is told.</summary>

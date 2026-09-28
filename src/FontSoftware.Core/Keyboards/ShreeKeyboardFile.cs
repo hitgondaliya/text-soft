@@ -200,12 +200,17 @@ public static class ShreeKeyboardFile
     public static string? Join(IReadOnlyList<byte> codes, ShreeCodeTable table)
     {
         var best = Reduce(codes.Select(c => (Id: (string?)c.ToString("X2"), Text: table.Text(c))).ToList(), table);
-        // A piece this version cannot read, left unread by every join, loses the
-        // whole conjunct - and the key is reported. Running the rest together
-        // anyway put stray punctuation into Tamil Typewriter keys that type
-        // nothing, or something else, on Shree.
-        if (best.Any(p => p.Text is null)) return null;
-        return string.Concat(best.Select(p => p.Text));
+        // A piece this version cannot read, left unread by every join, adds
+        // nothing - Shree types INSCRIPT.TEL's x (ం and such a piece) as ం, and
+        // RAMING.PUN's P as ੧ੳ. But when what is left is only punctuation, it was
+        // never a letter anyone built: Tamil Typewriter has such keys, which type
+        // nothing on Shree, and running the rest together put "#$<" there. Those
+        // are lost, and the key is reported.
+        var texts = best.Where(p => p.Text is not null).Select(p => p.Text!).ToList();
+        string joined = string.Concat(texts);
+        if (joined.Length == 0) return null;
+        if (texts.Count < best.Count && !joined.Any(c => c is >= 'ऀ' and <= '෿')) return null;
+        return joined;
     }
 
     private static List<(string? Id, string? Text)> Reduce(List<(string? Id, string? Text)> parts, ShreeCodeTable table)
