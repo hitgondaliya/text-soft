@@ -23,11 +23,6 @@ internal sealed class RecordingInjector : InputInjector
     public override void SendBackspace(int count = 1)
         => _text.Length = Math.Max(0, _text.Length - count);
 
-    /// <summary>Shortcuts handed back to the application with their Ctrl pressed again.</summary>
-    public List<int> CtrlPresses { get; } = new();
-
-    public override void PressWithCtrl(int vk) => CtrlPresses.Add(vk);
-
     // The real injector hands this to its own thread so the keyboard hook can
     // return; a test wants the letters on the page before it looks at them.
     public override void Run(Action work) => work();
@@ -402,17 +397,15 @@ public class TypingEngineTests : IDisposable
         Assert.DoesNotContain(_injector.Text, c => c is >= '\u0A80' and <= '\u0AFF');
     }
 
-    // ---- the Ctrl the typist holds, once we have let go of it ----
-    // The real injector lets go of a held Ctrl before it types (so our Backspace
-    // is not Ctrl+Backspace), and Windows then reads Ctrl as up. These press the
-    // physical Ctrl through the hook, and model that let-go as the injected
-    // key-up it is and the key state it leaves behind.
+    // ---- the Ctrl the typist holds ----
+    // The injector lifts a held Ctrl only around what it types, in the same
+    // SendInput call, so Windows keeps reading it as down: these hold it for the
+    // whole of each test the way the finger does.
 
     private void HoldCtrl() { _down.Add(VkControl); Send(VkLControl, down: true); }
-    private void WeLetGoOfCtrl() { Send(VkLControl, down: false, injected: true); _down.Remove(VkControl); }
     private void ReleaseCtrl() { Send(VkLControl, down: false); _down.Remove(VkControl); }
 
-    /// <summary>A second Ctrl+Space on the same hold is still an escape after we let go of Ctrl.</summary>
+    /// <summary>A second Ctrl+Space on the same hold is an escape again.</summary>
     [Fact]
     public void TwoEscapesOnOneHoldOfCtrlBothWork()
     {
@@ -420,11 +413,30 @@ public class TypingEngineTests : IDisposable
         HoldCtrl();
         Press(VkSpace);
         Assert.True(Press(VkV));
-        WeLetGoOfCtrl();
+        Send(VkV, down: false);
         Assert.True(Press(VkSpace), "the finger is still on Ctrl: this is Ctrl+Space");
         Assert.True(Press(VkV));
         ReleaseCtrl();
         Assert.Equal("ૠૠ", _injector.Text);
+    }
+
+    /// <summary>
+    /// A layer key held past the repeat delay repeats with Ctrl still down. Those
+    /// repeats are not the typist asking for Ctrl+V: they are swallowed, and the
+    /// clipboard is never pasted.
+    /// </summary>
+    [Fact]
+    public void AHeldLayerKeyDoesNotRepeatAsAShortcut()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Press(VkV);                                   // ૠ
+        Assert.True(Press(VkV), "a repeat of the layer key belongs to us, not to the application as Ctrl+V");
+        Assert.True(Press(VkV));
+        Send(VkV, down: false);
+        ReleaseCtrl();
+        Assert.Equal("ૠ", _injector.Text);
     }
 
     /// <summary>The Typewriter chart's ØxØdx, typed holding Ctrl through the first Space, X and the second Space.</summary>
@@ -435,7 +447,7 @@ public class TypingEngineTests : IDisposable
         HoldCtrl();
         Press(VkSpace);
         Press(VkX);                                   // ઙ
-        WeLetGoOfCtrl();
+        Send(VkX, down: false);
         Press(VkSpace);
         ReleaseCtrl();
         Press(VkD);
@@ -443,19 +455,18 @@ public class TypingEngineTests : IDisposable
         Assert.Equal("ઙ્ગ", _injector.Text);
     }
 
-    /// <summary>Ctrl+S on the same hold, after a layer key, still saves: its Ctrl goes back down with it.</summary>
+    /// <summary>A shortcut on the same hold, once the layer run is over, is the application's.</summary>
     [Fact]
-    public void AShortcutOnAHeldCtrlWeLetGoOfGetsItsCtrlBack()
+    public void AShortcutOnTheSameHoldAfterALayerKeyIsTheApplications()
     {
         UseGujarati("InScript");
         HoldCtrl();
         Press(VkSpace);
         Press(VkV);
-        WeLetGoOfCtrl();
-        Assert.True(Press(VkS), "the S is not typed as a letter");
+        Send(VkV, down: false);
+        Assert.False(Press(VkJ), "Ctrl+J goes to the application");
         ReleaseCtrl();
         Assert.Equal("ૠ", _injector.Text);
-        Assert.Equal(new[] { VkS }, _injector.CtrlPresses);
     }
 
     /// <summary>

@@ -196,11 +196,12 @@ public static class ShreeKeyboardFile
     public static string? Join(IReadOnlyList<byte> codes, ShreeCodeTable table)
     {
         var best = Reduce(codes.Select(c => (Id: (string?)c.ToString("X2"), Text: table.Text(c))).ToList(), table);
-        // A piece that types nothing and joined nothing adds nothing - Shree types
-        // INSCRIPT.TEL's x (ం and such a piece) as ం. Only a conjunct with nothing
-        // readable in it at all is lost.
-        var texts = best.Where(p => p.Text is not null).Select(p => p.Text!).ToList();
-        return texts.Count == 0 ? null : string.Concat(texts);
+        // A piece this version cannot read, left unread by every join, loses the
+        // whole conjunct - and the key is reported. Running the rest together
+        // anyway put stray punctuation into Tamil Typewriter keys that type
+        // nothing, or something else, on Shree.
+        if (best.Any(p => p.Text is null)) return null;
+        return string.Concat(best.Select(p => p.Text));
     }
 
     private static List<(string? Id, string? Text)> Reduce(List<(string? Id, string? Text)> parts, ShreeCodeTable table)

@@ -52,16 +52,17 @@ public sealed class TypingEngine : IDisposable
     private string _seqOut = string.Empty;
     private int _seqMatched;   // how much of _seqKeys the text in _seqOut accounts for (Eng keyboard escape runs)
 
-    // ---- The Ctrl key, as the typist's finger has it ----
-    // Windows' own key state stops being the truth once we let go of a held Ctrl
-    // for the typist (InputInjector.ReleaseHeldCtrl, so our Backspace is not
-    // Ctrl+Backspace): from then on it reads "up" while the finger is still down,
-    // and a second Ctrl+Space on the same hold - which Shree takes - went to the
-    // application as a plain space. So the key events themselves are watched.
-    private bool _ctrlPhysical;   // the typist is holding Ctrl
-    private bool _ctrlLetGo;      // and we have sent a Ctrl key-up since they pressed it
+    // Windows' own key state is the truth about Ctrl: the injector lifts a held
+    // Ctrl only for the length of what it types, and puts it back down in the
+    // same breath (InputInjector.WithCtrlLifted), so it never reads "up" while
+    // the finger is still on it.
+    private static bool CtrlDown => IsDown(VK_CONTROL);
 
-    private bool CtrlDown => IsDown(VK_CONTROL) || (_ctrlPhysical && _ctrlLetGo);
+    // The key a run on the layer took while Ctrl was held. Held past the repeat
+    // delay it repeats, and each repeat arrives with Ctrl still down - as Ctrl+V,
+    // which pasted the clipboard thirty times a second. Its repeats are swallowed
+    // until it comes up.
+    private int _layerKey;
 
     // ---- Legacy Font Layout output (e.g. ShreeLipi-Ex) ----
     // When a legacy font layout is active, keys still map to Unicode, but we then
@@ -215,11 +216,8 @@ public sealed class TypingEngine : IDisposable
 
     private void OnKey(object? sender, HookKeyEventArgs e)
     {
-        if (e.VirtualKey is VK_CONTROL or VK_LCONTROL or VK_RCONTROL)
-        {
-            if (!e.Injected) { _ctrlPhysical = e.IsKeyDown; _ctrlLetGo = false; }
-            else _ctrlLetGo = !e.IsKeyDown && _ctrlPhysical;   // ours: a key-up while the finger holds it
-        }
+        if (!e.Injected && !e.IsKeyDown && e.VirtualKey == _layerKey)
+            _layerKey = 0;
 
         // Never react to our own injected input.
         if (e.Injected)
@@ -333,8 +331,10 @@ public sealed class TypingEngine : IDisposable
         // the V on that layer: Shree types it that way, all three ways of pressing
         // it. Here that V used to arrive as Ctrl+V, and Windows pasted whatever the
         // typist had last copied into the document instead of the letter.
-        if (IsShortcut(mapping) && !OnEscapedLayer(typed))
+        bool looksLikeShortcut = IsShortcut(mapping);
+        if (looksLikeShortcut && !OnEscapedLayer(typed))
         {
+            if (RepeatOfLayerKey(e)) return;
             if (_seqKeys.Length > 0)
                 _log.Info($"Escape: the run '{_seqKeys}' was dropped - '{typed}' arrived looking like a shortcut " +
                           $"(ctrl={CtrlDown}, alt={IsDown(VK_MENU)}).");
@@ -342,9 +342,10 @@ public sealed class TypingEngine : IDisposable
             _lastEmitted = null;
             ResetSequence();
             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
-            PassShortcut(e);
+            FlushBeforeKey();
             return;
         }
+        if (looksLikeShortcut) _layerKey = e.VirtualKey;
 
         // A key with no glyph of its own can still finish a run: on the ITR Gujarati
         // keyboard "o" types nothing alone, but "fo" is ર્ક. So the run is resolved
@@ -495,7 +496,7 @@ public sealed class TypingEngine : IDisposable
     /// The escape: Ctrl+Space, which is what the product's own settings name, and
     /// Ctrl+Shift+1, which is how the published key charts write it.
     /// </summary>
-    private char EscapeMarkFor(int vk)
+    private static char EscapeMarkFor(int vk)
     {
         if (!CtrlDown || IsDown(VK_MENU)) return '\0';
         if (vk == VK_SPACE) return EscapeLayer.Mark;               // this keyboard's third layer
@@ -526,22 +527,14 @@ public sealed class TypingEngine : IDisposable
     }
 
     /// <summary>
-    /// Hand a shortcut to the application - with its Ctrl. When we have let go of
-    /// a Ctrl the typist is still holding, Windows thinks it is up, and Ctrl+S
-    /// pressed on that same hold would arrive as a plain s: typed, not saved. So
-    /// the Ctrl goes back down with the key, in its turn after anything still
-    /// being typed.
+    /// A key-down for the key a layer run took with Ctrl held, before that key has
+    /// come up: its auto-repeat. Swallowed - it is not the typist asking for Ctrl+V.
     /// </summary>
-    private void PassShortcut(HookKeyEventArgs e)
+    private bool RepeatOfLayerKey(HookKeyEventArgs e)
     {
-        if (_ctrlPhysical && _ctrlLetGo && !IsDown(VK_CONTROL) && !IsModifier(e.VirtualKey))
-        {
-            e.Handled = true;
-            _ctrlLetGo = false;
-            _injector.PressWithCtrl(e.VirtualKey);
-            return;
-        }
-        FlushBeforeKey();
+        if (e.VirtualKey != _layerKey) return false;
+        e.Handled = true;
+        return true;
     }
 
     /// <summary>
@@ -577,6 +570,7 @@ public sealed class TypingEngine : IDisposable
         if (IsForegroundExcluded()) { ResetSequence(); return false; }
 
         e.Handled = true;
+        if (CtrlDown) _layerKey = e.VirtualKey;
         string text = hit ?? _seqOut;          // until the run finishes, keep what it shows
         int replace = _seqOut.Length;
         _log.Info($"Escape: then '{typed}' -> '{text}'.");
@@ -761,8 +755,9 @@ public sealed class TypingEngine : IDisposable
         if (IsShortcut(null))
         {
             if (!e.IsKeyDown) return;
+            if (RepeatOfLayerKey(e)) return;
             ResetPhonetic();
-            PassShortcut(e);
+            FlushBeforeKey();
             return;
         }
 
@@ -857,7 +852,7 @@ public sealed class TypingEngine : IDisposable
     /// Ctrl+Alt is AltGr on European keyboards, so that pair counts as text only
     /// when the layout actually defines an AltGr glyph for the key.
     /// </summary>
-    private bool IsShortcut(KeyMapping? mapping)
+    private static bool IsShortcut(KeyMapping? mapping)
     {
         if (IsDown(VK_LWIN) || IsDown(VK_RWIN))
             return true;

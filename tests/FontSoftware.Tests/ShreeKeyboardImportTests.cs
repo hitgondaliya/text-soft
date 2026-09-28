@@ -135,12 +135,16 @@ public class ShreeKeyboardImportTests : IDisposable
         throw new InvalidOperationException("every code is known");
     }
 
-    /// <summary>A piece that types nothing and joins nothing does not cost the key its conjunct.</summary>
+    /// <summary>
+    /// A piece this version cannot read loses the conjunct rather than typing the
+    /// rest of it: on Shree's Tamil Typewriter such keys type nothing or something
+    /// else, never the leftovers.
+    /// </summary>
     [Fact]
-    public void APieceThatTypesNothingIsLeftOut()
+    public void AnUnreadablePieceLosesTheConjunct()
     {
         var table = Table("GUJ");
-        Assert.Equal("ક", ShreeKeyboardFile.Join(new byte[] { 0x73, Unknown(table) }, table));
+        Assert.Null(ShreeKeyboardFile.Join(new byte[] { 0x73, Unknown(table) }, table));
     }
 
     /// <summary>A key whose conjunct has nothing readable in it is lost - and the typist is told.</summary>

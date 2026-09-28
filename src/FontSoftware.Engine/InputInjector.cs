@@ -97,17 +97,15 @@ public class InputInjector
         {
             // Each UTF-16 code unit (including surrogate halves) is one keydown +
             // keyup Unicode event.
-            var held = ReleaseHeldCtrl();
-            var inputs = new INPUT[held.Length + text.Length * 2];
-            held.CopyTo(inputs, 0);
-            int n = held.Length;
+            var inputs = new INPUT[text.Length * 2];
+            int n = 0;
             foreach (char c in text)
             {
                 inputs[n++] = UnicodeInput(c, keyUp: false);
                 inputs[n++] = UnicodeInput(c, keyUp: true);
             }
 
-            Send(inputs, $"text '{text}'");
+            Send(WithCtrlLifted(inputs), $"text '{text}'");
         });
     }
 
@@ -142,12 +140,16 @@ public class InputInjector
 
             // Scan codes as well as virtual keys: some editors only honour a shortcut
             // that carries the physical key.
-            var inputs = new INPUT[4];
-            inputs[0] = VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D);
-            inputs[1] = VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F);
-            inputs[2] = VirtualKeyInput(0x56, keyUp: true, scan: 0x2F);
-            inputs[3] = VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D);
-            Send(inputs, $"rich paste '{text}' in {fontName}");
+            // A Ctrl the typist is holding (through a Ctrl+Space run) is already
+            // down: pressing and releasing ours around the V would leave Windows
+            // reading it as up while their finger is still on it.
+            bool held = (GetAsyncKeyState(VK_LCONTROL) & 0x8000) != 0 || (GetAsyncKeyState(VK_RCONTROL) & 0x8000) != 0;
+            var inputs = new List<INPUT>(4);
+            if (!held) inputs.Add(VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D));
+            inputs.Add(VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F));
+            inputs.Add(VirtualKeyInput(0x56, keyUp: true, scan: 0x2F));
+            if (!held) inputs.Add(VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D));
+            Send(inputs.ToArray(), $"rich paste '{text}' in {fontName}");
 
             if (handover.Previous is not null)
             {
@@ -169,24 +171,6 @@ public class InputInjector
         });
     }
 
-    /// <summary>
-    /// Press a key with Ctrl down - a shortcut the typist is making on a Ctrl we
-    /// let go of for them. Only the presses: the key's release and the Ctrl's are
-    /// the typist's own, and arrive when their fingers lift.
-    /// </summary>
-    public virtual void PressWithCtrl(int vk)
-    {
-        Post(() =>
-        {
-            var inputs = new[]
-            {
-                VirtualKeyInput(VK_LCONTROL, keyUp: false, scan: 0x1D),
-                VirtualKeyInput(vk, keyUp: false, scan: (ushort)MapVirtualKey((uint)vk, 0)),
-            };
-            Send(inputs, $"Ctrl+{vk:X2} for a held Ctrl");
-        });
-    }
-
     /// <summary>Send <paramref name="count"/> backspace key presses.</summary>
     public virtual void SendBackspace(int count = 1)
     {
@@ -195,40 +179,43 @@ public class InputInjector
 
         Post(() =>
         {
-            var held = ReleaseHeldCtrl();
-            var inputs = new INPUT[held.Length + count * 2];
-            held.CopyTo(inputs, 0);
-            int n = held.Length;
+            var inputs = new INPUT[count * 2];
+            int n = 0;
             for (int i = 0; i < count; i++)
             {
                 inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: false);
                 inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: true);
             }
 
-            Send(inputs, $"{count} backspace(s)");
+            Send(WithCtrlLifted(inputs), $"{count} backspace(s)");
         });
     }
 
     /// <summary>
-    /// Key-ups for a Ctrl the typist is still holding down.
+    /// What we type, with a Ctrl the typist is holding lifted around it.
     ///
     /// Ctrl+Space is a chord, and after it the typist may keep Ctrl down through
-    /// the next key. What we type for that key then arrives with Ctrl held: our
-    /// Backspace becomes Ctrl+Backspace, which deletes the whole word before the
-    /// caret, and a word processor may read the character as a shortcut. Letting
-    /// go of Ctrl for them first is what the typist would have done; nothing
-    /// presses it again, because by the time it could they may have let go
-    /// themselves and a Ctrl pressed by us would then stay down.
+    /// the next key. What we type for that key would then arrive with Ctrl held:
+    /// our Backspace would be Ctrl+Backspace, which deletes the whole word before
+    /// the caret, and a word processor may read a character as a shortcut. So the
+    /// held side (left, right, or both) comes up just before and goes back down
+    /// just after, in the one SendInput call - nothing can come between, and
+    /// Windows never reads Ctrl as up while the finger is on it. Only a Ctrl that
+    /// is down the moment this runs is lifted, so none is ever pressed that the
+    /// typist is not holding.
     /// </summary>
-    private static INPUT[] ReleaseHeldCtrl()
+    private static INPUT[] WithCtrlLifted(INPUT[] inputs)
     {
         bool left = (GetAsyncKeyState(VK_LCONTROL) & 0x8000) != 0;
         bool right = (GetAsyncKeyState(VK_RCONTROL) & 0x8000) != 0;
-        if (!left && !right) return Array.Empty<INPUT>();
-        var up = new List<INPUT>(2);
-        if (left) up.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D));
-        if (right) up.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true));
-        return up.ToArray();
+        if (!left && !right) return inputs;
+        var all = new List<INPUT>(inputs.Length + 4);
+        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D));
+        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true));
+        all.AddRange(inputs);
+        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: false, scan: 0x1D));
+        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: false, scan: 0x1D, extended: true));
+        return all.ToArray();
     }
 
     /// <summary>

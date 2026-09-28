@@ -146,7 +146,7 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
                 var parts = key.Split(' ');
                 if (!parts.Any(kept.Contains)) continue;
                 // the same rule the fresh pairs pass: a join that just drops a piece is no join
-                if (parts.Length == 2 && (text == doc.Codes.GetValueOrDefault(parts[0]) || text == doc.Codes.GetValueOrDefault(parts[1]))) continue;
+                if (parts.Length == 2 && Links.DropsTheLink(text, doc.Codes.GetValueOrDefault(parts[0]), doc.Codes.GetValueOrDefault(parts[1]))) continue;
                 doc.Pairs[key] = text;
             }
         File.WriteAllText(path, JsonSerializer.Serialize(doc, new JsonSerializerOptions
@@ -356,7 +356,7 @@ sealed class Composer
             if (left is null && right is null) return false;
             if (left is null) return answer != right;
             if (right is null) return answer != left;
-            if (answer == left || answer == right) return false;
+            if (Links.DropsTheLink(answer, left, right)) return false;
             return answer != left + right;
         }
 
@@ -527,4 +527,23 @@ sealed class Composer
     private delegate int GetMappedCode(IntPtr key, IntPtr a2, IntPtr a3, IntPtr a4, IntPtr a5, IntPtr a6, IntPtr outText, IntPtr a8);
     [UnmanagedFunctionPointer(CallingConvention.StdCall)]
     private delegate int LoadKbd(IntPtr name, IntPtr a2, IntPtr a3, IntPtr a4);
+}
+
+/// <summary>Which answers of the composer are not joins after all.</summary>
+static class Links
+{
+    // An answer that is just one of its two pieces, when either piece is a link
+    // (a virama, alone or with a joiner), is the composer failing to show one of
+    // them - the link ("Lk", lost in cleaning once) or the letter after it (Tamil
+    // pulli + ர came back as the pulli alone). Taken as rules, these made every
+    // Link conjunct lose a piece. Other pieces really do vanish into their
+    // neighbour - Kannada e sign + ai sign is the ai sign, Gurmukhi 1 + Onkar is
+    // Ek Onkar - and those stay.
+    public static bool DropsTheLink(string answer, string? left, string? right) =>
+        (answer == left || answer == right) && (IsLink(left) || IsLink(right));
+
+    public static bool IsLink(string? t) =>
+        t is { Length: > 0 } && "्્੍্୍்్್്".Contains(t[0])
+        && t.Skip(1).All(c => c is '‌' or '‍');
+
 }
