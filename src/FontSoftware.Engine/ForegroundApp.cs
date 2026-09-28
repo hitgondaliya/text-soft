@@ -48,6 +48,22 @@ internal static class ForegroundApp
         return _name;
     }
 
+    /// <summary>
+    /// Is the window in front a spreadsheet? LibreOffice runs Writer and Calc in
+    /// one soffice process, so only the window title tells them apart.
+    /// </summary>
+    public static bool IsSpreadsheet()
+    {
+        IntPtr hwnd = GetForegroundWindow();
+        if (hwnd == IntPtr.Zero) return false;
+        var title = new StringBuilder(256);
+        return GetWindowTextW(hwnd, title, title.Capacity) > 0 &&
+               title.ToString().Contains("LibreOffice Calc", StringComparison.OrdinalIgnoreCase);
+    }
+
+    [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+    private static extern int GetWindowTextW(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
+
     /// <summary>Forget the cached answer - for a test, or when the setting changes.</summary>
     public static void Forget()
     {

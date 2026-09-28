@@ -26,6 +26,11 @@ internal sealed class RecordingInjector : InputInjector
     // The real injector hands this to its own thread so the keyboard hook can
     // return; a test wants the letters on the page before it looks at them.
     public override void Run(Action work) => work();
+
+    /// <summary>How many times the engine asked for the held Ctrl to be let go.</summary>
+    public int Lifts { get; private set; }
+
+    public override void LiftHeldCtrl() => Lifts++;
 }
 
 /// <summary>
@@ -528,6 +533,41 @@ public class TypingEngineTests : IDisposable
         ReleaseCtrl();                                // the real key-up comes first...
         Send(VkLControl, down: false, lift: true);    // ...then our lift, with nothing left to lift
         Assert.False(Press(VkSpace), "Space with no Ctrl is the application's");
+    }
+
+    /// <summary>
+    /// Only a key of a Ctrl+Space run typed under the escape's Ctrl has that Ctrl
+    /// let go. A Ctrl pressed for a shortcut is never touched, or the next
+    /// shortcut on it would be lost.
+    /// </summary>
+    [Fact]
+    public void OnlyALayerKeyUnderCtrlLiftsIt()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Send(VkSpace, down: false);
+        Press(VkV);                                   // layer key under Ctrl: lift
+        Send(VkV, down: false);
+        Assert.Equal(1, _injector.Lifts);
+        Assert.False(Press(VkJ), "a shortcut after the run is the application's");
+        Assert.Equal(1, _injector.Lifts);
+        ReleaseCtrl();
+        Press(VkK);                                   // no Ctrl at all: nothing to lift
+        Assert.Equal(1, _injector.Lifts);
+    }
+
+    /// <summary>Ctrl+Backspace belongs to the application (delete a word), not to our cluster backspacing.</summary>
+    [Fact]
+    public void CtrlBackspaceIsTheApplications()
+    {
+        UseGujarati("InScript");
+        Press(VkK);                                   // ક
+        Press(VkJ);                                   // ર
+        HoldCtrl();
+        Assert.False(Press(0x08), "Ctrl+Backspace goes to the application");
+        ReleaseCtrl();
+        Assert.Equal(0, _injector.Lifts);
     }
 
     /// <summary>A shortcut on the same hold, once the layer run is over, is the application's.</summary>

@@ -23,7 +23,7 @@ public class InputInjector
 
     /// <summary>
     /// Tag on the key-up we send for a Ctrl the typist is still holding
-    /// (<see cref="AfterLiftingCtrl"/>). The engine reads it to know the finger is
+    /// (<see cref="LiftHeldCtrl"/>). The engine reads it to know the finger is
     /// still down while Windows now says the key is up.
     /// </summary>
     public static readonly IntPtr LiftSignature = new(0x46_53_54_32);     // "FST2"
@@ -112,7 +112,7 @@ public class InputInjector
                 inputs[n++] = UnicodeInput(c, keyUp: true);
             }
 
-            Send(AfterLiftingCtrl(inputs), $"text '{text}'");
+            Send(inputs, $"text '{text}'");
         });
     }
 
@@ -148,29 +148,43 @@ public class InputInjector
             // Scan codes as well as virtual keys: some editors only honour a shortcut
             // that carries the physical key.
             //
-            // The paste must not pick up a modifier the typist is holding. A held
-            // Ctrl (through a Ctrl+Space run) is lifted first, like before any
-            // typing. A held Shift - the word began on a shifted key, Shift+E for
-            // આ - would turn Ctrl+V into Ctrl+Shift+V: plain-text paste in Office,
-            // values only in Excel, the Paste Special dialog in LibreOffice. So with
-            // Shift down the paste is Shift+Insert instead, on the Shift already
-            // there. Nothing is ever pressed that the typist is not holding, and no
-            // key of theirs is pressed back down.
+            // The paste must not pick up a modifier the typist is holding, and must
+            // not press or release one of theirs. A held Shift - the word began on a
+            // shifted key, Shift+E for આ - would turn Ctrl+V into Ctrl+Shift+V:
+            // plain-text paste in Office, the Paste Special dialog in LibreOffice.
+            // So: nothing held, Ctrl+V; Ctrl held, just the V on their Ctrl; Shift
+            // held, Shift+Insert on their Shift. Both held has no paste that
+            // leaves their keys alone - the characters are typed instead.
+            bool ctrl = IsDown(VK_LCONTROL) || IsDown(VK_RCONTROL);
             bool shift = IsDown(VK_LSHIFT) || IsDown(VK_RSHIFT);
-            var paste = shift
-                ? new[]
+            INPUT[] paste;
+            if (ctrl && shift)
+            {
+                _log.Info($"Ctrl and Shift are both held, so '{text}' was typed rather than pasted; it takes the font of the text it lands in.");
+                SendText(text);
+                return;
+            }
+            else if (shift)
+                paste = new[]
                 {
                     VirtualKeyInput(VK_INSERT, keyUp: false, scan: 0x52, extended: true),
                     VirtualKeyInput(VK_INSERT, keyUp: true, scan: 0x52, extended: true),
-                }
-                : new[]
+                };
+            else if (ctrl)
+                paste = new[]
+                {
+                    VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F),
+                    VirtualKeyInput(0x56, keyUp: true, scan: 0x2F),
+                };
+            else
+                paste = new[]
                 {
                     VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D),
                     VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F),
                     VirtualKeyInput(0x56, keyUp: true, scan: 0x2F),
                     VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D),
                 };
-            Send(AfterLiftingCtrl(paste), $"rich paste '{text}' in {fontName}{(shift ? " (Shift+Insert)" : "")}");
+            Send(paste, $"rich paste '{text}' in {fontName}{(shift ? " (Shift+Insert)" : "")}");
 
             if (handover.Previous is not null)
             {
@@ -208,35 +222,37 @@ public class InputInjector
                 inputs[n++] = VirtualKeyInput(VK_BACK, keyUp: true);
             }
 
-            Send(AfterLiftingCtrl(inputs), $"{count} backspace(s)");
+            Send(inputs, $"{count} backspace(s)");
         });
     }
 
     private static bool IsDown(int vk) => (GetAsyncKeyState(vk) & 0x8000) != 0;
 
     /// <summary>
-    /// What we type, after letting go of a Ctrl the typist is holding.
+    /// Let go of the Ctrl the typist is holding through a Ctrl+Space run, before
+    /// what we type for the layer key goes out - the engine asks for this only
+    /// then, never for a Ctrl pressed for a shortcut.
     ///
-    /// Ctrl+Space is a chord, and after it the typist may keep Ctrl down through
-    /// the next key. What we type for that key would then arrive with Ctrl held:
-    /// our Backspace would be Ctrl+Backspace, which deletes the whole word before
-    /// the caret, and a browser drops a character typed under Ctrl. So the held
-    /// side comes up first - tagged <see cref="LiftSignature"/>, so the engine
-    /// knows the finger is still on it - and is never pressed back down: a key we
-    /// press can stay down after the finger has left it (the finger can lift
-    /// between the moment we look and the moment we send), and a stuck Ctrl turns
-    /// every later key into a shortcut. A key-up can never be stuck.
+    /// What we type would otherwise arrive with Ctrl held: our Backspace would be
+    /// Ctrl+Backspace, which deletes the whole word before the caret, and a browser
+    /// drops a character typed under Ctrl. The key-up is tagged
+    /// <see cref="LiftSignature"/>, so the engine knows the finger is still on it,
+    /// and it is never pressed back down: a key we press can stay down after the
+    /// finger has left it (the finger can lift between the moment we look and the
+    /// moment we send), and a stuck Ctrl turns every later key into a shortcut. A
+    /// key-up can never be stuck.
     /// </summary>
-    private static INPUT[] AfterLiftingCtrl(INPUT[] inputs)
+    public virtual void LiftHeldCtrl()
     {
-        bool left = IsDown(VK_LCONTROL);
-        bool right = IsDown(VK_RCONTROL);
-        if (!left && !right) return inputs;
-        var all = new List<INPUT>(inputs.Length + 2);
-        if (left) all.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D, extra: LiftSignature));
-        if (right) all.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true, extra: LiftSignature));
-        all.AddRange(inputs);
-        return all.ToArray();
+        Post(() =>
+        {
+            bool left = IsDown(VK_LCONTROL), right = IsDown(VK_RCONTROL);
+            if (!left && !right) return;
+            var up = new List<INPUT>(2);
+            if (left) up.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D, extra: LiftSignature));
+            if (right) up.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true, extra: LiftSignature));
+            Send(up.ToArray(), "lift of a Ctrl held through Ctrl+Space");
+        });
     }
 
     /// <summary>

@@ -52,9 +52,9 @@ public sealed class TypingEngine : IDisposable
     private string _seqOut = string.Empty;
     private int _seqMatched;   // how much of _seqKeys the text in _seqOut accounts for (Eng keyboard escape runs)
 
-    // Ctrl as the finger has it. Before typing, the injector lets go of a Ctrl
-    // the typist is holding and never presses it back (a key we press can stay
-    // stuck; see InputInjector.AfterLiftingCtrl), so from then on Windows reads it
+    // Ctrl as the finger has it. Before typing a key of a Ctrl+Space run that Ctrl
+    // is still held through, the injector lets go of it and never presses it back
+    // (a key we press can stay stuck; see InputInjector.LiftHeldCtrl), so from then on Windows reads it
     // as up while the finger is still on it - and a second Ctrl+Space on the same
     // hold, which Shree takes, went through as a plain space. The hook sees our
     // lift (its own tag) and, if Windows still had that Ctrl down at that point in
@@ -177,9 +177,14 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     public HashSet<string> RichTextApps { get; } = new(StringComparer.OrdinalIgnoreCase)
     {
-        "winword", "wordpad", "outlook", "powerpnt", "excel", "onenote", "onenoteim",
-        "soffice", "soffice.bin", "swriter", "wps", "wpp", "et", "notepad++", "textmaker"
+        "winword", "wordpad", "outlook", "powerpnt", "onenote", "onenoteim",
+        "soffice", "soffice.bin", "swriter", "wps", "wpp", "notepad++", "textmaker"
     };
+    // Not Excel, WPS Spreadsheets or LibreOffice Calc: a paste into a cell that is
+    // not being edited becomes the whole cell, and the next letter - typed, to go
+    // on in the same font - starts an edit that replaces it. The first letter of
+    // every entry was lost. In a spreadsheet the characters are typed, and take
+    // the cell's font.
 
     /// <summary>
     /// The application is about to receive this keystroke itself - a space, a
@@ -310,9 +315,20 @@ public sealed class TypingEngine : IDisposable
             return; // map on key-down only
 
         // Backspace removes the whole last injected cluster (e.g. a consonant +
-        // matra pair) instead of a single code unit.
+        // matra pair) instead of a single code unit. Ctrl+Backspace and
+        // Alt+Backspace are the application's (delete a word, undo): taking them
+        // over sent our Backspaces under the typist's Ctrl, a word each.
         if (e.VirtualKey == VK_BACK)
         {
+            if (IsDown(VK_CONTROL) || IsDown(VK_MENU))
+            {
+                _pendingDead = null;
+                _lastEmitted = null;
+                ResetSequence();
+                ResetLegacy();
+                FlushBeforeKey();
+                return;
+            }
             HandleBackspace(e);
             return;
         }
@@ -381,7 +397,7 @@ public sealed class TypingEngine : IDisposable
             FlushBeforeKey();
             return;
         }
-        if (looksLikeShortcut) _layerKey = e.VirtualKey;
+        if (looksLikeShortcut) LayerKeyUnderCtrl(e.VirtualKey);
 
         // A key with no glyph of its own can still finish a run: on the ITR Gujarati
         // keyboard "o" types nothing alone, but "fo" is ર્ક. So the run is resolved
@@ -563,6 +579,17 @@ public sealed class TypingEngine : IDisposable
     }
 
     /// <summary>
+    /// A key of a Ctrl+Space run, typed with the escape's Ctrl still held: remember
+    /// it (its auto-repeat is ours), and have the injector let go of that Ctrl
+    /// before what it types goes out.
+    /// </summary>
+    private void LayerKeyUnderCtrl(int vk)
+    {
+        _layerKey = vk;
+        if (IsDown(VK_CONTROL)) _injector.LiftHeldCtrl();
+    }
+
+    /// <summary>
     /// A key-down for the key a layer run took with Ctrl held, before that key has
     /// come up: its auto-repeat. Swallowed - it is not the typist asking for Ctrl+V.
     /// </summary>
@@ -620,7 +647,7 @@ public sealed class TypingEngine : IDisposable
         if (IsForegroundExcluded()) { ResetSequence(); return false; }
 
         e.Handled = true;
-        if (CtrlDown) _layerKey = e.VirtualKey;
+        if (CtrlDown) LayerKeyUnderCtrl(e.VirtualKey);
         string text = hit ?? _seqOut;          // until the run finishes, keep what it shows
         int replace = _seqOut.Length;
         _log.Info($"Escape: then '{typed}' -> '{text}'.");
@@ -688,7 +715,7 @@ public sealed class TypingEngine : IDisposable
         string add = next[keep..];
 
         string? app = LegacyFontName is null ? null : ForegroundApp.GetProcessName();
-        bool rich = app is not null && RichTextApps.Contains(app);
+        bool rich = app is not null && RichTextApps.Contains(app) && !ForegroundApp.IsSpreadsheet();
 
         _injector.Run(() =>
         {
@@ -781,7 +808,13 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     private void HandlePhonetic(HookKeyEventArgs e)
     {
-        // Backspace: shrink the pending roman buffer and re-render.
+        // Backspace: shrink the pending roman buffer and re-render. Ctrl+ and
+        // Alt+Backspace are the application's; the word is finished as it stands.
+        if (e.VirtualKey == VK_BACK && (IsDown(VK_CONTROL) || IsDown(VK_MENU)))
+        {
+            if (e.IsKeyDown) { ResetPhonetic(); FlushBeforeKey(); }
+            return;
+        }
         if (e.VirtualKey == VK_BACK)
         {
             if (_roman.Length == 0)
