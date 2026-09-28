@@ -130,14 +130,14 @@ public class InputInjector
 
         Post(() =>
         {
-            var handover = RichTextClipboard.Set(text, fontName);
+            bool taken = RichTextClipboard.Borrow(text, fontName);
 
             // Ctrl+V pastes whatever is on the clipboard. If ours did not get on to
             // it - another program was holding it - then pasting sends the typist's
             // own last copy into their document instead of the letter they typed.
             // Type the characters one by one instead and let them take the font
             // from the text around them.
-            if (!handover.Taken)
+            if (!taken)
             {
                 _log.Info($"The clipboard was not free, so '{text}' was typed rather than pasted; " +
                           "it takes the font of the text it lands in.");
@@ -148,61 +148,32 @@ public class InputInjector
             // Scan codes as well as virtual keys: some editors only honour a shortcut
             // that carries the physical key.
             //
-            // The paste must not pick up a modifier the typist is holding, and must
-            // not press or release one of theirs. A held Shift - the word began on a
-            // shifted key, Shift+E for આ - would turn Ctrl+V into Ctrl+Shift+V:
-            // plain-text paste in Office, the Paste Special dialog in LibreOffice.
-            // So: nothing held, Ctrl+V; Ctrl held, just the V on their Ctrl; Shift
-            // held, Shift+Insert on their Shift. Both held has no paste that
-            // leaves their keys alone - the characters are typed instead.
-            bool ctrl = IsDown(VK_LCONTROL) || IsDown(VK_RCONTROL);
+            // The paste must be a paste whatever the typist is holding. A Ctrl they
+            // hold (through a Ctrl+Space run) is let go first - tagged as a lift,
+            // never pressed back - and the paste is our own Ctrl+V; a bare V on
+            // "their" Ctrl was typed as a v when that Ctrl had just been lifted. A
+            // Shift they hold - the word began on a shifted key, Shift+E for આ -
+            // would turn Ctrl+V into Ctrl+Shift+V: plain-text paste in Office, the
+            // Paste Special dialog in LibreOffice. With Shift down the paste is
+            // Shift+Insert, on their Shift. Everything we press, we release.
+            bool left = IsDown(VK_LCONTROL), right = IsDown(VK_RCONTROL);
             bool shift = IsDown(VK_LSHIFT) || IsDown(VK_RSHIFT);
-            INPUT[] paste;
-            if (ctrl && shift)
+            var paste = new List<INPUT>(6);
+            if (left) paste.Add(VirtualKeyInput(VK_LCONTROL, keyUp: true, scan: 0x1D, extra: LiftSignature));
+            if (right) paste.Add(VirtualKeyInput(VK_RCONTROL, keyUp: true, scan: 0x1D, extended: true, extra: LiftSignature));
+            if (shift)
             {
-                _log.Info($"Ctrl and Shift are both held, so '{text}' was typed rather than pasted; it takes the font of the text it lands in.");
-                SendText(text);
-                return;
+                paste.Add(VirtualKeyInput(VK_INSERT, keyUp: false, scan: 0x52, extended: true));
+                paste.Add(VirtualKeyInput(VK_INSERT, keyUp: true, scan: 0x52, extended: true));
             }
-            else if (shift)
-                paste = new[]
-                {
-                    VirtualKeyInput(VK_INSERT, keyUp: false, scan: 0x52, extended: true),
-                    VirtualKeyInput(VK_INSERT, keyUp: true, scan: 0x52, extended: true),
-                };
-            else if (ctrl)
-                paste = new[]
-                {
-                    VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F),
-                    VirtualKeyInput(0x56, keyUp: true, scan: 0x2F),
-                };
             else
-                paste = new[]
-                {
-                    VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D),
-                    VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F),
-                    VirtualKeyInput(0x56, keyUp: true, scan: 0x2F),
-                    VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D),
-                };
-            Send(paste, $"rich paste '{text}' in {fontName}{(shift ? " (Shift+Insert)" : "")}");
-
-            if (handover.Previous is not null)
             {
-                // Give the target app time to read the clipboard, then put the
-                // typist's own text back - but only while the clipboard still holds
-                // ours. If something else has changed it since, that something is
-                // the typist copying again, and overwriting it would be the second
-                // way to lose what they copied.
-                _ = Task.Delay(1500).ContinueWith(_ =>
-                {
-                    try
-                    {
-                        if (RichTextClipboard.HoldsText(text))
-                            RichTextClipboard.SetText(handover.Previous);
-                    }
-                    catch { /* best effort */ }
-                });
+                paste.Add(VirtualKeyInput(VK_CONTROL, keyUp: false, scan: 0x1D));
+                paste.Add(VirtualKeyInput(0x56 /* V */, keyUp: false, scan: 0x2F));
+                paste.Add(VirtualKeyInput(0x56, keyUp: true, scan: 0x2F));
+                paste.Add(VirtualKeyInput(VK_CONTROL, keyUp: true, scan: 0x1D));
             }
+            Send(paste.ToArray(), $"rich paste '{text}' in {fontName}{(shift ? " (Shift+Insert)" : "")}");
         });
     }
 
