@@ -71,7 +71,10 @@ public sealed class ShreeKeyboard
     /// <summary>How many keys reach one of the file's own conjuncts.</summary>
     public int ConjunctKeys { get; set; }
 
-    /// <summary>Keys holding a code this script's table does not know. They are left empty.</summary>
+    /// <summary>
+    /// Keys whose conjunct has a piece this version cannot read. They are left
+    /// empty, and the import says which they are.
+    /// </summary>
     public List<char> Unreadable { get; } = new();
 }
 
@@ -162,8 +165,9 @@ public static class ShreeKeyboardFile
             into[key] = conjunct;
             return;
         }
+        // A code the table has no text for is one Shree types nothing for either:
+        // the table holds every code its composer answers. The key stays empty.
         if (table.Text(code) is { Length: > 0 } text) into[key] = text;
-        else keyboard.Unreadable.Add(key);
     }
 
     private static int Slot(byte code) => code switch
