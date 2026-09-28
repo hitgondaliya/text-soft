@@ -739,6 +739,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     {
         if (SelectedLanguage?.Id != languageId) return;
         if (Layouts.All(l => l.Id != reference.Id)) Layouts.Add(reference);
+        // The keyboard being typed with was just changed: type with the new one.
+        else if (SelectedLayout?.Id == reference.Id) ApplyProfile();
     }
 
     private void OnEngineToggled(object? sender, ToggleEventArgs e)

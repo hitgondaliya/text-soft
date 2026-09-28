@@ -52,14 +52,42 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
     if (table)
     {
         var codes = composer.Codes();
+        string path = Path.Combine(tables, script + ".json");
         var doc = new ShreeCodeTable { Script = script };
         foreach (var (code, text) in codes) doc.Codes[code.ToString("X2")] = text;
+
+        // How the composer shows a lone vowel sign depends on Shree-Lipi's own
+        // settings at the time, which it reads from the running SLNXT: on one day
+        // the Tamil e sign comes back as ே, on another as the bare dot it sits on,
+        // even beside a consonant. A sign read once is never traded for a carrier:
+        // such codes keep the text, and the joins, the table already has.
+        var before = File.Exists(path) ? JsonSerializer.Deserialize<ShreeCodeTable>(File.ReadAllText(path)) : null;
+        static bool Script(string? t) => t is not null && t.Any(ch => ch is >= 'ऀ' and <= '෿');
+        var kept = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        if (before is not null)
+            foreach (var (hex, old) in before.Codes)
+                if (Script(old) && !Script(doc.Codes.GetValueOrDefault(hex)))
+                {
+                    doc.Codes[hex] = old;
+                    codes[Convert.ToInt32(hex, 16)] = old;
+                    kept.Add(hex);
+                }
+        if (kept.Count > 0) Console.WriteLine($"  {script}: kept {kept.Count} sign(s) the composer shows only as a carrier today: {string.Join(" ", kept)}");
+
         // Two codes side by side in a conjunct are not always the two texts side by
         // side: अ ा is आ, ी ર્ is ર્ી. Ask about every pair and keep the ones where
         // the answer is not simply the two run together.
         foreach (var (key, text) in composer.Pairs(codes, doc))
-            doc.Pairs[key] = text;
-        string path = Path.Combine(tables, script + ".json");
+            if (!key.Split(' ').Any(kept.Contains)) doc.Pairs[key] = text;
+        if (before is not null)
+            foreach (var (key, text) in before.Pairs)
+            {
+                var parts = key.Split(' ');
+                if (!parts.Any(kept.Contains)) continue;
+                // the same rule the fresh pairs pass: a join that just drops a piece is no join
+                if (parts.Length == 2 && (text == doc.Codes.GetValueOrDefault(parts[0]) || text == doc.Codes.GetValueOrDefault(parts[1]))) continue;
+                doc.Pairs[key] = text;
+            }
         File.WriteAllText(path, JsonSerializer.Serialize(doc, new JsonSerializerOptions
         {
             WriteIndented = true,
@@ -93,7 +121,7 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
                 mine.Keys.TryGetValue(c, out string? ours);
                 if (theirs is null && ours is null) continue;
                 keys++;
-                if (theirs == ours) same++;
+                if (theirs == ours || Carrier(theirs, ours)) same++;
                 else wrong.Add($"{name} {c}: shree {Show(theirs)} / ours {Show(ours)}");
             }
             foreach (char c in ShreeKeyboardFile.EscapeKeys)
@@ -105,7 +133,7 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
                 // printed character; the file has 0xFF there and so do we.
                 if (ours is null && theirs == composer.Ask(c, 0)) continue;
                 keys++;
-                if (theirs == ours) same++;
+                if (theirs == ours || Carrier(theirs, ours)) same++;
                 else wrong.Add($"{name} Ctrl+Space {c}: shree {Show(theirs)} / ours {Show(ours)}");
             }
         }
@@ -116,6 +144,15 @@ foreach (string script in ShreeKeyboardFile.Scripts.Where(s => only is null || s
     }
 }
 return worst == 0 ? 0 : 2;
+
+// Asked about a lone vowel sign, the composer often shows only what it would sit
+// on - a dot, a comma, or nothing - and not the sign: its answer for the same key
+// changes from one run to the next. The file's code is the sign, and a chart
+// prints the sign, so that is not a difference in what the keyboard types.
+static bool Carrier(string? theirs, string? ours) =>
+    ours is { Length: 1 } && char.GetUnicodeCategory(ours[0]) is System.Globalization.UnicodeCategory.NonSpacingMark
+                                                               or System.Globalization.UnicodeCategory.SpacingCombiningMark
+    && theirs is null or "." or "," or " ";
 
 static string Show(string? s) => s is null ? "(nothing)" : $"'{s}' [{string.Join(' ', s.Select(ch => ((int)ch).ToString("X4")))}]";
 
@@ -173,9 +210,13 @@ sealed class Composer
         for (int k = 0; k < 64; k++) Marshal.WriteByte(_page[7], k, 0);
         int units = _mapped(new IntPtr(key), _page[2], _page[3], _page[4], _page[5], new IntPtr(layer), _page[7], _page[8]);
         if (units <= 0) return null;
-        var bytes = new byte[Math.Min(units * 2, 60)];
+        var bytes = new byte[60];
         Marshal.Copy(_page[7], bytes, 0, bytes.Length);
-        return Clean(Encoding.Unicode.GetString(bytes).TrimEnd('\0'));
+        string all = Encoding.Unicode.GetString(bytes);
+        string rawText = all[..Math.Min(units, 30)].TrimEnd('\0');
+        if (Environment.GetEnvironmentVariable("KBDPROBE_RAW") is not null)
+            Console.WriteLine($"    raw units={units} [{string.Join(" ", all.TrimEnd('\0').Select(ch => ((int)ch).ToString("X4")))}]");
+        return Clean(rawText);
     }
 
     /// <summary>Every code, by giving each key a code of our choosing.</summary>
@@ -194,6 +235,35 @@ sealed class Composer
                 int code = start + i;
                 if (code == 0xFF) continue;
                 if (Ask(keys[i], 0) is { } text) answers[code] = text;
+            }
+        }
+
+        // A sign that cannot stand alone is not always shown alone: asked by
+        // itself, the Gujarati i sign has come back as the dot it sits on, and on
+        // other days as the sign. Next to a consonant it is always itself - the
+        // i sign then ક is કિ (Shree spells in the order things are drawn, and
+        // that sign is drawn first) - so every code that typed nothing of the
+        // script is asked again, on both sides of a consonant, and what is left
+        // once the consonant is taken away is its text.
+        char ka = (char)(_script switch
+        {
+            "DEV" or "SAN" => 0x915, "GUJ" => 0xA95, "PUN" => 0xA15, "BAN" or "ASS" => 0x995,
+            "ORI" => 0xB15, "TAM" => 0xB95, "TEL" => 0xC15, "KAN" => 0xC95, "MAL" => 0xD15, _ => 0,
+        });
+        int kaCode = answers.FirstOrDefault(kv => kv.Value == ka.ToString()).Key;
+        if (kaCode != 0)
+        {
+            var unsure = Enumerable.Range(0x20, 0xFF - 0x20)
+                                   .Where(c => c is not (>= 0x90 and <= 0x9F) and not (>= 0xB0 and <= 0xCF))
+                                   .Where(c => !answers.TryGetValue(c, out var t) || t.All(ch => ch <= '~'))
+                                   .SelectMany(c => new[] { new[] { kaCode, c }, new[] { c, kaCode } })
+                                   .ToList();
+            foreach (var (run, answer) in AskConjuncts(unsure))
+            {
+                int code = run[0] == kaCode ? run[1] : run[0];
+                if (answer.Length < 2 || answer[0] != ka) continue;
+                string rest = answer[1..];
+                if (rest.Any(ch => ch is >= 'ऀ' and <= '෿')) answers[code] = rest;
             }
         }
         return answers;
@@ -216,12 +286,16 @@ sealed class Composer
                               .ToArray();
         string? T(int c) => texts.TryGetValue(c, out var t) ? t : null;
 
-        // Does this answer say anything the pieces run together do not?
+        // Does this answer say anything the pieces run together do not? An answer
+        // that is just one of two pieces that both type something is not a join -
+        // it is the composer showing one piece alone, and taking it for a rule
+        // would make every conjunct with that piece lose the other.
         bool Joins(string answer, string? left, string? right)
         {
             if (left is null && right is null) return false;
             if (left is null) return answer != right;
             if (right is null) return answer != left;
+            if (answer == left || answer == right) return false;
             return answer != left + right;
         }
 
@@ -232,33 +306,66 @@ sealed class Composer
             if (Joins(answer, T(typed[0]), T(typed[1])))
                 joined[$"{typed[0]:X2} {typed[1]:X2}"] = answer;
 
-        // The letters Shree builds out of two pieces and has no code for.
-        var built = new Dictionary<string, int[]>(StringComparer.Ordinal);
+        // What Shree builds out of two pieces and has no code for, and what those
+        // join in turn. A letter (आ, ो) can meet a piece on either side. A half
+        // letter - a consonant and the link, ଓ୍ - is only ever followed, and only
+        // by a consonant: that is how ଓ୍ବ becomes the Odia wa, ୱ.
+        var built = new Dictionary<string, List<int[]>>(StringComparer.Ordinal);
         foreach (var (key, text) in joined)
         {
-            if (text.Length != 1 || table.IdOf(text) is not { } id || !id.StartsWith('U')) continue;
-            var parts = key.Split(' ').Select(h => Convert.ToInt32(h, 16)).ToArray();
-            built.TryAdd(text, parts);
+            if (table.IdOf(text) is not { } id || !id.StartsWith('U')) continue;
+            bool half = text.Length == 2 && IsVirama(text[1]);
+            if (text.Length != 1 && !half) continue;
+            Built(text, key.Split(' ').Select(h => Convert.ToInt32(h, 16)).ToArray());
         }
+        var consonants = codes.Where(c => T(c) is { Length: 1 } t && char.IsLetter(t[0])).ToArray();
+        // A letter and the link run together plainly, so they are not in the joins
+        // above - but the half letter they make can still join what follows.
+        foreach (int link in codes.Where(c => T(c) is { Length: 1 } t && IsVirama(t[0])))
+            foreach (int letter in consonants)
+                if (table.IdOf(T(letter)! + T(link)!) is { } hid && hid.StartsWith('U'))
+                    Built(T(letter)! + T(link)!, new[] { letter, link });
         var threes = new List<int[]>();
-        foreach (var parts in built.Values)
-            foreach (int c in codes)
+        var about = new Dictionary<int[], (bool After, string Built)>(ReferenceEqualityComparer.Instance);
+        foreach (var (text, all) in built)
+        foreach (var parts in all)
+        {
+            bool half = text.Length == 2;
+            foreach (int c in half ? consonants : codes)
             {
-                threes.Add(new[] { parts[0], parts[1], c });
-                threes.Add(new[] { c, parts[0], parts[1] });
+                var after = new[] { parts[0], parts[1], c };
+                threes.Add(after); about[after] = (true, text);
+                if (half) continue;
+                var before = new[] { c, parts[0], parts[1] };
+                threes.Add(before); about[before] = (false, text);
             }
+        }
+        // A built piece is named by its text, and two different pairs of codes can
+        // make the same text - Telugu has two codes that both show as the link,
+        // and they do not join the same way. Where the pairs behind one name
+        // disagree about what follows, the name joins nothing.
+        var heard = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
         foreach (var (typed, answer) in AskConjuncts(threes))
         {
-            bool after = built.Values.Any(p => p[0] == typed[0] && p[1] == typed[1]);
-            string letter = built.First(kv => after ? kv.Value[0] == typed[0] && kv.Value[1] == typed[1]
-                                                    : kv.Value[0] == typed[1] && kv.Value[1] == typed[2]).Key;
-            string id = ShreeCodeTable.LetterId(letter[0]);
-            if (after && Joins(answer, letter, T(typed[2])))
-                joined.TryAdd($"{id} {typed[2]:X2}", answer);
-            else if (!after && Joins(answer, T(typed[0]), letter))
-                joined.TryAdd($"{typed[0]:X2} {id}", answer);
+            var (isAfter, text) = about[typed];
+            string id = ShreeCodeTable.TextId(text);
+            string key = isAfter ? $"{id} {typed[2]:X2}" : $"{typed[0]:X2} {id}";
+            string? rule = (isAfter ? Joins(answer, text, T(typed[2])) : Joins(answer, T(typed[0]), text)) ? answer : null;
+            if (!heard.TryGetValue(key, out var earlier)) heard[key] = rule;
+            else if (earlier != rule) heard[key] = null;
         }
+        foreach (var (key, rule) in heard)
+            if (rule is not null) joined.TryAdd(key, rule);
         return joined;
+
+        void Built(string text, int[] parts)
+        {
+            if (!built.TryGetValue(text, out var all)) built[text] = all = new List<int[]>();
+            all.Add(parts);
+        }
+
+        static bool IsVirama(char c) => c is '्' or '્' or '੍' or '্' or '୍'
+                                           or '்' or '్' or '್' or '്';
     }
 
     /// <summary>One conjunct, in slot 0, asked from every key pointed at it.</summary>
@@ -334,6 +441,10 @@ sealed class Composer
         // The Bengali composer's "nothing": it answers ৻ for a key with no character.
         if (raw == "৻" && _script is "BAN" or "ASS") return null;
         if (raw == "Hf") return virama + "\u200D";
+        // In a longer answer the same names stand for the same signs: ଜ Lk ଞ is ଜ୍ଞ.
+        // Dropping them with the other Latin carriers left ଜଞ.
+        if (raw.Any(c => c is >= '\u0900' and <= '\u0DFF'))
+            raw = raw.Replace("Lk", virama).Replace("Hf", virama + "\u200D");
         if (raw.Any(c => c is >= '\u0900' and <= '\u0DFF'))
             raw = new string(raw.Where(c => c > '~').ToArray());
         else if (raw.All(c => c < ' ')) return null;              // the control codes answer as themselves

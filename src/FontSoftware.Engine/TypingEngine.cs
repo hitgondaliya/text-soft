@@ -50,6 +50,18 @@ public sealed class TypingEngine : IDisposable
     // progress and the text they produced, so the next key can replace it.
     private readonly StringBuilder _seqKeys = new();
     private string _seqOut = string.Empty;
+    private int _seqMatched;   // how much of _seqKeys the text in _seqOut accounts for (Eng keyboard escape runs)
+
+    // ---- The Ctrl key, as the typist's finger has it ----
+    // Windows' own key state stops being the truth once we let go of a held Ctrl
+    // for the typist (InputInjector.ReleaseHeldCtrl, so our Backspace is not
+    // Ctrl+Backspace): from then on it reads "up" while the finger is still down,
+    // and a second Ctrl+Space on the same hold - which Shree takes - went to the
+    // application as a plain space. So the key events themselves are watched.
+    private bool _ctrlPhysical;   // the typist is holding Ctrl
+    private bool _ctrlLetGo;      // and we have sent a Ctrl key-up since they pressed it
+
+    private bool CtrlDown => IsDown(VK_CONTROL) || (_ctrlPhysical && _ctrlLetGo);
 
     // ---- Legacy Font Layout output (e.g. ShreeLipi-Ex) ----
     // When a legacy font layout is active, keys still map to Unicode, but we then
@@ -203,6 +215,12 @@ public sealed class TypingEngine : IDisposable
 
     private void OnKey(object? sender, HookKeyEventArgs e)
     {
+        if (e.VirtualKey is VK_CONTROL or VK_LCONTROL or VK_RCONTROL)
+        {
+            if (!e.Injected) { _ctrlPhysical = e.IsKeyDown; _ctrlLetGo = false; }
+            else _ctrlLetGo = !e.IsKeyDown && _ctrlPhysical;   // ours: a key-up while the finger holds it
+        }
+
         // Never react to our own injected input.
         if (e.Injected)
             return;
@@ -235,15 +253,23 @@ public sealed class TypingEngine : IDisposable
         // the application and the key after it typed by sound.
         if ((PhoneticMode || _layoutIsPhonetic) && _translit is not null)
         {
-            if (_seqKeys.Length > 0 && ContinuePhoneticEscape(e))
-                return;
+            if (_seqKeys.Length > 0)
+            {
+                // A run on the layer is in progress. Key-ups belong to it too: one
+                // reaching the sound-typing code would end the word there, and with
+                // it the legacy text the run is still rewriting.
+                if (!e.IsKeyDown) return;
+                if (ContinuePhoneticEscape(e)) return;
+            }
             bool opensLayer = e.IsKeyDown && _layout is { HasSequences: true } && EscapeMarkFor(e.VirtualKey) != '\0';
             if (!opensLayer)
             {
                 HandlePhonetic(e);
                 return;
             }
-            ResetPhonetic();   // the word typed so far stays as it is on screen
+            // The word typed so far stays as it is on screen - unless this escape
+            // is the second of a run (ØmØma), whose text is still being rewritten.
+            if (_seqKeys.Length == 0) ResetPhonetic();
         }
 
         if (_layout is null)
@@ -311,12 +337,12 @@ public sealed class TypingEngine : IDisposable
         {
             if (_seqKeys.Length > 0)
                 _log.Info($"Escape: the run '{_seqKeys}' was dropped - '{typed}' arrived looking like a shortcut " +
-                          $"(ctrl={IsDown(VK_CONTROL)}, alt={IsDown(VK_MENU)}).");
+                          $"(ctrl={CtrlDown}, alt={IsDown(VK_MENU)}).");
             _pendingDead = null;
             _lastEmitted = null;
             ResetSequence();
             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
-            FlushBeforeKey();
+            PassShortcut(e);
             return;
         }
 
@@ -462,34 +488,60 @@ public sealed class TypingEngine : IDisposable
     {
         _seqKeys.Clear();
         _seqOut = string.Empty;
+        _seqMatched = 0;
     }
 
     /// <summary>
     /// The escape: Ctrl+Space, which is what the product's own settings name, and
     /// Ctrl+Shift+1, which is how the published key charts write it.
     /// </summary>
-    private static char EscapeMarkFor(int vk)
+    private char EscapeMarkFor(int vk)
     {
-        if (!IsDown(VK_CONTROL) || IsDown(VK_MENU)) return '\0';
+        if (!CtrlDown || IsDown(VK_MENU)) return '\0';
         if (vk == VK_SPACE) return EscapeLayer.Mark;               // this keyboard's third layer
         if (vk == '1' && IsDown(VK_SHIFT)) return EscapeLayer.SymbolMark;  // the shared symbols
         return '\0';
     }
 
     /// <summary>
-    /// Is this key, pressed now, the one an escape just opened a layer for? Only
-    /// when the run ends in an escape mark, the layer has something on the key,
-    /// and the only other key held is the Ctrl (and Shift) of the escape itself -
-    /// Alt or the Windows key still make it a shortcut.
+    /// Is this key part of a run an escape opened? Only while the run has an
+    /// escape in it and this key continues it - Ctrl+Space j f k on the Roma
+    /// keyboard is one run, typed by some with Ctrl held all the way - and only
+    /// when the other keys held are the Ctrl (and Shift) of the escape itself: Alt
+    /// or the Windows key still make it a shortcut.
     /// </summary>
     private bool OnEscapedLayer(char typed)
     {
         if (typed == '\0' || _layout is null || _seqKeys.Length == 0) return false;
-        char last = _seqKeys[^1];
-        if (last != EscapeLayer.Mark && last != EscapeLayer.SymbolMark) return false;
+        string run = _seqKeys.ToString();
+        if (run.IndexOf(EscapeLayer.Mark) < 0 && run.IndexOf(EscapeLayer.SymbolMark) < 0) return false;
         if (IsDown(VK_MENU) || IsDown(VK_LWIN) || IsDown(VK_RWIN)) return false;
-        string grown = _seqKeys.ToString() + typed;
-        return _layout.MatchSequence(grown) is not null || _layout.SequenceCanGrow(grown);
+        string grown = run + typed;
+        if (_layout.MatchSequence(grown) is not null || _layout.SequenceCanGrow(grown)) return true;
+        // An escape starts a run of its own when the keys before it lead nowhere
+        // (see ResolveSequence): after ૠ, Ctrl+Space v is ૠ again.
+        int mark = Math.Max(grown.LastIndexOf(EscapeLayer.Mark), grown.LastIndexOf(EscapeLayer.SymbolMark));
+        string tail = grown[mark..];
+        return mark > 0 && (_layout.MatchSequence(tail) is not null || _layout.SequenceCanGrow(tail));
+    }
+
+    /// <summary>
+    /// Hand a shortcut to the application - with its Ctrl. When we have let go of
+    /// a Ctrl the typist is still holding, Windows thinks it is up, and Ctrl+S
+    /// pressed on that same hold would arrive as a plain s: typed, not saved. So
+    /// the Ctrl goes back down with the key, in its turn after anything still
+    /// being typed.
+    /// </summary>
+    private void PassShortcut(HookKeyEventArgs e)
+    {
+        if (_ctrlPhysical && _ctrlLetGo && !IsDown(VK_CONTROL) && !IsModifier(e.VirtualKey))
+        {
+            e.Handled = true;
+            _ctrlLetGo = false;
+            _injector.PressWithCtrl(e.VirtualKey);
+            return;
+        }
+        FlushBeforeKey();
     }
 
     /// <summary>
@@ -510,8 +562,15 @@ public sealed class TypingEngine : IDisposable
         {
             if (_seqKeys[^1] == EscapeLayer.Mark || _seqKeys[^1] == EscapeLayer.SymbolMark)
                 _log.Info($"Escape: then '{typed}' -> nothing on that layer.");
+            // Keys that only looked like the start of a longer run showed nothing
+            // while it might come: Ctrl+Space n g could still become ઙ્ગ. It did not,
+            // so they are letters after all - typed by sound, ahead of this key.
+            string pending = _seqKeys.ToString()[_seqMatched..];
             ResetSequence();
             ResetLegacy();
+            foreach (char c in pending)
+                if (char.IsAsciiLetter(c)) _roman.Append(c);
+            if (_roman.Length > 0) Rerender();
             return false;                                          // typed by sound
         }
 
@@ -523,6 +582,7 @@ public sealed class TypingEngine : IDisposable
         _log.Info($"Escape: then '{typed}' -> '{text}'.");
         _seqKeys.Clear();
         _seqKeys.Append(grown);
+        if (hit is not null) _seqMatched = _seqKeys.Length;
         _seqOut = text;
         Emit(text, replace);
         if (!grows)
@@ -700,7 +760,9 @@ public sealed class TypingEngine : IDisposable
         // A shortcut ends the word and belongs to the application, not to us.
         if (IsShortcut(null))
         {
+            if (!e.IsKeyDown) return;
             ResetPhonetic();
+            PassShortcut(e);
             return;
         }
 
@@ -715,8 +777,13 @@ public sealed class TypingEngine : IDisposable
             return;
         }
 
-        // Boundary key (space, enter, punctuation, digit, arrows): commit and pass through.
+        // Boundary key (space, enter, punctuation, digit, arrows): commit and pass
+        // through - once what we typed for the word is on screen. In Word a legacy
+        // word goes in through its automation object, slowly enough that a space
+        // let through at once could land between the last two letters.
+        if (!e.IsKeyDown) return;
         ResetPhonetic();
+        FlushBeforeKey();
     }
 
     // Replace the previously shown script for this word with the transliteration of
@@ -771,7 +838,7 @@ public sealed class TypingEngine : IDisposable
     {
         bool shift = IsDown(VK_SHIFT);
         bool caps = IsToggled(VK_CAPITAL) && ToggleKey != VK_CAPITAL;
-        bool altGr = IsDown(VK_CONTROL) && IsDown(VK_MENU); // Ctrl+Alt = AltGr
+        bool altGr = CtrlDown && IsDown(VK_MENU); // Ctrl+Alt = AltGr
 
         if (altGr && !string.IsNullOrEmpty(mapping.AltGr))
             return mapping.AltGr;
@@ -790,12 +857,12 @@ public sealed class TypingEngine : IDisposable
     /// Ctrl+Alt is AltGr on European keyboards, so that pair counts as text only
     /// when the layout actually defines an AltGr glyph for the key.
     /// </summary>
-    private static bool IsShortcut(KeyMapping? mapping)
+    private bool IsShortcut(KeyMapping? mapping)
     {
         if (IsDown(VK_LWIN) || IsDown(VK_RWIN))
             return true;
 
-        bool ctrl = IsDown(VK_CONTROL), alt = IsDown(VK_MENU);
+        bool ctrl = CtrlDown, alt = IsDown(VK_MENU);
         if (ctrl && alt)
             return string.IsNullOrEmpty(mapping?.AltGr);
         return ctrl || alt;

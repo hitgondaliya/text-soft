@@ -60,6 +60,9 @@ public sealed class AssetBundle
         return table;
     }
 
+    /// <summary>Drop a cached layout, so the next read is of its file as it is now.</summary>
+    public void Forget(string layoutId) => _layoutCache.Remove(layoutId);
+
     /// <summary>Load (and cache) a full keyboard layout by its reference.</summary>
     public KeyboardLayout GetLayout(LayoutRef reference)
     {

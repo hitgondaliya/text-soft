@@ -65,6 +65,10 @@ public sealed class UserKeyboards
         return new LayoutRef { Id = layout.Id, Name = layout.Name, File = file };
     }
 
+    /// <summary>Is there already a saved keyboard that a keyboard of this name would be written over?</summary>
+    public bool Exists(string languageId, string name) =>
+        File.Exists(Path.Combine(Root, languageId, Slug(name) + ".json"));
+
     public void Delete(LayoutRef reference)
     {
         if (IsUserKeyboard(reference) && File.Exists(reference.File)) File.Delete(reference.File);

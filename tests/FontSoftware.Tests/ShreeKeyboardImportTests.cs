@@ -127,6 +127,78 @@ public class ShreeKeyboardImportTests : IDisposable
         Assert.Contains("MYKBD", vm.Status);
     }
 
+    /// <summary>A code no table knows, for the tests below: one this script's table has no text for.</summary>
+    private static byte Unknown(ShreeCodeTable table)
+    {
+        for (int c = 0x20; c < 0xFF; c++)
+            if (c is not (>= 0x90 and <= 0x9F) and not (>= 0xB0 and <= 0xCF) && table.Text(c) is null) return (byte)c;
+        throw new InvalidOperationException("every code is known");
+    }
+
+    /// <summary>A piece that types nothing and joins nothing does not cost the key its conjunct.</summary>
+    [Fact]
+    public void APieceThatTypesNothingIsLeftOut()
+    {
+        var table = Table("GUJ");
+        Assert.Equal("ક", ShreeKeyboardFile.Join(new byte[] { 0x73, Unknown(table) }, table));
+    }
+
+    /// <summary>A key whose conjunct has nothing readable in it is lost - and the typist is told.</summary>
+    [Fact]
+    public void AConjunctWithNothingReadableIsReported()
+    {
+        var table = Table("GUJ");
+        var f = Blank();
+        byte x = Unknown(table);
+        f['j'] = 0xB2;
+        f[166 + 2 * 5 + 1] = x;
+        f[166 + 2 * 5 + 2] = x;
+        var read = ShreeKeyboardFile.Decode(f, table);
+        Assert.Contains('j', read.Unreadable);
+    }
+
+    /// <summary>
+    /// Conjuncts made with Link keep the link. Shree's composer shows it as "Lk" in
+    /// a longer answer, and reading that as a Latin carrier made every Odia and
+    /// Tamil Link conjunct lose its virama (ଜ୍ଞ came in as ଜଞ).
+    /// </summary>
+    [Theory]
+    [InlineData("ORI", "\u0B1C", "\u0B1E", "\u0B1C\u0B4D\u0B1E")]   // ଜ୍ଞ
+    [InlineData("TAM", "\u0BB7", "\u0BB0", "\u0BB7\u0BCD\u0BB0")]   // ஷ்ர
+    [InlineData("GUJ", "\u0A95", "\u0AB7", "\u0A95\u0ACD\u0AB7")]   // ક્ષ
+    public void ALinkConjunctKeepsItsVirama(string script, string first, string second, string expected)
+    {
+        var table = Table(script);
+        byte Code(string text) => (byte)Convert.ToInt32(table.Codes.First(kv => kv.Value == text).Key, 16);
+        string virama = expected.Substring(1, 1);
+        Assert.Equal(expected, ShreeKeyboardFile.Join(new[] { Code(first), Code(virama), Code(second) }, table));
+    }
+
+    /// <summary>Shree draws the Odia wa as ଓ, the link and ବ; it is one letter, ୱ.</summary>
+    [Fact]
+    public void TheOdiaWaIsOneLetter()
+    {
+        var table = Table("ORI");
+        byte Code(string text) => (byte)Convert.ToInt32(table.Codes.First(kv => kv.Value == text).Key, 16);
+        Assert.Equal("\u0B71", ShreeKeyboardFile.Join(new[] { Code("\u0B13"), Code("\u0B4D"), Code("\u0B2C") }, table));
+    }
+
+    /// <summary>Importing a file twice, or over a keyboard designed here, never writes over the one already there.</summary>
+    [Fact]
+    public void ImportingAgainKeepsTheKeyboardAlreadyThere()
+    {
+        string file = Path.Combine(_dir, "MYKBD.GUJ");
+        File.WriteAllBytes(file, Gujarati());
+        var vm = new KeyboardEditorViewModel(_bundle, new UserKeyboards(Path.Combine(_dir, "store")), NullLog.Instance);
+
+        Assert.True(vm.Import(file));
+        Assert.True(vm.Import(file));
+
+        var names = vm.SelectedLanguage!.Layouts.Select(l => l.Name).ToList();
+        Assert.Contains("MYKBD", names);
+        Assert.Contains("MYKBD (2)", names);
+    }
+
     [Fact]
     public void AFileThatIsNotAShreeKeyboardSaysSo()
     {

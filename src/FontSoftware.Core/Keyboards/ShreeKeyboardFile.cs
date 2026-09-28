@@ -52,10 +52,11 @@ public sealed class ShreeCodeTable
             foreach (string t in twice) _idOf.Remove(t);
         }
         if (_idOf.TryGetValue(text, out string? id)) return id;
-        return text.Length == 1 ? LetterId(text[0]) : null;
+        return text.Length is 1 or 2 ? TextId(text) : null;
     }
 
-    public static string LetterId(char c) => "U" + ((int)c).ToString("X4");
+    /// <summary>The name of a piece no code types: "U" and its characters in hex (ઓ is U0A93, ଓ୍ is U0B130B4D).</summary>
+    public static string TextId(string text) => "U" + string.Concat(text.Select(c => ((int)c).ToString("X4")));
 }
 
 /// <summary>A keyboard file, read: what every key types.</summary>
@@ -154,8 +155,9 @@ public static class ShreeKeyboardFile
         int slot = Slot(code);
         if (slot >= 0 && table.Text(code) is null)
         {
-            string? conjunct = Conjunct(file, slot, table);
-            if (conjunct is null) return;
+            var (conjunct, empty) = Conjunct(file, slot, table);
+            if (empty) return;                                   // an empty slot types nothing on Shree either
+            if (conjunct is null) { keyboard.Unreadable.Add(key); return; }
             keyboard.ConjunctKeys++;
             into[key] = conjunct;
             return;
@@ -172,14 +174,14 @@ public static class ShreeKeyboardFile
     };
 
     /// <summary>A conjunct's text: its codes, first character first, run together.</summary>
-    private static string? Conjunct(byte[] file, int slot, ShreeCodeTable table)
+    private static (string? Text, bool Empty) Conjunct(byte[] file, int slot, ShreeCodeTable table)
     {
         int at = ConjunctStart + slot * ConjunctSize + 1;
         var codes = new List<byte>(4);
         for (int k = 0; k < 4 && file[at + k] != 0xFF; k++) codes.Add(file[at + k]);
-        if (codes.Count == 0) return null;
+        if (codes.Count == 0) return (null, true);
         codes.Reverse();                 // stored last character first
-        return Join(codes, table);
+        return (Join(codes, table), false);
     }
 
     /// <summary>
@@ -194,8 +196,11 @@ public static class ShreeKeyboardFile
     public static string? Join(IReadOnlyList<byte> codes, ShreeCodeTable table)
     {
         var best = Reduce(codes.Select(c => (Id: (string?)c.ToString("X2"), Text: table.Text(c))).ToList(), table);
-        if (best.Any(p => p.Text is null)) return null;
-        return string.Concat(best.Select(p => p.Text));
+        // A piece that types nothing and joined nothing adds nothing - Shree types
+        // INSCRIPT.TEL's x (ం and such a piece) as ం. Only a conjunct with nothing
+        // readable in it at all is lost.
+        var texts = best.Where(p => p.Text is not null).Select(p => p.Text!).ToList();
+        return texts.Count == 0 ? null : string.Concat(texts);
     }
 
     private static List<(string? Id, string? Text)> Reduce(List<(string? Id, string? Text)> parts, ShreeCodeTable table)
@@ -208,6 +213,19 @@ public static class ShreeKeyboardFile
             var fewer = new List<(string? Id, string? Text)>(parts);
             fewer[i] = (table.IdOf(both), both);
             fewer.RemoveAt(i + 1);
+            var reduced = Reduce(fewer, table);
+            if (reduced.Count < best.Count) best = reduced;
+        }
+
+        // Two pieces that simply run together - a letter and the link, ଓ୍ - can
+        // still join what follows as one: ଓ୍ then ବ is the Odia wa, ୱ.
+        for (int i = 0; i + 2 < parts.Count; i++)
+        {
+            if (parts[i].Text is not { } a || parts[i + 1].Text is not { } b || parts[i + 2].Id is not { } next) continue;
+            if (table.IdOf(a + b) is not { } both || table.Pair(both, next) is not { } joined) continue;
+            var fewer = new List<(string? Id, string? Text)>(parts);
+            fewer[i] = (table.IdOf(joined), joined);
+            fewer.RemoveRange(i + 1, 2);
             var reduced = Reduce(fewer, table);
             if (reduced.Count < best.Count) best = reduced;
         }

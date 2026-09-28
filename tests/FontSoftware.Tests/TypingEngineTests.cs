@@ -23,6 +23,11 @@ internal sealed class RecordingInjector : InputInjector
     public override void SendBackspace(int count = 1)
         => _text.Length = Math.Max(0, _text.Length - count);
 
+    /// <summary>Shortcuts handed back to the application with their Ctrl pressed again.</summary>
+    public List<int> CtrlPresses { get; } = new();
+
+    public override void PressWithCtrl(int vk) => CtrlPresses.Add(vk);
+
     // The real injector hands this to its own thread so the keyboard hook can
     // return; a test wants the letters on the page before it looks at them.
     public override void Run(Action work) => work();
@@ -44,7 +49,7 @@ public class TypingEngineTests : IDisposable
                       Vk1 = 0x31, VkA = 0x41, VkY = 0x59, VkT = 0x54, VkU = 0x55,
                       VkF = 0x46, VkO = 0x4F, VkI = 0x49, VkZ = 0x5A, VkD = 0x44,
                       VkV = 0x56, VkK = 0x4B, VkS = 0x53, VkN = 0x4E, VkG = 0x47, VkM = 0x4D,
-                      VkL = 0x4C, VkE = 0x45;
+                      VkL = 0x4C, VkE = 0x45, VkJ = 0x4A, VkX = 0x58, VkLControl = 0xA2;
 
     private readonly LowLevelKeyboardHook _hook = new();
     private readonly RecordingInjector _injector = new();
@@ -111,9 +116,12 @@ public class TypingEngineTests : IDisposable
     }
 
     /// <summary>Feed the engine a key press the way the hook would, and report whether it took it.</summary>
-    private bool Press(int vk)
+    private bool Press(int vk) => Send(vk, down: true);
+
+    /// <summary>Any key event: down or up, the typist's or one of our own injected ones.</summary>
+    private bool Send(int vk, bool down, bool injected = false)
     {
-        var args = new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = true };
+        var args = new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = down, Injected = injected };
         var field = typeof(LowLevelKeyboardHook)
             .GetField("KeyEvent", BindingFlags.Instance | BindingFlags.NonPublic)!;
         var handler = (EventHandler<HookKeyEventArgs>?)field.GetValue(_hook);
@@ -392,6 +400,132 @@ public class TypingEngineTests : IDisposable
         foreach (int vk in new[] { VkK, VkA, VkM, VkA, VkL, VkA }) Press(vk);   // kamala
         Assert.Equal(toLegacy.ConvertText("કમલ"), _injector.Text);
         Assert.DoesNotContain(_injector.Text, c => c is >= '\u0A80' and <= '\u0AFF');
+    }
+
+    // ---- the Ctrl the typist holds, once we have let go of it ----
+    // The real injector lets go of a held Ctrl before it types (so our Backspace
+    // is not Ctrl+Backspace), and Windows then reads Ctrl as up. These press the
+    // physical Ctrl through the hook, and model that let-go as the injected
+    // key-up it is and the key state it leaves behind.
+
+    private void HoldCtrl() { _down.Add(VkControl); Send(VkLControl, down: true); }
+    private void WeLetGoOfCtrl() { Send(VkLControl, down: false, injected: true); _down.Remove(VkControl); }
+    private void ReleaseCtrl() { Send(VkLControl, down: false); _down.Remove(VkControl); }
+
+    /// <summary>A second Ctrl+Space on the same hold is still an escape after we let go of Ctrl.</summary>
+    [Fact]
+    public void TwoEscapesOnOneHoldOfCtrlBothWork()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Assert.True(Press(VkV));
+        WeLetGoOfCtrl();
+        Assert.True(Press(VkSpace), "the finger is still on Ctrl: this is Ctrl+Space");
+        Assert.True(Press(VkV));
+        ReleaseCtrl();
+        Assert.Equal("ૠૠ", _injector.Text);
+    }
+
+    /// <summary>The Typewriter chart's ØxØdx, typed holding Ctrl through the first Space, X and the second Space.</summary>
+    [Fact]
+    public void AChartRunWithTwoEscapesTypedOnOneHold()
+    {
+        UseGujarati("Typewriter");
+        HoldCtrl();
+        Press(VkSpace);
+        Press(VkX);                                   // ઙ
+        WeLetGoOfCtrl();
+        Press(VkSpace);
+        ReleaseCtrl();
+        Press(VkD);
+        Press(VkX);                                   // ØxØdx -> ઙ્ગ
+        Assert.Equal("ઙ્ગ", _injector.Text);
+    }
+
+    /// <summary>Ctrl+S on the same hold, after a layer key, still saves: its Ctrl goes back down with it.</summary>
+    [Fact]
+    public void AShortcutOnAHeldCtrlWeLetGoOfGetsItsCtrlBack()
+    {
+        UseGujarati("InScript");
+        HoldCtrl();
+        Press(VkSpace);
+        Press(VkV);
+        WeLetGoOfCtrl();
+        Assert.True(Press(VkS), "the S is not typed as a letter");
+        ReleaseCtrl();
+        Assert.Equal("ૠ", _injector.Text);
+        Assert.Equal(new[] { VkS }, _injector.CtrlPresses);
+    }
+
+    /// <summary>
+    /// A run on the layer longer than one key, Ctrl held all the way (Roma: Ctrl+Space j f k is ઙ્ક).
+    /// Only the first key used to count; f then went to the application as Ctrl+F.
+    /// </summary>
+    [Fact]
+    public void ALongerRunOnTheLayerTypedWithCtrlHeld()
+    {
+        UseGujarati("Roma");
+        HoldCtrl();
+        Press(VkSpace);
+        Assert.True(Press(VkJ));
+        Assert.True(Press(VkF), "f continues the run; it is not Ctrl+F");
+        Assert.True(Press(VkK), "k finishes it; it is not Ctrl+K");
+        ReleaseCtrl();
+        Assert.Equal("ઙ્ક", _injector.Text);
+    }
+
+    /// <summary>
+    /// Eng keyboard, legacy font: letting go of Space in the middle of a run on the
+    /// layer (ordinary rollover) used to end the word and empty the legacy buffer,
+    /// and the run's text was then typed a second time.
+    /// </summary>
+    [Fact]
+    public void AKeyUpInTheMiddleOfAnEscapedRunChangesNothing()
+    {
+        UseGujarati("Eng", bySound: true);
+        var toLegacy = _config.CreateConverterToLegacy("shree-gujx")!;
+        _engine.SetLegacyConverter(toLegacy, "SHREE-GUJX-1120");
+
+        HoldCtrl();
+        Press(VkSpace);
+        Press(VkN);                                   // Øn -> ઙ્
+        Send(VkSpace, down: false);                   // Space comes up first
+        ReleaseCtrl();
+        Send(VkN, down: false);
+        Press(VkA);                                   // Øna -> ઙ
+        Assert.Equal(toLegacy.ConvertText("ઙ"), _injector.Text);
+    }
+
+    /// <summary>A second escape inside a run on the Eng keyboard (Kannada ØmØma, ಞ್ಞ) in a legacy font.</summary>
+    [Fact]
+    public void ASecondEscapeInsideARunKeepsTheRunsText()
+    {
+        var kannada = _config.Languages.First(l => l.Id == "kn");
+        _engine.SetTransliterator(_config.GetTransliterator(kannada));
+        _engine.SetProfile(_config.GetLayout(kannada.Layouts.First(l => l.Name == "Eng")), kannada.Name, "Legacy");
+        var toLegacy = _config.CreateConverterToLegacy("shree-kanx")!;
+        _engine.SetLegacyConverter(toLegacy, "SHREE-KANX-0850");
+
+        Escape();
+        Press(VkM);
+        Escape();
+        Press(VkM);
+        Press(VkA);
+        Assert.Equal(toLegacy.ConvertText("ಞ್ಞ"), _injector.Text);
+    }
+
+    /// <summary>
+    /// Keys that only looked like the start of a longer run on the layer are letters
+    /// after all when it does not come: Ctrl+Space n g i is ઙ્ then ગિ, not ઙ્ઇ.
+    /// </summary>
+    [Fact]
+    public void KeysThatStartedARunThatNeverCameAreTypedBySound()
+    {
+        UseGujarati("Eng", bySound: true);
+        Escape();
+        foreach (int vk in new[] { VkN, 0x47 /* g */, VkI }) Press(vk);
+        Assert.Equal("ઙ્ગિ", _injector.Text);
     }
 
     /// <summary>Choosing the Eng keyboard is choosing to type by sound.</summary>

@@ -169,6 +169,24 @@ public class InputInjector
         });
     }
 
+    /// <summary>
+    /// Press a key with Ctrl down - a shortcut the typist is making on a Ctrl we
+    /// let go of for them. Only the presses: the key's release and the Ctrl's are
+    /// the typist's own, and arrive when their fingers lift.
+    /// </summary>
+    public virtual void PressWithCtrl(int vk)
+    {
+        Post(() =>
+        {
+            var inputs = new[]
+            {
+                VirtualKeyInput(VK_LCONTROL, keyUp: false, scan: 0x1D),
+                VirtualKeyInput(vk, keyUp: false, scan: (ushort)MapVirtualKey((uint)vk, 0)),
+            };
+            Send(inputs, $"Ctrl+{vk:X2} for a held Ctrl");
+        });
+    }
+
     /// <summary>Send <paramref name="count"/> backspace key presses.</summary>
     public virtual void SendBackspace(int count = 1)
     {

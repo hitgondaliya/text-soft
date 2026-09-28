@@ -408,7 +408,12 @@ public sealed class KeyboardEditorViewModel : ObservableObject
         if (inscript is not null)
             try { sameScript = _bundle.GetLayout(inscript); } catch (ConfigException) { }
 
+        // Never over a keyboard already in the list: the typist may have designed
+        // one of that name here, or changed an earlier import of the same file.
         string name = System.IO.Path.GetFileNameWithoutExtension(path);
+        var taken = SelectedLanguage.Layouts.Select(l => l.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+        for (int n = 2; taken.Contains(name) || _store.Exists(SelectedLanguage.Id, name); n++)
+            name = $"{System.IO.Path.GetFileNameWithoutExtension(path)} ({n})";
         _layout = ShreeKeyboardFile.ToLayout(read, name, sameScript);
         _layout.FontId = SelectedLanguage.Fonts.FirstOrDefault()?.Id;
         Name = name;
@@ -434,6 +439,7 @@ public sealed class KeyboardEditorViewModel : ObservableObject
         try
         {
             var reference = _store.Save(SelectedLanguage.Id, _layout);
+            _bundle.Forget(reference.Id);   // the next read is of the file just written
             if (!SelectedLanguage.Layouts.Any(l => l.Id == reference.Id))
                 SelectedLanguage.Layouts.Add(reference);
             if (!SourceLayouts.Any(l => l.Id == reference.Id)) SourceLayouts.Add(reference);
