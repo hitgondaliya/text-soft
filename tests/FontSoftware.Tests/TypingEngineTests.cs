@@ -331,7 +331,7 @@ public class TypingEngineTests : IDisposable
         UseGujarati("InScript");
         _down.Add(VkControl);
         Assert.True(Press(VkSpace));
-        Assert.False(Press(VkS), "Ctrl+S with nothing on the layer belongs to the application");
+        Assert.False(Press(VkJ), "Ctrl+J with nothing on the layer belongs to the application");
         _down.Remove(VkControl);
         Assert.Equal("", _injector.Text);
     }
