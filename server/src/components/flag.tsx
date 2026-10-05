@@ -22,8 +22,8 @@ export function Flag({ code, className, title }: { code: string | undefined | nu
 export function PhoneDisplay({ country, text, className }: { country?: string | null; text?: string | null; className?: string }) {
   if (!text) return <span className="text-muted-foreground">—</span>;
   return (
-    <span className={cn("inline-flex items-center gap-1.5 whitespace-nowrap", className)}>
-      <Flag code={country} />
+    <span className={cn("inline-flex items-center gap-1.5 whitespace-nowrap tabular-nums", className)}>
+      <Flag code={country} className="shrink-0" />
       {text}
     </span>
   );

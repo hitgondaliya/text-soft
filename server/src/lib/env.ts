@@ -14,6 +14,9 @@ function optional(name: string, fallback: string): string {
   return v && v.trim() !== "" ? v : fallback;
 }
 
+/** The port the panel listens on. Production (pm2, nginx) and `npm run dev:db` both use 3100. */
+const DEFAULT_PORT = "3100";
+
 export const env = {
   mongoUri: () => required("MONGODB_URI"),
   mongoDb: () => optional("MONGODB_DB", "textsoft_licenses"),
@@ -25,10 +28,24 @@ export const env = {
   offlineGraceDays: () => Number(optional("OFFLINE_GRACE_DAYS", "5")),
   heartbeatHours: () => Number(optional("HEARTBEAT_HOURS", "24")),
 
-  /** Public URL of this panel — used for the logo in emails. */
-  appBaseUrl: () => optional("APP_BASE_URL", "http://localhost:3000").replace(/\/+$/, ""),
+  /**
+   * PORT — informational inside the app. The listener itself is chosen before the
+   * app loads: ecosystem.config.cjs passes `next start -p $PORT` (PORT from the
+   * environment, else from .env, else 3100) and nginx proxies to 127.0.0.1:$PORT.
+   */
+  port: () => Number(optional("PORT", DEFAULT_PORT)),
 
-  // ---- outgoing mail (Gmail SMTP with an app password) ----
+  /**
+   * KEY_VAULT_SECRET — optional. Encrypts the recoverable copy of every licence key
+   * and the SMTP password stored from the panel (see lib/vault.ts). When unset, the
+   * vault key is derived from COOKIE_SECRET instead. Set it once and never change it.
+   */
+  keyVaultSecret: () => optional("KEY_VAULT_SECRET", ""),
+
+  /** Public URL of this panel — used for the logo in emails. */
+  appBaseUrl: () => optional("APP_BASE_URL", `http://localhost:${optional("PORT", DEFAULT_PORT)}`).replace(/\/+$/, ""),
+
+  // ---- outgoing mail: the .env fallback. Settings → Email in the panel overrides these. ----
   smtpHost: () => optional("SMTP_HOST", "smtp.gmail.com"),
   smtpPort: () => Number(optional("SMTP_PORT", "465")),
   smtpUser: () => optional("SMTP_USER", ""),

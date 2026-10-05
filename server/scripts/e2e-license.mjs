@@ -1,7 +1,9 @@
 // End-to-end check of the one-key-one-device flow against a running panel:
-//   npm run dev:db -- 3100   (in one terminal)
-//   node scripts/e2e-license.mjs http://localhost:3100
+//   npm run dev:db           (in one terminal — http://localhost:3100)
+//   node scripts/e2e-license.mjs [http://localhost:3100]
 // Needs the seeded admin (admin@textsoft.local / change-me-now) and creates test purchases.
+// It never sends mail: purchases are created with sendEmail:false, because .env.local
+// may hold a real SMTP account.
 const BASE = process.argv[2] ?? "http://localhost:3100";
 let cookie = "";
 const step = (n, ok, extra = "") => console.log(`${ok ? "PASS" : "FAIL"}  ${n}${extra ? "  " + extra : ""}`);
@@ -27,9 +29,10 @@ expect("admin login", r.status === 200, String(r.status));
 
 r = await api("/api/admin/orders", {
   customerName: "E2E Traders", customerEmail: "e2e@example.com", customerPhone: "98250 00000", customerPhoneCountry: "IN",
-  edition: "full", quantity: 2, durationDays: 30, note: "e2e",
+  edition: "full", quantity: 2, durationDays: 30, note: "e2e", sendEmail: false,
 });
 expect("create purchase with IN phone", r.status === 201, JSON.stringify(r.j).slice(0, 120));
+expect("purchase sent no email (sendEmail:false)", r.j?.emailed === false && r.j?.emailTo === null, JSON.stringify({ emailed: r.j?.emailed, emailTo: r.j?.emailTo }));
 const serial = r.j.serial, key1 = r.j.created[0].key, key2 = r.j.created[1].key;
 
 r = await api("/api/admin/orders", { customerName: "Bad Phone", customerPhone: "1234", customerPhoneCountry: "IN", edition: "full", quantity: 1, durationDays: 30 });

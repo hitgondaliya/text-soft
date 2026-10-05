@@ -2,6 +2,7 @@ import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { ok, fail } from "@/lib/http";
 import { formatPhone } from "@/lib/phone";
+import { escapeRegex, isRecoverable } from "../_lib/keys";
 import type { LicenseKeyDoc, ActivationDoc, ActivationAttemptDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
@@ -22,14 +23,17 @@ export async function GET(req: Request) {
   if (status === "revoked") filter.status = "revoked";
   if (status === "active") filter.status = "active";
   if (q) {
+    const rx = escapeRegex(q);
+    const digits = q.replace(/[^\d]/g, "");
     filter.$or = [
-      { keyPrefix: { $regex: q, $options: "i" } },
-      { serial: { $regex: q, $options: "i" } },
-      { customerName: { $regex: q, $options: "i" } },
-      { customerEmail: { $regex: q, $options: "i" } },
-      { userName: { $regex: q, $options: "i" } },
-      { userEmail: { $regex: q, $options: "i" } },
-      { userPhoneE164: { $regex: q.replace(/[^\d+]/g, "") || q, $options: "i" } },
+      { keyPrefix: { $regex: rx, $options: "i" } },
+      { serial: { $regex: rx, $options: "i" } },
+      { customerName: { $regex: rx, $options: "i" } },
+      { customerEmail: { $regex: rx, $options: "i" } },
+      { userName: { $regex: rx, $options: "i" } },
+      { userEmail: { $regex: rx, $options: "i" } },
+      // Digits only: "+91 98250" used to be passed as a regex and fail on the "+".
+      ...(digits.length >= 3 ? [{ userPhoneE164: { $regex: digits } }] : []),
     ];
   }
 
@@ -59,6 +63,7 @@ export async function GET(req: Request) {
     return {
       id,
       prefix: k.keyPrefix,
+      recoverable: isRecoverable(k),
       serial: k.serial ?? "",
       seq: k.seq ?? 0,
       edition: k.edition,

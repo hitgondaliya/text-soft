@@ -3,6 +3,7 @@ import { getSession } from "@/lib/auth";
 import { ok, fail } from "@/lib/http";
 import { attemptView } from "@/lib/views";
 import type { ActivationAttemptDoc } from "@/lib/models";
+import { escapeRegex } from "../_lib/keys";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -22,13 +23,15 @@ export async function GET(req: Request) {
   if (reason && reason !== "all") filter.reason = reason;
   if (days > 0) filter.createdUtc = { $gte: new Date(Date.now() - days * 86_400_000) };
   if (q) {
+    // Literal text, so "(" or "[" is a search, not a regex syntax error.
+    const rx = escapeRegex(q);
     filter.$or = [
-      { serial: { $regex: q, $options: "i" } },
-      { keyPrefix: { $regex: q, $options: "i" } },
-      { typedPrefix: { $regex: q, $options: "i" } },
-      { deviceName: { $regex: q, $options: "i" } },
-      { boundDeviceName: { $regex: q, $options: "i" } },
-      { ip: { $regex: q, $options: "i" } },
+      { serial: { $regex: rx, $options: "i" } },
+      { keyPrefix: { $regex: rx, $options: "i" } },
+      { typedPrefix: { $regex: rx, $options: "i" } },
+      { deviceName: { $regex: rx, $options: "i" } },
+      { boundDeviceName: { $regex: rx, $options: "i" } },
+      { ip: { $regex: rx, $options: "i" } },
     ];
   }
 

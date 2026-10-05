@@ -31,7 +31,8 @@ export async function verifyCredentials(email: string, password: string): Promis
 }
 
 export async function createSessionCookie(admin: AdminDoc): Promise<void> {
-  const jwt = await new SignJWT({ email: admin.email, role: admin.role })
+  // sv: the account's session version; getSession() refuses a cookie whose sv is out of date.
+  const jwt = await new SignJWT({ email: admin.email, role: admin.role, sv: admin.sessionVersion ?? 0 })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime(`${MAX_AGE}s`)
@@ -50,16 +51,62 @@ export function clearSessionCookie(): void {
   cookies().set(COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 });
 }
 
-/** Read + verify the session from the incoming cookies. null if not logged in. */
+// The cookie only proves "this browser signed in as X". Whether X may still use the
+// panel, and with which role, is read from the admins collection on every request
+// (cached for a few seconds), so disabling, removing or demoting someone takes effect
+// at once, not when their 12-hour cookie runs out. The admin routes drop the cached
+// entry whenever they change an account.
+const ACCOUNT_CACHE_MS = 5_000;
+type AccountRow = Pick<AdminDoc, "email" | "role" | "status" | "sessionVersion">;
+
+declare global {
+  // eslint-disable-next-line no-var
+  var __textsoftAccounts: Map<string, { at: number; row: AccountRow | null }> | undefined;
+}
+
+function accountCache(): Map<string, { at: number; row: AccountRow | null }> {
+  return (global.__textsoftAccounts ??= new Map());
+}
+
+/** Forget the cached account row so the next request re-reads it (after any change to it). */
+export function forgetAccount(email: string): void {
+  accountCache().delete(email.toLowerCase());
+}
+
+async function loadAccount(email: string): Promise<AccountRow | null> {
+  const key = email.toLowerCase();
+  const hit = accountCache().get(key);
+  if (hit && Date.now() - hit.at < ACCOUNT_CACHE_MS) return hit.row;
+  const db = await getDb();
+  const row = await db
+    .collection<AdminDoc>("admins")
+    .findOne({ email: key }, { projection: { _id: 0, email: 1, role: 1, status: 1, sessionVersion: 1 } });
+  accountCache().set(key, { at: Date.now(), row });
+  return row;
+}
+
+/**
+ * Read + verify the session from the incoming cookies. null if not logged in, or if
+ * the account was removed, disabled, or its sessions were ended (session version moved
+ * on) since this cookie was issued. The role always comes from the database, never from the cookie.
+ */
 export async function getSession(): Promise<Session | null> {
   const token = cookies().get(COOKIE)?.value;
   if (!token) return null;
+  let email: string;
+  let sv: number;
   try {
     const { payload } = await jwtVerify(token, secret());
-    return { email: String(payload.email), role: String(payload.role) };
+    email = String(payload.email ?? "");
+    sv = typeof payload.sv === "number" ? payload.sv : 0;
   } catch {
     return null;
   }
+  if (!email) return null;
+  const account = await loadAccount(email);
+  if (!account || account.status === "disabled") return null;
+  if ((account.sessionVersion ?? 0) !== sv) return null;
+  return { email: account.email, role: account.role };
 }
 
 export function hashPassword(password: string): string {

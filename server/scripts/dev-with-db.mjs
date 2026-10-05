@@ -5,8 +5,11 @@
 // data away on exit, so the panel can be run and tested without installing
 // anything system-wide. Production points MONGODB_URI at the real server.
 //
-//   npm run dev:db          -- panel on http://localhost:3000, fresh empty database
-//   npm run dev:db -- 3100  -- on another port
+//   npm run dev:db          -- panel on http://localhost:3100 (same port as production), fresh empty database
+//   npm run dev:db -- 3200  -- on another port
+//
+// Mail: .env.local may hold a real SMTP account. To try purchase emails without
+// mailing anyone, point Settings → Email at a local SMTP sink (security "none").
 //
 // The admin user is seeded automatically, because a fresh database has none and
 // the login page would be a dead end.
@@ -30,7 +33,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-const port = process.argv[2] ?? "3000";
+const port = process.argv[2] ?? "3100";
 const dbName = fileEnv.MONGODB_DB || "textsoft_licenses";
 
 console.log("starting a temporary MongoDB…");
@@ -62,6 +65,7 @@ const child = spawn(
       ...fileEnv,
       MONGODB_URI: uri,
       MONGODB_DB: dbName,
+      PORT: port,
       // own build directory, so a production build cannot clobber this one
       NEXT_DIST_DIR: ".next-dev",
     },

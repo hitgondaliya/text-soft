@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -H 127.0.0.1 -p 3100",
     "lint": "next lint",
     "genkeys": "node scripts/genkeys.mjs",
     "seed-admin": "node scripts/seed-admin.mjs",

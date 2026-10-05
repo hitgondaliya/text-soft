@@ -14,9 +14,10 @@ export interface PhoneValue {
 }
 
 /**
- * Country-code picker + number input. Every country with its flag and dialling
- * code; India first and selected by default. The picker filters as you type a
- * country name, code or dial prefix.
+ * Country-code picker + number input, one h-9 control that matches <Input>.
+ * Every country with its flag and dialling code; India first and selected by
+ * default. The picker filters as you type a country name, code or dial prefix,
+ * and Enter picks the first match.
  */
 export function PhoneField({
   value,
@@ -48,8 +49,19 @@ export function PhoneField({
     );
   }, [q]);
 
+  function pick(code: string) {
+    onChange({ ...value, country: code });
+    setOpen(false);
+    setQ("");
+  }
+
   return (
-    <div className={cn("flex rounded-md shadow-sm", invalid && "ring-1 ring-destructive rounded-md")}>
+    <div
+      className={cn(
+        "group flex rounded-md transition-[box-shadow] focus-within:ring-[3px]",
+        invalid ? "focus-within:ring-destructive/20" : "focus-within:ring-ring/20",
+      )}
+    >
       <Popover
         open={open}
         onOpenChange={(v) => {
@@ -60,27 +72,38 @@ export function PhoneField({
         <PopoverTrigger asChild>
           <button
             type="button"
-            aria-label={`Country code ${country.name} +${country.dial}`}
-            className="flex h-9 shrink-0 items-center gap-2 rounded-l-md border border-r-0 border-input bg-muted/50 px-2.5 text-sm hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring"
+            aria-label={`Country code: ${country.name} +${country.dial}`}
+            title={`${country.name} +${country.dial}`}
+            className={cn(
+              "flex h-9 shrink-0 items-center gap-1.5 rounded-l-md border border-r-0 bg-muted/40 px-2.5 text-[13px] transition-colors hover:bg-muted focus-visible:outline-none data-[state=open]:bg-muted",
+              invalid ? "border-destructive" : "border-input",
+            )}
           >
-            <Flag code={country.code} className="text-base" />
+            <Flag code={country.code} />
             <span className="tabular-nums">+{country.dial}</span>
-            <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+            <ChevronDown className="h-3.5 w-3.5 opacity-50" aria-hidden />
           </button>
         </PopoverTrigger>
-        <PopoverContent className="w-80 p-0" align="start">
-          <div className="relative border-b p-2">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <PopoverContent className="w-72 p-0" align="start">
+          <div className="relative border-b p-1.5">
+            <Search className="pointer-events-none absolute left-3.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
             <Input
               autoFocus
-              className="h-8 pl-8"
+              className="h-8 pl-7"
               placeholder="Search country or code"
+              aria-label="Search country or code"
               value={q}
               onChange={(e) => setQ(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && list.length > 0) {
+                  e.preventDefault();
+                  pick(list[0].code);
+                }
+              }}
             />
           </div>
-          <ul className="max-h-72 overflow-y-auto p-1" role="listbox">
-            {list.length === 0 && <li className="px-3 py-6 text-center text-sm text-muted-foreground">No country matches</li>}
+          <ul className="max-h-64 overflow-y-auto p-1" role="listbox" aria-label="Countries">
+            {list.length === 0 && <li className="px-3 py-5 text-center text-xs text-muted-foreground">No country matches</li>}
             {list.map((c) => {
               const selected = c.code === country.code;
               return (
@@ -89,20 +112,16 @@ export function PhoneField({
                     type="button"
                     role="option"
                     aria-selected={selected}
-                    onClick={() => {
-                      onChange({ ...value, country: c.code });
-                      setOpen(false);
-                      setQ("");
-                    }}
+                    onClick={() => pick(c.code)}
                     className={cn(
-                      "flex w-full items-center gap-3 rounded-sm px-2 py-1.5 text-left text-sm hover:bg-accent",
-                      selected && "bg-accent/60",
+                      "flex h-8 w-full items-center gap-2.5 rounded px-2 text-left text-[13px] hover:bg-muted focus-visible:bg-muted focus-visible:outline-none",
+                      selected && "bg-primary/10 text-foreground",
                     )}
                   >
-                    <Flag code={c.code} className="text-base" />
+                    <Flag code={c.code} />
                     <span className="min-w-0 flex-1 truncate">{c.name}</span>
-                    <span className="tabular-nums text-muted-foreground">+{c.dial}</span>
-                    {selected && <Check className="h-4 w-4 text-primary" />}
+                    <span className="tabular-nums text-xs text-muted-foreground">+{c.dial}</span>
+                    <Check className={cn("h-3.5 w-3.5 text-primary", !selected && "invisible")} aria-hidden />
                   </button>
                 </li>
               );
@@ -116,7 +135,11 @@ export function PhoneField({
         inputMode="numeric"
         autoComplete="tel-national"
         autoFocus={autoFocus}
-        className={cn("rounded-l-none shadow-none", invalid && "border-destructive")}
+        aria-invalid={invalid || undefined}
+        className={cn(
+          "rounded-l-none tabular-nums focus-visible:ring-0",
+          invalid && "border-destructive focus-visible:border-destructive",
+        )}
         placeholder={placeholder}
         value={value.number}
         onChange={(e) => onChange({ ...value, number: e.target.value.replace(/[^\d\s-]/g, "") })}

@@ -1,22 +1,77 @@
 import nodemailer from "nodemailer";
+import type SMTPTransport from "nodemailer/lib/smtp-transport";
 import { env } from "./env";
 import { formatPhone } from "./phone";
+import { getEffectiveSmtp, smtpReady, type SmtpConfig } from "./settings";
 
-// Outgoing mail through Gmail SMTP (an app password, never the account password).
-// SMTP_* come from .env; when they are missing, mail is simply skipped and the
-// purchase still succeeds — the panel says so, and the keys are on screen.
+// Outgoing mail. The SMTP server comes from Settings → Email in the panel when an
+// owner has saved it there, otherwise from SMTP_* / MAIL_* in .env (lib/settings.ts).
+// When neither is complete, mail is simply skipped and the purchase still succeeds —
+// the panel says so, and the keys are on screen (and can be copied again later).
 
-export function mailConfigured(): boolean {
-  return !!(env.smtpUser() && env.smtpPass());
+/** `error` is safe to show an admin: no password, at most 300 characters. */
+export type MailResult = { ok: boolean; error?: string };
+
+/** Can mail be sent right now? (host + user + password, or a host with security "none") */
+export async function mailConfigured(config?: SmtpConfig): Promise<boolean> {
+  return smtpReady(config ?? (await getEffectiveSmtp()));
 }
 
-function transporter() {
-  return nodemailer.createTransport({
-    host: env.smtpHost(),
-    port: env.smtpPort(),
-    secure: env.smtpPort() === 465,
-    auth: { user: env.smtpUser(), pass: env.smtpPass() },
-  });
+function transportOptions(c: SmtpConfig): SMTPTransport.Options {
+  const base: SMTPTransport.Options = {
+    host: c.host,
+    port: c.port,
+    // Fail in seconds, not minutes: the admin is waiting on the dialog.
+    connectionTimeout: 15_000,
+    greetingTimeout: 15_000,
+    socketTimeout: 30_000,
+    ...(c.user ? { auth: { user: c.user, pass: c.pass } } : {}),
+  };
+  switch (c.security) {
+    case "ssl":
+      return { ...base, secure: true };
+    case "starttls":
+      // .env keeps its old behaviour (upgrade when offered); the panel's choice is strict.
+      return c.opportunisticTls ? { ...base, secure: false } : { ...base, secure: false, requireTLS: true };
+    case "none":
+      return { ...base, secure: false, ignoreTLS: true };
+  }
+}
+
+function transporter(c: SmtpConfig) {
+  return nodemailer.createTransport(transportOptions(c));
+}
+
+function fromHeader(c: SmtpConfig): { name: string; address: string } | string {
+  const name = c.fromName.trim() || "TextSoft";
+  return c.fromEmail ? { name, address: c.fromEmail } : name;
+}
+
+function fromDisplay(c: SmtpConfig): string {
+  const name = c.fromName.trim() || "TextSoft";
+  return c.fromEmail ? `${name} <${c.fromEmail}>` : name;
+}
+
+/** Where a customer should write for help: reply-to, else the sender address. */
+function helpAddress(c: SmtpConfig): string {
+  return c.replyTo || c.fromEmail || env.mailReplyTo();
+}
+
+/** An error message for the admin, with the credentials scrubbed out and the length capped. */
+function cleanError(e: unknown, c: SmtpConfig): string {
+  let msg = e instanceof Error ? e.message : String(e);
+  const secrets = [c.pass, c.pass && Buffer.from(c.pass).toString("base64"), c.pass && Buffer.from(`\u0000${c.user}\u0000${c.pass}`).toString("base64")];
+  for (const s of secrets) if (s && s.length >= 3) msg = msg.split(s).join("***");
+  msg = msg.replace(/\s+/g, " ").trim();
+  // "Invalid greeting. response=<whatever answered>": a non-mail service's banner is
+  // not the admin's business (and would make the test a service-banner reader).
+  msg = msg.replace(/\s*response=.*$/i, "").trim();
+  return msg.length > 300 ? msg.slice(0, 297) + "..." : msg || "Unknown mail error";
+}
+
+/** The effective config for display: "TextSoft <office@…>". */
+export async function mailFromDisplay(config?: SmtpConfig): Promise<string> {
+  return fromDisplay(config ?? (await getEffectiveSmtp()));
 }
 
 export interface PurchaseMail {
@@ -50,8 +105,16 @@ function fmtDate(d: Date): string {
   return d.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Kolkata" });
 }
 
-/** The premium-looking purchase email: serial, validity, every key, how to install. */
-export function renderPurchaseEmail(m: PurchaseMail): { subject: string; html: string; text: string } {
+/**
+ * The premium-looking purchase email: serial, validity, every key, how to install.
+ * `helpEmail` is the address the footer points to (the effective reply-to); it
+ * defaults to MAIL_REPLY_TO from .env so the preview works without a database.
+ */
+export function renderPurchaseEmail(
+  m: PurchaseMail,
+  opts: { helpEmail?: string } = {},
+): { subject: string; html: string; text: string } {
+  const help = opts.helpEmail ?? env.mailReplyTo();
   const base = env.appBaseUrl();
   const logo = `${base}/logo.png`;
   const validity = m.expiryUtc ? `Valid until ${fmtDate(m.expiryUtc)}` : "Perpetual — never expires";
@@ -92,7 +155,7 @@ export function renderPurchaseEmail(m: PurchaseMail): { subject: string; html: s
     <div style="font:600 12px/1.4 Arial,sans-serif;color:${BRAND.orange};letter-spacing:2px;text-transform:uppercase;">Your licence is ready</div>
     <h1 style="margin:10px 0 12px;font:700 26px/1.25 Arial,sans-serif;color:${BRAND.ink};">Thank you, ${esc(m.customerName)}.</h1>
     <p style="margin:0;font:15px/1.6 Arial,sans-serif;color:${BRAND.muted};">
-      Here ${many ? "are your licence keys" : "is your licence key"} for TextSoft. Keep this email safe — the keys are shown only here.
+      Here ${many ? "are your licence keys" : "is your licence key"} for TextSoft. Keep this email safe — setup asks for the serial number and a key.
     </p>
   </td></tr>
 
@@ -159,7 +222,7 @@ export function renderPurchaseEmail(m: PurchaseMail): { subject: string; html: s
   <!-- footer -->
   <tr><td style="background:${BRAND.ink};padding:20px 32px;">
     <div style="font:12px/1.7 Arial,sans-serif;color:#A0A4AB;">
-      Need help? Reply to this email or write to <a href="mailto:${esc(env.mailReplyTo())}" style="color:${BRAND.orange};text-decoration:none;">${esc(env.mailReplyTo())}</a>.<br>
+      Need help? Reply to this email${help ? ` or write to <a href="mailto:${esc(help)}" style="color:${BRAND.orange};text-decoration:none;">${esc(help)}</a>` : ""}.<br>
       © ${new Date().getFullYear()} TextSoft · Beyond Typing
     </div>
   </td></tr>
@@ -185,44 +248,76 @@ export function renderPurchaseEmail(m: PurchaseMail): { subject: string; html: s
     `3. Open TextSoft, fill in your name, email and mobile number, and start typing.`,
     `4. Each key is bound to the PC it is activated on. To move a key, contact us with the serial number.`,
     ``,
-    `Help: ${env.mailReplyTo()}`,
+    help ? `Help: ${help}` : `Help: reply to this email`,
   ].join("\n");
 
   return { subject: `Your TextSoft licence · ${m.serial}`, html, text };
 }
 
-export async function sendPurchaseEmail(m: PurchaseMail): Promise<{ ok: boolean; error?: string }> {
-  if (!mailConfigured()) return { ok: false, error: "SMTP is not configured" };
-  const { subject, html, text } = renderPurchaseEmail(m);
+/** "SMTP is not configured" in words an admin can act on. */
+function notConfiguredReason(c: SmtpConfig): string {
+  if (!c.host) return "SMTP is not configured: no server (host) set.";
+  if (!c.fromEmail) return "SMTP is not configured: no sender address set.";
+  if (c.security !== "none" && !c.user) return "SMTP is not configured: no username set.";
+  if (c.security !== "none" && !c.pass) return "SMTP is not configured: no password set.";
+  return "SMTP is not configured.";
+}
+
+export async function sendPurchaseEmail(m: PurchaseMail, config?: SmtpConfig): Promise<MailResult> {
+  const c = config ?? (await getEffectiveSmtp());
+  if (!smtpReady(c)) return { ok: false, error: notConfiguredReason(c) };
+  const { subject, html, text } = renderPurchaseEmail(m, { helpEmail: helpAddress(c) });
   try {
-    await transporter().sendMail({
-      from: env.mailFrom(),
+    await transporter(c).sendMail({
+      from: fromHeader(c),
       to: m.to,
-      replyTo: env.mailReplyTo(),
+      ...(c.replyTo ? { replyTo: c.replyTo } : {}),
       subject,
       html,
       text,
     });
     return { ok: true };
   } catch (e) {
-    return { ok: false, error: e instanceof Error ? e.message : String(e) };
+    return { ok: false, error: cleanError(e, c) };
   }
 }
 
-/** A short branded test message so an admin can confirm SMTP on a new server. */
-export async function sendTestEmail(to: string): Promise<{ ok: boolean; error?: string }> {
-  if (!mailConfigured()) return { ok: false, error: "SMTP is not configured" };
+/**
+ * A short branded test message so an admin can confirm SMTP. With `override` it
+ * uses those (unsaved) settings, otherwise the effective ones.
+ */
+export async function sendTestEmail(to: string, override?: SmtpConfig): Promise<MailResult> {
+  const c = override ?? (await getEffectiveSmtp());
+  if (!smtpReady(c)) return { ok: false, error: notConfiguredReason(c) };
+  const base = env.appBaseUrl();
+  const from = fromDisplay(c);
+  const server = `${c.host}:${c.port} (${c.security === "ssl" ? "SSL/TLS" : c.security === "starttls" ? "STARTTLS" : "no encryption"})`;
   try {
-    await transporter().sendMail({
-      from: env.mailFrom(),
+    await transporter(c).sendMail({
+      from: fromHeader(c),
       to,
-      replyTo: env.mailReplyTo(),
+      ...(c.replyTo ? { replyTo: c.replyTo } : {}),
       subject: "TextSoft licence panel — email is working",
-      text: `This is a test message from the TextSoft licence panel at ${env.appBaseUrl()}. Purchase emails will be sent from ${env.mailFrom()}.`,
-      html: `<p style="font:15px/1.6 Arial,sans-serif;color:#24262B;">This is a test message from the <b>TextSoft</b> licence panel at <a href="${env.appBaseUrl()}">${env.appBaseUrl()}</a>.<br>Purchase emails will be sent from <b>${esc(env.mailFrom())}</b>.</p>`,
+      text: `This is a test message from the TextSoft licence panel at ${base}.\nPurchase emails will be sent from ${from} through ${server}.`,
+      html: `<p style="font:15px/1.6 Arial,sans-serif;color:#24262B;">This is a test message from the <b>TextSoft</b> licence panel at <a href="${esc(base)}">${esc(base)}</a>.<br>Purchase emails will be sent from <b>${esc(from)}</b> through ${esc(server)}.</p>`,
     });
     return { ok: true };
   } catch (e) {
-    return { ok: false, error: e instanceof Error ? e.message : String(e) };
+    return { ok: false, error: cleanError(e, c) };
+  }
+}
+
+/** Connect and log in without sending anything — "are these settings right?". */
+export async function verifySmtp(override?: SmtpConfig): Promise<MailResult> {
+  const c = override ?? (await getEffectiveSmtp());
+  if (!smtpReady(c)) return { ok: false, error: notConfiguredReason(c) };
+  const t = transporter(c);
+  try {
+    await t.verify();
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: cleanError(e, c) };
+  } finally {
+    t.close();
   }
 }

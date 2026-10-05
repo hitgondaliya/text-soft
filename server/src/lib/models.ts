@@ -27,6 +27,12 @@ export interface AdminDoc {
   createdUtc: Date;
   createdBy?: string;
   lastLoginUtc?: Date | null;
+  /**
+   * Goes up by one when the password is reset or the account is disabled. Each session
+   * cookie carries the number it was issued with; an older number is refused, so no
+   * cookie outlives the change. Absent = 0 (accounts and cookies from before it).
+   */
+  sessionVersion?: number;
 }
 
 /**
@@ -60,16 +66,31 @@ export interface OrderDoc {
   /** When the serial + keys were emailed to the customer (null = failed / not sent). */
   emailedUtc?: Date | null;
   emailError?: string;
+  /**
+   * The last re-send from the purchase page, wherever it went. emailedUtc only moves
+   * when the keys went to the customer's own address, so a copy sent to someone else
+   * never makes the purchase look delivered.
+   */
+  lastSentTo?: string;
+  lastSentUtc?: Date;
 }
 
 /**
- * licenseKeys — one per issued key. We store only the SHA-256 hash of the key
- * string (like a password) plus a short prefix for display. Raw key is never kept.
+ * licenseKeys — one per issued key. Activation looks a key up by the SHA-256 hash
+ * of the key string, plus a short prefix for display. Since the recoverable-keys
+ * change every key also carries `keyEnc`, the key string sealed with AES-256-GCM
+ * (lib/vault.ts), so an admin can copy it again after the sale. Keys issued before
+ * that have no `keyEnc` and cannot be shown again — they can be reissued instead.
  */
 export interface LicenseKeyDoc {
   _id?: ObjectId;
   keyHash: string; // sha256(normalizedKey) hex
   keyPrefix: string; // e.g. "TXSF-9F2K" for the list UI
+  /** The key string, sealed with the vault ("v1.k.…" / "v1.c.…"). Absent on old keys. */
+  keyEnc?: string;
+  /** Set when an admin replaced the key string (same serial and seq), and by whom. */
+  reissuedUtc?: Date;
+  reissuedBy?: string;
   /** The purchase this key was issued under. */
   orderId: ObjectId;
   /** Copied from the order so a key can be listed and searched without a join. */
@@ -161,6 +182,32 @@ export interface ActivationAttemptDoc {
   boundDeviceName?: string;
   createdUtc: Date;
 }
+
+export type SmtpSecurity = "ssl" | "starttls" | "none";
+
+/**
+ * settings — panel-wide settings, one document per area. Today only `_id: "smtp"`:
+ * outgoing mail as set from Settings → Email. When present it overrides the
+ * SMTP_* / MAIL_* values in .env; deleting it falls back to them.
+ * The password is stored sealed with the vault (`passEnc`), never in clear.
+ */
+export interface SmtpSettingsDoc {
+  _id: "smtp";
+  host: string;
+  port: number;
+  /** ssl = TLS from the first byte (465) · starttls = upgrade, required (587) · none = plain (local relay only). */
+  security: SmtpSecurity;
+  user: string;
+  passEnc?: string;
+  fromName: string;
+  fromEmail: string;
+  replyTo?: string;
+  updatedBy: string;
+  updatedUtc: Date;
+}
+
+/** Every document shape the `settings` collection can hold. */
+export type SettingsDoc = SmtpSettingsDoc;
 
 /** auditLog — every admin mutation, for accountability. */
 export interface AuditDoc {

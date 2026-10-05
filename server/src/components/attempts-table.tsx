@@ -1,10 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { ShieldAlert } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { EmptyState } from "@/components/empty-state";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { fmtDateTime, fmtRelative } from "@/lib/utils";
+import { cn, fmtDateTime, fmtRelative } from "@/lib/utils";
+
+/**
+ * AttemptsTable — every refused activation, one compact line per attempt.
+ * Used on the dashboard, the key page, the purchase page and Security.
+ *
+ *   <AttemptsTable rows={attempts} />                    // full: when, key, reason, PC, IP, key is on, via
+ *   <AttemptsTable rows={attempts} showKey={false} />    // on a key's own page
+ *   <AttemptsTable rows={attempts} compact />            // half-width cards: drops IP and Via, no absolute time
+ *
+ * Props:
+ *   rows        AttemptRow[]
+ *   showKey?    boolean   show the Key column (default true)
+ *   compact?    boolean   five columns at most, for a card beside another card (default false);
+ *                         "Key is on" hides from xl to 2xl, where the dashboard card is narrowest
+ *   emptyText?  string    shown with a green shield when there are no rows
+ *   className?  string    on the table
+ */
 
 export interface AttemptRow {
   id: string;
@@ -23,94 +41,132 @@ export interface AttemptRow {
   createdUtc: string;
 }
 
-const REASONS: Record<string, { label: string; variant: "destructive" | "warning" | "secondary"; explain: string }> = {
-  already_bound: { label: "Second device", variant: "destructive", explain: "Key is already on another PC" },
-  released: { label: "Old device", variant: "warning", explain: "PC the key was moved away from" },
-  serial_mismatch: { label: "Wrong serial", variant: "warning", explain: "Key does not belong to that serial" },
-  invalid: { label: "Unknown key", variant: "secondary", explain: "No such key" },
-  revoked: { label: "Revoked", variant: "destructive", explain: "Key is revoked" },
-  expired: { label: "Expired", variant: "warning", explain: "Key has expired" },
+type ReasonVariant = "destructive" | "warning" | "secondary";
+
+const REASONS: Record<string, { label: string; variant: ReasonVariant; explain: string }> = {
+  already_bound: { label: "Second device", variant: "destructive", explain: "The key is already on another PC" },
+  released: { label: "Old device", variant: "warning", explain: "A PC the key was moved away from" },
+  serial_mismatch: { label: "Wrong serial", variant: "warning", explain: "The key does not belong to that serial" },
+  invalid: { label: "Unknown key", variant: "secondary", explain: "No such key exists" },
+  revoked: { label: "Revoked", variant: "destructive", explain: "The key is revoked" },
+  expired: { label: "Expired", variant: "warning", explain: "The key has expired" },
 };
+
+export function reasonLabel(reason: string): string {
+  return REASONS[reason]?.label ?? reason;
+}
 
 export function ReasonBadge({ reason }: { reason: string }) {
   const r = REASONS[reason] ?? { label: reason, variant: "secondary" as const, explain: "" };
   return (
-    <Badge variant={r.variant} title={r.explain}>
+    <Badge variant={r.variant} title={r.explain || undefined}>
       {r.label}
     </Badge>
   );
 }
 
-export const REASON_OPTIONS = Object.entries(REASONS).map(([value, r]) => ({ value, label: r.label }));
+/** Reason filter options, in display order: { value, label, explain }. */
+export const REASON_OPTIONS = Object.entries(REASONS).map(([value, r]) => ({ value, label: r.label, explain: r.explain }));
 
-/** The blocked-attempts table used on the key page, the purchase page and Security. */
+/** "05 Oct, 18:08" — the absolute time beside the relative one, without the year when it is this year. */
+function shortTime(iso: string): string {
+  const d = new Date(iso);
+  const sameYear = d.getFullYear() === new Date().getFullYear();
+  return d.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    ...(sameYear ? {} : { year: "numeric" }),
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
 export function AttemptsTable({
   rows,
   showKey = true,
+  compact = false,
   emptyText = "No blocked attempts. Nobody has tried this key on another PC.",
+  className,
 }: {
   rows: AttemptRow[];
   showKey?: boolean;
+  compact?: boolean;
   emptyText?: string;
+  className?: string;
 }) {
   if (rows.length === 0) {
-    return (
-      <div className="flex flex-col items-center px-6 py-10 text-center">
-        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-success/10 text-success">
-          <ShieldAlert className="h-4 w-4" />
-        </div>
-        <p className="max-w-sm text-sm text-muted-foreground">{emptyText}</p>
-      </div>
-    );
+    return <EmptyState compact icon={ShieldCheck} tone="success" title="All clear" description={emptyText} />;
   }
   return (
-    <Table>
+    <Table className={className}>
       <TableHeader>
         <TableRow>
           <TableHead>When</TableHead>
           {showKey && <TableHead>Key</TableHead>}
           <TableHead>Reason</TableHead>
           <TableHead>Tried from</TableHead>
-          <TableHead className="hidden md:table-cell">IP</TableHead>
-          <TableHead className="hidden lg:table-cell">Key is on</TableHead>
-          <TableHead className="hidden text-right sm:table-cell">Via</TableHead>
+          {!compact && <TableHead className="hidden md:table-cell">IP</TableHead>}
+          <TableHead className={cn("hidden", compact ? "sm:table-cell xl:hidden 2xl:table-cell" : "lg:table-cell")}>Key is on</TableHead>
+          {!compact && <TableHead className="hidden text-right xl:table-cell">Via</TableHead>}
         </TableRow>
       </TableHeader>
       <TableBody>
         {rows.map((t) => (
           <TableRow key={t.id}>
-            <TableCell className="whitespace-nowrap">
-              <div>{fmtRelative(t.createdUtc)}</div>
-              <div className="text-xs text-muted-foreground">{fmtDateTime(t.createdUtc)}</div>
+            <TableCell className="whitespace-nowrap" title={fmtDateTime(t.createdUtc)}>
+              {fmtRelative(t.createdUtc)}
+              {!compact && (
+                <span className="ml-1.5 hidden text-xs text-muted-foreground 2xl:inline">{shortTime(t.createdUtc)}</span>
+              )}
             </TableCell>
             {showKey && (
               <TableCell className="whitespace-nowrap font-mono text-xs">
                 {t.keyId ? (
-                  <Link href={`/admin/keys/${t.keyId}`} className="text-primary hover:underline">
-                    {t.serial} <span className="text-muted-foreground">#{t.seq}</span>
+                  <Link href={`/admin/keys/${t.keyId}`} className="hover:text-primary-strong hover:underline">
+                    {t.serial || `${t.keyPrefix}…`}
+                    {t.seq ? <span className="ml-1 text-muted-foreground">#{t.seq}</span> : null}
                   </Link>
                 ) : (
-                  <span className="text-muted-foreground">{t.keyPrefix || "?"}…</span>
+                  <span className="text-muted-foreground" title="Typed key, not one we issued">
+                    {t.keyPrefix || "?"}…
+                  </span>
                 )}
               </TableCell>
             )}
-            <TableCell>
+            <TableCell className="whitespace-nowrap">
               <ReasonBadge reason={t.reason} />
             </TableCell>
-            <TableCell className="font-medium">
-              {t.deviceName || <span className="text-muted-foreground">Unnamed PC</span>}
-              {t.deviceFp && (
-                <div className="font-mono text-[11px] text-muted-foreground">{t.deviceFp.slice(0, 12)}…</div>
-              )}
+            <TableCell>
+              <div
+                className={cn("flex items-baseline gap-1.5", compact ? "max-w-[140px]" : "max-w-[240px]")}
+                title={t.deviceFp ? `Fingerprint ${t.deviceFp}` : undefined}
+              >
+                <span className={cn("truncate", t.deviceName ? "font-medium" : "text-muted-foreground")}>
+                  {t.deviceName || "Unnamed PC"}
+                </span>
+                {!compact && t.deviceFp && (
+                  <span className="hidden shrink-0 font-mono text-[11px] text-muted-foreground sm:inline">
+                    {t.deviceFp.slice(0, 8)}
+                  </span>
+                )}
+              </div>
             </TableCell>
-            <TableCell className="hidden font-mono text-xs text-muted-foreground md:table-cell">{t.ip}</TableCell>
-            <TableCell className="hidden lg:table-cell">
-              {t.boundDeviceName || <span className="text-muted-foreground">—</span>}
+            {!compact && (
+              <TableCell className="hidden whitespace-nowrap font-mono text-xs text-muted-foreground md:table-cell">
+                {t.ip || "—"}
+              </TableCell>
+            )}
+            <TableCell className={cn("hidden", compact ? "sm:table-cell xl:hidden 2xl:table-cell" : "lg:table-cell")}>
+              <div className={cn("truncate", compact ? "max-w-[140px]" : "max-w-[180px]")}>
+                {t.boundDeviceName || <span className="text-muted-foreground">—</span>}
+              </div>
             </TableCell>
-            <TableCell className="hidden text-right text-xs text-muted-foreground sm:table-cell">
-              {t.source === "installer" ? "Installer" : "App"}
-              {t.appVersion && <div className="text-[11px]">{t.appVersion}</div>}
-            </TableCell>
+            {!compact && (
+              <TableCell className="hidden whitespace-nowrap text-right text-xs text-muted-foreground xl:table-cell">
+                {t.source === "installer" ? "Installer" : "App"}
+                {t.appVersion && <span className="ml-1 font-mono text-[11px]">{t.appVersion}</span>}
+              </TableCell>
+            )}
           </TableRow>
         ))}
       </TableBody>

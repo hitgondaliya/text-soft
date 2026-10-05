@@ -1,7 +1,13 @@
 import { z } from "zod";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongo";
-import { getSession, hashPassword, verifyCredentials } from "@/lib/auth";
+import {
+  createSessionCookie,
+  forgetAccount,
+  getSession,
+  hashPassword,
+  verifyCredentials,
+} from "@/lib/auth";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import type { AdminDoc } from "@/lib/models";
@@ -54,7 +60,14 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
         if (!b.currentPassword || !(await verifyCredentials(target.email, b.currentPassword)))
           return fail("wrong_password", 403);
       }
-      await admins.updateOne({ _id }, { $set: { passwordHash: hashPassword(b.password) } });
+      // A new password ends every session signed in with the old one (session version
+      // +1). Changing your own keeps you signed in here: this browser gets a fresh cookie.
+      const updated = await admins.findOneAndUpdate(
+        { _id },
+        { $set: { passwordHash: hashPassword(b.password) }, $inc: { sessionVersion: 1 } },
+        { returnDocument: "after" },
+      );
+      if (self && updated) await createSessionCookie(updated);
       break;
     }
     case "rename":
@@ -69,7 +82,8 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
     case "disable":
       if (!owner) return fail("forbidden", 403);
       if (self) return fail("cannot_disable_self", 409);
-      await admins.updateOne({ _id }, { $set: { status: "disabled" } });
+      // Also end their sessions, so enabling the account later does not bring an old cookie back.
+      await admins.updateOne({ _id }, { $set: { status: "disabled" }, $inc: { sessionVersion: 1 } });
       break;
     case "enable":
       if (!owner) return fail("forbidden", 403);
@@ -77,6 +91,8 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       break;
   }
 
+  // getSession() caches account rows for a few seconds; make this change count now.
+  forgetAccount(target.email);
   await audit(session.email, `admin.${b.action}`, target.email, { role: b.role, name: b.name });
   return ok({ status: "updated" });
 }
@@ -98,6 +114,7 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
   if (!target) return fail("not_found", 404);
   if (target.email === session.email) return fail("cannot_delete_self", 409);
   await admins.deleteOne({ _id });
+  forgetAccount(target.email);
   await audit(session.email, "admin.delete", target.email);
   return ok({ status: "deleted" });
 }

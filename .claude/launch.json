@@ -4,8 +4,27 @@
     {
       "name": "website",
       "runtimeExecutable": "dotnet",
-      "runtimeArgs": ["run", "--project", "tools/WebServe", "-c", "Release"],
+      "runtimeArgs": [
+        "run",
+        "--project",
+        "tools/WebServe",
+        "-c",
+        "Release"
+      ],
       "port": 5080
+    },
+    {
+      "name": "admin-panel",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "server",
+        "run",
+        "dev:db",
+        "--",
+        "3100"
+      ],
+      "port": 3100
     }
   ]
 }

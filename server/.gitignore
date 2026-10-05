@@ -15,7 +15,9 @@ next-env.d.ts
 .env
 .env.local
 .env*.local
-!.env.production
+# Next.js reads .env.production before .env, so it must never exist on the server.
+# The template is .env.production.example.
+.env.production
 
 # keys (any stray PEM/key material)
 *.pem
@@ -26,3 +28,5 @@ next-env.d.ts
 *.log
 npm-debug.log*
 .next-dev/
+# Check builds (NEXT_DIST_DIR=.next-check npx next build) — tsconfig already lists it.
+.next-check/

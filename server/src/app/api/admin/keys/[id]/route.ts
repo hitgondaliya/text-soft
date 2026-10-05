@@ -1,22 +1,14 @@
 import { z } from "zod";
-import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import { activationView, attemptView } from "@/lib/views";
+import { isRecoverable, oid } from "../../_lib/keys";
 import type { LicenseKeyDoc, ActivationDoc, ActivationAttemptDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-function oid(id: string): ObjectId | null {
-  try {
-    return new ObjectId(id);
-  } catch {
-    return null;
-  }
-}
 
 // GET /api/admin/keys/:id — full detail: the device holding it, the person who
 // registered, every past device, and every refused attempt.
@@ -39,6 +31,10 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
   return ok({
     id: key._id!.toHexString(),
     prefix: key.keyPrefix,
+    /** POST …/reveal can show the full key; false for keys issued before keys were sealed. */
+    recoverable: isRecoverable(key),
+    reissuedUtc: key.reissuedUtc ? key.reissuedUtc.toISOString() : null,
+    reissuedBy: key.reissuedBy ?? "",
     serial: key.serial ?? null,
     seq: key.seq ?? null,
     edition: key.edition,

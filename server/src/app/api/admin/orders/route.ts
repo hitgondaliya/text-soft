@@ -7,6 +7,8 @@ import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import { parsePhone, formatPhone } from "@/lib/phone";
 import { sendPurchaseEmail, mailConfigured } from "@/lib/mail";
+import { sealKey } from "@/lib/vault";
+import { escapeRegex } from "../_lib/keys";
 import type { LicenseKeyDoc, OrderDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
@@ -57,12 +59,15 @@ export async function GET(req: Request) {
 
   const filter: Record<string, unknown> = {};
   if (q) {
+    const rx = escapeRegex(q);
+    const digits = q.replace(/[^\d]/g, "");
     filter.$or = [
-      { serial: { $regex: q, $options: "i" } },
-      { customerName: { $regex: q, $options: "i" } },
-      { customerEmail: { $regex: q, $options: "i" } },
-      { company: { $regex: q, $options: "i" } },
-      ...(q.replace(/[^d]/g, "") ? [{ customerPhoneE164: { $regex: q.replace(/[^d]/g, "") } }] : []),
+      { serial: { $regex: rx, $options: "i" } },
+      { customerName: { $regex: rx, $options: "i" } },
+      { customerEmail: { $regex: rx, $options: "i" } },
+      { company: { $regex: rx, $options: "i" } },
+      // Phone digits only, so "98250 00000" and "+91 98250-00000" both find +919825000000.
+      ...(digits.length >= 3 ? [{ customerPhoneE164: { $regex: digits } }] : []),
     ];
   }
 
@@ -104,7 +109,8 @@ export async function GET(req: Request) {
 }
 
 // POST /api/admin/orders — record a purchase and issue its keys.
-// Returns the RAW key strings ONCE; only their hashes are stored.
+// Returns the raw key strings. Each key is stored as its hash (what activation looks
+// up) plus a vault-sealed copy (keyEnc), so it can be revealed or re-sent later.
 export async function POST(req: Request) {
   const session = await getSession();
   if (!session) return fail("unauthorized", 401);
@@ -163,6 +169,7 @@ export async function POST(req: Request) {
     docs.push({
       keyHash: hash,
       keyPrefix: keyPrefix(keyString),
+      keyEnc: sealKey(keyString),
       orderId,
       serial,
       seq: i,
@@ -197,13 +204,15 @@ export async function POST(req: Request) {
     expiryUtc: expiryUtc ? expiryUtc.toISOString() : "perpetual",
   });
 
-  // The raw keys exist only in this response, so the email goes out now or never.
+  // Email the keys now. If it fails it can be re-sent from the purchase page later
+  // (POST /api/admin/orders/:serial/resend) — the keys are recoverable.
   let emailed = false;
   let emailError: string | undefined;
   const wantEmail = b.sendEmail !== false && !!b.customerEmail;
   if (wantEmail) {
-    if (!mailConfigured()) {
-      emailError = "Email is not set up on this server (SMTP_USER / SMTP_PASS).";
+    if (!(await mailConfigured())) {
+      emailError = "Email is not set up yet — an owner can set it in Settings → Email.";
+      await orders.updateOne({ _id: orderId }, { $set: { emailedUtc: null, emailError } });
     } else {
       const r = await sendPurchaseEmail({
         to: b.customerEmail!,

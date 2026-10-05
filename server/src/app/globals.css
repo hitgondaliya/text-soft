@@ -4,71 +4,83 @@
 
 /* TextSoft brand: logo orange on warm neutrals. Light is the default; dark is
    opted into with the .dark class (next-themes), never by media query alone,
-   so the toggle wins in both directions. */
+   so the toggle wins in both directions.
+
+   The panel is a dense working tool: tokens are tuned for compact cards with
+   hairline borders rather than shadows. The sidebar stays dark in both themes. */
 @layer base {
   :root {
-    --background: 40 20% 98%;
-    --foreground: 220 14% 12%;
+    --background: 36 18% 97.5%;
+    --foreground: 222 18% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 220 14% 12%;
+    --card-foreground: 222 18% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 12%;
-    --primary: 22 89% 50%;
+    --popover-foreground: 222 18% 11%;
+    /* Fills carrying white text (buttons, avatar): 4.7:1 for white on it. */
+    --primary: 21 90% 41%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 30 12% 94%;
-    --secondary-foreground: 220 14% 16%;
-    --muted: 30 12% 94%;
-    --muted-foreground: 220 9% 44%;
-    --accent: 24 95% 95%;
-    --accent-foreground: 20 80% 32%;
-    --destructive: 0 72% 51%;
+    /* Orange TEXT on light surfaces (serial links, brand badge, link buttons): 5.2:1+. */
+    --primary-strong: 20 88% 36%;
+    --secondary: 30 10% 95%;
+    --secondary-foreground: 222 16% 18%;
+    --muted: 30 10% 95.5%;
+    --muted-foreground: 222 8% 42%;
+    --accent: 26 90% 95.5%;
+    --accent-foreground: 20 82% 32%;
+    /* Status colours are also badge/text colours on their own 10% tint: all 4.5:1+. */
+    --destructive: 0 72% 44%;
     --destructive-foreground: 0 0% 100%;
-    --success: 152 60% 36%;
+    --success: 152 64% 26%;
     --success-foreground: 0 0% 100%;
-    --warning: 38 92% 45%;
+    --warning: 28 92% 33%;
     --warning-foreground: 0 0% 100%;
-    --border: 30 10% 88%;
-    --input: 30 10% 86%;
-    --ring: 22 89% 50%;
-    --radius: 0.75rem;
+    --border: 30 9% 89%;
+    --input: 30 9% 85%;
+    --ring: 22 90% 50%;
+    --radius: 0.625rem;
 
-    --sidebar: 220 16% 11%;
-    --sidebar-foreground: 30 10% 90%;
-    --sidebar-border: 220 12% 18%;
-    --sidebar-accent: 220 14% 17%;
+    --sidebar: 222 20% 10%;
+    --sidebar-foreground: 30 8% 88%;
+    --sidebar-border: 222 14% 16%;
+    --sidebar-accent: 222 14% 16%;
     --sidebar-accent-foreground: 0 0% 100%;
+    /* The bright brand orange, for the always-dark sidebar and login panel. */
+    --sidebar-primary: 22 92% 56%;
   }
 
   .dark {
-    --background: 220 15% 8%;
-    --foreground: 30 12% 92%;
-    --card: 220 14% 11%;
-    --card-foreground: 30 12% 92%;
-    --popover: 220 14% 11%;
-    --popover-foreground: 30 12% 92%;
+    --background: 222 16% 7%;
+    --foreground: 30 10% 93%;
+    --card: 222 15% 9.5%;
+    --card-foreground: 30 10% 93%;
+    --popover: 222 15% 10.5%;
+    --popover-foreground: 30 10% 93%;
     --primary: 22 92% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 12% 16%;
+    /* Near-black on the bright orange: 6.5:1 (white was 2.9:1). */
+    --primary-foreground: 222 16% 7%;
+    --primary-strong: 22 92% 62%;
+    --secondary: 222 12% 15%;
     --secondary-foreground: 30 10% 90%;
-    --muted: 220 12% 16%;
-    --muted-foreground: 220 9% 60%;
-    --accent: 22 40% 16%;
-    --accent-foreground: 24 95% 75%;
-    --destructive: 0 68% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --success: 152 55% 45%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 90% 55%;
-    --warning-foreground: 220 15% 8%;
-    --border: 220 12% 18%;
-    --input: 220 12% 20%;
+    --muted: 222 12% 14%;
+    --muted-foreground: 220 8% 62%;
+    --accent: 22 45% 15%;
+    --accent-foreground: 26 95% 72%;
+    --destructive: 0 72% 64%;
+    --destructive-foreground: 222 16% 7%;
+    --success: 152 55% 48%;
+    --success-foreground: 222 16% 7%;
+    --warning: 38 92% 56%;
+    --warning-foreground: 222 16% 7%;
+    --border: 222 11% 17%;
+    --input: 222 11% 20%;
     --ring: 22 92% 55%;
 
-    --sidebar: 220 16% 6%;
-    --sidebar-foreground: 30 10% 88%;
-    --sidebar-border: 220 12% 14%;
-    --sidebar-accent: 220 14% 13%;
+    --sidebar: 222 18% 5.5%;
+    --sidebar-foreground: 30 8% 86%;
+    --sidebar-border: 222 12% 12%;
+    --sidebar-accent: 222 13% 12%;
     --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-primary: 22 92% 56%;
   }
 
   * {
@@ -87,16 +99,21 @@
   ::selection {
     @apply bg-primary/20;
   }
+  /* Thin, quiet scrollbars for the scrolling tables and the sidebar. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  /* soft radial glow behind hero surfaces */
+  /* soft radial glow behind hero surfaces (login brand panel) */
   .brand-glow {
     background-image:
-      radial-gradient(60% 50% at 20% 0%, hsl(var(--primary) / 0.28), transparent 60%),
-      radial-gradient(40% 40% at 90% 100%, hsl(var(--primary) / 0.18), transparent 60%);
+      radial-gradient(60% 50% at 20% 0%, hsl(var(--sidebar-primary) / 0.28), transparent 60%),
+      radial-gradient(40% 40% at 90% 100%, hsl(var(--sidebar-primary) / 0.18), transparent 60%);
   }
 }

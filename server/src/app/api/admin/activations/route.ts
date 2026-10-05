@@ -3,6 +3,7 @@ import { getSession } from "@/lib/auth";
 import { ok, fail } from "@/lib/http";
 import { activationView } from "@/lib/views";
 import type { ActivationDoc, LicenseKeyDoc } from "@/lib/models";
+import { escapeRegex } from "../_lib/keys";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -24,13 +25,16 @@ export async function GET(req: Request) {
   if (registered === "yes") filter.user = { $exists: true };
   if (registered === "no") filter.user = { $exists: false };
   if (q) {
+    // Literal text, so "+91 98250…" or "(" is a search, not a regex syntax error.
+    const rx = escapeRegex(q);
     const digits = q.replace(/[^\d]/g, "");
     filter.$or = [
-      { "user.name": { $regex: q, $options: "i" } },
-      { "user.email": { $regex: q, $options: "i" } },
-      ...(digits ? [{ "user.phoneE164": { $regex: digits } }] : []),
-      { deviceName: { $regex: q, $options: "i" } },
-      { serial: { $regex: q, $options: "i" } },
+      { "user.name": { $regex: rx, $options: "i" } },
+      { "user.email": { $regex: rx, $options: "i" } },
+      // Phone digits only, so "98250 00000" and "+91 98250-00000" both find +919825000000.
+      ...(digits.length >= 3 ? [{ "user.phoneE164": { $regex: digits } }] : []),
+      { deviceName: { $regex: rx, $options: "i" } },
+      { serial: { $regex: rx, $options: "i" } },
     ];
   }
 

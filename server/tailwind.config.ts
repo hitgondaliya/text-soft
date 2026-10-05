@@ -4,7 +4,7 @@ const config: Config = {
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    container: { center: true, padding: "1.5rem", screens: { "2xl": "1400px" } },
+    container: { center: false, padding: "1rem", screens: { "2xl": "1600px" } },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -12,7 +12,12 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+          // orange for text on light/dark surfaces (AA); --primary itself is for fills
+          strong: "hsl(var(--primary-strong))",
+        },
         secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
         destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
         muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
@@ -27,6 +32,7 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
         },
       },
       borderRadius: {
@@ -38,10 +44,14 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
-      keyframes: {
-        "fade-up": { from: { opacity: "0", transform: "translateY(6px)" }, to: { opacity: "1", transform: "none" } },
+      boxShadow: {
+        // a hairline lift for floating surfaces (menus, popovers) — cards use borders only
+        float: "0 4px 16px -4px rgb(0 0 0 / 0.12), 0 1px 3px rgb(0 0 0 / 0.06)",
       },
-      animation: { "fade-up": "fade-up .35s ease-out both" },
+      keyframes: {
+        "fade-up": { from: { opacity: "0", transform: "translateY(4px)" }, to: { opacity: "1", transform: "none" } },
+      },
+      animation: { "fade-up": "fade-up .2s ease-out both" },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,18 +1,19 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { Plus, Search, ShoppingBag } from "lucide-react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { ChevronRight, Plus, RefreshCw, ShoppingBag } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { DataToolbar } from "@/components/data-toolbar";
+import { EmptyState } from "@/components/empty-state";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { EditionBadge } from "@/components/status-badge";
-import { fmtDate } from "@/lib/utils";
+import { cn, fmtDate, fmtDateTime, fmtRelative } from "@/lib/utils";
 import { NewPurchaseDialog } from "./new-purchase-dialog";
 
 interface OrderRow {
@@ -23,14 +24,35 @@ interface OrderRow {
   customerPhoneDisplay: string;
   company: string;
   edition: string;
-  deviceLimit: number;
   quantity: number;
   issued: number;
   revoked: number;
   activated: number;
   expiryUtc: string | null;
   expired: boolean;
+  emailedUtc: string | null;
   createdUtc: string;
+}
+
+type Filter = "all" | "active" | "expiring" | "expired" | "revoked";
+
+const SOON_MS = 30 * 24 * 60 * 60 * 1000;
+
+function stateOf(o: OrderRow): "active" | "expired" | "revoked" {
+  if (o.issued > 0 && o.revoked >= o.issued) return "revoked";
+  if (o.expired) return "expired";
+  return "active";
+}
+
+function expiringSoon(o: OrderRow): boolean {
+  if (!o.expiryUtc || stateOf(o) !== "active") return false;
+  return new Date(o.expiryUtc).getTime() - Date.now() <= SOON_MS;
+}
+
+function matches(o: OrderRow, f: Filter): boolean {
+  if (f === "all") return true;
+  if (f === "expiring") return expiringSoon(o);
+  return stateOf(o) === f;
 }
 
 export default function OrdersPage() {
@@ -43,138 +65,304 @@ export default function OrdersPage() {
 
 function Orders() {
   const params = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const [rows, setRows] = useState<OrderRow[] | null>(null);
-  const [q, setQ] = useState("");
+  const [failed, setFailed] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [q, setQ] = useState(params.get("q") ?? "");
+  const [filter, setFilter] = useState<Filter>("all");
   const [open, setOpen] = useState(params.get("new") === "1");
+  const seq = useRef(0);
 
-  const load = useCallback(() => {
-    const p = new URLSearchParams();
-    if (q) p.set("q", q);
-    fetch(`/api/admin/orders?${p}`)
-      .then((r) => r.json())
-      .then((d) => setRows(d.orders ?? []))
-      .catch(() => setRows([]));
-  }, [q]);
+  const load = useCallback(async (query: string) => {
+    const mine = ++seq.current;
+    setLoading(true);
+    setFailed(false);
+    try {
+      const p = new URLSearchParams();
+      if (query.trim()) p.set("q", query.trim());
+      const r = await fetch(`/api/admin/orders?${p}`, { cache: "no-store" });
+      if (!r.ok) throw new Error(String(r.status));
+      const d = (await r.json()) as { orders?: OrderRow[] };
+      if (mine === seq.current) setRows(d.orders ?? []);
+    } catch {
+      if (mine === seq.current) setFailed(true);
+    } finally {
+      if (mine === seq.current) setLoading(false);
+    }
+  }, []);
 
+  // Debounced search: one request per pause in typing, not per keystroke.
   useEffect(() => {
-    load();
-  }, [load]);
+    const t = setTimeout(() => void load(q), q ? 250 : 0);
+    return () => clearTimeout(t);
+  }, [q, load]);
+
+  function setDialog(v: boolean) {
+    setOpen(v);
+    // Drop ?new=1 so a refresh doesn't pop the dialog open again.
+    if (!v && params.get("new")) router.replace(pathname);
+  }
+
+  const counts = useMemo(() => {
+    const c: Record<Filter, number> = { all: 0, active: 0, expiring: 0, expired: 0, revoked: 0 };
+    for (const o of rows ?? []) {
+      c.all++;
+      c[stateOf(o)]++;
+      if (expiringSoon(o)) c.expiring++;
+    }
+    return c;
+  }, [rows]);
+
+  const shown = useMemo(() => (rows ?? []).filter((o) => matches(o, filter)), [rows, filter]);
+
+  const open_ = (serial: string) => router.push(`/admin/orders/${encodeURIComponent(serial)}`);
 
   return (
-    <div>
+    <div className="space-y-3">
       <PageHeader
         title="Purchases"
-        description="One serial number per sale. Buy 40 keys, get one serial with 40 keys under it."
-      >
-        <Button onClick={() => setOpen(true)}>
-          <Plus /> New purchase
-        </Button>
-      </PageHeader>
+        description="One serial per sale. Every key of the sale is issued under it."
+        className="mb-1"
+        actions={
+          <>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => void load(q)}
+              disabled={loading}
+              aria-label="Refresh"
+              title="Refresh"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <RefreshCw className={cn(loading && rows !== null && "animate-spin")} />
+            </Button>
+            <Button size="sm" onClick={() => setDialog(true)}>
+              <Plus /> New purchase
+            </Button>
+          </>
+        }
+      />
 
-      <NewPurchaseDialog open={open} onOpenChange={setOpen} onCreated={load} />
+      <NewPurchaseDialog open={open} onOpenChange={setDialog} onCreated={() => void load(q)} />
 
-      <div className="relative mb-4 max-w-md">
-        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          className="pl-9"
-          placeholder="Search serial, customer, email, company…"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
-      </div>
+      <DataToolbar
+        search={q}
+        onSearchChange={setQ}
+        placeholder="Search serial, customer, email, company, mobile…"
+        filters={
+          <Tabs value={filter} onValueChange={(v) => setFilter(v as Filter)} className="min-w-0 max-w-full">
+            <TabsList className="max-w-full overflow-x-auto">
+              <FilterTab value="all" label="All" n={rows ? counts.all : null} />
+              <FilterTab value="active" label="Active" n={rows ? counts.active : null} />
+              <FilterTab
+                value="expiring"
+                label="Expiring 30d"
+                n={rows ? counts.expiring : null}
+                title="Active purchases that expire within 30 days"
+              />
+              <FilterTab value="expired" label="Expired" n={rows ? counts.expired : null} />
+              <FilterTab value="revoked" label="Revoked" n={rows ? counts.revoked : null} />
+            </TabsList>
+          </Tabs>
+        }
+      />
 
-      <Card>
-        <CardContent className="p-0">
-          {rows === null ? (
-            <div className="space-y-3 p-6">
-              <Skeleton className="h-5 w-full" />
-              <Skeleton className="h-5 w-5/6" />
-              <Skeleton className="h-5 w-2/3" />
-            </div>
-          ) : rows.length === 0 ? (
-            <Empty onNew={() => setOpen(true)} searching={!!q} />
+      <section className="overflow-hidden rounded-lg border bg-card text-card-foreground">
+        {rows === null ? (
+          failed ? (
+            <EmptyState
+              tone="danger"
+              title="Couldn't load purchases"
+              description="Check your connection or sign in again."
+              action={
+                <Button variant="outline" size="sm" onClick={() => void load(q)}>
+                  <RefreshCw /> Retry
+                </Button>
+              }
+            />
           ) : (
+            <ListSkeleton />
+          )
+        ) : shown.length === 0 ? (
+          q || filter !== "all" ? (
+            <EmptyState
+              icon={ShoppingBag}
+              title="Nothing matches"
+              description={
+                q ? "Try a serial number, customer name, email, company or mobile number." : "No purchase is in this state."
+              }
+              action={
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setQ("");
+                    setFilter("all");
+                  }}
+                >
+                  Clear filters
+                </Button>
+              }
+            />
+          ) : (
+            <EmptyState
+              icon={ShoppingBag}
+              tone="primary"
+              title="No purchases yet"
+              description="Record your first sale and its keys are issued under one serial number."
+              action={
+                <Button size="sm" onClick={() => setDialog(true)}>
+                  <Plus /> New purchase
+                </Button>
+              }
+            />
+          )
+        ) : (
+          <>
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>Serial</TableHead>
                   <TableHead>Customer</TableHead>
                   <TableHead className="hidden sm:table-cell">Edition</TableHead>
-                  <TableHead className="text-right">Keys</TableHead>
-                  <TableHead className="hidden text-right md:table-cell">In use</TableHead>
+                  <TableHead>Keys used</TableHead>
                   <TableHead className="hidden md:table-cell">Expiry</TableHead>
-                  <TableHead className="hidden text-right lg:table-cell">Sold</TableHead>
+                  <TableHead className="hidden lg:table-cell">Sold</TableHead>
+                  <TableHead className="w-8">
+                    <span className="sr-only">Open</span>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {rows.map((o) => (
-                  <TableRow key={o.id}>
-                    <TableCell className="whitespace-nowrap font-mono font-medium">
-                      <Link href={`/admin/orders/${o.serial}`} className="text-primary hover:underline">
-                        {o.serial}
-                      </Link>
-                    </TableCell>
-                    <TableCell>
-                      <div className="font-medium">{o.customerName}</div>
-                      {(o.company || o.customerPhoneDisplay || o.customerEmail) && (
-                        <div className="truncate text-xs text-muted-foreground">
-                          {o.company || o.customerPhoneDisplay || o.customerEmail}
+                {shown.map((o) => {
+                  const state = stateOf(o);
+                  const live = Math.max(0, o.issued - o.revoked);
+                  const pct = o.issued ? Math.min(100, Math.round((o.activated / o.issued) * 100)) : 0;
+                  return (
+                    <TableRow
+                      key={o.id}
+                      className="group cursor-pointer"
+                      onClick={(e) => {
+                        if ((e.target as HTMLElement).closest("a,button")) return;
+                        open_(o.serial);
+                      }}
+                    >
+                      <TableCell className="whitespace-nowrap">
+                        <Link
+                          href={`/admin/orders/${encodeURIComponent(o.serial)}`}
+                          className="rounded font-mono text-[13px] font-medium text-primary-strong hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        >
+                          {o.serial}
+                        </Link>
+                      </TableCell>
+                      <TableCell className="max-w-[260px] xl:max-w-[360px]">
+                        <div className="truncate font-medium">{o.customerName}</div>
+                        {(o.company || o.customerEmail || o.customerPhoneDisplay) && (
+                          <div className="truncate text-xs text-muted-foreground">
+                            {[o.company, o.customerEmail || o.customerPhoneDisplay].filter(Boolean).join(" · ")}
+                          </div>
+                        )}
+                      </TableCell>
+                      <TableCell className="hidden sm:table-cell">
+                        <EditionBadge edition={o.edition} />
+                      </TableCell>
+                      <TableCell className="whitespace-nowrap" title={`${o.activated} of ${o.issued} keys activated on a PC`}>
+                        <div className="flex items-center gap-2">
+                          <span className="tabular-nums">
+                            <span className="font-medium">{o.activated}</span>
+                            <span className="text-muted-foreground">/{o.issued}</span>
+                          </span>
+                          <span className="hidden h-1 w-12 overflow-hidden rounded-full bg-muted md:block" aria-hidden>
+                            <span className="block h-full rounded-full bg-primary/70" style={{ width: `${pct}%` }} />
+                          </span>
+                          {o.revoked > 0 && state !== "revoked" && (
+                            <span className="text-xs text-destructive" title={`${live} still usable`}>
+                              {o.revoked} revoked
+                            </span>
+                          )}
                         </div>
-                      )}
-                    </TableCell>
-                    <TableCell className="hidden sm:table-cell">
-                      <EditionBadge edition={o.edition} />
-                    </TableCell>
-                    <TableCell className="text-right tabular-nums">
-                      {o.issued}
-                      {o.revoked > 0 && (
-                        <span className="ml-1 text-xs text-destructive">({o.revoked} revoked)</span>
-                      )}
-                    </TableCell>
-                    <TableCell className="hidden text-right tabular-nums md:table-cell">{o.activated}</TableCell>
-                    <TableCell className="hidden whitespace-nowrap md:table-cell">
-                      {o.expiryUtc ? (
-                        <span className="text-muted-foreground">{fmtDate(o.expiryUtc)}</span>
-                      ) : (
-                        <Badge variant="outline">Perpetual</Badge>
-                      )}
-                      {o.expired && (
-                        <Badge variant="warning" className="ml-2">
-                          Expired
-                        </Badge>
-                      )}
-                    </TableCell>
-                    <TableCell className="hidden whitespace-nowrap text-right text-muted-foreground lg:table-cell">
-                      {fmtDate(o.createdUtc)}
-                    </TableCell>
-                  </TableRow>
-                ))}
+                      </TableCell>
+                      <TableCell className="hidden whitespace-nowrap md:table-cell">
+                        <div className="flex items-center gap-1.5">
+                          {o.expiryUtc ? (
+                            <span
+                              className={cn(state === "active" ? "text-foreground" : "text-muted-foreground")}
+                              title={fmtRelative(o.expiryUtc)}
+                            >
+                              {fmtDate(o.expiryUtc)}
+                            </span>
+                          ) : (
+                            <span className="text-muted-foreground">Perpetual</span>
+                          )}
+                          {state === "revoked" ? (
+                            <Badge variant="destructive">Revoked</Badge>
+                          ) : state === "expired" ? (
+                            <Badge variant="warning">Expired</Badge>
+                          ) : expiringSoon(o) ? (
+                            <Badge variant="warning">{fmtRelative(o.expiryUtc)}</Badge>
+                          ) : null}
+                        </div>
+                      </TableCell>
+                      <TableCell
+                        className="hidden whitespace-nowrap text-muted-foreground lg:table-cell"
+                        title={fmtDateTime(o.createdUtc)}
+                      >
+                        {fmtDate(o.createdUtc)}
+                      </TableCell>
+                      <TableCell className="w-8 text-right">
+                        <ChevronRight
+                          className="ml-auto h-4 w-4 text-muted-foreground/50 transition-colors group-hover:text-foreground"
+                          aria-hidden
+                        />
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
               </TableBody>
             </Table>
-          )}
-        </CardContent>
-      </Card>
+            <div className="flex items-center justify-between gap-2 border-t px-4 py-2 text-xs text-muted-foreground">
+              <span>
+                {shown.length === rows.length
+                  ? `${rows.length} purchase${rows.length === 1 ? "" : "s"}`
+                  : `${shown.length} of ${rows.length} purchases`}
+              </span>
+              {rows.length >= 500 && <span>Showing the newest 500 — search to narrow it down.</span>}
+            </div>
+          </>
+        )}
+      </section>
     </div>
   );
 }
 
-function Empty({ onNew, searching }: { onNew: () => void; searching: boolean }) {
+function FilterTab({ value, label, n, title }: { value: Filter; label: string; n: number | null; title?: string }) {
   return (
-    <div className="flex flex-col items-center px-6 py-16 text-center">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-        <ShoppingBag className="h-5 w-5" />
-      </div>
-      <h3 className="text-base font-semibold">{searching ? "Nothing matches" : "No purchases yet"}</h3>
-      <p className="mt-1 max-w-sm text-sm text-muted-foreground">
-        {searching
-          ? "Try a serial number, customer name, email or company."
-          : "Record your first sale and its keys will be issued under one serial number."}
-      </p>
-      {!searching && (
-        <Button className="mt-6" onClick={onNew}>
-          <Plus /> New purchase
-        </Button>
-      )}
+    <TabsTrigger value={value} title={title}>
+      {label}
+      {n !== null && <span className="hidden tabular-nums text-muted-foreground sm:inline">{n}</span>}
+    </TabsTrigger>
+  );
+}
+
+function ListSkeleton() {
+  return (
+    <div>
+      <div className="h-9 border-b bg-muted/40" />
+      {Array.from({ length: 6 }, (_, i) => (
+        <div key={i} className="flex items-center gap-4 border-b px-4 py-2.5 last:border-0">
+          <Skeleton className="h-4 w-28" />
+          <div className="flex-1 space-y-1.5">
+            <Skeleton className="h-3.5 w-40" />
+            <Skeleton className="h-3 w-56" />
+          </div>
+          <Skeleton className="hidden h-4 w-12 sm:block" />
+          <Skeleton className="h-4 w-14" />
+          <Skeleton className="hidden h-4 w-20 md:block" />
+          <Skeleton className="hidden h-4 w-20 lg:block" />
+        </div>
+      ))}
     </div>
   );
 }

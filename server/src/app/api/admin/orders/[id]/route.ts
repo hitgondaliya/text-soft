@@ -1,34 +1,14 @@
 import { z } from "zod";
-import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongo";
 import { getSession } from "@/lib/auth";
 import { audit } from "@/lib/audit";
 import { ok, fail } from "@/lib/http";
 import { parsePhone, formatPhone } from "@/lib/phone";
+import { findOrder, isRecoverable } from "../../_lib/keys";
 import type { ActivationAttemptDoc, ActivationDoc, LicenseKeyDoc, OrderDoc } from "@/lib/models";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-function oid(id: string): ObjectId | null {
-  try {
-    return new ObjectId(id);
-  } catch {
-    return null;
-  }
-}
-
-/** Accepts either the Mongo id or the serial itself, so TXS-2026-0001 is a URL. */
-async function findOrder(idOrSerial: string): Promise<OrderDoc | null> {
-  const db = await getDb();
-  const orders = db.collection<OrderDoc>("orders");
-  const _id = oid(idOrSerial);
-  if (_id) {
-    const byId = await orders.findOne({ _id });
-    if (byId) return byId;
-  }
-  return orders.findOne({ serial: idOrSerial.trim().toUpperCase() });
-}
 
 // GET /api/admin/orders/:idOrSerial — the purchase and every key under it.
 export async function GET(_req: Request, { params }: { params: { id: string } }) {
@@ -66,6 +46,8 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
       id,
       seq: k.seq,
       prefix: k.keyPrefix,
+      /** The full key can be revealed / re-sent (false for keys issued before keys were sealed). */
+      recoverable: isRecoverable(k),
       status: k.status,
       expired: !!k.expiryUtc && now > k.expiryUtc,
       expiryUtc: k.expiryUtc ? k.expiryUtc.toISOString() : null,
@@ -99,6 +81,8 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     note: order.note ?? "",
     emailedUtc: order.emailedUtc ? order.emailedUtc.toISOString() : null,
     emailError: order.emailError ?? "",
+    lastSentTo: order.lastSentTo ?? "",
+    lastSentUtc: order.lastSentUtc ? order.lastSentUtc.toISOString() : null,
     createdBy: order.createdBy,
     createdUtc: order.createdUtc.toISOString(),
     keys: keyList,
