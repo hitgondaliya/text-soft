@@ -16,3 +16,8 @@ node_modules/
 # Local machine state
 *.user
 *.suo
+
+# Client font packs dropped in the repo root for analysis (commercial fonts; never commit)
+/Gujarati font/
+/hindi/
+/*.rar

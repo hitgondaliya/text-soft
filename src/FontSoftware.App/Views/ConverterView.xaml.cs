@@ -59,7 +59,7 @@ public partial class ConverterView : UserControl
             return;
         }
 
-        _vm.BeginBatch();
+        _vm.BeginBatch(RichTextConversion.PlainText(input));
         FlowDocument output;
         try
         {

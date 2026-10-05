@@ -36,6 +36,15 @@ public sealed class FontAsset
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 
+    /// <summary>
+    /// Listed only when installed on this PC. For a large family (the Bhasha
+    /// Bharati faces run to dozens) a row per missing face would bury the fonts the
+    /// client actually has; a font without this flag is always listed, marked
+    /// "not installed" when missing.
+    /// </summary>
+    [JsonPropertyName("optional")]
+    public bool Optional { get; set; }
+
     /// <summary>The key used to look up conversion tables: <see cref="Encoding"/> or, if unset, <see cref="Id"/>.</summary>
     [JsonIgnore]
     public string ConversionKey => string.IsNullOrEmpty(Encoding) ? Id : Encoding;
@@ -64,6 +73,7 @@ public sealed class FontAsset
         File = File,
         Type = Type,
         Encoding = Encoding,
+        Optional = Optional,
         Display = $"{Name}  —  not installed"
     };
 

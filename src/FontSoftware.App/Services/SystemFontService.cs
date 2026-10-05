@@ -32,8 +32,10 @@ public static class SystemFontService
     public static bool IsInstalled(string family)
     {
         if (string.IsNullOrWhiteSpace(family)) return false;
+        // Trimmed: some old faces carry a trailing space in their name ("MarutiStrip ").
+        family = family.Trim();
         return Fonts.SystemFontFamilies.Any(f =>
-            (f.FamilyNames.TryGetValue(En, out var en) && string.Equals(en, family, StringComparison.OrdinalIgnoreCase))
-            || string.Equals(f.Source, family, StringComparison.OrdinalIgnoreCase));
+            (f.FamilyNames.TryGetValue(En, out var en) && string.Equals(en.Trim(), family, StringComparison.OrdinalIgnoreCase))
+            || string.Equals(f.Source.Trim(), family, StringComparison.OrdinalIgnoreCase));
     }
 }

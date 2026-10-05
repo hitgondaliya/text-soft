@@ -99,20 +99,77 @@ public class ConverterTests
         Assert.Equal(word, toUnicode.ConvertText(legacy.Text));
     }
 
-    // Gopika (Oasis Systems, 1993) is the one Gujarati table built from the font
-    // itself rather than captured from a reference converter: its bytes follow the
-    // ITR typewriter layout, and the reordering is done by rules instead of an
-    // enumerated cluster list. These pin both the letters and the reordering.
+    // Gopika (Oasis Systems, 1993) is the font Shree-Lipi puts under its "Bhasha
+    // Bharati" layout. Its table is Shree's own capture of that layout (every letter,
+    // sign and conjunct, with the conjunct + sign clusters), moved onto the bytes
+    // where Gopika actually draws them: the aa stroke and anusvara swapped, na on
+    // 'l', pa on 'v', the whole ta on ';', and pna/shna built from half forms
+    // because Gopika's 0xA1/0xA7 are a second pra/shra. Each was checked by drawing
+    // the result in Gopika.TTF.
     [Theory]
     [InlineData("કમલ", "fbj")]
-    [InlineData("ગુજરાત", "dwsht;")]
+    [InlineData("ગુજરાત", "øwtsht;")]     // gu is Gopika's own ligature: half ga + u + stroke
     [InlineData("કિ", "rf")]              // i-matra is typed before its consonant
     [InlineData("કર્મ", "fbo")]           // reph moves to the end of the cluster
     [InlineData("બાળક", "ct¤f")]     // la is a high byte, not shift+B
-    [InlineData("શ્રીફળ", "§eV¤")]
-    [InlineData("પ્રેમ", "¡ub")]
+    [InlineData("શ્રીફળ", "©eV¤")]
+    [InlineData("પ્રેમ", "«ub")]
+    [InlineData("કાં", "ftk")]            // stroke 0x74, then anusvara 0x6B
+    [InlineData("પત્ની", "vðle")]         // half ta before na
+    [InlineData("પ્ન", "Ãl")]             // half pa + na, not Gopika's second pra
+    [InlineData("અ;બ", "y<c")]           // a semicolon is 0x3C: ';' itself draws ત
     public void UnicodeToGopika(string unicode, string expected)
         => Assert.Equal(expected, Bundle().CreateConverter("shruti", "gopika-guj")!.ConvertText(unicode));
+
+    // Gopika draws a second pra and shra on 0xA1/0xA7 (Shree writes 0xAB/0xA9); text
+    // typed with those bytes still reads back.
+    [Theory]
+    [InlineData("¡ub", "પ્રેમ")]
+    [InlineData("§eV¤", "શ્રીફળ")]
+    public void GopikaDuplicateGlyphsReadBack(string legacy, string expected)
+        => Assert.Equal(expected, Bundle().CreateConverter("gopika-guj", "shruti")!.ConvertText(legacy));
+
+    // Every Bhasha Bharati face draws the candra arc on 0x70 'p' (0xEC is a short
+    // e-matra stroke there), and the ITR keyboard those faces were drawn for types it
+    // on P. Shree's converter wrote 0xEC, which showed ડૉક્ટર as ડોક્ટર.
+    [Theory]
+    [InlineData("gopika-guj", "ડૉક્ટર", "ztp¾xh")]
+    [InlineData("gopika-guj", "બૅંક", "cpkf")]
+    [InlineData("gopika-guj", "ઍ", "yp")]
+    [InlineData("bhasha-bharati-1-guj", "કૉલેજ", "fkp÷us")]
+    [InlineData("bhasha-bharati-1-guj", "બૅંક", "ƒptf")]
+    [InlineData("bhasha-bharti-2-guj", "ઑફિસ", "ykprV‚")]
+    public void BhashaBharatiCandraIsOnP(string enc, string unicode, string legacy)
+    {
+        var b = Bundle();
+        Assert.Equal(legacy, b.CreateConverter("shruti", enc)!.ConvertText(unicode));
+        Assert.Equal(unicode, b.CreateConverter(enc, "shruti")!.ConvertText(legacy));
+    }
+
+    // The same glyphs typed in the other order read the same: TextSoft 1.x wrote
+    // Gopika's ો as "ut" and ૉ as "pt", and a typist may put a sign before the stem.
+    [Theory]
+    [InlineData("gopika-guj", "fut", "કો")]
+    [InlineData("gopika-guj", "zptfTxh", "ડૉક્ટર")]
+    [InlineData("bhasha-bharati-1-guj", "fuk", "કો")]
+    [InlineData("bhasha-bharati-1-guj", "fpk", "કૉ")]
+    [InlineData("bhasha-bharati-1-guj", "zkìõxh", "ડૉક્ટર")]   // 0xEC, as Shree's converter wrote it
+    [InlineData("bhasha-bharti-2-guj", "fuk", "કો")]
+    public void BhashaBharatiReadsEitherOrder(string enc, string legacy, string unicode)
+        => Assert.Equal(unicode, Bundle().CreateConverter(enc, "shruti")!.ConvertText(legacy));
+
+    // A mark the face draws is written, not deleted; a mark whose byte is a letter
+    // moves to where the face draws it, and is dropped only when it has nowhere to go.
+    [Theory]
+    [InlineData("shruti", "gopika-guj", "ક—ખ", "f_F")]             // Gopika's dash is on '_'
+    [InlineData("shruti", "gopika-guj", "“હા”", "‘‘ntª")]
+    [InlineData("shruti", "gopika-guj", "સમય: ૧૦", "mbg& 10")]     // ':' draws થ; '&' is colon-shaped
+    [InlineData("shruti", "bhasha-bharati-1-guj", "ક—ખ • ‘હા’", "f—¾ • ‘nk’")]
+    [InlineData("shruti", "bhasha-bharati-1-guj", "5×3", "53")]    // no face draws ×
+    [InlineData("shruti", "bhasha-bharti-2-guj", "સમય: ૧૦ ગુજરાત—ભારત • સૂચિ", "‚{Þ: 10 økwshkŒ—¼khŒ • ‚qr[")]
+    [InlineData("mangal", "bhasha-bharati-dev", "भारत–पाक क—ख • सूची", "½¢Úy¢–Ð¢ÜU ÜU—¶ • „ê™è")]
+    public void BhashaBharatiPunctuation(string from, string to, string text, string expected)
+        => Assert.Equal(expected, Bundle().CreateConverter(from, to)!.ConvertText(text));
 
     [Theory]
     [InlineData("કમલ")]

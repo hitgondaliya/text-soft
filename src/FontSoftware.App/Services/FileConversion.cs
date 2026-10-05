@@ -30,7 +30,9 @@ public static class FileConversion
 
     /// <summary>
     /// Convert one file. <paramref name="convert"/> is the text transform; the fonts
-    /// name the family to stamp on the output (rtf/docx only).
+    /// name the family to stamp on the output (rtf/docx only). <paramref name="readWhole"/>,
+    /// when given, sees a .doc's whole text before any of it is converted - a .doc can
+    /// only be read through Word, and opening it twice would double the wait.
     /// </summary>
     public static void ConvertFile(
         string inputPath,
@@ -40,7 +42,8 @@ public static class FileConversion
         bool targetIsUnicode,
         FontFamily targetFont,
         string targetFontName,
-        bool plainText)
+        bool plainText,
+        Action<string>? readWhole = null)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
         switch (Path.GetExtension(inputPath).ToLowerInvariant())
@@ -64,7 +67,7 @@ public static class FileConversion
                 ConvertDocx(inputPath, outputPath, convert, targetFontName);
                 break;
             case ".doc":
-                ConvertDoc(inputPath, outputPath, convert, targetFontName);
+                ConvertDoc(inputPath, outputPath, convert, targetFontName, readWhole);
                 break;
             default:
                 throw new NotSupportedException($"Unsupported file type: {Path.GetExtension(inputPath)}");
@@ -112,10 +115,20 @@ public static class FileConversion
     /// The document's own XML comes out of Word, goes through the same conversion every
     /// .docx gets, and goes back in.
     /// </summary>
-    private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)
+    private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName, Action<string>? readWhole)
     {
         File.Copy(inputPath, outputPath, overwrite: true);
-        WordDocFormat.ConvertInPlace(outputPath, xml => ConvertFlatOpc(xml, convert, targetFontName));
+        WordDocFormat.ConvertInPlace(outputPath, xml =>
+        {
+            // Word hands the whole document over before a single run is converted.
+            if (readWhole is not null)
+            {
+                var text = new StringBuilder();
+                ConvertFlatOpc(xml, s => { text.Append(s).Append(' '); return s; }, targetFontName);
+                readWhole(text.ToString());
+            }
+            return ConvertFlatOpc(xml, convert, targetFontName);
+        });
     }
 
     /// <summary>A whole Word document as one XML string - the shape Word hands its own

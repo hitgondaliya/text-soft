@@ -137,9 +137,17 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             .ToList();
         // Prefer the font chosen in the Render box when it is installed, else the first installed one.
         LegacyFontName = installed.FirstOrDefault(f => string.Equals(f, SelectedFont.Family, StringComparison.OrdinalIgnoreCase)) ?? installed.FirstOrDefault();
-        LegacyFontHint = installed.Count == 0
-            ? $"No {SelectedFontLayout?.Name} font is installed on this PC, so typed text will show as boxes in other apps. Install one of its fonts."
-            : $"Word, Outlook and WordPad get the font {LegacyFontName} automatically. In Notepad or a browser, set the font to {LegacyFontName} yourself — {SelectedFontLayout?.Name} text shows as boxes in any other font.";
+        // Other installed fonts of the same layout that type with a different table
+        // (a Bhasha Bharti-2 face while a Bhasha Bharati-1 face is selected).
+        var siblings = SelectedFontLayout is { IsCombined: true } layout
+            ? SelectedLanguage.Fonts.Where(f => layout.Includes(f) && !string.IsNullOrWhiteSpace(f.Family) && SystemFontService.IsInstalled(f.Family))
+                .Select(f => f.Family).Distinct(StringComparer.OrdinalIgnoreCase).OrderBy(x => x, StringComparer.OrdinalIgnoreCase).ToList()
+            : new List<string>();
+        LegacyFontHint = installed.Count > 0
+            ? $"Word, Outlook and WordPad get the font {LegacyFontName} automatically. In Notepad or a browser, set the font to {LegacyFontName} yourself — {SelectedFontLayout?.Name} text shows as boxes in any other font."
+            : siblings.Count > 0
+                ? $"{SelectedFont.Name} is not installed on this PC. These {SelectedFontLayout?.Name} fonts are: {string.Join(", ", siblings.Take(6))}{(siblings.Count > 6 ? "…" : "")} — pick one of them in the Font box."
+                : $"No {SelectedFontLayout?.Name} font is installed on this PC, so typed text will show as boxes in other apps. Install one of its fonts.";
     }
 
     private bool _legacyTypingActive;
@@ -518,7 +526,10 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         {
             if (string.Equals(font.Family, UnicodeFont.Family, StringComparison.OrdinalIgnoreCase))
                 continue; // already covered by the universal Unicode entry
-            Fonts.Add(_fonts.IsAvailable(font) ? font : font.AsNotInstalled());
+            bool available = _fonts.IsAvailable(font);
+            if (!available && font.Optional)
+                continue; // a large family (Bhasha Bharati) lists only the faces this PC has
+            Fonts.Add(available ? font : font.AsNotInstalled());
         }
         foreach (var layout in SelectedLanguage.Layouts)
             Layouts.Add(layout);
@@ -579,6 +590,16 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             return;
         }
 
+        // A layout that covers several fonts (Bhasha Bharati: Gopika, the -1 faces
+        // and the -2 faces) goes to whichever of its fonts this PC has, and each
+        // font types with its own table - so a client with only a Bhasha Bharti-2
+        // face gets that face, and correct text, without picking anything.
+        if (PickLayoutFont(SelectedFontLayout) is { } installed)
+        {
+            SelectedFont = installed;
+            return;
+        }
+
         if (!string.IsNullOrEmpty(SelectedFontLayout.FontId))
         {
             var existing = Fonts.FirstOrDefault(x => x.Id == SelectedFontLayout.FontId);
@@ -601,6 +622,22 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     }
 
     private FontAsset AddAndReturn(FontAsset f) { Fonts.Add(f); return f; }
+
+    /// <summary>
+    /// The installed font a legacy layout should type in: the one already selected
+    /// if it belongs to the layout, else the layout's own default, else the first
+    /// of its fonts this PC has. Null when none of them is installed.
+    /// </summary>
+    private FontAsset? PickLayoutFont(FontLayout layout)
+    {
+        if (layout.Encodings is not { Count: > 0 })
+            return null; // an ordinary layout: its one font, handled by the caller
+        var members = Fonts.Where(f => !f.Id.StartsWith("fl:", StringComparison.Ordinal) && layout.Includes(f)).ToList();
+        if (SelectedFont is not null && members.Contains(SelectedFont) && _fonts.IsAvailable(SelectedFont))
+            return SelectedFont;
+        var installed = members.Where(f => _fonts.IsAvailable(f)).ToList();
+        return installed.FirstOrDefault(f => f.Id == layout.FontId) ?? installed.FirstOrDefault();
+    }
 
     /// <summary>Push the current selection into the engine and keyboard viewer.</summary>
     private void ApplyProfile()
@@ -811,13 +848,21 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         // after the saved font would undo that font.
         if (fontLayoutId is not null)
         {
-            var fl = FontLayouts.FirstOrDefault(x => x.Id == fontLayoutId);
+            // A layout folded into another (Bhasha Bharti-2 into Bhasha Bharati)
+            // still finds its way back.
+            var fl = FontLayouts.FirstOrDefault(x => x.Id == fontLayoutId)
+                     ?? FontLayouts.FirstOrDefault(x => x.Replaces?.Contains(fontLayoutId, StringComparer.OrdinalIgnoreCase) == true);
             if (fl is not null) SelectedFontLayout = fl;
         }
         if (fontId is not null)
         {
             var f = Fonts.FirstOrDefault(x => x.Id == fontId);
-            if (f is not null) SelectedFont = f;
+            // The saved font wins unless it is not on this PC while another font of
+            // the same layout is - then the installed one, already picked, stays.
+            bool keepPicked = f is not null && !_fonts.IsAvailable(f)
+                              && SelectedFontLayout is { Encodings.Count: > 0 } && SelectedFont is not null
+                              && SelectedFontLayout.Includes(SelectedFont) && _fonts.IsAvailable(SelectedFont);
+            if (f is not null && !keepPicked) SelectedFont = f;
         }
         if (layoutId is not null)
         {

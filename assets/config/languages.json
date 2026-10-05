@@ -916,6 +916,190 @@
           "encoding": "bhasha-bharati-dev"
         },
         {
+          "id": "bbd-anamikatwo",
+          "name": "AnamikaTwo (Bhasha Bharati)",
+          "family": "AnamikaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-kautilya",
+          "name": "Kautilya (Bhasha Bharati)",
+          "family": "Kautilya",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-purna",
+          "name": "Purna (Bhasha Bharati)",
+          "family": "Purna",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sahajtwo",
+          "name": "SahajTwo (Bhasha Bharati)",
+          "family": "SahajTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sajantwo",
+          "name": "SajanTwo (Bhasha Bharati)",
+          "family": "SajanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sangamtwo",
+          "name": "SangamTwo (Bhasha Bharati)",
+          "family": "SangamTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sanket",
+          "name": "Sanket (Bhasha Bharati)",
+          "family": "Sanket",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-santosh",
+          "name": "Santosh (Bhasha Bharati)",
+          "family": "Santosh",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sarjantwo",
+          "name": "SarjanTwo (Bhasha Bharati)",
+          "family": "SarjanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shardatwo",
+          "name": "ShardaTwo (Bhasha Bharati)",
+          "family": "ShardaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sharmila",
+          "name": "Sharmila (Bhasha Bharati)",
+          "family": "Sharmila",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shivatwo",
+          "name": "ShivaTwo (Bhasha Bharati)",
+          "family": "ShivaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shravan",
+          "name": "Shravan (Bhasha Bharati)",
+          "family": "Shravan",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shubhash",
+          "name": "Shubhash (Bhasha Bharati)",
+          "family": "Shubhash",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shwetatwo",
+          "name": "ShwetaTwo (Bhasha Bharati)",
+          "family": "ShwetaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shyamtwo",
+          "name": "ShyamTwo (Bhasha Bharati)",
+          "family": "ShyamTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-smita",
+          "name": "Smita (Bhasha Bharati)",
+          "family": "Smita",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sonal",
+          "name": "Sonal (Bhasha Bharati)",
+          "family": "Sonal",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sudhirtwo",
+          "name": "SudhirTwo (Bhasha Bharati)",
+          "family": "SudhirTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sulabh",
+          "name": "Sulabh (Bhasha Bharati)",
+          "family": "Sulabh",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-suniltwo",
+          "name": "SunilTwo (Bhasha Bharati)",
+          "family": "SunilTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sunita",
+          "name": "Sunita (Bhasha Bharati)",
+          "family": "Sunita",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-vediktwo",
+          "name": "VedikTwo (Bhasha Bharati)",
+          "family": "VedikTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
           "id": "shree-dev-0700-dev456",
           "name": "SHREE-DEV-0700",
           "family": "SHREE-DEV-0700",
@@ -988,7 +1172,10 @@
           "id": "hi-fl-bhasha-bharati",
           "name": "Bhasha Bharati",
           "type": "legacy",
-          "fontId": "bb-kautilya"
+          "fontId": "bb-kautilya",
+          "encodings": [
+            "bhasha-bharati-dev"
+          ]
         }
       ],
       "layouts": [
@@ -1255,6 +1442,190 @@
           "family": "B Bharati Sharmila",
           "type": "legacy",
           "encoding": "bhasha-bharati-dev"
+        },
+        {
+          "id": "bbd-anamikatwo-mr",
+          "name": "AnamikaTwo (Bhasha Bharati)",
+          "family": "AnamikaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-kautilya-mr",
+          "name": "Kautilya (Bhasha Bharati)",
+          "family": "Kautilya",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-purna-mr",
+          "name": "Purna (Bhasha Bharati)",
+          "family": "Purna",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sahajtwo-mr",
+          "name": "SahajTwo (Bhasha Bharati)",
+          "family": "SahajTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sajantwo-mr",
+          "name": "SajanTwo (Bhasha Bharati)",
+          "family": "SajanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sangamtwo-mr",
+          "name": "SangamTwo (Bhasha Bharati)",
+          "family": "SangamTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sanket-mr",
+          "name": "Sanket (Bhasha Bharati)",
+          "family": "Sanket",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-santosh-mr",
+          "name": "Santosh (Bhasha Bharati)",
+          "family": "Santosh",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sarjantwo-mr",
+          "name": "SarjanTwo (Bhasha Bharati)",
+          "family": "SarjanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shardatwo-mr",
+          "name": "ShardaTwo (Bhasha Bharati)",
+          "family": "ShardaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sharmila-mr",
+          "name": "Sharmila (Bhasha Bharati)",
+          "family": "Sharmila",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shivatwo-mr",
+          "name": "ShivaTwo (Bhasha Bharati)",
+          "family": "ShivaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shravan-mr",
+          "name": "Shravan (Bhasha Bharati)",
+          "family": "Shravan",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shubhash-mr",
+          "name": "Shubhash (Bhasha Bharati)",
+          "family": "Shubhash",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shwetatwo-mr",
+          "name": "ShwetaTwo (Bhasha Bharati)",
+          "family": "ShwetaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-shyamtwo-mr",
+          "name": "ShyamTwo (Bhasha Bharati)",
+          "family": "ShyamTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-smita-mr",
+          "name": "Smita (Bhasha Bharati)",
+          "family": "Smita",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sonal-mr",
+          "name": "Sonal (Bhasha Bharati)",
+          "family": "Sonal",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sudhirtwo-mr",
+          "name": "SudhirTwo (Bhasha Bharati)",
+          "family": "SudhirTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sulabh-mr",
+          "name": "Sulabh (Bhasha Bharati)",
+          "family": "Sulabh",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-suniltwo-mr",
+          "name": "SunilTwo (Bhasha Bharati)",
+          "family": "SunilTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-sunita-mr",
+          "name": "Sunita (Bhasha Bharati)",
+          "family": "Sunita",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
+        },
+        {
+          "id": "bbd-vediktwo-mr",
+          "name": "VedikTwo (Bhasha Bharati)",
+          "family": "VedikTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-dev",
+          "optional": true
         },
         {
           "id": "shree-dev-0700",
@@ -2169,7 +2540,10 @@
           "id": "mr-fl-bhasha-bharati",
           "name": "Bhasha Bharati",
           "type": "legacy",
-          "fontId": "bb-kautilya-mr"
+          "fontId": "bb-kautilya-mr",
+          "encodings": [
+            "bhasha-bharati-dev"
+          ]
         }
       ],
       "layouts": [
@@ -6823,20 +7197,6 @@
           "encoding": "shruti"
         },
         {
-          "id": "bb-abmar-two",
-          "name": "B Bharati AbmarTwo (Bhasha Bharti-2)",
-          "family": "B Bharati AbmarTwo",
-          "type": "legacy",
-          "encoding": "bhasha-bharti-2-guj"
-        },
-        {
-          "id": "bb-aswad",
-          "name": "B Bharati Aswad (Bhasha Bharti-2)",
-          "family": "B Bharati Aswad",
-          "type": "legacy",
-          "encoding": "bhasha-bharti-2-guj"
-        },
-        {
           "id": "shree-gujx-0752",
           "name": "SHREE-GUJX-0752",
           "family": "SHREE-GUJX-0752",
@@ -7195,10 +7555,448 @@
         },
         {
           "id": "gopika",
-          "name": "Gopika",
+          "name": "Gopika (Bhasha Bharati)",
           "family": "Gopika",
           "type": "legacy",
           "encoding": "gopika-guj"
+        },
+        {
+          "id": "bb-abmar-two",
+          "name": "B Bharati AbmarTwo (Bhasha Bharati)",
+          "family": "B Bharati AbmarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharti-2-guj"
+        },
+        {
+          "id": "bb-aswad",
+          "name": "B Bharati Aswad (Bhasha Bharati)",
+          "family": "B Bharati Aswad",
+          "type": "legacy",
+          "encoding": "bhasha-bharti-2-guj"
+        },
+        {
+          "id": "bb1-aabadtwo",
+          "name": "AabadTwo (Bhasha Bharati)",
+          "family": "AabadTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aakartwo",
+          "name": "AakarTwo (Bhasha Bharati)",
+          "family": "AakarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aanaltwo",
+          "name": "AanalTwo (Bhasha Bharati)",
+          "family": "AanalTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-abhaytwo",
+          "name": "AbhayTwo (Bhasha Bharati)",
+          "family": "AbhayTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-abhijit",
+          "name": "Abhijit (Bhasha Bharati)",
+          "family": "Abhijit",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-abmartwo",
+          "name": "AbmarTwo (Bhasha Bharati)",
+          "family": "AbmarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-adarshtwo",
+          "name": "AdarshTwo (Bhasha Bharati)",
+          "family": "AdarshTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ajantatwo",
+          "name": "AjantaTwo (Bhasha Bharati)",
+          "family": "AjantaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ajittwo",
+          "name": "AjitTwo (Bhasha Bharati)",
+          "family": "AjitTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ajubatwo",
+          "name": "AjubaTwo (Bhasha Bharati)",
+          "family": "AjubaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-akabartwo",
+          "name": "AkabarTwo (Bhasha Bharati)",
+          "family": "AkabarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-akshar",
+          "name": "Akshar (Bhasha Bharati)",
+          "family": "Akshar",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-alankar",
+          "name": "Alankar (Bhasha Bharati)",
+          "family": "Alankar",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-alaptwo",
+          "name": "AlapTwo (Bhasha Bharati)",
+          "family": "AlapTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aloktwo",
+          "name": "AlokTwo (Bhasha Bharati)",
+          "family": "AlokTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-amaltwo",
+          "name": "AmalTwo (Bhasha Bharati)",
+          "family": "AmalTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-amartwo",
+          "name": "AmarTwo (Bhasha Bharati)",
+          "family": "AmarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ambartwo",
+          "name": "AmbarTwo (Bhasha Bharati)",
+          "family": "AmbarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ambartwolight",
+          "name": "AmbarTwoLight (Bhasha Bharati)",
+          "family": "AmbarTwoLight",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-amittwo",
+          "name": "AmitTwo (Bhasha Bharati)",
+          "family": "AmitTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-amrut",
+          "name": "Amrut (Bhasha Bharati)",
+          "family": "Amrut",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-amrutatwo",
+          "name": "AmrutaTwo (Bhasha Bharati)",
+          "family": "AmrutaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anandtwo",
+          "name": "AnandTwo (Bhasha Bharati)",
+          "family": "AnandTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anartwo",
+          "name": "AnarTwo (Bhasha Bharati)",
+          "family": "AnarTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aniket",
+          "name": "Aniket (Bhasha Bharati)",
+          "family": "Aniket",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anjlitwo",
+          "name": "AnjliTwo (Bhasha Bharati)",
+          "family": "AnjliTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-ankantwo",
+          "name": "AnkanTwo (Bhasha Bharati)",
+          "family": "AnkanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anthonitwo",
+          "name": "AnthoniTwo (Bhasha Bharati)",
+          "family": "AnthoniTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anurag",
+          "name": "Anurag (Bhasha Bharati)",
+          "family": "Anurag",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-anuraglight",
+          "name": "AnuragLight (Bhasha Bharati)",
+          "family": "AnuragLight",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aratitwo",
+          "name": "AratiTwo (Bhasha Bharati)",
+          "family": "AratiTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-armantwo",
+          "name": "ArmanTwo (Bhasha Bharati)",
+          "family": "ArmanTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aruntwo",
+          "name": "ArunTwo (Bhasha Bharati)",
+          "family": "ArunTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-aswad",
+          "name": "Aswad (Bhasha Bharati)",
+          "family": "Aswad",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-atultwo",
+          "name": "AtulTwo (Bhasha Bharati)",
+          "family": "AtulTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-avanitwo",
+          "name": "AvaniTwo (Bhasha Bharati)",
+          "family": "AvaniTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-avinashtwo",
+          "name": "AvinashTwo (Bhasha Bharati)",
+          "family": "AvinashTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-azhartwo",
+          "name": "AzharTwo (Bhasha Bharati)",
+          "family": "AzharTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-bakul",
+          "name": "Bakul (Bhasha Bharati)",
+          "family": "Bakul",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-bhushan",
+          "name": "Bhushan (Bhasha Bharati)",
+          "family": "Bhushan",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-bimal",
+          "name": "Bimal (Bhasha Bharati)",
+          "family": "Bimal",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-gopikafantwo-stripe",
+          "name": "GopikaFanTwo Stripe (Bhasha Bharati)",
+          "family": "GopikaFanTwo Stripe",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-gopikalighttwo",
+          "name": "GopikalightTwo (Bhasha Bharati)",
+          "family": "GopikalightTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-gopikatwo",
+          "name": "GopikaTwo (Bhasha Bharati)",
+          "family": "GopikaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-gopikatwooutline",
+          "name": "GopikaTwooutline (Bhasha Bharati)",
+          "family": "GopikaTwooutline",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-maruti",
+          "name": "Maruti (Bhasha Bharati)",
+          "family": "Maruti",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-marutioutline",
+          "name": "MarutiOutline (Bhasha Bharati)",
+          "family": "MarutiOutline",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-marutistrip",
+          "name": "MarutiStrip (Bhasha Bharati)",
+          "family": "MarutiStrip ",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-rachnatwo",
+          "name": "RachnaTwo (Bhasha Bharati)",
+          "family": "RachnaTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-swastiktwo",
+          "name": "SwastikTwo (Bhasha Bharati)",
+          "family": "SwastikTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-titlelighttwo",
+          "name": "TitleLightTwo (Bhasha Bharati)",
+          "family": "TitleLightTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-titletwo",
+          "name": "TitleTwo (Bhasha Bharati)",
+          "family": "TitleTwo",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
+        },
+        {
+          "id": "bb1-titletwooutline",
+          "name": "TitleTwoOutline (Bhasha Bharati)",
+          "family": "TitleTwoOutline",
+          "type": "legacy",
+          "encoding": "bhasha-bharati-1-guj",
+          "optional": true
         }
       ],
       "fontLayouts": [
@@ -7233,34 +8031,26 @@
           "fontId": "terafont-chandan"
         },
         {
-          "id": "gu-fl-gopika",
-          "name": "Gopika",
-          "type": "legacy",
-          "fontId": "gopika"
-        },
-        {
           "id": "gu-fl-isfoc-monolingual",
           "name": "ISFOC Monolingual",
           "type": "legacy",
           "fontId": "isfoc-gj-ttchitra"
         },
         {
-          "id": "gu-fl-bhasha-bharti-2",
-          "name": "Bhasha Bharti-2",
-          "type": "legacy",
-          "fontId": "bb-abmar-two"
-        },
-        {
-          "id": "gu-fl-bhasha-bharti-1",
-          "name": "Bhasha Bharti-1",
-          "type": "legacy",
-          "fontId": ""
-        },
-        {
           "id": "gu-fl-bhasha-bharati",
           "name": "Bhasha Bharati",
           "type": "legacy",
-          "fontId": ""
+          "fontId": "gopika",
+          "encodings": [
+            "gopika-guj",
+            "bhasha-bharati-1-guj",
+            "bhasha-bharti-2-guj"
+          ],
+          "replaces": [
+            "gu-fl-gopika",
+            "gu-fl-bhasha-bharti-2",
+            "gu-fl-bhasha-bharti-1"
+          ]
         },
         {
           "id": "gu-fl-akruti-monolingual",
@@ -13254,6 +14044,8 @@
     "mappings/terafont-guj-to-unicode.json",
     "mappings/unicode-to-terafont-guj.json",
     "mappings/gopika-guj-to-unicode.json",
-    "mappings/unicode-to-gopika-guj.json"
+    "mappings/unicode-to-gopika-guj.json",
+    "mappings/bhasha-bharati-1-guj-to-unicode.json",
+    "mappings/unicode-to-bhasha-bharati-1-guj.json"
   ]
 }

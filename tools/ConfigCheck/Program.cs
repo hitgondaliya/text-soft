@@ -84,6 +84,11 @@ foreach (var lang in bundle.Languages)
     }
 }
 
+// Characters a legacy encoding cannot show at all (assets/config/encoding-limits.json):
+// the font has no glyph for them, and its byte draws a letter, so a table may drop them
+// on purpose rather than print that letter.
+var limits = LoadLimits(root);
+
 // Validate mapping tables.
 foreach (var table in bundle.MappingTables)
 {
@@ -100,9 +105,16 @@ foreach (var table in bundle.MappingTables)
         errors.Add($"{where}: a pair has an empty 'from'.");
 
     // An empty 'to' is not "leave it alone" — it deletes the character, without
-    // even reporting it unmapped. Drop the pair instead and let it fall through.
+    // even reporting it unmapped. Drop the pair instead and let it fall through -
+    // unless encoding-limits records that the target font cannot show the character
+    // (its byte is a letter there), where deleting it beats printing that letter.
     foreach (var p in table.Pairs.Where(p => string.IsNullOrEmpty(p.To)))
-        errors.Add($"{where}: '{p.From}' maps to nothing, which silently deletes it.");
+    {
+        bool declared = p.From.Length == 1 && limits.TryGetValue(table.TargetFontId, out var cannot)
+                        && cannot.Contains(((int)p.From[0]).ToString("X4"));
+        if (declared) warnings.Add($"{where}: '{p.From}' is dropped - the font cannot show it (encoding-limits).");
+        else errors.Add($"{where}: '{p.From}' maps to nothing, which silently deletes it.");
+    }
 }
 
 // A table that exists on disk but is not listed in languages.json is simply not
@@ -131,6 +143,20 @@ Console.WriteLine($"\n{bundle.Languages.Count} language(s), {bundle.MappingTable
                   $"{errors.Count} error(s), {warnings.Count} warning(s).");
 
 return errors.Count > 0 ? 1 : 0;
+
+static Dictionary<string, HashSet<string>> LoadLimits(string root)
+{
+    var result = new Dictionary<string, HashSet<string>>(StringComparer.OrdinalIgnoreCase);
+    string path = Path.Combine(root, "encoding-limits.json");
+    if (!File.Exists(path)) return result;
+    using var doc = System.Text.Json.JsonDocument.Parse(File.ReadAllText(path));
+    foreach (var enc in doc.RootElement.EnumerateObject())
+        if (enc.Value.ValueKind == System.Text.Json.JsonValueKind.Array)
+            result[enc.Name] = enc.Value.EnumerateArray()
+                .Where(v => v.ValueKind == System.Text.Json.JsonValueKind.String)
+                .Select(v => v.GetString()!.ToUpperInvariant()).ToHashSet(StringComparer.OrdinalIgnoreCase);
+    return result;
+}
 
 static string FindDefaultRoot()
 {

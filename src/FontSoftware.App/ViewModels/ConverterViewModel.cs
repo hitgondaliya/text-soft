@@ -19,6 +19,15 @@ public sealed class LayoutOption
     /// <summary>False when no mapping table exists for this family yet — still listed, so the
     /// client sees what Shree offers, but conversion says why it cannot run.</summary>
     public bool Available { get; init; }
+    /// <summary>
+    /// Every encoding the layout covers. One for an ordinary layout; several for one
+    /// that gathers font products under one name (Bhasha Bharati), where the input
+    /// is recognised from the text itself and the output follows the chosen font.
+    /// </summary>
+    public IReadOnlyList<string> Encodings { get; init; } = Array.Empty<string>();
+    /// <summary>The fonts of the language that belong to the layout.</summary>
+    public IReadOnlyList<FontAsset> Members { get; init; } = Array.Empty<FontAsset>();
+    public bool IsCombined => Encodings.Count > 1;
     public string Label => Available ? Name : $"{Name}  —  not available";
     public override string ToString() => Label;
 }
@@ -258,7 +267,7 @@ public sealed class ConverterViewModel : ObservableObject
     public string ConvertText(string text)
     {
         if (SelectedInputLayout is null || SelectedOutputLayout is null) return text;
-        var r = _pipeline.Convert(text, SelectedInputLayout.Key, SelectedOutputLayout.Key, Options());
+        var r = _pipeline.Convert(text, InputKey(text), OutputKey(), Options());
         // ASCII punctuation and digits pass through every layout unchanged; only real
         // letters that found no mapping are worth reporting.
         foreach (var u in r.UnmappedCharacters)
@@ -269,7 +278,115 @@ public sealed class ConverterViewModel : ObservableObject
     private readonly HashSet<string> _unmapped = new(StringComparer.Ordinal);
 
     /// <summary>Call before a batch of <see cref="ConvertText"/> calls; then <see cref="EndBatch"/>.</summary>
-    public void BeginBatch() => _unmapped.Clear();
+    public void BeginBatch()
+    {
+        _unmapped.Clear();
+        _detected = null;
+    }
+
+    /// <summary>
+    /// Start a batch whose whole text is known up front, so an input layout that
+    /// covers several encodings is recognised from all of it at once rather than
+    /// from its first run.
+    /// </summary>
+    public void BeginBatch(string wholeText)
+    {
+        BeginBatch();
+        if (SelectedInputLayout is { IsCombined: true } o && Letters(wholeText) > 0)
+            _detected = Detect(wholeText, o);
+    }
+
+    // ---- layouts that cover several encodings (Bhasha Bharati) ----
+
+    // The encoding recognised for the current batch; null until the text says.
+    private string? _detected;
+
+    private LayoutKey InputKey(string text)
+    {
+        var o = SelectedInputLayout!;
+        if (!o.IsCombined) return o.Key;
+        // A run of a few letters cannot tell Bhasha Bharati-1 from -2; wait for a
+        // longer one and keep that answer for the rest of the batch.
+        if (_detected is null && Letters(text) >= 8) _detected = Detect(text, o);
+        return LayoutKey.Legacy(_detected ?? FontEncoding(o, SelectedInputFont) ?? o.Key.Encoding);
+    }
+
+    private LayoutKey OutputKey()
+    {
+        var o = SelectedOutputLayout!;
+        if (!o.IsCombined) return o.Key;
+        return LayoutKey.Legacy(FontEncoding(o, SelectedOutputFont) ?? o.Key.Encoding);
+    }
+
+    /// <summary>The encoding of the layout font drawn in <paramref name="f"/>, if it is one of them.</summary>
+    private static string? FontEncoding(LayoutOption o, FontChoice? f) =>
+        f is null ? null : o.Members.FirstOrDefault(m => string.Equals(m.Family, f.Name, StringComparison.OrdinalIgnoreCase))?.ConversionKey;
+
+    private static int Letters(string text) => text.Count(char.IsLetterOrDigit);
+
+    /// <summary>
+    /// Which of the layout's encodings the text was typed in: read it with each and
+    /// keep the reading with the least wrong with it (see <see cref="Oddness"/>). On a
+    /// tie the chosen input font decides.
+    /// </summary>
+    private string Detect(string text, LayoutOption o)
+    {
+        string fallback = FontEncoding(o, SelectedInputFont) ?? o.Key.Encoding;
+        string best = fallback;
+        double bestScore = double.MinValue;
+        var ties = new List<string>();
+        foreach (var enc in o.Encodings)
+        {
+            ConversionResult r;
+            try { r = _pipeline.Convert(text, LayoutKey.Legacy(enc), LayoutKey.Unicode, ConversionOptions.Default); }
+            catch { continue; }
+            double score = -Oddness(r.Text) - 3 * r.UnmappedCharacters.Count(u => u.Length > 0 && u[0] > 0x7F);
+            if (score > bestScore + 1e-9) { bestScore = score; best = enc; ties.Clear(); ties.Add(enc); }
+            else if (Math.Abs(score - bestScore) < 1e-9) ties.Add(enc);
+        }
+        return ties.Count > 1 && ties.Contains(fallback) ? fallback : best;
+    }
+
+    /// <summary>
+    /// How much is wrong with a reading. A wrong table does not produce fewer letters -
+    /// Bhasha Bharati-1 reads the -2 face's હ as the conjunct હ્ર, one letter MORE - so
+    /// letters are never rewarded; only what text in the script does not do counts: a
+    /// sign with nothing to sit on, a virama (every stray conjunct brings one), a letter
+    /// the language almost never writes, and a Latin letter left inside a word (a byte
+    /// the table does not know). Measured on Gujarati prose: the whole-text reading was
+    /// right for every document, and no single sentence was read with the wrong table.
+    /// </summary>
+    internal static double Oddness(string s)
+    {
+        int bad = 0, virama = 0, rare = 0, latin = 0;
+        int prevBlock = -1, pk = -1;
+        char prev = ' ';
+        foreach (char c in s)
+        {
+            int block = c & ~0x7F;
+            bool script = block >= 0x0900 && block <= 0x0D00;
+            bool asciiLetter = c is >= 'A' and <= 'Z' or >= 'a' and <= 'z';
+            bool prevScript = (prev & ~0x7F) is >= 0x0900 and <= 0x0D00;
+            bool prevAscii = prev is >= 'A' and <= 'Z' or >= 'a' and <= 'z';
+            if ((asciiLetter && prevScript) || (script && prevAscii)) latin++;
+            prev = c;
+            if (!script) { prevBlock = -1; pk = -1; continue; }
+            int k = c - block;
+            bool matra = k >= 0x3E && k <= 0x4C && k != 0x4D;
+            bool isVirama = k == 0x4D, nukta = k == 0x3C;
+            bool mark = k >= 0x01 && k <= 0x03;                  // candrabindu, anusvara, visarga
+            bool same = prevBlock == block;
+            bool afterConsonant = same && ((pk >= 0x15 && pk <= 0x39) || (pk >= 0x58 && pk <= 0x5F) || pk == 0x3C);
+            bool afterSyllable = afterConsonant || (same && ((pk >= 0x05 && pk <= 0x14) || (pk >= 0x3E && pk <= 0x4C && pk != 0x4D)));
+            if ((matra || isVirama || nukta) && !afterConsonant) bad++;
+            else if (mark && !afterSyllable) bad++;
+            if (isVirama) virama++;
+            // vocalic l/rr, the nasals ङ ञ, avagraha, the candra vowels: rare in running text
+            if (k is 0x0C or 0x60 or 0x61 or 0x19 or 0x1E or 0x3D or 0x44 or 0x62 or 0x63 or 0x11 or 0x0D) rare++;
+            prevBlock = block; pk = k;
+        }
+        return 4.0 * bad + 1.2 * virama + 3.0 * rare + 4.0 * latin;
+    }
 
     public string EndBatch(string what)
     {
@@ -316,6 +433,7 @@ public sealed class ConverterViewModel : ObservableObject
             {
                 var f = Files[i];
                 f.Status = "Converting…";
+                _detected = SelectedInputLayout.IsCombined ? RecogniseFile(f.Path, srcUni, font, fontName) : null;
                 Progress = (double)i / Files.Count * 100;
                 await Task.Yield();
                 try
@@ -324,7 +442,13 @@ public sealed class ConverterViewModel : ObservableObject
                     if (string.Equals(Path.GetFullPath(outPath), Path.GetFullPath(f.Path), StringComparison.OrdinalIgnoreCase))
                         outPath = Path.Combine(OutputFolder, Path.GetFileNameWithoutExtension(f.Name) + "-converted" + Path.GetExtension(f.Name));
                     outPath = Unused(outPath, taken);
-                    FileConversion.ConvertFile(f.Path, outPath, ConvertText, srcUni, tgtUni, font, fontName, PlainText);
+                    // A .doc is read through Word: its table is recognised from the whole
+                    // text Word hands over, before its runs are converted.
+                    var layout = SelectedInputLayout;
+                    Action<string>? readWhole = layout.IsCombined
+                        ? t => { if (Letters(t) > 0) _detected = Detect(t, layout); }
+                        : null;
+                    FileConversion.ConvertFile(f.Path, outPath, ConvertText, srcUni, tgtUni, font, fontName, PlainText, readWhole);
                     f.Status = "Done";
                     ok++;
                 }
@@ -343,6 +467,32 @@ public sealed class ConverterViewModel : ObservableObject
         {
             IsBusy = false;
         }
+    }
+
+    /// <summary>
+    /// Which of a many-encoding layout's tables a file was typed in, read from the
+    /// whole file: its runs reach the converter one at a time, and a short first run
+    /// cannot tell Bhasha Bharati-1 from -2. The file is read through the same code
+    /// that converts it, into a scratch folder that is removed again.
+    /// </summary>
+    private string? RecogniseFile(string path, bool sourceIsUnicode, FontFamily font, string fontName)
+    {
+        // A .doc is converted by Word itself; opening it twice would double the wait. It
+        // is recognised inside its conversion instead (FileConversion's readWhole).
+        if (string.Equals(Path.GetExtension(path), ".doc", StringComparison.OrdinalIgnoreCase)) return null;
+        var text = new System.Text.StringBuilder();
+        string scratch = Path.Combine(Path.GetTempPath(), "TextSoft-read-" + Guid.NewGuid().ToString("N"));
+        try
+        {
+            FileConversion.ConvertFile(path, Path.Combine(scratch, Path.GetFileName(path)),
+                s => { text.Append(s).Append(' '); return s; }, sourceIsUnicode, sourceIsUnicode, font, fontName, plainText: true);
+        }
+        catch { /* unreadable here: the real conversion reports it */ }
+        finally
+        {
+            try { if (Directory.Exists(scratch)) Directory.Delete(scratch, recursive: true); } catch { }
+        }
+        return Letters(text.ToString()) > 0 ? Detect(text.ToString(), SelectedInputLayout!) : null;
     }
 
     /// <summary>A path in the output folder nothing has written to yet this batch.</summary>
@@ -421,10 +571,21 @@ public sealed class ConverterViewModel : ObservableObject
             }
             FontAsset? font = string.IsNullOrEmpty(fl.FontId) ? null : lang.Fonts.FirstOrDefault(f => f.Id == fl.FontId)
                               ?? _bundle.Languages.SelectMany(l => l.Fonts).FirstOrDefault(f => f.Id == fl.FontId);
+            // A layout that gathers several font products renders in whichever of its
+            // fonts this PC has, and converts with that font's table by default.
+            var members = fl.Encodings is { Count: > 0 } ? lang.Fonts.Where(fl.Includes).ToList() : new List<FontAsset>();
+            if (members.Count > 0)
+                font = members.FirstOrDefault(f => f.Id == fl.FontId && _fonts.IsAvailable(f))
+                       ?? members.FirstOrDefault(f => _fonts.IsAvailable(f)) ?? font ?? members[0];
             string enc = font?.ConversionKey ?? fl.FontId ?? "";
-            bool available = enc.Length > 0 && _pipeline.CanConvert(LayoutKey.Legacy(enc), LayoutKey.Unicode, out _)
-                             && _pipeline.CanConvert(LayoutKey.Unicode, LayoutKey.Legacy(enc), out _);
-            list.Add(new LayoutOption { Name = fl.Name, Key = LayoutKey.Legacy(enc.Length > 0 ? enc : "fl:" + fl.Id), Font = font, Available = available });
+            var encodings = fl.Encodings is { Count: > 0 } ? fl.Encodings : (enc.Length > 0 ? new List<string> { enc } : new List<string>());
+            bool available = encodings.Count > 0 && encodings.All(e =>
+                _pipeline.CanConvert(LayoutKey.Legacy(e), LayoutKey.Unicode, out _) && _pipeline.CanConvert(LayoutKey.Unicode, LayoutKey.Legacy(e), out _));
+            list.Add(new LayoutOption
+            {
+                Name = fl.Name, Key = LayoutKey.Legacy(enc.Length > 0 ? enc : "fl:" + fl.Id), Font = font, Available = available,
+                Encodings = encodings, Members = members,
+            });
         }
         if (!list.Any(o => o.Key.IsUnicode))
             list.Insert(0, new LayoutOption { Name = "Unicode", Key = LayoutKey.Unicode, Font = nirmala, Available = true });
@@ -439,6 +600,12 @@ public sealed class ConverterViewModel : ObservableObject
         {
             first = new FontChoice { Name = f.Family, Family = _fonts.Resolve(f) };
             target.Add(first);
+        }
+        // Every installed font of a many-font layout, right after its default.
+        foreach (var m in layout?.Members ?? Array.Empty<FontAsset>())
+        {
+            if (!_fonts.IsAvailable(m) || target.Any(t => string.Equals(t.Name, m.Family, StringComparison.OrdinalIgnoreCase))) continue;
+            target.Add(new FontChoice { Name = m.Family, Family = _fonts.Resolve(m) });
         }
         if (layout is { Key.IsUnicode: true })
         {
@@ -465,7 +632,10 @@ public sealed class ConverterViewModel : ObservableObject
         if (i is null || o is null) { CanConvert = false; return; }
         if (!i.Available) { CanConvert = false; SetStatus($"{i.Name}: no conversion table for this family yet.", true); return; }
         if (!o.Available) { CanConvert = false; SetStatus($"{o.Name}: no conversion table for this family yet.", true); return; }
-        if (i.Key == o.Key) { CanConvert = false; SetStatus("Input and output layouts are the same.", true); return; }
+        // One many-font layout on both sides is a conversion between its fonts (Gopika text
+        // to a Bhasha Bharti-2 face): the input is recognised from the text, the output
+        // follows the output font.
+        if (i.Key == o.Key && !(i.IsCombined && o.IsCombined)) { CanConvert = false; SetStatus("Input and output layouts are the same.", true); return; }
         if (FilesMode && Files.Count == 0) { CanConvert = false; SetStatus("Add the files to convert.", false); return; }
         CanConvert = true;
         SetStatus($"{i.Name} → {o.Name}", false);

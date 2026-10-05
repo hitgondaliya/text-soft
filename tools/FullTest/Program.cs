@@ -61,6 +61,7 @@ Console.WriteLine();
 var problems = new List<string>();
 var allUnmapped = new Dictionary<string, int>(StringComparer.Ordinal);
 int comboOk = 0, comboTotal = 0;
+var skippedOptional = new SortedSet<string>(StringComparer.OrdinalIgnoreCase);
 
 foreach (var lang in bundle.Languages)
 {
@@ -77,125 +78,151 @@ foreach (var lang in bundle.Languages)
             continue;
         }
 
-        var font = lang.Fonts.FirstOrDefault(f => f.Id == fl.FontId);
-        if (font is null)
+        var baseFont = lang.Fonts.FirstOrDefault(f => f.Id == fl.FontId);
+        if (baseFont is null)
         {
             Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + "fontId '" + fl.FontId + "' is not a font of this language");
             problems.Add(lang.Name + " / " + fl.Name + ": fontId '" + fl.FontId + "' not found");
             continue;
         }
 
-        // 2. the font layout claims a type — does the font agree?
-        bool wantLegacy = fl.Type == FontType.Legacy;
-        if (wantLegacy != (font.Type == FontType.Legacy))
+        // A layout that gathers several font products (Bhasha Bharati: Gopika, the -1
+        // faces, the -2 faces) is tested once per encoding, each with its own fonts.
+        var targets = new List<(FontAsset Font, string Name)>();
+        if (fl.Encodings is { Count: > 1 })
         {
-            Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + "type mismatch: layout says " + fl.Type.ToString() + ", font '" + font.Id + "' is " + font.Type);
-            problems.Add(lang.Name + " / " + fl.Name + ": type mismatch with font " + font.Id);
-            continue;
-        }
-
-        FontConverter? conv = null;
-        if (wantLegacy)
-        {
-            conv = bundle.CreateConverterToLegacy(font.ConversionKey);
-            if (conv is null)
+            foreach (var e in fl.Encodings)
             {
-                Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + "no Unicode -> " + font.ConversionKey + " table");
-                problems.Add(lang.Name + " / " + fl.Name + ": no mapping table for " + font.ConversionKey);
-                continue;
-            }
-        }
-
-        // every font that shares this encoding is offered in the same dropdown
-        var sameEncoding = wantLegacy
-            ? lang.Fonts.Where(f => f.Type == FontType.Legacy && f.ConversionKey == font.ConversionKey).ToList()
-            : new List<FontAsset> { font };
-
-        foreach (var kb in layouts)
-        {
-            comboTotal++;
-            KeyboardLayout kl;
-            try { kl = bundle.GetLayout(kb); }
-            catch (Exception ex)
-            {
-                Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + kb.Name.PadRight(18) + "layout will not load: " + ex.Message);
-                problems.Add(lang.Name + " / " + fl.Name + " / " + kb.Name + ": layout load failed");
-                continue;
-            }
-
-            // press every key, base and shift - and then every run the keyboard
-            // defines, including the two layers reached with Ctrl+Space and
-            // Ctrl+Shift+1, because a typist can type all of those too
-            var produced = new List<string>();
-            foreach (var k in kl.Keys)
-            {
-                if (!string.IsNullOrEmpty(k.Base)) produced.Add(k.Base!);
-                if (!string.IsNullOrEmpty(k.Shift)) produced.Add(k.Shift!);
-                if (!string.IsNullOrEmpty(k.AltGr)) produced.Add(k.AltGr!);
-            }
-            if (withRuns)
-                foreach (var s in kl.Sequences)
-                    if (!string.IsNullOrEmpty(s.To)) produced.Add(s.To);
-            if (produced.Count == 0)
-            {
-                Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + kb.Name.PadRight(18) + "layout has no keys");
-                problems.Add(lang.Name + " / " + fl.Name + " / " + kb.Name + ": empty layout");
-                continue;
-            }
-
-            var unmapped = new SortedSet<string>(StringComparer.Ordinal);
-            var outChars = new SortedSet<char>();
-            foreach (string u in produced)
-            {
-                string outText = u;
-                if (conv is not null)
+                var f = lang.Fonts.FirstOrDefault(x => x.ConversionKey == e && x.Id == fl.FontId)
+                        ?? lang.Fonts.FirstOrDefault(x => x.ConversionKey == e);
+                if (f is null)
                 {
-                    var r = conv.Convert(u);
-                    outText = r.Text;
-                    // plain ASCII that maps to itself is not a gap — a comma stays a
-                    // comma in a legacy font, so only flag real script characters
-                    foreach (string c in r.UnmappedCharacters)
-                        if (c.Any(ch => ch >= 0x80) && !c.All(ch => EncodingLimits.Covers(font.ConversionKey, ch))) unmapped.Add(c);
-                }
-                // A character the encoding cannot express comes back unchanged, so
-                // it would then fail the cmap check as well — count it once, as a
-                // known limit of the encoding, not twice as a missing glyph.
-                foreach (char c in outText) if (c >= 0x20 && !EncodingLimits.Covers(font.ConversionKey, c)) outChars.Add(c);
-            }
-
-            // does every produced code exist in the fonts that would draw it?
-            var missingByFont = new List<string>();
-            foreach (var f in sameEncoding)
-            {
-                if (!cmaps.TryGetValue(f.Family, out var codes))
-                {
-                    missingByFont.Add(f.Family + " (not installed)");
+                    Console.WriteLine("  [FAIL] " + fl.Name.PadRight(26) + "no font of encoding " + e);
+                    problems.Add(lang.Name + " / " + fl.Name + ": no font of encoding " + e);
                     continue;
                 }
-                // Name the codes, not just the count: "missing 1/70" gives nothing
-                // to act on, while the code points say which glyph the table is
-                // asking a font for that the font never had.
-                var gone = outChars.Where(c => !codes.Contains(c)).ToList();
-                if (gone.Count > 0)
-                    missingByFont.Add(f.Family + " missing " + string.Join(",", gone.Select(c => "U+" + ((int)c).ToString("X4"))) + " of " + outChars.Count);
+                targets.Add((f, fl.Name + " [" + e + "]"));
             }
+        }
+        else targets.Add((baseFont, fl.Name));
 
-            foreach (string u in unmapped) allUnmapped[font.ConversionKey + "	" + u] = allUnmapped.GetValueOrDefault(font.ConversionKey + "	" + u) + 1;
-            bool ok = unmapped.Count == 0 && missingByFont.Count == 0;
-            if (ok) comboOk++;
-
-            if (!ok || verbose)
+        foreach (var (font, flName) in targets)
+        {
+            // 2. the font layout claims a type — does the font agree?
+            bool wantLegacy = fl.Type == FontType.Legacy;
+            if (wantLegacy != (font.Type == FontType.Legacy))
             {
-                string flag = ok ? "  ok  " : "[FAIL]";
-                string detail = ok ? produced.Count + " keys -> " + outChars.Count + " codes, all present"
-                    : (unmapped.Count > 0 ? "unmapped[" + string.Join("", unmapped) + "] " : "")
-                      + (missingByFont.Count > 0 ? string.Join("; ", missingByFont.Take(3)) : "");
-                Console.WriteLine("  " + flag + " " + fl.Name.PadRight(26) + kb.Name.PadRight(18) + detail);
+                Console.WriteLine("  [FAIL] " + flName.PadRight(26) + "type mismatch: layout says " + fl.Type.ToString() + ", font '" + font.Id + "' is " + font.Type);
+                problems.Add(lang.Name + " / " + flName + ": type mismatch with font " + font.Id);
+                continue;
             }
-            if (!ok)
-                problems.Add(lang.Name + " / " + fl.Name + " / " + kb.Name + ": "
-                    + (unmapped.Count > 0 ? unmapped.Count + " unmapped " : "")
-                    + (missingByFont.Count > 0 ? string.Join("; ", missingByFont.Take(2)) : ""));
+
+            FontConverter? conv = null;
+            if (wantLegacy)
+            {
+                conv = bundle.CreateConverterToLegacy(font.ConversionKey);
+                if (conv is null)
+                {
+                    Console.WriteLine("  [FAIL] " + flName.PadRight(26) + "no Unicode -> " + font.ConversionKey + " table");
+                    problems.Add(lang.Name + " / " + flName + ": no mapping table for " + font.ConversionKey);
+                    continue;
+                }
+            }
+
+            // every font that shares this encoding is offered in the same dropdown
+            var sameEncoding = wantLegacy
+                ? lang.Fonts.Where(f => f.Type == FontType.Legacy && f.ConversionKey == font.ConversionKey).ToList()
+                : new List<FontAsset> { font };
+
+            foreach (var kb in layouts)
+            {
+                comboTotal++;
+                KeyboardLayout kl;
+                try { kl = bundle.GetLayout(kb); }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("  [FAIL] " + flName.PadRight(26) + kb.Name.PadRight(18) + "layout will not load: " + ex.Message);
+                    problems.Add(lang.Name + " / " + flName + " / " + kb.Name + ": layout load failed");
+                    continue;
+                }
+
+                // press every key, base and shift - and then every run the keyboard
+                // defines, including the two layers reached with Ctrl+Space and
+                // Ctrl+Shift+1, because a typist can type all of those too
+                var produced = new List<string>();
+                foreach (var k in kl.Keys)
+                {
+                    if (!string.IsNullOrEmpty(k.Base)) produced.Add(k.Base!);
+                    if (!string.IsNullOrEmpty(k.Shift)) produced.Add(k.Shift!);
+                    if (!string.IsNullOrEmpty(k.AltGr)) produced.Add(k.AltGr!);
+                }
+                if (withRuns)
+                    foreach (var s in kl.Sequences)
+                        if (!string.IsNullOrEmpty(s.To)) produced.Add(s.To);
+                if (produced.Count == 0)
+                {
+                    Console.WriteLine("  [FAIL] " + flName.PadRight(26) + kb.Name.PadRight(18) + "layout has no keys");
+                    problems.Add(lang.Name + " / " + flName + " / " + kb.Name + ": empty layout");
+                    continue;
+                }
+
+                var unmapped = new SortedSet<string>(StringComparer.Ordinal);
+                var outChars = new SortedSet<char>();
+                foreach (string u in produced)
+                {
+                    string outText = u;
+                    if (conv is not null)
+                    {
+                        var r = conv.Convert(u);
+                        outText = r.Text;
+                        // plain ASCII that maps to itself is not a gap — a comma stays a
+                        // comma in a legacy font, so only flag real script characters
+                        foreach (string c in r.UnmappedCharacters)
+                            if (c.Any(ch => ch >= 0x80) && !c.All(ch => EncodingLimits.Covers(font.ConversionKey, ch))) unmapped.Add(c);
+                    }
+                    // A character the encoding cannot express comes back unchanged, so
+                    // it would then fail the cmap check as well — count it once, as a
+                    // known limit of the encoding, not twice as a missing glyph.
+                    foreach (char c in outText) if (c >= 0x20 && !EncodingLimits.Covers(font.ConversionKey, c)) outChars.Add(c);
+                }
+
+                // does every produced code exist in the fonts that would draw it?
+                var missingByFont = new List<string>();
+                foreach (var f in sameEncoding)
+                {
+                    if (!cmaps.TryGetValue(f.Family, out var codes) && !cmaps.TryGetValue(f.Family.Trim(), out codes))
+                    {
+                        // An optional face is listed only on a PC that has it, so its absence
+                        // here is not a gap the user can meet.
+                        if (f.Optional) { skippedOptional.Add(f.Family.Trim()); continue; }
+                        missingByFont.Add(f.Family + " (not installed)");
+                        continue;
+                    }
+                    // Name the codes, not just the count: "missing 1/70" gives nothing
+                    // to act on, while the code points say which glyph the table is
+                    // asking a font for that the font never had.
+                    var gone = outChars.Where(c => !codes.Contains(c)).ToList();
+                    if (gone.Count > 0)
+                        missingByFont.Add(f.Family + " missing " + string.Join(",", gone.Select(c => "U+" + ((int)c).ToString("X4"))) + " of " + outChars.Count);
+                }
+
+                foreach (string u in unmapped) allUnmapped[font.ConversionKey + "	" + u] = allUnmapped.GetValueOrDefault(font.ConversionKey + "	" + u) + 1;
+                bool ok = unmapped.Count == 0 && missingByFont.Count == 0;
+                if (ok) comboOk++;
+
+                if (!ok || verbose)
+                {
+                    string flag = ok ? "  ok  " : "[FAIL]";
+                    string detail = ok ? produced.Count + " keys -> " + outChars.Count + " codes, all present"
+                        : (unmapped.Count > 0 ? "unmapped[" + string.Join("", unmapped) + "] " : "")
+                          + (missingByFont.Count > 0 ? string.Join("; ", missingByFont.Take(3)) : "");
+                    Console.WriteLine("  " + flag + " " + flName.PadRight(26) + kb.Name.PadRight(18) + detail);
+                }
+                if (!ok)
+                    problems.Add(lang.Name + " / " + flName + " / " + kb.Name + ": "
+                        + (unmapped.Count > 0 ? unmapped.Count + " unmapped " : "")
+                        + (missingByFont.Count > 0 ? string.Join("; ", missingByFont.Take(2)) : ""));
+            }
         }
     }
     Console.WriteLine();
@@ -208,7 +235,7 @@ foreach (var lang in bundle.Languages)
 // because the entry looks perfectly well-formed.
 var listedFamilies = bundle.Languages.SelectMany(l => l.Fonts).Select(f => f.Family)
     .Where(f => !string.IsNullOrWhiteSpace(f)).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
-var absent = listedFamilies.Where(f => !cmaps.ContainsKey(f)).OrderBy(f => f, StringComparer.OrdinalIgnoreCase).ToList();
+var absent = listedFamilies.Where(f => !cmaps.ContainsKey(f) && !cmaps.ContainsKey(f.Trim())).OrderBy(f => f, StringComparer.OrdinalIgnoreCase).ToList();
 Console.WriteLine("font families listed: " + listedFamilies.Count + ", present here: " + (listedFamilies.Count - absent.Count));
 foreach (string f in absent) Console.WriteLine("  not on this machine: " + f);
 Console.WriteLine();
@@ -219,6 +246,8 @@ Console.WriteLine("==== characters the keyboards type that no table covers ===="
 foreach (var g in allUnmapped.GroupBy(u => u.Key.Split('\t')[0]).OrderByDescending(g => g.Count()))
     Console.WriteLine($"  {g.Key,-22} {g.Count(),3} : " +
                       string.Join(" ", g.Select(x => x.Key.Split('\t')[1]).Take(28)));
+if (skippedOptional.Count > 0)
+    Console.WriteLine("optional faces not on this machine (skipped): " + skippedOptional.Count + " — " + string.Join(", ", skippedOptional.Take(12)) + (skippedOptional.Count > 12 ? " …" : ""));
 Console.WriteLine();
 Console.WriteLine("==== combinations " + comboOk + "/" + comboTotal + " fully working ====");
 if (problems.Count > 0)
