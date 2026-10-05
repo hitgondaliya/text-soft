@@ -27,6 +27,9 @@
     <!-- Country list + one flag PNG per country for the registration form
          (Windows renders emoji flags as letters, so bitmaps are embedded). -->
     <Resource Include="Assets\countries.json" />
+    <!-- The TS mark cut out of logo.png: brand colours, and light strokes for the dark sidebar. -->
+    <Resource Include="Assets\logo-mark.png" />
+    <Resource Include="Assets\logo-mark-light.png" />
     <Resource Include="Assets\flags\*.png" />
   </ItemGroup>
 

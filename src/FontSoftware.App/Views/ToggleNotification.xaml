@@ -3,11 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize"
-        SizeToContent="WidthAndHeight" Focusable="False" IsHitTestVisible="False">
-    <Border Background="#EE1E1E1E" CornerRadius="8" Padding="18,12">
-        <StackPanel>
-            <TextBlock x:Name="StatusText" Foreground="White" FontSize="16" FontWeight="SemiBold" />
-            <TextBlock x:Name="ProfileText" Foreground="#CCFFFFFF" FontSize="13" Margin="0,4,0,0" />
-        </StackPanel>
-    </Border>
+        SizeToContent="WidthAndHeight" Focusable="False" IsHitTestVisible="False"
+        FontFamily="{StaticResource UiFont}">
+    <!-- The margin leaves room for the shadow, which a transparent window would clip. -->
+    <Grid Margin="18">
+        <Border CornerRadius="16" Background="#FC1C1F24" Effect="{StaticResource PopupShadow}" />
+        <Border CornerRadius="16" BorderBrush="#1FFFFFFF" BorderThickness="1" Padding="16,14,22,14" MinWidth="250">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/logo-mark-light.png" Width="36" Height="36" VerticalAlignment="Center"
+                       RenderOptions.BitmapScalingMode="HighQuality" />
+                <StackPanel Margin="14,0,0,0" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse x:Name="StatusDot" Width="9" Height="9" Fill="#12B76A" VerticalAlignment="Center" />
+                        <TextBlock x:Name="StatusText" Foreground="White" FontSize="15.5" FontWeight="SemiBold" Margin="8,0,0,0" />
+                    </StackPanel>
+                    <TextBlock x:Name="ProfileText" Foreground="#C9CDD3" FontSize="12.5" Margin="17,3,0,0" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
 </Window>

@@ -11,6 +11,15 @@ namespace FontSoftware.App.Views;
 public partial class ToggleNotification : Window
 {
     private readonly DispatcherTimer _timer;
+    private static readonly System.Windows.Media.Brush OnBrush = Frozen(0x12, 0xB7, 0x6A);
+    private static readonly System.Windows.Media.Brush OffBrush = Frozen(0x9C, 0xA2, 0xAB);
+
+    private static System.Windows.Media.Brush Frozen(byte r, byte g, byte b)
+    {
+        var brush = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(r, g, b));
+        brush.Freeze();
+        return brush;
+    }
 
     public ToggleNotification()
     {
@@ -24,6 +33,7 @@ public partial class ToggleNotification : Window
     public void Show(bool enabled, string languageName, string fontName)
     {
         StatusText.Text = enabled ? "Typing ON" : "Typing OFF";
+        StatusDot.Fill = enabled ? OnBrush : OffBrush;
         ProfileText.Text = enabled ? $"{languageName} · {fontName}" : "English";
         ProfileText.Visibility = string.IsNullOrWhiteSpace(ProfileText.Text)
             ? Visibility.Collapsed : Visibility.Visible;
@@ -46,7 +56,8 @@ public partial class ToggleNotification : Window
     private void PositionBottomRight()
     {
         var area = SystemParameters.WorkArea;
-        Left = area.Right - ActualWidth - 24;
-        Top = area.Bottom - ActualHeight - 24;
+        // The card sits inside an 18px margin that holds its shadow.
+        Left = area.Right - ActualWidth - 6;
+        Top = area.Bottom - ActualHeight - 6;
     }
 }
