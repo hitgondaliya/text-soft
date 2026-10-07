@@ -1034,6 +1034,23 @@ public sealed class TypingEngine : IDisposable
     private static bool IsDown(int vk) => KeyDownProbe(vk);
     private static bool IsToggled(int vk) => (GetKeyState(vk) & 0x0001) != 0;
 
+    /// <summary>
+    /// Forget the word in progress. Called when the hook was put back after Windows
+    /// had dropped it: the keys typed meanwhile went past the engine, so what it
+    /// remembers of the word no longer matches what is on screen.
+    /// </summary>
+    public void Resync()
+    {
+        _pendingDead = null;
+        _lastEmitted = null;
+        _ctrlLifted = false;
+        _layerKey = 0;
+        _escapeKey = 0;
+        ResetPhonetic();
+        ResetSequence();
+        ResetLegacy();
+    }
+
     public void Dispose()
     {
         _hook.KeyEvent -= OnKey;

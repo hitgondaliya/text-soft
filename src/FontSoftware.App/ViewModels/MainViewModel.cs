@@ -25,7 +25,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     private readonly StartupService _startup;
     private readonly FontResolver _fonts;
 
-    private readonly LowLevelKeyboardHook _hook;
+    private readonly KeyboardThread _keyboard;   // the hook and the engine run there, never on the UI thread
+    private readonly Dispatcher _ui = Dispatcher.CurrentDispatcher;
     private readonly InputInjector _injector;
     private readonly TypingEngine _engine;
     private readonly DispatcherTimer _licenseTimer;
@@ -248,7 +249,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             // Full-lock: never let typing run while the app is unlicensed.
             if (value && License is { IsActive: false }) value = false;
             if (SetProperty(ref _typingEnabled, value))
-                _engine.SetEnabled(value);
+                _keyboard.Invoke(() => _engine.SetEnabled(value));
         }
     }
 
@@ -284,7 +285,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         {
             if (SetProperty(ref _phoneticMode, value))
             {
-                _engine.SetPhoneticMode(value);
+                _keyboard.Invoke(() => _engine.SetPhoneticMode(value));
                 Status = value ? "Phonetic mode: type words the way they sound." : Status;
             }
         }
@@ -310,7 +311,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         {
             if (SetProperty(ref _selectedToggleKey, value) && value is not null)
             {
-                _engine.ToggleKey = value.VirtualKey;
+                _keyboard.Invoke(() => _engine.ToggleKey = value.VirtualKey);
                 _settings.ToggleKey = value.VirtualKey;
                 Persist();
             }
@@ -373,9 +374,12 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                              .Distinct()
                              .ToList();
 
-            _engine.ExcludedProcesses.Clear();
-            foreach (var n in names)
-                _engine.ExcludedProcesses.Add(n);
+            _keyboard.Invoke(() =>
+            {
+                _engine.ExcludedProcesses.Clear();
+                foreach (var n in names)
+                    _engine.ExcludedProcesses.Add(n);
+            });
 
             _settings.ExcludedProcesses = names;
             Persist();
@@ -400,9 +404,10 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         _fonts = fonts;
 
         _startup = new StartupService(log);
-        _hook = new LowLevelKeyboardHook();
+        _keyboard = new KeyboardThread(log);
         _injector = new InputInjector(log);
-        _engine = new TypingEngine(_hook, _injector, log) { ToggleKey = settings.ToggleKey };
+        _engine = new TypingEngine(_keyboard.Hook, _injector, log) { ToggleKey = settings.ToggleKey };
+        _keyboard.Restored = _engine.Resync;
         _engine.Toggled += OnEngineToggled;
         foreach (var name in settings.ExcludedProcesses)
             _engine.ExcludedProcesses.Add(name);
@@ -482,8 +487,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     {
         try
         {
-            _hook.Install();
-            _log.Info("Keyboard hook installed.");
+            _keyboard.Start();
+            _log.Info("Keyboard hook installed (on its own thread, with a watchdog).");
         }
         catch (Exception ex)
         {
@@ -648,11 +653,12 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         try
         {
             var layout = _bundle.GetLayout(SelectedLayout);
-            _engine.SetProfile(layout, SelectedLanguage.Name, SelectedFont?.Name ?? string.Empty);
+            string languageName = SelectedLanguage.Name, fontName = SelectedFont?.Name ?? string.Empty;
+            _keyboard.Invoke(() => _engine.SetProfile(layout, languageName, fontName));
 
             // Phonetic scheme for this language (null if none) drives the type-by-sound toggle.
             var translit = _bundle.GetTransliterator(SelectedLanguage);
-            _engine.SetTransliterator(translit);
+            _keyboard.Invoke(() => _engine.SetTransliterator(translit));
             HasPhonetic = translit is not null;
             if (!HasPhonetic && PhoneticMode)
                 PhoneticMode = false;
@@ -664,7 +670,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                 legacy = _bundle.CreateConverterToLegacy(SelectedFont.ConversionKey);
             LegacyTypingActive = legacy is not null;
             UpdateLegacyFontHint();
-            _engine.SetLegacyConverter(legacy, LegacyFontName);
+            string? legacyFont = LegacyFontName;
+            _keyboard.Invoke(() => _engine.SetLegacyConverter(legacy, legacyFont));
 
             RefreshKeyboard();
             PersistSelection(); // reopen with exactly this language/font/keyboard
@@ -782,7 +789,12 @@ public sealed class MainViewModel : ObservableObject, IDisposable
 
     private void OnEngineToggled(object? sender, ToggleEventArgs e)
     {
-        // Hook callback runs on the UI thread, so touching the VM is safe.
+        // The engine runs on the keyboard thread; the view model belongs to the UI one.
+        if (!_ui.CheckAccess())
+        {
+            _ui.BeginInvoke(() => OnEngineToggled(sender, e));
+            return;
+        }
         SetProperty(ref _typingEnabled, e.Enabled, nameof(TypingEnabled));
         if (ShowToggleNotification)
             ToggleNotified?.Invoke(e.Enabled, e.LanguageName, e.FontName);
@@ -883,8 +895,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     {
         _licenseTimer.Stop();
         _engine.Toggled -= OnEngineToggled;
-        _engine.Dispose();
-        _hook.Dispose();
+        _keyboard.Invoke(_engine.Dispose);
+        _keyboard.Dispose();
     }
 }
 

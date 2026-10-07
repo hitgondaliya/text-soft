@@ -27,8 +27,8 @@ public sealed class HookKeyEventArgs : EventArgs
 
 /// <summary>
 /// Installs a system-wide low-level keyboard hook (WH_KEYBOARD_LL) and raises an
-/// event for every key. Must be created and disposed on a thread that pumps a
-/// Windows message loop (the WPF UI thread).
+/// event for every key. Must be installed and disposed on a thread that pumps a
+/// Windows message loop - in the app, a thread of its own (see KeyboardThread).
 ///
 /// Reliability (FRD §NFR): the hook is fully released on Dispose; if the process
 /// exits, Windows tears the hook down, so it cannot permanently block input.
@@ -40,6 +40,16 @@ public sealed class LowLevelKeyboardHook : IDisposable
     private readonly LowLevelKeyboardProc _proc;
     private IntPtr _hook = IntPtr.Zero;
     private bool _disposed;
+
+    // When the hook last saw each key go down - what the watchdog checks the
+    // keyboard against (see MissedAKey).
+    private readonly long[] _lastDown = new long[256];
+
+    // The keys a typist types with: letters, digits, space and punctuation.
+    private static readonly int[] Watched = Enumerable.Range('A', 26)
+        .Concat(Enumerable.Range('0', 10))
+        .Concat(new[] { 0x20, 0xBA, 0xBB, 0xBC, 0xBD, 0xBE, 0xBF, 0xC0, 0xDB, 0xDC, 0xDD, 0xDE })
+        .ToArray();
 
     public event EventHandler<HookKeyEventArgs>? KeyEvent;
 
@@ -61,6 +71,35 @@ public sealed class LowLevelKeyboardHook : IDisposable
         if (_hook == IntPtr.Zero)
             throw new InvalidOperationException(
                 $"Failed to install keyboard hook (Win32 error {Marshal.GetLastWin32Error()}).");
+    }
+
+    /// <summary>
+    /// True when a key is down right now that this hook never saw go down - which
+    /// happens only once Windows has stopped calling it (a hook that answers too
+    /// slowly is removed without notice). A key held down auto-repeats, and every
+    /// repeat is a key-down the hook sees, so a held key does not count.
+    /// </summary>
+    public bool MissedAKey()
+    {
+        long now = Environment.TickCount64;
+        foreach (int vk in Watched)
+            if ((GetAsyncKeyState(vk) & 0x8000) != 0 && now - Volatile.Read(ref _lastDown[vk]) > 1000)
+                return true;
+        return false;
+    }
+
+    /// <summary>
+    /// Put the hook back after Windows dropped it. On the thread that installed it,
+    /// like <see cref="Install"/>. The keys down at this moment went past the old
+    /// hook; they are not missed again.
+    /// </summary>
+    public void Reinstall()
+    {
+        Uninstall();
+        Install();
+        long now = Environment.TickCount64;
+        foreach (int vk in Watched)
+            if ((GetAsyncKeyState(vk) & 0x8000) != 0) Volatile.Write(ref _lastDown[vk], now);
     }
 
     /// <summary>Remove the hook. Safe to call when not installed.</summary>
@@ -92,6 +131,8 @@ public sealed class LowLevelKeyboardHook : IDisposable
             // anyone using one.
             bool lift = data.dwExtraInfo == InputInjector.LiftSignature;
             bool injected = lift || data.dwExtraInfo == InputInjector.InjectionSignature;
+
+            if (isDown && data.vkCode < 256) Volatile.Write(ref _lastDown[data.vkCode], Environment.TickCount64);
 
             var args = new HookKeyEventArgs
             {
