@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using FontSoftware.Core.Keyboards;
 
 namespace FontSoftware.Core.Models;
 
@@ -148,6 +149,14 @@ public sealed class KeyboardLayout
     private HashSet<string>? _seqPrefixes;
     private Dictionary<string, string>? _escIndex;
     private Dictionary<string, string>? _symIndex;
+    private TypingOrder? _order;
+
+    /// <summary>
+    /// The order this keyboard is typed in - a sign struck before its letter, a
+    /// reph struck after it - read off its own runs (see <see cref="TypingOrder"/>).
+    /// </summary>
+    [JsonIgnore]
+    public TypingOrder Order => _order ??= TypingOrder.Learn(this);
 
     /// <summary>Fast lookup of a key mapping by virtual-key code.</summary>
     public KeyMapping? Find(int virtualKey)
@@ -243,5 +252,6 @@ public sealed class KeyboardLayout
         _seqPrefixes = null;
         _escIndex = null;
         _symIndex = null;
+        _order = null;
     }
 }

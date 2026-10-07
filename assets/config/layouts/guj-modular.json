@@ -16,6 +16,7 @@
     },
     {
       "vk": 66,
+      "base": "ુ",
       "shift": "ઉ",
       "deadKey": false
     },
@@ -23,6 +24,11 @@
       "vk": 67,
       "base": "જ",
       "shift": "ઝ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "shift": "્‌",
       "deadKey": false
     },
     {
@@ -38,12 +44,19 @@
       "deadKey": false
     },
     {
+      "vk": 71,
+      "base": "િ",
+      "deadKey": false
+    },
+    {
       "vk": 72,
+      "base": "ી",
       "shift": "ક્ષ",
       "deadKey": false
     },
     {
       "vk": 73,
+      "base": "ં",
       "shift": "ઠ",
       "deadKey": false
     },
@@ -55,11 +68,13 @@
     },
     {
       "vk": 75,
+      "base": "ા",
       "shift": "શ",
       "deadKey": false
     },
     {
       "vk": 76,
+      "base": "ે",
       "shift": "ષ",
       "deadKey": false
     },
@@ -71,6 +86,7 @@
     },
     {
       "vk": 78,
+      "base": "ૂ",
       "shift": "ઊ",
       "deadKey": false
     },
@@ -82,6 +98,7 @@
     },
     {
       "vk": 80,
+      "base": "ૈ",
       "shift": "ઢ",
       "deadKey": false
     },
@@ -151,12 +168,14 @@
     },
     {
       "vk": 192,
+      "base": "ઃ",
       "shift": "।",
       "deadKey": false
     },
     {
       "vk": 219,
       "base": "અ",
+      "shift": "ૃ",
       "deadKey": false
     },
     {
@@ -167,6 +186,11 @@
     {
       "vk": 221,
       "shift": "ઽ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "base": "ર્",
       "deadKey": false
     }
   ],
@@ -449,6 +473,10 @@
       "to": "કાઁ"
     },
     {
+      "keys": "¤$",
+      "to": "₹"
+    },
+    {
       "keys": "¤*",
       "to": "×"
     },
@@ -508,6 +536,10 @@
     }
   ],
   "symbols": [
+    {
+      "keys": "$",
+      "to": "₹"
+    },
     {
       "keys": "*",
       "to": "×"

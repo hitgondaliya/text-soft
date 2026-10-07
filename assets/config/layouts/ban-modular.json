@@ -21,6 +21,7 @@
     },
     {
       "vk": 66,
+      "base": "ু",
       "shift": "উ",
       "deadKey": false
     },
@@ -28,6 +29,11 @@
       "vk": 67,
       "base": "জ",
       "shift": "ঝ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "shift": "্‌",
       "deadKey": false
     },
     {
@@ -44,16 +50,19 @@
     },
     {
       "vk": 71,
+      "base": "ি",
       "shift": "ৎ",
       "deadKey": false
     },
     {
       "vk": 72,
+      "base": "ী",
       "shift": "ঈ",
       "deadKey": false
     },
     {
       "vk": 73,
+      "base": "ং",
       "shift": "ঠ",
       "deadKey": false
     },
@@ -65,6 +74,7 @@
     },
     {
       "vk": 75,
+      "base": "া",
       "shift": "শ",
       "deadKey": false
     },
@@ -81,6 +91,7 @@
     },
     {
       "vk": 78,
+      "base": "ূ",
       "shift": "ঊ",
       "deadKey": false
     },
@@ -92,6 +103,7 @@
     },
     {
       "vk": 80,
+      "base": "ৈ",
       "shift": "ঢ",
       "deadKey": false
     },
@@ -165,14 +177,25 @@
       "deadKey": false
     },
     {
+      "vk": 192,
+      "shift": "ঃ",
+      "deadKey": false
+    },
+    {
       "vk": 219,
       "base": "অ",
+      "shift": "ৃ",
       "deadKey": false
     },
     {
       "vk": 220,
       "base": "য়",
       "shift": "ঞ",
+      "deadKey": false
+    },
+    {
+      "vk": 222,
+      "shift": "ঁ",
       "deadKey": false
     }
   ],

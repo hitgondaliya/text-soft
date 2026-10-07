@@ -4,6 +4,11 @@
   "fontId": "latha",
   "keys": [
     {
+      "vk": 55,
+      "shift": "ு",
+      "deadKey": false
+    },
+    {
       "vk": 65,
       "base": "ர",
       "shift": "ரு",
@@ -11,6 +16,7 @@
     },
     {
       "vk": 66,
+      "base": "ே",
       "shift": "ஏ",
       "deadKey": false
     },
@@ -34,6 +40,7 @@
     },
     {
       "vk": 70,
+      "base": "்",
       "shift": "அ",
       "deadKey": false
     },
@@ -45,6 +52,7 @@
     },
     {
       "vk": 72,
+      "base": "ி",
       "shift": "இ",
       "deadKey": false
     },
@@ -56,6 +64,7 @@
     },
     {
       "vk": 74,
+      "base": "ீ",
       "shift": "ஈ",
       "deadKey": false
     },
@@ -113,16 +122,19 @@
     },
     {
       "vk": 84,
+      "base": "ா",
       "shift": "ஆ",
       "deadKey": false
     },
     {
       "vk": 85,
+      "base": "ை",
       "shift": "ஐ",
       "deadKey": false
     },
     {
       "vk": 86,
+      "base": "ெ",
       "shift": "எ",
       "deadKey": false
     },
@@ -184,11 +196,13 @@
     },
     {
       "vk": 221,
+      "base": "ஃ",
       "shift": "ஹ",
       "deadKey": false
     },
     {
       "vk": 222,
+      "base": "ூ",
       "shift": "ஊ",
       "deadKey": false
     }

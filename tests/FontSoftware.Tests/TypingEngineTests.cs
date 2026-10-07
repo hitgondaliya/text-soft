@@ -665,4 +665,174 @@ public class TypingEngineTests : IDisposable
         foreach (int vk in new[] { VkV, VkI, VkK, VkA, VkA, VkS, VkA }) Press(vk);
         Assert.Equal("વિકાસ", _injector.Text);   // વિકાસ
     }
+
+    // ---- the order a typewriter keyboard is typed in (see TypingOrder) ----
+    // The charts show the i-sign, the reph and the vowel signs on ka alone, and
+    // the layouts used to carry exactly that: only ka came out right.
+
+    /// <summary>Type a run of keys the way the charts write them ("rh", "O$c").</summary>
+    private void TypeKeys(string keys)
+    {
+        foreach (char c in keys)
+        {
+            bool shift = char.IsUpper(c) || "~!@#$%^&*()_+{}|:<>?".IndexOf(c) >= 0 || c == (char)34;
+            int vk = char.IsLetter(c) ? char.ToUpperInvariant(c)
+                   : char.IsDigit(c) ? c
+                   : ")!@#$%^&*(".IndexOf(c) is var d and >= 0 ? '0' + d
+                   : c switch
+                   {
+                       ';' or ':' => 186, '=' or '+' => 187, ',' or '<' => 188, '-' or '_' => 189,
+                       '.' or '>' => 190, '/' or '?' => 191, '`' or '~' => 192, '[' or '{' => 219,
+                       ']' or '}' => 221, '|' => 220, (char)39 or (char)34 => 222, _ => 0,
+                   };
+            if (shift) _down.Add(VkShift);
+            Press(vk);
+            Send(vk, down: false);
+            if (shift) _down.Remove(VkShift);
+        }
+    }
+
+    private void UseHindi(string keyboard)
+    {
+        var hindi = _config.Languages.First(l => l.Id == "hi");
+        _engine.SetProfile(_config.GetLayout(hindi.Layouts.First(l => l.Name == keyboard)), hindi.Name, "Unicode");
+    }
+
+    /// <summary>
+    /// "rf" is કિ on the ITR keyboard: the i-sign is struck before its letter. It
+    /// goes in behind every letter, not only ka - and behind the whole cluster.
+    /// </summary>
+    [Theory]
+    [InlineData("rh", "રિ")]          // r then h used to type િર
+    [InlineData("rf", "કિ")]
+    [InlineData("rPg", "ન્યિ")]       // before a half letter: after the cluster it starts
+    [InlineData("rfTf", "ક્કિ")]      // through a run's link key
+    [InlineData("rhq", "રિૂ")]        // a sign after the letter stays after it
+    public void TheISignStruckFirstGoesBehindItsLetter(string keys, string word)
+    {
+        UseGujarati("Itr");
+        TypeKeys(keys);
+        Assert.Equal(word, _injector.Text);
+    }
+
+    /// <summary>"fo" is ર્ક: the reph is struck after its letter, on every letter.</summary>
+    [Theory]
+    [InlineData("bo", "ર્મ")]
+    [InlineData("dbo", "ગર્મ")]       // on the letter it follows, not the word
+    [InlineData("rbo", "ર્મિ")]
+    [InlineData("rPgo", "ર્ન્યિ")]
+    public void TheRephStruckAfterGoesInFrontOfItsLetter(string keys, string word)
+    {
+        UseGujarati("Itr");
+        TypeKeys(keys);
+        Assert.Equal(word, _injector.Text);
+    }
+
+    [Fact]
+    public void TheSameOrderHoldsOnTheHindiTypewriter()
+    {
+        UseHindi("Typewriter");
+        TypeKeys("fj");
+        Assert.Equal("रि", _injector.Text);
+    }
+
+    /// <summary>
+    /// InScript's chart has "k$" for र्क as well, but InScript is typed in
+    /// Unicode's order and its typists strike the reph first: धर्म is ध, र्, म.
+    /// </summary>
+    [Fact]
+    public void InScriptKeepsTheRephWhereItIsTyped()
+    {
+        UseHindi("InScript");
+        TypeKeys("O$c");
+        Assert.Equal("धर्म", _injector.Text);
+    }
+
+    /// <summary>રૂ is ર then ૂ on every keyboard - on Modular too, whose ૂ key typed nothing alone.</summary>
+    [Theory]
+    [InlineData("Itr", "hq")]
+    [InlineData("InScript", "jt")]
+    [InlineData("Typewriter", "jw")]
+    [InlineData("Newroma", "rU")]
+    [InlineData("Modular", "jn")]
+    public void RuTypesOnEveryKeyboard(string keyboard, string keys)
+    {
+        UseGujarati(keyboard);
+        TypeKeys(keys);
+        Assert.Equal("રૂ", _injector.Text);
+    }
+
+    /// <summary>Ctrl+Shift+1 then $ is the rupee sign, on the Gujarati keyboards as on every other script's.</summary>
+    [Fact]
+    public void CtrlShiftOneThenDollarIsTheRupeeInGujarati()
+    {
+        UseGujarati("Itr");
+        Escape(Vk1, shift: true);
+        TypeKeys("$");
+        Assert.Equal("₹", _injector.Text);
+    }
+
+    /// <summary>On Newroma "e" is એ, and after a consonant its sign: "ke" is કે, so "re" is રે.</summary>
+    [Theory]
+    [InlineData("e", "એ")]
+    [InlineData("re", "રે")]
+    [InlineData("ri", "રિ")]
+    public void AVowelKeyTypesItsSignAfterAConsonant(string keys, string word)
+    {
+        UseGujarati("Newroma");
+        TypeKeys(keys);
+        Assert.Equal(word, _injector.Text);
+    }
+
+    /// <summary>"ftu" is કો: ા then ે are one sign, on every letter.</summary>
+    [Fact]
+    public void TwoSignsTheChartJoinsAreJoinedOnEveryLetter()
+    {
+        UseGujarati("Itr");
+        TypeKeys("htu");
+        Assert.Equal("રો", _injector.Text);
+    }
+
+    /// <summary>A legacy font is sent the word in Unicode's order, converted - what the converter makes of રિ.</summary>
+    [Fact]
+    public void ALegacyFontGetsTheWordInOrder()
+    {
+        UseGujarati("Itr");
+        var toLegacy = _config.CreateConverterToLegacy("gopika-guj")!;
+        _engine.SetLegacyConverter(toLegacy, "Gopika");
+        TypeKeys("rbo");
+        Assert.Equal(toLegacy.ConvertText("ર્મિ"), _injector.Text);
+    }
+
+    /// <summary>Backspace takes back the last key struck, and the rest stays in order.</summary>
+    [Fact]
+    public void BackspaceTakesBackTheLastKeyStruck()
+    {
+        UseGujarati("Itr");
+        TypeKeys("rbo");
+        Assert.True(Press(0x08));
+        Assert.Equal("મિ", _injector.Text);
+    }
+
+    [Fact]
+    public void AKeyboardTypedInUnicodesOrderLearnsNoOrder()
+    {
+        var gujarati = _config.Languages.First(l => l.Id == "gu");
+        Assert.False(_config.GetLayout(gujarati.Layouts.First(l => l.Name == "InScript")).Order.Active);
+        Assert.True(_config.GetLayout(gujarati.Layouts.First(l => l.Name == "Itr")).Order.Active);
+    }
+
+    /// <summary>Whole words, struck the way an ITR typist strikes them.</summary>
+    [Theory]
+    [InlineData("r'Jm", "દિવસ")]
+    [InlineData("rfkb;", "કિંમત")]
+    [InlineData("\"bo", "ધર્મ")]
+    [InlineData("rmT:h", "સ્થિર")]
+    [InlineData("hq'", "રૂદ")]
+    public void WordsTypeOnTheItrKeyboard(string keys, string word)
+    {
+        UseGujarati("Itr");
+        TypeKeys(keys);
+        Assert.Equal(word, _injector.Text);
+    }
 }

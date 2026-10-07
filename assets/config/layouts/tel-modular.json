@@ -15,11 +15,13 @@
     },
     {
       "vk": 65,
+      "base": "ా",
       "shift": "ఆ",
       "deadKey": false
     },
     {
       "vk": 66,
+      "base": "ె",
       "shift": "ఎ",
       "deadKey": false
     },
@@ -27,6 +29,11 @@
       "vk": 67,
       "base": "చ",
       "shift": "ఛ",
+      "deadKey": false
+    },
+    {
+      "vk": 68,
+      "shift": "్‌",
       "deadKey": false
     },
     {
@@ -79,11 +86,13 @@
     },
     {
       "vk": 77,
+      "base": "ై",
       "shift": "ఐ",
       "deadKey": false
     },
     {
       "vk": 78,
+      "base": "ు",
       "shift": "ఉ",
       "deadKey": false
     },
@@ -112,6 +121,7 @@
     },
     {
       "vk": 83,
+      "base": "ి",
       "shift": "ఇ",
       "deadKey": false
     },
@@ -129,6 +139,7 @@
     },
     {
       "vk": 86,
+      "base": "ీ",
       "shift": "ఛ",
       "deadKey": false
     },
@@ -152,7 +163,13 @@
     },
     {
       "vk": 90,
+      "base": "ృ",
       "shift": "ఋ",
+      "deadKey": false
+    },
+    {
+      "vk": 188,
+      "shift": "ం",
       "deadKey": false
     },
     {
@@ -161,12 +178,19 @@
       "deadKey": false
     },
     {
+      "vk": 190,
+      "shift": "ః",
+      "deadKey": false
+    },
+    {
       "vk": 192,
+      "base": "ే",
       "shift": "ఏ",
       "deadKey": false
     },
     {
       "vk": 219,
+      "base": "ో",
       "shift": "ఓ",
       "deadKey": false
     },
@@ -177,11 +201,13 @@
     },
     {
       "vk": 221,
+      "base": "ూ",
       "shift": "ఞ",
       "deadKey": false
     },
     {
       "vk": 222,
+      "base": "ౌ",
       "shift": "ఔ",
       "deadKey": false
     }

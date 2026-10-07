@@ -1,6 +1,7 @@
 using System.Text;
 using FontSoftware.Core.Conversion;
 using FontSoftware.Core.Diagnostics;
+using FontSoftware.Core.Keyboards;
 using FontSoftware.Core.Models;
 using static FontSoftware.Engine.NativeMethods;
 
@@ -92,6 +93,15 @@ public sealed class TypingEngine : IDisposable
     private readonly StringBuilder _uniWord = new(); // Unicode typed for the current word
     private string _legacyOut = string.Empty;        // legacy text currently shown for it
 
+    // ---- Typing order (see TypingOrder) ----
+    // A typewriter keyboard strikes the i-sign before its letter and the reph after
+    // it. On such a keyboard the word is kept as typed, with those two still marked,
+    // and what goes on screen is that word put into Unicode's order.
+    private TypingOrder _order = TypingOrder.None;
+    private readonly StringBuilder _raw = new();     // the word as typed
+    private string _word = string.Empty;             // the word in Unicode's order, as shown
+    private int _lastPiece;                          // how much of _raw the last keystroke typed
+
     /// <summary>When true (and a scheme is set), keys are transliterated by sound instead of the layout.</summary>
     public bool PhoneticMode { get; private set; }
 
@@ -133,6 +143,7 @@ public sealed class TypingEngine : IDisposable
     {
         _layout = layout ?? throw new ArgumentNullException(nameof(layout));
         _layoutIsPhonetic = layout.Phonetic;
+        _order = layout.Order;
         _languageName = languageName;
         _fontName = fontName;
         _pendingDead = null;
@@ -141,6 +152,7 @@ public sealed class TypingEngine : IDisposable
         ResetSequence();
         ResetLegacy();
         _log.Info($"Profile set: {languageName} / {fontName} / layout '{layout.Name}'.");
+        if (_order.Active) _log.Info($"Typing order of '{layout.Name}': {_order}.");
     }
 
     /// <summary>Set the phonetic scheme for the active language (null disables it).</summary>
@@ -198,6 +210,9 @@ public sealed class TypingEngine : IDisposable
     {
         _uniWord.Clear();
         _legacyOut = string.Empty;
+        _raw.Clear();
+        _word = string.Empty;
+        _lastPiece = 0;
     }
 
     /// <summary>Turn phonetic "type by sound" mode on/off.</summary>
@@ -407,6 +422,15 @@ public sealed class TypingEngine : IDisposable
         if (_layout.HasSequences)
             output = ResolveSequence(typed, output, out replace);
 
+        // Straight after a consonant, a key that types a vowel types the vowel's
+        // sign instead - the run the chart shows on ka, applied to every letter.
+        if (_order.Active && replace == 0
+            && _order.SignAfter(typed, output, _word.Length > 0 ? _word[^1] : null) is { } sign)
+        {
+            output = sign;
+            _seqOut = sign;
+        }
+
         if (string.IsNullOrEmpty(output) && replace == 0)
         {
             _lastEmitted = null;  // navigation/space/punctuation breaks the chain
@@ -461,6 +485,16 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     private void Emit(string output, int replace)
     {
+        if (_order.Active)
+        {
+            _raw.Length = Math.Max(0, _raw.Length - replace);
+            string marked = _order.Mark(output);
+            _raw.Append(marked);
+            _lastPiece = marked.Length;
+            ShowWord();
+            return;
+        }
+
         // Legacy Font Layout: buffer the Unicode word, convert to the legacy
         // encoding, and inject that so it renders in the legacy font.
         if (_legacyConv is not null)
@@ -490,6 +524,28 @@ public sealed class TypingEngine : IDisposable
             _injector.SendText(output);
         }
         _lastEmitted = output;
+    }
+
+    /// <summary>
+    /// Put the word typed so far on screen in Unicode's order: only what changed,
+    /// since a sign struck before its letter moves in behind it as the letter comes.
+    /// </summary>
+    private void ShowWord()
+    {
+        string word = _order.Compose(_raw.ToString());
+        _lastEmitted = null;   // Backspace takes back keystrokes of this word, not clusters
+        if (_legacyConv is not null)
+        {
+            _word = word;
+            _uniWord.Clear();
+            _uniWord.Append(word);
+            RerenderLegacy();
+            return;
+        }
+        int keep = CommonPrefix(_word, word);
+        if (_word.Length > keep) _injector.SendBackspace(_word.Length - keep);
+        if (word.Length > keep) _injector.SendText(word[keep..]);
+        _word = word;
     }
 
     /// <summary>
@@ -765,6 +821,21 @@ public sealed class TypingEngine : IDisposable
 
     private void HandleBackspace(HookKeyEventArgs e)
     {
+        // A keyboard typed out of Unicode's order: take back the last keystroke of
+        // the word as typed and show the rest in order again.
+        if (_order.Active && _raw.Length > 0)
+        {
+            e.Handled = true;
+            _pendingDead = null;
+            int cut = _lastPiece > 0 ? Math.Min(_lastPiece, _raw.Length) : 1;
+            if (cut == 1 && _raw[^1] == TypingOrder.RephMark && _raw.Length > 1) cut = 2;
+            _raw.Length -= cut;
+            _lastPiece = 0;
+            ResetSequence();
+            ShowWord();
+            return;
+        }
+
         // Legacy Font Layout: shrink the Unicode word buffer and re-convert.
         if (_legacyConv is not null)
         {

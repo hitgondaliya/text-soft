@@ -89,3 +89,32 @@ Itr's `J`, Kannada Surabhi's `&`. The chart stands on all three.
 Sixteen keyboards have a chart but no capture: the vendor documents them and
 ships no runtime file for them (Modular in every script, Gujarati Ekl, Malayalam
 Typewri1, Telugu Applen). They are complete from their charts.
+
+## The order a keyboard is typed in
+
+A chart shows how a sign goes onto a letter once, on ka, and that run is all the
+layout carries: ITR's "rf" is કિ, "fo" is ર્ક, "ftu" is કો. Typed on any other
+letter, the keys simply ran together - r then h gave િર where the keyboard means
+રિ, and the reph landed behind its letter. `TypingOrder`
+(`src/FontSoftware.Core/Keyboards/TypingOrder.cs`) reads those runs off each
+layout and the engine applies them to every consonant:
+
+- a sign struck before its letter (the i-sign on every typewriter-style keyboard)
+  goes behind that letter's whole cluster, once the cluster is complete;
+- the reph struck after its letter goes in front of it - only on keyboards that
+  also strike the i-sign first. InScript's chart has "k$" for र्क too, but its
+  typists strike the reph first, in Unicode's order, and that must stay as typed;
+- a key that types a vowel alone types the vowel's sign after a consonant
+  (Newroma's "e" is એ, "re" is રે);
+- two signs a run joins (ા then ે is ો) are joined on every letter.
+
+The engine keeps the word as struck and puts it on screen in Unicode's order, so
+a legacy font is sent exactly what the converter makes of the right word, and
+Backspace takes back the last key struck. A keyboard whose runs teach none of
+this is typed exactly as before.
+
+Two data gaps were closed alongside. The chart-only keyboards (Modular in every
+script, Malayalam Typewri1, Telugu Applen, a key of Hindi Remington) had sign
+keys that appear only in a run on ka and typed nothing alone; each now types the
+sign its run shows. And Gujarati was the one script without the rupee on
+Ctrl+Shift+1 then `$` - every keyboard now has it there, as all the others do.
