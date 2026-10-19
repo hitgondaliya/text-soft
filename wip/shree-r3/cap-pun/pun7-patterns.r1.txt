@@ -1,0 +1,87 @@
+Shree-Lipi 7 Punjabi (Gurmukhi): how S8Pun764.dll spells Unicode, read from 27752 truth strings (pun7-groundtruth.json). Bytes are hex, one per glyph; fonts WPUN7001/2 (7) and S09xx0F2 (4/5/6) draw them identically except ₹ 3C (7 only).
+
+1. Internal codes (what each code of a .PUN keyboard means; single-code probes, both composers):
+   21=!→21  22=‘→22  23=-→-  24=ਅ→41  25=%→25  26=ਸ→67  27=’→27  28=(→28
+   29=)→29  2A=*→2A  2B=+→2B  2C=,→2C  2D=-→2D  2E=.→2E  2F=/→2F  30=੦→30
+   31=੧→31  32=੨→32  33=੩→33  34=੪→34  35=੫→35  36=੬→36  37=੭→37  38=੮→38
+   39=੯→39  3A=:→3A  3B=;→3B  3C=-→-  3D==→3D  3E=-→-  3F=?→3F  40=ੱ→A7
+   41=-→40  42=ੳ→43  43=ਝ→50  44=੍→B5  45=-→-  46=ਥ→58  47=ੲ→42  48=-→-
+   49=ਠ→53 BE  4A=ਣ→56  4B=-→-  4C=੍ਯ→62  4D=-→-  4E=ਓ→47  4F=ਡ→54  50=ਢ→55
+   51=ੴ→B0  52=ਧ→5A  53=ਖ→49  54=ੌ→A1  55=ਟ→52  56=ਛ→4E  57=ਫ→B3  58=ਘ→4B
+   59=ੜ→6D  5A=ਙ→4C  5B=[→5B  5C=-→-  5D=]→5D  5E=-→-  5F=-→-  60=-→-
+   61=ਮ→60  62=ੁ→74  63=ਜ→4F  64=੍→nothing  65=ਨ→B2 BE  66=ਤ→57  67=ਿ→71  68=ੀ→72
+   69=ਂ→A3  6A=ਰ→63  6B=ਾ→70  6C=ੇ→79  6D=ਲ→64  6E=ੂ→76  6F=ਹ→68  70=ੈ→B1
+   71=ਬ→5E  72=ਦ→59  73=ਕ→48  74=ੋ→7D  75=ਯ→61  76=ਚ→4D  77=ਪ→5C  78=ਗ→4A
+   79=ਵ→65  7A=ਭ→5F  7B=—→B9  7C=“→nothing  7D=–→BA  7E=”→nothing  7F=-→-  80=-→-
+   81=-→-  82=-→-  83=-→-  84=-→-  85=-→-  86=-→-  87=-→-  88=-→-
+   89=-→-  8A=-→-  8B=-→-  8C=-→-  8D=-→-  8E=-→-  8F=-→-  A0=-→-
+   A1=-→-  A2=-→-  A3=-→-  A4=-→-  A5=-→-  A6=-→-  A7=-→-  A8=-→-
+   A9=-→-  AA=-→-  AB=-→-  AC=-→-  AD=-→-  AE=-→-  AF=-→-  D0=੍ਵ→AB
+   D1=੍ਰ→6F  D2=੍ਹ→AA  D3=।→26  D4=ਃ→3E  D5=-→-  D6=ੰ→A5  D7=਼→nothing  D8=ਞ→51
+   D9=॥→nothing  DA=-→-  DB=-→-  DC=×→23  DD=÷→24  DE=-→-  DF=-→-  E0=ੴ→nothing
+   E1=-→-  E2=‍→nothing  E3=‌→nothing  E4=ਇ→nothing  E5=-→-  E6=-→-  E7=-→-  E8=-→-
+   E9=-→-  EA=-→-  EB=-→-  EC=-→-  ED=-→-  EE=-→A9  EF=₹→3C  F0=-→-
+   F1=-→-  F2=-→-  F3=-→-  F4=-→-  F5=-→-  F6=-→-  F7=-→-  F8=-→-
+   F9=-→-  FA=-→-  FB=-→-  FC=-→-  FD=-→-  FE=-→-
+   (- = no answer. 41 and EE answer only in the 7 composer: 41→40 an avagraha-like ऽ glyph, EE→A9 a short low dash. 64 = link (virama with no glyph), 44 = halant (B5), D7 = nukta, E2/E3 = ZWJ/ZWNJ, D1 D2 D0 4C = subjoined ੍ਰ ੍ਹ ੍ਵ ੍ਯ, 59 = ੜ, 26 = ਸ, E4 = ਇ and E0 = ੴ type nothing in 7, 7C “ 7E ” D9 ॥ type nothing in 7.)
+
+2. Consonants: one byte each: ਕ48 ਖ49 ਗ4A ਘ4B ਙ4C ਚ4D ਛ4E ਜ4F ਝ50 ਞ51 ਟ52 ਠ53 BE ਡ54 ਢ55 ਣ56 ਤ57 ਥ58 ਦ59 ਧ5A ਨB2 BE ਪ5C ਫB3 ਬ5E ਭ5F ਮ60 ਯ61 ਰ63 ਲ64 ਵ65 ੜ6D ਸ67 ਹ68
+   ਠ (53) and ਨ (B2) are followed by the spacer BE (advance 120): ਠ = 53 BE, ਨ = B2 BE. Marks that sit on top of the letter (ੇ ੈ ੋ ੌ ਂ ੰ ੱ and ੇਂ ੈਂ ੋਂ ੌਂ) go BEFORE BE; ਾ ੀ ੀਂ, ੁ ੂ, the halant B5 and a subjoined form go AFTER it, ੁ ੂ as the variants AE AF there.
+  rule check: 14/14 truth strings follow it
+  rule check: 4/4 truth strings follow it
+  rule check: 8/8 truth strings follow it
+   e.g. ਨੂੰ [0A28 0A42 0A70] = B2 A5 BE 76 (tippi before BE, ੂ after it); typed tippi-first (vendor key, Unicode ਨੰੂ 0A28 0A70 0A42) = B2 A5 BE AF
+
+3. Vowel signs (after ਕ): ਾ70 ਿ71 ੀ72 ੁ74 ੂ76 ੇ79 ੈB1 ੋ7D ੌA1. The i-sign 71 is written BEFORE its consonant cluster (Unicode order: after it).
+  rule check: 32/32 truth strings follow it
+  rule check: 244/256 truth strings follow it; exceptions: ਠੁ want-by-rule 53 BE 74 truth 53 BE AE; ਠੂ want-by-rule 53 BE 76 truth 53 BE AF; ਠੇ want-by-rule 53 BE 79 truth 53 79 BE; ਠੈ want-by-rule 53 BE B1 truth 53 B1 BE; ਠੋ want-by-rule 53 BE 7D truth 53 7D BE; ਠੌ want-by-rule 53 BE A1 truth 53 A1 BE
+
+4. Bindi/tippi: ਂ A3, ੰ A5. After ੀ ੇ ੈ ੋ ੌ the bindi joins the sign: ੀਂ 73 ੇਂ 7A ੈਂ 7C ੋਂ 7E ੌਂ A2 (ਾਂ stays 70 A3). After ਉ ਊ the bindi is A4 (to the right of the curl); ੳ + bindi = 44. Both composers write a tippi typed after ਾ ੀ ੇ ੈ ੋ ੌ ਉ ਊ ੳ as bindi ਂ (U+0A02).
+  rule check: 158/160 truth strings follow it; exceptions: ਠੀਂ want-by-rule 53 73 BE truth 53 BE 73; ਨੀਂ want-by-rule B2 73 BE truth B2 BE 73
+   ਉਂ = 45 A4, ਊਂ = 46 A4, ੳਂ = 44, ਕੀਂ = 48 73, ਈਂ = 42 73
+
+5. Addak ੱ: A7 right after a letter or a low/side sign (ਕੱ 48 A7, ਕੁੱ 48 74 A7, ਕਿੱ 71 48 A7, ਕਾੱ 48 70 A7); A8 (further right) after a mark that reaches the top: ੀ ੇ ੈ ੋ ੌ ਂ ੰ and after ਉ ਊ ੳ (ਉੱ 45 A8, ਕੀੱ 48 72 A8, ਕਂੱ 48 A3 A8). Typed ੱ then ਂ, the Unicode composer writes ਁ U+0A01 (ਕਁ = 48 A7 A3).
+  rule check: 150/150 truth strings follow it
+
+6. Subjoined (pairin) forms: ੍ਰ 6F, ੍ਹ AA, ੍ਵ AB, ੍ਯ 62 after the letter; ਕ੍ਰ is the ligature 6E. Unicode C+੍+ਰ/ਹ/ਵ/ਯ is always the subjoined form (typing link 64 + ਰ gives two full letters 48 63, kept as alt).
+  rule check: 30/30 truth strings follow it
+   ਸ੍ਤ੍ਰ = 67 B5 57 6F, ਕ੍ਰਿ = 71 6E, ਪ੍ਰੇ = 5C 6F 79, ਦ੍ਵਾ = 59 AB 70, ਕ੍ਯਾ = 48 62 70
+
+7. Virama before a letter that has no subjoined form: typed with the link 64 the 7 composer writes NO glyph (ਕ੍ਤ = 48 57, the bytes of ਕਤ); typed with the halant 44 it writes B5 (ਕ੍ਤ = 48 B5 57). preferred = B5 (see about); both accepted. On ਠ/ਨ the halant goes after BE (ਨ੍ਦ = B2 BE B5 59). Word-final ਕ੍ = 48 B5 (link: 48). ZWJ/ZWNJ have no glyph (ਕ੍‍ = 48, ਕ੍‌ = 48 B5).
+  rule check: 150/150 truth strings follow it
+   i-sign over a cluster: ਕ੍ਤਿ = 71 48 B5 57 (71 before the whole cluster).
+
+8. Nukta letters: one byte each: ਸ਼ 66 ਖ਼ 69 ਗ਼ 6A ਜ਼ 6B ਫ਼ 6C ਲ਼ B4 (the Unicode composer writes the precomposed code points; NFC text holds letter + U+0A3C). Other letters have no nukta glyph (ਕ਼ → 48, kept as quirk). ਡ + nukta is written ੜ (U+0A5C) by the Unicode composer (quirk).
+
+9. Independent vowels: ਅ 41, ਆ 41 70, ਇ 71 42, ਈ 42 72, ਉ 45, ਊ 46, ਏ 42 79, ਐ 41 B1, ਓ 47, ਔ 41 A1, ੲ 42, ੳ 43. ਇ is ਿ + ੲ (71 42; the code E4 types nothing in 7).
+
+10. ੴ = 31 B0 (੧ + the onkar arc B0). Code 51 alone writes B0, which every font draws WITHOUT the ੧ (kept as alt).
+
+11. Digits ੦30 ੧31 ੨32 ੩33 ੪34 ੫35 ੬36 ੭37 ੮38 ੯39; punctuation: । 26, ‘ 22, ’ 27, — B9, – BA, × 23, ÷ 24, ₹ 3C (no glyph in 4/5/6); ॥ “ ” have NO 7 spelling (the composer types nothing).
+
+12. Syllables join by concatenation: 128/128 word probes (ਕਿ+C, ਕਿੱ+C, ਪੱ+C+ਾ, ਕੀ+C) are exactly the syllables' own bytes.
+
+13. Composer quirks (kept in pairs with kind quirk:*, not used as truth):
+      24  alt:ੴ typed as code 51 alone = B0, the onkar arc WITHOUT the ੧ (every SHREE-PUN7 / SHREE-PUN font draws B0 so; the complete ੴ is 31 B0)
+     134  quirk:vendor-key-types-other-than-its-codes (phonetic/inscript mode)
+      18  quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)
+      36  quirk:7-font-has-no-nukta-for-this-letter (only ਸ਼ ਖ਼ ਗ਼ ਜ਼ ਫ਼ ਲ਼ have a glyph: 66 69 6A 6B 6C B4; the composer writes the plain letter)
+     954  quirk:U-composer-wrote-*
+     912  alt:mark struck before the vowel sign
+     267  alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)
+    1216  alt:vowel sign struck before the subjoined code
+      17  quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)
+      17  quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)
+      18  quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)
+      18  quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)
+      18  quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)
+      16  quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)
+    2584  alt:C+link+ਰ/ਹ/ਵ/ਯ (two full letters, the virama has no glyph; Unicode C੍ਰ C੍ਹ C੍ਵ C੍ਯ is the subjoined form, codes D1 D2 D0 4C)
+    2584  alt:C+halant+ਰ/ਹ/ਵ/ਯ (visible halant B5 + full letter, not the subjoined form)
+       6  quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)
+      16  quirk:7-composer-drops-ਇ (code E4; ਇ is typed ਿ + ੲ = 71 42)
+       1  quirk:7-composer-dropped-code-69 (ਂ)
+       1  quirk:7-composer-dropped-code-D6 (ੰ)
+       1  quirk:7-composer-drops-” (code 7E)
+       1  quirk:7-composer-loses-the-vowel-sign-ੌ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)
+    1440  alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)

@@ -1,0 +1,599 @@
+{
+ "about": "Probes the Unicode composer cannot vouch for although the 7 composer typed something: codes only S8Kan764 types (D7 -> 23, 86 -> 2D, E6 -> 89, E7 -> 87, E8 -> 88, EA -> 8B/9B, EB -> 7D, EE -> 9A; glyphs in fonts/only7.png). unicodeByCodes = what the other codes mean (the 7-only code read as nothing) - an inference, not a composer answer. bytes = the 7 composer answer.",
+ "rows": [
+  {
+   "codes": "76",
+   "tag": "code 76",
+   "uComposer": null,
+   "unicodeByCodes": "ೕ",
+   "bytes": "44",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe PBHV key T"
+  },
+  {
+   "codes": "86",
+   "tag": "code 86",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe PBHW key l"
+  },
+  {
+   "codes": "D7",
+   "tag": "code D7",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe PBHW key N"
+  },
+  {
+   "codes": "E6",
+   "tag": "code E6",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "89",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe PBHX key c"
+  },
+  {
+   "codes": "E7",
+   "tag": "code E7",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "87",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe PBHX key d"
+  },
+  {
+   "codes": "E8",
+   "tag": "code E8",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "88",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe PBHX key e"
+  },
+  {
+   "codes": "EA",
+   "tag": "code EA",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "8B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe PBHX key f"
+  },
+  {
+   "codes": "EB",
+   "tag": "code EB",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe PBHX key g"
+  },
+  {
+   "codes": "EE",
+   "tag": "code EE",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe PBHX key i"
+  },
+  {
+   "codes": "76",
+   "tag": "code 76",
+   "uComposer": null,
+   "unicodeByCodes": "ೕ",
+   "bytes": "44",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe EAAB key M"
+  },
+  {
+   "codes": "86",
+   "tag": "code 86",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAC key h"
+  },
+  {
+   "codes": "D7",
+   "tag": "code D7",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAC key O"
+  },
+  {
+   "codes": "E6",
+   "tag": "code E6",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "89",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAD key i"
+  },
+  {
+   "codes": "E7",
+   "tag": "code E7",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "87",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAD key j"
+  },
+  {
+   "codes": "E8",
+   "tag": "code E8",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "88",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAD key k"
+  },
+  {
+   "codes": "EA",
+   "tag": "code EA",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "8B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAD key m"
+  },
+  {
+   "codes": "EB",
+   "tag": "code EB",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAD key n"
+  },
+  {
+   "codes": "EE",
+   "tag": "code EE",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAD key q"
+  },
+  {
+   "codes": "65 86",
+   "tag": "ಕ + 86",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAF key O"
+  },
+  {
+   "codes": "65 D7",
+   "tag": "ಕ + D7",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAG key A"
+  },
+  {
+   "codes": "65 E6",
+   "tag": "ಕ + E6",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 89 50 DC",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAG key P"
+  },
+  {
+   "codes": "65 E7",
+   "tag": "ಕ + E7",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 87 50 DC",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAG key Q"
+  },
+  {
+   "codes": "65 E8",
+   "tag": "ಕ + E8",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 88 50 DC",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAG key R"
+  },
+  {
+   "codes": "65 EA",
+   "tag": "ಕ + EA",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 9B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAG key T"
+  },
+  {
+   "codes": "65 EB",
+   "tag": "ಕ + EB",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAG key U"
+  },
+  {
+   "codes": "65 EE",
+   "tag": "ಕ + EE",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "50 DC 9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAH key c"
+  },
+  {
+   "codes": "86 65",
+   "tag": "86 + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "2D 50 DC",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAJ key z"
+  },
+  {
+   "codes": "D7 65",
+   "tag": "D7 + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "23 50 DC",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAK key l"
+  },
+  {
+   "codes": "E6 65",
+   "tag": "E6 + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "89 50 DC",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAK key A"
+  },
+  {
+   "codes": "E7 65",
+   "tag": "E7 + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "87 50 DC",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAK key B"
+  },
+  {
+   "codes": "E8 65",
+   "tag": "E8 + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "88 50 DC",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAK key C"
+  },
+  {
+   "codes": "EA 65",
+   "tag": "EA + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "8B 50 DC",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAK key E"
+  },
+  {
+   "codes": "EB 65",
+   "tag": "EB + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "7D 50 DC",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAK key F"
+  },
+  {
+   "codes": "EE 65",
+   "tag": "EE + ಕ",
+   "uComposer": "ಕ",
+   "unicodeByCodes": "ಕ",
+   "bytes": "9A 50 DC",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAK key I"
+  },
+  {
+   "codes": "79 86",
+   "tag": "ಪ + 86",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAN key k"
+  },
+  {
+   "codes": "79 D7",
+   "tag": "ಪ + D7",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAN key R"
+  },
+  {
+   "codes": "79 E6",
+   "tag": "ಪ + E6",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 89 B1 DC",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAO key l"
+  },
+  {
+   "codes": "79 E7",
+   "tag": "ಪ + E7",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 87 B1 DC",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAO key m"
+  },
+  {
+   "codes": "79 E8",
+   "tag": "ಪ + E8",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 88 B1 DC",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAO key n"
+  },
+  {
+   "codes": "79 EA",
+   "tag": "ಪ + EA",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 8B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAO key p"
+  },
+  {
+   "codes": "79 EB",
+   "tag": "ಪ + EB",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAO key q"
+  },
+  {
+   "codes": "79 EE",
+   "tag": "ಪ + EE",
+   "uComposer": "ಪ",
+   "unicodeByCodes": "ಪ",
+   "bytes": "B1 DC 9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAO key t"
+  },
+  {
+   "codes": "65 64 86",
+   "tag": "ಕ link + 86",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAQ key R"
+  },
+  {
+   "codes": "65 64 D7",
+   "tag": "ಕ link + D7",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAR key D"
+  },
+  {
+   "codes": "65 64 E6",
+   "tag": "ಕ link + E6",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 89 50 DC",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAR key S"
+  },
+  {
+   "codes": "65 64 E7",
+   "tag": "ಕ link + E7",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 87 50 DC",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAR key T"
+  },
+  {
+   "codes": "65 64 E8",
+   "tag": "ಕ link + E8",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 88 50 DC",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAR key U"
+  },
+  {
+   "codes": "65 64 EA",
+   "tag": "ಕ link + EA",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 9B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAS key b"
+  },
+  {
+   "codes": "65 64 EB",
+   "tag": "ಕ link + EB",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAS key c"
+  },
+  {
+   "codes": "65 64 EE",
+   "tag": "ಕ link + EE",
+   "uComposer": "ಕ್",
+   "unicodeByCodes": "ಕ್",
+   "bytes": "50 DC 9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAS key f"
+  },
+  {
+   "codes": "86 64 65",
+   "tag": "86 + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "2D 52",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAU key C"
+  },
+  {
+   "codes": "D7 64 65",
+   "tag": "D7 + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "23 52",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAV key o"
+  },
+  {
+   "codes": "E6 64 65",
+   "tag": "E6 + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "89 52",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAV key D"
+  },
+  {
+   "codes": "E7 64 65",
+   "tag": "E7 + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "87 52",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAV key E"
+  },
+  {
+   "codes": "E8 64 65",
+   "tag": "E8 + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "88 52",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAV key F"
+  },
+  {
+   "codes": "EA 64 65",
+   "tag": "EA + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "8B 52",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAV key H"
+  },
+  {
+   "codes": "EB 64 65",
+   "tag": "EB + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "7D 52",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAV key I"
+  },
+  {
+   "codes": "EE 64 65",
+   "tag": "EE + link ಕ",
+   "uComposer": "್ಕ",
+   "unicodeByCodes": "್ಕ",
+   "bytes": "9A 50 DC",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAV key L"
+  },
+  {
+   "codes": "6B 64 86",
+   "tag": "ರ link + 86",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAY key n"
+  },
+  {
+   "codes": "6B 64 D7",
+   "tag": "ರ link + D7",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 23",
+   "why": "quirk:7-only-code: D7 -> 23 (a small subjoined hook under the letter)",
+   "source": "probe EAAY key U"
+  },
+  {
+   "codes": "6B 64 E6",
+   "tag": "ರ link + E6",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 89 C3 DC",
+   "why": "quirk:7-only-code: E6 -> 89 (a low bar)",
+   "source": "probe EAAZ key o"
+  },
+  {
+   "codes": "6B 64 E7",
+   "tag": "ರ link + E7",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 87 C3 DC",
+   "why": "quirk:7-only-code: E7 -> 87 (a raised tick)",
+   "source": "probe EAAZ key p"
+  },
+  {
+   "codes": "6B 64 E8",
+   "tag": "ರ link + E8",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 88 C3 DC",
+   "why": "quirk:7-only-code: E8 -> 88 (a raised double tick)",
+   "source": "probe EAAZ key q"
+  },
+  {
+   "codes": "6B 64 EA",
+   "tag": "ರ link + EA",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 8B",
+   "why": "quirk:7-only-code: EA -> 8B alone, 9B after a letter (a right-hand curve)",
+   "source": "probe EAAZ key s"
+  },
+  {
+   "codes": "6B 64 EB",
+   "tag": "ರ link + EB",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 7D",
+   "why": "quirk:7-only-code: EB -> 7D",
+   "source": "probe EAAZ key t"
+  },
+  {
+   "codes": "6B 64 EE",
+   "tag": "ರ link + EE",
+   "uComposer": "ರ್",
+   "unicodeByCodes": "ರ್",
+   "bytes": "C3 DC 9A",
+   "why": "quirk:7-only-code: EE -> 9A",
+   "source": "probe EAAZ key w"
+  }
+ ]
+}

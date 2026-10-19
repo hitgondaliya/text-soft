@@ -1,0 +1,2 @@
+        R($"(?<={Class("FD FE FF 9C BA")}){Lit("AC")}", FromHex("24 24").Replace("$", "$$"),
+          "AC after a letter's spacer, or after ఘ ఫ బ, is the double u-hook the earlier TextSoft table wrote there (ము = D0 40 FE AC, యు, ఘు, ఋ = BA AC); the composer writes 24 24 (ము = D0 E8 FE 24 24, ఋ = BA 24 24) and AC only for ఽ, which follows a vowel sign or a vowel."),

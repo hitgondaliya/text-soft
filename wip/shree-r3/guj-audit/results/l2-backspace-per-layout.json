@@ -1,0 +1,237 @@
+{
+ "totals": {
+  "positions": 28537,
+  "uni": 4576,
+  "g7": 4576
+ },
+ "perLayout": {
+  "gu-inscript": {
+   "words": 330,
+   "positions": 1516,
+   "uniMore": 186,
+   "g7Wrong": 186,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"jepka\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \"mqje<d\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"mqje<d'\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)"
+   ]
+  },
+  "guj-akshar": {
+   "words": 279,
+   "positions": 1295,
+   "uniMore": 159,
+   "g7Wrong": 159,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"jAtdk\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "રાજકોટ keys \"jAtdks\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95 0ABE)",
+    "સૌરાષ્ટ્ર keys \"lASjA\\\"@\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-asterix": {
+   "words": 330,
+   "positions": 1546,
+   "uniMore": 203,
+   "g7Wrong": 203,
+   "retypeOther": 0,
+   "examples": [
+    "સૌરાષ્ટ્ર keys \"mqje<d\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"mqje<d'\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)",
+    "દ્વારકા keys \"od\" ->  (before that key: 0AA6)"
+   ]
+  },
+  "guj-bpmk": {
+   "words": 327,
+   "positions": 1538,
+   "uniMore": 197,
+   "g7Wrong": 197,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"zfhsm\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \";f{zfØ\" -> 0AB8 0ACC 0AB0 (before that key: 0AB8 0ACC 0AB0 0ABE)",
+    "સૌરાષ્ટ્ર keys \";f{zfØd`\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-crtronic": {
+   "words": 281,
+   "positions": 1295,
+   "uniMore": 166,
+   "g7Wrong": 166,
+   "retypeOther": 0,
+   "examples": [
+    "સૌરાષ્ટ્ર keys \"s.teQ\\\\\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"s.teQ\\\\1\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "આણંદ keys \"ae\" ->  (before that key: 0A85)"
+   ]
+  },
+  "guj-doe": {
+   "words": 330,
+   "positions": 1533,
+   "uniMore": 189,
+   "g7Wrong": 189,
+   "retypeOther": 0,
+   "examples": [
+    "સૌરાષ્ટ્ર keys \"mqje<d\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"mqje<d'\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)",
+    "દ્વારકા keys \"od\" ->  (before that key: 0AA6)"
+   ]
+  },
+  "guj-indica": {
+   "words": 329,
+   "positions": 1536,
+   "uniMore": 191,
+   "g7Wrong": 191,
+   "retypeOther": 0,
+   "examples": [
+    "સૌરાષ્ટ્ર keys \"mqje<d\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"mqje<d'\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)",
+    "દ્વારકા keys \"od\" ->  (before that key: 0AA6)"
+   ]
+  },
+  "guj-itr": {
+   "words": 326,
+   "positions": 1575,
+   "uniMore": 213,
+   "g7Wrong": 213,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"htsft\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "રાજકોટ keys \"htsftu\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95 0ABE)",
+    "સૌરાષ્ટ્ર keys \"mtihtMT\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-modular": {
+   "words": 227,
+   "positions": 1061,
+   "uniMore": 159,
+   "g7Wrong": 159,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"jkcsk\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "રાજકોટ keys \"jkcskl\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95 0ABE)",
+    "આણંદ keys \"[k\" ->  (before that key: 0A85)"
+   ]
+  },
+  "guj-mtnk": {
+   "words": 326,
+   "positions": 1542,
+   "uniMore": 222,
+   "g7Wrong": 222,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"thofØ\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "વડોદરા keys \"unØ\" -> 0AB5 (before that key: 0AB5 0AA1)",
+    "સૌરાષ્ટ્ર keys \"kØ\" ->  (before that key: 0AB8)"
+   ]
+  },
+  "guj-newroma": {
+   "words": 320,
+   "positions": 1694,
+   "uniMore": 358,
+   "g7Wrong": 358,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"rajko\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \"sOraØ\" -> 0AB8 0ACC 0AB0 (before that key: 0AB8 0ACC 0AB0 0ABE)",
+    "સૌરાષ્ટ્ર keys \"sOraØs=\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-phonetic": {
+   "words": 195,
+   "positions": 1386,
+   "uniMore": 693,
+   "g7Wrong": 693,
+   "retypeOther": 0,
+   "examples": [
+    "ગુજરાત keys \"ga\" ->  (before that key: 0A97 0ACD)",
+    "ગુજરાત keys \"gauja\" -> 0A97 0AC1 (before that key: 0A97 0AC1 0A9C 0ACD)",
+    "ગુજરાત keys \"gaujara\" -> 0A97 0AC1 0A9C (before that key: 0A97 0AC1 0A9C 0AB0 0ACD)"
+   ]
+  },
+  "guj-phonet86": {
+   "words": 329,
+   "positions": 1520,
+   "uniMore": 179,
+   "g7Wrong": 179,
+   "retypeOther": 0,
+   "examples": [
+    "સૌરાષ્ટ્ર keys \"mqje<d\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"mqje<d'\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)",
+    "દ્વારકા keys \"od\" ->  (before that key: 0AA6)"
+   ]
+  },
+  "guj-raming": {
+   "words": 329,
+   "positions": 1546,
+   "uniMore": 191,
+   "g7Wrong": 191,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"zfhsm\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \";f{zfØ\" -> 0AB8 0ACC 0AB0 (before that key: 0AB8 0ACC 0AB0 0ABE)",
+    "સૌરાષ્ટ્ર keys \";f{zfØd`\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-raming1": {
+   "words": 328,
+   "positions": 1588,
+   "uniMore": 231,
+   "g7Wrong": 231,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"zdhsd\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "રાજકોટ keys \"zdhsd[\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95 0ABE)",
+    "સૌરાષ્ટ્ર keys \";d{zd=`\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)"
+   ]
+  },
+  "guj-raming2": {
+   "words": 327,
+   "positions": 1592,
+   "uniMore": 250,
+   "g7Wrong": 250,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"zfhsm\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \";f{zfq`\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \";f{zfq`8\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)"
+   ]
+  },
+  "guj-roma": {
+   "words": 327,
+   "positions": 1620,
+   "uniMore": 222,
+   "g7Wrong": 222,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"rajko\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \"sVraxf\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"sVraxfq\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)"
+   ]
+  },
+  "guj-script": {
+   "words": 328,
+   "positions": 1596,
+   "uniMore": 261,
+   "g7Wrong": 261,
+   "retypeOther": 0,
+   "examples": [
+    "રાજકોટ keys \"yroem\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "સૌરાષ્ટ્ર keys \"s.yrw/\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7)",
+    "સૌરાષ્ટ્ર keys \"s.yrw/1\" -> 0AB8 0ACC 0AB0 0ABE (before that key: 0AB8 0ACC 0AB0 0ABE 0AB7 0ACD)"
+   ]
+  },
+  "guj-typewrit": {
+   "words": 295,
+   "positions": 1558,
+   "uniMore": 306,
+   "g7Wrong": 306,
+   "retypeOther": 0,
+   "examples": [
+    "ભારત keys \"Hk\" ->  (before that key: 0AAD 0ACD 200D)",
+    "રાજકોટ keys \"jktdk\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95)",
+    "રાજકોટ keys \"jktdks\" -> 0AB0 0ABE 0A9C (before that key: 0AB0 0ABE 0A9C 0A95 0ABE)"
+   ]
+  }
+ }
+}

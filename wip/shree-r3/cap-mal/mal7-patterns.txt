@@ -1,0 +1,44 @@
+Shree-Lipi 7 Malayalam (S8Mal764.dll) - patterns, each checked against mal7-groundtruth.json (67745 Unicode strings with truth).
+Typing order is VISUAL: pre-base signs and the ra sign are struck before the letter; bytes come out in the same visual order.
+
+1. Letters (one code each, the byte the font draws):
+   ക=57  ഖ=58  ഗ=59  ഘ=5A  ങ=82  ച=5C  ഛ=4D  ജ=5E  ഝ=5F  ഞ=60  ട=61  ഠ=62  ഡ=63  ഢ=64  ണ=65  ത=66  ഥ=67  ദ=68  ധ=69  ന=6A  പ=6B  ഫ=6C  ബ=6D  ഭ=6E  മ=6F  യ=70  ര=71  റ=72  ല=73  ള=74  ഴ=75  വ=76  ശ=77  ഷ=78  സ=79  ഹ=7A
+   vowels: അ=41  ആ=42  ഇ=43  ഈ=43 54  ഉ=44  ഊ=44 54  ഋ=45  എ=49  ഏ=4A  ഐ=52 49  ഒ=4B  ഓ=4B 4C  ഔ=4B 54  ഌ=-  ൠ=-  ൡ=-   (ഈ = ഇ + ൗ 43 54, ഊ 44 54, ഐ = െ + എ 52 49, ഓ = ഒ + ാ 4B 4C, ഔ 4B 54; ഌ ൠ ൡ: the 7 composer writes nothing)
+   chillus: ൺ=A6  ൻ=A2  ർ=A1  ൽ=A4  ൾ=A5  ൿ=-   (ൿ: nothing, no glyph)
+   ക്ഷ = 83 (code D5), ശ്ര = E8, ശ്രീ = E8 7D, ം = 55, ഃ = 40, the chandrakkala ് = 56
+   digits ൦-൯ = 30-39; ‘ 22 ’ 27 × 23 ÷ 24 — 97 – 96 - 26 ₹ 3C (no glyph in any face)
+
+2. Signs on a letter: C + ാ ി ീ ു ൂ ൃ ൗ ം ഃ ് ്യ ്വ = the letter byte + the sign byte (4C 5D 7D 4F 50 51 54 55 40 56 7C 7E); െ േ ൈ = 52 / 53 / 52 52 BEFORE the letter; ൊ = 52 C 4C, ോ = 53 C 4C, ൌ = 52 C 54; ്ര = 4E before the letter. 681/684 letter+sign strings follow it; exceptions: യ്യ=E1 വ്വ=76 FF ശ്ര=E8
+   NO letter has its own u/uu (ു ൂ) or ൃ form in the 7 encoding: ു = 4F, ൂ = 50, ൃ = 51 after every one of the 36 letters and after every cluster (the reformed script). ൄ ൢ ൣ: the 7 composer writes nothing.
+   The precomposed sign codes DC ോ DD ൊ DE ൈ DF ൌ (INSCRIPT/KERGOVT keys) make the 7 composer write NOTHING; the Unicode composer writes the sign.
+
+3. Two-consonant conjuncts typed with the link 64 (C1 64 C2), all 1296 pairs probed (the raw composer answer for the three codes):
+   55 ligatures (മ്ബ and ന്പ both D2): ക്ക=A8  ക്ത=A9  ഗ്ഗ=AB  ഗ്ന=AE  ഗ്മ=AF  ങ്ക=CB  ങ്ങ=B0  ച്ഛ=B1  ജ്ജ=B2  ജ്ഞ=B3  ഞ്ച=B5  ഞ്ജ=C6  ഞ്ഞ=B4  ട്ട=9F  ഡ്ഡ=B8  ണ്ട=BA  ണ്ഡ=BC  ണ്ണ=B9  ണ്മ=BD  ത്ത=BE  ത്ഥ=C0  ത്ന=C1  ത്ഭ=C2  ത്മ=C4  ത്സ=C3  ദ്ദ=C7  ദ്ധ=C8  ന്ത=CD  ന്ഥ=CF  ന്ദ=CE  ന്ധ=CC  ന്ന=D0  ന്പ=D2  ന്മ=D3  പ്പ=D5  മ്ബ=D2  മ്മ=DA  മ്ല=DB  യ്ക=DF  യ്യ=E1  റ്റ=E3  ല്ക=E4  ള്ള=E7  ശ്ച=E9  ശ്ശ=EA  ഷ്ക=EB  ഷ്ട=EC  സ്ക=D8  സ്ത=F1  സ്ഥ=F2  സ്ഫ=F3  സ്റ=EF  സ്സ=F4  ഹ്ന=F8  ഹ്മ=F9
+   C1 + a subjoined form of C2 (302 pairs):
+     ട 9B: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ഠ ഡ ഢ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ സ ഹ
+     ദ C9: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ധ പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ സ ഹ
+     ധ 9C: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ധ പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ സ ഹ
+     ന D4: after ക ഖ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ഥ ദ ധ പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ സ
+     പ D7: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ സ ഹ
+     മ DC: after ക ഖ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ഥ ദ ധ പ ഫ ബ ഭ യ ര റ ല ള ഴ വ ശ ഷ സ
+     ല E6: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ യ ര റ ല ള ഴ വ ശ ഷ സ ഹ
+     ള E6: after ക
+     സ F5: after ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ ഹ
+     ത C5: after ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ഥ ദ ധ പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ ഹ
+     ച FF: after ച
+     ബ FF: after ബ
+     വ FF: after വ
+   C1 + the chandrakkala 56 + C2: the other 939 pairs (e.g. ക്ഖ ക്ഗ ക്ഘ ക്ങ ക്ച ക്ഛ ക്ജ ക്ഝ ക്ഞ ക്ഠ ക്ഡ ക്ഢ); ര്ക = 71 56 57 (no dot reph, no ർ - the chillu ർ is its own code 47 = A1)
+   C + link + ര/യ/വ gives the chandrakkala form (ക്ര via link = 57 56 71); the signs are the codes 59 ്ര (4E BEFORE the letter), 55 ്യ (7C), 49 ്വ (7E): the truth uses the signs, the link forms are kept as alternatives. യ്യ: E1 (link) and 70 7C (sign) are both canonical; വ്വ: 76 FF (link) and 76 7E (sign).
+   Font glyphs no key ever writes: 2D 84 85 86 87 88 89 8A 8B 8C 98 A0 A3 AD B7 DD DE E0 E2 E5 ED EE F0 FA FB FC FD FE (84 ക്ല 85 ഗ്ല 86 പ്ല 87 ബ്ല 98 ശ്ല FE സ്ല FA ഫ്ല 8A ല്ല 88 ച്ച 89 ബ്ബ 8B വ്വ A3 ന്റ F0 സ്റ്റ FB ക്ട FC ബ്ധ FD ബ്ദ E0 യ്ക്ക E5 ല്ക്ക ...: the composer writes the same pictures as C + E6 / C + FF / C + 9B ... ; fonts/never-produced.png, fonts/check1.png)
+
+4. The whole syllable rule (model.js): [pre 52|53|52 52] [ra 4E] [cluster as typed alone] [7C|7E]* [post] [55|40]* [56]: 22617/22617 truth syllables built from their pieces agree with Shree (0 differ).
+   Inside the rule: the ra sign 4E + ശ 77 is always the ligature E8 and then no conjunct with the next letter (ശ്ര = E8, ശ്ക്ര = E8 56 57, ശ്ച്ര = E8 56 5C although ശ്ച alone is E9 - the ra drawn on ശ). Left to the composer: C1്ശ under the ra sign = 4E C1 E8 (the ra twice and no chandrakkala: a quirk, kept out of the truth).
+   Note: the pre-base signs and the ra sign always go before the WHOLE cluster, also when the cluster is drawn as C1 + chandrakkala + C2 (ക്ചെ = 52 57 56 5C, ക്ച്ര = 4E 57 56 5C): that is the composer own output, even where the picture reads as if the sign belonged to C1.
+
+5. Syllables join without effects (W set, 41708 probes of 2-3 syllables in one key): the 7 composer writes the syllables' own answers joined in 41451/41708. The other 257: 207 x "C + link, then the next letter's pre-base sign" (ക ് െ ക = 57 A8: the composer joins the cluster across the sign and LOSES the sign - not Shree's typing order for ക്കെ, which is െ ക ് ക = 52 A8) and 50 "ക്ഷ + link + C" which are one cluster, not two syllables (ക്ഷ്മ = 83 DC).
+   The Unicode composer writes the syllables joined in 39644/41708: after ്യ/്വ it drops every following sign, even in the next syllable (ക്യ + കാ = "ക്യക"), and under the ra sign it drops the ക of ക്ഷ ("ഷ്ര").
+
+6. Viramas: the link 64 at the end = C + 56 (ക് = 57 56); the halant 44 (virama + ZWNJ) = 56 too; C + link + ZWNJ = 56; C + link + ZWJ (the Unicode 5.0 chillu ന്‍) = C + 56, NOT the chillu (ന്‍: 6A 56 against ൻ A2) - and ത്‍ / മ്‍ make the 7 composer write nothing at all. Samvruthokaram: C + ു + 44 = C 4F 56 (കു്‌); C + ു + 64 loses the virama in both composers. The code E2 (a virama on no vendor keyboard) writes no glyph and a backspace byte 08 before a ligature.
+7. Dot reph ൎ (U+0D4E): no code, no key; ര + link + C = 71 56 C (visible chandrakkala); the chillu ർ (47 = A1) + C is the modern reph. ന്റ: link = 6A 56 72, chillu ൻ + റ = A2 72; the font's ന്റ glyph A3 is written by no key.
+8. Quirks kept out of the truth: quirk:lone-sign 471; quirk:vendor-key-types-other-than-its-codes 144; quirk:7-composer-wrote-a-control-byte 96; quirk:7-composer-drops-ൄ 1480; quirk:7-composer-drops-ൢ 1554; quirk:7-composer-drops-ൣ 1554; quirk:E2-virama 1377; quirk:not-text 74; quirk:vowel-sign-before-a-pending-link 898; quirk:pre-base-sign-before-a-pending-link 115; quirk:not-text 111; quirk:7-composer-drops-ോ 74; quirk:7-composer-drops-ൊ 74; quirk:7-composer-drops-ൈ 74; quirk:7-composer-drops-ൌ 74; quirk:7-composer-loses-ത്/മ്-before-a-joiner 2; quirk:U-composer-wrote-* 164; quirk:ശ്രീ-code-E3-with-something-after-it 108; quirk:7-composer-ra-sign-on-C്ശ 36; quirk:7-composer-drops-ൿ 109; quirk:7-composer-drops-ൠ 5; quirk:7-composer-drops-ഌ 5; quirk:7-composer-drops-ൡ 5; quirk:7-composer-drops-ഐ 5; quirk:7-composer-link-before-a-pre-base-sign 432

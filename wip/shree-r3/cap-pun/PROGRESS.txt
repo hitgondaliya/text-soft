@@ -1,0 +1,43 @@
+Punjabi (Gurmukhi) Shree-Lipi 7 capture - state 2026-10-18 ~03:10. ALL STEPS DONE; SLNXT restored.
+
+Pipeline (re-run in this order; every capture step is resumable: runlist.js skips a .tsv that already has "#stable 1 / #loaded 1"):
+ 0. shmdump/before/*.bin  = SLNXT's SL8_* blocks before the first load (SL8_DLL_DATA was ALL ZERO: no keyboard loaded).
+    Restore = probe2\bin\probe2.exe --put <8.3 path>\shmdump\before\SL8_DLL_DATA.bin  (verified 3x: identical).
+    shmstate.js <label> dumps and names what table 0 holds. A probe run changes only SL8_DLL_DATA (tested: shmdump/t1 vs t2).
+ 1. probe2/ (C#, built here): U + 7 composer per key, layers 0..2 (--layers N), two passes (#stable), and a check that
+    table 0 of SL8_DLL_DATA equals the file after LoadKbdOverlay (#loaded). runlist.js drives it (8.3 short paths).
+ 2. Vendor keyboards: node runlist.js capvo "C:/Shree-Lipi nxt"   and   capvo-b (second run): 12/12 identical.
+    collectv.js -> vendor-rows.json + pun-vendor-keys.json.  layercheck.js, layers-probe.js (layers/ITR-L12.tsv).
+ 3. Explore: explore1.js/explore2.js -> px (E), px2 (F) -> capx, capx2.
+ 4. Probes: gen.js -> seq-all.json -> build.js seq-all.json p P -> runlist.js capp p / capp-b p (786 files, identical)
+            gen-halant.js -> seq-halant.json -> ph (H) -> caph / caph-b (425 files, identical)
+            gen-wide.js -> seq-wide.json -> pw (S) -> capw / capw-b (31 files, identical)
+    probeparse.js <pdir> <capdir> <prefix> -> <capdir>/<prefix>-results.json
+ 5. groundtruth.js -> pun7-groundtruth.json ; patterns.js -> pun7-patterns.txt ; gaps.js -> pun7-composer-gaps.json
+ 6. fontcmp.js (ttf.js) -> fonts/family-check.json, fonts/codes-*.png ; render.js for byte strings (fonts/check*.png)
+ 7. measure/ (C#, references repo/src/FontSoftware.Core = copy of snap-base): measure.exe pun7-groundtruth.json
+    repo/assets/config measured  -> measured/measure.json, forward-failures.tsv, reverse-failures.tsv;
+    faildiff.js -> measured/forward-failure-groups.json ; WORDS=common-words.txt measure.exe ... -> measured/common-words.tsv
+
+ROUND 2 (2026-10-18 ~09:30-09:45, "Try again"; same task text, previous run's StructuredOutput was fine, the workflow had failed elsewhere on ENOTFOUND):
+ - Main checkout tables unchanged since the measure (md5 unicode-to-shree-pun7 1fafc715..., shree-pun7-to-unicode 2c4c593f..., FontConverter.cs and MappingTable.cs identical to repo/).
+ - verify-r2.js -> verify-r2-stability.json: capvo 12/12, capp 786/786, caph 425/425, capw 31/31 identical A vs B; all #stable 1;
+   probe files all #loaded 1. The vendor captures (capvo, taken with the first probe before probe2 had the #loaded line) carry
+   no #loaded line; checked instead that every vendor keyboard's layer-0 single-code keys answer exactly as its own codes do on
+   the raw-code layer (CRTRONIC 71/71 ... VARITYPE 74/74; ENG/PHONETIC 1 miss and NEWROMA 2 = their phonetic modes) and that the
+   12 keyboards give 12 distinct answer sets -> every load took.
+ - measure.exe re-run -> measured-r2/: measure.json, forward-failures.tsv, reverse-failures.tsv byte-identical to measured/.
+ - SLNXT SL8_DLL_DATA at the start of round 2 (shmdump/now-r2.bin): header byte 2 = 01, tables zero (someone else changed it
+   after our 03:05 restore). Saved again before the one composer run (nestexp-pre.bin == now-r2.bin), written back, 0 bytes differ
+   (safe-run.log), final-r2.bin == now-r2.bin.
+ - Nesting experiment (gen-nest.js exp -> pn/QAAA.PUN, safe-run.js nestexp capn pn): a slot reference (B0-CE) INSIDE a slot is
+   ignored by both composers ([ref][ref] = nothing; [ref] ੰ = ੰ; ਕ [ref] = ਕ). One key cannot type more than 4 codes.
+ - patterns.js: clarified the code-table note (which codes type nothing in 7); pun7-patterns.txt regenerated (only that line
+   changed; old copy pun7-patterns.r1.txt).
+ - Reverse over EVERY other spelling Shree types (gen-revall.js -> revall/gt-0..4.json, measure.exe x5 -> revall/m0..4,
+   revall-join.js + revall-classify.js -> revall/summary.json, failures.tsv, classified.json): 24,581 non-preferred spellings;
+   3,874 read back as the same text; 20,126 cannot (link code 64 writes no virama glyph, the bytes ARE the plain letters:
+   48 63 = ਕਰ for ਕ੍ਰ, 71 49 48 = ਖਿਕ for ਖ੍ਕਿ); 580 are table bugs already known (576 BE/AE/AF read as ¾ ® ¯, 4 i-sign before ੜ);
+   1 composer quirk (44 A3 for ੳਂਂ). No new failure category.
+ - Vendor virama keys: 10 of 12 keyboards put the halant code 44 (B5) on their virama key; only NEWROMA '=' and ROMA 'f' carry
+   the link code 64 (no glyph). Supports preferring B5 for C੍C.

@@ -1,0 +1,144 @@
+truth 26618: preferred 18978 (14079 of them the composer's own bytes, 4899 a documented exception), other accepted 39, wrong 7601 (71.30% preferred)
+the composer's own preferred bytes, byte for byte: 14127/26546 (53.22%); the rest are the documented exceptions
+  CHCs: 2662
+      క్కృ	[0C15 0C4D 0C15 0C43]	want 4D E6 FC 50 A0 96	got 4D E6 FC 96 50
+      క్కై	[0C15 0C4D 0C15 0C48]	want 4D F0 FC 4F 50	got 4F 4D F0 FC 50
+      క్ఖృ	[0C15 0C4D 0C16 0C43]	want 4D E6 FC 55 A0 96	got 4D E6 FC 96 55
+  CHNC: 1225
+      క్‌క	[0C15 0C4D 200C 0C15]	unmapped ‌	got 4D 8A FC U+200C 4D E6 FC
+      క్‌ఖ	[0C15 0C4D 200C 0C16]	unmapped ‌	got 4D 8A FC U+200C 51
+      క్‌గ	[0C15 0C4D 200C 0C17]	unmapped ‌	got 4D 8A FC U+200C 56 E6 FC
+  CHCHC: 1189
+      క్క్ర	[0C15 0C4D 0C15 0C4D 0C30]	want 7B 4D E6 FC 50	got 4D E6 FC 50 7B
+      క్ఖ్ర	[0C15 0C4D 0C16 0C4D 0C30]	want 7B 4D E6 FC 55	got 4D E6 FC 55 7B
+      క్గ్ర	[0C15 0C4D 0C17 0C4D 0C30]	want 7B 4D E6 FC 59	got 4D E6 FC 59 7B
+  CHCt: 726
+      క్రఁ	[0C15 0C4D 0C30 0C01]	want 7B 4D E6 FC 97 (or 7B 4D E6 FC B6)	got 93 4D E6 FC 97
+      క్రం	[0C15 0C4D 0C30 0C02]	want 7B 4D E6 FC 85	got 93 4D E6 FC 85
+      క్రః	[0C15 0C4D 0C30 0C03]	want 7B 4D E6 FC 5D (or 7B 4D E6 FC 40)	got 93 4D E6 FC 5D
+  CHCHCs: 394
+      క్ష్కా	[0C15 0C4D 0C37 0C4D 0C15 0C3E]	want 84 3E 50	got 84 E6 FC E9 50
+      క్ష్కి	[0C15 0C4D 0C37 0C4D 0C15 0C3F]	want 84 EC FC 50	got 84 E6 FC EC FC 50
+      క్ష్కీ	[0C15 0C4D 0C37 0C4D 0C15 0C40]	want 84 EE FC 50	got 84 E6 FC EE 50
+  CHCst: 302
+      క్రాఁ	[0C15 0C4D 0C30 0C3E 0C01]	want 7B 4D 3E 97 (or 7B 4D 3E B6)	got 93 4D 3E 97
+      క్రాం	[0C15 0C4D 0C30 0C3E 0C02]	want 7B 4D 3E 85	got 93 4D 3E 85
+      క్రాః	[0C15 0C4D 0C30 0C3E 0C03]	want 7B 4D 3E 5D (or 7B 4D 3E 40)	got 93 4D 3E 5D
+  CHC: 242
+      క్ర	[0C15 0C4D 0C30]	want 7B 4D E6 FC (or 5B 4D E6 FC)	got 93 4D E6 FC
+      గ్ర	[0C17 0C4D 0C30]	want 7B 56 E6 FC (or 5B 56 E6 FC)	got 93 56 E6 FC
+      ఠ్ర	[0C20 0C4D 0C30]	want 7B 75 E6 FF (or 5B 75 E6 FF)	got 93 75 E6 FF
+  Cst: 201
+      కైఁ	[0C15 0C48 0C01]	want 4D F0 FC 4F 97 (or 4D F0 FC 4F B6)	got 4F 4D F0 FC 97
+      కైం	[0C15 0C48 0C02]	want 4D F0 FC 4F 85	got 4F 4D F0 FC 85
+      కైః	[0C15 0C48 0C03]	want 4D F0 FC 4F 5D (or 4D F0 FC 4F 40)	got 4F 4D F0 FC 5D
+  CHCHCt: 105
+      క్ష్కఁ	[0C15 0C4D 0C37 0C4D 0C15 0C01]	want 84 E6 FC A0 50 97 (or 84 E6 FC A0 50 B6)	got 84 E6 FC 50 97
+      క్ష్కం	[0C15 0C4D 0C37 0C4D 0C15 0C02]	want 84 E6 FC A0 50 85	got 84 E6 FC 50 85
+      క్ష్కః	[0C15 0C4D 0C37 0C4D 0C15 0C03]	want 84 E6 FC A0 50 5D (or 84 E6 FC A0 50 40)	got 84 E6 FC 50 5D
+  Cs: 67
+      కై	[0C15 0C48]	want 4D F0 FC 4F	got 4F 4D F0 FC
+      ఖై	[0C16 0C48]	want 52 F1 FD 4F	got 4F 52 F1 FD
+      గై	[0C17 0C48]	want 56 F0 FC 4F	got 4F 56 F0 FC
+  CsC: 63
+      కాన	[0C15 0C3E 0C28]	want 4D 3E AF E8 FE	got 4D 3E AF 40 FE
+      కాభ	[0C15 0C3E 0C2D]	want 4D 3E BF E6 FD	got 4D 3E BF B6 FD
+      కామ	[0C15 0C3E 0C2E]	want 4D 3E D0 E8 FE 24	got 4D 3E D0 40 FE 24
+  Ctt: 42
+      నఁం	[0C28 0C01 0C02]	want AF E8 FE 97 85 (or AF E8 FE B6 85)	got AF 40 FE 97 85
+      నఁః	[0C28 0C01 0C03]	want AF E8 FE 97 5D (or AF E8 FE B6 40)	got AF 40 FE 97 5D
+      నంఁ	[0C28 0C02 0C01]	want AF E8 FE 85 97 (or AF E8 FE 85 B6)	got AF 40 FE 85 97
+  CHCH: 36
+      క్ర్	[0C15 0C4D 0C30 0C4D]	want 7B 4D 8A FC	got 93 4D E6 FC 8A
+      క్ష్	[0C15 0C4D 0C37 0C4D]	want 84 8A FC (or 84 E6 FC)	got 84 E6 FC 8A
+      ఖ్ర్	[0C16 0C4D 0C30 0C4D]	want 7B 52 8C FD	got 7B 51 8A
+  CHCHN: 36
+      క్ర్‌	[0C15 0C4D 0C30 0C4D 200C]	unmapped ‌	got 93 4D E6 FC 8A U+200C
+      క్ష్‌	[0C15 0C4D 0C37 0C4D 200C]	unmapped ‌	got 84 E6 FC 8A U+200C
+      ఖ్ర్‌	[0C16 0C4D 0C30 0C4D 200C]	unmapped ‌	got 7B 51 8A U+200C
+  CHCHNC: 35
+      క్ష్‌క	[0C15 0C4D 0C37 0C4D 200C 0C15]	unmapped ‌	got 84 E6 FC 8A U+200C 4D E6 FC
+      క్ష్‌ఖ	[0C15 0C4D 0C37 0C4D 200C 0C16]	unmapped ‌	got 84 E6 FC 8A U+200C 51
+      క్ష్‌గ	[0C15 0C4D 0C37 0C4D 200C 0C17]	unmapped ‌	got 84 E6 FC 8A U+200C 56 E6 FC
+  CHN: 35
+      క్‌	[0C15 0C4D 200C]	unmapped ‌	got 4D 8A FC U+200C
+      ఖ్‌	[0C16 0C4D 200C]	unmapped ‌	got 52 8C FD U+200C
+      గ్‌	[0C17 0C4D 200C]	unmapped ‌	got 56 8A FC U+200C
+  CHNCHC: 35
+      క్‌క్ష	[0C15 0C4D 200C 0C15 0C4D 0C37]	unmapped ‌	got 4D 8A FC U+200C 84 E6 FC
+      ఖ్‌క్ష	[0C16 0C4D 200C 0C15 0C4D 0C37]	unmapped ‌	got 52 8C FD U+200C 84 E6 FC
+      గ్‌క్ష	[0C17 0C4D 200C 0C15 0C4D 0C37]	unmapped ‌	got 56 8A FC U+200C 84 E6 FC
+  CHCHCHC: 34
+      క్ష్క్ర	[0C15 0C4D 0C37 0C4D 0C15 0C4D 0C30]	want 7B 84 E6 FC A0 50	got 84 E6 FC 50 7B
+      క్ష్ఖ్ర	[0C15 0C4D 0C37 0C4D 0C16 0C4D 0C30]	want 7B 84 E6 FC 9B 55	got 84 E6 FC 55 7B
+      క్ష్గ్ర	[0C15 0C4D 0C37 0C4D 0C17 0C4D 0C30]	want 7B 84 E6 FC 9B 59	got 84 E6 FC 59 7B
+  CHCHCst: 34
+      క్ష్రాఁ	[0C15 0C4D 0C37 0C4D 0C30 0C3E 0C01]	want 7B 84 3E 97 (or 7B 84 3E B6)	got 84 E6 FC 7B E9 97
+      క్ష్రాం	[0C15 0C4D 0C37 0C4D 0C30 0C3E 0C02]	want 7B 84 3E 85	got 84 E6 FC 7B E9 85
+      క్ష్రాః	[0C15 0C4D 0C37 0C4D 0C30 0C3E 0C03]	want 7B 84 3E 5D (or 7B 84 3E 40)	got 84 E6 FC 7B E9 5D
+  CsCHC: 22
+      కాక్ర	[0C15 0C3E 0C15 0C4D 0C30]	want 4D 3E 7B 4D E6 FC	got 4D 3E 93 4D E6 FC
+      కాగ్ర	[0C15 0C3E 0C17 0C4D 0C30]	want 4D 3E 7B 56 E6 FC	got 4D 3E 93 56 E6 FC
+      కాఠ్ర	[0C15 0C3E 0C20 0C4D 0C30]	want 4D 3E 7B 75 E6 FF	got 4D 3E 93 75 E6 FF
+  Ct: 21
+      నఁ	[0C28 0C01]	want AF E8 FE 97 (or AF E8 FE B6)	got AF 40 FE 97
+      నం	[0C28 0C02]	want AF E8 FE 85	got AF 40 FE 85
+      నః	[0C28 0C03]	want AF E8 FE 5D (or AF E8 FE 40)	got AF 40 FE 5D
+  CHCC: 18
+      క్కన	[0C15 0C4D 0C15 0C28]	want 4D E6 FC 50 AF E8 FE	got 4D E6 FC 50 AF 40 FE
+      క్కభ	[0C15 0C4D 0C15 0C2D]	want 4D E6 FC 50 BF E6 FD	got 4D E6 FC 50 BF B6 FD
+      క్కమ	[0C15 0C4D 0C15 0C2E]	want 4D E6 FC 50 D0 E8 FE 24	got 4D E6 FC 50 D0 40 FE 24
+  o: 15
+      !	[0021]	unmapped !	got 21
+      %	[0025]	unmapped %	got 25
+      (	[0028]	unmapped (	got 28
+  Vtt: 12
+      ఋఁం	[0C0B 0C01 0C02]	want BA 24 24 97 85 (or BA 24 24 B6 85)	got BA AC 97 85
+      ఋఁః	[0C0B 0C01 0C03]	want BA 24 24 97 5D (or BA 24 24 B6 40)	got BA AC 97 5D
+      ఋంఁ	[0C0B 0C02 0C01]	want BA 24 24 85 97 (or BA 24 24 85 B6)	got BA AC 85 97
+  CCHC: 11
+      కక్ర	[0C15 0C15 0C4D 0C30]	want 4D E6 FC 7B 4D E6 FC	got 4D E6 FC 93 4D E6 FC
+      కగ్ర	[0C15 0C17 0C4D 0C30]	want 4D E6 FC 7B 56 E6 FC	got 4D E6 FC 93 56 E6 FC
+      కఠ్ర	[0C15 0C20 0C4D 0C30]	want 4D E6 FC 7B 75 E6 FF	got 4D E6 FC 93 75 E6 FF
+  CtC: 7
+      కంన	[0C15 0C02 0C28]	want 4D E6 FC 85 AF E8 FE	got 4D E6 FC 85 AF 40 FE
+      కంభ	[0C15 0C02 0C2D]	want 4D E6 FC 85 BF E6 FD	got 4D E6 FC 85 BF B6 FD
+      కంమ	[0C15 0C02 0C2E]	want 4D E6 FC 85 D0 E8 FE 24	got 4D E6 FC 85 D0 40 FE 24
+  C: 7
+      న	[0C28]	want AF E8 FE	got AF 40 FE
+      భ	[0C2D]	want BF E6 FD	got BF B6 FD
+      మ	[0C2E]	want D0 E8 FE 24	got D0 40 FE 24
+  Vt: 6
+      ఋఁ	[0C0B 0C01]	want BA 24 24 97 (or BA 24 24 B6)	got BA AC 97
+      ఋం	[0C0B 0C02]	want BA 24 24 85	got BA AC 85
+      ఋః	[0C0B 0C03]	want BA 24 24 5D (or BA 24 24 40)	got BA AC 5D
+  CHCstt: 6
+      శ్రీఁం	[0C36 0C4D 0C30 0C40 0C01 0C02]	want 7D 97 85 (or 7D B6 85)	got 7B D6 97 85
+      శ్రీఁః	[0C36 0C4D 0C30 0C40 0C01 0C03]	want 7D 97 5D (or 7D B6 40)	got 7B D6 97 5D
+      శ్రీంఁ	[0C36 0C4D 0C30 0C40 0C02 0C01]	want 7D 85 97 (or 7D 85 B6)	got 7B D6 85 97
+  oo: 3
+      ।।	[0964 0964]	unmapped ।	got U+0964 U+0964
+      ‘‘	[2018 2018]	want 22 22	got 91 91
+      ’’	[2019 2019]	want 27 27	got 92 92
+  V: 2
+      ఋ	[0C0B]	want BA 24 24	got BA AC
+      ౠ	[0C60]	want BA 24 2A	got BA CA
+  ooo: 1
+      ...	[002E 002E 002E]	unmapped .	got 2E 2E 2E
+  CCHCHC: 1
+      కక్ష్ర	[0C15 0C15 0C4D 0C37 0C4D 0C30]	want 4D E6 FC 7B 84 E6 FC	got 4D E6 FC 84 E6 FC 7B
+  CC: 1
+      కశ	[0C15 0C36]	want 4D E6 FC D4 E8 FD	got 4D E6 FC D4 B6 FD
+  CsCHCHC: 1
+      కిక్ష్ర	[0C15 0C3F 0C15 0C4D 0C37 0C4D 0C30]	want 4D EC FC 7B 84 E6 FC	got 4D EC FC 84 E6 FC 7B
+  CHCHCC: 1
+      క్ష్రక	[0C15 0C4D 0C37 0C4D 0C30 0C15]	want 7B 84 E6 FC 4D E6 FC	got 84 E6 FC 7B 4D E6 FC
+  CHCHCH: 1
+      క్ష్ర్	[0C15 0C4D 0C37 0C4D 0C30 0C4D]	want 7B 84 8A FC	got 84 E6 FC 7B 8A
+  CHCHCHN: 1
+      క్ష్ర్‌	[0C15 0C4D 0C37 0C4D 0C30 0C4D 200C]	unmapped ‌	got 84 E6 FC 7B 8A U+200C
+  CHCHNCHC: 1
+      క్ష్‌క్ష	[0C15 0C4D 0C37 0C4D 200C 0C15 0C4D 0C37]	unmapped ‌	got 84 E6 FC 8A U+200C 84 E6 FC
+words 20000 (seed 7): exact 7570, wrong 12430 (37.85%)
+words 20000 (seed 11): exact 7632, wrong 12368 (38.16%)
+word-final virama: forms 72 (C + ్ + ZWNJ in the truth), alone wrong 37; in running text 20000 (seed 7): exact 7234, wrong 12766

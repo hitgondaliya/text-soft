@@ -1,0 +1,157 @@
+capture: 54914 distinct composer spellings (as documents hold them)
+==== shree-ori7 (SHREE-ORI7-0600..0604, SHREE-ORI-0600..0604)
+shree-ori7: atoms 374, learned 318, conflicts 0, total 692
+  – -> 2D: P3/P4: the composer types nothing for – (code 7D), and its own code point U+2013 (96) draws the ligature ଦ୍ଧ୍ୱ in these fonts; the fonts' hyphen, which they draw as itself
+  — -> 2D 2D: P3/P4: the composer types nothing for — (code 7B), and U+2014 (97) draws ଦ୍ଭ; two hyphens
+  ‐ -> 2D: P3: a hyphen; the fonts' hyphen 2D
+  ‑ -> 2D: P3: a non-breaking hyphen; the fonts' hyphen 2D
+  58 control characters (C0 but TAB LF VT FF CR, DEL, C1) -> left out, reported: Word draws them as nothing, and a .txt would write U+0080-U+009F as bytes the fonts draw as letters
+  font code points (every face): 217; ASCII written as itself: !%()*,-./:? and 0-9; pairs marked unmapped: # $ & + ; < = > @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~  + 185 beyond ASCII
+  truth 41470: preferred 41470, other accepted 0, wrong 0 (100.00% preferred)
+  words 20000 (seed 7): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 11): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 2026): exact 20000, wrong 0 (100.00%)
+  word-final virama: rows 1273 (with the visible virama FA: 1273); in running text 20000 (seed 7): exact 20000, wrong 0
+  word-final virama: rows 1273 (with the visible virama FA: 1273); in running text 20000 (seed 11): exact 20000, wrong 0
+  codes written that SHREE-ORI7-0600..0604, SHREE-ORI-0600..0604 draw as something else or not at all: 0
+  code points written: 214 (20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 78 79 7A 7B 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AC AE AF B0 B1 B2 B3 B4 B5 B6 B7 B8 B9 BA BB BC BD BE BF C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 CA CB CC CD CE CF D0 D1 D2 D3 D4 D5 D6 D7 D8 D9 DA DB DC DD DE DF E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FE FF 8C 9C 8A 9A 9F 83 88 98 96 97 91 92 82 93 94 84 86 87 95 85 U+2028 U+2029 89 8B 9B 99); faces 12; missing from a face's cmap: 0
+  code points written that Word or RichEdit draw as nothing: 0 
+  code points written that RichEdit (only) binds to Arial, charset 238 (Word draws them): U+0152=8C U+0153=9C U+0160=8A U+0161=9A U+0178=9F U+0192=83
+shree-ori7 reverse: atoms 137, learned 116, unkeyable 0, total 253
+  read back as themselves (the forward table passes them through): ଵ ଼ ଽ ୄ ୕ ୡ ୢ ୣ ୰ ୲ ୳ ୴ ୵ ୶ ୷ ₹
+  read back 41467: exact 35970, same text 5497, wrong 0 (100.00%)
+  words read back 20000 (seed 7): right 19999, wrong 1 (100.00%)
+    60 FF FA C9 7B 41 F2 51 FA DC FF 85	want ଚ୍ଶଅୌଖ୍ହଃ	got ଚ୍ଶେଅୗଖ୍ହଃ [0B1A 0B4D 0B36 0B47 0B05 0B57 0B16 0B4D 0B39 0B03]
+  words read back 20000 (seed 11): right 19999, wrong 1 (100.00%)
+    76 FF F9 85 C9 58 F6 7B 41 C0 FF EB F4	want ଠ୍ରୂଃର୍ଶ୍ଘଅେରୁଁ	got ଠ୍ରୂଃର୍ଶ୍ଘେଅରୁଁ [0B20 0B4D 0B30 0B42 0B03 0B30 0B4D 0B36 0B4D 0B18 0B47 0B05 0B30 0B41 0B01]
+  other accepted spellings read back 800: exact 742, as text the table writes with those very bytes 17, wrong 41
+    7B 4C FF FA CC	want କ୍ଷେ	got କେ୍‌ଷ [0B15 0B47 0B4D 200C 0B37]
+    99 BF FA	want ଧ୍ୟ୍‌	got ଧ୍ୟ୍ [0B27 0B4D 0B5F 0B4D]
+    41 F4 F6	want ର୍ଅଁ	got ଅଁର୍ [0B05 0B01 0B30 0B4D]
+    41 F3 F6	want ର୍ଅଂ	got ଅଂର୍ [0B05 0B02 0B30 0B4D]
+    41 85 F6	want ର୍ଅଃ	got ଅଃର୍ [0B05 0B03 0B30 0B4D]
+  well-formed read back 76195: malformed 112
+    7B 4C FF FA E4	read କେ୍‌କ୍ଷ [0B15 0B47 0B4D 200C 0B15 0B4D 0B37] for କ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 51 FA E4	read ଖେ୍‌କ୍ଷ [0B16 0B47 0B4D 200C 0B15 0B4D 0B37] for ଖ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 53 FA E4	read ଗେ୍‌କ୍ଷ [0B17 0B47 0B4D 200C 0B15 0B4D 0B37] for ଗ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 57 FA E4	read ଘେ୍‌କ୍ଷ [0B18 0B47 0B4D 200C 0B15 0B4D 0B37] for ଘ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 60 FF FA E4	read ଚେ୍‌କ୍ଷ [0B1A 0B47 0B4D 200C 0B15 0B4D 0B37] for ଚ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 64 FA E4	read ଛେ୍‌କ୍ଷ [0B1B 0B47 0B4D 200C 0B15 0B4D 0B37] for ଛ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 66 FA E4	read ଜେ୍‌କ୍ଷ [0B1C 0B47 0B4D 200C 0B15 0B4D 0B37] for ଜ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 6C FA E4	read ଝେ୍‌କ୍ଷ [0B1D 0B47 0B4D 200C 0B15 0B4D 0B37] for ଝ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 6E FF FA E4	read ଞେ୍‌କ୍ଷ [0B1E 0B47 0B4D 200C 0B15 0B4D 0B37] for ଞ୍କ୍ଷେ: virama at 2 after 'େ'
+    7B 73 FA E4	read ଟେ୍‌କ୍ଷ [0B1F 0B47 0B4D 200C 0B15 0B4D 0B37] for ଟ୍କ୍ଷେ: virama at 2 after 'େ'
+  composer spellings of the whole capture read back 54914: exact 37924, as text the table writes with those very bytes 12625, other text (the bytes are another text's: a quirk row, a sign struck out of order) 3788, Latin/control/noncharacter 0, malformed 577
+    MALFORMED	4C FF F5 26 F7	typed କୃ	read କୃ୍ର [0B15 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	51 F5 26 F7	typed ଖୃ	read ଖୃ୍ର [0B16 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	53 F5 26 F7	typed ଗୃ	read ଗୃ୍ର [0B17 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	57 F5 26 F7	typed ଘୃ	read ଘୃ୍ର [0B18 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	59 FF F5 26 F7	typed ଙୃ	read ଙୃ୍ର [0B19 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	60 FF F5 26 F7	typed ଚୃ	read ଚୃ୍ର [0B1A 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	64 F5 26 F7	typed ଛୃ	read ଛୃ୍ର [0B1B 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	66 F5 26 F7	typed ଜୃ	read ଜୃ୍ର [0B1C 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	6C F5 26 F7	typed ଝୃ	read ଝୃ୍ର [0B1D 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	6E FF F5 26 F7	typed ଞୃ	read ଞୃ୍ର [0B1E 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	73 F5 26 F7	typed ଟୃ	read ଟୃ୍ର [0B1F 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    MALFORMED	76 FF F5 26 F7	typed ଠୃ	read ଠୃ୍ର [0B20 0B43 0B4D 0B30]	virama at 2 after 'ୃ'
+    OTHER	4C FF F6 F5	typed ର୍କ	read ର୍କୃ [0B30 0B4D 0B15 0B43]	written back 4C FF F5 F6
+    OTHER	7B 4C FF F6 E6	typed ର୍କୋ	read ର୍କୋ [0B30 0B4D 0B15 0B47 0B3E]	written back 7B 4C FF E6 F6
+    OTHER	7B 4C FF F6 F2	typed ର୍କୌ	read ର୍କୌ [0B30 0B4D 0B15 0B47 0B57]	written back 7B 4C FF F2 F6
+    OTHER	51 F6 F5	typed ର୍ଖ	read ର୍ଖୃ [0B30 0B4D 0B16 0B43]	written back 51 F5 F6
+    OTHER	7B 51 F6 E6	typed ର୍ଖୋ	read ର୍ଖୋ [0B30 0B4D 0B16 0B47 0B3E]	written back 7B 51 E6 F6
+    OTHER	7B 51 F6 F2	typed ର୍ଖୌ	read ର୍ଖୌ [0B30 0B4D 0B16 0B47 0B57]	written back 7B 51 F2 F6
+    OTHER	53 F6 F5	typed ର୍ଗ	read ର୍ଗୃ [0B30 0B4D 0B17 0B43]	written back 53 F5 F6
+    OTHER	7B 53 F6 E6	typed ର୍ଗୋ	read ର୍ଗୋ [0B30 0B4D 0B17 0B47 0B3E]	written back 7B 53 E6 F6
+    OTHER	7B 53 F6 F2	typed ର୍ଗୌ	read ର୍ଗୌ [0B30 0B4D 0B17 0B47 0B57]	written back 7B 53 F2 F6
+    OTHER	57 F6 F5	typed ର୍ଘ	read ର୍ଘୃ [0B30 0B4D 0B18 0B43]	written back 57 F5 F6
+    OTHER	7B 57 F6 E6	typed ର୍ଘୋ	read ର୍ଘୋ [0B30 0B4D 0B18 0B47 0B3E]	written back 7B 57 E6 F6
+    OTHER	7B 57 F6 F2	typed ର୍ଘୌ	read ର୍ଘୌ [0B30 0B4D 0B18 0B47 0B57]	written back 7B 57 F2 F6
+  7-only codes (E1 51 E0) in 3850 composer spellings: read as Odia text 3850, Latin/control 0; E1 rows read as their chart text (୍ବ) 3293/3770
+  quote "ଓଡ଼ିଆ"	22 22 48 DD E7 41 E6 27 27	back ‘‘ଓଡ଼ିଆ’’
+  quote 'ଓଡ଼ିଆ'	22 48 DD E7 41 E6 27	back ‘ଓଡ଼ିଆ’
+  quote ସେ କହିଲେ, "ଠିକ୍ ଅଛି।"	7B D3 20 4C FF DC FF E7 7B E0 FF 2C 20 22 22 76 FF E7 4C FF FA 20 41 64 E7 3E 27 27	back ସେ କହିଲେ, ‘‘ଠିକ୍ ଅଛି।’’
+  quote ରାମ's	C0 FF E6 FE 27	back ରାମ’	UNMAPPED s
+  non-Indic characters 62046: written as a look-alike or the font's own code 45, left out and reported 140, passed through and reported 61858; wrong 0
+  between ନ (5B FF): non-Indic characters 62046: written as a look-alike or the font's own code 45, left out and reported 140, passed through and reported 61858; wrong 0
+  ASCII: written as itself 21, as a look-alike 2, left out and reported 71 (letters 52); beyond ASCII with a decision 16 (Unicode spaces as the space 15); input noncharacters U+FDD0-U+FDDF written U+FFFD and reported 16/16; wrong 0
+  characters passed through (reported) that a .txt output cannot hold - no Windows-1252 byte; FileConversion.LegacyBytes leaves them out, never '?': ଵ(U+0B35) ଼(U+0B3C) ଽ(U+0B3D) ୄ(U+0B44) ୕(U+0B55) ୡ(U+0B61) ୢ(U+0B62) ୣ(U+0B63) ୰(U+0B70) ୲(U+0B72) ୳(U+0B73) ୴(U+0B74) ୵(U+0B75) ୶(U+0B76) ୷(U+0B77) ₹(U+20B9)
+  real words:
+    ଓଡ଼ିଆ	48 DD E7 41 E6	-> ଓଡ଼ିଆ
+    ଓଡ଼ିଶା	48 DD E7 C9 E6	-> ଓଡ଼ିଶା
+    ଭାରତ	B5 FF E6 C0 FF 86 FF	=
+    ଭୁବନେଶ୍ୱର	B5 FF EB AF FF 7B 5B FF C9 B4 C0 FF	-> ଭୁବନେଶ୍ବର
+    କଟକ	4C FF 73 4C FF	=
+    ପୁରୀ	A8 EB C0 FF EA	=
+    ଜଗନ୍ନାଥ	66 53 9F E6 24	=
+    ସ୍ୱାସ୍ଥ୍ୟ	D3 B4 E6 D7 BF	-> ସ୍ବାସ୍ଥ୍ୟ
+    ବିଶ୍ୱ	AF FF E7 C9 B4	-> ବିଶ୍ବ
+    ଦ୍ୱିତୀୟ	92 FF B4 E7 86 FF EA DF	-> ଦ୍ବିତୀୟ
+    ତତ୍ତ୍ୱ	86 FF 89	-> ତତ୍ତ୍ବ
+    ମନ୍ତ୍ରୀ	FE A6 EA	=
+    ସ୍ତ୍ରୀ	DA EA	=
+    ସନ୍ଧ୍ୟା	D3 A4 FF BF E6	=
+    ଅକ୍ଟୋବର	41 7B 4C FF 75 E6 AF FF C0 FF	=
+    ସରକାର	D3 C0 FF 4C FF E6 C0 FF	=
+    କର୍ମ	4C FF FE F6	=
+    ଧର୍ମ	99 FE F6	=
+    ପୂର୍ବ	A8 ED AF FF F6	=
+    ଶର୍ମା	C9 FE E6 F6	=
+    କାର୍ଯ୍ୟ	4C FF E6 BE BF F6	=
+    ବିଦ୍ୟାଳୟ	AF FF E7 92 FF BF E6 C1 FF DF	=
+    ବିଦ୍ଯାଳୟ	AF FF E7 92 FF BF E6 C1 FF DF	-> ବିଦ୍ୟାଳୟ
+    ପ୍ରଧାନ	A8 F7 99 E6 5B FF	=
+    ଶ୍ରୀ	C9 F7 EA	=
+    ରାଷ୍ଟ୍ର	C0 FF E6 CE F7	=
+    କ୍ଷମା	E4 FE E6	=
+    ଲକ୍ଷ୍ମୀ	E0 FF E4 BD EA	=
+    ଜ୍ଞାନ	6A E6 5B FF	=
+    ଚିତ୍ର	60 FF E7 86 FF F7	=
+    ପୌଷ	7B A8 F2 CC	=
+    ଗୌରବ	7B 53 F2 C0 FF AF FF	=
+    କୈଳାସ	7B 4C FF F0 C1 FF E6 D3	=
+    ଦେଶ	7B 92 FF C9	=
+    ସେ	7B D3	=
+    ତୁମେ	86 FF EB 7B FE	=
+    ଆମେ	41 E6 7B FE	=
+    ଏବଂ	46 AF FF F3	=
+    ସିଂହ	D3 E7 F3 DC FF	=
+    ଗାଁ	53 E6 F4	=
+    ଦୁଃଖ	92 FF EB 85 51	=
+    ନଦୀ	5B FF 92 FF EA	=
+    ନୂଆ	5B FF ED 41 E6	=
+    ଅନ୍ନ	41 9F	=
+    ଚନ୍ଦ୍ର	60 FF A2 FF F7	=
+    ଇନ୍ଦ୍ର	42 A2 FF F7	=
+    ଅଙ୍କ	41 5A FF	=
+    ଶଙ୍କର	C9 5A FF C0 FF	=
+    ପଞ୍ଚ	A8 6F	=
+    ଘଣ୍ଟା	57 2B E6	=
+    ମଣ୍ଡଳ	FE 83 C1 FF	=
+    ଖ୍ରୀଷ୍ଟାବ୍ଦ	51 F7 EA CE E6 B1 FF	=
+    ବର୍ଷ	AF FF CC F6	=
+    ଯୁଦ୍ଧ	BE EB 95	=
+    ଓଡ଼ିଆ	48 DD E7 41 E6	-> ଓଡ଼ିଆ
+    ପଢ଼ିବା	A8 DE E7 AF FF E6	-> ପଢ଼ିବା
+    କୈଳାସ	7B 4C FF F0 C1 FF E6 D3	-> କୈଳାସ
+    ଗୌରବ	7B 53 F2 C0 FF AF FF	-> ଗୌରବ
+    ବାକ୍	AF FF E6 4C FF FA	=
+    ବାକ୍‌	AF FF E6 4C FF FA	-> ବାକ୍
+    ର୍	C0 FF FA	=
+    କ୍‌ର	4C FF FA C0 FF	=
+    ₹୧୦୦	U+20B9 31 30 30	=	UNMAPPED ₹
+    ୰	U+0B70	=	UNMAPPED ୰
+    ସୋଽହମ୍	7B D3 E6 U+0B3D DC FF FE FA	=	UNMAPPED ଽ
+    ହଁ, ଠିକ୍।	DC FF F4 2C 20 76 FF E7 4C FF FA 3E	=
+    “ଓଡ଼ିଆ”	22 22 48 DD E7 41 E6 27 27	-> ‘‘ଓଡ଼ିଆ’’
+    "ଓଡ଼ିଆ"	22 22 48 DD E7 41 E6 27 27	-> ‘‘ଓଡ଼ିଆ’’
+    'ଓଡ଼ିଆ'	22 48 DD E7 41 E6 27	-> ‘ଓଡ଼ିଆ’
+    ରାମ's	C0 FF E6 FE 27	-> ରାମ’	UNMAPPED s
+    ୧୨/୦୮/୨୦୨୪	31 32 2F 30 38 2F 32 30 32 34	=
+    ୧୦:୩୦	31 30 3A 33 30	=
+    ୨+୨=୪	32 32 34	-> ୨୨୪	UNMAPPED +=
+    ୫%	35 25	=
+    ଦୁଇ – ତିନି — ଚାରି	92 FF EB 42 20 2D 20 86 FF E7 5B FF E7 20 2D 2D 20 60 FF E6 C0 FF E7	-> ଦୁଇ - ତିନି -- ଚାରି
+    ॥	3E 3E	-> ।।
+  wrote unicode-to-shree-ori7.json (984 pairs) and shree-ori7-to-unicode.json (269 pairs)
+limits shree-ori7: 0023 0024 0026 002B 003B 003C 003D 003E 0040 005B 005C 005D 005E 005F 0060 007B 007C 007D 007E 00B0 00D7 00F7 0B35 0B3C 0B3D 0B44 0B55 0B61 0B62 0B63 0B70 0B72 0B73 0B74 0B75 0B76 0B77 20B9
+wrote shree-ori7 into ../round1/out1\encoding-limits.json

@@ -1,0 +1,138 @@
+{
+  "tables": {
+    "forward": "unicode-to-shree-tam7 (185 pairs, 3 preRules, 0 postRules)",
+    "reverse": "shree-tam7-to-unicode (195 pairs, 0 preRules, 3 postRules)",
+    "configRoot": "repo/assets/config",
+    "converterToLegacySameTable": "unicode-to-shree-tam7"
+  },
+  "truthStrings": 48,
+  "forward": {
+    "exact": "27/48 = 56.25%",
+    "accepted": "27/48 = 56.25%",
+    "failing": 21,
+    "failingButShreeAlternative": 0,
+    "rowsReportingUnmapped": 20,
+    "unmappedCharacters": {
+      "ஔ U+0B94": 1,
+      "ௌ U+0BCC": 1,
+      "- U+002D": 1,
+      "# U+0023": 1,
+      "$ U+0024": 1,
+      "< U+003C": 1,
+      "> U+003E": 1,
+      "@ U+0040": 1,
+      "_ U+005F": 1,
+      "[ U+005B": 1,
+      "] U+005D": 1,
+      "{ U+007B": 1,
+      "} U+007D": 1,
+      "\\ U+005C": 1,
+      "| U+007C": 1,
+      "` U+0060": 1,
+      "^ U+005E": 1,
+      "& U+0026": 1,
+      "“ U+201C": 1,
+      "” U+201D": 1
+    },
+    "nfcForms": {
+      "stringsWhoseNfcDiffers": 0,
+      "exact": 0,
+      "accepted": 0
+    },
+    "byCategory": {
+      "independent vowel / aytham": "1 strings: exact 0 (0.00%), accepted 0 (0.00%)",
+      "pre-base e / ee / ai": "23 strings: exact 23 (100.00%), accepted 23 (100.00%)",
+      "punctuation / symbol": "21 strings: exact 3 (14.29%), accepted 3 (14.29%)",
+      "two-part o / oo / au": "3 strings: exact 1 (33.33%), accepted 1 (33.33%)"
+    },
+    "failureTypes": {
+      "punctuation / symbol | other bytes": 18,
+      "independent vowel / aytham | Tamil passed through unmapped": 1,
+      "two-part o / oo / au | Tamil passed through unmapped": 1,
+      "two-part o / oo / au | other bytes": 1
+    },
+    "examples": {
+      "independent vowel / aytham": [
+        "ஔ [0B94]: ours U+0B94 | Shree 4A CD | Tamil passed through unmapped"
+      ],
+      "two-part o / oo / au": [
+        "ௌ [0BCC]: ours U+0BCC | Shree F6 CD | Tamil passed through unmapped",
+        "ோ [0BCB]: ours 40 F5 | Shree F7 F5 | other bytes (ours has 40 / Shree has F7)"
+      ],
+      "punctuation / symbol": [
+        "- [002D]: ours 2D | Shree 26 | other bytes (ours has 2D / Shree has 26)",
+        "# [0023]: ours 23 | Shree 12 | other bytes (ours has 23 / Shree has 12)",
+        "$ [0024]: ours 24 | Shree 13 | other bytes (ours has 24 / Shree has 13)",
+        "< [003C]: ours 3C | Shree 14 | other bytes (ours has 3C / Shree has 14)",
+        "> [003E]: ours 3E | Shree 15 | other bytes (ours has 3E / Shree has 15)",
+        "@ [0040]: ours 40 | Shree 16 | other bytes (ours has 40 / Shree has 16)",
+        "_ [005F]: ours 5F | Shree 18 | other bytes (ours has 5F / Shree has 18)",
+        "[ [005B]: ours 5B | Shree 0B | other bytes (ours has 5B / Shree has 0B)",
+        "] [005D]: ours 5D | Shree 0C | other bytes (ours has 5D / Shree has 0C)",
+        "{ [007B]: ours 7B | Shree 1A | other bytes (ours has 7B / Shree has 1A)",
+        "} [007D]: ours 7D | Shree 1B | other bytes (ours has 7D / Shree has 1B)",
+        "\\ [005C]: ours 5C | Shree 17 | other bytes (ours has 5C / Shree has 17)",
+        "| [007C]: ours 7C | Shree 1C | other bytes (ours has 7C / Shree has 1C)",
+        "` [0060]: ours 60 | Shree 19 | other bytes (ours has 60 / Shree has 19)"
+      ]
+    },
+    "words": {
+      "joined": 20000,
+      "exact": "17570 (87.85%)",
+      "everySyllableAcceptedAndNoCrossSyllableEffect": "17570 (87.85%)",
+      "crossSyllableExamples": []
+    }
+  },
+  "reverse": {
+    "preferredSpellings": 48,
+    "exact": "28/48 = 58.33%",
+    "sameText": "28/48 = 58.33%",
+    "allAcceptedSpellingsSameText": "28/48 = 58.33%",
+    "rowsReportingUnmapped": 14,
+    "unmappedBytes": {
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "18": 1,
+      "1A": 1,
+      "1B": 1,
+      "17": 1,
+      "1C": 1,
+      "19": 1,
+      "0F": 1,
+      "06": 1,
+      "0E": 1
+    },
+    "byCategory": {
+      "independent vowel / aytham": "1: exact 0 (0.00%), same text 0 (0.00%)",
+      "pre-base e / ee / ai": "23: exact 23 (100.00%), same text 23 (100.00%)",
+      "punctuation / symbol": "21: exact 3 (14.29%), same text 3 (14.29%)",
+      "two-part o / oo / au": "3: exact 2 (66.67%), same text 2 (66.67%)"
+    },
+    "examples": [
+      "4A CD: Shree ஔ [0B94] | ours ஒள [0B92 0BB3]",
+      "F6 CD: Shree ௌ [0BCC] | ours ளெ [0BB3 0BC6]",
+      "26: Shree - [002D] | ours – [2013]",
+      "12: Shree # [0023] | ours \u0012 [0012]",
+      "13: Shree $ [0024] | ours \u0013 [0013]",
+      "14: Shree < [003C] | ours \u0014 [0014]",
+      "15: Shree > [003E] | ours \u0015 [0015]",
+      "16: Shree @ [0040] | ours \u0016 [0016]",
+      "18: Shree _ [005F] | ours \u0018 [0018]",
+      "0B: Shree [ [005B] | ours \u000B [000B]",
+      "0C: Shree ] [005D] | ours \f [000C]",
+      "1A: Shree { [007B] | ours \u001A [001A]",
+      "1B: Shree } [007D] | ours \u001B [001B]",
+      "17: Shree \\ [005C] | ours \u0017 [0017]",
+      "1C: Shree | [007C] | ours \u001C [001C]",
+      "19: Shree ` [0060] | ours \u0019 [0019]",
+      "0F: Shree ^ [005E] | ours \u000F [000F]",
+      "06: Shree & [0026] | ours \u0006 [0006]",
+      "0D: Shree “ [201C] | ours \r [000D]",
+      "0E: Shree ” [201D] | ours \u000E [000E]"
+    ]
+  },
+  "tablesOwnRoundTrip": "Unicode -> ours -> ours back: 32/48 = 66.67% (what a round-trip test would show)"
+}

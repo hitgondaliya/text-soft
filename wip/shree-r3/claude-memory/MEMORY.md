@@ -1,0 +1,31 @@
+# Memory Index
+
+- [TextSoft brand](textsoft-brand.md) — app name, "Beyond Typing" tagline, logo, orange/charcoal theme; website kept separate.
+- [UI text contrast rule](ui-text-contrast-rule.md) — never hard-code Foreground on the base TextBlock style; text must contrast its background.
+- [Converter encoding findings](converter-encoding-findings.md) — FR-4 dead: no tables for shipped Shree fonts; Shree scheme bytes ≠ redistributable TTF encoding (0/101), .enc maps encrypted.
+- [Licensing plan](licensing-plan.md) — V2: self-hosted Next.js admin/API + Ed25519 online activation, full-lock on expiry; plan in docs/LICENSING-PLAN.md.
+- [Unicode font fix](unicode-font-fix.md) — client saw no Unicode/one font: config listed dead Mangal/Vrinda; Win11 uses Nirmala UI. Fixed default Unicode + render fallback.
+- [Client fonts 2026-09](client-fonts-2026-09.md) — D:\fonts: 5 Unicode fonts bundled & working; Bhasha Bharati + Shree legacy don't render our map bytes (legacy wall reconfirmed).
+- [GlyphJoin shape join](glyphjoin-shape-join.md) — crack legacy Shree encodings by shape-matching a legacy font to its Unicode twin; needs Shree Unicode fonts installed.
+- [TextSoft coverage status](textsoft-coverage-status.md) — 1279/1475 with client fonts (2026-10-01); 232 unit tests; ConfigCheck 0 errors; LMG-Arun unidentified.
+- [Legacy byte 0xAD trap](legacy-byte-0xad-trap.md) — ISFOC puts ર on U+00AD soft hyphen; WPF hides it, Word does not. Render legacy text by glyph index.
+- [Shree keyboard scheme files](shree-keyboard-scheme-files.md) — 406-byte .GUJ/.DEV files (= Keyboard Generator output): full format, importer, KbdFileProbe.
+- [Licence server purchases](license-server-purchases.md) — sales are purchases with a serial (TXS-2026-0001), keys numbered under it; `npm run dev:db` runs the panel with no MongoDB installed.
+- [Licence panel design](license-panel-design.md) — compact rebuild 2026-10-06: design brief, shared components, key reveal UI; client hates bulky layouts.
+- [Licence one key one device](license-one-device.md) — v3 rules: serial+key, first PC binds, registration gate, attempt log, admin-only move; e2e + UIA test recipe.
+- [Production release 2026-09](production-release-2026-09.md) — deploy zip, installer, prod keypair, SMTP; server verified LIVE 27 Sep 2026.
+- [Gopika font support](gopika-font-support.md) — identified via the ITR keyboard layout; rule-based table, what it misses.
+- [Shree escape layers](shree-escape-layers.md) — Ctrl+Space and Ctrl+Shift+1 are two different layers; the charts hide them behind a Ø glyph.
+- [Shree keyboards](shree-keyboards.md) — which keyboards Shree really has, per script; the two traps in reading their help files.
+- [Shree Tutor API](shree-tutor-api.md) — their composer DLL answers what each key types; exact call shapes, and the two-encoding Rosetta.
+- [Live testing rules](live-testing-rules.md) — test the real app with TypeProbe; never type into the user's windows; no stray Notepads; taskkill /F.
+- [Word free edition on this PC](word-free-edition-this-pc.md) — Word here is read-only (save to OneDrive); Word typing cannot be tested on this PC.
+- [Bhasha Bharati combined](bhasha-bharati-combined.md) — one layout for Gopika/BB-1/BB-2 (+Hindi); candra is 0x70; excluded faces; punctuation rule; 1.x Gopika table was wrong.
+- [UI redesign 2026-10](ui-redesign-2026-10.md) — dark sidebar, own title bar (WindowChrome), Card/Switch/Segment styles; template traps; PageHost for UIA.
+- [Bash backslash quirk](bash-backslash-quirk.md) — Bash tool halves doubled backslashes (use Write tool); PowerShell $H and $h are one variable.
+- [Licence panel deploy 2026-10](license-panel-deploy-2026-10.md) — keys stored encrypted, SMTP in DB, port 3100 loopback, .env.production renamed, update zip + VPS steps.
+- [Keyboard typing order](keyboard-typing-order.md) — charts teach signs on ka only; TypingOrder applies i-sign/reph/vowel order to every consonant; Gujarati ₹ added.
+- [Keyboard hook thread](keyboard-hook-thread.md) — Windows silently drops a slow LL hook; hook now on its own thread + watchdog; demo PC 'wrong key' bug.
+- [Shree 7 vs 4/5/6 split](shree-7-vs-456-split.md) — font list split + Gujarati tables done (324/324); Dev/San/Ban tables in progress; SAN7 own encoding; max 2 agents (RAM).
+- [PC crypto-miner 2026-10](pc-cryptominer-2026-10.md) — hidden "Window Update" task + cmd.exe miner (2.4 GB) found 2026-10-18; cause of low RAM; user removes it.
+- [Shree import legacy codes](shree-import-legacy-codes.md) — codes only the legacy composer types were missing (GUJ E9 રુ, EA રૂ); empty slot = ""; unread codes reported; Backspace pieces.

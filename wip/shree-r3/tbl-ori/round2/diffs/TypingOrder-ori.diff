@@ -1,0 +1,143 @@
+--- src/FontSoftware.Core/Keyboards/TypingOrder.cs	2026-10-18 20:05:48.452869100 +0530
++++ src/FontSoftware.Core/Keyboards/TypingOrder.cs	2026-10-19 01:47:35.186800300 +0530
+@@ -19,7 +19,11 @@
+ /// - the reph struck after its letter goes in front of that letter's cluster;
+ /// - a key that types a vowel on its own types the vowel's sign straight after a
+ ///   consonant, as Newroma's "e" is એ but "ke" is કે - so "re" is રે, not રએ;
+-/// - two signs a run puts together into one (ા then ે is ો) become that one.
++/// - two signs a run puts together into one (ા then ે is ો) become that one;
++/// - on a keyboard that types every consonant in its virama form (Shree's Phonetic:
++///   "d" is ଦ୍), a vowel key struck after one takes the virama's place, as the runs
++///   on ka show it - "ke" is କେ, "ka" is କ, "kee" is କୀ, "kai" is କୈ - so "de" is
++///   ଦେ and "sthe" is ସ୍ଥେ, not ଦ୍ଏ and ସ୍ଥ୍ଏ.
+ ///
+ /// A keyboard whose runs teach none of this - InScript, typed in Unicode's own
+ /// order - is not <see cref="Active"/> and types exactly as it always did.
+@@ -40,11 +44,19 @@
+     private readonly Dictionary<string, string> _joins = new(StringComparer.Ordinal);
+     private string? _reph;
+ 
++    // A virama, then what a vowel key typed after it: the sign that takes the virama's place ("୍ଏ" -> "େ", "୍ା" -> "":
++    // the inherent a). Longest first. Learned from the runs on a consonant key that types its virama form.
++    private readonly List<(string From, string To)> _afterVirama = new();
++    private bool _signAfterVirama;   // and any other vowel sign struck after a virama takes its place too (k then o is କୋ)
++
+     /// <summary>The order of a keyboard that is typed the way Unicode stores text.</summary>
+     public static readonly TypingOrder None = new();
+ 
+     /// <summary>True when this keyboard is typed in an order other than Unicode's own.</summary>
+-    public bool Active => _preSigns.Count > 0 || _reph is not null || _signAfter.Count > 0 || _joins.Count > 0;
++    public bool Active => _preSigns.Count > 0 || _reph is not null || _signAfter.Count > 0 || _joins.Count > 0 || _afterVirama.Count > 0;
++
++    /// <summary>What a vowel key struck after a virama becomes (a phonetic keyboard; see <see cref="Learn"/>).</summary>
++    public IReadOnlyList<(string From, string To)> AfterVirama => _afterVirama;
+ 
+     /// <summary>Signs struck before their letter (the i-sign, on a typewriter keyboard).</summary>
+     public IReadOnlyList<string> PreSigns => _preSigns;
+@@ -55,7 +67,9 @@
+     public override string ToString() =>
+         $"struck before the letter: [{string.Join(" ", _preSigns)}], reph after its letter: {_reph ?? "-"}, " +
+         $"a sign after a consonant: [{string.Join(" ", _signAfter.Select(r => r.Key + "=" + r.Value.Sign))}], " +
+-        $"joins: [{string.Join(" ", _joins.Select(j => j.Key + "=" + j.Value))}]";
++        $"joins: [{string.Join(" ", _joins.Select(j => j.Key + "=" + j.Value))}]" +
++        (_afterVirama.Count == 0 ? "" : $", after a virama: [{string.Join(" ", _afterVirama.Select(j => j.From + "=" + j.To))}]" +
++                                        (_signAfterVirama ? " and every vowel sign" : ""));
+ 
+     /// <summary>Read the typing order off a layout's own two- and three-key runs.</summary>
+     public static TypingOrder Learn(KeyboardLayout layout)
+@@ -112,6 +126,8 @@
+         // moving it there would turn धर्म, typed ध र् म, into र्धम.
+         if (order._preSigns.Count == 0) order._reph = null;
+ 
++        order.LearnAfterVirama(layout, alone);
++
+         // A three-key run that comes out one sign shorter than its keys typed in
+         // order would: ka, then ા, then ે is કો.
+         foreach (var s in layout.Sequences)
+@@ -135,6 +151,69 @@
+     }
+ 
+     /// <summary>
++    /// A keyboard that types each consonant in its virama form (Shree's Phonetic: "k" is କ୍, "d" is ଦ୍) shows on ka what a
++    /// vowel key does after one: "ke" is କେ, "ka" is କ (the inherent a), "kee" is କୀ, "kai" is କୈ. The chart prints those
++    /// runs for ka alone; Shree's composer joins the vowel to every consonant and cluster the same way, so the join is
++    /// learned here as "a virama, then what those vowel keys type there" -> "the sign in the virama's place", and applied to
++    /// the whole word (<see cref="Compose"/>). What the vowel keys type after the consonant is what they type after any
++    /// other: their own run ("ee" is ଈ, "ai" is ଐ) or their keys one after the other ("aa" is ା ା). Only a keyboard whose
++    /// runs join an independent vowel this way is a phonetic one: a typewriter's half letter is struck before ા, not ଏ.
++    /// </summary>
++    private void LearnAfterVirama(KeyboardLayout layout, Dictionary<char, string> alone)
++    {
++        var joins = new Dictionary<string, string>(StringComparer.Ordinal);
++        var clash = new HashSet<string>(StringComparer.Ordinal);
++        bool vowelTaught = false, signTaught = false;
++        foreach (var s in layout.Sequences)
++        {
++            if (s.Keys.Length is < 2 or > 3 || string.IsNullOrEmpty(s.To)) continue;
++            if (s.Keys.IndexOf(EscapeLayer.Mark) >= 0 || s.Keys.IndexOf(EscapeLayer.SymbolMark) >= 0) continue;
++            if (!alone.TryGetValue(s.Keys[0], out var first) || first.Length != 2 || !IsConsonantChar(first[0]) || Offset(first[1]) != 0x4D)
++                continue;
++            if (s.To[0] != first[0]) continue;
++            string sign = s.To[1..];
++            if (!sign.All(IsSignChar)) continue;                       // "kka" is a cluster, not a vowel on ka
++            string tail = s.Keys[1..];
++            string? typed = layout.MatchSequence(tail);
++            if (typed is null)
++            {
++                var sb = new StringBuilder();
++                foreach (char k in tail)
++                {
++                    if (!alone.TryGetValue(k, out var t)) { sb = null; break; }
++                    sb.Append(t);
++                }
++                typed = sb?.ToString();
++            }
++            if (string.IsNullOrEmpty(typed) || !typed.All(c => IsSignChar(c) || IsVowelChar(c))) continue;
++            string from = first[1] + typed;
++            if (joins.TryGetValue(from, out var had) && had != sign) clash.Add(from);
++            joins[from] = sign;
++            if (typed.Any(IsVowelChar) && sign.Length > 0) vowelTaught = true;
++            if (typed.Length == 1 && sign == typed && Offset(typed[0]) is >= 0x3E and <= 0x4C) signTaught = true;
++        }
++        if (!vowelTaught) return;
++        foreach (var (from, to) in joins.OrderByDescending(j => j.Key.Length).ThenBy(j => j.Key, StringComparer.Ordinal))
++            if (!clash.Contains(from)) _afterVirama.Add((from, to));
++        _signAfterVirama = signTaught;
++    }
++
++    /// <summary>The word with each vowel key struck after a virama in the virama's place (see <see cref="LearnAfterVirama"/>).</summary>
++    private string JoinAfterVirama(string text)
++    {
++        foreach (var (from, to) in _afterVirama) text = text.Replace(from, to, StringComparison.Ordinal);
++        if (!_signAfterVirama) return text;
++        var sb = new StringBuilder(text.Length);
++        for (int i = 0; i < text.Length; i++)
++        {
++            if (Offset(text[i]) == 0x4D && i + 1 < text.Length && Offset(text[i + 1]) is (>= 0x3E and <= 0x4C) or 0x55 or 0x56 or 0x57 or 0x62 or 0x63)
++                continue;   // କ୍ then ୋ is କୋ: the sign takes the virama's place
++            sb.Append(text[i]);
++        }
++        return sb.ToString();
++    }
++
++    /// <summary>
+     /// What a key's text is in the typed word: a sign struck before its letter, or
+     /// a reph struck after it, stands in for itself until its cluster is known.
+     /// The stand-in is as long as the text, so a run that later replaces it can
+@@ -251,6 +330,7 @@
+         Flush(sb, pending);
+ 
+         string text = sb.ToString();
++        if (_afterVirama.Count > 0) text = JoinAfterVirama(text);
+         foreach (var (pair, one) in _joins) text = text.Replace(pair, one, StringComparison.Ordinal);
+         return text;
+     }
+@@ -285,6 +365,8 @@
+ 
+     private static bool IsIndicLetter(char c) => Offset(c) is >= 0x05 and <= 0x14 or 0x60 or 0x61 || IsConsonantChar(c);
+ 
++    private static bool IsVowelChar(char c) => Offset(c) is >= 0x05 and <= 0x14 or 0x60 or 0x61;
++
+     private static bool IsConsonant(string s) => s.Length == 1 && IsConsonantChar(s[0]);
+ 
+     private static bool IsReph(string s) => s.Length == 2 && Offset(s[0]) == 0x30 && Offset(s[1]) == 0x4D;

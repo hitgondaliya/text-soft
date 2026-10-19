@@ -1,0 +1,24 @@
+Tamil (S8TamU64 / S8Tam764) Shree-Lipi 7 capture - started 2026-10-18 11:55 IST. Pipeline adapted from ../cap-kan (Kannada, this round).
+ 0. shmdump/start.bin = SLNXT's SL8_DLL_DATA before the first composer load (header 00 00 01, tables zero; == cap-kan final.bin).
+    shmdump/DEFAULTS-start.bin = SL8_DEFAULTS_DATA (defchk.ps1; 0 of 439 bytes differ from cap-kan DEFAULTS-final.bin).
+    Manual restore: probe2\bin\probe2.exe --put C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-tam\shmdump\start.bin
+
+ROUND 2 (2026-10-18 19:28-19:55 IST), continuing the files above:
+ 1. Verified round 1 from disk: verify-stability.js -> capp/capp-b 376/376, capvo/capvo-b 22/22, capx/capx-b 49/49 raw byte-identical,
+    all #stable 1 #loaded 1. groundtruth.js and measure.exe reproduce r1/ byte for byte (measure.json differs only in the configRoot string).
+ 2. SLNXT state at round start: shmdump/now-r2.bin (SL8_DLL_DATA table 0 = DOE.GUJ, header 00 00 01 00 00 80; 406 bytes differ from start.bin -
+    someone else loaded it after round 1) and shmdump/DEFAULTS-now-r2.bin.
+ 3. ONE composer run (safe-run.js runW, LAYERS=0): W probe set (gen-w.js -> seq-w.json, 21,224 keystrokes of 2-3 syllables, 452 keyboards w/WAAA..)
+    twice: capw/ and capw-b/ 452/452 raw identical, every file #stable 1 #loaded 1, untouched check keys right. Restore: PUT OK, 0 bytes differ
+    (safe-run.log). shmdump/final-r2.bin == now-r2.bin == runW-pre.bin.
+    SL8_DEFAULTS_DATA: byte 0x92 was 43 at 19:34 (before the run), 00 at 19:52 (after); 00 at 11:56 too. Not written by this agent (probe2 --put
+    writes only SL8_DLL_DATA); cause unknown (SLNXT tracks the foreground app in this block).
+ 4. wjoin.js: the 7 composer wrote the syllables' own answers joined in 21,224/21,224 W probes; the Unicode composer moves a pending pre-base sign to
+    the last letter (4,424). groundtruth.js now takes W (canonical:join) + drops 51 non-text round-1 strings (sign with no letter, ஸ்ரீ+sign);
+    W strings accept every join of their syllables' accepted spellings. r1/ keeps the round-1 truth and measure.
+ 5. Truth: 31,086 strings (9,871 round 1 + 21,215 round 2). Patterns: tam7-patterns.txt (7,114/7,116 checks). Gaps: tam7-composer-gaps.json (37).
+ 6. Measure (measure.exe, snapshot FontSoftware.Core, shipped tables md5 9FF9E7BA / 39A4CCEA = main checkout): measured/measure.json,
+    forward-failure-groups.json (failclass2.js, by glyph), common-words.tsv + common-words-classes.json (common-words-ta.txt, 341 words),
+    reverse-failure-groups.json (revclass.js); measured-gaps/ (gaps-as-truth.json: what the table writes for the gap strings and symbols).
+ 7. Fonts: fonts/dup-glyphs.json (dupglyph.js): glyph-identical byte pairs in every face. layercheck.json: tutor layers 3..12 = layer 2; vendor
+    single-code keys answer as their code on the raw layer (layer 0 1532/1532, Ctrl+Space 216/216). codetable.tsv: every internal code.

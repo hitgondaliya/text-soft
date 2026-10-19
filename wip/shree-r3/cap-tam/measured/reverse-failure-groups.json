@@ -1,0 +1,27 @@
+{
+ "total": 1232,
+ "groups": {
+  "F6 C CD read as Cெள, Shree means Cௌ (the encoding cannot tell them apart; vendor ௌ keys type ெ C ள)": {
+   "n": 673,
+   "examples": [
+    "F6 50 CD: Shree கௌ | ours கெள [0B95 0BC6 0BB3]",
+    "F6 56 CD: Shree ஙௌ | ours ஙெள [0B99 0BC6 0BB3]",
+    "F6 5C CD: Shree சௌ | ours செள [0B9A 0BC6 0BB3]",
+    "F6 62 CD: Shree ஞௌ | ours ஞெள [0B9E 0BC6 0BB3]",
+    "F6 68 CD: Shree டௌ | ours டெள [0B9F 0BC6 0BB3]",
+    "F6 6E CD: Shree ணௌ | ours ணெள [0BA3 0BC6 0BB3]"
+   ]
+  },
+  "ரி 9B / ரீ 9F not in the reverse table (read as › / Ÿ)": {
+   "n": 559,
+   "examples": [
+    "9B: Shree ரி | ours › [203A]",
+    "9F: Shree ரீ | ours Ÿ [0178]",
+    "9B 4C: Shree ரிஃ | ours ›ஃ [203A 0B83]",
+    "9B: Shree ரி‌ | ours › [203A]",
+    "9B: Shree ரி‍ | ours › [203A]",
+    "9F 4C: Shree ரீஃ | ours Ÿஃ [0178 0B83]"
+   ]
+  }
+ }
+}

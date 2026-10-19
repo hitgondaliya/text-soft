@@ -1,0 +1,36 @@
+--- ../main-base/tests/FontSoftware.Tests/ShreeNonIndicTests.cs	2026-10-12 01:53:45.867322700 +0530
++++ ../../repo/tests/FontSoftware.Tests/ShreeNonIndicTests.cs	2026-10-18 21:37:03.237052400 +0530
+@@ -25,6 +25,7 @@
+     {
+         { "shruti", "shree-guj7" }, { "shruti", "shree-guj456" },
+         { "mangal", "shree-dev7" }, { "mangal", "shree-dev456" }, { "mangal", "shree-san7" },
++        { "kalinga", "shree-ori7" },
+     };
+ 
+     /// <summary>
+@@ -40,6 +41,7 @@
+         for (char c = ' '; c <= 'ÿ'; c++) set.Add(c);
+         foreach (char c in "ŒœŠšŸƒˆ˜–—‘’‚“”„†‡•…‰‹›™∙")
+             set.Add(c);
++        if (encoding == "shree-ori7") set.UnionWith("\u008F\u0090");
+         if (encoding is "shree-guj7" or "shree-guj456") set.UnionWith("\u0081\u008D\u008F\u0090");
+         if (encoding is "shree-dev7" or "shree-dev456") set.UnionWith("\u0081\u008D\u008F\u0090\u009D");
+         if (encoding == "shree-dev456")
+@@ -63,7 +65,7 @@
+         var to = Assets.Value.CreateConverter(unicodeFont, encoding)!;
+         var from = Assets.Value.CreateConverter(encoding, unicodeFont)!;
+         var codes = FontCodes(encoding);
+-        string letter = encoding.StartsWith("shree-guj") ? "ક" : "क", alone = to.ConvertText(letter);
++        string letter = encoding.StartsWith("shree-guj") ? "ક" : encoding.StartsWith("shree-ori") ? "କ" : "क", alone = to.ConvertText(letter);
+         var wrong = new List<string>();
+         int n = 0, left = 0;
+         for (int cp = 0x80; cp <= 0xFFFD; cp++)
+@@ -103,6 +105,8 @@
+     [InlineData("mangal", "shree-dev7", "• क", "B7 20 48 24")]
+     [InlineData("mangal", "shree-san7", "“भारत”", "91 91 57 22 70 5A 4F 22 92 92")]
+     [InlineData("mangal", "shree-san7", "राम…", "5A 70 58 22 2E 2E 2E")]
++    [InlineData("kalinga", "shree-ori7", "“ଓଡ଼ିଆ”", "22 22 48 DD E7 41 E6 27 27")]
++    [InlineData("kalinga", "shree-ori7", "ରାମ… •", "C0 FF E6 FE 2E 2E 2E 20 B7")]
+     public void PunctuationIsWrittenAsTheLookAlikeTheFontsDraw(string unicodeFont, string encoding, string unicode, string bytes)
+     {
+         var r = Assets.Value.CreateConverter(unicodeFont, encoding)!.Convert(unicode);

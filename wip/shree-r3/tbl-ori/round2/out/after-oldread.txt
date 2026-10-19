@@ -1,0 +1,17 @@
+repo C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-ori\repo: tables to shree-ori7 1 (941 pairs), from shree-ori7 1 (258 pairs)
+OLD TABLE (main's current shree-ori7): forward = composer preferred 13408/41470 (32.33%), other accepted 5; = the new table's target (na 5B, P3b) 13409
+OLD REVERSE on the composer's preferred bytes (9C->5B): exact 20180/41470, with Latin/control/nonchar 1997
+DOCUMENTS THE OLD TABLE WROTE (truth rows + 20,000 words, seed 31337) read by the NEW reverse: 32550 (skipped 28920 the old table reported unmapped): exact 30064, same text for the new table 0, Latin/control 0, malformed 0, other text 2486
+    OTHER ନ୍ର old 9C FF FA C0 FF read ନ୍‌ର
+    OTHER ନ୍ୟ old 9C FF FA DF read ନ୍‌ୟ
+    OTHER ନ୍ର୍ୟ old 9C FF FA F6 DF read ର୍ନ୍ୟ
+    OTHER ନ୍ୟ୍ର old 9C FF FA DF F7 read ନ୍‌ୟ୍ର
+    OTHER ଡ଼୍ର old DD FA C0 FF read ଡ଼୍‌ର
+    OTHER ଡ଼୍ୟ old DD FA DF read ଡ଼୍‌ୟ
+    OTHER ଡ଼୍ର୍ୟ old DD FA F6 DF read ର୍ଡ଼୍ୟ
+    OTHER ଡ଼୍ୟ୍ର old DD FA DF F7 read ଡ଼୍‌ୟ୍ର
+    OTHER ଢ଼୍ର old DE FA C0 FF read ଢ଼୍‌ର
+    OTHER ଢ଼୍ୟ old DE FA DF read ଢ଼୍‌ୟ
+    OTHER ଢ଼୍ର୍ୟ old DE FA F6 DF read ର୍ଢ଼୍ୟ
+    OTHER ଢ଼୍ୟ୍ର old DE FA DF F7 read ଢ଼୍‌ୟ୍ର
+[oldread done at 3s]

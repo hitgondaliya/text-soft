@@ -1,0 +1,885 @@
+BAD	quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)	ੇ	07 79	-> ੇ [0007 0A47]	control U+0007
+BAD	quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)	ਿ	07 71	-> ਿ [0007 0A3F]	control U+0007
+BAD	quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)	ੋ	07 7D	-> ੋ [0007 0A4B]	control U+0007
+BAD	quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)	ੁ	07 74	-> ੁ [0007 0A41]	control U+0007
+BAD	quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)	ਾ	07 70	-> ਾ [0007 0A3E]	control U+0007
+OTHER	quirk:vendor-key-types-other-than-its-codes (phonetic/inscript mode): U "ੳਉ" for codes "ੳਂੁ"	ੳਉ	44 74	-> ਉਂ [0A09 0A02]	-> 45 A4
+OTHER	quirk:U-composer-wrote-"ਕਾ"-for-"ਕਾ?"	ਕਾ	48 70 A9	-> ਕਾ- [0A15 0A3E 002D]	-> 48 70 2D
+OTHER	quirk:U-composer-wrote-"ਕਿ"-for-"ਕਿ?"	ਕਿ	71 48 A9	-> ਕਿ- [0A15 0A3F 002D]	-> 71 48 2D
+OTHER	quirk:U-composer-wrote-"ਕੀ"-for-"ਕੀ?"	ਕੀ	48 72 A9	-> ਕੀ- [0A15 0A40 002D]	-> 48 72 2D
+OTHER	quirk:U-composer-wrote-"ਕੁ"-for-"ਕੁ?"	ਕੁ	48 74 A9	-> ਕੁ- [0A15 0A41 002D]	-> 48 74 2D
+OTHER	quirk:U-composer-wrote-"ਕੂ"-for-"ਕੂ?"	ਕੂ	48 76 A9	-> ਕੂ- [0A15 0A42 002D]	-> 48 76 2D
+OTHER	quirk:U-composer-wrote-"ਕੇ"-for-"ਕੇ?"	ਕੇ	48 79 A9	-> ਕੇ- [0A15 0A47 002D]	-> 48 79 2D
+OTHER	quirk:U-composer-wrote-"ਕੈ"-for-"ਕੈ?"	ਕੈ	48 B1 A9	-> ਕੈ- [0A15 0A48 002D]	-> 48 B1 2D
+OTHER	quirk:U-composer-wrote-"ਕੋ"-for-"ਕੋ?"	ਕੋ	48 7D A9	-> ਕੋ- [0A15 0A4B 002D]	-> 48 7D 2D
+OTHER	quirk:U-composer-wrote-"ਕੌ"-for-"ਕੌ?"	ਕੌ	48 A1 A9	-> ਕੌ- [0A15 0A4C 002D]	-> 48 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਕਿਂ	48 71	-> ਕਿ [0A15 0A3F]	-> 71 48
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਕਿੰ	48 71	-> ਕਿ [0A15 0A3F]	-> 71 48
+OTHER	quirk:U-composer-wrote-"ਕ"-for-"ਕ?"	ਕ	48 A9	-> ਕ- [0A15 002D]	-> 48 2D
+OTHER	quirk:U-composer-wrote-"ਖਾ"-for-"ਖਾ?"	ਖਾ	49 70 A9	-> ਖਾ- [0A16 0A3E 002D]	-> 49 70 2D
+OTHER	quirk:U-composer-wrote-"ਖਿ"-for-"ਖਿ?"	ਖਿ	71 49 A9	-> ਖਿ- [0A16 0A3F 002D]	-> 71 49 2D
+OTHER	quirk:U-composer-wrote-"ਖੀ"-for-"ਖੀ?"	ਖੀ	49 72 A9	-> ਖੀ- [0A16 0A40 002D]	-> 49 72 2D
+OTHER	quirk:U-composer-wrote-"ਖੁ"-for-"ਖੁ?"	ਖੁ	49 74 A9	-> ਖੁ- [0A16 0A41 002D]	-> 49 74 2D
+OTHER	quirk:U-composer-wrote-"ਖੂ"-for-"ਖੂ?"	ਖੂ	49 76 A9	-> ਖੂ- [0A16 0A42 002D]	-> 49 76 2D
+OTHER	quirk:U-composer-wrote-"ਖੇ"-for-"ਖੇ?"	ਖੇ	49 79 A9	-> ਖੇ- [0A16 0A47 002D]	-> 49 79 2D
+OTHER	quirk:U-composer-wrote-"ਖੈ"-for-"ਖੈ?"	ਖੈ	49 B1 A9	-> ਖੈ- [0A16 0A48 002D]	-> 49 B1 2D
+OTHER	quirk:U-composer-wrote-"ਖੋ"-for-"ਖੋ?"	ਖੋ	49 7D A9	-> ਖੋ- [0A16 0A4B 002D]	-> 49 7D 2D
+OTHER	quirk:U-composer-wrote-"ਖੌ"-for-"ਖੌ?"	ਖੌ	49 A1 A9	-> ਖੌ- [0A16 0A4C 002D]	-> 49 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਖਿਂ	49 71	-> ਖਿ [0A16 0A3F]	-> 71 49
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਖਿੰ	49 71	-> ਖਿ [0A16 0A3F]	-> 71 49
+OTHER	quirk:U-composer-wrote-"ਖ"-for-"ਖ?"	ਖ	49 A9	-> ਖ- [0A16 002D]	-> 49 2D
+OTHER	quirk:U-composer-wrote-"ਗਾ"-for-"ਗਾ?"	ਗਾ	4A 70 A9	-> ਗਾ- [0A17 0A3E 002D]	-> 4A 70 2D
+OTHER	quirk:U-composer-wrote-"ਗਿ"-for-"ਗਿ?"	ਗਿ	71 4A A9	-> ਗਿ- [0A17 0A3F 002D]	-> 71 4A 2D
+OTHER	quirk:U-composer-wrote-"ਗੀ"-for-"ਗੀ?"	ਗੀ	4A 72 A9	-> ਗੀ- [0A17 0A40 002D]	-> 4A 72 2D
+OTHER	quirk:U-composer-wrote-"ਗੁ"-for-"ਗੁ?"	ਗੁ	4A 74 A9	-> ਗੁ- [0A17 0A41 002D]	-> 4A 74 2D
+OTHER	quirk:U-composer-wrote-"ਗੂ"-for-"ਗੂ?"	ਗੂ	4A 76 A9	-> ਗੂ- [0A17 0A42 002D]	-> 4A 76 2D
+OTHER	quirk:U-composer-wrote-"ਗੇ"-for-"ਗੇ?"	ਗੇ	4A 79 A9	-> ਗੇ- [0A17 0A47 002D]	-> 4A 79 2D
+OTHER	quirk:U-composer-wrote-"ਗੈ"-for-"ਗੈ?"	ਗੈ	4A B1 A9	-> ਗੈ- [0A17 0A48 002D]	-> 4A B1 2D
+OTHER	quirk:U-composer-wrote-"ਗੋ"-for-"ਗੋ?"	ਗੋ	4A 7D A9	-> ਗੋ- [0A17 0A4B 002D]	-> 4A 7D 2D
+OTHER	quirk:U-composer-wrote-"ਗੌ"-for-"ਗੌ?"	ਗੌ	4A A1 A9	-> ਗੌ- [0A17 0A4C 002D]	-> 4A A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਗਿਂ	4A 71	-> ਗਿ [0A17 0A3F]	-> 71 4A
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਗਿੰ	4A 71	-> ਗਿ [0A17 0A3F]	-> 71 4A
+OTHER	quirk:U-composer-wrote-"ਗ"-for-"ਗ?"	ਗ	4A A9	-> ਗ- [0A17 002D]	-> 4A 2D
+OTHER	quirk:U-composer-wrote-"ਘਾ"-for-"ਘਾ?"	ਘਾ	4B 70 A9	-> ਘਾ- [0A18 0A3E 002D]	-> 4B 70 2D
+OTHER	quirk:U-composer-wrote-"ਘਿ"-for-"ਘਿ?"	ਘਿ	71 4B A9	-> ਘਿ- [0A18 0A3F 002D]	-> 71 4B 2D
+OTHER	quirk:U-composer-wrote-"ਘੀ"-for-"ਘੀ?"	ਘੀ	4B 72 A9	-> ਘੀ- [0A18 0A40 002D]	-> 4B 72 2D
+OTHER	quirk:U-composer-wrote-"ਘੁ"-for-"ਘੁ?"	ਘੁ	4B 74 A9	-> ਘੁ- [0A18 0A41 002D]	-> 4B 74 2D
+OTHER	quirk:U-composer-wrote-"ਘੂ"-for-"ਘੂ?"	ਘੂ	4B 76 A9	-> ਘੂ- [0A18 0A42 002D]	-> 4B 76 2D
+OTHER	quirk:U-composer-wrote-"ਘੇ"-for-"ਘੇ?"	ਘੇ	4B 79 A9	-> ਘੇ- [0A18 0A47 002D]	-> 4B 79 2D
+OTHER	quirk:U-composer-wrote-"ਘੈ"-for-"ਘੈ?"	ਘੈ	4B B1 A9	-> ਘੈ- [0A18 0A48 002D]	-> 4B B1 2D
+OTHER	quirk:U-composer-wrote-"ਘੋ"-for-"ਘੋ?"	ਘੋ	4B 7D A9	-> ਘੋ- [0A18 0A4B 002D]	-> 4B 7D 2D
+OTHER	quirk:U-composer-wrote-"ਘੌ"-for-"ਘੌ?"	ਘੌ	4B A1 A9	-> ਘੌ- [0A18 0A4C 002D]	-> 4B A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਘਿਂ	4B 71	-> ਘਿ [0A18 0A3F]	-> 71 4B
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਘਿੰ	4B 71	-> ਘਿ [0A18 0A3F]	-> 71 4B
+OTHER	quirk:U-composer-wrote-"ਘ"-for-"ਘ?"	ਘ	4B A9	-> ਘ- [0A18 002D]	-> 4B 2D
+OTHER	quirk:U-composer-wrote-"ਙਾ"-for-"ਙਾ?"	ਙਾ	4C 70 A9	-> ਙਾ- [0A19 0A3E 002D]	-> 4C 70 2D
+OTHER	quirk:U-composer-wrote-"ਙਿ"-for-"ਙਿ?"	ਙਿ	71 4C A9	-> ਙਿ- [0A19 0A3F 002D]	-> 71 4C 2D
+OTHER	quirk:U-composer-wrote-"ਙੀ"-for-"ਙੀ?"	ਙੀ	4C 72 A9	-> ਙੀ- [0A19 0A40 002D]	-> 4C 72 2D
+OTHER	quirk:U-composer-wrote-"ਙੁ"-for-"ਙੁ?"	ਙੁ	4C 74 A9	-> ਙੁ- [0A19 0A41 002D]	-> 4C 74 2D
+OTHER	quirk:U-composer-wrote-"ਙੂ"-for-"ਙੂ?"	ਙੂ	4C 76 A9	-> ਙੂ- [0A19 0A42 002D]	-> 4C 76 2D
+OTHER	quirk:U-composer-wrote-"ਙੇ"-for-"ਙੇ?"	ਙੇ	4C 79 A9	-> ਙੇ- [0A19 0A47 002D]	-> 4C 79 2D
+OTHER	quirk:U-composer-wrote-"ਙੈ"-for-"ਙੈ?"	ਙੈ	4C B1 A9	-> ਙੈ- [0A19 0A48 002D]	-> 4C B1 2D
+OTHER	quirk:U-composer-wrote-"ਙੋ"-for-"ਙੋ?"	ਙੋ	4C 7D A9	-> ਙੋ- [0A19 0A4B 002D]	-> 4C 7D 2D
+OTHER	quirk:U-composer-wrote-"ਙੌ"-for-"ਙੌ?"	ਙੌ	4C A1 A9	-> ਙੌ- [0A19 0A4C 002D]	-> 4C A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਙਿਂ	4C 71	-> ਙਿ [0A19 0A3F]	-> 71 4C
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਙਿੰ	4C 71	-> ਙਿ [0A19 0A3F]	-> 71 4C
+OTHER	quirk:U-composer-wrote-"ਙ"-for-"ਙ?"	ਙ	4C A9	-> ਙ- [0A19 002D]	-> 4C 2D
+OTHER	quirk:U-composer-wrote-"ਚਾ"-for-"ਚਾ?"	ਚਾ	4D 70 A9	-> ਚਾ- [0A1A 0A3E 002D]	-> 4D 70 2D
+OTHER	quirk:U-composer-wrote-"ਚਿ"-for-"ਚਿ?"	ਚਿ	71 4D A9	-> ਚਿ- [0A1A 0A3F 002D]	-> 71 4D 2D
+OTHER	quirk:U-composer-wrote-"ਚੀ"-for-"ਚੀ?"	ਚੀ	4D 72 A9	-> ਚੀ- [0A1A 0A40 002D]	-> 4D 72 2D
+OTHER	quirk:U-composer-wrote-"ਚੁ"-for-"ਚੁ?"	ਚੁ	4D 74 A9	-> ਚੁ- [0A1A 0A41 002D]	-> 4D 74 2D
+OTHER	quirk:U-composer-wrote-"ਚੂ"-for-"ਚੂ?"	ਚੂ	4D 76 A9	-> ਚੂ- [0A1A 0A42 002D]	-> 4D 76 2D
+OTHER	quirk:U-composer-wrote-"ਚੇ"-for-"ਚੇ?"	ਚੇ	4D 79 A9	-> ਚੇ- [0A1A 0A47 002D]	-> 4D 79 2D
+OTHER	quirk:U-composer-wrote-"ਚੈ"-for-"ਚੈ?"	ਚੈ	4D B1 A9	-> ਚੈ- [0A1A 0A48 002D]	-> 4D B1 2D
+OTHER	quirk:U-composer-wrote-"ਚੋ"-for-"ਚੋ?"	ਚੋ	4D 7D A9	-> ਚੋ- [0A1A 0A4B 002D]	-> 4D 7D 2D
+OTHER	quirk:U-composer-wrote-"ਚੌ"-for-"ਚੌ?"	ਚੌ	4D A1 A9	-> ਚੌ- [0A1A 0A4C 002D]	-> 4D A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਚਿਂ	4D 71	-> ਚਿ [0A1A 0A3F]	-> 71 4D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਚਿੰ	4D 71	-> ਚਿ [0A1A 0A3F]	-> 71 4D
+OTHER	quirk:U-composer-wrote-"ਚ"-for-"ਚ?"	ਚ	4D A9	-> ਚ- [0A1A 002D]	-> 4D 2D
+OTHER	quirk:U-composer-wrote-"ਛਾ"-for-"ਛਾ?"	ਛਾ	4E 70 A9	-> ਛਾ- [0A1B 0A3E 002D]	-> 4E 70 2D
+OTHER	quirk:U-composer-wrote-"ਛਿ"-for-"ਛਿ?"	ਛਿ	71 4E A9	-> ਛਿ- [0A1B 0A3F 002D]	-> 71 4E 2D
+OTHER	quirk:U-composer-wrote-"ਛੀ"-for-"ਛੀ?"	ਛੀ	4E 72 A9	-> ਛੀ- [0A1B 0A40 002D]	-> 4E 72 2D
+OTHER	quirk:U-composer-wrote-"ਛੁ"-for-"ਛੁ?"	ਛੁ	4E 74 A9	-> ਛੁ- [0A1B 0A41 002D]	-> 4E 74 2D
+OTHER	quirk:U-composer-wrote-"ਛੂ"-for-"ਛੂ?"	ਛੂ	4E 76 A9	-> ਛੂ- [0A1B 0A42 002D]	-> 4E 76 2D
+OTHER	quirk:U-composer-wrote-"ਛੇ"-for-"ਛੇ?"	ਛੇ	4E 79 A9	-> ਛੇ- [0A1B 0A47 002D]	-> 4E 79 2D
+OTHER	quirk:U-composer-wrote-"ਛੈ"-for-"ਛੈ?"	ਛੈ	4E B1 A9	-> ਛੈ- [0A1B 0A48 002D]	-> 4E B1 2D
+OTHER	quirk:U-composer-wrote-"ਛੋ"-for-"ਛੋ?"	ਛੋ	4E 7D A9	-> ਛੋ- [0A1B 0A4B 002D]	-> 4E 7D 2D
+OTHER	quirk:U-composer-wrote-"ਛੌ"-for-"ਛੌ?"	ਛੌ	4E A1 A9	-> ਛੌ- [0A1B 0A4C 002D]	-> 4E A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਛਿਂ	4E 71	-> ਛਿ [0A1B 0A3F]	-> 71 4E
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਛਿੰ	4E 71	-> ਛਿ [0A1B 0A3F]	-> 71 4E
+OTHER	quirk:U-composer-wrote-"ਛ"-for-"ਛ?"	ਛ	4E A9	-> ਛ- [0A1B 002D]	-> 4E 2D
+OTHER	quirk:U-composer-wrote-"ਜਾ"-for-"ਜਾ?"	ਜਾ	4F 70 A9	-> ਜਾ- [0A1C 0A3E 002D]	-> 4F 70 2D
+OTHER	quirk:U-composer-wrote-"ਜਿ"-for-"ਜਿ?"	ਜਿ	71 4F A9	-> ਜਿ- [0A1C 0A3F 002D]	-> 71 4F 2D
+OTHER	quirk:U-composer-wrote-"ਜੀ"-for-"ਜੀ?"	ਜੀ	4F 72 A9	-> ਜੀ- [0A1C 0A40 002D]	-> 4F 72 2D
+OTHER	quirk:U-composer-wrote-"ਜੁ"-for-"ਜੁ?"	ਜੁ	4F 74 A9	-> ਜੁ- [0A1C 0A41 002D]	-> 4F 74 2D
+OTHER	quirk:U-composer-wrote-"ਜੂ"-for-"ਜੂ?"	ਜੂ	4F 76 A9	-> ਜੂ- [0A1C 0A42 002D]	-> 4F 76 2D
+OTHER	quirk:U-composer-wrote-"ਜੇ"-for-"ਜੇ?"	ਜੇ	4F 79 A9	-> ਜੇ- [0A1C 0A47 002D]	-> 4F 79 2D
+OTHER	quirk:U-composer-wrote-"ਜੈ"-for-"ਜੈ?"	ਜੈ	4F B1 A9	-> ਜੈ- [0A1C 0A48 002D]	-> 4F B1 2D
+OTHER	quirk:U-composer-wrote-"ਜੋ"-for-"ਜੋ?"	ਜੋ	4F 7D A9	-> ਜੋ- [0A1C 0A4B 002D]	-> 4F 7D 2D
+OTHER	quirk:U-composer-wrote-"ਜੌ"-for-"ਜੌ?"	ਜੌ	4F A1 A9	-> ਜੌ- [0A1C 0A4C 002D]	-> 4F A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਜਿਂ	4F 71	-> ਜਿ [0A1C 0A3F]	-> 71 4F
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਜਿੰ	4F 71	-> ਜਿ [0A1C 0A3F]	-> 71 4F
+OTHER	quirk:U-composer-wrote-"ਜ"-for-"ਜ?"	ਜ	4F A9	-> ਜ- [0A1C 002D]	-> 4F 2D
+OTHER	quirk:U-composer-wrote-"ਝਾ"-for-"ਝਾ?"	ਝਾ	50 70 A9	-> ਝਾ- [0A1D 0A3E 002D]	-> 50 70 2D
+OTHER	quirk:U-composer-wrote-"ਝਿ"-for-"ਝਿ?"	ਝਿ	71 50 A9	-> ਝਿ- [0A1D 0A3F 002D]	-> 71 50 2D
+OTHER	quirk:U-composer-wrote-"ਝੀ"-for-"ਝੀ?"	ਝੀ	50 72 A9	-> ਝੀ- [0A1D 0A40 002D]	-> 50 72 2D
+OTHER	quirk:U-composer-wrote-"ਝੁ"-for-"ਝੁ?"	ਝੁ	50 74 A9	-> ਝੁ- [0A1D 0A41 002D]	-> 50 74 2D
+OTHER	quirk:U-composer-wrote-"ਝੂ"-for-"ਝੂ?"	ਝੂ	50 76 A9	-> ਝੂ- [0A1D 0A42 002D]	-> 50 76 2D
+OTHER	quirk:U-composer-wrote-"ਝੇ"-for-"ਝੇ?"	ਝੇ	50 79 A9	-> ਝੇ- [0A1D 0A47 002D]	-> 50 79 2D
+OTHER	quirk:U-composer-wrote-"ਝੈ"-for-"ਝੈ?"	ਝੈ	50 B1 A9	-> ਝੈ- [0A1D 0A48 002D]	-> 50 B1 2D
+OTHER	quirk:U-composer-wrote-"ਝੋ"-for-"ਝੋ?"	ਝੋ	50 7D A9	-> ਝੋ- [0A1D 0A4B 002D]	-> 50 7D 2D
+OTHER	quirk:U-composer-wrote-"ਝੌ"-for-"ਝੌ?"	ਝੌ	50 A1 A9	-> ਝੌ- [0A1D 0A4C 002D]	-> 50 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਝਿਂ	50 71	-> ਝਿ [0A1D 0A3F]	-> 71 50
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਝਿੰ	50 71	-> ਝਿ [0A1D 0A3F]	-> 71 50
+OTHER	quirk:U-composer-wrote-"ਝ"-for-"ਝ?"	ਝ	50 A9	-> ਝ- [0A1D 002D]	-> 50 2D
+OTHER	quirk:U-composer-wrote-"ਞਾ"-for-"ਞਾ?"	ਞਾ	51 70 A9	-> ਞਾ- [0A1E 0A3E 002D]	-> 51 70 2D
+OTHER	quirk:U-composer-wrote-"ਞਿ"-for-"ਞਿ?"	ਞਿ	71 51 A9	-> ਞਿ- [0A1E 0A3F 002D]	-> 71 51 2D
+OTHER	quirk:U-composer-wrote-"ਞੀ"-for-"ਞੀ?"	ਞੀ	51 72 A9	-> ਞੀ- [0A1E 0A40 002D]	-> 51 72 2D
+OTHER	quirk:U-composer-wrote-"ਞੁ"-for-"ਞੁ?"	ਞੁ	51 74 A9	-> ਞੁ- [0A1E 0A41 002D]	-> 51 74 2D
+OTHER	quirk:U-composer-wrote-"ਞੂ"-for-"ਞੂ?"	ਞੂ	51 76 A9	-> ਞੂ- [0A1E 0A42 002D]	-> 51 76 2D
+OTHER	quirk:U-composer-wrote-"ਞੇ"-for-"ਞੇ?"	ਞੇ	51 79 A9	-> ਞੇ- [0A1E 0A47 002D]	-> 51 79 2D
+OTHER	quirk:U-composer-wrote-"ਞੈ"-for-"ਞੈ?"	ਞੈ	51 B1 A9	-> ਞੈ- [0A1E 0A48 002D]	-> 51 B1 2D
+OTHER	quirk:U-composer-wrote-"ਞੋ"-for-"ਞੋ?"	ਞੋ	51 7D A9	-> ਞੋ- [0A1E 0A4B 002D]	-> 51 7D 2D
+OTHER	quirk:U-composer-wrote-"ਞੌ"-for-"ਞੌ?"	ਞੌ	51 A1 A9	-> ਞੌ- [0A1E 0A4C 002D]	-> 51 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਞਿਂ	51 71	-> ਞਿ [0A1E 0A3F]	-> 71 51
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਞਿੰ	51 71	-> ਞਿ [0A1E 0A3F]	-> 71 51
+OTHER	quirk:U-composer-wrote-"ਞ"-for-"ਞ?"	ਞ	51 A9	-> ਞ- [0A1E 002D]	-> 51 2D
+OTHER	quirk:U-composer-wrote-"ਟਾ"-for-"ਟਾ?"	ਟਾ	52 70 A9	-> ਟਾ- [0A1F 0A3E 002D]	-> 52 70 2D
+OTHER	quirk:U-composer-wrote-"ਟਿ"-for-"ਟਿ?"	ਟਿ	71 52 A9	-> ਟਿ- [0A1F 0A3F 002D]	-> 71 52 2D
+OTHER	quirk:U-composer-wrote-"ਟੀ"-for-"ਟੀ?"	ਟੀ	52 72 A9	-> ਟੀ- [0A1F 0A40 002D]	-> 52 72 2D
+OTHER	quirk:U-composer-wrote-"ਟੁ"-for-"ਟੁ?"	ਟੁ	52 74 A9	-> ਟੁ- [0A1F 0A41 002D]	-> 52 74 2D
+OTHER	quirk:U-composer-wrote-"ਟੂ"-for-"ਟੂ?"	ਟੂ	52 76 A9	-> ਟੂ- [0A1F 0A42 002D]	-> 52 76 2D
+OTHER	quirk:U-composer-wrote-"ਟੇ"-for-"ਟੇ?"	ਟੇ	52 79 A9	-> ਟੇ- [0A1F 0A47 002D]	-> 52 79 2D
+OTHER	quirk:U-composer-wrote-"ਟੈ"-for-"ਟੈ?"	ਟੈ	52 B1 A9	-> ਟੈ- [0A1F 0A48 002D]	-> 52 B1 2D
+OTHER	quirk:U-composer-wrote-"ਟੋ"-for-"ਟੋ?"	ਟੋ	52 7D A9	-> ਟੋ- [0A1F 0A4B 002D]	-> 52 7D 2D
+OTHER	quirk:U-composer-wrote-"ਟੌ"-for-"ਟੌ?"	ਟੌ	52 A1 A9	-> ਟੌ- [0A1F 0A4C 002D]	-> 52 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਟਿਂ	52 71	-> ਟਿ [0A1F 0A3F]	-> 71 52
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਟਿੰ	52 71	-> ਟਿ [0A1F 0A3F]	-> 71 52
+OTHER	quirk:U-composer-wrote-"ਟ"-for-"ਟ?"	ਟ	52 A9	-> ਟ- [0A1F 002D]	-> 52 2D
+OTHER	quirk:U-composer-wrote-"ਠਾ"-for-"ਠਾ?"	ਠਾ	53 BE 70 A9	-> ਠਾ- [0A20 0A3E 002D]	-> 53 BE 70 2D
+OTHER	quirk:U-composer-wrote-"ਠਿ"-for-"ਠਿ?"	ਠਿ	71 53 BE A9	-> ਠਿ- [0A20 0A3F 002D]	-> 71 53 BE 2D
+OTHER	quirk:U-composer-wrote-"ਠੀ"-for-"ਠੀ?"	ਠੀ	53 BE 72 A9	-> ਠੀ- [0A20 0A40 002D]	-> 53 BE 72 2D
+OTHER	quirk:U-composer-wrote-"ਠੁ"-for-"ਠੁ?"	ਠੁ	53 BE AE A9	-> ਠੁ- [0A20 0A41 002D]	-> 53 BE AE 2D
+OTHER	alt:mark struck before the vowel sign	ਠੱੁ	53 A7 BE AE	-> ਠੁੱ [0A20 0A41 0A71]	-> 53 A7 BE 74
+OTHER	alt:mark struck before the vowel sign	ਠਂੁ	53 A3 BE AE	-> ਠੁਂ [0A20 0A41 0A02]	-> 53 A3 BE 74
+OTHER	alt:mark struck before the vowel sign	ਠੰੁ	53 A5 BE AE	-> ਠੁੰ [0A20 0A41 0A70]	-> 53 A5 BE 74
+OTHER	quirk:U-composer-wrote-"ਠੂ"-for-"ਠੂ?"	ਠੂ	53 BE AF A9	-> ਠੂ- [0A20 0A42 002D]	-> 53 BE AF 2D
+OTHER	alt:mark struck before the vowel sign	ਠੱੂ	53 A7 BE AF	-> ਠੂੱ [0A20 0A42 0A71]	-> 53 A7 BE 76
+OTHER	alt:mark struck before the vowel sign	ਠਂੂ	53 A3 BE AF	-> ਠੂਂ [0A20 0A42 0A02]	-> 53 A3 BE 76
+OTHER	alt:mark struck before the vowel sign	ਠੰੂ	53 A5 BE AF	-> ਠੂੰ [0A20 0A42 0A70]	-> 53 A5 BE 76
+OTHER	quirk:U-composer-wrote-"ਠੇ"-for-"ਠੇ?"	ਠੇ	53 79 BE A9	-> ਠੇ- [0A20 0A47 002D]	-> 53 79 BE 2D
+OTHER	quirk:U-composer-wrote-"ਠੈ"-for-"ਠੈ?"	ਠੈ	53 B1 BE A9	-> ਠੈ- [0A20 0A48 002D]	-> 53 B1 BE 2D
+OTHER	quirk:U-composer-wrote-"ਠੋ"-for-"ਠੋ?"	ਠੋ	53 7D BE A9	-> ਠੋ- [0A20 0A4B 002D]	-> 53 7D BE 2D
+OTHER	quirk:U-composer-wrote-"ਠੌ"-for-"ਠੌ?"	ਠੌ	53 A1 BE A9	-> ਠੌ- [0A20 0A4C 002D]	-> 53 A1 BE 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਠਿਂ	53 BE 71	-> ਠਿ [0A20 0A3F]	-> 71 53 BE
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਠਿੰ	53 BE 71	-> ਠਿ [0A20 0A3F]	-> 71 53 BE
+OTHER	quirk:U-composer-wrote-"ਠ"-for-"ਠ?"	ਠ	53 BE A9	-> ਠ- [0A20 002D]	-> 53 BE 2D
+OTHER	quirk:U-composer-wrote-"ਡਾ"-for-"ਡਾ?"	ਡਾ	54 70 A9	-> ਡਾ- [0A21 0A3E 002D]	-> 54 70 2D
+OTHER	quirk:U-composer-wrote-"ਡਿ"-for-"ਡਿ?"	ਡਿ	71 54 A9	-> ਡਿ- [0A21 0A3F 002D]	-> 71 54 2D
+OTHER	quirk:U-composer-wrote-"ਡੀ"-for-"ਡੀ?"	ਡੀ	54 72 A9	-> ਡੀ- [0A21 0A40 002D]	-> 54 72 2D
+OTHER	quirk:U-composer-wrote-"ਡੁ"-for-"ਡੁ?"	ਡੁ	54 74 A9	-> ਡੁ- [0A21 0A41 002D]	-> 54 74 2D
+OTHER	quirk:U-composer-wrote-"ਡੂ"-for-"ਡੂ?"	ਡੂ	54 76 A9	-> ਡੂ- [0A21 0A42 002D]	-> 54 76 2D
+OTHER	quirk:U-composer-wrote-"ਡੇ"-for-"ਡੇ?"	ਡੇ	54 79 A9	-> ਡੇ- [0A21 0A47 002D]	-> 54 79 2D
+OTHER	quirk:U-composer-wrote-"ਡੈ"-for-"ਡੈ?"	ਡੈ	54 B1 A9	-> ਡੈ- [0A21 0A48 002D]	-> 54 B1 2D
+OTHER	quirk:U-composer-wrote-"ਡੋ"-for-"ਡੋ?"	ਡੋ	54 7D A9	-> ਡੋ- [0A21 0A4B 002D]	-> 54 7D 2D
+OTHER	quirk:U-composer-wrote-"ਡੌ"-for-"ਡੌ?"	ਡੌ	54 A1 A9	-> ਡੌ- [0A21 0A4C 002D]	-> 54 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਡਿਂ	54 71	-> ਡਿ [0A21 0A3F]	-> 71 54
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਡਿੰ	54 71	-> ਡਿ [0A21 0A3F]	-> 71 54
+OTHER	quirk:U-composer-wrote-"ਡ"-for-"ਡ?"	ਡ	54 A9	-> ਡ- [0A21 002D]	-> 54 2D
+OTHER	quirk:U-composer-wrote-"ਢਾ"-for-"ਢਾ?"	ਢਾ	55 70 A9	-> ਢਾ- [0A22 0A3E 002D]	-> 55 70 2D
+OTHER	quirk:U-composer-wrote-"ਢਿ"-for-"ਢਿ?"	ਢਿ	71 55 A9	-> ਢਿ- [0A22 0A3F 002D]	-> 71 55 2D
+OTHER	quirk:U-composer-wrote-"ਢੀ"-for-"ਢੀ?"	ਢੀ	55 72 A9	-> ਢੀ- [0A22 0A40 002D]	-> 55 72 2D
+OTHER	quirk:U-composer-wrote-"ਢੁ"-for-"ਢੁ?"	ਢੁ	55 74 A9	-> ਢੁ- [0A22 0A41 002D]	-> 55 74 2D
+OTHER	quirk:U-composer-wrote-"ਢੂ"-for-"ਢੂ?"	ਢੂ	55 76 A9	-> ਢੂ- [0A22 0A42 002D]	-> 55 76 2D
+OTHER	quirk:U-composer-wrote-"ਢੇ"-for-"ਢੇ?"	ਢੇ	55 79 A9	-> ਢੇ- [0A22 0A47 002D]	-> 55 79 2D
+OTHER	quirk:U-composer-wrote-"ਢੈ"-for-"ਢੈ?"	ਢੈ	55 B1 A9	-> ਢੈ- [0A22 0A48 002D]	-> 55 B1 2D
+OTHER	quirk:U-composer-wrote-"ਢੋ"-for-"ਢੋ?"	ਢੋ	55 7D A9	-> ਢੋ- [0A22 0A4B 002D]	-> 55 7D 2D
+OTHER	quirk:U-composer-wrote-"ਢੌ"-for-"ਢੌ?"	ਢੌ	55 A1 A9	-> ਢੌ- [0A22 0A4C 002D]	-> 55 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਢਿਂ	55 71	-> ਢਿ [0A22 0A3F]	-> 71 55
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਢਿੰ	55 71	-> ਢਿ [0A22 0A3F]	-> 71 55
+OTHER	quirk:U-composer-wrote-"ਢ"-for-"ਢ?"	ਢ	55 A9	-> ਢ- [0A22 002D]	-> 55 2D
+OTHER	quirk:U-composer-wrote-"ਣਾ"-for-"ਣਾ?"	ਣਾ	56 70 A9	-> ਣਾ- [0A23 0A3E 002D]	-> 56 70 2D
+OTHER	quirk:U-composer-wrote-"ਣਿ"-for-"ਣਿ?"	ਣਿ	71 56 A9	-> ਣਿ- [0A23 0A3F 002D]	-> 71 56 2D
+OTHER	quirk:U-composer-wrote-"ਣੀ"-for-"ਣੀ?"	ਣੀ	56 72 A9	-> ਣੀ- [0A23 0A40 002D]	-> 56 72 2D
+OTHER	quirk:U-composer-wrote-"ਣੁ"-for-"ਣੁ?"	ਣੁ	56 74 A9	-> ਣੁ- [0A23 0A41 002D]	-> 56 74 2D
+OTHER	quirk:U-composer-wrote-"ਣੂ"-for-"ਣੂ?"	ਣੂ	56 76 A9	-> ਣੂ- [0A23 0A42 002D]	-> 56 76 2D
+OTHER	quirk:U-composer-wrote-"ਣੇ"-for-"ਣੇ?"	ਣੇ	56 79 A9	-> ਣੇ- [0A23 0A47 002D]	-> 56 79 2D
+OTHER	quirk:U-composer-wrote-"ਣੈ"-for-"ਣੈ?"	ਣੈ	56 B1 A9	-> ਣੈ- [0A23 0A48 002D]	-> 56 B1 2D
+OTHER	quirk:U-composer-wrote-"ਣੋ"-for-"ਣੋ?"	ਣੋ	56 7D A9	-> ਣੋ- [0A23 0A4B 002D]	-> 56 7D 2D
+OTHER	quirk:U-composer-wrote-"ਣੌ"-for-"ਣੌ?"	ਣੌ	56 A1 A9	-> ਣੌ- [0A23 0A4C 002D]	-> 56 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਣਿਂ	56 71	-> ਣਿ [0A23 0A3F]	-> 71 56
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਣਿੰ	56 71	-> ਣਿ [0A23 0A3F]	-> 71 56
+OTHER	quirk:U-composer-wrote-"ਣ"-for-"ਣ?"	ਣ	56 A9	-> ਣ- [0A23 002D]	-> 56 2D
+OTHER	quirk:U-composer-wrote-"ਤਾ"-for-"ਤਾ?"	ਤਾ	57 70 A9	-> ਤਾ- [0A24 0A3E 002D]	-> 57 70 2D
+OTHER	quirk:U-composer-wrote-"ਤਿ"-for-"ਤਿ?"	ਤਿ	71 57 A9	-> ਤਿ- [0A24 0A3F 002D]	-> 71 57 2D
+OTHER	quirk:U-composer-wrote-"ਤੀ"-for-"ਤੀ?"	ਤੀ	57 72 A9	-> ਤੀ- [0A24 0A40 002D]	-> 57 72 2D
+OTHER	quirk:U-composer-wrote-"ਤੁ"-for-"ਤੁ?"	ਤੁ	57 74 A9	-> ਤੁ- [0A24 0A41 002D]	-> 57 74 2D
+OTHER	quirk:U-composer-wrote-"ਤੂ"-for-"ਤੂ?"	ਤੂ	57 76 A9	-> ਤੂ- [0A24 0A42 002D]	-> 57 76 2D
+OTHER	quirk:U-composer-wrote-"ਤੇ"-for-"ਤੇ?"	ਤੇ	57 79 A9	-> ਤੇ- [0A24 0A47 002D]	-> 57 79 2D
+OTHER	quirk:U-composer-wrote-"ਤੈ"-for-"ਤੈ?"	ਤੈ	57 B1 A9	-> ਤੈ- [0A24 0A48 002D]	-> 57 B1 2D
+OTHER	quirk:U-composer-wrote-"ਤੋ"-for-"ਤੋ?"	ਤੋ	57 7D A9	-> ਤੋ- [0A24 0A4B 002D]	-> 57 7D 2D
+OTHER	quirk:U-composer-wrote-"ਤੌ"-for-"ਤੌ?"	ਤੌ	57 A1 A9	-> ਤੌ- [0A24 0A4C 002D]	-> 57 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਤਿਂ	57 71	-> ਤਿ [0A24 0A3F]	-> 71 57
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਤਿੰ	57 71	-> ਤਿ [0A24 0A3F]	-> 71 57
+OTHER	quirk:U-composer-wrote-"ਤ"-for-"ਤ?"	ਤ	57 A9	-> ਤ- [0A24 002D]	-> 57 2D
+OTHER	quirk:U-composer-wrote-"ਥਾ"-for-"ਥਾ?"	ਥਾ	58 70 A9	-> ਥਾ- [0A25 0A3E 002D]	-> 58 70 2D
+OTHER	quirk:U-composer-wrote-"ਥਿ"-for-"ਥਿ?"	ਥਿ	71 58 A9	-> ਥਿ- [0A25 0A3F 002D]	-> 71 58 2D
+OTHER	quirk:U-composer-wrote-"ਥੀ"-for-"ਥੀ?"	ਥੀ	58 72 A9	-> ਥੀ- [0A25 0A40 002D]	-> 58 72 2D
+OTHER	quirk:U-composer-wrote-"ਥੁ"-for-"ਥੁ?"	ਥੁ	58 74 A9	-> ਥੁ- [0A25 0A41 002D]	-> 58 74 2D
+OTHER	quirk:U-composer-wrote-"ਥੂ"-for-"ਥੂ?"	ਥੂ	58 76 A9	-> ਥੂ- [0A25 0A42 002D]	-> 58 76 2D
+OTHER	quirk:U-composer-wrote-"ਥੇ"-for-"ਥੇ?"	ਥੇ	58 79 A9	-> ਥੇ- [0A25 0A47 002D]	-> 58 79 2D
+OTHER	quirk:U-composer-wrote-"ਥੈ"-for-"ਥੈ?"	ਥੈ	58 B1 A9	-> ਥੈ- [0A25 0A48 002D]	-> 58 B1 2D
+OTHER	quirk:U-composer-wrote-"ਥੋ"-for-"ਥੋ?"	ਥੋ	58 7D A9	-> ਥੋ- [0A25 0A4B 002D]	-> 58 7D 2D
+OTHER	quirk:U-composer-wrote-"ਥੌ"-for-"ਥੌ?"	ਥੌ	58 A1 A9	-> ਥੌ- [0A25 0A4C 002D]	-> 58 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਥਿਂ	58 71	-> ਥਿ [0A25 0A3F]	-> 71 58
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਥਿੰ	58 71	-> ਥਿ [0A25 0A3F]	-> 71 58
+OTHER	quirk:U-composer-wrote-"ਥ"-for-"ਥ?"	ਥ	58 A9	-> ਥ- [0A25 002D]	-> 58 2D
+OTHER	quirk:U-composer-wrote-"ਦਾ"-for-"ਦਾ?"	ਦਾ	59 70 A9	-> ਦਾ- [0A26 0A3E 002D]	-> 59 70 2D
+OTHER	quirk:U-composer-wrote-"ਦਿ"-for-"ਦਿ?"	ਦਿ	71 59 A9	-> ਦਿ- [0A26 0A3F 002D]	-> 71 59 2D
+OTHER	quirk:U-composer-wrote-"ਦੀ"-for-"ਦੀ?"	ਦੀ	59 72 A9	-> ਦੀ- [0A26 0A40 002D]	-> 59 72 2D
+OTHER	quirk:U-composer-wrote-"ਦੁ"-for-"ਦੁ?"	ਦੁ	59 74 A9	-> ਦੁ- [0A26 0A41 002D]	-> 59 74 2D
+OTHER	quirk:U-composer-wrote-"ਦੂ"-for-"ਦੂ?"	ਦੂ	59 76 A9	-> ਦੂ- [0A26 0A42 002D]	-> 59 76 2D
+OTHER	quirk:U-composer-wrote-"ਦੇ"-for-"ਦੇ?"	ਦੇ	59 79 A9	-> ਦੇ- [0A26 0A47 002D]	-> 59 79 2D
+OTHER	quirk:U-composer-wrote-"ਦੈ"-for-"ਦੈ?"	ਦੈ	59 B1 A9	-> ਦੈ- [0A26 0A48 002D]	-> 59 B1 2D
+OTHER	quirk:U-composer-wrote-"ਦੋ"-for-"ਦੋ?"	ਦੋ	59 7D A9	-> ਦੋ- [0A26 0A4B 002D]	-> 59 7D 2D
+OTHER	quirk:U-composer-wrote-"ਦੌ"-for-"ਦੌ?"	ਦੌ	59 A1 A9	-> ਦੌ- [0A26 0A4C 002D]	-> 59 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਦਿਂ	59 71	-> ਦਿ [0A26 0A3F]	-> 71 59
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਦਿੰ	59 71	-> ਦਿ [0A26 0A3F]	-> 71 59
+OTHER	quirk:U-composer-wrote-"ਦ"-for-"ਦ?"	ਦ	59 A9	-> ਦ- [0A26 002D]	-> 59 2D
+OTHER	quirk:U-composer-wrote-"ਧਾ"-for-"ਧਾ?"	ਧਾ	5A 70 A9	-> ਧਾ- [0A27 0A3E 002D]	-> 5A 70 2D
+OTHER	quirk:U-composer-wrote-"ਧਿ"-for-"ਧਿ?"	ਧਿ	71 5A A9	-> ਧਿ- [0A27 0A3F 002D]	-> 71 5A 2D
+OTHER	quirk:U-composer-wrote-"ਧੀ"-for-"ਧੀ?"	ਧੀ	5A 72 A9	-> ਧੀ- [0A27 0A40 002D]	-> 5A 72 2D
+OTHER	quirk:U-composer-wrote-"ਧੁ"-for-"ਧੁ?"	ਧੁ	5A 74 A9	-> ਧੁ- [0A27 0A41 002D]	-> 5A 74 2D
+OTHER	quirk:U-composer-wrote-"ਧੂ"-for-"ਧੂ?"	ਧੂ	5A 76 A9	-> ਧੂ- [0A27 0A42 002D]	-> 5A 76 2D
+OTHER	quirk:U-composer-wrote-"ਧੇ"-for-"ਧੇ?"	ਧੇ	5A 79 A9	-> ਧੇ- [0A27 0A47 002D]	-> 5A 79 2D
+OTHER	quirk:U-composer-wrote-"ਧੈ"-for-"ਧੈ?"	ਧੈ	5A B1 A9	-> ਧੈ- [0A27 0A48 002D]	-> 5A B1 2D
+OTHER	quirk:U-composer-wrote-"ਧੋ"-for-"ਧੋ?"	ਧੋ	5A 7D A9	-> ਧੋ- [0A27 0A4B 002D]	-> 5A 7D 2D
+OTHER	quirk:U-composer-wrote-"ਧੌ"-for-"ਧੌ?"	ਧੌ	5A A1 A9	-> ਧੌ- [0A27 0A4C 002D]	-> 5A A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਧਿਂ	5A 71	-> ਧਿ [0A27 0A3F]	-> 71 5A
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਧਿੰ	5A 71	-> ਧਿ [0A27 0A3F]	-> 71 5A
+OTHER	quirk:U-composer-wrote-"ਧ"-for-"ਧ?"	ਧ	5A A9	-> ਧ- [0A27 002D]	-> 5A 2D
+OTHER	quirk:U-composer-wrote-"ਨਾ"-for-"ਨਾ?"	ਨਾ	B2 BE 70 A9	-> ਨਾ- [0A28 0A3E 002D]	-> B2 BE 70 2D
+OTHER	quirk:U-composer-wrote-"ਨਿ"-for-"ਨਿ?"	ਨਿ	71 B2 BE A9	-> ਨਿ- [0A28 0A3F 002D]	-> 71 B2 BE 2D
+OTHER	quirk:U-composer-wrote-"ਨੀ"-for-"ਨੀ?"	ਨੀ	B2 BE 72 A9	-> ਨੀ- [0A28 0A40 002D]	-> B2 BE 72 2D
+OTHER	quirk:U-composer-wrote-"ਨੁ"-for-"ਨੁ?"	ਨੁ	B2 BE AE A9	-> ਨੁ- [0A28 0A41 002D]	-> B2 BE AE 2D
+OTHER	alt:mark struck before the vowel sign	ਨੱੁ	B2 A7 BE AE	-> ਨੁੱ [0A28 0A41 0A71]	-> B2 A7 BE 74
+OTHER	alt:mark struck before the vowel sign	ਨਂੁ	B2 A3 BE AE	-> ਨੁਂ [0A28 0A41 0A02]	-> B2 A3 BE 74
+OTHER	alt:mark struck before the vowel sign	ਨੰੁ	B2 A5 BE AE	-> ਨੁੰ [0A28 0A41 0A70]	-> B2 A5 BE 74
+OTHER	quirk:U-composer-wrote-"ਨੂ"-for-"ਨੂ?"	ਨੂ	B2 BE AF A9	-> ਨੂ- [0A28 0A42 002D]	-> B2 BE AF 2D
+OTHER	alt:mark struck before the vowel sign	ਨੱੂ	B2 A7 BE AF	-> ਨੂੱ [0A28 0A42 0A71]	-> B2 A7 BE 76
+OTHER	alt:mark struck before the vowel sign	ਨਂੂ	B2 A3 BE AF	-> ਨੂਂ [0A28 0A42 0A02]	-> B2 A3 BE 76
+OTHER	quirk:U-composer-wrote-"ਨੇ"-for-"ਨੇ?"	ਨੇ	B2 79 BE A9	-> ਨੇ- [0A28 0A47 002D]	-> B2 79 BE 2D
+OTHER	quirk:U-composer-wrote-"ਨੈ"-for-"ਨੈ?"	ਨੈ	B2 B1 BE A9	-> ਨੈ- [0A28 0A48 002D]	-> B2 B1 BE 2D
+OTHER	quirk:U-composer-wrote-"ਨੋ"-for-"ਨੋ?"	ਨੋ	B2 7D BE A9	-> ਨੋ- [0A28 0A4B 002D]	-> B2 7D BE 2D
+OTHER	quirk:U-composer-wrote-"ਨੌ"-for-"ਨੌ?"	ਨੌ	B2 A1 BE A9	-> ਨੌ- [0A28 0A4C 002D]	-> B2 A1 BE 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਨਿਂ	B2 BE 71	-> ਨਿ [0A28 0A3F]	-> 71 B2 BE
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਨਿੰ	B2 BE 71	-> ਨਿ [0A28 0A3F]	-> 71 B2 BE
+OTHER	quirk:U-composer-wrote-"ਨ"-for-"ਨ?"	ਨ	B2 BE A9	-> ਨ- [0A28 002D]	-> B2 BE 2D
+OTHER	quirk:U-composer-wrote-"ਪਾ"-for-"ਪਾ?"	ਪਾ	5C 70 A9	-> ਪਾ- [0A2A 0A3E 002D]	-> 5C 70 2D
+OTHER	quirk:U-composer-wrote-"ਪਿ"-for-"ਪਿ?"	ਪਿ	71 5C A9	-> ਪਿ- [0A2A 0A3F 002D]	-> 71 5C 2D
+OTHER	quirk:U-composer-wrote-"ਪੀ"-for-"ਪੀ?"	ਪੀ	5C 72 A9	-> ਪੀ- [0A2A 0A40 002D]	-> 5C 72 2D
+OTHER	quirk:U-composer-wrote-"ਪੁ"-for-"ਪੁ?"	ਪੁ	5C 74 A9	-> ਪੁ- [0A2A 0A41 002D]	-> 5C 74 2D
+OTHER	quirk:U-composer-wrote-"ਪੂ"-for-"ਪੂ?"	ਪੂ	5C 76 A9	-> ਪੂ- [0A2A 0A42 002D]	-> 5C 76 2D
+OTHER	quirk:U-composer-wrote-"ਪੇ"-for-"ਪੇ?"	ਪੇ	5C 79 A9	-> ਪੇ- [0A2A 0A47 002D]	-> 5C 79 2D
+OTHER	quirk:U-composer-wrote-"ਪੈ"-for-"ਪੈ?"	ਪੈ	5C B1 A9	-> ਪੈ- [0A2A 0A48 002D]	-> 5C B1 2D
+OTHER	quirk:U-composer-wrote-"ਪੋ"-for-"ਪੋ?"	ਪੋ	5C 7D A9	-> ਪੋ- [0A2A 0A4B 002D]	-> 5C 7D 2D
+OTHER	quirk:U-composer-wrote-"ਪੌ"-for-"ਪੌ?"	ਪੌ	5C A1 A9	-> ਪੌ- [0A2A 0A4C 002D]	-> 5C A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਪਿਂ	5C 71	-> ਪਿ [0A2A 0A3F]	-> 71 5C
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਪਿੰ	5C 71	-> ਪਿ [0A2A 0A3F]	-> 71 5C
+OTHER	quirk:U-composer-wrote-"ਪ"-for-"ਪ?"	ਪ	5C A9	-> ਪ- [0A2A 002D]	-> 5C 2D
+OTHER	quirk:U-composer-wrote-"ਫਾ"-for-"ਫਾ?"	ਫਾ	B3 70 A9	-> ਫਾ- [0A2B 0A3E 002D]	-> B3 70 2D
+OTHER	quirk:U-composer-wrote-"ਫਿ"-for-"ਫਿ?"	ਫਿ	71 B3 A9	-> ਫਿ- [0A2B 0A3F 002D]	-> 71 B3 2D
+OTHER	quirk:U-composer-wrote-"ਫੀ"-for-"ਫੀ?"	ਫੀ	B3 72 A9	-> ਫੀ- [0A2B 0A40 002D]	-> B3 72 2D
+OTHER	quirk:U-composer-wrote-"ਫੁ"-for-"ਫੁ?"	ਫੁ	B3 74 A9	-> ਫੁ- [0A2B 0A41 002D]	-> B3 74 2D
+OTHER	quirk:U-composer-wrote-"ਫੂ"-for-"ਫੂ?"	ਫੂ	B3 76 A9	-> ਫੂ- [0A2B 0A42 002D]	-> B3 76 2D
+OTHER	quirk:U-composer-wrote-"ਫੇ"-for-"ਫੇ?"	ਫੇ	B3 79 A9	-> ਫੇ- [0A2B 0A47 002D]	-> B3 79 2D
+OTHER	quirk:U-composer-wrote-"ਫੈ"-for-"ਫੈ?"	ਫੈ	B3 B1 A9	-> ਫੈ- [0A2B 0A48 002D]	-> B3 B1 2D
+OTHER	quirk:U-composer-wrote-"ਫੋ"-for-"ਫੋ?"	ਫੋ	B3 7D A9	-> ਫੋ- [0A2B 0A4B 002D]	-> B3 7D 2D
+OTHER	quirk:U-composer-wrote-"ਫੌ"-for-"ਫੌ?"	ਫੌ	B3 A1 A9	-> ਫੌ- [0A2B 0A4C 002D]	-> B3 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਫਿਂ	B3 71	-> ਫਿ [0A2B 0A3F]	-> 71 B3
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਫਿੰ	B3 71	-> ਫਿ [0A2B 0A3F]	-> 71 B3
+OTHER	quirk:U-composer-wrote-"ਫ"-for-"ਫ?"	ਫ	B3 A9	-> ਫ- [0A2B 002D]	-> B3 2D
+OTHER	quirk:U-composer-wrote-"ਬਾ"-for-"ਬਾ?"	ਬਾ	5E 70 A9	-> ਬਾ- [0A2C 0A3E 002D]	-> 5E 70 2D
+OTHER	quirk:U-composer-wrote-"ਬਿ"-for-"ਬਿ?"	ਬਿ	71 5E A9	-> ਬਿ- [0A2C 0A3F 002D]	-> 71 5E 2D
+OTHER	quirk:U-composer-wrote-"ਬੀ"-for-"ਬੀ?"	ਬੀ	5E 72 A9	-> ਬੀ- [0A2C 0A40 002D]	-> 5E 72 2D
+OTHER	quirk:U-composer-wrote-"ਬੁ"-for-"ਬੁ?"	ਬੁ	5E 74 A9	-> ਬੁ- [0A2C 0A41 002D]	-> 5E 74 2D
+OTHER	quirk:U-composer-wrote-"ਬੂ"-for-"ਬੂ?"	ਬੂ	5E 76 A9	-> ਬੂ- [0A2C 0A42 002D]	-> 5E 76 2D
+OTHER	quirk:U-composer-wrote-"ਬੇ"-for-"ਬੇ?"	ਬੇ	5E 79 A9	-> ਬੇ- [0A2C 0A47 002D]	-> 5E 79 2D
+OTHER	quirk:U-composer-wrote-"ਬੈ"-for-"ਬੈ?"	ਬੈ	5E B1 A9	-> ਬੈ- [0A2C 0A48 002D]	-> 5E B1 2D
+OTHER	quirk:U-composer-wrote-"ਬੋ"-for-"ਬੋ?"	ਬੋ	5E 7D A9	-> ਬੋ- [0A2C 0A4B 002D]	-> 5E 7D 2D
+OTHER	quirk:U-composer-wrote-"ਬੌ"-for-"ਬੌ?"	ਬੌ	5E A1 A9	-> ਬੌ- [0A2C 0A4C 002D]	-> 5E A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਬਿਂ	5E 71	-> ਬਿ [0A2C 0A3F]	-> 71 5E
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਬਿੰ	5E 71	-> ਬਿ [0A2C 0A3F]	-> 71 5E
+OTHER	quirk:U-composer-wrote-"ਬ"-for-"ਬ?"	ਬ	5E A9	-> ਬ- [0A2C 002D]	-> 5E 2D
+OTHER	quirk:U-composer-wrote-"ਭਾ"-for-"ਭਾ?"	ਭਾ	5F 70 A9	-> ਭਾ- [0A2D 0A3E 002D]	-> 5F 70 2D
+OTHER	quirk:U-composer-wrote-"ਭਿ"-for-"ਭਿ?"	ਭਿ	71 5F A9	-> ਭਿ- [0A2D 0A3F 002D]	-> 71 5F 2D
+OTHER	quirk:U-composer-wrote-"ਭੀ"-for-"ਭੀ?"	ਭੀ	5F 72 A9	-> ਭੀ- [0A2D 0A40 002D]	-> 5F 72 2D
+OTHER	quirk:U-composer-wrote-"ਭੁ"-for-"ਭੁ?"	ਭੁ	5F 74 A9	-> ਭੁ- [0A2D 0A41 002D]	-> 5F 74 2D
+OTHER	quirk:U-composer-wrote-"ਭੂ"-for-"ਭੂ?"	ਭੂ	5F 76 A9	-> ਭੂ- [0A2D 0A42 002D]	-> 5F 76 2D
+OTHER	quirk:U-composer-wrote-"ਭੇ"-for-"ਭੇ?"	ਭੇ	5F 79 A9	-> ਭੇ- [0A2D 0A47 002D]	-> 5F 79 2D
+OTHER	quirk:U-composer-wrote-"ਭੈ"-for-"ਭੈ?"	ਭੈ	5F B1 A9	-> ਭੈ- [0A2D 0A48 002D]	-> 5F B1 2D
+OTHER	quirk:U-composer-wrote-"ਭੋ"-for-"ਭੋ?"	ਭੋ	5F 7D A9	-> ਭੋ- [0A2D 0A4B 002D]	-> 5F 7D 2D
+OTHER	quirk:U-composer-wrote-"ਭੌ"-for-"ਭੌ?"	ਭੌ	5F A1 A9	-> ਭੌ- [0A2D 0A4C 002D]	-> 5F A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਭਿਂ	5F 71	-> ਭਿ [0A2D 0A3F]	-> 71 5F
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਭਿੰ	5F 71	-> ਭਿ [0A2D 0A3F]	-> 71 5F
+OTHER	quirk:U-composer-wrote-"ਭ"-for-"ਭ?"	ਭ	5F A9	-> ਭ- [0A2D 002D]	-> 5F 2D
+OTHER	quirk:U-composer-wrote-"ਮਾ"-for-"ਮਾ?"	ਮਾ	60 70 A9	-> ਮਾ- [0A2E 0A3E 002D]	-> 60 70 2D
+OTHER	quirk:U-composer-wrote-"ਮਿ"-for-"ਮਿ?"	ਮਿ	71 60 A9	-> ਮਿ- [0A2E 0A3F 002D]	-> 71 60 2D
+OTHER	quirk:U-composer-wrote-"ਮੀ"-for-"ਮੀ?"	ਮੀ	60 72 A9	-> ਮੀ- [0A2E 0A40 002D]	-> 60 72 2D
+OTHER	quirk:U-composer-wrote-"ਮੁ"-for-"ਮੁ?"	ਮੁ	60 74 A9	-> ਮੁ- [0A2E 0A41 002D]	-> 60 74 2D
+OTHER	quirk:U-composer-wrote-"ਮੂ"-for-"ਮੂ?"	ਮੂ	60 76 A9	-> ਮੂ- [0A2E 0A42 002D]	-> 60 76 2D
+OTHER	quirk:U-composer-wrote-"ਮੇ"-for-"ਮੇ?"	ਮੇ	60 79 A9	-> ਮੇ- [0A2E 0A47 002D]	-> 60 79 2D
+OTHER	quirk:U-composer-wrote-"ਮੈ"-for-"ਮੈ?"	ਮੈ	60 B1 A9	-> ਮੈ- [0A2E 0A48 002D]	-> 60 B1 2D
+OTHER	quirk:U-composer-wrote-"ਮੋ"-for-"ਮੋ?"	ਮੋ	60 7D A9	-> ਮੋ- [0A2E 0A4B 002D]	-> 60 7D 2D
+OTHER	quirk:U-composer-wrote-"ਮੌ"-for-"ਮੌ?"	ਮੌ	60 A1 A9	-> ਮੌ- [0A2E 0A4C 002D]	-> 60 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਮਿਂ	60 71	-> ਮਿ [0A2E 0A3F]	-> 71 60
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਮਿੰ	60 71	-> ਮਿ [0A2E 0A3F]	-> 71 60
+OTHER	quirk:U-composer-wrote-"ਮ"-for-"ਮ?"	ਮ	60 A9	-> ਮ- [0A2E 002D]	-> 60 2D
+OTHER	quirk:U-composer-wrote-"ਯਾ"-for-"ਯਾ?"	ਯਾ	61 70 A9	-> ਯਾ- [0A2F 0A3E 002D]	-> 61 70 2D
+OTHER	quirk:U-composer-wrote-"ਯਿ"-for-"ਯਿ?"	ਯਿ	71 61 A9	-> ਯਿ- [0A2F 0A3F 002D]	-> 71 61 2D
+OTHER	quirk:U-composer-wrote-"ਯੀ"-for-"ਯੀ?"	ਯੀ	61 72 A9	-> ਯੀ- [0A2F 0A40 002D]	-> 61 72 2D
+OTHER	quirk:U-composer-wrote-"ਯੁ"-for-"ਯੁ?"	ਯੁ	61 74 A9	-> ਯੁ- [0A2F 0A41 002D]	-> 61 74 2D
+OTHER	quirk:U-composer-wrote-"ਯੂ"-for-"ਯੂ?"	ਯੂ	61 76 A9	-> ਯੂ- [0A2F 0A42 002D]	-> 61 76 2D
+OTHER	quirk:U-composer-wrote-"ਯੇ"-for-"ਯੇ?"	ਯੇ	61 79 A9	-> ਯੇ- [0A2F 0A47 002D]	-> 61 79 2D
+OTHER	quirk:U-composer-wrote-"ਯੈ"-for-"ਯੈ?"	ਯੈ	61 B1 A9	-> ਯੈ- [0A2F 0A48 002D]	-> 61 B1 2D
+OTHER	quirk:U-composer-wrote-"ਯੋ"-for-"ਯੋ?"	ਯੋ	61 7D A9	-> ਯੋ- [0A2F 0A4B 002D]	-> 61 7D 2D
+OTHER	quirk:U-composer-wrote-"ਯੌ"-for-"ਯੌ?"	ਯੌ	61 A1 A9	-> ਯੌ- [0A2F 0A4C 002D]	-> 61 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਯਿਂ	61 71	-> ਯਿ [0A2F 0A3F]	-> 71 61
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਯਿੰ	61 71	-> ਯਿ [0A2F 0A3F]	-> 71 61
+OTHER	quirk:U-composer-wrote-"ਯ"-for-"ਯ?"	ਯ	61 A9	-> ਯ- [0A2F 002D]	-> 61 2D
+OTHER	quirk:U-composer-wrote-"ਰਾ"-for-"ਰਾ?"	ਰਾ	63 70 A9	-> ਰਾ- [0A30 0A3E 002D]	-> 63 70 2D
+OTHER	quirk:U-composer-wrote-"ਰਿ"-for-"ਰਿ?"	ਰਿ	71 63 A9	-> ਰਿ- [0A30 0A3F 002D]	-> 71 63 2D
+OTHER	quirk:U-composer-wrote-"ਰੀ"-for-"ਰੀ?"	ਰੀ	63 72 A9	-> ਰੀ- [0A30 0A40 002D]	-> 63 72 2D
+OTHER	quirk:U-composer-wrote-"ਰੁ"-for-"ਰੁ?"	ਰੁ	63 74 A9	-> ਰੁ- [0A30 0A41 002D]	-> 63 74 2D
+OTHER	quirk:U-composer-wrote-"ਰੂ"-for-"ਰੂ?"	ਰੂ	63 76 A9	-> ਰੂ- [0A30 0A42 002D]	-> 63 76 2D
+OTHER	quirk:U-composer-wrote-"ਰੇ"-for-"ਰੇ?"	ਰੇ	63 79 A9	-> ਰੇ- [0A30 0A47 002D]	-> 63 79 2D
+OTHER	quirk:U-composer-wrote-"ਰੈ"-for-"ਰੈ?"	ਰੈ	63 B1 A9	-> ਰੈ- [0A30 0A48 002D]	-> 63 B1 2D
+OTHER	quirk:U-composer-wrote-"ਰੋ"-for-"ਰੋ?"	ਰੋ	63 7D A9	-> ਰੋ- [0A30 0A4B 002D]	-> 63 7D 2D
+OTHER	quirk:U-composer-wrote-"ਰੌ"-for-"ਰੌ?"	ਰੌ	63 A1 A9	-> ਰੌ- [0A30 0A4C 002D]	-> 63 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਰਿਂ	63 71	-> ਰਿ [0A30 0A3F]	-> 71 63
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਰਿੰ	63 71	-> ਰਿ [0A30 0A3F]	-> 71 63
+OTHER	quirk:U-composer-wrote-"ਰ"-for-"ਰ?"	ਰ	63 A9	-> ਰ- [0A30 002D]	-> 63 2D
+OTHER	quirk:U-composer-wrote-"ਲਾ"-for-"ਲਾ?"	ਲਾ	64 70 A9	-> ਲਾ- [0A32 0A3E 002D]	-> 64 70 2D
+OTHER	quirk:U-composer-wrote-"ਲਿ"-for-"ਲਿ?"	ਲਿ	71 64 A9	-> ਲਿ- [0A32 0A3F 002D]	-> 71 64 2D
+OTHER	quirk:U-composer-wrote-"ਲੀ"-for-"ਲੀ?"	ਲੀ	64 72 A9	-> ਲੀ- [0A32 0A40 002D]	-> 64 72 2D
+OTHER	quirk:U-composer-wrote-"ਲੁ"-for-"ਲੁ?"	ਲੁ	64 74 A9	-> ਲੁ- [0A32 0A41 002D]	-> 64 74 2D
+OTHER	quirk:U-composer-wrote-"ਲੂ"-for-"ਲੂ?"	ਲੂ	64 76 A9	-> ਲੂ- [0A32 0A42 002D]	-> 64 76 2D
+OTHER	quirk:U-composer-wrote-"ਲੇ"-for-"ਲੇ?"	ਲੇ	64 79 A9	-> ਲੇ- [0A32 0A47 002D]	-> 64 79 2D
+OTHER	quirk:U-composer-wrote-"ਲੈ"-for-"ਲੈ?"	ਲੈ	64 B1 A9	-> ਲੈ- [0A32 0A48 002D]	-> 64 B1 2D
+OTHER	quirk:U-composer-wrote-"ਲੋ"-for-"ਲੋ?"	ਲੋ	64 7D A9	-> ਲੋ- [0A32 0A4B 002D]	-> 64 7D 2D
+OTHER	quirk:U-composer-wrote-"ਲੌ"-for-"ਲੌ?"	ਲੌ	64 A1 A9	-> ਲੌ- [0A32 0A4C 002D]	-> 64 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਲਿਂ	64 71	-> ਲਿ [0A32 0A3F]	-> 71 64
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਲਿੰ	64 71	-> ਲਿ [0A32 0A3F]	-> 71 64
+OTHER	quirk:U-composer-wrote-"ਲ"-for-"ਲ?"	ਲ	64 A9	-> ਲ- [0A32 002D]	-> 64 2D
+OTHER	quirk:U-composer-wrote-"ਵਾ"-for-"ਵਾ?"	ਵਾ	65 70 A9	-> ਵਾ- [0A35 0A3E 002D]	-> 65 70 2D
+OTHER	quirk:U-composer-wrote-"ਵਿ"-for-"ਵਿ?"	ਵਿ	71 65 A9	-> ਵਿ- [0A35 0A3F 002D]	-> 71 65 2D
+OTHER	quirk:U-composer-wrote-"ਵੀ"-for-"ਵੀ?"	ਵੀ	65 72 A9	-> ਵੀ- [0A35 0A40 002D]	-> 65 72 2D
+OTHER	quirk:U-composer-wrote-"ਵੁ"-for-"ਵੁ?"	ਵੁ	65 74 A9	-> ਵੁ- [0A35 0A41 002D]	-> 65 74 2D
+OTHER	quirk:U-composer-wrote-"ਵੂ"-for-"ਵੂ?"	ਵੂ	65 76 A9	-> ਵੂ- [0A35 0A42 002D]	-> 65 76 2D
+OTHER	quirk:U-composer-wrote-"ਵੇ"-for-"ਵੇ?"	ਵੇ	65 79 A9	-> ਵੇ- [0A35 0A47 002D]	-> 65 79 2D
+OTHER	quirk:U-composer-wrote-"ਵੈ"-for-"ਵੈ?"	ਵੈ	65 B1 A9	-> ਵੈ- [0A35 0A48 002D]	-> 65 B1 2D
+OTHER	quirk:U-composer-wrote-"ਵੋ"-for-"ਵੋ?"	ਵੋ	65 7D A9	-> ਵੋ- [0A35 0A4B 002D]	-> 65 7D 2D
+OTHER	quirk:U-composer-wrote-"ਵੌ"-for-"ਵੌ?"	ਵੌ	65 A1 A9	-> ਵੌ- [0A35 0A4C 002D]	-> 65 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਵਿਂ	65 71	-> ਵਿ [0A35 0A3F]	-> 71 65
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਵਿੰ	65 71	-> ਵਿ [0A35 0A3F]	-> 71 65
+OTHER	quirk:U-composer-wrote-"ਵ"-for-"ਵ?"	ਵ	65 A9	-> ਵ- [0A35 002D]	-> 65 2D
+OTHER	quirk:U-composer-wrote-"ੜਾ"-for-"ੜਾ?"	ੜਾ	6D 70 A9	-> ੜਾ- [0A5C 0A3E 002D]	-> 6D 70 2D
+OTHER	quirk:U-composer-wrote-"ੜਿ"-for-"ੜਿ?"	ੜਿ	71 6D A9	-> ੜਿ- [0A5C 0A3F 002D]	-> 71 6D 2D
+OTHER	quirk:U-composer-wrote-"ੜੀ"-for-"ੜੀ?"	ੜੀ	6D 72 A9	-> ੜੀ- [0A5C 0A40 002D]	-> 6D 72 2D
+OTHER	quirk:U-composer-wrote-"ੜੁ"-for-"ੜੁ?"	ੜੁ	6D 74 A9	-> ੜੁ- [0A5C 0A41 002D]	-> 6D 74 2D
+OTHER	quirk:U-composer-wrote-"ੜੂ"-for-"ੜੂ?"	ੜੂ	6D 76 A9	-> ੜੂ- [0A5C 0A42 002D]	-> 6D 76 2D
+OTHER	quirk:U-composer-wrote-"ੜੇ"-for-"ੜੇ?"	ੜੇ	6D 79 A9	-> ੜੇ- [0A5C 0A47 002D]	-> 6D 79 2D
+OTHER	quirk:U-composer-wrote-"ੜੈ"-for-"ੜੈ?"	ੜੈ	6D B1 A9	-> ੜੈ- [0A5C 0A48 002D]	-> 6D B1 2D
+OTHER	quirk:U-composer-wrote-"ੜੋ"-for-"ੜੋ?"	ੜੋ	6D 7D A9	-> ੜੋ- [0A5C 0A4B 002D]	-> 6D 7D 2D
+OTHER	quirk:U-composer-wrote-"ੜੌ"-for-"ੜੌ?"	ੜੌ	6D A1 A9	-> ੜੌ- [0A5C 0A4C 002D]	-> 6D A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ੜਿਂ	6D 71	-> ੜਿ [0A5C 0A3F]	-> 71 6D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ੜਿੰ	6D 71	-> ੜਿ [0A5C 0A3F]	-> 71 6D
+OTHER	quirk:U-composer-wrote-"ੜ"-for-"ੜ?"	ੜ	6D A9	-> ੜ- [0A5C 002D]	-> 6D 2D
+OTHER	quirk:U-composer-wrote-"ਸਾ"-for-"ਸਾ?"	ਸਾ	67 70 A9	-> ਸਾ- [0A38 0A3E 002D]	-> 67 70 2D
+OTHER	quirk:U-composer-wrote-"ਸਿ"-for-"ਸਿ?"	ਸਿ	71 67 A9	-> ਸਿ- [0A38 0A3F 002D]	-> 71 67 2D
+OTHER	quirk:U-composer-wrote-"ਸੀ"-for-"ਸੀ?"	ਸੀ	67 72 A9	-> ਸੀ- [0A38 0A40 002D]	-> 67 72 2D
+OTHER	quirk:U-composer-wrote-"ਸੁ"-for-"ਸੁ?"	ਸੁ	67 74 A9	-> ਸੁ- [0A38 0A41 002D]	-> 67 74 2D
+OTHER	quirk:U-composer-wrote-"ਸੂ"-for-"ਸੂ?"	ਸੂ	67 76 A9	-> ਸੂ- [0A38 0A42 002D]	-> 67 76 2D
+OTHER	quirk:U-composer-wrote-"ਸੇ"-for-"ਸੇ?"	ਸੇ	67 79 A9	-> ਸੇ- [0A38 0A47 002D]	-> 67 79 2D
+OTHER	quirk:U-composer-wrote-"ਸੈ"-for-"ਸੈ?"	ਸੈ	67 B1 A9	-> ਸੈ- [0A38 0A48 002D]	-> 67 B1 2D
+OTHER	quirk:U-composer-wrote-"ਸੋ"-for-"ਸੋ?"	ਸੋ	67 7D A9	-> ਸੋ- [0A38 0A4B 002D]	-> 67 7D 2D
+OTHER	quirk:U-composer-wrote-"ਸੌ"-for-"ਸੌ?"	ਸੌ	67 A1 A9	-> ਸੌ- [0A38 0A4C 002D]	-> 67 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਸਿਂ	67 71	-> ਸਿ [0A38 0A3F]	-> 71 67
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਸਿੰ	67 71	-> ਸਿ [0A38 0A3F]	-> 71 67
+OTHER	quirk:U-composer-wrote-"ਸ"-for-"ਸ?"	ਸ	67 A9	-> ਸ- [0A38 002D]	-> 67 2D
+OTHER	quirk:U-composer-wrote-"ਹਾ"-for-"ਹਾ?"	ਹਾ	68 70 A9	-> ਹਾ- [0A39 0A3E 002D]	-> 68 70 2D
+OTHER	quirk:U-composer-wrote-"ਹਿ"-for-"ਹਿ?"	ਹਿ	71 68 A9	-> ਹਿ- [0A39 0A3F 002D]	-> 71 68 2D
+OTHER	quirk:U-composer-wrote-"ਹੀ"-for-"ਹੀ?"	ਹੀ	68 72 A9	-> ਹੀ- [0A39 0A40 002D]	-> 68 72 2D
+OTHER	quirk:U-composer-wrote-"ਹੁ"-for-"ਹੁ?"	ਹੁ	68 74 A9	-> ਹੁ- [0A39 0A41 002D]	-> 68 74 2D
+OTHER	quirk:U-composer-wrote-"ਹੂ"-for-"ਹੂ?"	ਹੂ	68 76 A9	-> ਹੂ- [0A39 0A42 002D]	-> 68 76 2D
+OTHER	quirk:U-composer-wrote-"ਹੇ"-for-"ਹੇ?"	ਹੇ	68 79 A9	-> ਹੇ- [0A39 0A47 002D]	-> 68 79 2D
+OTHER	quirk:U-composer-wrote-"ਹੈ"-for-"ਹੈ?"	ਹੈ	68 B1 A9	-> ਹੈ- [0A39 0A48 002D]	-> 68 B1 2D
+OTHER	quirk:U-composer-wrote-"ਹੋ"-for-"ਹੋ?"	ਹੋ	68 7D A9	-> ਹੋ- [0A39 0A4B 002D]	-> 68 7D 2D
+OTHER	quirk:U-composer-wrote-"ਹੌ"-for-"ਹੌ?"	ਹੌ	68 A1 A9	-> ਹੌ- [0A39 0A4C 002D]	-> 68 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਹਿਂ	68 71	-> ਹਿ [0A39 0A3F]	-> 71 68
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਹਿੰ	68 71	-> ਹਿ [0A39 0A3F]	-> 71 68
+OTHER	quirk:U-composer-wrote-"ਹ"-for-"ਹ?"	ਹ	68 A9	-> ਹ- [0A39 002D]	-> 68 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ਾ"-for-"ਸ਼ਾ?"	ਸ਼ਾ	66 70 A9	-> ਸ਼ਾ- [0A36 0A3E 002D]	-> 66 70 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ਿ"-for-"ਸ਼ਿ?"	ਸ਼ਿ	71 66 A9	-> ਸ਼ਿ- [0A36 0A3F 002D]	-> 71 66 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੀ"-for-"ਸ਼ੀ?"	ਸ਼ੀ	66 72 A9	-> ਸ਼ੀ- [0A36 0A40 002D]	-> 66 72 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੁ"-for-"ਸ਼ੁ?"	ਸ਼ੁ	66 74 A9	-> ਸ਼ੁ- [0A36 0A41 002D]	-> 66 74 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੂ"-for-"ਸ਼ੂ?"	ਸ਼ੂ	66 76 A9	-> ਸ਼ੂ- [0A36 0A42 002D]	-> 66 76 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੇ"-for-"ਸ਼ੇ?"	ਸ਼ੇ	66 79 A9	-> ਸ਼ੇ- [0A36 0A47 002D]	-> 66 79 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੈ"-for-"ਸ਼ੈ?"	ਸ਼ੈ	66 B1 A9	-> ਸ਼ੈ- [0A36 0A48 002D]	-> 66 B1 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੋ"-for-"ਸ਼ੋ?"	ਸ਼ੋ	66 7D A9	-> ਸ਼ੋ- [0A36 0A4B 002D]	-> 66 7D 2D
+OTHER	quirk:U-composer-wrote-"ਸ਼ੌ"-for-"ਸ਼ੌ?"	ਸ਼ੌ	66 A1 A9	-> ਸ਼ੌ- [0A36 0A4C 002D]	-> 66 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਸ਼ਿਂ	66 71	-> ਸ਼ਿ [0A36 0A3F]	-> 71 66
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਸ਼ਿੰ	66 71	-> ਸ਼ਿ [0A36 0A3F]	-> 71 66
+OTHER	quirk:U-composer-wrote-"ਸ਼"-for-"ਸ਼?"	ਸ਼	66 A9	-> ਸ਼- [0A36 002D]	-> 66 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ਾ"-for-"ਖ਼ਾ?"	ਖ਼ਾ	69 70 A9	-> ਖ਼ਾ- [0A59 0A3E 002D]	-> 69 70 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ਿ"-for-"ਖ਼ਿ?"	ਖ਼ਿ	71 69 A9	-> ਖ਼ਿ- [0A59 0A3F 002D]	-> 71 69 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੀ"-for-"ਖ਼ੀ?"	ਖ਼ੀ	69 72 A9	-> ਖ਼ੀ- [0A59 0A40 002D]	-> 69 72 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੁ"-for-"ਖ਼ੁ?"	ਖ਼ੁ	69 74 A9	-> ਖ਼ੁ- [0A59 0A41 002D]	-> 69 74 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੂ"-for-"ਖ਼ੂ?"	ਖ਼ੂ	69 76 A9	-> ਖ਼ੂ- [0A59 0A42 002D]	-> 69 76 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੇ"-for-"ਖ਼ੇ?"	ਖ਼ੇ	69 79 A9	-> ਖ਼ੇ- [0A59 0A47 002D]	-> 69 79 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੈ"-for-"ਖ਼ੈ?"	ਖ਼ੈ	69 B1 A9	-> ਖ਼ੈ- [0A59 0A48 002D]	-> 69 B1 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੋ"-for-"ਖ਼ੋ?"	ਖ਼ੋ	69 7D A9	-> ਖ਼ੋ- [0A59 0A4B 002D]	-> 69 7D 2D
+OTHER	quirk:U-composer-wrote-"ਖ਼ੌ"-for-"ਖ਼ੌ?"	ਖ਼ੌ	69 A1 A9	-> ਖ਼ੌ- [0A59 0A4C 002D]	-> 69 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਖ਼ਿਂ	69 71	-> ਖ਼ਿ [0A59 0A3F]	-> 71 69
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਖ਼ਿੰ	69 71	-> ਖ਼ਿ [0A59 0A3F]	-> 71 69
+OTHER	quirk:U-composer-wrote-"ਖ਼"-for-"ਖ਼?"	ਖ਼	69 A9	-> ਖ਼- [0A59 002D]	-> 69 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ਾ"-for-"ਗ਼ਾ?"	ਗ਼ਾ	6A 70 A9	-> ਗ਼ਾ- [0A5A 0A3E 002D]	-> 6A 70 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ਿ"-for-"ਗ਼ਿ?"	ਗ਼ਿ	71 6A A9	-> ਗ਼ਿ- [0A5A 0A3F 002D]	-> 71 6A 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੀ"-for-"ਗ਼ੀ?"	ਗ਼ੀ	6A 72 A9	-> ਗ਼ੀ- [0A5A 0A40 002D]	-> 6A 72 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੁ"-for-"ਗ਼ੁ?"	ਗ਼ੁ	6A 74 A9	-> ਗ਼ੁ- [0A5A 0A41 002D]	-> 6A 74 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੂ"-for-"ਗ਼ੂ?"	ਗ਼ੂ	6A 76 A9	-> ਗ਼ੂ- [0A5A 0A42 002D]	-> 6A 76 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੇ"-for-"ਗ਼ੇ?"	ਗ਼ੇ	6A 79 A9	-> ਗ਼ੇ- [0A5A 0A47 002D]	-> 6A 79 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੈ"-for-"ਗ਼ੈ?"	ਗ਼ੈ	6A B1 A9	-> ਗ਼ੈ- [0A5A 0A48 002D]	-> 6A B1 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੋ"-for-"ਗ਼ੋ?"	ਗ਼ੋ	6A 7D A9	-> ਗ਼ੋ- [0A5A 0A4B 002D]	-> 6A 7D 2D
+OTHER	quirk:U-composer-wrote-"ਗ਼ੌ"-for-"ਗ਼ੌ?"	ਗ਼ੌ	6A A1 A9	-> ਗ਼ੌ- [0A5A 0A4C 002D]	-> 6A A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਗ਼ਿਂ	6A 71	-> ਗ਼ਿ [0A5A 0A3F]	-> 71 6A
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਗ਼ਿੰ	6A 71	-> ਗ਼ਿ [0A5A 0A3F]	-> 71 6A
+OTHER	quirk:U-composer-wrote-"ਗ਼"-for-"ਗ਼?"	ਗ਼	6A A9	-> ਗ਼- [0A5A 002D]	-> 6A 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ਾ"-for-"ਜ਼ਾ?"	ਜ਼ਾ	6B 70 A9	-> ਜ਼ਾ- [0A5B 0A3E 002D]	-> 6B 70 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ਿ"-for-"ਜ਼ਿ?"	ਜ਼ਿ	71 6B A9	-> ਜ਼ਿ- [0A5B 0A3F 002D]	-> 71 6B 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੀ"-for-"ਜ਼ੀ?"	ਜ਼ੀ	6B 72 A9	-> ਜ਼ੀ- [0A5B 0A40 002D]	-> 6B 72 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੁ"-for-"ਜ਼ੁ?"	ਜ਼ੁ	6B 74 A9	-> ਜ਼ੁ- [0A5B 0A41 002D]	-> 6B 74 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੂ"-for-"ਜ਼ੂ?"	ਜ਼ੂ	6B 76 A9	-> ਜ਼ੂ- [0A5B 0A42 002D]	-> 6B 76 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੇ"-for-"ਜ਼ੇ?"	ਜ਼ੇ	6B 79 A9	-> ਜ਼ੇ- [0A5B 0A47 002D]	-> 6B 79 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੈ"-for-"ਜ਼ੈ?"	ਜ਼ੈ	6B B1 A9	-> ਜ਼ੈ- [0A5B 0A48 002D]	-> 6B B1 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੋ"-for-"ਜ਼ੋ?"	ਜ਼ੋ	6B 7D A9	-> ਜ਼ੋ- [0A5B 0A4B 002D]	-> 6B 7D 2D
+OTHER	quirk:U-composer-wrote-"ਜ਼ੌ"-for-"ਜ਼ੌ?"	ਜ਼ੌ	6B A1 A9	-> ਜ਼ੌ- [0A5B 0A4C 002D]	-> 6B A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਜ਼ਿਂ	6B 71	-> ਜ਼ਿ [0A5B 0A3F]	-> 71 6B
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਜ਼ਿੰ	6B 71	-> ਜ਼ਿ [0A5B 0A3F]	-> 71 6B
+OTHER	quirk:U-composer-wrote-"ਜ਼"-for-"ਜ਼?"	ਜ਼	6B A9	-> ਜ਼- [0A5B 002D]	-> 6B 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ਾ"-for-"ਫ਼ਾ?"	ਫ਼ਾ	6C 70 A9	-> ਫ਼ਾ- [0A5E 0A3E 002D]	-> 6C 70 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ਿ"-for-"ਫ਼ਿ?"	ਫ਼ਿ	71 6C A9	-> ਫ਼ਿ- [0A5E 0A3F 002D]	-> 71 6C 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੀ"-for-"ਫ਼ੀ?"	ਫ਼ੀ	6C 72 A9	-> ਫ਼ੀ- [0A5E 0A40 002D]	-> 6C 72 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੁ"-for-"ਫ਼ੁ?"	ਫ਼ੁ	6C 74 A9	-> ਫ਼ੁ- [0A5E 0A41 002D]	-> 6C 74 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੂ"-for-"ਫ਼ੂ?"	ਫ਼ੂ	6C 76 A9	-> ਫ਼ੂ- [0A5E 0A42 002D]	-> 6C 76 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੇ"-for-"ਫ਼ੇ?"	ਫ਼ੇ	6C 79 A9	-> ਫ਼ੇ- [0A5E 0A47 002D]	-> 6C 79 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੈ"-for-"ਫ਼ੈ?"	ਫ਼ੈ	6C B1 A9	-> ਫ਼ੈ- [0A5E 0A48 002D]	-> 6C B1 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੋ"-for-"ਫ਼ੋ?"	ਫ਼ੋ	6C 7D A9	-> ਫ਼ੋ- [0A5E 0A4B 002D]	-> 6C 7D 2D
+OTHER	quirk:U-composer-wrote-"ਫ਼ੌ"-for-"ਫ਼ੌ?"	ਫ਼ੌ	6C A1 A9	-> ਫ਼ੌ- [0A5E 0A4C 002D]	-> 6C A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਫ਼ਿਂ	6C 71	-> ਫ਼ਿ [0A5E 0A3F]	-> 71 6C
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਫ਼ਿੰ	6C 71	-> ਫ਼ਿ [0A5E 0A3F]	-> 71 6C
+OTHER	quirk:U-composer-wrote-"ਫ਼"-for-"ਫ਼?"	ਫ਼	6C A9	-> ਫ਼- [0A5E 002D]	-> 6C 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ਾ"-for-"ਲ਼ਾ?"	ਲ਼ਾ	B4 70 A9	-> ਲ਼ਾ- [0A33 0A3E 002D]	-> B4 70 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ਿ"-for-"ਲ਼ਿ?"	ਲ਼ਿ	71 B4 A9	-> ਲ਼ਿ- [0A33 0A3F 002D]	-> 71 B4 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੀ"-for-"ਲ਼ੀ?"	ਲ਼ੀ	B4 72 A9	-> ਲ਼ੀ- [0A33 0A40 002D]	-> B4 72 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੁ"-for-"ਲ਼ੁ?"	ਲ਼ੁ	B4 74 A9	-> ਲ਼ੁ- [0A33 0A41 002D]	-> B4 74 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੂ"-for-"ਲ਼ੂ?"	ਲ਼ੂ	B4 76 A9	-> ਲ਼ੂ- [0A33 0A42 002D]	-> B4 76 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੇ"-for-"ਲ਼ੇ?"	ਲ਼ੇ	B4 79 A9	-> ਲ਼ੇ- [0A33 0A47 002D]	-> B4 79 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੈ"-for-"ਲ਼ੈ?"	ਲ਼ੈ	B4 B1 A9	-> ਲ਼ੈ- [0A33 0A48 002D]	-> B4 B1 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੋ"-for-"ਲ਼ੋ?"	ਲ਼ੋ	B4 7D A9	-> ਲ਼ੋ- [0A33 0A4B 002D]	-> B4 7D 2D
+OTHER	quirk:U-composer-wrote-"ਲ਼ੌ"-for-"ਲ਼ੌ?"	ਲ਼ੌ	B4 A1 A9	-> ਲ਼ੌ- [0A33 0A4C 002D]	-> B4 A1 2D
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਲ਼ਿਂ	B4 71	-> ਲ਼ਿ [0A33 0A3F]	-> 71 B4
+OTHER	alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)	ਲ਼ਿੰ	B4 71	-> ਲ਼ਿ [0A33 0A3F]	-> 71 B4
+OTHER	quirk:U-composer-wrote-"ਲ਼"-for-"ਲ਼?"	ਲ਼	B4 A9	-> ਲ਼- [0A33 002D]	-> B4 2D
+OTHER	quirk:U-composer-wrote-"ਕ੍ਰਿ"-for-"ਕਿ੍ਰ"	ਕ੍ਰਿ	48 71	-> ਕਿ [0A15 0A3F]	-> 71 48
+OTHER	quirk:U-composer-wrote-"ਕ੍ਹਿ"-for-"ਕਿ੍ਹ"	ਕ੍ਹਿ	48 71	-> ਕਿ [0A15 0A3F]	-> 71 48
+OTHER	quirk:U-composer-wrote-"ਕ੍ਵਿ"-for-"ਕਿ੍ਵ"	ਕ੍ਵਿ	48 71	-> ਕਿ [0A15 0A3F]	-> 71 48
+OTHER	quirk:U-composer-wrote-"ਖ੍ਰਿ"-for-"ਖਿ੍ਰ"	ਖ੍ਰਿ	49 71	-> ਖਿ [0A16 0A3F]	-> 71 49
+OTHER	quirk:U-composer-wrote-"ਖ੍ਹਿ"-for-"ਖਿ੍ਹ"	ਖ੍ਹਿ	49 71	-> ਖਿ [0A16 0A3F]	-> 71 49
+OTHER	quirk:U-composer-wrote-"ਖ੍ਵਿ"-for-"ਖਿ੍ਵ"	ਖ੍ਵਿ	49 71	-> ਖਿ [0A16 0A3F]	-> 71 49
+OTHER	quirk:U-composer-wrote-"ਗ੍ਰਿ"-for-"ਗਿ੍ਰ"	ਗ੍ਰਿ	4A 71	-> ਗਿ [0A17 0A3F]	-> 71 4A
+OTHER	quirk:U-composer-wrote-"ਗ੍ਹਿ"-for-"ਗਿ੍ਹ"	ਗ੍ਹਿ	4A 71	-> ਗਿ [0A17 0A3F]	-> 71 4A
+OTHER	quirk:U-composer-wrote-"ਗ੍ਵਿ"-for-"ਗਿ੍ਵ"	ਗ੍ਵਿ	4A 71	-> ਗਿ [0A17 0A3F]	-> 71 4A
+OTHER	quirk:U-composer-wrote-"ਘ੍ਰਿ"-for-"ਘਿ੍ਰ"	ਘ੍ਰਿ	4B 71	-> ਘਿ [0A18 0A3F]	-> 71 4B
+OTHER	quirk:U-composer-wrote-"ਘ੍ਹਿ"-for-"ਘਿ੍ਹ"	ਘ੍ਹਿ	4B 71	-> ਘਿ [0A18 0A3F]	-> 71 4B
+OTHER	quirk:U-composer-wrote-"ਘ੍ਵਿ"-for-"ਘਿ੍ਵ"	ਘ੍ਵਿ	4B 71	-> ਘਿ [0A18 0A3F]	-> 71 4B
+OTHER	quirk:U-composer-wrote-"ਙ੍ਰਿ"-for-"ਙਿ੍ਰ"	ਙ੍ਰਿ	4C 71	-> ਙਿ [0A19 0A3F]	-> 71 4C
+OTHER	quirk:U-composer-wrote-"ਙ੍ਹਿ"-for-"ਙਿ੍ਹ"	ਙ੍ਹਿ	4C 71	-> ਙਿ [0A19 0A3F]	-> 71 4C
+OTHER	quirk:U-composer-wrote-"ਙ੍ਵਿ"-for-"ਙਿ੍ਵ"	ਙ੍ਵਿ	4C 71	-> ਙਿ [0A19 0A3F]	-> 71 4C
+OTHER	quirk:U-composer-wrote-"ਚ੍ਰਿ"-for-"ਚਿ੍ਰ"	ਚ੍ਰਿ	4D 71	-> ਚਿ [0A1A 0A3F]	-> 71 4D
+OTHER	quirk:U-composer-wrote-"ਚ੍ਹਿ"-for-"ਚਿ੍ਹ"	ਚ੍ਹਿ	4D 71	-> ਚਿ [0A1A 0A3F]	-> 71 4D
+OTHER	quirk:U-composer-wrote-"ਚ੍ਵਿ"-for-"ਚਿ੍ਵ"	ਚ੍ਵਿ	4D 71	-> ਚਿ [0A1A 0A3F]	-> 71 4D
+OTHER	quirk:U-composer-wrote-"ਛ੍ਰਿ"-for-"ਛਿ੍ਰ"	ਛ੍ਰਿ	4E 71	-> ਛਿ [0A1B 0A3F]	-> 71 4E
+OTHER	quirk:U-composer-wrote-"ਛ੍ਹਿ"-for-"ਛਿ੍ਹ"	ਛ੍ਹਿ	4E 71	-> ਛਿ [0A1B 0A3F]	-> 71 4E
+OTHER	quirk:U-composer-wrote-"ਛ੍ਵਿ"-for-"ਛਿ੍ਵ"	ਛ੍ਵਿ	4E 71	-> ਛਿ [0A1B 0A3F]	-> 71 4E
+OTHER	quirk:U-composer-wrote-"ਜ੍ਰਿ"-for-"ਜਿ੍ਰ"	ਜ੍ਰਿ	4F 71	-> ਜਿ [0A1C 0A3F]	-> 71 4F
+OTHER	quirk:U-composer-wrote-"ਜ੍ਹਿ"-for-"ਜਿ੍ਹ"	ਜ੍ਹਿ	4F 71	-> ਜਿ [0A1C 0A3F]	-> 71 4F
+OTHER	quirk:U-composer-wrote-"ਜ੍ਵਿ"-for-"ਜਿ੍ਵ"	ਜ੍ਵਿ	4F 71	-> ਜਿ [0A1C 0A3F]	-> 71 4F
+OTHER	quirk:U-composer-wrote-"ਝ੍ਰਿ"-for-"ਝਿ੍ਰ"	ਝ੍ਰਿ	50 71	-> ਝਿ [0A1D 0A3F]	-> 71 50
+OTHER	quirk:U-composer-wrote-"ਝ੍ਹਿ"-for-"ਝਿ੍ਹ"	ਝ੍ਹਿ	50 71	-> ਝਿ [0A1D 0A3F]	-> 71 50
+OTHER	quirk:U-composer-wrote-"ਝ੍ਵਿ"-for-"ਝਿ੍ਵ"	ਝ੍ਵਿ	50 71	-> ਝਿ [0A1D 0A3F]	-> 71 50
+OTHER	quirk:U-composer-wrote-"ਞ੍ਰਿ"-for-"ਞਿ੍ਰ"	ਞ੍ਰਿ	51 71	-> ਞਿ [0A1E 0A3F]	-> 71 51
+OTHER	quirk:U-composer-wrote-"ਞ੍ਹਿ"-for-"ਞਿ੍ਹ"	ਞ੍ਹਿ	51 71	-> ਞਿ [0A1E 0A3F]	-> 71 51
+OTHER	quirk:U-composer-wrote-"ਞ੍ਵਿ"-for-"ਞਿ੍ਵ"	ਞ੍ਵਿ	51 71	-> ਞਿ [0A1E 0A3F]	-> 71 51
+OTHER	quirk:U-composer-wrote-"ਟ੍ਰਿ"-for-"ਟਿ੍ਰ"	ਟ੍ਰਿ	52 71	-> ਟਿ [0A1F 0A3F]	-> 71 52
+OTHER	quirk:U-composer-wrote-"ਟ੍ਹਿ"-for-"ਟਿ੍ਹ"	ਟ੍ਹਿ	52 71	-> ਟਿ [0A1F 0A3F]	-> 71 52
+OTHER	quirk:U-composer-wrote-"ਟ੍ਵਿ"-for-"ਟਿ੍ਵ"	ਟ੍ਵਿ	52 71	-> ਟਿ [0A1F 0A3F]	-> 71 52
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰਾਂ	53 BE A3 BE 6F	-> ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	-> 53 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰਾੱ	53 BE A7 BE 6F	-> ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	-> 53 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੁਂ	53 BE A3 BE 6F	-> ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	-> 53 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੁੰ	53 BE A5 BE 6F	-> ਠ੍ਰੰ [0A20 0A4D 0A30 0A70]	-> 53 A5 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੁੱ	53 BE A7 BE 6F	-> ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	-> 53 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੂਂ	53 BE A3 BE 6F	-> ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	-> 53 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੂੰ	53 BE A5 BE 6F	-> ਠ੍ਰੰ [0A20 0A4D 0A30 0A70]	-> 53 A5 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਰੂੱ	53 BE A7 BE 6F	-> ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	-> 53 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਰੇਂ	53 79 BE 7A	-> ਠੇਂ [0A20 0A47 0A02]	-> 53 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਰੈਂ	53 B1 BE 7C	-> ਠੈਂ [0A20 0A48 0A02]	-> 53 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਰੋਂ	53 7D BE 7E	-> ਠੋਂ [0A20 0A4B 0A02]	-> 53 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਰੌਂ	53 A1 BE A2	-> ਠੌਂ [0A20 0A4C 0A02]	-> 53 A2 BE
+OTHER	quirk:U-composer-wrote-"ਠ੍ਰਿ"-for-"ਠਿ੍ਰ"	ਠ੍ਰਿ	53 BE 71	-> ਠਿ [0A20 0A3F]	-> 71 53 BE
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹਾਂ	53 BE A3 BE AA	-> ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	-> 53 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹਾੱ	53 BE A7 BE AA	-> ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	-> 53 A7 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੁਂ	53 BE A3 BE AA	-> ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	-> 53 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੁੰ	53 BE A5 BE AA	-> ਠ੍ਹੰ [0A20 0A4D 0A39 0A70]	-> 53 A5 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੁੱ	53 BE A7 BE AA	-> ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	-> 53 A7 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੂਂ	53 BE A3 BE AA	-> ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	-> 53 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੂੰ	53 BE A5 BE AA	-> ਠ੍ਹੰ [0A20 0A4D 0A39 0A70]	-> 53 A5 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਹੂੱ	53 BE A7 BE AA	-> ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	-> 53 A7 BE AA
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਹੇਂ	53 79 BE 7A	-> ਠੇਂ [0A20 0A47 0A02]	-> 53 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਹੈਂ	53 B1 BE 7C	-> ਠੈਂ [0A20 0A48 0A02]	-> 53 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਹੋਂ	53 7D BE 7E	-> ਠੋਂ [0A20 0A4B 0A02]	-> 53 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਹੌਂ	53 A1 BE A2	-> ਠੌਂ [0A20 0A4C 0A02]	-> 53 A2 BE
+OTHER	quirk:U-composer-wrote-"ਠ੍ਹਿ"-for-"ਠਿ੍ਹ"	ਠ੍ਹਿ	53 BE 71	-> ਠਿ [0A20 0A3F]	-> 71 53 BE
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵਾਂ	53 BE A3 BE AB	-> ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	-> 53 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵਾੱ	53 BE A7 BE AB	-> ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	-> 53 A7 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੁਂ	53 BE A3 BE AB	-> ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	-> 53 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੁੰ	53 BE A5 BE AB	-> ਠ੍ਵੰ [0A20 0A4D 0A35 0A70]	-> 53 A5 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੁੱ	53 BE A7 BE AB	-> ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	-> 53 A7 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੂਂ	53 BE A3 BE AB	-> ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	-> 53 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੂੰ	53 BE A5 BE AB	-> ਠ੍ਵੰ [0A20 0A4D 0A35 0A70]	-> 53 A5 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਠ੍ਵੂੱ	53 BE A7 BE AB	-> ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	-> 53 A7 BE AB
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਵੇਂ	53 79 BE 7A	-> ਠੇਂ [0A20 0A47 0A02]	-> 53 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਵੈਂ	53 B1 BE 7C	-> ਠੈਂ [0A20 0A48 0A02]	-> 53 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਵੋਂ	53 7D BE 7E	-> ਠੋਂ [0A20 0A4B 0A02]	-> 53 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਠ੍ਵੌਂ	53 A1 BE A2	-> ਠੌਂ [0A20 0A4C 0A02]	-> 53 A2 BE
+OTHER	quirk:U-composer-wrote-"ਠ੍ਵਿ"-for-"ਠਿ੍ਵ"	ਠ੍ਵਿ	53 BE 71	-> ਠਿ [0A20 0A3F]	-> 71 53 BE
+OTHER	quirk:U-composer-wrote-"ਡ੍ਰਿ"-for-"ਡਿ੍ਰ"	ਡ੍ਰਿ	54 71	-> ਡਿ [0A21 0A3F]	-> 71 54
+OTHER	quirk:U-composer-wrote-"ਡ੍ਹਿ"-for-"ਡਿ੍ਹ"	ਡ੍ਹਿ	54 71	-> ਡਿ [0A21 0A3F]	-> 71 54
+OTHER	quirk:U-composer-wrote-"ਡ੍ਵਿ"-for-"ਡਿ੍ਵ"	ਡ੍ਵਿ	54 71	-> ਡਿ [0A21 0A3F]	-> 71 54
+OTHER	quirk:U-composer-wrote-"ਢ੍ਰਿ"-for-"ਢਿ੍ਰ"	ਢ੍ਰਿ	55 71	-> ਢਿ [0A22 0A3F]	-> 71 55
+OTHER	quirk:U-composer-wrote-"ਢ੍ਹਿ"-for-"ਢਿ੍ਹ"	ਢ੍ਹਿ	55 71	-> ਢਿ [0A22 0A3F]	-> 71 55
+OTHER	quirk:U-composer-wrote-"ਢ੍ਵਿ"-for-"ਢਿ੍ਵ"	ਢ੍ਵਿ	55 71	-> ਢਿ [0A22 0A3F]	-> 71 55
+OTHER	quirk:U-composer-wrote-"ਣ੍ਰਿ"-for-"ਣਿ੍ਰ"	ਣ੍ਰਿ	56 71	-> ਣਿ [0A23 0A3F]	-> 71 56
+OTHER	quirk:U-composer-wrote-"ਣ੍ਹਿ"-for-"ਣਿ੍ਹ"	ਣ੍ਹਿ	56 71	-> ਣਿ [0A23 0A3F]	-> 71 56
+OTHER	quirk:U-composer-wrote-"ਣ੍ਵਿ"-for-"ਣਿ੍ਵ"	ਣ੍ਵਿ	56 71	-> ਣਿ [0A23 0A3F]	-> 71 56
+OTHER	quirk:U-composer-wrote-"ਤ੍ਰਿ"-for-"ਤਿ੍ਰ"	ਤ੍ਰਿ	57 71	-> ਤਿ [0A24 0A3F]	-> 71 57
+OTHER	quirk:U-composer-wrote-"ਤ੍ਹਿ"-for-"ਤਿ੍ਹ"	ਤ੍ਹਿ	57 71	-> ਤਿ [0A24 0A3F]	-> 71 57
+OTHER	quirk:U-composer-wrote-"ਤ੍ਵਿ"-for-"ਤਿ੍ਵ"	ਤ੍ਵਿ	57 71	-> ਤਿ [0A24 0A3F]	-> 71 57
+OTHER	quirk:U-composer-wrote-"ਥ੍ਰਿ"-for-"ਥਿ੍ਰ"	ਥ੍ਰਿ	58 71	-> ਥਿ [0A25 0A3F]	-> 71 58
+OTHER	quirk:U-composer-wrote-"ਥ੍ਹਿ"-for-"ਥਿ੍ਹ"	ਥ੍ਹਿ	58 71	-> ਥਿ [0A25 0A3F]	-> 71 58
+OTHER	quirk:U-composer-wrote-"ਥ੍ਵਿ"-for-"ਥਿ੍ਵ"	ਥ੍ਵਿ	58 71	-> ਥਿ [0A25 0A3F]	-> 71 58
+OTHER	quirk:U-composer-wrote-"ਦ੍ਰਿ"-for-"ਦਿ੍ਰ"	ਦ੍ਰਿ	59 71	-> ਦਿ [0A26 0A3F]	-> 71 59
+OTHER	quirk:U-composer-wrote-"ਦ੍ਹਿ"-for-"ਦਿ੍ਹ"	ਦ੍ਹਿ	59 71	-> ਦਿ [0A26 0A3F]	-> 71 59
+OTHER	quirk:U-composer-wrote-"ਦ੍ਵਿ"-for-"ਦਿ੍ਵ"	ਦ੍ਵਿ	59 71	-> ਦਿ [0A26 0A3F]	-> 71 59
+OTHER	quirk:U-composer-wrote-"ਧ੍ਰਿ"-for-"ਧਿ੍ਰ"	ਧ੍ਰਿ	5A 71	-> ਧਿ [0A27 0A3F]	-> 71 5A
+OTHER	quirk:U-composer-wrote-"ਧ੍ਹਿ"-for-"ਧਿ੍ਹ"	ਧ੍ਹਿ	5A 71	-> ਧਿ [0A27 0A3F]	-> 71 5A
+OTHER	quirk:U-composer-wrote-"ਧ੍ਵਿ"-for-"ਧਿ੍ਵ"	ਧ੍ਵਿ	5A 71	-> ਧਿ [0A27 0A3F]	-> 71 5A
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰਾਂ	B2 BE A3 BE 6F	-> ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	-> B2 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰਾੱ	B2 BE A7 BE 6F	-> ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	-> B2 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੁਂ	B2 BE A3 BE 6F	-> ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	-> B2 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੁੰ	B2 BE A5 BE 6F	-> ਨ੍ਰੰ [0A28 0A4D 0A30 0A70]	-> B2 A5 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੁੱ	B2 BE A7 BE 6F	-> ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	-> B2 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੂਂ	B2 BE A3 BE 6F	-> ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	-> B2 A3 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੂੰ	B2 BE A5 BE 6F	-> ਨ੍ਰੰ [0A28 0A4D 0A30 0A70]	-> B2 A5 BE 6F
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਰੂੱ	B2 BE A7 BE 6F	-> ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	-> B2 A7 BE 6F
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਰੇਂ	B2 79 BE 7A	-> ਨੇਂ [0A28 0A47 0A02]	-> B2 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਰੈਂ	B2 B1 BE 7C	-> ਨੈਂ [0A28 0A48 0A02]	-> B2 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਰੋਂ	B2 7D BE 7E	-> ਨੋਂ [0A28 0A4B 0A02]	-> B2 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਰੌਂ	B2 A1 BE A2	-> ਨੌਂ [0A28 0A4C 0A02]	-> B2 A2 BE
+OTHER	quirk:U-composer-wrote-"ਨ੍ਰਿ"-for-"ਨਿ੍ਰ"	ਨ੍ਰਿ	B2 BE 71	-> ਨਿ [0A28 0A3F]	-> 71 B2 BE
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹਾਂ	B2 BE A3 BE AA	-> ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	-> B2 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹਾੱ	B2 BE A7 BE AA	-> ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	-> B2 A7 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੁਂ	B2 BE A3 BE AA	-> ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	-> B2 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੁੰ	B2 BE A5 BE AA	-> ਨ੍ਹੰ [0A28 0A4D 0A39 0A70]	-> B2 A5 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੁੱ	B2 BE A7 BE AA	-> ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	-> B2 A7 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੂਂ	B2 BE A3 BE AA	-> ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	-> B2 A3 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੂੰ	B2 BE A5 BE AA	-> ਨ੍ਹੰ [0A28 0A4D 0A39 0A70]	-> B2 A5 BE AA
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਹੂੱ	B2 BE A7 BE AA	-> ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	-> B2 A7 BE AA
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਹੇਂ	B2 79 BE 7A	-> ਨੇਂ [0A28 0A47 0A02]	-> B2 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਹੈਂ	B2 B1 BE 7C	-> ਨੈਂ [0A28 0A48 0A02]	-> B2 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਹੋਂ	B2 7D BE 7E	-> ਨੋਂ [0A28 0A4B 0A02]	-> B2 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਹੌਂ	B2 A1 BE A2	-> ਨੌਂ [0A28 0A4C 0A02]	-> B2 A2 BE
+OTHER	quirk:U-composer-wrote-"ਨ੍ਹਿ"-for-"ਨਿ੍ਹ"	ਨ੍ਹਿ	B2 BE 71	-> ਨਿ [0A28 0A3F]	-> 71 B2 BE
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵਾਂ	B2 BE A3 BE AB	-> ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	-> B2 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵਾੱ	B2 BE A7 BE AB	-> ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	-> B2 A7 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੁਂ	B2 BE A3 BE AB	-> ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	-> B2 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੁੰ	B2 BE A5 BE AB	-> ਨ੍ਵੰ [0A28 0A4D 0A35 0A70]	-> B2 A5 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੁੱ	B2 BE A7 BE AB	-> ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	-> B2 A7 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੂਂ	B2 BE A3 BE AB	-> ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	-> B2 A3 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੂੰ	B2 BE A5 BE AB	-> ਨ੍ਵੰ [0A28 0A4D 0A35 0A70]	-> B2 A5 BE AB
+OTHER	quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)	ਨ੍ਵੂੱ	B2 BE A7 BE AB	-> ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	-> B2 A7 BE AB
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਵੇਂ	B2 79 BE 7A	-> ਨੇਂ [0A28 0A47 0A02]	-> B2 7A BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਵੈਂ	B2 B1 BE 7C	-> ਨੈਂ [0A28 0A48 0A02]	-> B2 7C BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਵੋਂ	B2 7D BE 7E	-> ਨੋਂ [0A28 0A4B 0A02]	-> B2 7E BE
+OTHER	quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)	ਨ੍ਵੌਂ	B2 A1 BE A2	-> ਨੌਂ [0A28 0A4C 0A02]	-> B2 A2 BE
+OTHER	quirk:U-composer-wrote-"ਨ੍ਵਿ"-for-"ਨਿ੍ਵ"	ਨ੍ਵਿ	B2 BE 71	-> ਨਿ [0A28 0A3F]	-> 71 B2 BE
+OTHER	quirk:U-composer-wrote-"ਪ੍ਰਿ"-for-"ਪਿ੍ਰ"	ਪ੍ਰਿ	5C 71	-> ਪਿ [0A2A 0A3F]	-> 71 5C
+OTHER	quirk:U-composer-wrote-"ਪ੍ਹਿ"-for-"ਪਿ੍ਹ"	ਪ੍ਹਿ	5C 71	-> ਪਿ [0A2A 0A3F]	-> 71 5C
+OTHER	quirk:U-composer-wrote-"ਪ੍ਵਿ"-for-"ਪਿ੍ਵ"	ਪ੍ਵਿ	5C 71	-> ਪਿ [0A2A 0A3F]	-> 71 5C
+OTHER	quirk:U-composer-wrote-"ਫ੍ਰਿ"-for-"ਫਿ੍ਰ"	ਫ੍ਰਿ	B3 71	-> ਫਿ [0A2B 0A3F]	-> 71 B3
+OTHER	quirk:U-composer-wrote-"ਫ੍ਹਿ"-for-"ਫਿ੍ਹ"	ਫ੍ਹਿ	B3 71	-> ਫਿ [0A2B 0A3F]	-> 71 B3
+OTHER	quirk:U-composer-wrote-"ਫ੍ਵਿ"-for-"ਫਿ੍ਵ"	ਫ੍ਵਿ	B3 71	-> ਫਿ [0A2B 0A3F]	-> 71 B3
+OTHER	quirk:U-composer-wrote-"ਬ੍ਰਿ"-for-"ਬਿ੍ਰ"	ਬ੍ਰਿ	5E 71	-> ਬਿ [0A2C 0A3F]	-> 71 5E
+OTHER	quirk:U-composer-wrote-"ਬ੍ਹਿ"-for-"ਬਿ੍ਹ"	ਬ੍ਹਿ	5E 71	-> ਬਿ [0A2C 0A3F]	-> 71 5E
+OTHER	quirk:U-composer-wrote-"ਬ੍ਵਿ"-for-"ਬਿ੍ਵ"	ਬ੍ਵਿ	5E 71	-> ਬਿ [0A2C 0A3F]	-> 71 5E
+OTHER	quirk:U-composer-wrote-"ਭ੍ਰਿ"-for-"ਭਿ੍ਰ"	ਭ੍ਰਿ	5F 71	-> ਭਿ [0A2D 0A3F]	-> 71 5F
+OTHER	quirk:U-composer-wrote-"ਭ੍ਹਿ"-for-"ਭਿ੍ਹ"	ਭ੍ਹਿ	5F 71	-> ਭਿ [0A2D 0A3F]	-> 71 5F
+OTHER	quirk:U-composer-wrote-"ਭ੍ਵਿ"-for-"ਭਿ੍ਵ"	ਭ੍ਵਿ	5F 71	-> ਭਿ [0A2D 0A3F]	-> 71 5F
+OTHER	quirk:U-composer-wrote-"ਮ੍ਰਿ"-for-"ਮਿ੍ਰ"	ਮ੍ਰਿ	60 71	-> ਮਿ [0A2E 0A3F]	-> 71 60
+OTHER	quirk:U-composer-wrote-"ਮ੍ਹਿ"-for-"ਮਿ੍ਹ"	ਮ੍ਹਿ	60 71	-> ਮਿ [0A2E 0A3F]	-> 71 60
+OTHER	quirk:U-composer-wrote-"ਮ੍ਵਿ"-for-"ਮਿ੍ਵ"	ਮ੍ਵਿ	60 71	-> ਮਿ [0A2E 0A3F]	-> 71 60
+OTHER	quirk:U-composer-wrote-"ਯ੍ਰਿ"-for-"ਯਿ੍ਰ"	ਯ੍ਰਿ	61 71	-> ਯਿ [0A2F 0A3F]	-> 71 61
+OTHER	quirk:U-composer-wrote-"ਯ੍ਹਿ"-for-"ਯਿ੍ਹ"	ਯ੍ਹਿ	61 71	-> ਯਿ [0A2F 0A3F]	-> 71 61
+OTHER	quirk:U-composer-wrote-"ਯ੍ਵਿ"-for-"ਯਿ੍ਵ"	ਯ੍ਵਿ	61 71	-> ਯਿ [0A2F 0A3F]	-> 71 61
+OTHER	quirk:U-composer-wrote-"ਰ੍ਰਿ"-for-"ਰਿ੍ਰ"	ਰ੍ਰਿ	63 71	-> ਰਿ [0A30 0A3F]	-> 71 63
+OTHER	quirk:U-composer-wrote-"ਰ੍ਹਿ"-for-"ਰਿ੍ਹ"	ਰ੍ਹਿ	63 71	-> ਰਿ [0A30 0A3F]	-> 71 63
+OTHER	quirk:U-composer-wrote-"ਰ੍ਵਿ"-for-"ਰਿ੍ਵ"	ਰ੍ਵਿ	63 71	-> ਰਿ [0A30 0A3F]	-> 71 63
+OTHER	quirk:U-composer-wrote-"ਲ੍ਰਿ"-for-"ਲਿ੍ਰ"	ਲ੍ਰਿ	64 71	-> ਲਿ [0A32 0A3F]	-> 71 64
+OTHER	quirk:U-composer-wrote-"ਲ੍ਹਿ"-for-"ਲਿ੍ਹ"	ਲ੍ਹਿ	64 71	-> ਲਿ [0A32 0A3F]	-> 71 64
+OTHER	quirk:U-composer-wrote-"ਲ੍ਵਿ"-for-"ਲਿ੍ਵ"	ਲ੍ਵਿ	64 71	-> ਲਿ [0A32 0A3F]	-> 71 64
+OTHER	quirk:U-composer-wrote-"ਵ੍ਰਿ"-for-"ਵਿ੍ਰ"	ਵ੍ਰਿ	65 71	-> ਵਿ [0A35 0A3F]	-> 71 65
+OTHER	quirk:U-composer-wrote-"ਵ੍ਹਿ"-for-"ਵਿ੍ਹ"	ਵ੍ਹਿ	65 71	-> ਵਿ [0A35 0A3F]	-> 71 65
+OTHER	quirk:U-composer-wrote-"ਵ੍ਵਿ"-for-"ਵਿ੍ਵ"	ਵ੍ਵਿ	65 71	-> ਵਿ [0A35 0A3F]	-> 71 65
+OTHER	quirk:U-composer-wrote-"ੜ੍ਰਿ"-for-"ੜਿ੍ਰ"	ੜ੍ਰਿ	6D 71	-> ੜਿ [0A5C 0A3F]	-> 71 6D
+OTHER	quirk:U-composer-wrote-"ੜ੍ਹਿ"-for-"ੜਿ੍ਹ"	ੜ੍ਹਿ	6D 71	-> ੜਿ [0A5C 0A3F]	-> 71 6D
+OTHER	quirk:U-composer-wrote-"ੜ੍ਵਿ"-for-"ੜਿ੍ਵ"	ੜ੍ਵਿ	6D 71	-> ੜਿ [0A5C 0A3F]	-> 71 6D
+OTHER	quirk:U-composer-wrote-"ਸ੍ਰਿ"-for-"ਸਿ੍ਰ"	ਸ੍ਰਿ	67 71	-> ਸਿ [0A38 0A3F]	-> 71 67
+OTHER	quirk:U-composer-wrote-"ਸ੍ਹਿ"-for-"ਸਿ੍ਹ"	ਸ੍ਹਿ	67 71	-> ਸਿ [0A38 0A3F]	-> 71 67
+OTHER	quirk:U-composer-wrote-"ਸ੍ਵਿ"-for-"ਸਿ੍ਵ"	ਸ੍ਵਿ	67 71	-> ਸਿ [0A38 0A3F]	-> 71 67
+OTHER	quirk:U-composer-wrote-"ਹ੍ਰਿ"-for-"ਹਿ੍ਰ"	ਹ੍ਰਿ	68 71	-> ਹਿ [0A39 0A3F]	-> 71 68
+OTHER	quirk:U-composer-wrote-"ਹ੍ਹਿ"-for-"ਹਿ੍ਹ"	ਹ੍ਹਿ	68 71	-> ਹਿ [0A39 0A3F]	-> 71 68
+OTHER	quirk:U-composer-wrote-"ਹ੍ਵਿ"-for-"ਹਿ੍ਵ"	ਹ੍ਵਿ	68 71	-> ਹਿ [0A39 0A3F]	-> 71 68
+OTHER	quirk:U-composer-wrote-"ਸ਼੍ਰਿ"-for-"ਸ਼ਿ੍ਰ"	ਸ਼੍ਰਿ	66 71	-> ਸ਼ਿ [0A36 0A3F]	-> 71 66
+OTHER	quirk:U-composer-wrote-"ਸ਼੍ਹਿ"-for-"ਸ਼ਿ੍ਹ"	ਸ਼੍ਹਿ	66 71	-> ਸ਼ਿ [0A36 0A3F]	-> 71 66
+OTHER	quirk:U-composer-wrote-"ਸ਼੍ਵਿ"-for-"ਸ਼ਿ੍ਵ"	ਸ਼੍ਵਿ	66 71	-> ਸ਼ਿ [0A36 0A3F]	-> 71 66
+OTHER	quirk:U-composer-wrote-"ਖ਼੍ਰਿ"-for-"ਖ਼ਿ੍ਰ"	ਖ਼੍ਰਿ	69 71	-> ਖ਼ਿ [0A59 0A3F]	-> 71 69
+OTHER	quirk:U-composer-wrote-"ਖ਼੍ਹਿ"-for-"ਖ਼ਿ੍ਹ"	ਖ਼੍ਹਿ	69 71	-> ਖ਼ਿ [0A59 0A3F]	-> 71 69
+OTHER	quirk:U-composer-wrote-"ਖ਼੍ਵਿ"-for-"ਖ਼ਿ੍ਵ"	ਖ਼੍ਵਿ	69 71	-> ਖ਼ਿ [0A59 0A3F]	-> 71 69
+OTHER	quirk:U-composer-wrote-"ਗ਼੍ਰਿ"-for-"ਗ਼ਿ੍ਰ"	ਗ਼੍ਰਿ	6A 71	-> ਗ਼ਿ [0A5A 0A3F]	-> 71 6A
+OTHER	quirk:U-composer-wrote-"ਗ਼੍ਹਿ"-for-"ਗ਼ਿ੍ਹ"	ਗ਼੍ਹਿ	6A 71	-> ਗ਼ਿ [0A5A 0A3F]	-> 71 6A
+OTHER	quirk:U-composer-wrote-"ਗ਼੍ਵਿ"-for-"ਗ਼ਿ੍ਵ"	ਗ਼੍ਵਿ	6A 71	-> ਗ਼ਿ [0A5A 0A3F]	-> 71 6A
+OTHER	quirk:U-composer-wrote-"ਜ਼੍ਰਿ"-for-"ਜ਼ਿ੍ਰ"	ਜ਼੍ਰਿ	6B 71	-> ਜ਼ਿ [0A5B 0A3F]	-> 71 6B
+OTHER	quirk:U-composer-wrote-"ਜ਼੍ਹਿ"-for-"ਜ਼ਿ੍ਹ"	ਜ਼੍ਹਿ	6B 71	-> ਜ਼ਿ [0A5B 0A3F]	-> 71 6B
+OTHER	quirk:U-composer-wrote-"ਜ਼੍ਵਿ"-for-"ਜ਼ਿ੍ਵ"	ਜ਼੍ਵਿ	6B 71	-> ਜ਼ਿ [0A5B 0A3F]	-> 71 6B
+OTHER	quirk:U-composer-wrote-"ਫ਼੍ਰਿ"-for-"ਫ਼ਿ੍ਰ"	ਫ਼੍ਰਿ	6C 71	-> ਫ਼ਿ [0A5E 0A3F]	-> 71 6C
+OTHER	quirk:U-composer-wrote-"ਫ਼੍ਹਿ"-for-"ਫ਼ਿ੍ਹ"	ਫ਼੍ਹਿ	6C 71	-> ਫ਼ਿ [0A5E 0A3F]	-> 71 6C
+OTHER	quirk:U-composer-wrote-"ਫ਼੍ਵਿ"-for-"ਫ਼ਿ੍ਵ"	ਫ਼੍ਵਿ	6C 71	-> ਫ਼ਿ [0A5E 0A3F]	-> 71 6C
+OTHER	quirk:U-composer-wrote-"ਲ਼੍ਰਿ"-for-"ਲ਼ਿ੍ਰ"	ਲ਼੍ਰਿ	B4 71	-> ਲ਼ਿ [0A33 0A3F]	-> 71 B4
+OTHER	quirk:U-composer-wrote-"ਲ਼੍ਹਿ"-for-"ਲ਼ਿ੍ਹ"	ਲ਼੍ਹਿ	B4 71	-> ਲ਼ਿ [0A33 0A3F]	-> 71 B4
+OTHER	quirk:U-composer-wrote-"ਲ਼੍ਵਿ"-for-"ਲ਼ਿ੍ਵ"	ਲ਼੍ਵਿ	B4 71	-> ਲ਼ਿ [0A33 0A3F]	-> 71 B4
+OTHER	quirk:U-composer-wrote-"ਅ"-for-"ਅ?"	ਅ	41 A9	-> ਅ- [0A05 002D]	-> 41 2D
+OTHER	quirk:U-composer-wrote-"ਆ"-for-"ਆ?"	ਆ	41 70 A9	-> ਆ- [0A06 002D]	-> 41 70 2D
+OTHER	quirk:U-composer-wrote-"ਇ"-for-"ਇ?"	ਇ	71 42 A9	-> ਇ- [0A07 002D]	-> 71 42 2D
+OTHER	quirk:U-composer-wrote-"ਈ"-for-"ਈ?"	ਈ	42 72 A9	-> ਈ- [0A08 002D]	-> 42 72 2D
+OTHER	quirk:U-composer-wrote-"ਉ"-for-"ਉ?"	ਉ	45 A9	-> ਉ- [0A09 002D]	-> 45 2D
+OTHER	quirk:U-composer-wrote-"ਊ"-for-"ਊ?"	ਊ	46 A9	-> ਊ- [0A0A 002D]	-> 46 2D
+OTHER	quirk:U-composer-wrote-"ਏ"-for-"ਏ?"	ਏ	42 79 A9	-> ਏ- [0A0F 002D]	-> 42 79 2D
+OTHER	quirk:U-composer-wrote-"ਐ"-for-"ਐ?"	ਐ	41 B1 A9	-> ਐ- [0A10 002D]	-> 41 B1 2D
+OTHER	quirk:U-composer-wrote-"ਓ"-for-"ਓ?"	ਓ	47 A9	-> ਓ- [0A13 002D]	-> 47 2D
+OTHER	quirk:U-composer-wrote-"ਔ"-for-"ਔ?"	ਔ	41 A1 A9	-> ਔ- [0A14 002D]	-> 41 A1 2D
+OTHER	quirk:U-composer-wrote-"ੲ"-for-"ੲ?"	ੲ	42 A9	-> ੲ- [0A72 002D]	-> 42 2D
+OTHER	quirk:U-composer-wrote-"ੳ"-for-"ੳ?"	ੳ	43 A9	-> ੳ- [0A73 002D]	-> 43 2D
+OTHER	quirk:U-composer-wrote-"ਇ"-for-"ਇ?"	ਇ	A9	-> - [002D]	-> 2D
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰਂੁ	B2 A3 BE 6F AE	-> ਨ੍ਰੁਂ [0A28 0A4D 0A30 0A41 0A02]	-> B2 A3 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਰਂ	B2 BE A3 BE 74	-> ਨੁਂ [0A28 0A41 0A02]	-> B2 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਰੁ	B2 A3 BE 6F AE	-> ਨ੍ਰੁਂ [0A28 0A4D 0A30 0A41 0A02]	-> B2 A3 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੁ੍ਰ	B2 A3 BE AE 6F	-> ਨੁਂ੍ਰ [0A28 0A41 0A02 0A4D 0A30]	-> B2 A3 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰੰੁ	B2 A5 BE 6F AE	-> ਨ੍ਰੁੰ [0A28 0A4D 0A30 0A41 0A70]	-> B2 A5 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਰੰ	B2 BE A5 BE 74	-> ਨੁੰ [0A28 0A41 0A70]	-> B2 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਰੁ	B2 A5 BE 6F AE	-> ਨ੍ਰੁੰ [0A28 0A4D 0A30 0A41 0A70]	-> B2 A5 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰੁ੍ਰ	B2 A5 BE AE 6F	-> ਨੁੰ੍ਰ [0A28 0A41 0A70 0A4D 0A30]	-> B2 A5 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰੱੁ	B2 A7 BE 6F AE	-> ਨ੍ਰੁੱ [0A28 0A4D 0A30 0A41 0A71]	-> B2 A7 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਰੱ	B2 BE A7 BE 74	-> ਨੁੱ [0A28 0A41 0A71]	-> B2 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਰੁ	B2 A7 BE 6F AE	-> ਨ੍ਰੁੱ [0A28 0A4D 0A30 0A41 0A71]	-> B2 A7 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੁ੍ਰ	B2 A7 BE AE 6F	-> ਨੁੱ੍ਰ [0A28 0A41 0A71 0A4D 0A30]	-> B2 A7 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰਂੂ	B2 A3 BE 6F AF	-> ਨ੍ਰੂਂ [0A28 0A4D 0A30 0A42 0A02]	-> B2 A3 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਰਂ	B2 BE A3 BE 76	-> ਨੂਂ [0A28 0A42 0A02]	-> B2 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਰੂ	B2 A3 BE 6F AF	-> ਨ੍ਰੂਂ [0A28 0A4D 0A30 0A42 0A02]	-> B2 A3 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੂ੍ਰ	B2 A3 BE AF 6F	-> ਨੂਂ੍ਰ [0A28 0A42 0A02 0A4D 0A30]	-> B2 A3 BE 76 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰੰੂ	B2 A5 BE 6F AF	-> ਨ੍ਰੂੰ [0A28 0A4D 0A30 0A42 0A70]	-> B2 A5 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਰੰ	B2 BE A5 BE 76	-> ਨੂੰ [0A28 0A42 0A70]	-> B2 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਰੂ	B2 A5 BE 6F AF	-> ਨ੍ਰੂੰ [0A28 0A4D 0A30 0A42 0A70]	-> B2 A5 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਰੱੂ	B2 A7 BE 6F AF	-> ਨ੍ਰੂੱ [0A28 0A4D 0A30 0A42 0A71]	-> B2 A7 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਰੱ	B2 BE A7 BE 76	-> ਨੂੱ [0A28 0A42 0A71]	-> B2 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਰੂ	B2 A7 BE 6F AF	-> ਨ੍ਰੂੱ [0A28 0A4D 0A30 0A42 0A71]	-> B2 A7 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੂ੍ਰ	B2 A7 BE AF 6F	-> ਨੂੱ੍ਰ [0A28 0A42 0A71 0A4D 0A30]	-> B2 A7 BE 76 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਰਂ	B2 79 A5 BE 6F	-> ਨ੍ਰੇੰ [0A28 0A4D 0A30 0A47 0A70]	-> B2 7A BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਰੱ	B2 79 A7 BE 6F	-> ਨ੍ਰੇੱ [0A28 0A4D 0A30 0A47 0A71]	-> B2 79 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਰਂ	B2 B1 A5 BE 6F	-> ਨ੍ਰੈੰ [0A28 0A4D 0A30 0A48 0A70]	-> B2 7C BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਰੱ	B2 B1 A7 BE 6F	-> ਨ੍ਰੈੱ [0A28 0A4D 0A30 0A48 0A71]	-> B2 B1 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਰਂ	B2 7D A5 BE 6F	-> ਨ੍ਰੋੰ [0A28 0A4D 0A30 0A4B 0A70]	-> B2 7E BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਰੱ	B2 7D A7 BE 6F	-> ਨ੍ਰੋੱ [0A28 0A4D 0A30 0A4B 0A71]	-> B2 7D BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਰਂ	B2 A1 A5 BE 6F	-> ਨ੍ਰੌੰ [0A28 0A4D 0A30 0A4C 0A70]	-> B2 A2 BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਰੱ	B2 A1 A7 BE 6F	-> ਨ੍ਰੌੱ [0A28 0A4D 0A30 0A4C 0A71]	-> B2 A1 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹਂੁ	B2 A3 BE AA AE	-> ਨ੍ਹੁਂ [0A28 0A4D 0A39 0A41 0A02]	-> B2 A3 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਹਂ	B2 BE A3 BE 74	-> ਨੁਂ [0A28 0A41 0A02]	-> B2 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਹੁ	B2 A3 BE AA AE	-> ਨ੍ਹੁਂ [0A28 0A4D 0A39 0A41 0A02]	-> B2 A3 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੁ੍ਹ	B2 A3 BE AE AA	-> ਨੁਂ੍ਹ [0A28 0A41 0A02 0A4D 0A39]	-> B2 A3 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹੰੁ	B2 A5 BE AA AE	-> ਨ੍ਹੁੰ [0A28 0A4D 0A39 0A41 0A70]	-> B2 A5 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਹੰ	B2 BE A5 BE 74	-> ਨੁੰ [0A28 0A41 0A70]	-> B2 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਹੁ	B2 A5 BE AA AE	-> ਨ੍ਹੁੰ [0A28 0A4D 0A39 0A41 0A70]	-> B2 A5 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰੁ੍ਹ	B2 A5 BE AE AA	-> ਨੁੰ੍ਹ [0A28 0A41 0A70 0A4D 0A39]	-> B2 A5 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹੱੁ	B2 A7 BE AA AE	-> ਨ੍ਹੁੱ [0A28 0A4D 0A39 0A41 0A71]	-> B2 A7 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਹੱ	B2 BE A7 BE 74	-> ਨੁੱ [0A28 0A41 0A71]	-> B2 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਹੁ	B2 A7 BE AA AE	-> ਨ੍ਹੁੱ [0A28 0A4D 0A39 0A41 0A71]	-> B2 A7 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੁ੍ਹ	B2 A7 BE AE AA	-> ਨੁੱ੍ਹ [0A28 0A41 0A71 0A4D 0A39]	-> B2 A7 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹਂੂ	B2 A3 BE AA AF	-> ਨ੍ਹੂਂ [0A28 0A4D 0A39 0A42 0A02]	-> B2 A3 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਹਂ	B2 BE A3 BE 76	-> ਨੂਂ [0A28 0A42 0A02]	-> B2 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਹੂ	B2 A3 BE AA AF	-> ਨ੍ਹੂਂ [0A28 0A4D 0A39 0A42 0A02]	-> B2 A3 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੂ੍ਹ	B2 A3 BE AF AA	-> ਨੂਂ੍ਹ [0A28 0A42 0A02 0A4D 0A39]	-> B2 A3 BE 76 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹੰੂ	B2 A5 BE AA AF	-> ਨ੍ਹੂੰ [0A28 0A4D 0A39 0A42 0A70]	-> B2 A5 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਹੰ	B2 BE A5 BE 76	-> ਨੂੰ [0A28 0A42 0A70]	-> B2 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਹੂ	B2 A5 BE AA AF	-> ਨ੍ਹੂੰ [0A28 0A4D 0A39 0A42 0A70]	-> B2 A5 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਹੱੂ	B2 A7 BE AA AF	-> ਨ੍ਹੂੱ [0A28 0A4D 0A39 0A42 0A71]	-> B2 A7 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਹੱ	B2 BE A7 BE 76	-> ਨੂੱ [0A28 0A42 0A71]	-> B2 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਹੂ	B2 A7 BE AA AF	-> ਨ੍ਹੂੱ [0A28 0A4D 0A39 0A42 0A71]	-> B2 A7 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੂ੍ਹ	B2 A7 BE AF AA	-> ਨੂੱ੍ਹ [0A28 0A42 0A71 0A4D 0A39]	-> B2 A7 BE 76 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਹਂ	B2 79 A5 BE AA	-> ਨ੍ਹੇੰ [0A28 0A4D 0A39 0A47 0A70]	-> B2 7A BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਹੱ	B2 79 A7 BE AA	-> ਨ੍ਹੇੱ [0A28 0A4D 0A39 0A47 0A71]	-> B2 79 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਹਂ	B2 B1 A5 BE AA	-> ਨ੍ਹੈੰ [0A28 0A4D 0A39 0A48 0A70]	-> B2 7C BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਹੱ	B2 B1 A7 BE AA	-> ਨ੍ਹੈੱ [0A28 0A4D 0A39 0A48 0A71]	-> B2 B1 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਹਂ	B2 7D A5 BE AA	-> ਨ੍ਹੋੰ [0A28 0A4D 0A39 0A4B 0A70]	-> B2 7E BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਹੱ	B2 7D A7 BE AA	-> ਨ੍ਹੋੱ [0A28 0A4D 0A39 0A4B 0A71]	-> B2 7D BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਹਂ	B2 A1 A5 BE AA	-> ਨ੍ਹੌੰ [0A28 0A4D 0A39 0A4C 0A70]	-> B2 A2 BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਹੱ	B2 A1 A7 BE AA	-> ਨ੍ਹੌੱ [0A28 0A4D 0A39 0A4C 0A71]	-> B2 A1 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵਂੁ	B2 A3 BE AB AE	-> ਨ੍ਵੁਂ [0A28 0A4D 0A35 0A41 0A02]	-> B2 A3 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਵਂ	B2 BE A3 BE 74	-> ਨੁਂ [0A28 0A41 0A02]	-> B2 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਵੁ	B2 A3 BE AB AE	-> ਨ੍ਵੁਂ [0A28 0A4D 0A35 0A41 0A02]	-> B2 A3 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੁ੍ਵ	B2 A3 BE AE AB	-> ਨੁਂ੍ਵ [0A28 0A41 0A02 0A4D 0A35]	-> B2 A3 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵੰੁ	B2 A5 BE AB AE	-> ਨ੍ਵੁੰ [0A28 0A4D 0A35 0A41 0A70]	-> B2 A5 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਵੰ	B2 BE A5 BE 74	-> ਨੁੰ [0A28 0A41 0A70]	-> B2 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਵੁ	B2 A5 BE AB AE	-> ਨ੍ਵੁੰ [0A28 0A4D 0A35 0A41 0A70]	-> B2 A5 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰੁ੍ਵ	B2 A5 BE AE AB	-> ਨੁੰ੍ਵ [0A28 0A41 0A70 0A4D 0A35]	-> B2 A5 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵੱੁ	B2 A7 BE AB AE	-> ਨ੍ਵੁੱ [0A28 0A4D 0A35 0A41 0A71]	-> B2 A7 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੁ੍ਵੱ	B2 BE A7 BE 74	-> ਨੁੱ [0A28 0A41 0A71]	-> B2 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਵੁ	B2 A7 BE AB AE	-> ਨ੍ਵੁੱ [0A28 0A4D 0A35 0A41 0A71]	-> B2 A7 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੁ੍ਵ	B2 A7 BE AE AB	-> ਨੁੱ੍ਵ [0A28 0A41 0A71 0A4D 0A35]	-> B2 A7 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵਂੂ	B2 A3 BE AB AF	-> ਨ੍ਵੂਂ [0A28 0A4D 0A35 0A42 0A02]	-> B2 A3 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਵਂ	B2 BE A3 BE 76	-> ਨੂਂ [0A28 0A42 0A02]	-> B2 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂ੍ਵੂ	B2 A3 BE AB AF	-> ਨ੍ਵੂਂ [0A28 0A4D 0A35 0A42 0A02]	-> B2 A3 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੂ੍ਵ	B2 A3 BE AF AB	-> ਨੂਂ੍ਵ [0A28 0A42 0A02 0A4D 0A35]	-> B2 A3 BE 76 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵੰੂ	B2 A5 BE AB AF	-> ਨ੍ਵੂੰ [0A28 0A4D 0A35 0A42 0A70]	-> B2 A5 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਵੰ	B2 BE A5 BE 76	-> ਨੂੰ [0A28 0A42 0A70]	-> B2 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰ੍ਵੂ	B2 A5 BE AB AF	-> ਨ੍ਵੂੰ [0A28 0A4D 0A35 0A42 0A70]	-> B2 A5 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨ੍ਵੱੂ	B2 A7 BE AB AF	-> ਨ੍ਵੂੱ [0A28 0A4D 0A35 0A42 0A71]	-> B2 A7 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੂ੍ਵੱ	B2 BE A7 BE 76	-> ਨੂੱ [0A28 0A42 0A71]	-> B2 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱ੍ਵੂ	B2 A7 BE AB AF	-> ਨ੍ਵੂੱ [0A28 0A4D 0A35 0A42 0A71]	-> B2 A7 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੂ੍ਵ	B2 A7 BE AF AB	-> ਨੂੱ੍ਵ [0A28 0A42 0A71 0A4D 0A35]	-> B2 A7 BE 76 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਵਂ	B2 79 A5 BE AB	-> ਨ੍ਵੇੰ [0A28 0A4D 0A35 0A47 0A70]	-> B2 7A BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੇ੍ਵੱ	B2 79 A7 BE AB	-> ਨ੍ਵੇੱ [0A28 0A4D 0A35 0A47 0A71]	-> B2 79 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਵਂ	B2 B1 A5 BE AB	-> ਨ੍ਵੈੰ [0A28 0A4D 0A35 0A48 0A70]	-> B2 7C BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੈ੍ਵੱ	B2 B1 A7 BE AB	-> ਨ੍ਵੈੱ [0A28 0A4D 0A35 0A48 0A71]	-> B2 B1 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਵਂ	B2 7D A5 BE AB	-> ਨ੍ਵੋੰ [0A28 0A4D 0A35 0A4B 0A70]	-> B2 7E BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੋ੍ਵੱ	B2 7D A7 BE AB	-> ਨ੍ਵੋੱ [0A28 0A4D 0A35 0A4B 0A71]	-> B2 7D BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਵਂ	B2 A1 A5 BE AB	-> ਨ੍ਵੌੰ [0A28 0A4D 0A35 0A4C 0A70]	-> B2 A2 BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੌ੍ਵੱ	B2 A1 A7 BE AB	-> ਨ੍ਵੌੱ [0A28 0A4D 0A35 0A4C 0A71]	-> B2 A1 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੁ੍ਯ	B2 A3 BE AE 62	-> ਨੁਂ੍ਯ [0A28 0A41 0A02 0A4D 0A2F]	-> B2 A3 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੰੁ੍ਯ	B2 A5 BE AE 62	-> ਨੁੰ੍ਯ [0A28 0A41 0A70 0A4D 0A2F]	-> B2 A5 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੁ੍ਯ	B2 A7 BE AE 62	-> ਨੁੱ੍ਯ [0A28 0A41 0A71 0A4D 0A2F]	-> B2 A7 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨਂੂ੍ਯ	B2 A3 BE AF 62	-> ਨੂਂ੍ਯ [0A28 0A42 0A02 0A4D 0A2F]	-> B2 A3 BE 76 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਨੱੂ੍ਯ	B2 A7 BE AF 62	-> ਨੂੱ੍ਯ [0A28 0A42 0A71 0A4D 0A2F]	-> B2 A7 BE 76 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰਂੁ	53 A3 BE 6F AE	-> ਠ੍ਰੁਂ [0A20 0A4D 0A30 0A41 0A02]	-> 53 A3 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਰਂ	53 BE A3 BE 74	-> ਠੁਂ [0A20 0A41 0A02]	-> 53 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਰੁ	53 A3 BE 6F AE	-> ਠ੍ਰੁਂ [0A20 0A4D 0A30 0A41 0A02]	-> 53 A3 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੁ੍ਰ	53 A3 BE AE 6F	-> ਠੁਂ੍ਰ [0A20 0A41 0A02 0A4D 0A30]	-> 53 A3 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰੰੁ	53 A5 BE 6F AE	-> ਠ੍ਰੁੰ [0A20 0A4D 0A30 0A41 0A70]	-> 53 A5 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਰੰ	53 BE A5 BE 74	-> ਠੁੰ [0A20 0A41 0A70]	-> 53 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਰੁ	53 A5 BE 6F AE	-> ਠ੍ਰੁੰ [0A20 0A4D 0A30 0A41 0A70]	-> 53 A5 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੁ੍ਰ	53 A5 BE AE 6F	-> ਠੁੰ੍ਰ [0A20 0A41 0A70 0A4D 0A30]	-> 53 A5 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰੱੁ	53 A7 BE 6F AE	-> ਠ੍ਰੁੱ [0A20 0A4D 0A30 0A41 0A71]	-> 53 A7 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਰੱ	53 BE A7 BE 74	-> ਠੁੱ [0A20 0A41 0A71]	-> 53 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਰੁ	53 A7 BE 6F AE	-> ਠ੍ਰੁੱ [0A20 0A4D 0A30 0A41 0A71]	-> 53 A7 BE 6F 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੁ੍ਰ	53 A7 BE AE 6F	-> ਠੁੱ੍ਰ [0A20 0A41 0A71 0A4D 0A30]	-> 53 A7 BE 74 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰਂੂ	53 A3 BE 6F AF	-> ਠ੍ਰੂਂ [0A20 0A4D 0A30 0A42 0A02]	-> 53 A3 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਰਂ	53 BE A3 BE 76	-> ਠੂਂ [0A20 0A42 0A02]	-> 53 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਰੂ	53 A3 BE 6F AF	-> ਠ੍ਰੂਂ [0A20 0A4D 0A30 0A42 0A02]	-> 53 A3 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੂ੍ਰ	53 A3 BE AF 6F	-> ਠੂਂ੍ਰ [0A20 0A42 0A02 0A4D 0A30]	-> 53 A3 BE 76 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰੰੂ	53 A5 BE 6F AF	-> ਠ੍ਰੂੰ [0A20 0A4D 0A30 0A42 0A70]	-> 53 A5 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਰੰ	53 BE A5 BE 76	-> ਠੂੰ [0A20 0A42 0A70]	-> 53 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਰੂ	53 A5 BE 6F AF	-> ਠ੍ਰੂੰ [0A20 0A4D 0A30 0A42 0A70]	-> 53 A5 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੂ੍ਰ	53 A5 BE AF 6F	-> ਠੂੰ੍ਰ [0A20 0A42 0A70 0A4D 0A30]	-> 53 A5 BE 76 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਰੱੂ	53 A7 BE 6F AF	-> ਠ੍ਰੂੱ [0A20 0A4D 0A30 0A42 0A71]	-> 53 A7 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਰੱ	53 BE A7 BE 76	-> ਠੂੱ [0A20 0A42 0A71]	-> 53 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਰੂ	53 A7 BE 6F AF	-> ਠ੍ਰੂੱ [0A20 0A4D 0A30 0A42 0A71]	-> 53 A7 BE 6F 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੂ੍ਰ	53 A7 BE AF 6F	-> ਠੂੱ੍ਰ [0A20 0A42 0A71 0A4D 0A30]	-> 53 A7 BE 76 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਰਂ	53 79 A5 BE 6F	-> ਠ੍ਰੇੰ [0A20 0A4D 0A30 0A47 0A70]	-> 53 7A BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਰੱ	53 79 A7 BE 6F	-> ਠ੍ਰੇੱ [0A20 0A4D 0A30 0A47 0A71]	-> 53 79 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਰਂ	53 B1 A5 BE 6F	-> ਠ੍ਰੈੰ [0A20 0A4D 0A30 0A48 0A70]	-> 53 7C BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਰੱ	53 B1 A7 BE 6F	-> ਠ੍ਰੈੱ [0A20 0A4D 0A30 0A48 0A71]	-> 53 B1 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਰਂ	53 7D A5 BE 6F	-> ਠ੍ਰੋੰ [0A20 0A4D 0A30 0A4B 0A70]	-> 53 7E BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਰੱ	53 7D A7 BE 6F	-> ਠ੍ਰੋੱ [0A20 0A4D 0A30 0A4B 0A71]	-> 53 7D BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਰਂ	53 A1 A5 BE 6F	-> ਠ੍ਰੌੰ [0A20 0A4D 0A30 0A4C 0A70]	-> 53 A2 BE 6F
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਰੱ	53 A1 A7 BE 6F	-> ਠ੍ਰੌੱ [0A20 0A4D 0A30 0A4C 0A71]	-> 53 A1 BE 6F A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹਂੁ	53 A3 BE AA AE	-> ਠ੍ਹੁਂ [0A20 0A4D 0A39 0A41 0A02]	-> 53 A3 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਹਂ	53 BE A3 BE 74	-> ਠੁਂ [0A20 0A41 0A02]	-> 53 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਹੁ	53 A3 BE AA AE	-> ਠ੍ਹੁਂ [0A20 0A4D 0A39 0A41 0A02]	-> 53 A3 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੁ੍ਹ	53 A3 BE AE AA	-> ਠੁਂ੍ਹ [0A20 0A41 0A02 0A4D 0A39]	-> 53 A3 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹੰੁ	53 A5 BE AA AE	-> ਠ੍ਹੁੰ [0A20 0A4D 0A39 0A41 0A70]	-> 53 A5 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਹੰ	53 BE A5 BE 74	-> ਠੁੰ [0A20 0A41 0A70]	-> 53 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਹੁ	53 A5 BE AA AE	-> ਠ੍ਹੁੰ [0A20 0A4D 0A39 0A41 0A70]	-> 53 A5 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੁ੍ਹ	53 A5 BE AE AA	-> ਠੁੰ੍ਹ [0A20 0A41 0A70 0A4D 0A39]	-> 53 A5 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹੱੁ	53 A7 BE AA AE	-> ਠ੍ਹੁੱ [0A20 0A4D 0A39 0A41 0A71]	-> 53 A7 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਹੱ	53 BE A7 BE 74	-> ਠੁੱ [0A20 0A41 0A71]	-> 53 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਹੁ	53 A7 BE AA AE	-> ਠ੍ਹੁੱ [0A20 0A4D 0A39 0A41 0A71]	-> 53 A7 BE AA 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੁ੍ਹ	53 A7 BE AE AA	-> ਠੁੱ੍ਹ [0A20 0A41 0A71 0A4D 0A39]	-> 53 A7 BE 74 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹਂੂ	53 A3 BE AA AF	-> ਠ੍ਹੂਂ [0A20 0A4D 0A39 0A42 0A02]	-> 53 A3 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਹਂ	53 BE A3 BE 76	-> ਠੂਂ [0A20 0A42 0A02]	-> 53 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਹੂ	53 A3 BE AA AF	-> ਠ੍ਹੂਂ [0A20 0A4D 0A39 0A42 0A02]	-> 53 A3 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੂ੍ਹ	53 A3 BE AF AA	-> ਠੂਂ੍ਹ [0A20 0A42 0A02 0A4D 0A39]	-> 53 A3 BE 76 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹੰੂ	53 A5 BE AA AF	-> ਠ੍ਹੂੰ [0A20 0A4D 0A39 0A42 0A70]	-> 53 A5 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਹੰ	53 BE A5 BE 76	-> ਠੂੰ [0A20 0A42 0A70]	-> 53 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਹੂ	53 A5 BE AA AF	-> ਠ੍ਹੂੰ [0A20 0A4D 0A39 0A42 0A70]	-> 53 A5 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੂ੍ਹ	53 A5 BE AF AA	-> ਠੂੰ੍ਹ [0A20 0A42 0A70 0A4D 0A39]	-> 53 A5 BE 76 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਹੱੂ	53 A7 BE AA AF	-> ਠ੍ਹੂੱ [0A20 0A4D 0A39 0A42 0A71]	-> 53 A7 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਹੱ	53 BE A7 BE 76	-> ਠੂੱ [0A20 0A42 0A71]	-> 53 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਹੂ	53 A7 BE AA AF	-> ਠ੍ਹੂੱ [0A20 0A4D 0A39 0A42 0A71]	-> 53 A7 BE AA 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੂ੍ਹ	53 A7 BE AF AA	-> ਠੂੱ੍ਹ [0A20 0A42 0A71 0A4D 0A39]	-> 53 A7 BE 76 AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਹਂ	53 79 A5 BE AA	-> ਠ੍ਹੇੰ [0A20 0A4D 0A39 0A47 0A70]	-> 53 7A BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਹੱ	53 79 A7 BE AA	-> ਠ੍ਹੇੱ [0A20 0A4D 0A39 0A47 0A71]	-> 53 79 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਹਂ	53 B1 A5 BE AA	-> ਠ੍ਹੈੰ [0A20 0A4D 0A39 0A48 0A70]	-> 53 7C BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਹੱ	53 B1 A7 BE AA	-> ਠ੍ਹੈੱ [0A20 0A4D 0A39 0A48 0A71]	-> 53 B1 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਹਂ	53 7D A5 BE AA	-> ਠ੍ਹੋੰ [0A20 0A4D 0A39 0A4B 0A70]	-> 53 7E BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਹੱ	53 7D A7 BE AA	-> ਠ੍ਹੋੱ [0A20 0A4D 0A39 0A4B 0A71]	-> 53 7D BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਹਂ	53 A1 A5 BE AA	-> ਠ੍ਹੌੰ [0A20 0A4D 0A39 0A4C 0A70]	-> 53 A2 BE AA
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਹੱ	53 A1 A7 BE AA	-> ਠ੍ਹੌੱ [0A20 0A4D 0A39 0A4C 0A71]	-> 53 A1 BE AA A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵਂੁ	53 A3 BE AB AE	-> ਠ੍ਵੁਂ [0A20 0A4D 0A35 0A41 0A02]	-> 53 A3 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਵਂ	53 BE A3 BE 74	-> ਠੁਂ [0A20 0A41 0A02]	-> 53 A3 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਵੁ	53 A3 BE AB AE	-> ਠ੍ਵੁਂ [0A20 0A4D 0A35 0A41 0A02]	-> 53 A3 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੁ੍ਵ	53 A3 BE AE AB	-> ਠੁਂ੍ਵ [0A20 0A41 0A02 0A4D 0A35]	-> 53 A3 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵੰੁ	53 A5 BE AB AE	-> ਠ੍ਵੁੰ [0A20 0A4D 0A35 0A41 0A70]	-> 53 A5 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਵੰ	53 BE A5 BE 74	-> ਠੁੰ [0A20 0A41 0A70]	-> 53 A5 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਵੁ	53 A5 BE AB AE	-> ਠ੍ਵੁੰ [0A20 0A4D 0A35 0A41 0A70]	-> 53 A5 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੁ੍ਵ	53 A5 BE AE AB	-> ਠੁੰ੍ਵ [0A20 0A41 0A70 0A4D 0A35]	-> 53 A5 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵੱੁ	53 A7 BE AB AE	-> ਠ੍ਵੁੱ [0A20 0A4D 0A35 0A41 0A71]	-> 53 A7 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੁ੍ਵੱ	53 BE A7 BE 74	-> ਠੁੱ [0A20 0A41 0A71]	-> 53 A7 BE 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਵੁ	53 A7 BE AB AE	-> ਠ੍ਵੁੱ [0A20 0A4D 0A35 0A41 0A71]	-> 53 A7 BE AB 74
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੁ੍ਵ	53 A7 BE AE AB	-> ਠੁੱ੍ਵ [0A20 0A41 0A71 0A4D 0A35]	-> 53 A7 BE 74 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵਂੂ	53 A3 BE AB AF	-> ਠ੍ਵੂਂ [0A20 0A4D 0A35 0A42 0A02]	-> 53 A3 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਵਂ	53 BE A3 BE 76	-> ਠੂਂ [0A20 0A42 0A02]	-> 53 A3 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂ੍ਵੂ	53 A3 BE AB AF	-> ਠ੍ਵੂਂ [0A20 0A4D 0A35 0A42 0A02]	-> 53 A3 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੂ੍ਵ	53 A3 BE AF AB	-> ਠੂਂ੍ਵ [0A20 0A42 0A02 0A4D 0A35]	-> 53 A3 BE 76 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵੰੂ	53 A5 BE AB AF	-> ਠ੍ਵੂੰ [0A20 0A4D 0A35 0A42 0A70]	-> 53 A5 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਵੰ	53 BE A5 BE 76	-> ਠੂੰ [0A20 0A42 0A70]	-> 53 A5 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰ੍ਵੂ	53 A5 BE AB AF	-> ਠ੍ਵੂੰ [0A20 0A4D 0A35 0A42 0A70]	-> 53 A5 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੂ੍ਵ	53 A5 BE AF AB	-> ਠੂੰ੍ਵ [0A20 0A42 0A70 0A4D 0A35]	-> 53 A5 BE 76 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠ੍ਵੱੂ	53 A7 BE AB AF	-> ਠ੍ਵੂੱ [0A20 0A4D 0A35 0A42 0A71]	-> 53 A7 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੂ੍ਵੱ	53 BE A7 BE 76	-> ਠੂੱ [0A20 0A42 0A71]	-> 53 A7 BE 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱ੍ਵੂ	53 A7 BE AB AF	-> ਠ੍ਵੂੱ [0A20 0A4D 0A35 0A42 0A71]	-> 53 A7 BE AB 76
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੂ੍ਵ	53 A7 BE AF AB	-> ਠੂੱ੍ਵ [0A20 0A42 0A71 0A4D 0A35]	-> 53 A7 BE 76 AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਵਂ	53 79 A5 BE AB	-> ਠ੍ਵੇੰ [0A20 0A4D 0A35 0A47 0A70]	-> 53 7A BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੇ੍ਵੱ	53 79 A7 BE AB	-> ਠ੍ਵੇੱ [0A20 0A4D 0A35 0A47 0A71]	-> 53 79 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਵਂ	53 B1 A5 BE AB	-> ਠ੍ਵੈੰ [0A20 0A4D 0A35 0A48 0A70]	-> 53 7C BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੈ੍ਵੱ	53 B1 A7 BE AB	-> ਠ੍ਵੈੱ [0A20 0A4D 0A35 0A48 0A71]	-> 53 B1 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਵਂ	53 7D A5 BE AB	-> ਠ੍ਵੋੰ [0A20 0A4D 0A35 0A4B 0A70]	-> 53 7E BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੋ੍ਵੱ	53 7D A7 BE AB	-> ਠ੍ਵੋੱ [0A20 0A4D 0A35 0A4B 0A71]	-> 53 7D BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਵਂ	53 A1 A5 BE AB	-> ਠ੍ਵੌੰ [0A20 0A4D 0A35 0A4C 0A70]	-> 53 A2 BE AB
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੌ੍ਵੱ	53 A1 A7 BE AB	-> ਠ੍ਵੌੱ [0A20 0A4D 0A35 0A4C 0A71]	-> 53 A1 BE AB A8
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੁ੍ਯ	53 A3 BE AE 62	-> ਠੁਂ੍ਯ [0A20 0A41 0A02 0A4D 0A2F]	-> 53 A3 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੁ੍ਯ	53 A5 BE AE 62	-> ਠੁੰ੍ਯ [0A20 0A41 0A70 0A4D 0A2F]	-> 53 A5 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੁ੍ਯ	53 A7 BE AE 62	-> ਠੁੱ੍ਯ [0A20 0A41 0A71 0A4D 0A2F]	-> 53 A7 BE 74 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠਂੂ੍ਯ	53 A3 BE AF 62	-> ਠੂਂ੍ਯ [0A20 0A42 0A02 0A4D 0A2F]	-> 53 A3 BE 76 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੰੂ੍ਯ	53 A5 BE AF 62	-> ਠੂੰ੍ਯ [0A20 0A42 0A70 0A4D 0A2F]	-> 53 A5 BE 76 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਠੱੂ੍ਯ	53 A7 BE AF 62	-> ਠੂੱ੍ਯ [0A20 0A42 0A71 0A4D 0A2F]	-> 53 A7 BE 76 62
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੀ੍ਰੱ	48 6E A8	-> ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	-> 48 6E A7
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੇ੍ਰੱ	48 6E A8	-> ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	-> 48 6E A7
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੈ੍ਰੱ	48 6E A8	-> ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	-> 48 6E A7
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੋ੍ਰੱ	48 6E A8	-> ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	-> 48 6E A7
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੌ੍ਰੱ	48 6E A8	-> ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	-> 48 6E A7
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੇ੍ਹਂ	48 79 7A	-> ਕੇਂ [0A15 0A47 0A02]	-> 48 7A
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੈ੍ਹਂ	48 B1 7C	-> ਕੈਂ [0A15 0A48 0A02]	-> 48 7C
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੋ੍ਹਂ	48 7D 7E	-> ਕੋਂ [0A15 0A4B 0A02]	-> 48 7E
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੌ੍ਹਂ	48 A1 A2	-> ਕੌਂ [0A15 0A4C 0A02]	-> 48 A2
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੇ੍ਵਂ	48 79 7A	-> ਕੇਂ [0A15 0A47 0A02]	-> 48 7A
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੈ੍ਵਂ	48 B1 7C	-> ਕੈਂ [0A15 0A48 0A02]	-> 48 7C
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੋ੍ਵਂ	48 7D 7E	-> ਕੋਂ [0A15 0A4B 0A02]	-> 48 7E
+OTHER	alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)	ਕੌ੍ਵਂ	48 A1 A2	-> ਕੌਂ [0A15 0A4C 0A02]	-> 48 A2

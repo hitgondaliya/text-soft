@@ -1,0 +1,18 @@
+Test run for C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-ori\repo\tests\FontSoftware.Tests\bin\Release\net8.0-windows\FontSoftware.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:43.53]     FontSoftware.Tests.ShreeOdiaTypingTests.PhoneticVowelsJoinEveryConsonant [FAIL]
+  Failed FontSoftware.Tests.ShreeOdiaTypingTests.PhoneticVowelsJoinEveryConsonant [868 ms]
+  Error Message:
+   6 of 270 wrong:
+Vaa: ୱଅ, want ୱା
+Vaa in a Shree font: 48 B4 41
+Vai: ୱଇ, want ୱୈ
+Vai in a Shree font: 48 B4 42
+Vau: ୱଉ, want ୱୌ
+Vau in a Shree font: 48 B4 44
+  Stack Trace:
+     at FontSoftware.Tests.ShreeOdiaTypingTests.PhoneticVowelsJoinEveryConsonant() in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-ori\repo\tests\FontSoftware.Tests\ShreeOdiaTruthTests.cs:line 728
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     1, Passed:   133, Skipped:     0, Total:   134, Duration: 41 s - FontSoftware.Tests.dll (net8.0)

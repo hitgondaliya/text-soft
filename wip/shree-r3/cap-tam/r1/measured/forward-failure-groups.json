@@ -1,0 +1,902 @@
+{
+ "about": "forward failures of the shipped unicode-to-shree-tam7 (real FontConverter, snapshot build) re-read by glyph: see failclass2.js header",
+ "total": 3882,
+ "byClass": {
+  "glyph-equal": 262,
+  "other": 109,
+  "order": 1826,
+  "unmapped": 25,
+  "joiner-only": 1506,
+  "joiner+glyph-equal": 50,
+  "joiner+other": 8,
+  "joiner+order": 96
+ },
+ "groups": {
+  "C்JC | joiner-only": {
+   "n": 1012,
+   "examples": [
+    "க்‌க [0B95 0BCD 200C 0B95]: ours 55 U+200C 50 | Shree 55 50",
+    "க்‍க [0B95 0BCD 200D 0B95]: ours 55 U+200D 50 | Shree 55 50",
+    "க்‌ங [0B95 0BCD 200C 0B99]: ours 55 U+200C 56 | Shree 55 56",
+    "க்‍ங [0B95 0BCD 200D 0B99]: ours 55 U+200D 56 | Shree 55 56"
+   ]
+  },
+  "C்Cெ | order": {
+   "n": 528,
+   "examples": [
+    "க்கெ [0B95 0BCD 0B95 0BC6]: ours F6 55 50 | Shree 55 F6 50",
+    "க்ஙெ [0B95 0BCD 0B99 0BC6]: ours F6 55 56 | Shree 55 F6 56",
+    "க்செ [0B95 0BCD 0B9A 0BC6]: ours F6 55 5C | Shree 55 F6 5C",
+    "க்ஞெ [0B95 0BCD 0B9E 0BC6]: ours F6 55 62 | Shree 55 F6 62"
+   ]
+  },
+  "C்Cே | order": {
+   "n": 528,
+   "examples": [
+    "க்கே [0B95 0BCD 0B95 0BC7]: ours 40 55 50 | Shree 55 F7 50",
+    "க்ஙே [0B95 0BCD 0B99 0BC7]: ours 40 55 56 | Shree 55 F7 56",
+    "க்சே [0B95 0BCD 0B9A 0BC7]: ours 40 55 5C | Shree 55 F7 5C",
+    "க்ஞே [0B95 0BCD 0B9E 0BC7]: ours 40 55 62 | Shree 55 F7 62"
+   ]
+  },
+  "C்Cை | order": {
+   "n": 528,
+   "examples": [
+    "க்கை [0B95 0BCD 0B95 0BC8]: ours F8 55 50 | Shree 55 F8 50",
+    "க்ஙை [0B95 0BCD 0B99 0BC8]: ours F8 55 56 | Shree 55 F8 56",
+    "க்சை [0B95 0BCD 0B9A 0BC8]: ours F8 55 5C | Shree 55 F8 5C",
+    "க்ஞை [0B95 0BCD 0B9E 0BC8]: ours F8 55 62 | Shree 55 F8 62"
+   ]
+  },
+  "CJ | joiner-only": {
+   "n": 46,
+   "examples": [
+    "க‌ [0B95 200C]: ours 50 U+200C | Shree 50",
+    "க‍ [0B95 200D]: ours 50 U+200D | Shree 50",
+    "ங‌ [0B99 200C]: ours 56 U+200C | Shree 56",
+    "ங‍ [0B99 200D]: ours 56 U+200D | Shree 56"
+   ]
+  },
+  "CாJ | joiner-only": {
+   "n": 46,
+   "examples": [
+    "கா‌ [0B95 0BBE 200C]: ours 50 F5 U+200C | Shree 50 F5",
+    "கா‍ [0B95 0BBE 200D]: ours 50 F5 U+200D | Shree 50 F5",
+    "ஙா‌ [0B99 0BBE 200C]: ours 56 F5 U+200C | Shree 56 F5",
+    "ஙா‍ [0B99 0BBE 200D]: ours 56 F5 U+200D | Shree 56 F5"
+   ]
+  },
+  "CூJ | joiner-only": {
+   "n": 46,
+   "examples": [
+    "கூ‌ [0B95 0BC2 200C]: ours 54 U+200C | Shree 54",
+    "கூ‍ [0B95 0BC2 200D]: ours 54 U+200D | Shree 54",
+    "ஙூ‌ [0B99 0BC2 200C]: ours 5A U+200C | Shree 5A",
+    "ஙூ‍ [0B99 0BC2 200D]: ours 5A U+200D | Shree 5A"
+   ]
+  },
+  "CJா | joiner-only": {
+   "n": 46,
+   "examples": [
+    "க‌ா [0B95 200C 0BBE]: ours 50 U+200C F5 | Shree 50 F5",
+    "க‍ா [0B95 200D 0BBE]: ours 50 U+200D F5 | Shree 50 F5",
+    "ங‌ா [0B99 200C 0BBE]: ours 56 U+200C F5 | Shree 56 F5",
+    "ங‍ா [0B99 200D 0BBE]: ours 56 U+200D F5 | Shree 56 F5"
+   ]
+  },
+  "CொJ | joiner+order": {
+   "n": 46,
+   "examples": [
+    "கொ‌ [0B95 0BCA 200C]: ours 50 F6 F5 U+200C | Shree F6 50 F5",
+    "கொ‍ [0B95 0BCA 200D]: ours 50 F6 F5 U+200D | Shree F6 50 F5",
+    "ஙொ‌ [0B99 0BCA 200C]: ours 56 F6 F5 U+200C | Shree F6 56 F5",
+    "ஙொ‍ [0B99 0BCA 200D]: ours 56 F6 F5 U+200D | Shree F6 56 F5"
+   ]
+  },
+  "CோJ | joiner+order": {
+   "n": 46,
+   "examples": [
+    "கோ‌ [0B95 0BCB 200C]: ours 50 40 F5 U+200C | Shree F7 50 F5",
+    "கோ‍ [0B95 0BCB 200D]: ours 50 40 F5 U+200D | Shree F7 50 F5",
+    "ஙோ‌ [0B99 0BCB 200C]: ours 56 40 F5 U+200C | Shree F7 56 F5",
+    "ஙோ‍ [0B99 0BCB 200D]: ours 56 40 F5 U+200D | Shree F7 56 F5"
+   ]
+  },
+  "C்JC | joiner+glyph-equal | 23 for B4": {
+   "n": 46,
+   "examples": [
+    "ய்‌க [0BAF 0BCD 200C 0B95]: ours 23 U+200C 50 | Shree B4 50",
+    "ய்‍க [0BAF 0BCD 200D 0B95]: ours 23 U+200D 50 | Shree B4 50",
+    "ய்‌ங [0BAF 0BCD 200C 0B99]: ours 23 U+200C 56 | Shree B4 56",
+    "ய்‍ங [0BAF 0BCD 200D 0B99]: ours 23 U+200D 56 | Shree B4 56"
+   ]
+  },
+  "KSS்JC | joiner-only": {
+   "n": 46,
+   "examples": [
+    "க்ஷ்‌க [0B95 0BCD 0BB7 0BCD 200C 0B95]: ours F4 U+200C 50 | Shree F4 50",
+    "க்ஷ்‍க [0B95 0BCD 0BB7 0BCD 200D 0B95]: ours F4 U+200D 50 | Shree F4 50",
+    "க்ஷ்‌ங [0B95 0BCD 0BB7 0BCD 200C 0B99]: ours F4 U+200C 56 | Shree F4 56",
+    "க்ஷ்‍ங [0B95 0BCD 0BB7 0BCD 200D 0B99]: ours F4 U+200D 56 | Shree F4 56"
+   ]
+  },
+  "C்C் | glyph-equal | 23 for B4": {
+   "n": 45,
+   "examples": [
+    "க்ய் [0B95 0BCD 0BAF 0BCD]: ours 55 23 | Shree 55 B4",
+    "ங்ய் [0B99 0BCD 0BAF 0BCD]: ours 5B 23 | Shree 5B B4",
+    "ச்ய் [0B9A 0BCD 0BAF 0BCD]: ours 61 23 | Shree 61 B4",
+    "ஞ்ய் [0B9E 0BCD 0BAF 0BCD]: ours 67 23 | Shree 67 B4"
+   ]
+  },
+  "CிJ | joiner-only": {
+   "n": 44,
+   "examples": [
+    "கி‌ [0B95 0BBF 200C]: ours 51 U+200C | Shree 51",
+    "கி‍ [0B95 0BBF 200D]: ours 51 U+200D | Shree 51",
+    "ஙி‌ [0B99 0BBF 200C]: ours 57 U+200C | Shree 57",
+    "ஙி‍ [0B99 0BBF 200D]: ours 57 U+200D | Shree 57"
+   ]
+  },
+  "CீJ | joiner-only": {
+   "n": 44,
+   "examples": [
+    "கீ‌ [0B95 0BC0 200C]: ours 52 U+200C | Shree 52",
+    "கீ‍ [0B95 0BC0 200D]: ours 52 U+200D | Shree 52",
+    "ஙீ‌ [0B99 0BC0 200C]: ours 58 U+200C | Shree 58",
+    "ஙீ‍ [0B99 0BC0 200D]: ours 58 U+200D | Shree 58"
+   ]
+  },
+  "CுJ | joiner-only": {
+   "n": 44,
+   "examples": [
+    "கு‌ [0B95 0BC1 200C]: ours 53 U+200C | Shree 53",
+    "கு‍ [0B95 0BC1 200D]: ours 53 U+200D | Shree 53",
+    "ஙு‌ [0B99 0BC1 200C]: ours 59 U+200C | Shree 59",
+    "ஙு‍ [0B99 0BC1 200D]: ours 59 U+200D | Shree 59"
+   ]
+  },
+  "C்J | joiner-only": {
+   "n": 44,
+   "examples": [
+    "க்‌ [0B95 0BCD 200C]: ours 55 U+200C | Shree 55",
+    "க்‍ [0B95 0BCD 200D]: ours 55 U+200D | Shree 55",
+    "ங்‌ [0B99 0BCD 200C]: ours 5B U+200C | Shree 5B",
+    "ங்‍ [0B99 0BCD 200D]: ours 5B U+200D | Shree 5B"
+   ]
+  },
+  "C்JKSS | joiner-only": {
+   "n": 44,
+   "examples": [
+    "க்‌க்ஷ [0B95 0BCD 200C 0B95 0BCD 0BB7]: ours 55 U+200C F1 | Shree 55 F1",
+    "க்‍க்ஷ [0B95 0BCD 200D 0B95 0BCD 0BB7]: ours 55 U+200D F1 | Shree 55 F1",
+    "ங்‌க்ஷ [0B99 0BCD 200C 0B95 0BCD 0BB7]: ours 5B U+200C F1 | Shree 5B F1",
+    "ங்‍க்ஷ [0B99 0BCD 200D 0B95 0BCD 0BB7]: ours 5B U+200D F1 | Shree 5B F1"
+   ]
+  },
+  "Cோ | order": {
+   "n": 23,
+   "examples": [
+    "கோ [0B95 0BCB]: ours 50 40 F5 | Shree F7 50 F5",
+    "ஙோ [0B99 0BCB]: ours 56 40 F5 | Shree F7 56 F5",
+    "சோ [0B9A 0BCB]: ours 5C 40 F5 | Shree F7 5C F5",
+    "ஞோ [0B9E 0BCB]: ours 62 40 F5 | Shree F7 62 F5"
+   ]
+  },
+  "Cொ | order": {
+   "n": 23,
+   "examples": [
+    "கொ [0B95 0BCA]: ours 50 F6 F5 | Shree F6 50 F5",
+    "ஙொ [0B99 0BCA]: ours 56 F6 F5 | Shree F6 56 F5",
+    "சொ [0B9A 0BCA]: ours 5C F6 F5 | Shree F6 5C F5",
+    "ஞொ [0B9E 0BCA]: ours 62 F6 F5 | Shree F6 62 F5"
+   ]
+  },
+  "Cௌ | unmapped": {
+   "n": 23,
+   "examples": [
+    "கௌ [0B95 0BCC]: ours 50 U+0BCC | Shree F6 50 CD",
+    "ஙௌ [0B99 0BCC]: ours 56 U+0BCC | Shree F6 56 CD",
+    "சௌ [0B9A 0BCC]: ours 5C U+0BCC | Shree F6 5C CD",
+    "ஞௌ [0B9E 0BCC]: ours 62 U+0BCC | Shree F6 62 CD"
+   ]
+  },
+  "Cொஃ | order": {
+   "n": 23,
+   "examples": [
+    "கொஃ [0B95 0BCA 0B83]: ours 50 F6 F5 4C | Shree F6 50 F5 4C",
+    "ஙொஃ [0B99 0BCA 0B83]: ours 56 F6 F5 4C | Shree F6 56 F5 4C",
+    "சொஃ [0B9A 0BCA 0B83]: ours 5C F6 F5 4C | Shree F6 5C F5 4C",
+    "ஞொஃ [0B9E 0BCA 0B83]: ours 62 F6 F5 4C | Shree F6 62 F5 4C"
+   ]
+  },
+  "Cே | glyph-equal | 40 for F7": {
+   "n": 23,
+   "examples": [
+    "கே [0B95 0BC7]: ours 40 50 | Shree F7 50",
+    "ஙே [0B99 0BC7]: ours 40 56 | Shree F7 56",
+    "சே [0B9A 0BC7]: ours 40 5C | Shree F7 5C",
+    "ஞே [0B9E 0BC7]: ours 40 62 | Shree F7 62"
+   ]
+  },
+  "CCே | glyph-equal | 40 for F7": {
+   "n": 23,
+   "examples": [
+    "களே [0B95 0BB3 0BC7]: ours 50 40 CD | Shree 50 F7 CD",
+    "ஙளே [0B99 0BB3 0BC7]: ours 56 40 CD | Shree 56 F7 CD",
+    "சளே [0B9A 0BB3 0BC7]: ours 5C 40 CD | Shree 5C F7 CD",
+    "ஞளே [0B9E 0BB3 0BC7]: ours 62 40 CD | Shree 62 F7 CD"
+   ]
+  },
+  "Cோஃ | order": {
+   "n": 23,
+   "examples": [
+    "கோஃ [0B95 0BCB 0B83]: ours 50 40 F5 4C | Shree F7 50 F5 4C",
+    "ஙோஃ [0B99 0BCB 0B83]: ours 56 40 F5 4C | Shree F7 56 F5 4C",
+    "சோஃ [0B9A 0BCB 0B83]: ours 5C 40 F5 4C | Shree F7 5C F5 4C",
+    "ஞோஃ [0B9E 0BCB 0B83]: ours 62 40 F5 4C | Shree F7 62 F5 4C"
+   ]
+  },
+  "C்Cி | other | ours has B5 91 / Shree has 9B": {
+   "n": 23,
+   "examples": [
+    "க்ரி [0B95 0BCD 0BB0 0BBF]: ours 55 B5 91 | Shree 55 9B",
+    "ங்ரி [0B99 0BCD 0BB0 0BBF]: ours 5B B5 91 | Shree 5B 9B",
+    "ச்ரி [0B9A 0BCD 0BB0 0BBF]: ours 61 B5 91 | Shree 61 9B",
+    "ஞ்ரி [0B9E 0BCD 0BB0 0BBF]: ours 67 B5 91 | Shree 67 9B"
+   ]
+  },
+  "C்KSSு | other | ours has FA / Shree has FB": {
+   "n": 23,
+   "examples": [
+    "க்க்ஷு [0B95 0BCD 0B95 0BCD 0BB7 0BC1]: ours 55 F1 FA | Shree 55 F1 FB",
+    "ங்க்ஷு [0B99 0BCD 0B95 0BCD 0BB7 0BC1]: ours 5B F1 FA | Shree 5B F1 FB",
+    "ச்க்ஷு [0B9A 0BCD 0B95 0BCD 0BB7 0BC1]: ours 61 F1 FA | Shree 61 F1 FB",
+    "ஞ்க்ஷு [0B9E 0BCD 0B95 0BCD 0BB7 0BC1]: ours 67 F1 FA | Shree 67 F1 FB"
+   ]
+  },
+  "C்KSSெ | order": {
+   "n": 23,
+   "examples": [
+    "க்க்ஷெ [0B95 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 55 F1 | Shree 55 F6 F1",
+    "ங்க்ஷெ [0B99 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 5B F1 | Shree 5B F6 F1",
+    "ச்க்ஷெ [0B9A 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 61 F1 | Shree 61 F6 F1",
+    "ஞ்க்ஷெ [0B9E 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 67 F1 | Shree 67 F6 F1"
+   ]
+  },
+  "C்KSSே | order": {
+   "n": 23,
+   "examples": [
+    "க்க்ஷே [0B95 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 55 F1 | Shree 55 F7 F1",
+    "ங்க்ஷே [0B99 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 5B F1 | Shree 5B F7 F1",
+    "ச்க்ஷே [0B9A 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 61 F1 | Shree 61 F7 F1",
+    "ஞ்க்ஷே [0B9E 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 67 F1 | Shree 67 F7 F1"
+   ]
+  },
+  "C்KSSை | order": {
+   "n": 23,
+   "examples": [
+    "க்க்ஷை [0B95 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 55 F1 | Shree 55 F8 F1",
+    "ங்க்ஷை [0B99 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 5B F1 | Shree 5B F8 F1",
+    "ச்க்ஷை [0B9A 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 61 F1 | Shree 61 F8 F1",
+    "ஞ்க்ஷை [0B9E 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 67 F1 | Shree 67 F8 F1"
+   ]
+  },
+  "C்C | glyph-equal | 23 for B4": {
+   "n": 23,
+   "examples": [
+    "ய்க [0BAF 0BCD 0B95]: ours 23 50 | Shree B4 50",
+    "ய்ங [0BAF 0BCD 0B99]: ours 23 56 | Shree B4 56",
+    "ய்ச [0BAF 0BCD 0B9A]: ours 23 5C | Shree B4 5C",
+    "ய்ஞ [0BAF 0BCD 0B9E]: ours 23 62 | Shree B4 62"
+   ]
+  },
+  "C்Cஃ | glyph-equal | 23 for B4": {
+   "n": 23,
+   "examples": [
+    "ய்கஃ [0BAF 0BCD 0B95 0B83]: ours 23 50 4C | Shree B4 50 4C",
+    "ய்ஙஃ [0BAF 0BCD 0B99 0B83]: ours 23 56 4C | Shree B4 56 4C",
+    "ய்சஃ [0BAF 0BCD 0B9A 0B83]: ours 23 5C 4C | Shree B4 5C 4C",
+    "ய்ஞஃ [0BAF 0BCD 0B9E 0B83]: ours 23 62 4C | Shree B4 62 4C"
+   ]
+  },
+  "KSS்Cெ | order": {
+   "n": 23,
+   "examples": [
+    "க்ஷ்கெ [0B95 0BCD 0BB7 0BCD 0B95 0BC6]: ours F6 F4 50 | Shree F4 F6 50",
+    "க்ஷ்ஙெ [0B95 0BCD 0BB7 0BCD 0B99 0BC6]: ours F6 F4 56 | Shree F4 F6 56",
+    "க்ஷ்செ [0B95 0BCD 0BB7 0BCD 0B9A 0BC6]: ours F6 F4 5C | Shree F4 F6 5C",
+    "க்ஷ்ஞெ [0B95 0BCD 0BB7 0BCD 0B9E 0BC6]: ours F6 F4 62 | Shree F4 F6 62"
+   ]
+  },
+  "KSS்Cே | order": {
+   "n": 23,
+   "examples": [
+    "க்ஷ்கே [0B95 0BCD 0BB7 0BCD 0B95 0BC7]: ours 40 F4 50 | Shree F4 F7 50",
+    "க்ஷ்ஙே [0B95 0BCD 0BB7 0BCD 0B99 0BC7]: ours 40 F4 56 | Shree F4 F7 56",
+    "க்ஷ்சே [0B95 0BCD 0BB7 0BCD 0B9A 0BC7]: ours 40 F4 5C | Shree F4 F7 5C",
+    "க்ஷ்ஞே [0B95 0BCD 0BB7 0BCD 0B9E 0BC7]: ours 40 F4 62 | Shree F4 F7 62"
+   ]
+  },
+  "KSS்Cை | order": {
+   "n": 23,
+   "examples": [
+    "க்ஷ்கை [0B95 0BCD 0BB7 0BCD 0B95 0BC8]: ours F8 F4 50 | Shree F4 F8 50",
+    "க்ஷ்ஙை [0B95 0BCD 0BB7 0BCD 0B99 0BC8]: ours F8 F4 56 | Shree F4 F8 56",
+    "க்ஷ்சை [0B95 0BCD 0BB7 0BCD 0B9A 0BC8]: ours F8 F4 5C | Shree F4 F8 5C",
+    "க்ஷ்ஞை [0B95 0BCD 0BB7 0BCD 0B9E 0BC8]: ours F8 F4 62 | Shree F4 F8 62"
+   ]
+  },
+  "C்Cீ | other | ours has B5 92 / Shree has 9F": {
+   "n": 22,
+   "examples": [
+    "க்ரீ [0B95 0BCD 0BB0 0BC0]: ours 55 B5 92 | Shree 55 9F",
+    "ங்ரீ [0B99 0BCD 0BB0 0BC0]: ours 5B B5 92 | Shree 5B 9F",
+    "ச்ரீ [0B9A 0BCD 0BB0 0BC0]: ours 61 B5 92 | Shree 61 9F",
+    "ஞ்ரீ [0B9E 0BCD 0BB0 0BC0]: ours 67 B5 92 | Shree 67 9F"
+   ]
+  },
+  "C்Cு | other | ours has FA / Shree has FB": {
+   "n": 22,
+   "examples": [
+    "ங்ஷு [0B99 0BCD 0BB7 0BC1]: ours 5B E5 FA | Shree 5B E5 FB",
+    "ச்ஷு [0B9A 0BCD 0BB7 0BC1]: ours 61 E5 FA | Shree 61 E5 FB",
+    "ஞ்ஷு [0B9E 0BCD 0BB7 0BC1]: ours 67 E5 FA | Shree 67 E5 FB",
+    "ட்ஷு [0B9F 0BCD 0BB7 0BC1]: ours 6D E5 FA | Shree 6D E5 FB"
+   ]
+  },
+  "C்Cி | glyph-equal | 23 for B4": {
+   "n": 22,
+   "examples": [
+    "ய்கி [0BAF 0BCD 0B95 0BBF]: ours 23 51 | Shree B4 51",
+    "ய்ஙி [0BAF 0BCD 0B99 0BBF]: ours 23 57 | Shree B4 57",
+    "ய்சி [0BAF 0BCD 0B9A 0BBF]: ours 23 5D | Shree B4 5D",
+    "ய்ஞி [0BAF 0BCD 0B9E 0BBF]: ours 23 63 | Shree B4 63"
+   ]
+  },
+  "C்Cீ | glyph-equal | 23 for B4": {
+   "n": 22,
+   "examples": [
+    "ய்கீ [0BAF 0BCD 0B95 0BC0]: ours 23 52 | Shree B4 52",
+    "ய்ஙீ [0BAF 0BCD 0B99 0BC0]: ours 23 58 | Shree B4 58",
+    "ய்சீ [0BAF 0BCD 0B9A 0BC0]: ours 23 5E | Shree B4 5E",
+    "ய்ஞீ [0BAF 0BCD 0B9E 0BC0]: ours 23 64 | Shree B4 64"
+   ]
+  },
+  "C்Cு | glyph-equal | 23 for B4": {
+   "n": 22,
+   "examples": [
+    "ய்கு [0BAF 0BCD 0B95 0BC1]: ours 23 53 | Shree B4 53",
+    "ய்ஙு [0BAF 0BCD 0B99 0BC1]: ours 23 59 | Shree B4 59",
+    "ய்சு [0BAF 0BCD 0B9A 0BC1]: ours 23 5F | Shree B4 5F",
+    "ய்ஞு [0BAF 0BCD 0B9E 0BC1]: ours 23 65 | Shree B4 65"
+   ]
+  },
+  "C்Cூ | glyph-equal | 23 for B4": {
+   "n": 22,
+   "examples": [
+    "ய்கூ [0BAF 0BCD 0B95 0BC2]: ours 23 54 | Shree B4 54",
+    "ய்ஙூ [0BAF 0BCD 0B99 0BC2]: ours 23 5A | Shree B4 5A",
+    "ய்சூ [0BAF 0BCD 0B9A 0BC2]: ours 23 60 | Shree B4 60",
+    "ய்ஞூ [0BAF 0BCD 0B9E 0BC2]: ours 23 66 | Shree B4 66"
+   ]
+  },
+  "C்Cா | glyph-equal | 23 for B4": {
+   "n": 20,
+   "examples": [
+    "ய்கா [0BAF 0BCD 0B95 0BBE]: ours 23 50 F5 | Shree B4 50 F5",
+    "ய்ஙா [0BAF 0BCD 0B99 0BBE]: ours 23 56 F5 | Shree B4 56 F5",
+    "ய்சா [0BAF 0BCD 0B9A 0BBE]: ours 23 5C F5 | Shree B4 5C F5",
+    "ய்ஞா [0BAF 0BCD 0B9E 0BBE]: ours 23 62 F5 | Shree B4 62 F5"
+   ]
+  },
+  "C– | other | ours has 96 / Shree has 26": {
+   "n": 3,
+   "examples": [
+    "க– [0B95 2013]: ours 50 96 | Shree 50 26",
+    "ட– [0B9F 2013]: ours 68 96 | Shree 68 26",
+    "ம– [0BAE 2013]: ours A9 96 | Shree A9 26"
+   ]
+  },
+  "C்J | joiner+glyph-equal | 23 for B4": {
+   "n": 2,
+   "examples": [
+    "ய்‌ [0BAF 0BCD 200C]: ours 23 U+200C | Shree B4",
+    "ய்‍ [0BAF 0BCD 200D]: ours 23 U+200D | Shree B4"
+   ]
+  },
+  "CிJ | joiner+other | ours has B5 91 / Shree has 9B": {
+   "n": 2,
+   "examples": [
+    "ரி‌ [0BB0 0BBF 200C]: ours B5 91 U+200C | Shree 9B",
+    "ரி‍ [0BB0 0BBF 200D]: ours B5 91 U+200D | Shree 9B"
+   ]
+  },
+  "CீJ | joiner+other | ours has B5 92 / Shree has 9F": {
+   "n": 2,
+   "examples": [
+    "ரீ‌ [0BB0 0BC0 200C]: ours B5 92 U+200C | Shree 9F",
+    "ரீ‍ [0BB0 0BC0 200D]: ours B5 92 U+200D | Shree 9F"
+   ]
+  },
+  "CுJ | joiner+other | ours has FA / Shree has FB": {
+   "n": 2,
+   "examples": [
+    "ஷு‌ [0BB7 0BC1 200C]: ours E5 FA U+200C | Shree E5 FB",
+    "ஷு‍ [0BB7 0BC1 200D]: ours E5 FA U+200D | Shree E5 FB"
+   ]
+  },
+  "KSSJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷ‌ [0B95 0BCD 0BB7 200C]: ours F1 U+200C | Shree F1",
+    "க்ஷ‍ [0B95 0BCD 0BB7 200D]: ours F1 U+200D | Shree F1"
+   ]
+  },
+  "KSSாJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷா‌ [0B95 0BCD 0BB7 0BBE 200C]: ours F1 F5 U+200C | Shree F1 F5",
+    "க்ஷா‍ [0B95 0BCD 0BB7 0BBE 200D]: ours F1 F5 U+200D | Shree F1 F5"
+   ]
+  },
+  "KSSிJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷி‌ [0B95 0BCD 0BB7 0BBF 200C]: ours F2 U+200C | Shree F2",
+    "க்ஷி‍ [0B95 0BCD 0BB7 0BBF 200D]: ours F2 U+200D | Shree F2"
+   ]
+  },
+  "KSSீJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷீ‌ [0B95 0BCD 0BB7 0BC0 200C]: ours F3 U+200C | Shree F3",
+    "க்ஷீ‍ [0B95 0BCD 0BB7 0BC0 200D]: ours F3 U+200D | Shree F3"
+   ]
+  },
+  "KSSுJ | joiner+other | ours has FA / Shree has FB": {
+   "n": 2,
+   "examples": [
+    "க்ஷு‌ [0B95 0BCD 0BB7 0BC1 200C]: ours F1 FA U+200C | Shree F1 FB",
+    "க்ஷு‍ [0B95 0BCD 0BB7 0BC1 200D]: ours F1 FA U+200D | Shree F1 FB"
+   ]
+  },
+  "KSSூJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷூ‌ [0B95 0BCD 0BB7 0BC2 200C]: ours F1 FC U+200C | Shree F1 FD",
+    "க்ஷூ‍ [0B95 0BCD 0BB7 0BC2 200D]: ours F1 FC U+200D | Shree F1 FD"
+   ]
+  },
+  "KSS்J | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷ்‌ [0B95 0BCD 0BB7 0BCD 200C]: ours F4 U+200C | Shree F4",
+    "க்ஷ்‍ [0B95 0BCD 0BB7 0BCD 200D]: ours F4 U+200D | Shree F4"
+   ]
+  },
+  "KSSJா | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷ‌ா [0B95 0BCD 0BB7 200C 0BBE]: ours F1 U+200C F5 | Shree F1 F5",
+    "க்ஷ‍ா [0B95 0BCD 0BB7 200D 0BBE]: ours F1 U+200D F5 | Shree F1 F5"
+   ]
+  },
+  "KSSொJ | joiner+order": {
+   "n": 2,
+   "examples": [
+    "க்ஷொ‌ [0B95 0BCD 0BB7 0BCA 200C]: ours F1 F6 F5 U+200C | Shree F6 F1 F5",
+    "க்ஷொ‍ [0B95 0BCD 0BB7 0BCA 200D]: ours F1 F6 F5 U+200D | Shree F6 F1 F5"
+   ]
+  },
+  "KSSோJ | joiner+order": {
+   "n": 2,
+   "examples": [
+    "க்ஷோ‌ [0B95 0BCD 0BB7 0BCB 200C]: ours F1 40 F5 U+200C | Shree F7 F1 F5",
+    "க்ஷோ‍ [0B95 0BCD 0BB7 0BCB 200D]: ours F1 40 F5 U+200D | Shree F7 F1 F5"
+   ]
+  },
+  "C்JKSS | joiner+glyph-equal | 23 for B4": {
+   "n": 2,
+   "examples": [
+    "ய்‌க்ஷ [0BAF 0BCD 200C 0B95 0BCD 0BB7]: ours 23 U+200C F1 | Shree B4 F1",
+    "ய்‍க்ஷ [0BAF 0BCD 200D 0B95 0BCD 0BB7]: ours 23 U+200D F1 | Shree B4 F1"
+   ]
+  },
+  "KSS்JKSS | joiner-only": {
+   "n": 2,
+   "examples": [
+    "க்ஷ்‌க்ஷ [0B95 0BCD 0BB7 0BCD 200C 0B95 0BCD 0BB7]: ours F4 U+200C F1 | Shree F4 F1",
+    "க்ஷ்‍க்ஷ [0B95 0BCD 0BB7 0BCD 200D 0B95 0BCD 0BB7]: ours F4 U+200D F1 | Shree F4 F1"
+   ]
+  },
+  "அJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "அ‌ [0B85 200C]: ours 41 U+200C | Shree 41",
+    "அ‍ [0B85 200D]: ours 41 U+200D | Shree 41"
+   ]
+  },
+  "ஆJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஆ‌ [0B86 200C]: ours 42 U+200C | Shree 42",
+    "ஆ‍ [0B86 200D]: ours 42 U+200D | Shree 42"
+   ]
+  },
+  "இJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "இ‌ [0B87 200C]: ours 43 U+200C | Shree 43",
+    "இ‍ [0B87 200D]: ours 43 U+200D | Shree 43"
+   ]
+  },
+  "ஈJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஈ‌ [0B88 200C]: ours 44 U+200C | Shree 44",
+    "ஈ‍ [0B88 200D]: ours 44 U+200D | Shree 44"
+   ]
+  },
+  "உJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "உ‌ [0B89 200C]: ours 45 U+200C | Shree 45",
+    "உ‍ [0B89 200D]: ours 45 U+200D | Shree 45"
+   ]
+  },
+  "ஊJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஊ‌ [0B8A 200C]: ours 46 U+200C | Shree 46",
+    "ஊ‍ [0B8A 200D]: ours 46 U+200D | Shree 46"
+   ]
+  },
+  "எJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "எ‌ [0B8E 200C]: ours 47 U+200C | Shree 47",
+    "எ‍ [0B8E 200D]: ours 47 U+200D | Shree 47"
+   ]
+  },
+  "ஏJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஏ‌ [0B8F 200C]: ours 48 U+200C | Shree 48",
+    "ஏ‍ [0B8F 200D]: ours 48 U+200D | Shree 48"
+   ]
+  },
+  "ஐJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஐ‌ [0B90 200C]: ours 49 U+200C | Shree 49",
+    "ஐ‍ [0B90 200D]: ours 49 U+200D | Shree 49"
+   ]
+  },
+  "ஒJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஒ‌ [0B92 200C]: ours 4A U+200C | Shree 4A",
+    "ஒ‍ [0B92 200D]: ours 4A U+200D | Shree 4A"
+   ]
+  },
+  "ஓJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஓ‌ [0B93 200C]: ours 4B U+200C | Shree 4B",
+    "ஓ‍ [0B93 200D]: ours 4B U+200D | Shree 4B"
+   ]
+  },
+  "ஃJ | joiner-only": {
+   "n": 2,
+   "examples": [
+    "ஃ‌ [0B83 200C]: ours 4C U+200C | Shree 4C",
+    "ஃ‍ [0B83 200D]: ours 4C U+200D | Shree 4C"
+   ]
+  },
+  "JC | joiner-only": {
+   "n": 2,
+   "examples": [
+    "‌க [200C 0B95]: ours U+200C 50 | Shree 50",
+    "‍க [200D 0B95]: ours U+200D 50 | Shree 50"
+   ]
+  },
+  "J்C | joiner-only": {
+   "n": 2,
+   "examples": [
+    "‌்க [200C 0BCD 0B95]: ours U+200C 93 50 | Shree 93 50",
+    "‍்க [200D 0BCD 0B95]: ours U+200D 93 50 | Shree 93 50"
+   ]
+  },
+  "C் | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய் [0BAF 0BCD]: ours 23 | Shree B4"
+   ]
+  },
+  "– | other | ours has 96 / Shree has 26": {
+   "n": 1,
+   "examples": [
+    "– [2013]: ours 96 | Shree 26"
+   ]
+  },
+  "C்ஃ | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்ஃ [0BAF 0BCD 0B83]: ours 23 4C | Shree B4 4C"
+   ]
+  },
+  "Cி | other | ours has B5 91 / Shree has 9B": {
+   "n": 1,
+   "examples": [
+    "ரி [0BB0 0BBF]: ours B5 91 | Shree 9B"
+   ]
+  },
+  "Cீ | other | ours has B5 92 / Shree has 9F": {
+   "n": 1,
+   "examples": [
+    "ரீ [0BB0 0BC0]: ours B5 92 | Shree 9F"
+   ]
+  },
+  "Cிஃ | other | ours has B5 91 / Shree has 9B": {
+   "n": 1,
+   "examples": [
+    "ரிஃ [0BB0 0BBF 0B83]: ours B5 91 4C | Shree 9B 4C"
+   ]
+  },
+  "Cீஃ | other | ours has B5 92 / Shree has 9F": {
+   "n": 1,
+   "examples": [
+    "ரீஃ [0BB0 0BC0 0B83]: ours B5 92 4C | Shree 9F 4C"
+   ]
+  },
+  "Cு | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "ஷு [0BB7 0BC1]: ours E5 FA | Shree E5 FB"
+   ]
+  },
+  "Cுஃ | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "ஷுஃ [0BB7 0BC1 0B83]: ours E5 FA 4C | Shree E5 FB 4C"
+   ]
+  },
+  "KSSு | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "க்ஷு [0B95 0BCD 0BB7 0BC1]: ours F1 FA | Shree F1 FB"
+   ]
+  },
+  "KSSோ | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷோ [0B95 0BCD 0BB7 0BCB]: ours F1 40 F5 | Shree F7 F1 F5"
+   ]
+  },
+  "KSSொ | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷொ [0B95 0BCD 0BB7 0BCA]: ours F1 F6 F5 | Shree F6 F1 F5"
+   ]
+  },
+  "KSSௌ | unmapped": {
+   "n": 1,
+   "examples": [
+    "க்ஷௌ [0B95 0BCD 0BB7 0BCC]: ours F1 U+0BCC | Shree F6 F1 CD"
+   ]
+  },
+  "KSSுஃ | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "க்ஷுஃ [0B95 0BCD 0BB7 0BC1 0B83]: ours F1 FA 4C | Shree F1 FB 4C"
+   ]
+  },
+  "KSSொஃ | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷொஃ [0B95 0BCD 0BB7 0BCA 0B83]: ours F1 F6 F5 4C | Shree F6 F1 F5 4C"
+   ]
+  },
+  "KSSே | glyph-equal | 40 for F7": {
+   "n": 1,
+   "examples": [
+    "க்ஷே [0B95 0BCD 0BB7 0BC7]: ours 40 F1 | Shree F7 F1"
+   ]
+  },
+  "KSSCே | glyph-equal | 40 for F7": {
+   "n": 1,
+   "examples": [
+    "க்ஷளே [0B95 0BCD 0BB7 0BB3 0BC7]: ours F1 40 CD | Shree F1 F7 CD"
+   ]
+  },
+  "KSSோஃ | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷோஃ [0B95 0BCD 0BB7 0BCB 0B83]: ours F1 40 F5 4C | Shree F7 F1 F5 4C"
+   ]
+  },
+  "C்Cா | glyph-equal | 23 74 for B4 6E F5": {
+   "n": 1,
+   "examples": [
+    "ய்ணா [0BAF 0BCD 0BA3 0BBE]: ours 23 74 | Shree B4 6E F5"
+   ]
+  },
+  "C்Cா | glyph-equal | 23 D9 for B4 D3 F5": {
+   "n": 1,
+   "examples": [
+    "ய்றா [0BAF 0BCD 0BB1 0BBE]: ours 23 D9 | Shree B4 D3 F5"
+   ]
+  },
+  "C்Cா | glyph-equal | 23 E0 for B4 DA F5": {
+   "n": 1,
+   "examples": [
+    "ய்னா [0BAF 0BCD 0BA9 0BBE]: ours 23 E0 | Shree B4 DA F5"
+   ]
+  },
+  "C்Cூ | glyph-equal | 23 FC for B4 FD": {
+   "n": 1,
+   "examples": [
+    "ய்ஷூ [0BAF 0BCD 0BB7 0BC2]: ours 23 E5 FC | Shree B4 E5 FD"
+   ]
+  },
+  "C்KSS | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷ [0BAF 0BCD 0B95 0BCD 0BB7]: ours 23 F1 | Shree B4 F1"
+   ]
+  },
+  "C்KSSா | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷா [0BAF 0BCD 0B95 0BCD 0BB7 0BBE]: ours 23 F1 F5 | Shree B4 F1 F5"
+   ]
+  },
+  "C்KSSி | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷி [0BAF 0BCD 0B95 0BCD 0BB7 0BBF]: ours 23 F2 | Shree B4 F2"
+   ]
+  },
+  "C்KSSீ | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷீ [0BAF 0BCD 0B95 0BCD 0BB7 0BC0]: ours 23 F3 | Shree B4 F3"
+   ]
+  },
+  "C்KSSூ | glyph-equal | 23 FC for B4 FD": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷூ [0BAF 0BCD 0B95 0BCD 0BB7 0BC2]: ours 23 F1 FC | Shree B4 F1 FD"
+   ]
+  },
+  "C்KSS் | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷ் [0BAF 0BCD 0B95 0BCD 0BB7 0BCD]: ours 23 F4 | Shree B4 F4"
+   ]
+  },
+  "C்KSSஃ | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்க்ஷஃ [0BAF 0BCD 0B95 0BCD 0BB7 0B83]: ours 23 F1 4C | Shree B4 F1 4C"
+   ]
+  },
+  "KSS்C் | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்ய் [0B95 0BCD 0BB7 0BCD 0BAF 0BCD]: ours F4 23 | Shree F4 B4"
+   ]
+  },
+  "KSS்Cி | other | ours has B5 91 / Shree has 9B": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்ரி [0B95 0BCD 0BB7 0BCD 0BB0 0BBF]: ours F4 B5 91 | Shree F4 9B"
+   ]
+  },
+  "KSS்Cீ | other | ours has B5 92 / Shree has 9F": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்ரீ [0B95 0BCD 0BB7 0BCD 0BB0 0BC0]: ours F4 B5 92 | Shree F4 9F"
+   ]
+  },
+  "KSS்Cு | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்ஷு [0B95 0BCD 0BB7 0BCD 0BB7 0BC1]: ours F4 E5 FA | Shree F4 E5 FB"
+   ]
+  },
+  "KSS்KSSு | other | ours has FA / Shree has FB": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்க்ஷு [0B95 0BCD 0BB7 0BCD 0B95 0BCD 0BB7 0BC1]: ours F4 F1 FA | Shree F4 F1 FB"
+   ]
+  },
+  "KSS்KSSெ | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்க்ஷெ [0B95 0BCD 0BB7 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 F4 F1 | Shree F4 F6 F1"
+   ]
+  },
+  "KSS்KSSே | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்க்ஷே [0B95 0BCD 0BB7 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 F4 F1 | Shree F4 F7 F1"
+   ]
+  },
+  "KSS்KSSை | order": {
+   "n": 1,
+   "examples": [
+    "க்ஷ்க்ஷை [0B95 0BCD 0BB7 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 F4 F1 | Shree F4 F8 F1"
+   ]
+  },
+  "SRIெ | order": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீெ [0BB8 0BCD 0BB0 0BC0 0BC6]: ours FF F6 | Shree F6 FF"
+   ]
+  },
+  "SRIொ | order": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீொ [0BB8 0BCD 0BB0 0BC0 0BCA]: ours FF F6 F5 | Shree F6 FF F5"
+   ]
+  },
+  "SRIௌ | unmapped": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீௌ [0BB8 0BCD 0BB0 0BC0 0BCC]: ours FF U+0BCC | Shree F6 FF CD"
+   ]
+  },
+  "SRIே | order": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீே [0BB8 0BCD 0BB0 0BC0 0BC7]: ours FF 40 | Shree F7 FF"
+   ]
+  },
+  "SRIோ | order": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீோ [0BB8 0BCD 0BB0 0BC0 0BCB]: ours FF 40 F5 | Shree F7 FF F5"
+   ]
+  },
+  "SRIை | order": {
+   "n": 1,
+   "examples": [
+    "ஸ்ரீை [0BB8 0BCD 0BB0 0BC0 0BC8]: ours FF F8 | Shree F8 FF"
+   ]
+  },
+  "C்SRI | glyph-equal | 23 for B4": {
+   "n": 1,
+   "examples": [
+    "ய்ஸ்ரீ [0BAF 0BCD 0BB8 0BCD 0BB0 0BC0]: ours 23 FF | Shree B4 FF"
+   ]
+  },
+  "–C | other | ours has 96 / Shree has 26": {
+   "n": 1,
+   "examples": [
+    "–க [2013 0B95]: ours 96 50 | Shree 26 50"
+   ]
+  },
+  "C்– | other | ours has 96 / Shree has 26": {
+   "n": 1,
+   "examples": [
+    "க்– [0B95 0BCD 2013]: ours 55 96 | Shree 55 26"
+   ]
+  },
+  "–்C | other | ours has 96 / Shree has 26": {
+   "n": 1,
+   "examples": [
+    "–்க [2013 0BCD 0B95]: ours 96 93 50 | Shree 26 93 50"
+   ]
+  }
+ },
+ "visual": {
+  "truthStrings": 9922,
+  "acceptedBytes": 6040,
+  "glyphEqualOnly": 262,
+  "drawsWhatShreeDraws": "6302/9922 = 63.52% (accepted bytes, or other bytes that draw the identical glyphs)",
+  "drawsWhatShreeDrawsIgnoringJoiners": "7858/9922 = 79.20% (also counting rows whose only extra is a passed-through ZWJ/ZWNJ)",
+  "visiblyWrong": 2064
+ }
+}

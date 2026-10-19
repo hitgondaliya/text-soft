@@ -1,0 +1,8 @@
+A = S07500F2.TTF 'SHREE-GUJ-0750' cmap 3,1 fmt4 codes 218 glyphs 222 upem 1000
+B = S0750892.TTF 'SHREE-GUJ7-0750' cmap 3,1 fmt4 codes 218 glyphs 222 upem 1000
+codes in union 218; identical render+advance 213; identical outline bytes 213; differing 5
+  0x91: glyph differs (350 px, ink A 317 / B 207); advance A 480 / B 456 (per 1000). B's glyph = A 0x60 ('પ') table reads 0x91 as 'ઙ્ક' [0A99 0ACD 0A95]
+  0x92: glyph differs (435 px, ink A 375 / B 276); advance A 500 / B 477 (per 1000). B's glyph = A 0x5C ('થ') table reads 0x92 as 'ઙ્ખ' [0A99 0ACD 0A96]
+  0x93: glyph differs (309 px, ink A 258 / B 197); advance A 468 / B 464 (per 1000). B's glyph = A 0x5F ('ન') table reads 0x93 as 'ઙ્ગ' [0A99 0ACD 0A97]
+  0x94: glyph differs (449 px, ink A 315 / B 339); advance A 461 / B 604 (per 1000). B's glyph = A 0xF7 ('સ્ત્ર')
+  0xB6: glyph differs (510 px, ink A 386 / B 124); advance A 551 / B 5 (per 1000). B's glyph = A 0xB4 ('્રૂ') table reads 0xB6 as 'ઙ્ક્ષ' [0A99 0ACD 0A95 0ACD 0AB7]

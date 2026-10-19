@@ -1,0 +1,33 @@
+    public static List<(char Code, string Unicode)> Pieces(IReadOnlyList<Truth> truth, IEnumerable<char> fontCodes)
+    {
+        var byU = truth.ToDictionary(t => t.U, StringComparer.Ordinal);
+        // The letters (and క్ష) whose spelling holds each code: a code in three or more of them is a mark every letter
+        // shares (the talakattu E6 E8, the spacers FC-FF, the pre-body E7), read as nothing; in fewer, it is (a piece of)
+        // that letter - the one with the shortest spelling.
+        var inLetters = new Dictionary<char, List<Truth>>();
+        foreach (var t in truth.Where(t => t.Composer is null && t.Pref.Length > 0 && (t.U.Length == 1 && (IsCons(t.U[0]) || IsVowel(t.U[0])) || t.U == "క్ష")))
+            foreach (char c in FromHex(t.Pref).Distinct())
+                (inLetters.TryGetValue(c, out var l) ? l : inLetters[c] = new List<Truth>()).Add(t);
+        // A code a sign adds to a letter's spelling (కా = 4D 3E: 3E) is that sign.
+        var signVotes = new Dictionary<char, Dictionary<string, int>>();
+        foreach (var t in truth.Where(t => t.Composer is null && t.U.Length == 2 && IsCons(t.U[0]) && IsVowelSign(t.U[1])))
+        {
+            if (!byU.TryGetValue(t.U[..1], out var letter)) continue;
+            var own = FromHex(letter.Pref);
+            foreach (char c in FromHex(t.Pref).Where(c => !own.Contains(c)))
+            {
+                if (!signVotes.TryGetValue(c, out var d)) signVotes[c] = d = new();
+                d[t.U[1..]] = d.GetValueOrDefault(t.U[1..]) + 1;
+            }
+        }
+        var list = new List<(char, string)>();
+        foreach (char c in fontCodes.Where(c => c > ' '))
+        {
+            if (inLetters.TryGetValue(c, out var letters))
+                list.Add((c, letters.Select(t => t.U).Distinct().Count() >= 3 ? "" : letters.OrderBy(t => t.Pref.Length).ThenBy(t => t.U, StringComparer.Ordinal).First().U));
+            else if (signVotes.TryGetValue(c, out var d))
+                list.Add((c, d.OrderByDescending(kv => kv.Value).ThenBy(kv => kv.Key, StringComparer.Ordinal).First().Key));
+            else list.Add((c, ""));
+        }
+        return list;
+    }

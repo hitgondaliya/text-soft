@@ -1,0 +1,238 @@
+capture: 57173 distinct composer spellings
+==== shree-pun7 (SHREE-PUN7-0951/0952)
+shree-pun7: atoms 120, learned 3, conflicts 0, total 123
+  font code points (every face): 120; ASCII written as itself: !%()*+,-./:;=?[] and 0-9; pairs marked unmapped: #$&<>@\^_`|}~¡¢£¤¥¦§¨©ª«®¯°±²³´µ¹º¾¿਼
+  truth 27752: preferred 27752, other accepted 0, wrong 0 (100.00% preferred)
+  words 20000 (seed 7): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 11): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 2026): exact 20000, wrong 0 (100.00%)
+  word-final virama: rows 1086 (with the halant B5: 1086); in running text 20000 (seed 7): exact 20000, wrong 0
+  word-final virama: rows 1086 (with the halant B5: 1086); in running text 20000 (seed 11): exact 20000, wrong 0
+  codes written that SHREE-PUN7-0951/0952 draw as something else or not at all: 0
+  code points written: 127 (20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 76 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A7 A8 AA AB AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE U+2000 U+2001 U+2002 U+2003 U+2004 U+2005 U+2006 U+2007 U+2008 U+2009 U+200A U+2028 U+2029 U+202F U+205F); faces 2; missing from a face's cmap: 0
+  code points written that Word or RichEdit draw as nothing or in another font: 0
+shree-pun7 reverse: atoms 121, learned 2, unkeyable 0, total 123
+  read back 27752: exact 27654, same text 98, wrong 0 (100.00%)
+  words read back 20000 (seed 7): right 20000, wrong 0 (100.00%)
+  words read back 20000 (seed 11): right 20000, wrong 0 (100.00%)
+  other accepted spellings read back 19405: exact 1, as text the table writes with those very bytes 19404, wrong 0
+  well-formed read back 67501: malformed 0
+  composer spellings of the whole capture read back 57173: exact 30763, as text the table writes with those very bytes 25137, other text (the bytes are another text's: a link virama has no glyph, a sign struck out of order) 1273, Latin/control/noncharacter 0, malformed 0
+    OTHER	48 71	typed ਕਿਂ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	48 71	typed ਕਿੰ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	49 71	typed ਖਿਂ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	49 71	typed ਖਿੰ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	4A 71	typed ਗਿਂ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4A 71	typed ਗਿੰ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4B 71	typed ਘਿਂ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4B 71	typed ਘਿੰ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4C 71	typed ਙਿਂ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4C 71	typed ਙਿੰ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4D 71	typed ਚਿਂ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4D 71	typed ਚਿੰ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+  composer gaps 83: ours = the spelling derived from the composer's rules 36, ours differs 0, no derived spelling 47
+    ਕ੍ਹ੍ਰ	ours 48 AA 6F	composer wrote 48 6E	derived -	read back ਕ੍ਹ੍ਰ
+    ਕ੍ਵ੍ਰ	ours 48 AB 6F	composer wrote 48 6E	derived -	read back ਕ੍ਵ੍ਰ
+    ਠ੍ਰਾਂ	ours 53 BE 6F 70 A3	composer wrote 53 BE A3 BE 6F	derived 53 BE 6F 70 A3	read back ਠ੍ਰਾਂ
+    ਠ੍ਰਾੱ	ours 53 BE 6F 70 A7	composer wrote 53 BE A7 BE 6F	derived 53 BE 6F 70 A7	read back ਠ੍ਰਾੱ
+    ਠ੍ਰੁਂ	ours 53 A3 BE 6F 74	composer wrote 53 BE A3 BE 6F	derived -	read back ਠ੍ਰੁਂ
+    ਠ੍ਰੁੰ	ours 53 A5 BE 6F 74	composer wrote 53 BE A5 BE 6F	derived -	read back ਠ੍ਰੁੰ
+  quote "ਪੰਜਾਬ"	22 22 5C A5 4F 70 5E 27 27	back ‘‘ਪੰਜਾਬ’’
+  quote 'ਪੰਜਾਬ'	22 5C A5 4F 70 5E 27	back ‘ਪੰਜਾਬ’
+  quote ਉਸ ਨੇ ਕਿਹਾ, "ਠੀਕ ਹੈ।"	45 67 20 B2 79 BE 20 71 48 68 70 2C 20 22 22 53 BE 72 48 20 68 B1 26 27 27	back ਉਸ ਨੇ ਕਿਹਾ, ‘‘ਠੀਕ ਹੈ।’’
+  quote ਰਾਮ's	63 70 60 27 73	back ਰਾਮ’ੀਂ	UNMAPPED s
+  non-Indic characters 62046: written as a look-alike or the font's own code 31, left out and reported 23, passed through and reported 61973; wrong 0
+  between ਨ (its spacer): non-Indic characters 62046: written as a look-alike or the font's own code 31, left out and reported 23, passed through and reported 61973; wrong 0
+  ASCII punctuation and digits: written as itself 26, as a look-alike 2, passed through and reported (not in the fonts) 1, left out and reported 13; wrong 0
+  between ਨ: ASCII punctuation and digits: written as itself 26, as a look-alike 2, passed through and reported (not in the fonts) 1, left out and reported 13; wrong 0
+  characters a .txt output in this family writes as '?' (unmapped, passed through, no Windows-1252 byte): ੑ(U+0A51) ੵ(U+0A75) ੶(U+0A76)
+  real words:
+    ਨੂੰ	B2 A5 BE 76	=
+    ਨੇ	B2 79 BE	=
+    ਇੱਕ	71 42 A7 48	=
+    ਇਹ	71 42 68	=
+    ਇਸ	71 42 67	=
+    ਉੱਤੇ	45 A8 57 79	=
+    ਉੱਚਾ	45 A8 4D 70	=
+    ਉੱਥੇ	45 A8 58 79	=
+    ਇੱਥੇ	71 42 A7 58 79	=
+    ਉਨ੍ਹਾਂ	45 B2 BE AA 70 A3	=
+    ਜਿਨ੍ਹਾਂ	71 4F B2 BE AA 70 A3	=
+    ਤੁਹਾਨੂੰ	57 74 68 70 B2 A5 BE 76	=
+    ਸਾਨੂੰ	67 70 B2 A5 BE 76	=
+    ਮੈਨੂੰ	60 B1 B2 A5 BE 76	=
+    ਨੌਂ	B2 A2 BE	=
+    ਨੰਬਰ	B2 A5 BE 5E 63	=
+    ਬਠਿੰਡਾ	5E 71 53 A5 BE 54 70	=
+    ਕੈਨੇਡਾ	48 B1 B2 79 BE 54 70	=
+    ਇੰਗਲੈਂਡ	71 42 A5 4A 64 7C 54	=
+    ਪੰਜਾਬ	5C A5 4F 70 5E	=
+    ਗੁਰਮੁਖੀ	4A 74 63 60 74 49 72	=
+    ਪ੍ਰਧਾਨ	5C 6F 5A 70 B2 BE	=
+    ਸ੍ਰੀ	67 6F 72	=
+    ਪ੍ਰੇਮ	5C 6F 79 60	=
+    ਕ੍ਰਿਸ਼ਨ	71 6E 66 B2 BE	=
+    ਸ੍ਵਰ	67 AB 63	=
+    ਖ਼ਾਲਸਾ	69 70 64 67 70	=
+    ਜ਼ਿਲ੍ਹਾ	71 6B 64 AA 70	=
+    ਗ਼ਰੀਬ	6A 63 72 5E	=
+    ਫ਼ੌਜ	6C A1 4F	=
+    ਸ਼ਹਿਰ	66 71 68 63	=
+    ਪੜ੍ਹਾਈ	5C 6D AA 70 42 72	=
+    ਚੜ੍ਹਦੀ	4D 6D AA 59 72	=
+    ਬ੍ਰਹਮ	5E 6F 68 60	=
+    ਵਿਦਿਆ	71 65 71 59 41 70	=
+    ਉਹ	45 68	=
+    ਊਠ	46 53 BE	=
+    ਐਨ	41 B1 B2 BE	=
+    ਔਰਤ	41 A1 63 57	=
+    ਈਸ਼ਵਰ	42 72 66 65 63	=
+    ਆਂਢ	41 70 A3 55	=
+    ਸਿੱਖ	71 67 A7 49	=
+    ਗੁਰੂ	4A 74 63 76	=
+    ਵਾਹਿਗੁਰੂ	65 70 71 68 4A 74 63 76	=
+    ਅਕਾਲ	41 48 70 64	=
+    ਸਤਿ	67 71 57	=
+    ਸ੍ਰੀ ਅਕਾਲ	67 6F 72 20 41 48 70 64	=
+    ਕਿਉਂ	71 48 45 A4	=
+    ਨਿੱਕਾ	71 B2 A7 BE 48 70	=
+    ਠੰਢ	53 A5 BE 55	=
+    ਠੀਕ	53 BE 72 48	=
+    ਨ੍ਯਾਯ	B2 BE 62 70 61	=
+    ਖ਼ਾਲਸਾ	69 70 64 67 70	=
+    ਸ਼ਹਿਰ	66 71 68 63	=
+    ਵਾਕ੍	65 70 48 B5	=
+    ਕ੍‌ਰ	48 B5 63	=
+    ਕ੍‍ਰ	48 63	-> ਕਰ
+    ੴ ਸਤਿ ਨਾਮੁ	31 B0 20 67 71 57 20 B2 BE 70 60 74	=
+    ₹੧੦੦	3C 31 30 30	=
+    ਹਾਂ, ਜੀ।	68 70 A3 2C 20 4F 72 26	=
+    “ਪੰਜਾਬ”	22 22 5C A5 4F 70 5E 27 27	-> ‘‘ਪੰਜਾਬ’’
+    "ਪੰਜਾਬ"	22 22 5C A5 4F 70 5E 27 27	-> ‘‘ਪੰਜਾਬ’’
+    'ਪੰਜਾਬ'	22 5C A5 4F 70 5E 27	-> ‘ਪੰਜਾਬ’
+    ਰਾਮ's	63 70 60 27 73	-> ਰਾਮ’ੀਂ	UNMAPPED s
+    ੧੨/੦੮/੨੦੨੪	31 32 2F 30 38 2F 32 30 32 34	=
+    ੧੦:੩੦	31 30 3A 33 30	=
+    ੨+੨=੪	32 2B 32 3D 34	=
+    ੫%	35 25	=
+  wrote unicode-to-shree-pun7.json (176 pairs) and shree-pun7-to-unicode.json (123 pairs)
+==== shree-pun456 (SHREE-PUN-0950/0951/0952/0955/0956)
+shree-pun456: atoms 119, learned 3, conflicts 0, total 122
+  font code points (every face): 119; ASCII written as itself: !%()*+,-./:;=?[] and 0-9; pairs marked unmapped: #$&>@\^_`|}~¡¢£¤¥¦§¨©ª«®¯°±²³´µ¹º¾¿਼
+  truth 27752: preferred 27752, other accepted 0, wrong 0 (100.00% preferred)
+  words 20000 (seed 7): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 11): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 2026): exact 20000, wrong 0 (100.00%)
+  word-final virama: rows 1086 (with the halant B5: 1086); in running text 20000 (seed 7): exact 20000, wrong 0
+  word-final virama: rows 1086 (with the halant B5: 1086); in running text 20000 (seed 11): exact 20000, wrong 0
+  codes written that SHREE-PUN-0950/0951/0952/0955/0956 draw as something else or not at all: 0
+  code points written: 126 (20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 76 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A7 A8 AA AB AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE U+2000 U+2001 U+2002 U+2003 U+2004 U+2005 U+2006 U+2007 U+2008 U+2009 U+200A U+2028 U+2029 U+202F U+205F); faces 5; missing from a face's cmap: 0
+  code points written that Word or RichEdit draw as nothing or in another font: 0
+shree-pun456 reverse: atoms 121, learned 2, unkeyable 0, total 123
+  read back 27751: exact 27653, same text 98, wrong 0 (100.00%)
+  words read back 20000 (seed 7): right 20000, wrong 0 (100.00%)
+  words read back 20000 (seed 11): right 20000, wrong 0 (100.00%)
+  other accepted spellings read back 19405: exact 1, as text the table writes with those very bytes 19404, wrong 0
+  well-formed read back 67503: malformed 0
+  composer spellings of the whole capture read back 57173: exact 30763, as text the table writes with those very bytes 25137, other text (the bytes are another text's: a link virama has no glyph, a sign struck out of order) 1273, Latin/control/noncharacter 0, malformed 0
+    OTHER	48 71	typed ਕਿਂ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	48 71	typed ਕਿੰ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	49 71	typed ਖਿਂ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	49 71	typed ਖਿੰ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	4A 71	typed ਗਿਂ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4A 71	typed ਗਿੰ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4B 71	typed ਘਿਂ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4B 71	typed ਘਿੰ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4C 71	typed ਙਿਂ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4C 71	typed ਙਿੰ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4D 71	typed ਚਿਂ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4D 71	typed ਚਿੰ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+  composer gaps 83: ours = the spelling derived from the composer's rules 36, ours differs 0, no derived spelling 47
+    ਕ੍ਹ੍ਰ	ours 48 AA 6F	composer wrote 48 6E	derived -	read back ਕ੍ਹ੍ਰ
+    ਕ੍ਵ੍ਰ	ours 48 AB 6F	composer wrote 48 6E	derived -	read back ਕ੍ਵ੍ਰ
+    ਠ੍ਰਾਂ	ours 53 BE 6F 70 A3	composer wrote 53 BE A3 BE 6F	derived 53 BE 6F 70 A3	read back ਠ੍ਰਾਂ
+    ਠ੍ਰਾੱ	ours 53 BE 6F 70 A7	composer wrote 53 BE A7 BE 6F	derived 53 BE 6F 70 A7	read back ਠ੍ਰਾੱ
+    ਠ੍ਰੁਂ	ours 53 A3 BE 6F 74	composer wrote 53 BE A3 BE 6F	derived -	read back ਠ੍ਰੁਂ
+    ਠ੍ਰੁੰ	ours 53 A5 BE 6F 74	composer wrote 53 BE A5 BE 6F	derived -	read back ਠ੍ਰੁੰ
+  quote "ਪੰਜਾਬ"	22 22 5C A5 4F 70 5E 27 27	back ‘‘ਪੰਜਾਬ’’
+  quote 'ਪੰਜਾਬ'	22 5C A5 4F 70 5E 27	back ‘ਪੰਜਾਬ’
+  quote ਉਸ ਨੇ ਕਿਹਾ, "ਠੀਕ ਹੈ।"	45 67 20 B2 79 BE 20 71 48 68 70 2C 20 22 22 53 BE 72 48 20 68 B1 26 27 27	back ਉਸ ਨੇ ਕਿਹਾ, ‘‘ਠੀਕ ਹੈ।’’
+  quote ਰਾਮ's	63 70 60 27 73	back ਰਾਮ’ੀਂ	UNMAPPED s
+  non-Indic characters 62046: written as a look-alike or the font's own code 30, left out and reported 23, passed through and reported 61974; wrong 0
+  between ਨ (its spacer): non-Indic characters 62046: written as a look-alike or the font's own code 30, left out and reported 23, passed through and reported 61974; wrong 0
+  ASCII punctuation and digits: written as itself 26, as a look-alike 2, passed through and reported (not in the fonts) 2, left out and reported 12; wrong 0
+  between ਨ: ASCII punctuation and digits: written as itself 26, as a look-alike 2, passed through and reported (not in the fonts) 2, left out and reported 12; wrong 0
+  characters a .txt output in this family writes as '?' (unmapped, passed through, no Windows-1252 byte): ੑ(U+0A51) ੵ(U+0A75) ੶(U+0A76) ₹(U+20B9)
+  real words:
+    ਨੂੰ	B2 A5 BE 76	=
+    ਨੇ	B2 79 BE	=
+    ਇੱਕ	71 42 A7 48	=
+    ਇਹ	71 42 68	=
+    ਇਸ	71 42 67	=
+    ਉੱਤੇ	45 A8 57 79	=
+    ਉੱਚਾ	45 A8 4D 70	=
+    ਉੱਥੇ	45 A8 58 79	=
+    ਇੱਥੇ	71 42 A7 58 79	=
+    ਉਨ੍ਹਾਂ	45 B2 BE AA 70 A3	=
+    ਜਿਨ੍ਹਾਂ	71 4F B2 BE AA 70 A3	=
+    ਤੁਹਾਨੂੰ	57 74 68 70 B2 A5 BE 76	=
+    ਸਾਨੂੰ	67 70 B2 A5 BE 76	=
+    ਮੈਨੂੰ	60 B1 B2 A5 BE 76	=
+    ਨੌਂ	B2 A2 BE	=
+    ਨੰਬਰ	B2 A5 BE 5E 63	=
+    ਬਠਿੰਡਾ	5E 71 53 A5 BE 54 70	=
+    ਕੈਨੇਡਾ	48 B1 B2 79 BE 54 70	=
+    ਇੰਗਲੈਂਡ	71 42 A5 4A 64 7C 54	=
+    ਪੰਜਾਬ	5C A5 4F 70 5E	=
+    ਗੁਰਮੁਖੀ	4A 74 63 60 74 49 72	=
+    ਪ੍ਰਧਾਨ	5C 6F 5A 70 B2 BE	=
+    ਸ੍ਰੀ	67 6F 72	=
+    ਪ੍ਰੇਮ	5C 6F 79 60	=
+    ਕ੍ਰਿਸ਼ਨ	71 6E 66 B2 BE	=
+    ਸ੍ਵਰ	67 AB 63	=
+    ਖ਼ਾਲਸਾ	69 70 64 67 70	=
+    ਜ਼ਿਲ੍ਹਾ	71 6B 64 AA 70	=
+    ਗ਼ਰੀਬ	6A 63 72 5E	=
+    ਫ਼ੌਜ	6C A1 4F	=
+    ਸ਼ਹਿਰ	66 71 68 63	=
+    ਪੜ੍ਹਾਈ	5C 6D AA 70 42 72	=
+    ਚੜ੍ਹਦੀ	4D 6D AA 59 72	=
+    ਬ੍ਰਹਮ	5E 6F 68 60	=
+    ਵਿਦਿਆ	71 65 71 59 41 70	=
+    ਉਹ	45 68	=
+    ਊਠ	46 53 BE	=
+    ਐਨ	41 B1 B2 BE	=
+    ਔਰਤ	41 A1 63 57	=
+    ਈਸ਼ਵਰ	42 72 66 65 63	=
+    ਆਂਢ	41 70 A3 55	=
+    ਸਿੱਖ	71 67 A7 49	=
+    ਗੁਰੂ	4A 74 63 76	=
+    ਵਾਹਿਗੁਰੂ	65 70 71 68 4A 74 63 76	=
+    ਅਕਾਲ	41 48 70 64	=
+    ਸਤਿ	67 71 57	=
+    ਸ੍ਰੀ ਅਕਾਲ	67 6F 72 20 41 48 70 64	=
+    ਕਿਉਂ	71 48 45 A4	=
+    ਨਿੱਕਾ	71 B2 A7 BE 48 70	=
+    ਠੰਢ	53 A5 BE 55	=
+    ਠੀਕ	53 BE 72 48	=
+    ਨ੍ਯਾਯ	B2 BE 62 70 61	=
+    ਖ਼ਾਲਸਾ	69 70 64 67 70	=
+    ਸ਼ਹਿਰ	66 71 68 63	=
+    ਵਾਕ੍	65 70 48 B5	=
+    ਕ੍‌ਰ	48 B5 63	=
+    ਕ੍‍ਰ	48 63	-> ਕਰ
+    ੴ ਸਤਿ ਨਾਮੁ	31 B0 20 67 71 57 20 B2 BE 70 60 74	=
+    ₹੧੦੦	U+20B9 31 30 30	=	UNMAPPED ₹
+    ਹਾਂ, ਜੀ।	68 70 A3 2C 20 4F 72 26	=
+    “ਪੰਜਾਬ”	22 22 5C A5 4F 70 5E 27 27	-> ‘‘ਪੰਜਾਬ’’
+    "ਪੰਜਾਬ"	22 22 5C A5 4F 70 5E 27 27	-> ‘‘ਪੰਜਾਬ’’
+    'ਪੰਜਾਬ'	22 5C A5 4F 70 5E 27	-> ‘ਪੰਜਾਬ’
+    ਰਾਮ's	63 70 60 27 73	-> ਰਾਮ’ੀਂ	UNMAPPED s
+    ੧੨/੦੮/੨੦੨੪	31 32 2F 30 38 2F 32 30 32 34	=
+    ੧੦:੩੦	31 30 3A 33 30	=
+    ੨+੨=੪	32 2B 32 3D 34	=
+    ੫%	35 25	=
+  wrote unicode-to-shree-pun456.json (174 pairs) and shree-pun456-to-unicode.json (123 pairs)
+limits shree-pun7: 0023 0024 0026 003C 003E 0040 005C 005E 005F 0060 007B 007C 007D 007E 00B0 0A3C 0A51 0A75 0A76
+limits shree-pun456: 0023 0024 0026 003C 003E 0040 005C 005E 005F 0060 007B 007C 007D 007E 00B0 0A3C 0A51 0A75 0A76 20B9
+wrote shree-pun7, shree-pun456 into C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-pun\repo\assets\config\encoding-limits.json

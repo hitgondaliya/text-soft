@@ -1,0 +1,19 @@
+    /// <summary>
+    /// Unicode in the order the pairs answer: the forward table's own pre rules (Rules.ForwardPre - the sign on the first
+    /// letter of a cluster, ై split, the hook before its cluster, the visible halant), with its marks written back as the
+    /// Unicode they stand for (క్ష, ్ష్మ, ్త్ర, ్ట్ర, ౖ) or as the hook mark, and its spacers dropped.
+    /// </summary>
+    static string Unmark(string staged) => staged
+        .Replace(Rules.K, "క్ష").Replace(Rules.SsaMa, "్ష్మ").Replace(Rules.TaRa, "్త్ర").Replace(Rules.TtaRa, "్ట్ర")
+        .Replace(Rules.RaDeep, Hook).Replace(Rules.AiWide, "ౖ").Replace(Rules.SpaceA0, "").Replace(Rules.Space9B, "");
+
+    public static List<RewriteRule> ReversePre() => new()
+    {
+        Rules.NoMarksIn,
+        R($"{Lit("5D")}(?={Class("40 B6")}|{Lit("A0")}{Lit("96")})", FromHex("94"),
+          "5D before the composer's own ః ఁ (40 B6, codes the table never writes) or before ృ behind its spacer (A0 96) is the composer's subjoined ఙ (its 5D), not the visarga: read as ్ఙ (94)."),
+        R($"(?<!{Lit("84")}{Lit("F0")}{Lit("FC")}){Lit("95")}{Lit("5D")}", FromHex("95 94"),
+          "The ై mark 95 before 5D (but after క్ష + ై, whose mark is always 95) is the composer's ై before its subjoined ఙ: read as ్ఙ (94)."),
+        R($"{Class("A0 9B")}(?={Class(VattuCodes)}|{Lit("96")})", "",
+          "The spacer the composer puts before a vattu (A0 or 9B after క్ష: 84 E6 FC A0 50 = క్ష్క) or before ృ after a vattu (50 A0 96) is not text."),
+    };

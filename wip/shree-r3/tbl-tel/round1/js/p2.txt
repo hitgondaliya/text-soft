@@ -1,0 +1,5 @@
+          "The ై mark 95 before 5D (but after క్ష + ై, whose mark is always 95) is the composer's ై before its subjoined ఙ: read as ్ఙ (94)."),
+        R($"{Lit("9B")}{Lit("5D")}", FromHex("94"),
+          "The wide spacer 9B before 5D (after క్ష: 84 E6 FC 9B 5D) is the composer's spacer and subjoined ఙ (its 5D): the table writes ః after క్ష with no spacer. Read as ్ఙ (94)."),
+        R($"{Lit("9B")}(?={Class("A0 7B 5B")})", "",
+          "The wide spacer 9B before a spacer or a hook is the composer's, left where it dropped the vattu (a subjoined ఝ: 84 E6 FC 9B A0 96): not text."),

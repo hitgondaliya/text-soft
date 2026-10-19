@@ -1,0 +1,44 @@
+config C:/Users/harde/AppData/Local/Temp/claude/C--Users-harde-Desktop-Windows-Font-Software/7673923b-96b4-4287-87dd-a8e7c6533eca/scratchpad/r3/tbl-tel/repo/assets/config; variant e2; capture truth 26551, pairs 43504, gaps 72
+[classes] vowel-sign codes: 24=ో 26=ూ 40=ౌ 5F=ౄ 61=ా 62=ె 6E=ు 70=ొ 73=ి 76=ీ 7A=ృ D3=ే
+[classes] every key class on every consonant key, 14 fixed vendor keyboards: 12184 probes; Unicode right 9664; SHREE-TEL7 = converter 9898
+   halant key after a consonant: 400 probes, Unicode right 400, SHREE-TEL7 right 400
+   link key between consonants: 2706 probes, Unicode right 1551, SHREE-TEL7 right 1551
+   ra-vattu key struck before a consonant: 434 probes, Unicode right 200, SHREE-TEL7 right 434
+   ra-vattu key struck before a consonant, mid-word: 434 probes, Unicode right 200, SHREE-TEL7 right 200
+   sign key after a consonant: 5589 probes, Unicode right 4725, SHREE-TEL7 right 4725
+   tail key after a consonant: 1336 probes, Unicode right 1336, SHREE-TEL7 right 1336
+   tail key after a sign: 1285 probes, Unicode right 1252, SHREE-TEL7 right 1252
+   sign key after a consonant / APPLE: 35 wrong, e.g. Li	want ణు [0C23 0C41] D7 FD 24	got ణఉ [0C23 0C09] D7 FD 45
+   ra-vattu key struck before a consonant / APPLE: 34 wrong, e.g. ^"	want ష్ర [0C37 0C4D 0C30] 7B E7 D9	got ్రష [0C4D 0C30 0C37] 7B E7 D9
+   ra-vattu key struck before a consonant, mid-word / APPLE: 34 wrong, e.g. "^"	want షష్ర [0C37 0C37 0C4D 0C30] E7 D9 7B E7 D9	got ష్రష [0C37 0C4D 0C30 0C37] 7B E7 D9 E7 D9
+   sign key after a consonant / CRTRONIC: 68 wrong, e.g. 0B	want ఝృ [0C1D 0C43] 6D 96	got ఝఋ [0C1D 0C0B] 6D BA 24 24
+   link key between consonants / CRTRONIC: 192 wrong, e.g. 0Ød1	want ఝ్ట [0C1D 0C4D 0C1F] 6D 74	got ఝదట [0C1D 0C26 0C1F] 6D A7 E6 FE 72
+   sign key after a consonant / DOE: 34 wrong, e.g. "Øc	want ఠౄ [0C20 0C44] 75 E6 FF U+0C44	got ఠౠ [0C20 0C60] 75 E6 FF BA 24 2A
+   link key between consonants / DOE: 198 wrong, e.g. "d'	want ఠ్ట [0C20 0C4D 0C1F] 75 E6 FF 74	got ఠట [0C20 0C1F] 75 E6 FF 72
+   ra-vattu key struck before a consonant / DOE: 34 wrong, e.g. #"	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / DOE: 34 wrong, e.g. "#"	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF
+   sign key after a consonant / GODREJ: 290 wrong, e.g. 1B	want ధౌ [0C27 0C4C] AB A7 FA	got ధఔ [0C27 0C14] AB A7 E6 FE 4C
+   link key between consonants / GODREJ: 171 wrong, e.g. 1d!	want ధ్ఞ [0C27 0C4D 0C1E] AB A7 E6 FE 71	got ధఞ [0C27 0C1E] AB A7 E6 FE 70 FD
+   sign key after a consonant / INDICA: 34 wrong, e.g. "V	want ఠౄ [0C20 0C44] 75 E6 FF U+0C44	got ఠౠ [0C20 0C60] 75 E6 FF BA 24 2A
+   link key between consonants / INDICA: 198 wrong, e.g. "d'	want ఠ్ట [0C20 0C4D 0C1F] 75 E6 FF 74	got ఠట [0C20 0C1F] 75 E6 FF 72
+   ra-vattu key struck before a consonant / INDICA: 34 wrong, e.g. #"	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / INDICA: 34 wrong, e.g. "#"	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF
+   link key between consonants / INSCRIPT: 198 wrong, e.g. "d'	want ఠ్ట [0C20 0C4D 0C1F] 75 E6 FF 74	got ఠట [0C20 0C1F] 75 E6 FF 72
+   ra-vattu key struck before a consonant / INSCRIPT: 34 wrong, e.g. #"	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / INSCRIPT: 34 wrong, e.g. "#"	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF
+   sign key after a consonant / ITR: 68 wrong, e.g. #c	want చౄ [0C1A 0C44] 5E E8 FE U+0C44	got చౠ [0C1A 0C60] 5E E8 FE BA 24 2A
+   sign key after a consonant / MICRO: 34 wrong, e.g. #<	want ఞౄ [0C1E 0C44] 70 FD U+0C44	got ఞౠ [0C1E 0C60] 70 FD BA 24 2A
+   tail key after a sign / MICRO: 33 wrong, e.g. #a\	want ఞాః [0C1E 0C3E 0C03] 70 EA 5D	got ఞఅః [0C1E 0C05 0C03] 70 FD 41 5D
+   sign key after a consonant / MONO: 34 wrong, e.g. ,Øx	want యౄ [0C2F 0C44] C4 E6 FD 24 U+0C44	got యౠ [0C2F 0C60] C4 E6 FD 24 BA 24 2A
+   sign key after a consonant / NEWROMA: 30 wrong, e.g. <]	want ఠొ [0C20 0C4A] 75 F6	got ఠఒ [0C20 0C12] 75 E6 FF 4A
+   ra-vattu key struck before a consonant / NEWROMA: 30 wrong, e.g. 0<	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / NEWROMA: 30 wrong, e.g. <0<	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF
+   sign key after a consonant / PRAKASH: 34 wrong, e.g. "Øu	want ఠృ [0C20 0C43] 75 E6 FF 96	got ఠఋ [0C20 0C0B] 75 E6 FF BA 24 24
+   ra-vattu key struck before a consonant / PRAKASH: 34 wrong, e.g. Øi"	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / PRAKASH: 34 wrong, e.g. "Øi"	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF
+   sign key after a consonant / ROMA: 93 wrong, e.g. B@	want భౄ [0C2D 0C44] BF E6 FD U+0C44	got భౠ [0C2D 0C60] BF E6 FD BA 24 2A
+   sign key after a consonant / TYPEWRIT: 42 wrong, e.g. 'H	want షృ [0C37 0C43] E7 D9 96	got షఋ [0C37 0C0B] E7 D9 BA 24 24
+   sign key after a consonant / VISION: 68 wrong, e.g. "@	want ఠౄ [0C20 0C44] 75 E6 FF U+0C44	got ఠౠ [0C20 0C60] 75 E6 FF BA 24 2A
+   link key between consonants / VISION: 198 wrong, e.g. "d'	want ఠ్ట [0C20 0C4D 0C1F] 75 E6 FF 74	got ఠట [0C20 0C1F] 75 E6 FF 72
+   ra-vattu key struck before a consonant / VISION: 34 wrong, e.g. $"	want ఠ్ర [0C20 0C4D 0C30] 7B 75 E6 FF	got ్రఠ [0C4D 0C30 0C20] 7B 75 E6 FF
+   ra-vattu key struck before a consonant, mid-word / VISION: 34 wrong, e.g. "$"	want ఠఠ్ర [0C20 0C20 0C4D 0C30] 75 E6 FF 7B 75 E6 FF	got ఠ్రఠ [0C20 0C4D 0C30 0C20] 7B 75 E6 FF 75 E6 FF

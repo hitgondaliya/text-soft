@@ -1,0 +1,1430 @@
+3 exception: na 9C->5B	ନ	[0B28]	pref 9C FF	acc 9C FF	got 5B FF	reported 
+4 exception: P3b pass-through	୰	[0B70]	pref 8F	acc 8F	got U+0B70	reported ୰
+4 exception: P3b pass-through	ଽ	[0B3D]	pref 90	acc 90	got U+0B3D	reported ଽ
+3 exception: na 9C->5B	ନ୍	[0B28 0B4D]	pref 9C FF FA	acc 9C FF FA	got 5B FF FA	reported 
+4 exception: P3b pass-through	₹	[20B9]	pref 3C	acc 3C	got U+20B9	reported ₹
+3 exception: na 9C->5B	ନ୍‌	[0B28 0B4D 200C]	pref 9C FF FA	acc 9C FF FA	got 5B FF FA	reported 
+3 exception: na 9C->5B	ନ୍‍	[0B28 0B4D 200D]	pref 9C FF FA	acc 9C FF FA	got 5B FF FA	reported 
+3 exception: na 9C->5B	ନ୍ର	[0B28 0B4D 0B30]	pref 9C FF F7	acc 9C FF F7	got 5B FF F7	reported 
+3 exception: na 9C->5B	ନ୍ୟ	[0B28 0B4D 0B5F]	pref 9C FF BF	acc 9C FF BF	got 5B FF BF	reported 
+3 exception: na 9C->5B	ନ୍ର୍ୟ	[0B28 0B4D 0B30 0B4D 0B5F]	pref 9C FF F7 BF	acc 9C FF F7 BF	got 5B FF F7 BF	reported 
+3 exception: na 9C->5B	ନ୍ୟ୍ର	[0B28 0B4D 0B5F 0B4D 0B30]	pref 9C FF BF F7	acc 9C FF BF F7	got 5B FF BF F7	reported 
+3 exception: na 9C->5B	ର୍ନ	[0B30 0B4D 0B28]	pref 9C FF F6	acc 9C FF F6	got 5B FF F6	reported 
+3 exception: na 9C->5B	ର୍‌ନ	[0B30 0B4D 200C 0B28]	pref C0 FF FA 9C FF	acc C0 FF FA 9C FF	got C0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ର୍‍ନ	[0B30 0B4D 200D 0B28]	pref C0 FF FA 9C FF	acc C0 FF FA 9C FF	got C0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ନଂ	[0B28 0B02]	pref 9C FF F3	acc 9C FF F3	got 5B FF F3	reported 
+3 exception: na 9C->5B	ର୍ନଂ	[0B30 0B4D 0B28 0B02]	pref 9C FF F6 F3	acc 9C FF F6 F3 | 9C FF F3 F6	got 5B FF F6 F3	reported 
+3 exception: na 9C->5B	ନଁ	[0B28 0B01]	pref 9C FF F4	acc 9C FF F4	got 5B FF F4	reported 
+3 exception: na 9C->5B	ର୍ନଁ	[0B30 0B4D 0B28 0B01]	pref 9C FF F6 F4	acc 9C FF F6 F4 | 9C FF F4 F6	got 5B FF F6 F4	reported 
+3 exception: na 9C->5B	ନଃ	[0B28 0B03]	pref 9C FF 85	acc 9C FF 85	got 5B FF 85	reported 
+3 exception: na 9C->5B	ର୍ନଃ	[0B30 0B4D 0B28 0B03]	pref 9C FF F6 85	acc 9C FF F6 85 | 9C FF 85 F6	got 5B FF F6 85	reported 
+3 exception: na 9C->5B	ନା	[0B28 0B3E]	pref 9C FF E6	acc 9C FF E6	got 5B FF E6	reported 
+3 exception: na 9C->5B	ନାଂ	[0B28 0B3E 0B02]	pref 9C FF E6 F3	acc 9C FF E6 F3	got 5B FF E6 F3	reported 
+3 exception: na 9C->5B	ନାଁ	[0B28 0B3E 0B01]	pref 9C FF E6 F4	acc 9C FF E6 F4	got 5B FF E6 F4	reported 
+3 exception: na 9C->5B	ନାଃ	[0B28 0B3E 0B03]	pref 9C FF E6 85	acc 9C FF E6 85	got 5B FF E6 85	reported 
+3 exception: na 9C->5B	ର୍ନା	[0B30 0B4D 0B28 0B3E]	pref 9C FF E6 F6	acc 9C FF E6 F6	got 5B FF E6 F6	reported 
+3 exception: na 9C->5B	ନି	[0B28 0B3F]	pref 9C FF E7	acc 9C FF E7	got 5B FF E7	reported 
+3 exception: na 9C->5B	ନିଂ	[0B28 0B3F 0B02]	pref 9C FF E7 F3	acc 9C FF E7 F3	got 5B FF E7 F3	reported 
+3 exception: na 9C->5B	ନିଁ	[0B28 0B3F 0B01]	pref 9C FF 5D	acc 9C FF 5D	got 5B FF 5D	reported 
+3 exception: na 9C->5B	ନିଃ	[0B28 0B3F 0B03]	pref 9C FF E7 85	acc 9C FF E7 85	got 5B FF E7 85	reported 
+3 exception: na 9C->5B	ର୍ନି	[0B30 0B4D 0B28 0B3F]	pref 9C FF 7D	acc 9C FF 7D	got 5B FF 7D	reported 
+3 exception: na 9C->5B	ନୀ	[0B28 0B40]	pref 9C FF EA	acc 9C FF EA	got 5B FF EA	reported 
+3 exception: na 9C->5B	ନୀଂ	[0B28 0B40 0B02]	pref 9C FF EA F3	acc 9C FF EA F3	got 5B FF EA F3	reported 
+3 exception: na 9C->5B	ନୀଁ	[0B28 0B40 0B01]	pref 9C FF EA F4	acc 9C FF EA F4	got 5B FF EA F4	reported 
+3 exception: na 9C->5B	ନୀଃ	[0B28 0B40 0B03]	pref 9C FF EA 85	acc 9C FF EA 85	got 5B FF EA 85	reported 
+3 exception: na 9C->5B	ର୍ନୀ	[0B30 0B4D 0B28 0B40]	pref 9C FF EA F6	acc 9C FF EA F6	got 5B FF EA F6	reported 
+3 exception: na 9C->5B	ନୁ	[0B28 0B41]	pref 9C FF EB	acc 9C FF EB	got 5B FF EB	reported 
+3 exception: na 9C->5B	ନୁଂ	[0B28 0B41 0B02]	pref 9C FF EB F3	acc 9C FF EB F3	got 5B FF EB F3	reported 
+3 exception: na 9C->5B	ନୁଁ	[0B28 0B41 0B01]	pref 9C FF EB F4	acc 9C FF EB F4	got 5B FF EB F4	reported 
+3 exception: na 9C->5B	ନୁଃ	[0B28 0B41 0B03]	pref 9C FF EB 85	acc 9C FF EB 85	got 5B FF EB 85	reported 
+3 exception: na 9C->5B	ର୍ନୁ	[0B30 0B4D 0B28 0B41]	pref 9C FF EB F6	acc 9C FF EB F6	got 5B FF EB F6	reported 
+3 exception: na 9C->5B	ନୂ	[0B28 0B42]	pref 9C FF ED	acc 9C FF ED	got 5B FF ED	reported 
+3 exception: na 9C->5B	ନୂଂ	[0B28 0B42 0B02]	pref 9C FF ED F3	acc 9C FF ED F3	got 5B FF ED F3	reported 
+3 exception: na 9C->5B	ନୂଁ	[0B28 0B42 0B01]	pref 9C FF ED F4	acc 9C FF ED F4	got 5B FF ED F4	reported 
+3 exception: na 9C->5B	ନୂଃ	[0B28 0B42 0B03]	pref 9C FF ED 85	acc 9C FF ED 85	got 5B FF ED 85	reported 
+3 exception: na 9C->5B	ର୍ନୂ	[0B30 0B4D 0B28 0B42]	pref 9C FF ED F6	acc 9C FF ED F6	got 5B FF ED F6	reported 
+3 exception: na 9C->5B	ନୃ	[0B28 0B43]	pref 9C FF F5	acc 9C FF F5	got 5B FF F5	reported 
+3 exception: na 9C->5B	ନୃଂ	[0B28 0B43 0B02]	pref 9C FF F5 F3	acc 9C FF F5 F3	got 5B FF F5 F3	reported 
+3 exception: na 9C->5B	ନୃଁ	[0B28 0B43 0B01]	pref 9C FF F5 F4	acc 9C FF F5 F4	got 5B FF F5 F4	reported 
+3 exception: na 9C->5B	ନୃଃ	[0B28 0B43 0B03]	pref 9C FF F5 85	acc 9C FF F5 85	got 5B FF F5 85	reported 
+3 exception: na 9C->5B	ନେ	[0B28 0B47]	pref 7B 9C FF	acc 7B 9C FF	got 7B 5B FF	reported 
+3 exception: na 9C->5B	ନେଂ	[0B28 0B47 0B02]	pref 7B 9C FF F3	acc 7B 9C FF F3	got 7B 5B FF F3	reported 
+3 exception: na 9C->5B	ନେଁ	[0B28 0B47 0B01]	pref 7B 9C FF F4	acc 7B 9C FF F4	got 7B 5B FF F4	reported 
+3 exception: na 9C->5B	ନେଃ	[0B28 0B47 0B03]	pref 7B 9C FF 85	acc 7B 9C FF 85	got 7B 5B FF 85	reported 
+3 exception: na 9C->5B	ର୍ନେ	[0B30 0B4D 0B28 0B47]	pref 7B 9C FF F6	acc 7B 9C FF F6	got 7B 5B FF F6	reported 
+3 exception: na 9C->5B	ନୈ	[0B28 0B48]	pref 7B 9C FF F0	acc 7B 9C FF F0	got 7B 5B FF F0	reported 
+3 exception: na 9C->5B	ନୈଂ	[0B28 0B48 0B02]	pref 7B 9C FF F0 F3	acc 7B 9C FF F0 F3	got 7B 5B FF F0 F3	reported 
+3 exception: na 9C->5B	ନୈଁ	[0B28 0B48 0B01]	pref 7B 9C FF F0 F4	acc 7B 9C FF F0 F4	got 7B 5B FF F0 F4	reported 
+3 exception: na 9C->5B	ନୈଃ	[0B28 0B48 0B03]	pref 7B 9C FF F0 85	acc 7B 9C FF F0 85	got 7B 5B FF F0 85	reported 
+3 exception: na 9C->5B	ର୍ନୈ	[0B30 0B4D 0B28 0B48]	pref 7B 9C FF F1	acc 7B 9C FF F1	got 7B 5B FF F1	reported 
+3 exception: na 9C->5B	ନୋ	[0B28 0B4B]	pref 7B 9C FF E6	acc 7B 9C FF E6	got 7B 5B FF E6	reported 
+3 exception: na 9C->5B	ନୋଂ	[0B28 0B4B 0B02]	pref 7B 9C FF E6 F3	acc 7B 9C FF E6 F3	got 7B 5B FF E6 F3	reported 
+3 exception: na 9C->5B	ନୋଁ	[0B28 0B4B 0B01]	pref 7B 9C FF E6 F4	acc 7B 9C FF E6 F4	got 7B 5B FF E6 F4	reported 
+3 exception: na 9C->5B	ନୋଃ	[0B28 0B4B 0B03]	pref 7B 9C FF E6 85	acc 7B 9C FF E6 85	got 7B 5B FF E6 85	reported 
+3 exception: na 9C->5B	ର୍ନୋ	[0B30 0B4D 0B28 0B4B]	pref 7B 9C FF E6 F6	acc 7B 9C FF E6 F6	got 7B 5B FF E6 F6	reported 
+3 exception: na 9C->5B	ନୌ	[0B28 0B4C]	pref 7B 9C FF F2	acc 7B 9C FF F2	got 7B 5B FF F2	reported 
+3 exception: na 9C->5B	ନୌଂ	[0B28 0B4C 0B02]	pref 7B 9C FF F2 F3	acc 7B 9C FF F2 F3	got 7B 5B FF F2 F3	reported 
+3 exception: na 9C->5B	ନୌଁ	[0B28 0B4C 0B01]	pref 7B 9C FF F2 F4	acc 7B 9C FF F2 F4	got 7B 5B FF F2 F4	reported 
+3 exception: na 9C->5B	ନୌଃ	[0B28 0B4C 0B03]	pref 7B 9C FF F2 85	acc 7B 9C FF F2 85	got 7B 5B FF F2 85	reported 
+3 exception: na 9C->5B	ର୍ନୌ	[0B30 0B4D 0B28 0B4C]	pref 7B 9C FF F2 F6	acc 7B 9C FF F2 F6	got 7B 5B FF F2 F6	reported 
+3 exception: na 9C->5B	ନୖ	[0B28 0B56]	pref 9C FF F0	acc 9C FF F0	got 5B FF F0	reported 
+3 exception: na 9C->5B	ନୖଂ	[0B28 0B56 0B02]	pref 9C FF F0 F3	acc 9C FF F0 F3	got 5B FF F0 F3	reported 
+3 exception: na 9C->5B	ନୖଁ	[0B28 0B56 0B01]	pref 9C FF F0 F4	acc 9C FF F0 F4	got 5B FF F0 F4	reported 
+3 exception: na 9C->5B	ନୖଃ	[0B28 0B56 0B03]	pref 9C FF F0 85	acc 9C FF F0 85	got 5B FF F0 85	reported 
+3 exception: na 9C->5B	ର୍ନୖ	[0B30 0B4D 0B28 0B56]	pref 9C FF F1	acc 9C FF F1	got 5B FF F1	reported 
+3 exception: na 9C->5B	ନୗ	[0B28 0B57]	pref 9C FF F2	acc 9C FF F2	got 5B FF F2	reported 
+3 exception: na 9C->5B	ନୗଂ	[0B28 0B57 0B02]	pref 9C FF F2 F3	acc 9C FF F2 F3	got 5B FF F2 F3	reported 
+3 exception: na 9C->5B	ନୗଁ	[0B28 0B57 0B01]	pref 9C FF F2 F4	acc 9C FF F2 F4	got 5B FF F2 F4	reported 
+3 exception: na 9C->5B	ନୗଃ	[0B28 0B57 0B03]	pref 9C FF F2 85	acc 9C FF F2 85	got 5B FF F2 85	reported 
+3 exception: na 9C->5B	ର୍ନୗ	[0B30 0B4D 0B28 0B57]	pref 9C FF F2 F6	acc 9C FF F2 F6	got 5B FF F2 F6	reported 
+3 exception: na 9C->5B	ର୍ନାଂ	[0B30 0B4D 0B28 0B3E 0B02]	pref 9C FF E6 F6 F3	acc 9C FF E6 F6 F3 | 9C FF E6 F3 F6	got 5B FF E6 F6 F3	reported 
+3 exception: na 9C->5B	ର୍ନାଁ	[0B30 0B4D 0B28 0B3E 0B01]	pref 9C FF E6 F6 F4	acc 9C FF E6 F6 F4 | 9C FF E6 F4 F6	got 5B FF E6 F6 F4	reported 
+3 exception: na 9C->5B	ର୍ନିଂ	[0B30 0B4D 0B28 0B3F 0B02]	pref 9C FF 7D F3	acc 9C FF 7D F3	got 5B FF 7D F3	reported 
+3 exception: na 9C->5B	ର୍ନିଁ	[0B30 0B4D 0B28 0B3F 0B01]	pref 9C FF 7D F4	acc 9C FF 7D F4 | 9C FF 5D F6	got 5B FF 7D F4	reported 
+3 exception: na 9C->5B	ର୍ନୀଂ	[0B30 0B4D 0B28 0B40 0B02]	pref 9C FF EA F6 F3	acc 9C FF EA F6 F3 | 9C FF EA F3 F6	got 5B FF EA F6 F3	reported 
+3 exception: na 9C->5B	ର୍ନୀଁ	[0B30 0B4D 0B28 0B40 0B01]	pref 9C FF EA F6 F4	acc 9C FF EA F6 F4 | 9C FF EA F4 F6	got 5B FF EA F6 F4	reported 
+3 exception: na 9C->5B	ର୍ନୁଂ	[0B30 0B4D 0B28 0B41 0B02]	pref 9C FF EB F6 F3	acc 9C FF EB F6 F3 | 9C FF EB F3 F6	got 5B FF EB F6 F3	reported 
+3 exception: na 9C->5B	ର୍ନୁଁ	[0B30 0B4D 0B28 0B41 0B01]	pref 9C FF EB F6 F4	acc 9C FF EB F6 F4 | 9C FF EB F4 F6	got 5B FF EB F6 F4	reported 
+3 exception: na 9C->5B	ର୍ନୂଂ	[0B30 0B4D 0B28 0B42 0B02]	pref 9C FF ED F6 F3	acc 9C FF ED F6 F3 | 9C FF ED F3 F6	got 5B FF ED F6 F3	reported 
+3 exception: na 9C->5B	ର୍ନୂଁ	[0B30 0B4D 0B28 0B42 0B01]	pref 9C FF ED F6 F4	acc 9C FF ED F6 F4 | 9C FF ED F4 F6	got 5B FF ED F6 F4	reported 
+3 exception: na 9C->5B	ର୍ନେଂ	[0B30 0B4D 0B28 0B47 0B02]	pref 7B 9C FF F6 F3	acc 7B 9C FF F6 F3 | 7B 9C FF F3 F6	got 7B 5B FF F6 F3	reported 
+3 exception: na 9C->5B	ର୍ନେଁ	[0B30 0B4D 0B28 0B47 0B01]	pref 7B 9C FF F6 F4	acc 7B 9C FF F6 F4 | 7B 9C FF F4 F6	got 7B 5B FF F6 F4	reported 
+3 exception: na 9C->5B	ନ୍ରା	[0B28 0B4D 0B30 0B3E]	pref 9C FF F7 E6	acc 9C FF F7 E6	got 5B FF F7 E6	reported 
+3 exception: na 9C->5B	ନ୍ରି	[0B28 0B4D 0B30 0B3F]	pref 9C FF F7 E7	acc 9C FF F7 E7	got 5B FF F7 E7	reported 
+3 exception: na 9C->5B	ନ୍ରୀ	[0B28 0B4D 0B30 0B40]	pref 9C FF F7 EA	acc 9C FF F7 EA	got 5B FF F7 EA	reported 
+3 exception: na 9C->5B	ନ୍ରୁ	[0B28 0B4D 0B30 0B41]	pref 9C FF F8	acc 9C FF F8 | 9C FF F7 EB	got 5B FF F8	reported 
+3 exception: na 9C->5B	ନ୍ରୂ	[0B28 0B4D 0B30 0B42]	pref 9C FF F9	acc 9C FF F9 | 9C FF F7 ED	got 5B FF F9	reported 
+3 exception: na 9C->5B	ନ୍ରେ	[0B28 0B4D 0B30 0B47]	pref 7B 9C FF F7	acc 7B 9C FF F7	got 7B 5B FF F7	reported 
+3 exception: na 9C->5B	ନ୍ରୈ	[0B28 0B4D 0B30 0B48]	pref 7B 9C FF F7 F0	acc 7B 9C FF F7 F0	got 7B 5B FF F7 F0	reported 
+3 exception: na 9C->5B	ନ୍ରୋ	[0B28 0B4D 0B30 0B4B]	pref 7B 9C FF F7 E6	acc 7B 9C FF F7 E6	got 7B 5B FF F7 E6	reported 
+3 exception: na 9C->5B	ନ୍ରୌ	[0B28 0B4D 0B30 0B4C]	pref 7B 9C FF F7 F2	acc 7B 9C FF F7 F2	got 7B 5B FF F7 F2	reported 
+3 exception: na 9C->5B	ନ୍ରୖ	[0B28 0B4D 0B30 0B56]	pref 9C FF F7 F0	acc 9C FF F7 F0	got 5B FF F7 F0	reported 
+3 exception: na 9C->5B	ନ୍ରୗ	[0B28 0B4D 0B30 0B57]	pref 9C FF F7 F2	acc 9C FF F7 F2	got 5B FF F7 F2	reported 
+3 exception: na 9C->5B	ନ୍ରଂ	[0B28 0B4D 0B30 0B02]	pref 9C FF F7 F3	acc 9C FF F7 F3	got 5B FF F7 F3	reported 
+3 exception: na 9C->5B	ନ୍ରଁ	[0B28 0B4D 0B30 0B01]	pref 9C FF F7 F4	acc 9C FF F7 F4	got 5B FF F7 F4	reported 
+3 exception: na 9C->5B	ନ୍ରଃ	[0B28 0B4D 0B30 0B03]	pref 9C FF F7 85	acc 9C FF F7 85	got 5B FF F7 85	reported 
+3 exception: na 9C->5B	ନ୍ରାଂ	[0B28 0B4D 0B30 0B3E 0B02]	pref 9C FF F7 E6 F3	acc 9C FF F7 E6 F3	got 5B FF F7 E6 F3	reported 
+3 exception: na 9C->5B	ନ୍ରାଁ	[0B28 0B4D 0B30 0B3E 0B01]	pref 9C FF F7 E6 F4	acc 9C FF F7 E6 F4	got 5B FF F7 E6 F4	reported 
+3 exception: na 9C->5B	ନ୍ରାଃ	[0B28 0B4D 0B30 0B3E 0B03]	pref 9C FF F7 E6 85	acc 9C FF F7 E6 85	got 5B FF F7 E6 85	reported 
+3 exception: na 9C->5B	ନ୍ରିଂ	[0B28 0B4D 0B30 0B3F 0B02]	pref 9C FF F7 E7 F3	acc 9C FF F7 E7 F3	got 5B FF F7 E7 F3	reported 
+3 exception: na 9C->5B	ନ୍ରିଁ	[0B28 0B4D 0B30 0B3F 0B01]	pref 9C FF F7 5D	acc 9C FF F7 5D	got 5B FF F7 5D	reported 
+3 exception: na 9C->5B	ନ୍ରିଃ	[0B28 0B4D 0B30 0B3F 0B03]	pref 9C FF F7 E7 85	acc 9C FF F7 E7 85	got 5B FF F7 E7 85	reported 
+3 exception: na 9C->5B	ନ୍ରୀଂ	[0B28 0B4D 0B30 0B40 0B02]	pref 9C FF F7 EA F3	acc 9C FF F7 EA F3	got 5B FF F7 EA F3	reported 
+3 exception: na 9C->5B	ନ୍ରୀଁ	[0B28 0B4D 0B30 0B40 0B01]	pref 9C FF F7 EA F4	acc 9C FF F7 EA F4	got 5B FF F7 EA F4	reported 
+3 exception: na 9C->5B	ନ୍ରୀଃ	[0B28 0B4D 0B30 0B40 0B03]	pref 9C FF F7 EA 85	acc 9C FF F7 EA 85	got 5B FF F7 EA 85	reported 
+3 exception: na 9C->5B	ନ୍ରୁଂ	[0B28 0B4D 0B30 0B41 0B02]	pref 9C FF F8 F3	acc 9C FF F8 F3	got 5B FF F8 F3	reported 
+3 exception: na 9C->5B	ନ୍ରୁଁ	[0B28 0B4D 0B30 0B41 0B01]	pref 9C FF F8 F4	acc 9C FF F8 F4	got 5B FF F8 F4	reported 
+3 exception: na 9C->5B	ନ୍ରୁଃ	[0B28 0B4D 0B30 0B41 0B03]	pref 9C FF F8 85	acc 9C FF F8 85	got 5B FF F8 85	reported 
+3 exception: na 9C->5B	ନ୍ରୂଂ	[0B28 0B4D 0B30 0B42 0B02]	pref 9C FF F9 F3	acc 9C FF F9 F3	got 5B FF F9 F3	reported 
+3 exception: na 9C->5B	ନ୍ରୂଁ	[0B28 0B4D 0B30 0B42 0B01]	pref 9C FF F9 F4	acc 9C FF F9 F4	got 5B FF F9 F4	reported 
+3 exception: na 9C->5B	ନ୍ରୂଃ	[0B28 0B4D 0B30 0B42 0B03]	pref 9C FF F9 85	acc 9C FF F9 85	got 5B FF F9 85	reported 
+3 exception: na 9C->5B	ନ୍ରୖଂ	[0B28 0B4D 0B30 0B56 0B02]	pref 9C FF F7 F0 F3	acc 9C FF F7 F0 F3	got 5B FF F7 F0 F3	reported 
+3 exception: na 9C->5B	ନ୍ରୖଁ	[0B28 0B4D 0B30 0B56 0B01]	pref 9C FF F7 F0 F4	acc 9C FF F7 F0 F4	got 5B FF F7 F0 F4	reported 
+3 exception: na 9C->5B	ନ୍ରୖଃ	[0B28 0B4D 0B30 0B56 0B03]	pref 9C FF F7 F0 85	acc 9C FF F7 F0 85	got 5B FF F7 F0 85	reported 
+3 exception: na 9C->5B	ନ୍ରୗଂ	[0B28 0B4D 0B30 0B57 0B02]	pref 9C FF F7 F2 F3	acc 9C FF F7 F2 F3	got 5B FF F7 F2 F3	reported 
+3 exception: na 9C->5B	ନ୍ରୗଁ	[0B28 0B4D 0B30 0B57 0B01]	pref 9C FF F7 F2 F4	acc 9C FF F7 F2 F4	got 5B FF F7 F2 F4	reported 
+3 exception: na 9C->5B	ନ୍ରୗଃ	[0B28 0B4D 0B30 0B57 0B03]	pref 9C FF F7 F2 85	acc 9C FF F7 F2 85	got 5B FF F7 F2 85	reported 
+3 exception: na 9C->5B	ନ୍ରେଂ	[0B28 0B4D 0B30 0B47 0B02]	pref 7B 9C FF F7 F3	acc 7B 9C FF F7 F3	got 7B 5B FF F7 F3	reported 
+3 exception: na 9C->5B	ନ୍ର୍‌	[0B28 0B4D 0B30 0B4D 200C]	pref 9C FF F7 FA	acc 9C FF F7 FA	got 5B FF F7 FA	reported 
+3 exception: na 9C->5B	ନ୍ୟା	[0B28 0B4D 0B5F 0B3E]	pref 9C FF BF E6	acc 9C FF BF E6	got 5B FF BF E6	reported 
+3 exception: na 9C->5B	ନ୍ୟି	[0B28 0B4D 0B5F 0B3F]	pref 9C FF BF E7	acc 9C FF BF E7	got 5B FF BF E7	reported 
+3 exception: na 9C->5B	ନ୍ୟୀ	[0B28 0B4D 0B5F 0B40]	pref 9C FF BF EA	acc 9C FF BF EA	got 5B FF BF EA	reported 
+3 exception: na 9C->5B	ନ୍ୟୁ	[0B28 0B4D 0B5F 0B41]	pref 9C FF BF EB	acc 9C FF BF EB	got 5B FF BF EB	reported 
+3 exception: na 9C->5B	ନ୍ୟୂ	[0B28 0B4D 0B5F 0B42]	pref 9C FF BF ED	acc 9C FF BF ED	got 5B FF BF ED	reported 
+3 exception: na 9C->5B	ନ୍ୟୃ	[0B28 0B4D 0B5F 0B43]	pref 9C FF BF F5	acc 9C FF BF F5	got 5B FF BF F5	reported 
+3 exception: na 9C->5B	ନ୍ୟେ	[0B28 0B4D 0B5F 0B47]	pref 7B 9C FF BF	acc 7B 9C FF BF	got 7B 5B FF BF	reported 
+3 exception: na 9C->5B	ନ୍ୟୈ	[0B28 0B4D 0B5F 0B48]	pref 7B 9C FF BF F0	acc 7B 9C FF BF F0	got 7B 5B FF BF F0	reported 
+3 exception: na 9C->5B	ନ୍ୟୋ	[0B28 0B4D 0B5F 0B4B]	pref 7B 9C FF BF E6	acc 7B 9C FF BF E6	got 7B 5B FF BF E6	reported 
+3 exception: na 9C->5B	ନ୍ୟୌ	[0B28 0B4D 0B5F 0B4C]	pref 7B 9C FF BF F2	acc 7B 9C FF BF F2	got 7B 5B FF BF F2	reported 
+3 exception: na 9C->5B	ନ୍ୟୖ	[0B28 0B4D 0B5F 0B56]	pref 9C FF BF F0	acc 9C FF BF F0	got 5B FF BF F0	reported 
+3 exception: na 9C->5B	ନ୍ୟୗ	[0B28 0B4D 0B5F 0B57]	pref 9C FF BF F2	acc 9C FF BF F2	got 5B FF BF F2	reported 
+3 exception: na 9C->5B	ନ୍ୟଂ	[0B28 0B4D 0B5F 0B02]	pref 9C FF BF F3	acc 9C FF BF F3	got 5B FF BF F3	reported 
+3 exception: na 9C->5B	ନ୍ୟଁ	[0B28 0B4D 0B5F 0B01]	pref 9C FF BF F4	acc 9C FF BF F4	got 5B FF BF F4	reported 
+3 exception: na 9C->5B	ନ୍ୟଃ	[0B28 0B4D 0B5F 0B03]	pref 9C FF BF 85	acc 9C FF BF 85	got 5B FF BF 85	reported 
+3 exception: na 9C->5B	ନ୍ୟାଂ	[0B28 0B4D 0B5F 0B3E 0B02]	pref 9C FF BF E6 F3	acc 9C FF BF E6 F3	got 5B FF BF E6 F3	reported 
+3 exception: na 9C->5B	ନ୍ୟାଁ	[0B28 0B4D 0B5F 0B3E 0B01]	pref 9C FF BF E6 F4	acc 9C FF BF E6 F4	got 5B FF BF E6 F4	reported 
+3 exception: na 9C->5B	ନ୍ୟାଃ	[0B28 0B4D 0B5F 0B3E 0B03]	pref 9C FF BF E6 85	acc 9C FF BF E6 85	got 5B FF BF E6 85	reported 
+3 exception: na 9C->5B	ନ୍ୟିଂ	[0B28 0B4D 0B5F 0B3F 0B02]	pref 9C FF BF E7 F3	acc 9C FF BF E7 F3	got 5B FF BF E7 F3	reported 
+3 exception: na 9C->5B	ନ୍ୟିଁ	[0B28 0B4D 0B5F 0B3F 0B01]	pref 9C FF BF 5D	acc 9C FF BF 5D	got 5B FF BF 5D	reported 
+3 exception: na 9C->5B	ନ୍ୟିଃ	[0B28 0B4D 0B5F 0B3F 0B03]	pref 9C FF BF E7 85	acc 9C FF BF E7 85	got 5B FF BF E7 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୀଂ	[0B28 0B4D 0B5F 0B40 0B02]	pref 9C FF BF EA F3	acc 9C FF BF EA F3	got 5B FF BF EA F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୀଁ	[0B28 0B4D 0B5F 0B40 0B01]	pref 9C FF BF EA F4	acc 9C FF BF EA F4	got 5B FF BF EA F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୀଃ	[0B28 0B4D 0B5F 0B40 0B03]	pref 9C FF BF EA 85	acc 9C FF BF EA 85	got 5B FF BF EA 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୁଂ	[0B28 0B4D 0B5F 0B41 0B02]	pref 9C FF BF EB F3	acc 9C FF BF EB F3	got 5B FF BF EB F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୁଁ	[0B28 0B4D 0B5F 0B41 0B01]	pref 9C FF BF EB F4	acc 9C FF BF EB F4	got 5B FF BF EB F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୁଃ	[0B28 0B4D 0B5F 0B41 0B03]	pref 9C FF BF EB 85	acc 9C FF BF EB 85	got 5B FF BF EB 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୂଂ	[0B28 0B4D 0B5F 0B42 0B02]	pref 9C FF BF ED F3	acc 9C FF BF ED F3	got 5B FF BF ED F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୂଁ	[0B28 0B4D 0B5F 0B42 0B01]	pref 9C FF BF ED F4	acc 9C FF BF ED F4	got 5B FF BF ED F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୂଃ	[0B28 0B4D 0B5F 0B42 0B03]	pref 9C FF BF ED 85	acc 9C FF BF ED 85	got 5B FF BF ED 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୃଂ	[0B28 0B4D 0B5F 0B43 0B02]	pref 9C FF BF F5 F3	acc 9C FF BF F5 F3	got 5B FF BF F5 F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୃଁ	[0B28 0B4D 0B5F 0B43 0B01]	pref 9C FF BF F5 F4	acc 9C FF BF F5 F4	got 5B FF BF F5 F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୃଃ	[0B28 0B4D 0B5F 0B43 0B03]	pref 9C FF BF F5 85	acc 9C FF BF F5 85	got 5B FF BF F5 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୖଂ	[0B28 0B4D 0B5F 0B56 0B02]	pref 9C FF BF F0 F3	acc 9C FF BF F0 F3	got 5B FF BF F0 F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୖଁ	[0B28 0B4D 0B5F 0B56 0B01]	pref 9C FF BF F0 F4	acc 9C FF BF F0 F4	got 5B FF BF F0 F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୖଃ	[0B28 0B4D 0B5F 0B56 0B03]	pref 9C FF BF F0 85	acc 9C FF BF F0 85	got 5B FF BF F0 85	reported 
+3 exception: na 9C->5B	ନ୍ୟୗଂ	[0B28 0B4D 0B5F 0B57 0B02]	pref 9C FF BF F2 F3	acc 9C FF BF F2 F3	got 5B FF BF F2 F3	reported 
+3 exception: na 9C->5B	ନ୍ୟୗଁ	[0B28 0B4D 0B5F 0B57 0B01]	pref 9C FF BF F2 F4	acc 9C FF BF F2 F4	got 5B FF BF F2 F4	reported 
+3 exception: na 9C->5B	ନ୍ୟୗଃ	[0B28 0B4D 0B5F 0B57 0B03]	pref 9C FF BF F2 85	acc 9C FF BF F2 85	got 5B FF BF F2 85	reported 
+3 exception: na 9C->5B	ନ୍ୟେଂ	[0B28 0B4D 0B5F 0B47 0B02]	pref 7B 9C FF BF F3	acc 7B 9C FF BF F3	got 7B 5B FF BF F3	reported 
+3 exception: na 9C->5B	ନ୍ୟ୍‌	[0B28 0B4D 0B5F 0B4D 200C]	pref 9C FF BF FA	acc 9C FF BF FA	got 5B FF BF FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟ	[0B30 0B4D 0B28 0B4D 0B5F]	pref 9C FF BF F6	acc 9C FF BF F6	got 5B FF BF F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟା	[0B30 0B4D 0B28 0B4D 0B5F 0B3E]	pref 9C FF BF E6 F6	acc 9C FF BF E6 F6	got 5B FF BF E6 F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟି	[0B30 0B4D 0B28 0B4D 0B5F 0B3F]	pref 9C FF BF 7D	acc 9C FF BF 7D	got 5B FF BF 7D	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟୀ	[0B30 0B4D 0B28 0B4D 0B5F 0B40]	pref 9C FF BF EA F6	acc 9C FF BF EA F6	got 5B FF BF EA F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟୁ	[0B30 0B4D 0B28 0B4D 0B5F 0B41]	pref 9C FF BF EB F6	acc 9C FF BF EB F6	got 5B FF BF EB F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟୂ	[0B30 0B4D 0B28 0B4D 0B5F 0B42]	pref 9C FF BF ED F6	acc 9C FF BF ED F6	got 5B FF BF ED F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟୖ	[0B30 0B4D 0B28 0B4D 0B5F 0B56]	pref 9C FF BF F1	acc 9C FF BF F1	got 5B FF BF F1	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟୗ	[0B30 0B4D 0B28 0B4D 0B5F 0B57]	pref 9C FF BF F2 F6	acc 9C FF BF F2 F6	got 5B FF BF F2 F6	reported 
+3 exception: na 9C->5B	ର୍ନ୍ୟେ	[0B30 0B4D 0B28 0B4D 0B5F 0B47]	pref 7B 9C FF BF F6	acc 7B 9C FF BF F6	got 7B 5B FF BF F6	reported 
+3 exception: na 9C->5B	ତ୍ନ	[0B24 0B4D 0B28]	pref 9C FF 23	acc 9C FF 23	got 5B FF 23	reported 
+3 exception: na 9C->5B	ତ୍ନା	[0B24 0B4D 0B28 0B3E]	pref 9C FF 23 E6	acc 9C FF 23 E6	got 5B FF 23 E6	reported 
+3 exception: na 9C->5B	ତ୍ନି	[0B24 0B4D 0B28 0B3F]	pref 9C FF 23 E7	acc 9C FF 23 E7	got 5B FF 23 E7	reported 
+3 exception: na 9C->5B	ତ୍ନୀ	[0B24 0B4D 0B28 0B40]	pref 9C FF 23 EA	acc 9C FF 23 EA	got 5B FF 23 EA	reported 
+3 exception: na 9C->5B	ତ୍ନୁ	[0B24 0B4D 0B28 0B41]	pref 9C FF 23 EC	acc 9C FF 23 EC	got 5B FF 23 EC	reported 
+3 exception: na 9C->5B	ତ୍ନୂ	[0B24 0B4D 0B28 0B42]	pref 9C FF 23 EE	acc 9C FF 23 EE	got 5B FF 23 EE	reported 
+3 exception: na 9C->5B	ତ୍ନୃ	[0B24 0B4D 0B28 0B43]	pref 9C FF 23 26 F5	acc 9C FF 23 26 F5	got 5B FF 23 26 F5	reported 
+3 exception: na 9C->5B	ତ୍ନୖ	[0B24 0B4D 0B28 0B56]	pref 9C FF 23 F0	acc 9C FF 23 F0	got 5B FF 23 F0	reported 
+3 exception: na 9C->5B	ତ୍ନୗ	[0B24 0B4D 0B28 0B57]	pref 9C FF 23 F2	acc 9C FF 23 F2	got 5B FF 23 F2	reported 
+3 exception: na 9C->5B	ତ୍ନେ	[0B24 0B4D 0B28 0B47]	pref 7B 9C FF 23	acc 7B 9C FF 23	got 7B 5B FF 23	reported 
+3 exception: na 9C->5B	ତ୍ନଂ	[0B24 0B4D 0B28 0B02]	pref 9C FF 23 F3	acc 9C FF 23 F3	got 5B FF 23 F3	reported 
+3 exception: na 9C->5B	ତ୍ନଁ	[0B24 0B4D 0B28 0B01]	pref 9C FF 23 F4	acc 9C FF 23 F4	got 5B FF 23 F4	reported 
+3 exception: na 9C->5B	ତ୍ନଃ	[0B24 0B4D 0B28 0B03]	pref 9C FF 23 85	acc 9C FF 23 85	got 5B FF 23 85	reported 
+3 exception: na 9C->5B	ତ୍ନ୍ର	[0B24 0B4D 0B28 0B4D 0B30]	pref 9C FF 23 26 F7	acc 9C FF 23 26 F7	got 5B FF 23 26 F7	reported 
+3 exception: na 9C->5B	ତ୍ନ୍ୟ	[0B24 0B4D 0B28 0B4D 0B5F]	pref 9C FF 23 BF	acc 9C FF 23 BF	got 5B FF 23 BF	reported 
+3 exception: na 9C->5B	ତ୍ନ୍	[0B24 0B4D 0B28 0B4D]	pref 9C FF 23 26 FA	acc 9C FF 23 26 FA	got 5B FF 23 26 FA	reported 
+3 exception: na 9C->5B	ତ୍ନ୍‌	[0B24 0B4D 0B28 0B4D 200C]	pref 9C FF 23 26 FA	acc 9C FF 23 26 FA	got 5B FF 23 26 FA	reported 
+3 exception: na 9C->5B	ର୍ତ୍ନ	[0B30 0B4D 0B24 0B4D 0B28]	pref 9C FF 23 F6	acc 9C FF 23 F6	got 5B FF 23 F6	reported 
+3 exception: na 9C->5B	ନ୍କ	[0B28 0B4D 0B15]	pref 9C FF 50	acc 9C FF 50	got 5B FF 50	reported 
+3 exception: na 9C->5B	ନ୍କା	[0B28 0B4D 0B15 0B3E]	pref 9C FF 50 E6	acc 9C FF 50 E6	got 5B FF 50 E6	reported 
+3 exception: na 9C->5B	ନ୍କି	[0B28 0B4D 0B15 0B3F]	pref 9C FF 50 E7	acc 9C FF 50 E7	got 5B FF 50 E7	reported 
+3 exception: na 9C->5B	ନ୍କୀ	[0B28 0B4D 0B15 0B40]	pref 9C FF 50 EA	acc 9C FF 50 EA	got 5B FF 50 EA	reported 
+3 exception: na 9C->5B	ନ୍କୁ	[0B28 0B4D 0B15 0B41]	pref 9C FF 50 EC	acc 9C FF 50 EC	got 5B FF 50 EC	reported 
+3 exception: na 9C->5B	ନ୍କୂ	[0B28 0B4D 0B15 0B42]	pref 9C FF 50 EE	acc 9C FF 50 EE	got 5B FF 50 EE	reported 
+3 exception: na 9C->5B	ନ୍କୃ	[0B28 0B4D 0B15 0B43]	pref 9C FF 50 26 F5	acc 9C FF 50 26 F5	got 5B FF 50 26 F5	reported 
+3 exception: na 9C->5B	ନ୍କୖ	[0B28 0B4D 0B15 0B56]	pref 9C FF 50 F0	acc 9C FF 50 F0	got 5B FF 50 F0	reported 
+3 exception: na 9C->5B	ନ୍କୗ	[0B28 0B4D 0B15 0B57]	pref 9C FF 50 F2	acc 9C FF 50 F2	got 5B FF 50 F2	reported 
+3 exception: na 9C->5B	ନ୍କେ	[0B28 0B4D 0B15 0B47]	pref 7B 9C FF 50	acc 7B 9C FF 50	got 7B 5B FF 50	reported 
+3 exception: na 9C->5B	ନ୍କଂ	[0B28 0B4D 0B15 0B02]	pref 9C FF 50 F3	acc 9C FF 50 F3	got 5B FF 50 F3	reported 
+3 exception: na 9C->5B	ନ୍କଁ	[0B28 0B4D 0B15 0B01]	pref 9C FF 50 F4	acc 9C FF 50 F4	got 5B FF 50 F4	reported 
+3 exception: na 9C->5B	ନ୍କଃ	[0B28 0B4D 0B15 0B03]	pref 9C FF 50 85	acc 9C FF 50 85	got 5B FF 50 85	reported 
+3 exception: na 9C->5B	ନ୍କ୍ର	[0B28 0B4D 0B15 0B4D 0B30]	pref 9C FF 50 26 F7	acc 9C FF 50 26 F7	got 5B FF 50 26 F7	reported 
+3 exception: na 9C->5B	ନ୍କ୍ୟ	[0B28 0B4D 0B15 0B4D 0B5F]	pref 9C FF 50 BF	acc 9C FF 50 BF	got 5B FF 50 BF	reported 
+3 exception: na 9C->5B	ନ୍କ୍	[0B28 0B4D 0B15 0B4D]	pref 9C FF 50 26 FA	acc 9C FF 50 26 FA	got 5B FF 50 26 FA	reported 
+3 exception: na 9C->5B	ନ୍କ୍‌	[0B28 0B4D 0B15 0B4D 200C]	pref 9C FF 50 26 FA	acc 9C FF 50 26 FA	got 5B FF 50 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍କ	[0B30 0B4D 0B28 0B4D 0B15]	pref 9C FF 50 F6	acc 9C FF 50 F6	got 5B FF 50 F6	reported 
+3 exception: na 9C->5B	ନ୍ଖ	[0B28 0B4D 0B16]	pref 9C FF 52	acc 9C FF 52	got 5B FF 52	reported 
+3 exception: na 9C->5B	ନ୍ଖା	[0B28 0B4D 0B16 0B3E]	pref 9C FF 52 E6	acc 9C FF 52 E6	got 5B FF 52 E6	reported 
+3 exception: na 9C->5B	ନ୍ଖି	[0B28 0B4D 0B16 0B3F]	pref 9C FF 52 E7	acc 9C FF 52 E7	got 5B FF 52 E7	reported 
+3 exception: na 9C->5B	ନ୍ଖୀ	[0B28 0B4D 0B16 0B40]	pref 9C FF 52 EA	acc 9C FF 52 EA	got 5B FF 52 EA	reported 
+3 exception: na 9C->5B	ନ୍ଖୁ	[0B28 0B4D 0B16 0B41]	pref 9C FF 52 EC	acc 9C FF 52 EC	got 5B FF 52 EC	reported 
+3 exception: na 9C->5B	ନ୍ଖୂ	[0B28 0B4D 0B16 0B42]	pref 9C FF 52 EE	acc 9C FF 52 EE	got 5B FF 52 EE	reported 
+3 exception: na 9C->5B	ନ୍ଖୃ	[0B28 0B4D 0B16 0B43]	pref 9C FF 52 26 F5	acc 9C FF 52 26 F5	got 5B FF 52 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଖୖ	[0B28 0B4D 0B16 0B56]	pref 9C FF 52 F0	acc 9C FF 52 F0	got 5B FF 52 F0	reported 
+3 exception: na 9C->5B	ନ୍ଖୗ	[0B28 0B4D 0B16 0B57]	pref 9C FF 52 F2	acc 9C FF 52 F2	got 5B FF 52 F2	reported 
+3 exception: na 9C->5B	ନ୍ଖେ	[0B28 0B4D 0B16 0B47]	pref 7B 9C FF 52	acc 7B 9C FF 52	got 7B 5B FF 52	reported 
+3 exception: na 9C->5B	ନ୍ଖଂ	[0B28 0B4D 0B16 0B02]	pref 9C FF 52 F3	acc 9C FF 52 F3	got 5B FF 52 F3	reported 
+3 exception: na 9C->5B	ନ୍ଖଁ	[0B28 0B4D 0B16 0B01]	pref 9C FF 52 F4	acc 9C FF 52 F4	got 5B FF 52 F4	reported 
+3 exception: na 9C->5B	ନ୍ଖଃ	[0B28 0B4D 0B16 0B03]	pref 9C FF 52 85	acc 9C FF 52 85	got 5B FF 52 85	reported 
+3 exception: na 9C->5B	ନ୍ଖ୍ର	[0B28 0B4D 0B16 0B4D 0B30]	pref 9C FF 52 26 F7	acc 9C FF 52 26 F7	got 5B FF 52 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଖ୍ୟ	[0B28 0B4D 0B16 0B4D 0B5F]	pref 9C FF 52 BF	acc 9C FF 52 BF	got 5B FF 52 BF	reported 
+3 exception: na 9C->5B	ନ୍ଖ୍	[0B28 0B4D 0B16 0B4D]	pref 9C FF 52 26 FA	acc 9C FF 52 26 FA	got 5B FF 52 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଖ୍‌	[0B28 0B4D 0B16 0B4D 200C]	pref 9C FF 52 26 FA	acc 9C FF 52 26 FA	got 5B FF 52 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଖ	[0B30 0B4D 0B28 0B4D 0B16]	pref 9C FF 52 F6	acc 9C FF 52 F6	got 5B FF 52 F6	reported 
+3 exception: na 9C->5B	ନ୍ଗ	[0B28 0B4D 0B17]	pref 9C FF 56	acc 9C FF 56	got 5B FF 56	reported 
+3 exception: na 9C->5B	ନ୍ଗା	[0B28 0B4D 0B17 0B3E]	pref 9C FF 56 E6	acc 9C FF 56 E6	got 5B FF 56 E6	reported 
+3 exception: na 9C->5B	ନ୍ଗି	[0B28 0B4D 0B17 0B3F]	pref 9C FF 56 E7	acc 9C FF 56 E7	got 5B FF 56 E7	reported 
+3 exception: na 9C->5B	ନ୍ଗୀ	[0B28 0B4D 0B17 0B40]	pref 9C FF 56 EA	acc 9C FF 56 EA	got 5B FF 56 EA	reported 
+3 exception: na 9C->5B	ନ୍ଗୁ	[0B28 0B4D 0B17 0B41]	pref 9C FF 56 EC	acc 9C FF 56 EC	got 5B FF 56 EC	reported 
+3 exception: na 9C->5B	ନ୍ଗୂ	[0B28 0B4D 0B17 0B42]	pref 9C FF 56 EE	acc 9C FF 56 EE	got 5B FF 56 EE	reported 
+3 exception: na 9C->5B	ନ୍ଗୃ	[0B28 0B4D 0B17 0B43]	pref 9C FF 56 26 F5	acc 9C FF 56 26 F5	got 5B FF 56 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଗୖ	[0B28 0B4D 0B17 0B56]	pref 9C FF 56 F0	acc 9C FF 56 F0	got 5B FF 56 F0	reported 
+3 exception: na 9C->5B	ନ୍ଗୗ	[0B28 0B4D 0B17 0B57]	pref 9C FF 56 F2	acc 9C FF 56 F2	got 5B FF 56 F2	reported 
+3 exception: na 9C->5B	ନ୍ଗେ	[0B28 0B4D 0B17 0B47]	pref 7B 9C FF 56	acc 7B 9C FF 56	got 7B 5B FF 56	reported 
+3 exception: na 9C->5B	ନ୍ଗଂ	[0B28 0B4D 0B17 0B02]	pref 9C FF 56 F3	acc 9C FF 56 F3	got 5B FF 56 F3	reported 
+3 exception: na 9C->5B	ନ୍ଗଁ	[0B28 0B4D 0B17 0B01]	pref 9C FF 56 F4	acc 9C FF 56 F4	got 5B FF 56 F4	reported 
+3 exception: na 9C->5B	ନ୍ଗଃ	[0B28 0B4D 0B17 0B03]	pref 9C FF 56 85	acc 9C FF 56 85	got 5B FF 56 85	reported 
+3 exception: na 9C->5B	ନ୍ଗ୍ର	[0B28 0B4D 0B17 0B4D 0B30]	pref 9C FF 56 26 F7	acc 9C FF 56 26 F7	got 5B FF 56 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଗ୍ୟ	[0B28 0B4D 0B17 0B4D 0B5F]	pref 9C FF 56 BF	acc 9C FF 56 BF	got 5B FF 56 BF	reported 
+3 exception: na 9C->5B	ନ୍ଗ୍	[0B28 0B4D 0B17 0B4D]	pref 9C FF 56 26 FA	acc 9C FF 56 26 FA	got 5B FF 56 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଗ୍‌	[0B28 0B4D 0B17 0B4D 200C]	pref 9C FF 56 26 FA	acc 9C FF 56 26 FA	got 5B FF 56 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଗ	[0B30 0B4D 0B28 0B4D 0B17]	pref 9C FF 56 F6	acc 9C FF 56 F6	got 5B FF 56 F6	reported 
+3 exception: na 9C->5B	ନ୍ଘ	[0B28 0B4D 0B18]	pref 9C FF 58	acc 9C FF 58	got 5B FF 58	reported 
+3 exception: na 9C->5B	ନ୍ଘା	[0B28 0B4D 0B18 0B3E]	pref 9C FF 58 E6	acc 9C FF 58 E6	got 5B FF 58 E6	reported 
+3 exception: na 9C->5B	ନ୍ଘି	[0B28 0B4D 0B18 0B3F]	pref 9C FF 58 E7	acc 9C FF 58 E7	got 5B FF 58 E7	reported 
+3 exception: na 9C->5B	ନ୍ଘୀ	[0B28 0B4D 0B18 0B40]	pref 9C FF 58 EA	acc 9C FF 58 EA	got 5B FF 58 EA	reported 
+3 exception: na 9C->5B	ନ୍ଘୁ	[0B28 0B4D 0B18 0B41]	pref 9C FF 58 EC	acc 9C FF 58 EC	got 5B FF 58 EC	reported 
+3 exception: na 9C->5B	ନ୍ଘୂ	[0B28 0B4D 0B18 0B42]	pref 9C FF 58 EE	acc 9C FF 58 EE	got 5B FF 58 EE	reported 
+3 exception: na 9C->5B	ନ୍ଘୃ	[0B28 0B4D 0B18 0B43]	pref 9C FF 58 26 F5	acc 9C FF 58 26 F5	got 5B FF 58 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଘୖ	[0B28 0B4D 0B18 0B56]	pref 9C FF 58 F0	acc 9C FF 58 F0	got 5B FF 58 F0	reported 
+3 exception: na 9C->5B	ନ୍ଘୗ	[0B28 0B4D 0B18 0B57]	pref 9C FF 58 F2	acc 9C FF 58 F2	got 5B FF 58 F2	reported 
+3 exception: na 9C->5B	ନ୍ଘେ	[0B28 0B4D 0B18 0B47]	pref 7B 9C FF 58	acc 7B 9C FF 58	got 7B 5B FF 58	reported 
+3 exception: na 9C->5B	ନ୍ଘଂ	[0B28 0B4D 0B18 0B02]	pref 9C FF 58 F3	acc 9C FF 58 F3	got 5B FF 58 F3	reported 
+3 exception: na 9C->5B	ନ୍ଘଁ	[0B28 0B4D 0B18 0B01]	pref 9C FF 58 F4	acc 9C FF 58 F4	got 5B FF 58 F4	reported 
+3 exception: na 9C->5B	ନ୍ଘଃ	[0B28 0B4D 0B18 0B03]	pref 9C FF 58 85	acc 9C FF 58 85	got 5B FF 58 85	reported 
+3 exception: na 9C->5B	ନ୍ଘ୍ର	[0B28 0B4D 0B18 0B4D 0B30]	pref 9C FF 58 26 F7	acc 9C FF 58 26 F7	got 5B FF 58 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଘ୍ୟ	[0B28 0B4D 0B18 0B4D 0B5F]	pref 9C FF 58 BF	acc 9C FF 58 BF	got 5B FF 58 BF	reported 
+3 exception: na 9C->5B	ନ୍ଘ୍	[0B28 0B4D 0B18 0B4D]	pref 9C FF 58 26 FA	acc 9C FF 58 26 FA	got 5B FF 58 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଘ୍‌	[0B28 0B4D 0B18 0B4D 200C]	pref 9C FF 58 26 FA	acc 9C FF 58 26 FA	got 5B FF 58 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଘ	[0B30 0B4D 0B28 0B4D 0B18]	pref 9C FF 58 F6	acc 9C FF 58 F6	got 5B FF 58 F6	reported 
+3 exception: na 9C->5B	ନ୍ଙ	[0B28 0B4D 0B19]	pref 9C FF FA 59 FF	acc 9C FF FA 59 FF	got 5B FF FA 59 FF	reported 
+3 exception: na 9C->5B	ନ୍ଙା	[0B28 0B4D 0B19 0B3E]	pref 9C FF FA 59 FF E6	acc 9C FF FA 59 FF E6	got 5B FF FA 59 FF E6	reported 
+3 exception: na 9C->5B	ନ୍ଙି	[0B28 0B4D 0B19 0B3F]	pref 9C FF FA 59 FF E7	acc 9C FF FA 59 FF E7	got 5B FF FA 59 FF E7	reported 
+3 exception: na 9C->5B	ନ୍ଙୀ	[0B28 0B4D 0B19 0B40]	pref 9C FF FA 59 FF EA	acc 9C FF FA 59 FF EA	got 5B FF FA 59 FF EA	reported 
+3 exception: na 9C->5B	ନ୍ଙୁ	[0B28 0B4D 0B19 0B41]	pref 9C FF FA 59 FF EB	acc 9C FF FA 59 FF EB	got 5B FF FA 59 FF EB	reported 
+3 exception: na 9C->5B	ନ୍ଙୂ	[0B28 0B4D 0B19 0B42]	pref 9C FF FA 59 FF ED	acc 9C FF FA 59 FF ED	got 5B FF FA 59 FF ED	reported 
+3 exception: na 9C->5B	ନ୍ଙୃ	[0B28 0B4D 0B19 0B43]	pref 9C FF FA 59 FF F5	acc 9C FF FA 59 FF F5	got 5B FF FA 59 FF F5	reported 
+3 exception: na 9C->5B	ନ୍ଙୖ	[0B28 0B4D 0B19 0B56]	pref 9C FF FA 59 FF F0	acc 9C FF FA 59 FF F0	got 5B FF FA 59 FF F0	reported 
+3 exception: na 9C->5B	ନ୍ଙୗ	[0B28 0B4D 0B19 0B57]	pref 9C FF FA 59 FF F2	acc 9C FF FA 59 FF F2	got 5B FF FA 59 FF F2	reported 
+3 exception: na 9C->5B	ନ୍ଙେ	[0B28 0B4D 0B19 0B47]	pref 7B 9C FF FA 59 FF	acc 7B 9C FF FA 59 FF	got 7B 5B FF FA 59 FF	reported 
+3 exception: na 9C->5B	ନ୍ଙଂ	[0B28 0B4D 0B19 0B02]	pref 9C FF FA 59 FF F3	acc 9C FF FA 59 FF F3	got 5B FF FA 59 FF F3	reported 
+3 exception: na 9C->5B	ନ୍ଙଁ	[0B28 0B4D 0B19 0B01]	pref 9C FF FA 59 FF F4	acc 9C FF FA 59 FF F4	got 5B FF FA 59 FF F4	reported 
+3 exception: na 9C->5B	ନ୍ଙଃ	[0B28 0B4D 0B19 0B03]	pref 9C FF FA 59 FF 85	acc 9C FF FA 59 FF 85	got 5B FF FA 59 FF 85	reported 
+3 exception: na 9C->5B	ନ୍ଙ୍ର	[0B28 0B4D 0B19 0B4D 0B30]	pref 9C FF FA 59 FF F7	acc 9C FF FA 59 FF F7	got 5B FF FA 59 FF F7	reported 
+3 exception: na 9C->5B	ନ୍ଙ୍ୟ	[0B28 0B4D 0B19 0B4D 0B5F]	pref 9C FF FA 59 FF BF	acc 9C FF FA 59 FF BF	got 5B FF FA 59 FF BF	reported 
+3 exception: na 9C->5B	ନ୍ଙ୍	[0B28 0B4D 0B19 0B4D]	pref 9C FF FA 59 FF FA	acc 9C FF FA 59 FF FA	got 5B FF FA 59 FF FA	reported 
+3 exception: na 9C->5B	ନ୍ଙ୍‌	[0B28 0B4D 0B19 0B4D 200C]	pref 9C FF FA 59 FF FA	acc 9C FF FA 59 FF FA	got 5B FF FA 59 FF FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଙ	[0B30 0B4D 0B28 0B4D 0B19]	pref 9C FF FA 59 FF F6	acc 9C FF FA 59 FF F6	got 5B FF FA 59 FF F6	reported 
+3 exception: na 9C->5B	ନ୍ଚ	[0B28 0B4D 0B1A]	pref 9C FF 63	acc 9C FF 63	got 5B FF 63	reported 
+3 exception: na 9C->5B	ନ୍ଚା	[0B28 0B4D 0B1A 0B3E]	pref 9C FF 63 E6	acc 9C FF 63 E6	got 5B FF 63 E6	reported 
+3 exception: na 9C->5B	ନ୍ଚି	[0B28 0B4D 0B1A 0B3F]	pref 9C FF 63 E7	acc 9C FF 63 E7	got 5B FF 63 E7	reported 
+3 exception: na 9C->5B	ନ୍ଚୀ	[0B28 0B4D 0B1A 0B40]	pref 9C FF 63 EA	acc 9C FF 63 EA	got 5B FF 63 EA	reported 
+3 exception: na 9C->5B	ନ୍ଚୁ	[0B28 0B4D 0B1A 0B41]	pref 9C FF 63 EC	acc 9C FF 63 EC	got 5B FF 63 EC	reported 
+3 exception: na 9C->5B	ନ୍ଚୂ	[0B28 0B4D 0B1A 0B42]	pref 9C FF 63 EE	acc 9C FF 63 EE	got 5B FF 63 EE	reported 
+3 exception: na 9C->5B	ନ୍ଚୃ	[0B28 0B4D 0B1A 0B43]	pref 9C FF 63 26 F5	acc 9C FF 63 26 F5	got 5B FF 63 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଚୖ	[0B28 0B4D 0B1A 0B56]	pref 9C FF 63 F0	acc 9C FF 63 F0	got 5B FF 63 F0	reported 
+3 exception: na 9C->5B	ନ୍ଚୗ	[0B28 0B4D 0B1A 0B57]	pref 9C FF 63 F2	acc 9C FF 63 F2	got 5B FF 63 F2	reported 
+3 exception: na 9C->5B	ନ୍ଚେ	[0B28 0B4D 0B1A 0B47]	pref 7B 9C FF 63	acc 7B 9C FF 63	got 7B 5B FF 63	reported 
+3 exception: na 9C->5B	ନ୍ଚଂ	[0B28 0B4D 0B1A 0B02]	pref 9C FF 63 F3	acc 9C FF 63 F3	got 5B FF 63 F3	reported 
+3 exception: na 9C->5B	ନ୍ଚଁ	[0B28 0B4D 0B1A 0B01]	pref 9C FF 63 F4	acc 9C FF 63 F4	got 5B FF 63 F4	reported 
+3 exception: na 9C->5B	ନ୍ଚଃ	[0B28 0B4D 0B1A 0B03]	pref 9C FF 63 85	acc 9C FF 63 85	got 5B FF 63 85	reported 
+3 exception: na 9C->5B	ନ୍ଚ୍ର	[0B28 0B4D 0B1A 0B4D 0B30]	pref 9C FF 63 26 F7	acc 9C FF 63 26 F7	got 5B FF 63 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଚ୍ୟ	[0B28 0B4D 0B1A 0B4D 0B5F]	pref 9C FF 63 BF	acc 9C FF 63 BF	got 5B FF 63 BF	reported 
+3 exception: na 9C->5B	ନ୍ଚ୍	[0B28 0B4D 0B1A 0B4D]	pref 9C FF 63 26 FA	acc 9C FF 63 26 FA	got 5B FF 63 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଚ୍‌	[0B28 0B4D 0B1A 0B4D 200C]	pref 9C FF 63 26 FA	acc 9C FF 63 26 FA	got 5B FF 63 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଚ	[0B30 0B4D 0B28 0B4D 0B1A]	pref 9C FF 63 F6	acc 9C FF 63 F6	got 5B FF 63 F6	reported 
+3 exception: na 9C->5B	ନ୍ଛ	[0B28 0B4D 0B1B]	pref 9C FF 65	acc 9C FF 65	got 5B FF 65	reported 
+3 exception: na 9C->5B	ନ୍ଛା	[0B28 0B4D 0B1B 0B3E]	pref 9C FF 65 E6	acc 9C FF 65 E6	got 5B FF 65 E6	reported 
+3 exception: na 9C->5B	ନ୍ଛି	[0B28 0B4D 0B1B 0B3F]	pref 9C FF 65 E7	acc 9C FF 65 E7	got 5B FF 65 E7	reported 
+3 exception: na 9C->5B	ନ୍ଛୀ	[0B28 0B4D 0B1B 0B40]	pref 9C FF 65 EA	acc 9C FF 65 EA	got 5B FF 65 EA	reported 
+3 exception: na 9C->5B	ନ୍ଛୁ	[0B28 0B4D 0B1B 0B41]	pref 9C FF 65 EC	acc 9C FF 65 EC	got 5B FF 65 EC	reported 
+3 exception: na 9C->5B	ନ୍ଛୂ	[0B28 0B4D 0B1B 0B42]	pref 9C FF 65 EE	acc 9C FF 65 EE	got 5B FF 65 EE	reported 
+3 exception: na 9C->5B	ନ୍ଛୃ	[0B28 0B4D 0B1B 0B43]	pref 9C FF 65 26 F5	acc 9C FF 65 26 F5	got 5B FF 65 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଛୖ	[0B28 0B4D 0B1B 0B56]	pref 9C FF 65 F0	acc 9C FF 65 F0	got 5B FF 65 F0	reported 
+3 exception: na 9C->5B	ନ୍ଛୗ	[0B28 0B4D 0B1B 0B57]	pref 9C FF 65 F2	acc 9C FF 65 F2	got 5B FF 65 F2	reported 
+3 exception: na 9C->5B	ନ୍ଛେ	[0B28 0B4D 0B1B 0B47]	pref 7B 9C FF 65	acc 7B 9C FF 65	got 7B 5B FF 65	reported 
+3 exception: na 9C->5B	ନ୍ଛଂ	[0B28 0B4D 0B1B 0B02]	pref 9C FF 65 F3	acc 9C FF 65 F3	got 5B FF 65 F3	reported 
+3 exception: na 9C->5B	ନ୍ଛଁ	[0B28 0B4D 0B1B 0B01]	pref 9C FF 65 F4	acc 9C FF 65 F4	got 5B FF 65 F4	reported 
+3 exception: na 9C->5B	ନ୍ଛଃ	[0B28 0B4D 0B1B 0B03]	pref 9C FF 65 85	acc 9C FF 65 85	got 5B FF 65 85	reported 
+3 exception: na 9C->5B	ନ୍ଛ୍ର	[0B28 0B4D 0B1B 0B4D 0B30]	pref 9C FF 65 26 F7	acc 9C FF 65 26 F7	got 5B FF 65 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଛ୍ୟ	[0B28 0B4D 0B1B 0B4D 0B5F]	pref 9C FF 65 BF	acc 9C FF 65 BF	got 5B FF 65 BF	reported 
+3 exception: na 9C->5B	ନ୍ଛ୍	[0B28 0B4D 0B1B 0B4D]	pref 9C FF 65 26 FA	acc 9C FF 65 26 FA	got 5B FF 65 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଛ୍‌	[0B28 0B4D 0B1B 0B4D 200C]	pref 9C FF 65 26 FA	acc 9C FF 65 26 FA	got 5B FF 65 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଛ	[0B30 0B4D 0B28 0B4D 0B1B]	pref 9C FF 65 F6	acc 9C FF 65 F6	got 5B FF 65 F6	reported 
+3 exception: na 9C->5B	ନ୍ଜ	[0B28 0B4D 0B1C]	pref 9C FF 6B	acc 9C FF 6B	got 5B FF 6B	reported 
+3 exception: na 9C->5B	ନ୍ଜା	[0B28 0B4D 0B1C 0B3E]	pref 9C FF 6B E6	acc 9C FF 6B E6	got 5B FF 6B E6	reported 
+3 exception: na 9C->5B	ନ୍ଜି	[0B28 0B4D 0B1C 0B3F]	pref 9C FF 6B E7	acc 9C FF 6B E7	got 5B FF 6B E7	reported 
+3 exception: na 9C->5B	ନ୍ଜୀ	[0B28 0B4D 0B1C 0B40]	pref 9C FF 6B EA	acc 9C FF 6B EA	got 5B FF 6B EA	reported 
+3 exception: na 9C->5B	ନ୍ଜୁ	[0B28 0B4D 0B1C 0B41]	pref 9C FF 6B EC	acc 9C FF 6B EC	got 5B FF 6B EC	reported 
+3 exception: na 9C->5B	ନ୍ଜୂ	[0B28 0B4D 0B1C 0B42]	pref 9C FF 6B EE	acc 9C FF 6B EE	got 5B FF 6B EE	reported 
+3 exception: na 9C->5B	ନ୍ଜୃ	[0B28 0B4D 0B1C 0B43]	pref 9C FF 6B 26 F5	acc 9C FF 6B 26 F5	got 5B FF 6B 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଜୖ	[0B28 0B4D 0B1C 0B56]	pref 9C FF 6B F0	acc 9C FF 6B F0	got 5B FF 6B F0	reported 
+3 exception: na 9C->5B	ନ୍ଜୗ	[0B28 0B4D 0B1C 0B57]	pref 9C FF 6B F2	acc 9C FF 6B F2	got 5B FF 6B F2	reported 
+3 exception: na 9C->5B	ନ୍ଜେ	[0B28 0B4D 0B1C 0B47]	pref 7B 9C FF 6B	acc 7B 9C FF 6B	got 7B 5B FF 6B	reported 
+3 exception: na 9C->5B	ନ୍ଜଂ	[0B28 0B4D 0B1C 0B02]	pref 9C FF 6B F3	acc 9C FF 6B F3	got 5B FF 6B F3	reported 
+3 exception: na 9C->5B	ନ୍ଜଁ	[0B28 0B4D 0B1C 0B01]	pref 9C FF 6B F4	acc 9C FF 6B F4	got 5B FF 6B F4	reported 
+3 exception: na 9C->5B	ନ୍ଜଃ	[0B28 0B4D 0B1C 0B03]	pref 9C FF 6B 85	acc 9C FF 6B 85	got 5B FF 6B 85	reported 
+3 exception: na 9C->5B	ନ୍ଜ୍ର	[0B28 0B4D 0B1C 0B4D 0B30]	pref 9C FF 6B 26 F7	acc 9C FF 6B 26 F7	got 5B FF 6B 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଜ୍ୟ	[0B28 0B4D 0B1C 0B4D 0B5F]	pref 9C FF 6B BF	acc 9C FF 6B BF	got 5B FF 6B BF	reported 
+3 exception: na 9C->5B	ନ୍ଜ୍	[0B28 0B4D 0B1C 0B4D]	pref 9C FF 6B 26 FA	acc 9C FF 6B 26 FA	got 5B FF 6B 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଜ୍‌	[0B28 0B4D 0B1C 0B4D 200C]	pref 9C FF 6B 26 FA	acc 9C FF 6B 26 FA	got 5B FF 6B 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଜ	[0B30 0B4D 0B28 0B4D 0B1C]	pref 9C FF 6B F6	acc 9C FF 6B F6	got 5B FF 6B F6	reported 
+3 exception: na 9C->5B	ନ୍ଝ	[0B28 0B4D 0B1D]	pref 9C FF 6D	acc 9C FF 6D	got 5B FF 6D	reported 
+3 exception: na 9C->5B	ନ୍ଝା	[0B28 0B4D 0B1D 0B3E]	pref 9C FF 6D E6	acc 9C FF 6D E6	got 5B FF 6D E6	reported 
+3 exception: na 9C->5B	ନ୍ଝି	[0B28 0B4D 0B1D 0B3F]	pref 9C FF 6D E7	acc 9C FF 6D E7	got 5B FF 6D E7	reported 
+3 exception: na 9C->5B	ନ୍ଝୀ	[0B28 0B4D 0B1D 0B40]	pref 9C FF 6D EA	acc 9C FF 6D EA	got 5B FF 6D EA	reported 
+3 exception: na 9C->5B	ନ୍ଝୁ	[0B28 0B4D 0B1D 0B41]	pref 9C FF 6D EC	acc 9C FF 6D EC	got 5B FF 6D EC	reported 
+3 exception: na 9C->5B	ନ୍ଝୂ	[0B28 0B4D 0B1D 0B42]	pref 9C FF 6D EE	acc 9C FF 6D EE	got 5B FF 6D EE	reported 
+3 exception: na 9C->5B	ନ୍ଝୃ	[0B28 0B4D 0B1D 0B43]	pref 9C FF 6D 26 F5	acc 9C FF 6D 26 F5	got 5B FF 6D 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଝୖ	[0B28 0B4D 0B1D 0B56]	pref 9C FF 6D F0	acc 9C FF 6D F0	got 5B FF 6D F0	reported 
+3 exception: na 9C->5B	ନ୍ଝୗ	[0B28 0B4D 0B1D 0B57]	pref 9C FF 6D F2	acc 9C FF 6D F2	got 5B FF 6D F2	reported 
+3 exception: na 9C->5B	ନ୍ଝେ	[0B28 0B4D 0B1D 0B47]	pref 7B 9C FF 6D	acc 7B 9C FF 6D	got 7B 5B FF 6D	reported 
+3 exception: na 9C->5B	ନ୍ଝଂ	[0B28 0B4D 0B1D 0B02]	pref 9C FF 6D F3	acc 9C FF 6D F3	got 5B FF 6D F3	reported 
+3 exception: na 9C->5B	ନ୍ଝଁ	[0B28 0B4D 0B1D 0B01]	pref 9C FF 6D F4	acc 9C FF 6D F4	got 5B FF 6D F4	reported 
+3 exception: na 9C->5B	ନ୍ଝଃ	[0B28 0B4D 0B1D 0B03]	pref 9C FF 6D 85	acc 9C FF 6D 85	got 5B FF 6D 85	reported 
+3 exception: na 9C->5B	ନ୍ଝ୍ର	[0B28 0B4D 0B1D 0B4D 0B30]	pref 9C FF 6D 26 F7	acc 9C FF 6D 26 F7	got 5B FF 6D 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଝ୍ୟ	[0B28 0B4D 0B1D 0B4D 0B5F]	pref 9C FF 6D BF	acc 9C FF 6D BF	got 5B FF 6D BF	reported 
+3 exception: na 9C->5B	ନ୍ଝ୍	[0B28 0B4D 0B1D 0B4D]	pref 9C FF 6D 26 FA	acc 9C FF 6D 26 FA	got 5B FF 6D 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଝ୍‌	[0B28 0B4D 0B1D 0B4D 200C]	pref 9C FF 6D 26 FA	acc 9C FF 6D 26 FA	got 5B FF 6D 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଝ	[0B30 0B4D 0B28 0B4D 0B1D]	pref 9C FF 6D F6	acc 9C FF 6D F6	got 5B FF 6D F6	reported 
+3 exception: na 9C->5B	ନ୍ଞ	[0B28 0B4D 0B1E]	pref 9C FF FA 6E FF	acc 9C FF FA 6E FF	got 5B FF FA 6E FF	reported 
+3 exception: na 9C->5B	ନ୍ଞା	[0B28 0B4D 0B1E 0B3E]	pref 9C FF FA 6E FF E6	acc 9C FF FA 6E FF E6	got 5B FF FA 6E FF E6	reported 
+3 exception: na 9C->5B	ନ୍ଞି	[0B28 0B4D 0B1E 0B3F]	pref 9C FF FA 6E FF E7	acc 9C FF FA 6E FF E7	got 5B FF FA 6E FF E7	reported 
+3 exception: na 9C->5B	ନ୍ଞୀ	[0B28 0B4D 0B1E 0B40]	pref 9C FF FA 6E FF EA	acc 9C FF FA 6E FF EA	got 5B FF FA 6E FF EA	reported 
+3 exception: na 9C->5B	ନ୍ଞୁ	[0B28 0B4D 0B1E 0B41]	pref 9C FF FA 6E FF EB	acc 9C FF FA 6E FF EB	got 5B FF FA 6E FF EB	reported 
+3 exception: na 9C->5B	ନ୍ଞୂ	[0B28 0B4D 0B1E 0B42]	pref 9C FF FA 6E FF ED	acc 9C FF FA 6E FF ED	got 5B FF FA 6E FF ED	reported 
+3 exception: na 9C->5B	ନ୍ଞୃ	[0B28 0B4D 0B1E 0B43]	pref 9C FF FA 6E FF F5	acc 9C FF FA 6E FF F5	got 5B FF FA 6E FF F5	reported 
+3 exception: na 9C->5B	ନ୍ଞୖ	[0B28 0B4D 0B1E 0B56]	pref 9C FF FA 6E FF F0	acc 9C FF FA 6E FF F0	got 5B FF FA 6E FF F0	reported 
+3 exception: na 9C->5B	ନ୍ଞୗ	[0B28 0B4D 0B1E 0B57]	pref 9C FF FA 6E FF F2	acc 9C FF FA 6E FF F2	got 5B FF FA 6E FF F2	reported 
+3 exception: na 9C->5B	ନ୍ଞେ	[0B28 0B4D 0B1E 0B47]	pref 7B 9C FF FA 6E FF	acc 7B 9C FF FA 6E FF	got 7B 5B FF FA 6E FF	reported 
+3 exception: na 9C->5B	ନ୍ଞଂ	[0B28 0B4D 0B1E 0B02]	pref 9C FF FA 6E FF F3	acc 9C FF FA 6E FF F3	got 5B FF FA 6E FF F3	reported 
+3 exception: na 9C->5B	ନ୍ଞଁ	[0B28 0B4D 0B1E 0B01]	pref 9C FF FA 6E FF F4	acc 9C FF FA 6E FF F4	got 5B FF FA 6E FF F4	reported 
+3 exception: na 9C->5B	ନ୍ଞଃ	[0B28 0B4D 0B1E 0B03]	pref 9C FF FA 6E FF 85	acc 9C FF FA 6E FF 85	got 5B FF FA 6E FF 85	reported 
+3 exception: na 9C->5B	ନ୍ଞ୍ର	[0B28 0B4D 0B1E 0B4D 0B30]	pref 9C FF FA 6E FF F7	acc 9C FF FA 6E FF F7	got 5B FF FA 6E FF F7	reported 
+3 exception: na 9C->5B	ନ୍ଞ୍ୟ	[0B28 0B4D 0B1E 0B4D 0B5F]	pref 9C FF FA 6E FF BF	acc 9C FF FA 6E FF BF	got 5B FF FA 6E FF BF	reported 
+3 exception: na 9C->5B	ନ୍ଞ୍	[0B28 0B4D 0B1E 0B4D]	pref 9C FF FA 6E FF FA	acc 9C FF FA 6E FF FA	got 5B FF FA 6E FF FA	reported 
+3 exception: na 9C->5B	ନ୍ଞ୍‌	[0B28 0B4D 0B1E 0B4D 200C]	pref 9C FF FA 6E FF FA	acc 9C FF FA 6E FF FA	got 5B FF FA 6E FF FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଞ	[0B30 0B4D 0B28 0B4D 0B1E]	pref 9C FF FA 6E FF F6	acc 9C FF FA 6E FF F6	got 5B FF FA 6E FF F6	reported 
+3 exception: na 9C->5B	ନ୍ଟ	[0B28 0B4D 0B1F]	pref 9C FF 75	acc 9C FF 75	got 5B FF 75	reported 
+3 exception: na 9C->5B	ନ୍ଟା	[0B28 0B4D 0B1F 0B3E]	pref 9C FF 75 E6	acc 9C FF 75 E6	got 5B FF 75 E6	reported 
+3 exception: na 9C->5B	ନ୍ଟି	[0B28 0B4D 0B1F 0B3F]	pref 9C FF 75 E7	acc 9C FF 75 E7	got 5B FF 75 E7	reported 
+3 exception: na 9C->5B	ନ୍ଟୀ	[0B28 0B4D 0B1F 0B40]	pref 9C FF 75 EA	acc 9C FF 75 EA	got 5B FF 75 EA	reported 
+3 exception: na 9C->5B	ନ୍ଟୁ	[0B28 0B4D 0B1F 0B41]	pref 9C FF 75 EC	acc 9C FF 75 EC	got 5B FF 75 EC	reported 
+3 exception: na 9C->5B	ନ୍ଟୂ	[0B28 0B4D 0B1F 0B42]	pref 9C FF 75 EE	acc 9C FF 75 EE	got 5B FF 75 EE	reported 
+3 exception: na 9C->5B	ନ୍ଟୃ	[0B28 0B4D 0B1F 0B43]	pref 9C FF 75 26 F5	acc 9C FF 75 26 F5	got 5B FF 75 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଟୖ	[0B28 0B4D 0B1F 0B56]	pref 9C FF 75 F0	acc 9C FF 75 F0	got 5B FF 75 F0	reported 
+3 exception: na 9C->5B	ନ୍ଟୗ	[0B28 0B4D 0B1F 0B57]	pref 9C FF 75 F2	acc 9C FF 75 F2	got 5B FF 75 F2	reported 
+3 exception: na 9C->5B	ନ୍ଟେ	[0B28 0B4D 0B1F 0B47]	pref 7B 9C FF 75	acc 7B 9C FF 75	got 7B 5B FF 75	reported 
+3 exception: na 9C->5B	ନ୍ଟଂ	[0B28 0B4D 0B1F 0B02]	pref 9C FF 75 F3	acc 9C FF 75 F3	got 5B FF 75 F3	reported 
+3 exception: na 9C->5B	ନ୍ଟଁ	[0B28 0B4D 0B1F 0B01]	pref 9C FF 75 F4	acc 9C FF 75 F4	got 5B FF 75 F4	reported 
+3 exception: na 9C->5B	ନ୍ଟଃ	[0B28 0B4D 0B1F 0B03]	pref 9C FF 75 85	acc 9C FF 75 85	got 5B FF 75 85	reported 
+3 exception: na 9C->5B	ନ୍ଟ୍ର	[0B28 0B4D 0B1F 0B4D 0B30]	pref 9C FF 75 26 F7	acc 9C FF 75 26 F7	got 5B FF 75 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଟ୍ୟ	[0B28 0B4D 0B1F 0B4D 0B5F]	pref 9C FF 75 BF	acc 9C FF 75 BF	got 5B FF 75 BF	reported 
+3 exception: na 9C->5B	ନ୍ଟ୍	[0B28 0B4D 0B1F 0B4D]	pref 9C FF 75 26 FA	acc 9C FF 75 26 FA	got 5B FF 75 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଟ୍‌	[0B28 0B4D 0B1F 0B4D 200C]	pref 9C FF 75 26 FA	acc 9C FF 75 26 FA	got 5B FF 75 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଟ	[0B30 0B4D 0B28 0B4D 0B1F]	pref 9C FF 75 F6	acc 9C FF 75 F6	got 5B FF 75 F6	reported 
+3 exception: na 9C->5B	ନ୍ଠ	[0B28 0B4D 0B20]	pref 9C FF 77	acc 9C FF 77	got 5B FF 77	reported 
+3 exception: na 9C->5B	ନ୍ଠା	[0B28 0B4D 0B20 0B3E]	pref 9C FF 77 E6	acc 9C FF 77 E6	got 5B FF 77 E6	reported 
+3 exception: na 9C->5B	ନ୍ଠି	[0B28 0B4D 0B20 0B3F]	pref 9C FF 77 E7	acc 9C FF 77 E7	got 5B FF 77 E7	reported 
+3 exception: na 9C->5B	ନ୍ଠୀ	[0B28 0B4D 0B20 0B40]	pref 9C FF 77 EA	acc 9C FF 77 EA	got 5B FF 77 EA	reported 
+3 exception: na 9C->5B	ନ୍ଠୁ	[0B28 0B4D 0B20 0B41]	pref 9C FF 77 EC	acc 9C FF 77 EC	got 5B FF 77 EC	reported 
+3 exception: na 9C->5B	ନ୍ଠୂ	[0B28 0B4D 0B20 0B42]	pref 9C FF 77 EE	acc 9C FF 77 EE	got 5B FF 77 EE	reported 
+3 exception: na 9C->5B	ନ୍ଠୃ	[0B28 0B4D 0B20 0B43]	pref 9C FF 77 26 F5	acc 9C FF 77 26 F5	got 5B FF 77 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଠୖ	[0B28 0B4D 0B20 0B56]	pref 9C FF 77 F0	acc 9C FF 77 F0	got 5B FF 77 F0	reported 
+3 exception: na 9C->5B	ନ୍ଠୗ	[0B28 0B4D 0B20 0B57]	pref 9C FF 77 F2	acc 9C FF 77 F2	got 5B FF 77 F2	reported 
+3 exception: na 9C->5B	ନ୍ଠେ	[0B28 0B4D 0B20 0B47]	pref 7B 9C FF 77	acc 7B 9C FF 77	got 7B 5B FF 77	reported 
+3 exception: na 9C->5B	ନ୍ଠଂ	[0B28 0B4D 0B20 0B02]	pref 9C FF 77 F3	acc 9C FF 77 F3	got 5B FF 77 F3	reported 
+3 exception: na 9C->5B	ନ୍ଠଁ	[0B28 0B4D 0B20 0B01]	pref 9C FF 77 F4	acc 9C FF 77 F4	got 5B FF 77 F4	reported 
+3 exception: na 9C->5B	ନ୍ଠଃ	[0B28 0B4D 0B20 0B03]	pref 9C FF 77 85	acc 9C FF 77 85	got 5B FF 77 85	reported 
+3 exception: na 9C->5B	ନ୍ଠ୍ର	[0B28 0B4D 0B20 0B4D 0B30]	pref 9C FF 77 26 F7	acc 9C FF 77 26 F7	got 5B FF 77 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଠ୍ୟ	[0B28 0B4D 0B20 0B4D 0B5F]	pref 9C FF 77 BF	acc 9C FF 77 BF	got 5B FF 77 BF	reported 
+3 exception: na 9C->5B	ନ୍ଠ୍	[0B28 0B4D 0B20 0B4D]	pref 9C FF 77 26 FA	acc 9C FF 77 26 FA	got 5B FF 77 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଠ୍‌	[0B28 0B4D 0B20 0B4D 200C]	pref 9C FF 77 26 FA	acc 9C FF 77 26 FA	got 5B FF 77 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଠ	[0B30 0B4D 0B28 0B4D 0B20]	pref 9C FF 77 F6	acc 9C FF 77 F6	got 5B FF 77 F6	reported 
+3 exception: na 9C->5B	ନ୍ଡ	[0B28 0B4D 0B21]	pref 9C FF EF	acc 9C FF EF	got 5B FF EF	reported 
+3 exception: na 9C->5B	ନ୍ଡା	[0B28 0B4D 0B21 0B3E]	pref 9C FF EF E6	acc 9C FF EF E6	got 5B FF EF E6	reported 
+3 exception: na 9C->5B	ନ୍ଡି	[0B28 0B4D 0B21 0B3F]	pref 9C FF EF E7	acc 9C FF EF E7	got 5B FF EF E7	reported 
+3 exception: na 9C->5B	ନ୍ଡୀ	[0B28 0B4D 0B21 0B40]	pref 9C FF EF EA	acc 9C FF EF EA	got 5B FF EF EA	reported 
+3 exception: na 9C->5B	ନ୍ଡୁ	[0B28 0B4D 0B21 0B41]	pref 9C FF EF EC	acc 9C FF EF EC	got 5B FF EF EC	reported 
+3 exception: na 9C->5B	ନ୍ଡୂ	[0B28 0B4D 0B21 0B42]	pref 9C FF EF EE	acc 9C FF EF EE	got 5B FF EF EE	reported 
+3 exception: na 9C->5B	ନ୍ଡୃ	[0B28 0B4D 0B21 0B43]	pref 9C FF EF 26 F5	acc 9C FF EF 26 F5	got 5B FF EF 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଡୖ	[0B28 0B4D 0B21 0B56]	pref 9C FF EF F0	acc 9C FF EF F0	got 5B FF EF F0	reported 
+3 exception: na 9C->5B	ନ୍ଡୗ	[0B28 0B4D 0B21 0B57]	pref 9C FF EF F2	acc 9C FF EF F2	got 5B FF EF F2	reported 
+3 exception: na 9C->5B	ନ୍ଡେ	[0B28 0B4D 0B21 0B47]	pref 7B 9C FF EF	acc 7B 9C FF EF	got 7B 5B FF EF	reported 
+3 exception: na 9C->5B	ନ୍ଡଂ	[0B28 0B4D 0B21 0B02]	pref 9C FF EF F3	acc 9C FF EF F3	got 5B FF EF F3	reported 
+3 exception: na 9C->5B	ନ୍ଡଁ	[0B28 0B4D 0B21 0B01]	pref 9C FF EF F4	acc 9C FF EF F4	got 5B FF EF F4	reported 
+3 exception: na 9C->5B	ନ୍ଡଃ	[0B28 0B4D 0B21 0B03]	pref 9C FF EF 85	acc 9C FF EF 85	got 5B FF EF 85	reported 
+3 exception: na 9C->5B	ନ୍ଡ୍ର	[0B28 0B4D 0B21 0B4D 0B30]	pref 9C FF EF 26 F7	acc 9C FF EF 26 F7	got 5B FF EF 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଡ୍ୟ	[0B28 0B4D 0B21 0B4D 0B5F]	pref 9C FF EF BF	acc 9C FF EF BF	got 5B FF EF BF	reported 
+3 exception: na 9C->5B	ନ୍ଡ୍	[0B28 0B4D 0B21 0B4D]	pref 9C FF EF 26 FA	acc 9C FF EF 26 FA	got 5B FF EF 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଡ୍‌	[0B28 0B4D 0B21 0B4D 200C]	pref 9C FF EF 26 FA	acc 9C FF EF 26 FA	got 5B FF EF 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଡ	[0B30 0B4D 0B28 0B4D 0B21]	pref 9C FF EF F6	acc 9C FF EF F6	got 5B FF EF F6	reported 
+3 exception: na 9C->5B	ନ୍ଢ	[0B28 0B4D 0B22]	pref 9C FF E9	acc 9C FF E9	got 5B FF E9	reported 
+3 exception: na 9C->5B	ନ୍ଢା	[0B28 0B4D 0B22 0B3E]	pref 9C FF E9 E6	acc 9C FF E9 E6	got 5B FF E9 E6	reported 
+3 exception: na 9C->5B	ନ୍ଢି	[0B28 0B4D 0B22 0B3F]	pref 9C FF E9 E7	acc 9C FF E9 E7	got 5B FF E9 E7	reported 
+3 exception: na 9C->5B	ନ୍ଢୀ	[0B28 0B4D 0B22 0B40]	pref 9C FF E9 EA	acc 9C FF E9 EA	got 5B FF E9 EA	reported 
+3 exception: na 9C->5B	ନ୍ଢୁ	[0B28 0B4D 0B22 0B41]	pref 9C FF E9 EC	acc 9C FF E9 EC	got 5B FF E9 EC	reported 
+3 exception: na 9C->5B	ନ୍ଢୂ	[0B28 0B4D 0B22 0B42]	pref 9C FF E9 EE	acc 9C FF E9 EE	got 5B FF E9 EE	reported 
+3 exception: na 9C->5B	ନ୍ଢୃ	[0B28 0B4D 0B22 0B43]	pref 9C FF E9 26 F5	acc 9C FF E9 26 F5	got 5B FF E9 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଢୖ	[0B28 0B4D 0B22 0B56]	pref 9C FF E9 F0	acc 9C FF E9 F0	got 5B FF E9 F0	reported 
+3 exception: na 9C->5B	ନ୍ଢୗ	[0B28 0B4D 0B22 0B57]	pref 9C FF E9 F2	acc 9C FF E9 F2	got 5B FF E9 F2	reported 
+3 exception: na 9C->5B	ନ୍ଢେ	[0B28 0B4D 0B22 0B47]	pref 7B 9C FF E9	acc 7B 9C FF E9	got 7B 5B FF E9	reported 
+3 exception: na 9C->5B	ନ୍ଢଂ	[0B28 0B4D 0B22 0B02]	pref 9C FF E9 F3	acc 9C FF E9 F3	got 5B FF E9 F3	reported 
+3 exception: na 9C->5B	ନ୍ଢଁ	[0B28 0B4D 0B22 0B01]	pref 9C FF E9 F4	acc 9C FF E9 F4	got 5B FF E9 F4	reported 
+3 exception: na 9C->5B	ନ୍ଢଃ	[0B28 0B4D 0B22 0B03]	pref 9C FF E9 85	acc 9C FF E9 85	got 5B FF E9 85	reported 
+3 exception: na 9C->5B	ନ୍ଢ୍ର	[0B28 0B4D 0B22 0B4D 0B30]	pref 9C FF E9 26 F7	acc 9C FF E9 26 F7	got 5B FF E9 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଢ୍ୟ	[0B28 0B4D 0B22 0B4D 0B5F]	pref 9C FF E9 BF	acc 9C FF E9 BF	got 5B FF E9 BF	reported 
+3 exception: na 9C->5B	ନ୍ଢ୍	[0B28 0B4D 0B22 0B4D]	pref 9C FF E9 26 FA	acc 9C FF E9 26 FA	got 5B FF E9 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଢ୍‌	[0B28 0B4D 0B22 0B4D 200C]	pref 9C FF E9 26 FA	acc 9C FF E9 26 FA	got 5B FF E9 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଢ	[0B30 0B4D 0B28 0B4D 0B22]	pref 9C FF E9 F6	acc 9C FF E9 F6	got 5B FF E9 F6	reported 
+3 exception: na 9C->5B	ନ୍ଣ	[0B28 0B4D 0B23]	pref 9C FF 40	acc 9C FF 40	got 5B FF 40	reported 
+3 exception: na 9C->5B	ନ୍ଣା	[0B28 0B4D 0B23 0B3E]	pref 9C FF 40 E6	acc 9C FF 40 E6	got 5B FF 40 E6	reported 
+3 exception: na 9C->5B	ନ୍ଣି	[0B28 0B4D 0B23 0B3F]	pref 9C FF 40 E7	acc 9C FF 40 E7	got 5B FF 40 E7	reported 
+3 exception: na 9C->5B	ନ୍ଣୀ	[0B28 0B4D 0B23 0B40]	pref 9C FF 40 EA	acc 9C FF 40 EA	got 5B FF 40 EA	reported 
+3 exception: na 9C->5B	ନ୍ଣୁ	[0B28 0B4D 0B23 0B41]	pref 9C FF 40 EC	acc 9C FF 40 EC	got 5B FF 40 EC	reported 
+3 exception: na 9C->5B	ନ୍ଣୂ	[0B28 0B4D 0B23 0B42]	pref 9C FF 40 EE	acc 9C FF 40 EE	got 5B FF 40 EE	reported 
+3 exception: na 9C->5B	ନ୍ଣୃ	[0B28 0B4D 0B23 0B43]	pref 9C FF 40 26 F5	acc 9C FF 40 26 F5	got 5B FF 40 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଣୖ	[0B28 0B4D 0B23 0B56]	pref 9C FF 40 F0	acc 9C FF 40 F0	got 5B FF 40 F0	reported 
+3 exception: na 9C->5B	ନ୍ଣୗ	[0B28 0B4D 0B23 0B57]	pref 9C FF 40 F2	acc 9C FF 40 F2	got 5B FF 40 F2	reported 
+3 exception: na 9C->5B	ନ୍ଣେ	[0B28 0B4D 0B23 0B47]	pref 7B 9C FF 40	acc 7B 9C FF 40	got 7B 5B FF 40	reported 
+3 exception: na 9C->5B	ନ୍ଣଂ	[0B28 0B4D 0B23 0B02]	pref 9C FF 40 F3	acc 9C FF 40 F3	got 5B FF 40 F3	reported 
+3 exception: na 9C->5B	ନ୍ଣଁ	[0B28 0B4D 0B23 0B01]	pref 9C FF 40 F4	acc 9C FF 40 F4	got 5B FF 40 F4	reported 
+3 exception: na 9C->5B	ନ୍ଣଃ	[0B28 0B4D 0B23 0B03]	pref 9C FF 40 85	acc 9C FF 40 85	got 5B FF 40 85	reported 
+3 exception: na 9C->5B	ନ୍ଣ୍ର	[0B28 0B4D 0B23 0B4D 0B30]	pref 9C FF 40 26 F7	acc 9C FF 40 26 F7	got 5B FF 40 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଣ୍ୟ	[0B28 0B4D 0B23 0B4D 0B5F]	pref 9C FF 40 BF	acc 9C FF 40 BF	got 5B FF 40 BF	reported 
+3 exception: na 9C->5B	ନ୍ଣ୍	[0B28 0B4D 0B23 0B4D]	pref 9C FF 40 26 FA	acc 9C FF 40 26 FA	got 5B FF 40 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଣ୍‌	[0B28 0B4D 0B23 0B4D 200C]	pref 9C FF 40 26 FA	acc 9C FF 40 26 FA	got 5B FF 40 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଣ	[0B30 0B4D 0B28 0B4D 0B23]	pref 9C FF 40 F6	acc 9C FF 40 F6	got 5B FF 40 F6	reported 
+3 exception: na 9C->5B	ନ୍ପ	[0B28 0B4D 0B2A]	pref 9C FF AC	acc 9C FF AC	got 5B FF AC	reported 
+3 exception: na 9C->5B	ନ୍ପା	[0B28 0B4D 0B2A 0B3E]	pref 9C FF AC E6	acc 9C FF AC E6	got 5B FF AC E6	reported 
+3 exception: na 9C->5B	ନ୍ପି	[0B28 0B4D 0B2A 0B3F]	pref 9C FF AC E7	acc 9C FF AC E7	got 5B FF AC E7	reported 
+3 exception: na 9C->5B	ନ୍ପୀ	[0B28 0B4D 0B2A 0B40]	pref 9C FF AC EA	acc 9C FF AC EA	got 5B FF AC EA	reported 
+3 exception: na 9C->5B	ନ୍ପୁ	[0B28 0B4D 0B2A 0B41]	pref 9C FF AC EC	acc 9C FF AC EC	got 5B FF AC EC	reported 
+3 exception: na 9C->5B	ନ୍ପୂ	[0B28 0B4D 0B2A 0B42]	pref 9C FF AC EE	acc 9C FF AC EE	got 5B FF AC EE	reported 
+3 exception: na 9C->5B	ନ୍ପୃ	[0B28 0B4D 0B2A 0B43]	pref 9C FF AC 26 F5	acc 9C FF AC 26 F5	got 5B FF AC 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ପୖ	[0B28 0B4D 0B2A 0B56]	pref 9C FF AC F0	acc 9C FF AC F0	got 5B FF AC F0	reported 
+3 exception: na 9C->5B	ନ୍ପୗ	[0B28 0B4D 0B2A 0B57]	pref 9C FF AC F2	acc 9C FF AC F2	got 5B FF AC F2	reported 
+3 exception: na 9C->5B	ନ୍ପେ	[0B28 0B4D 0B2A 0B47]	pref 7B 9C FF AC	acc 7B 9C FF AC	got 7B 5B FF AC	reported 
+3 exception: na 9C->5B	ନ୍ପଂ	[0B28 0B4D 0B2A 0B02]	pref 9C FF AC F3	acc 9C FF AC F3	got 5B FF AC F3	reported 
+3 exception: na 9C->5B	ନ୍ପଁ	[0B28 0B4D 0B2A 0B01]	pref 9C FF AC F4	acc 9C FF AC F4	got 5B FF AC F4	reported 
+3 exception: na 9C->5B	ନ୍ପଃ	[0B28 0B4D 0B2A 0B03]	pref 9C FF AC 85	acc 9C FF AC 85	got 5B FF AC 85	reported 
+3 exception: na 9C->5B	ନ୍ପ୍ର	[0B28 0B4D 0B2A 0B4D 0B30]	pref 9C FF AC 26 F7	acc 9C FF AC 26 F7	got 5B FF AC 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ପ୍ୟ	[0B28 0B4D 0B2A 0B4D 0B5F]	pref 9C FF AC BF	acc 9C FF AC BF	got 5B FF AC BF	reported 
+3 exception: na 9C->5B	ନ୍ପ୍	[0B28 0B4D 0B2A 0B4D]	pref 9C FF AC 26 FA	acc 9C FF AC 26 FA	got 5B FF AC 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ପ୍‌	[0B28 0B4D 0B2A 0B4D 200C]	pref 9C FF AC 26 FA	acc 9C FF AC 26 FA	got 5B FF AC 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ପ	[0B30 0B4D 0B28 0B4D 0B2A]	pref 9C FF AC F6	acc 9C FF AC F6	got 5B FF AC F6	reported 
+3 exception: na 9C->5B	ନ୍ଫ	[0B28 0B4D 0B2B]	pref 9C FF AE	acc 9C FF AE	got 5B FF AE	reported 
+3 exception: na 9C->5B	ନ୍ଫା	[0B28 0B4D 0B2B 0B3E]	pref 9C FF AE E6	acc 9C FF AE E6	got 5B FF AE E6	reported 
+3 exception: na 9C->5B	ନ୍ଫି	[0B28 0B4D 0B2B 0B3F]	pref 9C FF AE E7	acc 9C FF AE E7	got 5B FF AE E7	reported 
+3 exception: na 9C->5B	ନ୍ଫୀ	[0B28 0B4D 0B2B 0B40]	pref 9C FF AE EA	acc 9C FF AE EA	got 5B FF AE EA	reported 
+3 exception: na 9C->5B	ନ୍ଫୁ	[0B28 0B4D 0B2B 0B41]	pref 9C FF AE EC	acc 9C FF AE EC	got 5B FF AE EC	reported 
+3 exception: na 9C->5B	ନ୍ଫୂ	[0B28 0B4D 0B2B 0B42]	pref 9C FF AE EE	acc 9C FF AE EE	got 5B FF AE EE	reported 
+3 exception: na 9C->5B	ନ୍ଫୃ	[0B28 0B4D 0B2B 0B43]	pref 9C FF AE 26 F5	acc 9C FF AE 26 F5	got 5B FF AE 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଫୖ	[0B28 0B4D 0B2B 0B56]	pref 9C FF AE F0	acc 9C FF AE F0	got 5B FF AE F0	reported 
+3 exception: na 9C->5B	ନ୍ଫୗ	[0B28 0B4D 0B2B 0B57]	pref 9C FF AE F2	acc 9C FF AE F2	got 5B FF AE F2	reported 
+3 exception: na 9C->5B	ନ୍ଫେ	[0B28 0B4D 0B2B 0B47]	pref 7B 9C FF AE	acc 7B 9C FF AE	got 7B 5B FF AE	reported 
+3 exception: na 9C->5B	ନ୍ଫଂ	[0B28 0B4D 0B2B 0B02]	pref 9C FF AE F3	acc 9C FF AE F3	got 5B FF AE F3	reported 
+3 exception: na 9C->5B	ନ୍ଫଁ	[0B28 0B4D 0B2B 0B01]	pref 9C FF AE F4	acc 9C FF AE F4	got 5B FF AE F4	reported 
+3 exception: na 9C->5B	ନ୍ଫଃ	[0B28 0B4D 0B2B 0B03]	pref 9C FF AE 85	acc 9C FF AE 85	got 5B FF AE 85	reported 
+3 exception: na 9C->5B	ନ୍ଫ୍ର	[0B28 0B4D 0B2B 0B4D 0B30]	pref 9C FF AE 26 F7	acc 9C FF AE 26 F7	got 5B FF AE 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଫ୍ୟ	[0B28 0B4D 0B2B 0B4D 0B5F]	pref 9C FF AE BF	acc 9C FF AE BF	got 5B FF AE BF	reported 
+3 exception: na 9C->5B	ନ୍ଫ୍	[0B28 0B4D 0B2B 0B4D]	pref 9C FF AE 26 FA	acc 9C FF AE 26 FA	got 5B FF AE 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଫ୍‌	[0B28 0B4D 0B2B 0B4D 200C]	pref 9C FF AE 26 FA	acc 9C FF AE 26 FA	got 5B FF AE 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଫ	[0B30 0B4D 0B28 0B4D 0B2B]	pref 9C FF AE F6	acc 9C FF AE F6	got 5B FF AE F6	reported 
+3 exception: na 9C->5B	ନ୍ବ	[0B28 0B4D 0B2C]	pref 9C FF B4	acc 9C FF B4	got 5B FF B4	reported 
+3 exception: na 9C->5B	ନ୍ବା	[0B28 0B4D 0B2C 0B3E]	pref 9C FF B4 E6	acc 9C FF B4 E6	got 5B FF B4 E6	reported 
+3 exception: na 9C->5B	ନ୍ବି	[0B28 0B4D 0B2C 0B3F]	pref 9C FF B4 E7	acc 9C FF B4 E7	got 5B FF B4 E7	reported 
+3 exception: na 9C->5B	ନ୍ବୀ	[0B28 0B4D 0B2C 0B40]	pref 9C FF B4 EA	acc 9C FF B4 EA	got 5B FF B4 EA	reported 
+3 exception: na 9C->5B	ନ୍ବୁ	[0B28 0B4D 0B2C 0B41]	pref 9C FF B4 EC	acc 9C FF B4 EC	got 5B FF B4 EC	reported 
+3 exception: na 9C->5B	ନ୍ବୂ	[0B28 0B4D 0B2C 0B42]	pref 9C FF B4 EE	acc 9C FF B4 EE	got 5B FF B4 EE	reported 
+3 exception: na 9C->5B	ନ୍ବୃ	[0B28 0B4D 0B2C 0B43]	pref 9C FF B4 26 F5	acc 9C FF B4 26 F5	got 5B FF B4 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ବୖ	[0B28 0B4D 0B2C 0B56]	pref 9C FF B4 F0	acc 9C FF B4 F0	got 5B FF B4 F0	reported 
+3 exception: na 9C->5B	ନ୍ବୗ	[0B28 0B4D 0B2C 0B57]	pref 9C FF B4 F2	acc 9C FF B4 F2	got 5B FF B4 F2	reported 
+3 exception: na 9C->5B	ନ୍ବେ	[0B28 0B4D 0B2C 0B47]	pref 7B 9C FF B4	acc 7B 9C FF B4	got 7B 5B FF B4	reported 
+3 exception: na 9C->5B	ନ୍ବଂ	[0B28 0B4D 0B2C 0B02]	pref 9C FF B4 F3	acc 9C FF B4 F3	got 5B FF B4 F3	reported 
+3 exception: na 9C->5B	ନ୍ବଁ	[0B28 0B4D 0B2C 0B01]	pref 9C FF B4 F4	acc 9C FF B4 F4	got 5B FF B4 F4	reported 
+3 exception: na 9C->5B	ନ୍ବଃ	[0B28 0B4D 0B2C 0B03]	pref 9C FF B4 85	acc 9C FF B4 85	got 5B FF B4 85	reported 
+3 exception: na 9C->5B	ନ୍ବ୍ର	[0B28 0B4D 0B2C 0B4D 0B30]	pref 9C FF B4 26 F7	acc 9C FF B4 26 F7	got 5B FF B4 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ବ୍ୟ	[0B28 0B4D 0B2C 0B4D 0B5F]	pref 9C FF B4 BF	acc 9C FF B4 BF	got 5B FF B4 BF	reported 
+3 exception: na 9C->5B	ନ୍ବ୍	[0B28 0B4D 0B2C 0B4D]	pref 9C FF B4 26 FA	acc 9C FF B4 26 FA	got 5B FF B4 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ବ୍‌	[0B28 0B4D 0B2C 0B4D 200C]	pref 9C FF B4 26 FA	acc 9C FF B4 26 FA	got 5B FF B4 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ବ	[0B30 0B4D 0B28 0B4D 0B2C]	pref 9C FF B4 F6	acc 9C FF B4 F6	got 5B FF B4 F6	reported 
+3 exception: na 9C->5B	ନ୍ଭ	[0B28 0B4D 0B2D]	pref 9C FF B6	acc 9C FF B6	got 5B FF B6	reported 
+3 exception: na 9C->5B	ନ୍ଭା	[0B28 0B4D 0B2D 0B3E]	pref 9C FF B6 E6	acc 9C FF B6 E6	got 5B FF B6 E6	reported 
+3 exception: na 9C->5B	ନ୍ଭି	[0B28 0B4D 0B2D 0B3F]	pref 9C FF B6 E7	acc 9C FF B6 E7	got 5B FF B6 E7	reported 
+3 exception: na 9C->5B	ନ୍ଭୀ	[0B28 0B4D 0B2D 0B40]	pref 9C FF B6 EA	acc 9C FF B6 EA	got 5B FF B6 EA	reported 
+3 exception: na 9C->5B	ନ୍ଭୁ	[0B28 0B4D 0B2D 0B41]	pref 9C FF B6 EC	acc 9C FF B6 EC	got 5B FF B6 EC	reported 
+3 exception: na 9C->5B	ନ୍ଭୂ	[0B28 0B4D 0B2D 0B42]	pref 9C FF B6 EE	acc 9C FF B6 EE	got 5B FF B6 EE	reported 
+3 exception: na 9C->5B	ନ୍ଭୃ	[0B28 0B4D 0B2D 0B43]	pref 9C FF B6 26 F5	acc 9C FF B6 26 F5	got 5B FF B6 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଭୖ	[0B28 0B4D 0B2D 0B56]	pref 9C FF B6 F0	acc 9C FF B6 F0	got 5B FF B6 F0	reported 
+3 exception: na 9C->5B	ନ୍ଭୗ	[0B28 0B4D 0B2D 0B57]	pref 9C FF B6 F2	acc 9C FF B6 F2	got 5B FF B6 F2	reported 
+3 exception: na 9C->5B	ନ୍ଭେ	[0B28 0B4D 0B2D 0B47]	pref 7B 9C FF B6	acc 7B 9C FF B6	got 7B 5B FF B6	reported 
+3 exception: na 9C->5B	ନ୍ଭଂ	[0B28 0B4D 0B2D 0B02]	pref 9C FF B6 F3	acc 9C FF B6 F3	got 5B FF B6 F3	reported 
+3 exception: na 9C->5B	ନ୍ଭଁ	[0B28 0B4D 0B2D 0B01]	pref 9C FF B6 F4	acc 9C FF B6 F4	got 5B FF B6 F4	reported 
+3 exception: na 9C->5B	ନ୍ଭଃ	[0B28 0B4D 0B2D 0B03]	pref 9C FF B6 85	acc 9C FF B6 85	got 5B FF B6 85	reported 
+3 exception: na 9C->5B	ନ୍ଭ୍ର	[0B28 0B4D 0B2D 0B4D 0B30]	pref 9C FF B6 26 F7	acc 9C FF B6 26 F7	got 5B FF B6 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଭ୍ୟ	[0B28 0B4D 0B2D 0B4D 0B5F]	pref 9C FF B6 BF	acc 9C FF B6 BF	got 5B FF B6 BF	reported 
+3 exception: na 9C->5B	ନ୍ଭ୍	[0B28 0B4D 0B2D 0B4D]	pref 9C FF B6 26 FA	acc 9C FF B6 26 FA	got 5B FF B6 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଭ୍‌	[0B28 0B4D 0B2D 0B4D 200C]	pref 9C FF B6 26 FA	acc 9C FF B6 26 FA	got 5B FF B6 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଭ	[0B30 0B4D 0B28 0B4D 0B2D]	pref 9C FF B6 F6	acc 9C FF B6 F6	got 5B FF B6 F6	reported 
+3 exception: na 9C->5B	ନ୍ମ	[0B28 0B4D 0B2E]	pref 9C FF BD	acc 9C FF BD	got 5B FF BD	reported 
+3 exception: na 9C->5B	ନ୍ମା	[0B28 0B4D 0B2E 0B3E]	pref 9C FF BD E6	acc 9C FF BD E6	got 5B FF BD E6	reported 
+3 exception: na 9C->5B	ନ୍ମି	[0B28 0B4D 0B2E 0B3F]	pref 9C FF BD E7	acc 9C FF BD E7	got 5B FF BD E7	reported 
+3 exception: na 9C->5B	ନ୍ମୀ	[0B28 0B4D 0B2E 0B40]	pref 9C FF BD EA	acc 9C FF BD EA	got 5B FF BD EA	reported 
+3 exception: na 9C->5B	ନ୍ମୁ	[0B28 0B4D 0B2E 0B41]	pref 9C FF BD EC	acc 9C FF BD EC	got 5B FF BD EC	reported 
+3 exception: na 9C->5B	ନ୍ମୂ	[0B28 0B4D 0B2E 0B42]	pref 9C FF BD EE	acc 9C FF BD EE	got 5B FF BD EE	reported 
+3 exception: na 9C->5B	ନ୍ମୃ	[0B28 0B4D 0B2E 0B43]	pref 9C FF BD 26 F5	acc 9C FF BD 26 F5	got 5B FF BD 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ମୖ	[0B28 0B4D 0B2E 0B56]	pref 9C FF BD F0	acc 9C FF BD F0	got 5B FF BD F0	reported 
+3 exception: na 9C->5B	ନ୍ମୗ	[0B28 0B4D 0B2E 0B57]	pref 9C FF BD F2	acc 9C FF BD F2	got 5B FF BD F2	reported 
+3 exception: na 9C->5B	ନ୍ମେ	[0B28 0B4D 0B2E 0B47]	pref 7B 9C FF BD	acc 7B 9C FF BD	got 7B 5B FF BD	reported 
+3 exception: na 9C->5B	ନ୍ମଂ	[0B28 0B4D 0B2E 0B02]	pref 9C FF BD F3	acc 9C FF BD F3	got 5B FF BD F3	reported 
+3 exception: na 9C->5B	ନ୍ମଁ	[0B28 0B4D 0B2E 0B01]	pref 9C FF BD F4	acc 9C FF BD F4	got 5B FF BD F4	reported 
+3 exception: na 9C->5B	ନ୍ମଃ	[0B28 0B4D 0B2E 0B03]	pref 9C FF BD 85	acc 9C FF BD 85	got 5B FF BD 85	reported 
+3 exception: na 9C->5B	ନ୍ମ୍ର	[0B28 0B4D 0B2E 0B4D 0B30]	pref 9C FF BD 26 F7	acc 9C FF BD 26 F7	got 5B FF BD 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ମ୍ୟ	[0B28 0B4D 0B2E 0B4D 0B5F]	pref 9C FF BD BF	acc 9C FF BD BF	got 5B FF BD BF	reported 
+3 exception: na 9C->5B	ନ୍ମ୍	[0B28 0B4D 0B2E 0B4D]	pref 9C FF BD 26 FA	acc 9C FF BD 26 FA	got 5B FF BD 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ମ୍‌	[0B28 0B4D 0B2E 0B4D 200C]	pref 9C FF BD 26 FA	acc 9C FF BD 26 FA	got 5B FF BD 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ମ	[0B30 0B4D 0B28 0B4D 0B2E]	pref 9C FF BD F6	acc 9C FF BD F6	got 5B FF BD F6	reported 
+3 exception: na 9C->5B	ନ୍ରୃ	[0B28 0B4D 0B30 0B43]	pref 9C FF F7 F5	acc 9C FF F7 F5	got 5B FF F7 F5	reported 
+3 exception: na 9C->5B	ନ୍ର୍ର	[0B28 0B4D 0B30 0B4D 0B30]	pref 9C FF F7 F7	acc 9C FF F7 F7	got 5B FF F7 F7	reported 
+3 exception: na 9C->5B	ନ୍ର୍	[0B28 0B4D 0B30 0B4D]	pref 9C FF F7 FA	acc 9C FF F7 FA	got 5B FF F7 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ର	[0B30 0B4D 0B28 0B4D 0B30]	pref 9C FF F7 F6	acc 9C FF F7 F6	got 5B FF F7 F6	reported 
+3 exception: na 9C->5B	ନ୍ଲ	[0B28 0B4D 0B32]	pref 9C FF E2	acc 9C FF E2	got 5B FF E2	reported 
+3 exception: na 9C->5B	ନ୍ଲା	[0B28 0B4D 0B32 0B3E]	pref 9C FF E2 E6	acc 9C FF E2 E6	got 5B FF E2 E6	reported 
+3 exception: na 9C->5B	ନ୍ଲି	[0B28 0B4D 0B32 0B3F]	pref 9C FF E2 E7	acc 9C FF E2 E7	got 5B FF E2 E7	reported 
+3 exception: na 9C->5B	ନ୍ଲୀ	[0B28 0B4D 0B32 0B40]	pref 9C FF E2 EA	acc 9C FF E2 EA	got 5B FF E2 EA	reported 
+3 exception: na 9C->5B	ନ୍ଲୁ	[0B28 0B4D 0B32 0B41]	pref 9C FF E2 EC	acc 9C FF E2 EC	got 5B FF E2 EC	reported 
+3 exception: na 9C->5B	ନ୍ଲୂ	[0B28 0B4D 0B32 0B42]	pref 9C FF E2 EE	acc 9C FF E2 EE	got 5B FF E2 EE	reported 
+3 exception: na 9C->5B	ନ୍ଲୃ	[0B28 0B4D 0B32 0B43]	pref 9C FF E2 26 F5	acc 9C FF E2 26 F5	got 5B FF E2 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଲୖ	[0B28 0B4D 0B32 0B56]	pref 9C FF E2 F0	acc 9C FF E2 F0	got 5B FF E2 F0	reported 
+3 exception: na 9C->5B	ନ୍ଲୗ	[0B28 0B4D 0B32 0B57]	pref 9C FF E2 F2	acc 9C FF E2 F2	got 5B FF E2 F2	reported 
+3 exception: na 9C->5B	ନ୍ଲେ	[0B28 0B4D 0B32 0B47]	pref 7B 9C FF E2	acc 7B 9C FF E2	got 7B 5B FF E2	reported 
+3 exception: na 9C->5B	ନ୍ଲଂ	[0B28 0B4D 0B32 0B02]	pref 9C FF E2 F3	acc 9C FF E2 F3	got 5B FF E2 F3	reported 
+3 exception: na 9C->5B	ନ୍ଲଁ	[0B28 0B4D 0B32 0B01]	pref 9C FF E2 F4	acc 9C FF E2 F4	got 5B FF E2 F4	reported 
+3 exception: na 9C->5B	ନ୍ଲଃ	[0B28 0B4D 0B32 0B03]	pref 9C FF E2 85	acc 9C FF E2 85	got 5B FF E2 85	reported 
+3 exception: na 9C->5B	ନ୍ଲ୍ର	[0B28 0B4D 0B32 0B4D 0B30]	pref 9C FF E2 26 F7	acc 9C FF E2 26 F7	got 5B FF E2 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଲ୍ୟ	[0B28 0B4D 0B32 0B4D 0B5F]	pref 9C FF E2 BF	acc 9C FF E2 BF	got 5B FF E2 BF	reported 
+3 exception: na 9C->5B	ନ୍ଲ୍	[0B28 0B4D 0B32 0B4D]	pref 9C FF E2 26 FA	acc 9C FF E2 26 FA	got 5B FF E2 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଲ୍‌	[0B28 0B4D 0B32 0B4D 200C]	pref 9C FF E2 26 FA	acc 9C FF E2 26 FA	got 5B FF E2 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଲ	[0B30 0B4D 0B28 0B4D 0B32]	pref 9C FF E2 F6	acc 9C FF E2 F6	got 5B FF E2 F6	reported 
+3 exception: na 9C->5B	ନ୍ଳ	[0B28 0B4D 0B33]	pref 9C FF C8	acc 9C FF C8	got 5B FF C8	reported 
+3 exception: na 9C->5B	ନ୍ଳା	[0B28 0B4D 0B33 0B3E]	pref 9C FF C8 E6	acc 9C FF C8 E6	got 5B FF C8 E6	reported 
+3 exception: na 9C->5B	ନ୍ଳି	[0B28 0B4D 0B33 0B3F]	pref 9C FF C8 E7	acc 9C FF C8 E7	got 5B FF C8 E7	reported 
+3 exception: na 9C->5B	ନ୍ଳୀ	[0B28 0B4D 0B33 0B40]	pref 9C FF C8 EA	acc 9C FF C8 EA	got 5B FF C8 EA	reported 
+3 exception: na 9C->5B	ନ୍ଳୁ	[0B28 0B4D 0B33 0B41]	pref 9C FF C8 EC	acc 9C FF C8 EC	got 5B FF C8 EC	reported 
+3 exception: na 9C->5B	ନ୍ଳୂ	[0B28 0B4D 0B33 0B42]	pref 9C FF C8 EE	acc 9C FF C8 EE	got 5B FF C8 EE	reported 
+3 exception: na 9C->5B	ନ୍ଳୃ	[0B28 0B4D 0B33 0B43]	pref 9C FF C8 26 F5	acc 9C FF C8 26 F5	got 5B FF C8 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ଳୖ	[0B28 0B4D 0B33 0B56]	pref 9C FF C8 F0	acc 9C FF C8 F0	got 5B FF C8 F0	reported 
+3 exception: na 9C->5B	ନ୍ଳୗ	[0B28 0B4D 0B33 0B57]	pref 9C FF C8 F2	acc 9C FF C8 F2	got 5B FF C8 F2	reported 
+3 exception: na 9C->5B	ନ୍ଳେ	[0B28 0B4D 0B33 0B47]	pref 7B 9C FF C8	acc 7B 9C FF C8	got 7B 5B FF C8	reported 
+3 exception: na 9C->5B	ନ୍ଳଂ	[0B28 0B4D 0B33 0B02]	pref 9C FF C8 F3	acc 9C FF C8 F3	got 5B FF C8 F3	reported 
+3 exception: na 9C->5B	ନ୍ଳଁ	[0B28 0B4D 0B33 0B01]	pref 9C FF C8 F4	acc 9C FF C8 F4	got 5B FF C8 F4	reported 
+3 exception: na 9C->5B	ନ୍ଳଃ	[0B28 0B4D 0B33 0B03]	pref 9C FF C8 85	acc 9C FF C8 85	got 5B FF C8 85	reported 
+3 exception: na 9C->5B	ନ୍ଳ୍ର	[0B28 0B4D 0B33 0B4D 0B30]	pref 9C FF C8 26 F7	acc 9C FF C8 26 F7	got 5B FF C8 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ଳ୍ୟ	[0B28 0B4D 0B33 0B4D 0B5F]	pref 9C FF C8 BF	acc 9C FF C8 BF	got 5B FF C8 BF	reported 
+3 exception: na 9C->5B	ନ୍ଳ୍	[0B28 0B4D 0B33 0B4D]	pref 9C FF C8 26 FA	acc 9C FF C8 26 FA	got 5B FF C8 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ଳ୍‌	[0B28 0B4D 0B33 0B4D 200C]	pref 9C FF C8 26 FA	acc 9C FF C8 26 FA	got 5B FF C8 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଳ	[0B30 0B4D 0B28 0B4D 0B33]	pref 9C FF C8 F6	acc 9C FF C8 F6	got 5B FF C8 F6	reported 
+3 exception: na 9C->5B	ନ୍ଶ	[0B28 0B4D 0B36]	pref 9C FF FA C9	acc 9C FF FA C9	got 5B FF FA C9	reported 
+3 exception: na 9C->5B	ନ୍ଶା	[0B28 0B4D 0B36 0B3E]	pref 9C FF FA C9 E6	acc 9C FF FA C9 E6	got 5B FF FA C9 E6	reported 
+3 exception: na 9C->5B	ନ୍ଶି	[0B28 0B4D 0B36 0B3F]	pref 9C FF FA C9 E7	acc 9C FF FA C9 E7	got 5B FF FA C9 E7	reported 
+3 exception: na 9C->5B	ନ୍ଶୀ	[0B28 0B4D 0B36 0B40]	pref 9C FF FA C9 EA	acc 9C FF FA C9 EA	got 5B FF FA C9 EA	reported 
+3 exception: na 9C->5B	ନ୍ଶୁ	[0B28 0B4D 0B36 0B41]	pref 9C FF FA C9 EB	acc 9C FF FA C9 EB	got 5B FF FA C9 EB	reported 
+3 exception: na 9C->5B	ନ୍ଶୂ	[0B28 0B4D 0B36 0B42]	pref 9C FF FA C9 ED	acc 9C FF FA C9 ED	got 5B FF FA C9 ED	reported 
+3 exception: na 9C->5B	ନ୍ଶୃ	[0B28 0B4D 0B36 0B43]	pref 9C FF FA C9 F5	acc 9C FF FA C9 F5	got 5B FF FA C9 F5	reported 
+3 exception: na 9C->5B	ନ୍ଶୖ	[0B28 0B4D 0B36 0B56]	pref 9C FF FA C9 F0	acc 9C FF FA C9 F0	got 5B FF FA C9 F0	reported 
+3 exception: na 9C->5B	ନ୍ଶୗ	[0B28 0B4D 0B36 0B57]	pref 9C FF FA C9 F2	acc 9C FF FA C9 F2	got 5B FF FA C9 F2	reported 
+3 exception: na 9C->5B	ନ୍ଶେ	[0B28 0B4D 0B36 0B47]	pref 7B 9C FF FA C9	acc 7B 9C FF FA C9	got 7B 5B FF FA C9	reported 
+3 exception: na 9C->5B	ନ୍ଶଂ	[0B28 0B4D 0B36 0B02]	pref 9C FF FA C9 F3	acc 9C FF FA C9 F3	got 5B FF FA C9 F3	reported 
+3 exception: na 9C->5B	ନ୍ଶଁ	[0B28 0B4D 0B36 0B01]	pref 9C FF FA C9 F4	acc 9C FF FA C9 F4	got 5B FF FA C9 F4	reported 
+3 exception: na 9C->5B	ନ୍ଶଃ	[0B28 0B4D 0B36 0B03]	pref 9C FF FA C9 85	acc 9C FF FA C9 85	got 5B FF FA C9 85	reported 
+3 exception: na 9C->5B	ନ୍ଶ୍ର	[0B28 0B4D 0B36 0B4D 0B30]	pref 9C FF FA C9 F7	acc 9C FF FA C9 F7	got 5B FF FA C9 F7	reported 
+3 exception: na 9C->5B	ନ୍ଶ୍ୟ	[0B28 0B4D 0B36 0B4D 0B5F]	pref 9C FF FA C9 BF	acc 9C FF FA C9 BF	got 5B FF FA C9 BF	reported 
+3 exception: na 9C->5B	ନ୍ଶ୍	[0B28 0B4D 0B36 0B4D]	pref 9C FF FA C9 FA	acc 9C FF FA C9 FA	got 5B FF FA C9 FA	reported 
+3 exception: na 9C->5B	ନ୍ଶ୍‌	[0B28 0B4D 0B36 0B4D 200C]	pref 9C FF FA C9 FA	acc 9C FF FA C9 FA	got 5B FF FA C9 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଶ	[0B30 0B4D 0B28 0B4D 0B36]	pref 9C FF FA C9 F6	acc 9C FF FA C9 F6	got 5B FF FA C9 F6	reported 
+3 exception: na 9C->5B	ନ୍ଷ	[0B28 0B4D 0B37]	pref 9C FF FA CC	acc 9C FF FA CC	got 5B FF FA CC	reported 
+3 exception: na 9C->5B	ନ୍ଷା	[0B28 0B4D 0B37 0B3E]	pref 9C FF FA CC E6	acc 9C FF FA CC E6	got 5B FF FA CC E6	reported 
+3 exception: na 9C->5B	ନ୍ଷି	[0B28 0B4D 0B37 0B3F]	pref 9C FF FA CC E7	acc 9C FF FA CC E7	got 5B FF FA CC E7	reported 
+3 exception: na 9C->5B	ନ୍ଷୀ	[0B28 0B4D 0B37 0B40]	pref 9C FF FA CC EA	acc 9C FF FA CC EA	got 5B FF FA CC EA	reported 
+3 exception: na 9C->5B	ନ୍ଷୁ	[0B28 0B4D 0B37 0B41]	pref 9C FF FA CC EB	acc 9C FF FA CC EB	got 5B FF FA CC EB	reported 
+3 exception: na 9C->5B	ନ୍ଷୂ	[0B28 0B4D 0B37 0B42]	pref 9C FF FA CC ED	acc 9C FF FA CC ED	got 5B FF FA CC ED	reported 
+3 exception: na 9C->5B	ନ୍ଷୃ	[0B28 0B4D 0B37 0B43]	pref 9C FF FA CC F5	acc 9C FF FA CC F5	got 5B FF FA CC F5	reported 
+3 exception: na 9C->5B	ନ୍ଷୖ	[0B28 0B4D 0B37 0B56]	pref 9C FF FA CC F0	acc 9C FF FA CC F0	got 5B FF FA CC F0	reported 
+3 exception: na 9C->5B	ନ୍ଷୗ	[0B28 0B4D 0B37 0B57]	pref 9C FF FA CC F2	acc 9C FF FA CC F2	got 5B FF FA CC F2	reported 
+3 exception: na 9C->5B	ନ୍ଷେ	[0B28 0B4D 0B37 0B47]	pref 7B 9C FF FA CC	acc 7B 9C FF FA CC	got 7B 5B FF FA CC	reported 
+3 exception: na 9C->5B	ନ୍ଷଂ	[0B28 0B4D 0B37 0B02]	pref 9C FF FA CC F3	acc 9C FF FA CC F3	got 5B FF FA CC F3	reported 
+3 exception: na 9C->5B	ନ୍ଷଁ	[0B28 0B4D 0B37 0B01]	pref 9C FF FA CC F4	acc 9C FF FA CC F4	got 5B FF FA CC F4	reported 
+3 exception: na 9C->5B	ନ୍ଷଃ	[0B28 0B4D 0B37 0B03]	pref 9C FF FA CC 85	acc 9C FF FA CC 85	got 5B FF FA CC 85	reported 
+3 exception: na 9C->5B	ନ୍ଷ୍ର	[0B28 0B4D 0B37 0B4D 0B30]	pref 9C FF FA CC F7	acc 9C FF FA CC F7	got 5B FF FA CC F7	reported 
+3 exception: na 9C->5B	ନ୍ଷ୍ୟ	[0B28 0B4D 0B37 0B4D 0B5F]	pref 9C FF FA CC BF	acc 9C FF FA CC BF	got 5B FF FA CC BF	reported 
+3 exception: na 9C->5B	ନ୍ଷ୍	[0B28 0B4D 0B37 0B4D]	pref 9C FF FA CC FA	acc 9C FF FA CC FA	got 5B FF FA CC FA	reported 
+3 exception: na 9C->5B	ନ୍ଷ୍‌	[0B28 0B4D 0B37 0B4D 200C]	pref 9C FF FA CC FA	acc 9C FF FA CC FA	got 5B FF FA CC FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଷ	[0B30 0B4D 0B28 0B4D 0B37]	pref 9C FF FA CC F6	acc 9C FF FA CC F6	got 5B FF FA CC F6	reported 
+3 exception: na 9C->5B	ନ୍ସ	[0B28 0B4D 0B38]	pref 9C FF DB	acc 9C FF DB	got 5B FF DB	reported 
+3 exception: na 9C->5B	ନ୍ସା	[0B28 0B4D 0B38 0B3E]	pref 9C FF DB E6	acc 9C FF DB E6	got 5B FF DB E6	reported 
+3 exception: na 9C->5B	ନ୍ସି	[0B28 0B4D 0B38 0B3F]	pref 9C FF DB E7	acc 9C FF DB E7	got 5B FF DB E7	reported 
+3 exception: na 9C->5B	ନ୍ସୀ	[0B28 0B4D 0B38 0B40]	pref 9C FF DB EA	acc 9C FF DB EA	got 5B FF DB EA	reported 
+3 exception: na 9C->5B	ନ୍ସୁ	[0B28 0B4D 0B38 0B41]	pref 9C FF DB EC	acc 9C FF DB EC	got 5B FF DB EC	reported 
+3 exception: na 9C->5B	ନ୍ସୂ	[0B28 0B4D 0B38 0B42]	pref 9C FF DB EE	acc 9C FF DB EE	got 5B FF DB EE	reported 
+3 exception: na 9C->5B	ନ୍ସୃ	[0B28 0B4D 0B38 0B43]	pref 9C FF DB 26 F5	acc 9C FF DB 26 F5	got 5B FF DB 26 F5	reported 
+3 exception: na 9C->5B	ନ୍ସୖ	[0B28 0B4D 0B38 0B56]	pref 9C FF DB F0	acc 9C FF DB F0	got 5B FF DB F0	reported 
+3 exception: na 9C->5B	ନ୍ସୗ	[0B28 0B4D 0B38 0B57]	pref 9C FF DB F2	acc 9C FF DB F2	got 5B FF DB F2	reported 
+3 exception: na 9C->5B	ନ୍ସେ	[0B28 0B4D 0B38 0B47]	pref 7B 9C FF DB	acc 7B 9C FF DB	got 7B 5B FF DB	reported 
+3 exception: na 9C->5B	ନ୍ସଂ	[0B28 0B4D 0B38 0B02]	pref 9C FF DB F3	acc 9C FF DB F3	got 5B FF DB F3	reported 
+3 exception: na 9C->5B	ନ୍ସଁ	[0B28 0B4D 0B38 0B01]	pref 9C FF DB F4	acc 9C FF DB F4	got 5B FF DB F4	reported 
+3 exception: na 9C->5B	ନ୍ସଃ	[0B28 0B4D 0B38 0B03]	pref 9C FF DB 85	acc 9C FF DB 85	got 5B FF DB 85	reported 
+3 exception: na 9C->5B	ନ୍ସ୍ର	[0B28 0B4D 0B38 0B4D 0B30]	pref 9C FF DB 26 F7	acc 9C FF DB 26 F7	got 5B FF DB 26 F7	reported 
+3 exception: na 9C->5B	ନ୍ସ୍ୟ	[0B28 0B4D 0B38 0B4D 0B5F]	pref 9C FF DB BF	acc 9C FF DB BF	got 5B FF DB BF	reported 
+3 exception: na 9C->5B	ନ୍ସ୍	[0B28 0B4D 0B38 0B4D]	pref 9C FF DB 26 FA	acc 9C FF DB 26 FA	got 5B FF DB 26 FA	reported 
+3 exception: na 9C->5B	ନ୍ସ୍‌	[0B28 0B4D 0B38 0B4D 200C]	pref 9C FF DB 26 FA	acc 9C FF DB 26 FA	got 5B FF DB 26 FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ସ	[0B30 0B4D 0B28 0B4D 0B38]	pref 9C FF DB F6	acc 9C FF DB F6	got 5B FF DB F6	reported 
+3 exception: na 9C->5B	ନ୍ହ	[0B28 0B4D 0B39]	pref 9C FF FA DC FF	acc 9C FF FA DC FF	got 5B FF FA DC FF	reported 
+3 exception: na 9C->5B	ନ୍ହା	[0B28 0B4D 0B39 0B3E]	pref 9C FF FA DC FF E6	acc 9C FF FA DC FF E6	got 5B FF FA DC FF E6	reported 
+3 exception: na 9C->5B	ନ୍ହି	[0B28 0B4D 0B39 0B3F]	pref 9C FF FA DC FF E7	acc 9C FF FA DC FF E7	got 5B FF FA DC FF E7	reported 
+3 exception: na 9C->5B	ନ୍ହୀ	[0B28 0B4D 0B39 0B40]	pref 9C FF FA DC FF EA	acc 9C FF FA DC FF EA	got 5B FF FA DC FF EA	reported 
+3 exception: na 9C->5B	ନ୍ହୁ	[0B28 0B4D 0B39 0B41]	pref 9C FF FA DC FF EB	acc 9C FF FA DC FF EB	got 5B FF FA DC FF EB	reported 
+3 exception: na 9C->5B	ନ୍ହୂ	[0B28 0B4D 0B39 0B42]	pref 9C FF FA DC FF ED	acc 9C FF FA DC FF ED	got 5B FF FA DC FF ED	reported 
+3 exception: na 9C->5B	ନ୍ହୃ	[0B28 0B4D 0B39 0B43]	pref 9C FF FA DC FF F5	acc 9C FF FA DC FF F5	got 5B FF FA DC FF F5	reported 
+3 exception: na 9C->5B	ନ୍ହୖ	[0B28 0B4D 0B39 0B56]	pref 9C FF FA DC FF F0	acc 9C FF FA DC FF F0	got 5B FF FA DC FF F0	reported 
+3 exception: na 9C->5B	ନ୍ହୗ	[0B28 0B4D 0B39 0B57]	pref 9C FF FA DC FF F2	acc 9C FF FA DC FF F2	got 5B FF FA DC FF F2	reported 
+3 exception: na 9C->5B	ନ୍ହେ	[0B28 0B4D 0B39 0B47]	pref 7B 9C FF FA DC FF	acc 7B 9C FF FA DC FF	got 7B 5B FF FA DC FF	reported 
+3 exception: na 9C->5B	ନ୍ହଂ	[0B28 0B4D 0B39 0B02]	pref 9C FF FA DC FF F3	acc 9C FF FA DC FF F3	got 5B FF FA DC FF F3	reported 
+3 exception: na 9C->5B	ନ୍ହଁ	[0B28 0B4D 0B39 0B01]	pref 9C FF FA DC FF F4	acc 9C FF FA DC FF F4	got 5B FF FA DC FF F4	reported 
+3 exception: na 9C->5B	ନ୍ହଃ	[0B28 0B4D 0B39 0B03]	pref 9C FF FA DC FF 85	acc 9C FF FA DC FF 85	got 5B FF FA DC FF 85	reported 
+3 exception: na 9C->5B	ନ୍ହ୍ର	[0B28 0B4D 0B39 0B4D 0B30]	pref 9C FF FA DC FF F7	acc 9C FF FA DC FF F7	got 5B FF FA DC FF F7	reported 
+3 exception: na 9C->5B	ନ୍ହ୍ୟ	[0B28 0B4D 0B39 0B4D 0B5F]	pref 9C FF FA DC FF BF	acc 9C FF FA DC FF BF	got 5B FF FA DC FF BF	reported 
+3 exception: na 9C->5B	ନ୍ହ୍	[0B28 0B4D 0B39 0B4D]	pref 9C FF FA DC FF FA	acc 9C FF FA DC FF FA	got 5B FF FA DC FF FA	reported 
+3 exception: na 9C->5B	ନ୍ହ୍‌	[0B28 0B4D 0B39 0B4D 200C]	pref 9C FF FA DC FF FA	acc 9C FF FA DC FF FA	got 5B FF FA DC FF FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ହ	[0B30 0B4D 0B28 0B4D 0B39]	pref 9C FF FA DC FF F6	acc 9C FF FA DC FF F6	got 5B FF FA DC FF F6	reported 
+3 exception: na 9C->5B	ନ୍ୟ୍ୟ	[0B28 0B4D 0B5F 0B4D 0B5F]	pref 9C FF BF BF	acc 9C FF BF BF	got 5B FF BF BF	reported 
+3 exception: na 9C->5B	ନ୍ୟ୍	[0B28 0B4D 0B5F 0B4D]	pref 9C FF BF FA	acc 9C FF BF FA	got 5B FF BF FA	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼	[0B28 0B4D 0B5C]	pref 9C FF FA DD	acc 9C FF FA DD	got 5B FF FA DD	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ା	[0B28 0B4D 0B5C 0B3E]	pref 9C FF FA DD E6	acc 9C FF FA DD E6	got 5B FF FA DD E6	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ି	[0B28 0B4D 0B5C 0B3F]	pref 9C FF FA DD E7	acc 9C FF FA DD E7	got 5B FF FA DD E7	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୀ	[0B28 0B4D 0B5C 0B40]	pref 9C FF FA DD EA	acc 9C FF FA DD EA	got 5B FF FA DD EA	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୁ	[0B28 0B4D 0B5C 0B41]	pref 9C FF FA DD EB	acc 9C FF FA DD EB	got 5B FF FA DD EB	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୂ	[0B28 0B4D 0B5C 0B42]	pref 9C FF FA DD ED	acc 9C FF FA DD ED	got 5B FF FA DD ED	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୃ	[0B28 0B4D 0B5C 0B43]	pref 9C FF FA DD F5	acc 9C FF FA DD F5	got 5B FF FA DD F5	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୖ	[0B28 0B4D 0B5C 0B56]	pref 9C FF FA DD F0	acc 9C FF FA DD F0	got 5B FF FA DD F0	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ୗ	[0B28 0B4D 0B5C 0B57]	pref 9C FF FA DD F2	acc 9C FF FA DD F2	got 5B FF FA DD F2	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼େ	[0B28 0B4D 0B5C 0B47]	pref 7B 9C FF FA DD	acc 7B 9C FF FA DD	got 7B 5B FF FA DD	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ଂ	[0B28 0B4D 0B5C 0B02]	pref 9C FF FA DD F3	acc 9C FF FA DD F3	got 5B FF FA DD F3	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ଁ	[0B28 0B4D 0B5C 0B01]	pref 9C FF FA DD F4	acc 9C FF FA DD F4	got 5B FF FA DD F4	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼ଃ	[0B28 0B4D 0B5C 0B03]	pref 9C FF FA DD 85	acc 9C FF FA DD 85	got 5B FF FA DD 85	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼୍ର	[0B28 0B4D 0B5C 0B4D 0B30]	pref 9C FF FA DD F7	acc 9C FF FA DD F7	got 5B FF FA DD F7	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼୍ୟ	[0B28 0B4D 0B5C 0B4D 0B5F]	pref 9C FF FA DD BF	acc 9C FF FA DD BF	got 5B FF FA DD BF	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼୍	[0B28 0B4D 0B5C 0B4D]	pref 9C FF FA DD FA	acc 9C FF FA DD FA	got 5B FF FA DD FA	reported 
+3 exception: na 9C->5B	ନ୍ଡ଼୍‌	[0B28 0B4D 0B5C 0B4D 200C]	pref 9C FF FA DD FA	acc 9C FF FA DD FA	got 5B FF FA DD FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଡ଼	[0B30 0B4D 0B28 0B4D 0B5C]	pref 9C FF FA DD F6	acc 9C FF FA DD F6	got 5B FF FA DD F6	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼	[0B28 0B4D 0B5D]	pref 9C FF FA DE	acc 9C FF FA DE	got 5B FF FA DE	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ା	[0B28 0B4D 0B5D 0B3E]	pref 9C FF FA DE E6	acc 9C FF FA DE E6	got 5B FF FA DE E6	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ି	[0B28 0B4D 0B5D 0B3F]	pref 9C FF FA DE E7	acc 9C FF FA DE E7	got 5B FF FA DE E7	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୀ	[0B28 0B4D 0B5D 0B40]	pref 9C FF FA DE EA	acc 9C FF FA DE EA	got 5B FF FA DE EA	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୁ	[0B28 0B4D 0B5D 0B41]	pref 9C FF FA DE EB	acc 9C FF FA DE EB	got 5B FF FA DE EB	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୂ	[0B28 0B4D 0B5D 0B42]	pref 9C FF FA DE ED	acc 9C FF FA DE ED	got 5B FF FA DE ED	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୃ	[0B28 0B4D 0B5D 0B43]	pref 9C FF FA DE F5	acc 9C FF FA DE F5	got 5B FF FA DE F5	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୖ	[0B28 0B4D 0B5D 0B56]	pref 9C FF FA DE F0	acc 9C FF FA DE F0	got 5B FF FA DE F0	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ୗ	[0B28 0B4D 0B5D 0B57]	pref 9C FF FA DE F2	acc 9C FF FA DE F2	got 5B FF FA DE F2	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼େ	[0B28 0B4D 0B5D 0B47]	pref 7B 9C FF FA DE	acc 7B 9C FF FA DE	got 7B 5B FF FA DE	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ଂ	[0B28 0B4D 0B5D 0B02]	pref 9C FF FA DE F3	acc 9C FF FA DE F3	got 5B FF FA DE F3	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ଁ	[0B28 0B4D 0B5D 0B01]	pref 9C FF FA DE F4	acc 9C FF FA DE F4	got 5B FF FA DE F4	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼ଃ	[0B28 0B4D 0B5D 0B03]	pref 9C FF FA DE 85	acc 9C FF FA DE 85	got 5B FF FA DE 85	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼୍ର	[0B28 0B4D 0B5D 0B4D 0B30]	pref 9C FF FA DE F7	acc 9C FF FA DE F7	got 5B FF FA DE F7	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼୍ୟ	[0B28 0B4D 0B5D 0B4D 0B5F]	pref 9C FF FA DE BF	acc 9C FF FA DE BF	got 5B FF FA DE BF	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼୍	[0B28 0B4D 0B5D 0B4D]	pref 9C FF FA DE FA	acc 9C FF FA DE FA	got 5B FF FA DE FA	reported 
+3 exception: na 9C->5B	ନ୍ଢ଼୍‌	[0B28 0B4D 0B5D 0B4D 200C]	pref 9C FF FA DE FA	acc 9C FF FA DE FA	got 5B FF FA DE FA	reported 
+3 exception: na 9C->5B	ର୍ନ୍ଢ଼	[0B30 0B4D 0B28 0B4D 0B5D]	pref 9C FF FA DE F6	acc 9C FF FA DE F6	got 5B FF FA DE F6	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷ	[0B28 0B4D 0B15 0B4D 0B37]	pref 9C FF FA E4	acc 9C FF FA E4	got 5B FF FA E4	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷା	[0B28 0B4D 0B15 0B4D 0B37 0B3E]	pref 9C FF FA E4 E6	acc 9C FF FA E4 E6	got 5B FF FA E4 E6	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷି	[0B28 0B4D 0B15 0B4D 0B37 0B3F]	pref 9C FF FA E4 E7	acc 9C FF FA E4 E7	got 5B FF FA E4 E7	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୀ	[0B28 0B4D 0B15 0B4D 0B37 0B40]	pref 9C FF FA E4 EA	acc 9C FF FA E4 EA	got 5B FF FA E4 EA	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୁ	[0B28 0B4D 0B15 0B4D 0B37 0B41]	pref 9C FF FA E4 EB	acc 9C FF FA E4 EB	got 5B FF FA E4 EB	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୂ	[0B28 0B4D 0B15 0B4D 0B37 0B42]	pref 9C FF FA E4 ED	acc 9C FF FA E4 ED	got 5B FF FA E4 ED	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୃ	[0B28 0B4D 0B15 0B4D 0B37 0B43]	pref 9C FF FA E4 F5	acc 9C FF FA E4 F5	got 5B FF FA E4 F5	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୖ	[0B28 0B4D 0B15 0B4D 0B37 0B56]	pref 9C FF FA E4 F0	acc 9C FF FA E4 F0	got 5B FF FA E4 F0	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷୗ	[0B28 0B4D 0B15 0B4D 0B37 0B57]	pref 9C FF FA E4 F2	acc 9C FF FA E4 F2	got 5B FF FA E4 F2	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷେ	[0B28 0B4D 0B15 0B4D 0B37 0B47]	pref 7B 9C FF FA E4	acc 7B 9C FF FA E4	got 7B 5B FF FA E4	reported 
+3 exception: na 9C->5B	ର୍ନ୍କ୍ଷ	[0B30 0B4D 0B28 0B4D 0B15 0B4D 0B37]	pref 9C FF FA E4 F6	acc 9C FF FA E4 F6	got 5B FF FA E4 F6	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷଂ	[0B28 0B4D 0B15 0B4D 0B37 0B02]	pref 9C FF FA E4 F3	acc 9C FF FA E4 F3	got 5B FF FA E4 F3	reported 
+3 exception: na 9C->5B	ନ୍କ୍ଷ୍ୟ	[0B28 0B4D 0B15 0B4D 0B37 0B4D 0B5F]	pref 9C FF FA E4 BF	acc 9C FF FA E4 BF	got 5B FF FA E4 BF	reported 
+3 exception: na 9C->5B	କିନ	[0B15 0B3F 0B28]	pref 4C FF E7 9C FF	acc 4C FF E7 9C FF	got 4C FF E7 5B FF	reported 
+3 exception: na 9C->5B	କାନ	[0B15 0B3E 0B28]	pref 4C FF E6 9C FF	acc 4C FF E6 9C FF	got 4C FF E6 5B FF	reported 
+3 exception: na 9C->5B	କେନ	[0B15 0B47 0B28]	pref 7B 4C FF 9C FF	acc 7B 4C FF 9C FF	got 7B 4C FF 5B FF	reported 
+3 exception: na 9C->5B	ର୍କନ	[0B30 0B4D 0B15 0B28]	pref 4C FF F6 9C FF	acc 4C FF F6 9C FF	got 4C FF F6 5B FF	reported 
+3 exception: na 9C->5B	କୁନ	[0B15 0B41 0B28]	pref 4C FF EB 9C FF	acc 4C FF EB 9C FF	got 4C FF EB 5B FF	reported 
+3 exception: na 9C->5B	କଂନ	[0B15 0B02 0B28]	pref 4C FF F3 9C FF	acc 4C FF F3 9C FF	got 4C FF F3 5B FF	reported 
+3 exception: na 9C->5B	କ୍‌ନ	[0B15 0B4D 200C 0B28]	pref 4C FF FA 9C FF	acc 4C FF FA 9C FF	got 4C FF FA 5B FF	reported 
+3 exception: na 9C->5B	କ୍‍ନ	[0B15 0B4D 200D 0B28]	pref 4C FF FA 9C FF	acc 4C FF FA 9C FF	got 4C FF FA 5B FF	reported 
+3 exception: na 9C->5B	କ୍‌ନା	[0B15 0B4D 200C 0B28 0B3E]	pref 4C FF FA 9C FF E6	acc 4C FF FA 9C FF E6	got 4C FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	କ୍‌ନି	[0B15 0B4D 200C 0B28 0B3F]	pref 4C FF FA 9C FF E7	acc 4C FF FA 9C FF E7	got 4C FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	କ୍‌ନୁ	[0B15 0B4D 200C 0B28 0B41]	pref 4C FF FA 9C FF EB	acc 4C FF FA 9C FF EB	got 4C FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	କ୍‌ନଂ	[0B15 0B4D 200C 0B28 0B02]	pref 4C FF FA 9C FF F3	acc 4C FF FA 9C FF F3	got 4C FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	କେ୍‌ନ	[0B15 0B47 0B4D 200C 0B28]	pref 7B 4C FF FA 9C FF	acc 7B 4C FF FA 9C FF	got 7B 4C FF FA 5B FF	reported 
+3 exception: na 9C->5B	କ୍‌ର୍ନ	[0B15 0B4D 200C 0B30 0B4D 0B28]	pref 4C FF FA 9C FF F6	acc 4C FF FA 9C FF F6	got 4C FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	କ୍‌ନ୍ର	[0B15 0B4D 200C 0B28 0B4D 0B30]	pref 4C FF FA 9C FF F7	acc 4C FF FA 9C FF F7	got 4C FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	କ୍‌ନ୍ୟ	[0B15 0B4D 200C 0B28 0B4D 0B5F]	pref 4C FF FA 9C FF BF	acc 4C FF FA 9C FF BF	got 4C FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଖ୍‌ନ	[0B16 0B4D 200C 0B28]	pref 51 FA 9C FF	acc 51 FA 9C FF	got 51 FA 5B FF	reported 
+3 exception: na 9C->5B	ଖ୍‍ନ	[0B16 0B4D 200D 0B28]	pref 51 FA 9C FF	acc 51 FA 9C FF	got 51 FA 5B FF	reported 
+3 exception: na 9C->5B	ଖ୍‌ନା	[0B16 0B4D 200C 0B28 0B3E]	pref 51 FA 9C FF E6	acc 51 FA 9C FF E6	got 51 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଖ୍‌ନି	[0B16 0B4D 200C 0B28 0B3F]	pref 51 FA 9C FF E7	acc 51 FA 9C FF E7	got 51 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଖ୍‌ନୁ	[0B16 0B4D 200C 0B28 0B41]	pref 51 FA 9C FF EB	acc 51 FA 9C FF EB	got 51 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଖ୍‌ନଂ	[0B16 0B4D 200C 0B28 0B02]	pref 51 FA 9C FF F3	acc 51 FA 9C FF F3	got 51 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଖେ୍‌ନ	[0B16 0B47 0B4D 200C 0B28]	pref 7B 51 FA 9C FF	acc 7B 51 FA 9C FF	got 7B 51 FA 5B FF	reported 
+3 exception: na 9C->5B	ଖ୍‌ର୍ନ	[0B16 0B4D 200C 0B30 0B4D 0B28]	pref 51 FA 9C FF F6	acc 51 FA 9C FF F6	got 51 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଖ୍‌ନ୍ର	[0B16 0B4D 200C 0B28 0B4D 0B30]	pref 51 FA 9C FF F7	acc 51 FA 9C FF F7	got 51 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଖ୍‌ନ୍ୟ	[0B16 0B4D 200C 0B28 0B4D 0B5F]	pref 51 FA 9C FF BF	acc 51 FA 9C FF BF	got 51 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଗ୍‌ନ	[0B17 0B4D 200C 0B28]	pref 53 FA 9C FF	acc 53 FA 9C FF	got 53 FA 5B FF	reported 
+3 exception: na 9C->5B	ଗ୍‍ନ	[0B17 0B4D 200D 0B28]	pref 53 FA 9C FF	acc 53 FA 9C FF	got 53 FA 5B FF	reported 
+3 exception: na 9C->5B	ଗ୍‌ନା	[0B17 0B4D 200C 0B28 0B3E]	pref 53 FA 9C FF E6	acc 53 FA 9C FF E6	got 53 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଗ୍‌ନି	[0B17 0B4D 200C 0B28 0B3F]	pref 53 FA 9C FF E7	acc 53 FA 9C FF E7	got 53 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଗ୍‌ନୁ	[0B17 0B4D 200C 0B28 0B41]	pref 53 FA 9C FF EB	acc 53 FA 9C FF EB	got 53 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଗ୍‌ନଂ	[0B17 0B4D 200C 0B28 0B02]	pref 53 FA 9C FF F3	acc 53 FA 9C FF F3	got 53 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଗେ୍‌ନ	[0B17 0B47 0B4D 200C 0B28]	pref 7B 53 FA 9C FF	acc 7B 53 FA 9C FF	got 7B 53 FA 5B FF	reported 
+3 exception: na 9C->5B	ଗ୍‌ର୍ନ	[0B17 0B4D 200C 0B30 0B4D 0B28]	pref 53 FA 9C FF F6	acc 53 FA 9C FF F6	got 53 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଗ୍‌ନ୍ର	[0B17 0B4D 200C 0B28 0B4D 0B30]	pref 53 FA 9C FF F7	acc 53 FA 9C FF F7	got 53 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଗ୍‌ନ୍ୟ	[0B17 0B4D 200C 0B28 0B4D 0B5F]	pref 53 FA 9C FF BF	acc 53 FA 9C FF BF	got 53 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଘ୍‌ନ	[0B18 0B4D 200C 0B28]	pref 57 FA 9C FF	acc 57 FA 9C FF	got 57 FA 5B FF	reported 
+3 exception: na 9C->5B	ଘ୍‍ନ	[0B18 0B4D 200D 0B28]	pref 57 FA 9C FF	acc 57 FA 9C FF	got 57 FA 5B FF	reported 
+3 exception: na 9C->5B	ଘ୍‌ନା	[0B18 0B4D 200C 0B28 0B3E]	pref 57 FA 9C FF E6	acc 57 FA 9C FF E6	got 57 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଘ୍‌ନି	[0B18 0B4D 200C 0B28 0B3F]	pref 57 FA 9C FF E7	acc 57 FA 9C FF E7	got 57 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଘ୍‌ନୁ	[0B18 0B4D 200C 0B28 0B41]	pref 57 FA 9C FF EB	acc 57 FA 9C FF EB	got 57 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଘ୍‌ନଂ	[0B18 0B4D 200C 0B28 0B02]	pref 57 FA 9C FF F3	acc 57 FA 9C FF F3	got 57 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଘେ୍‌ନ	[0B18 0B47 0B4D 200C 0B28]	pref 7B 57 FA 9C FF	acc 7B 57 FA 9C FF	got 7B 57 FA 5B FF	reported 
+3 exception: na 9C->5B	ଘ୍‌ର୍ନ	[0B18 0B4D 200C 0B30 0B4D 0B28]	pref 57 FA 9C FF F6	acc 57 FA 9C FF F6	got 57 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଘ୍‌ନ୍ର	[0B18 0B4D 200C 0B28 0B4D 0B30]	pref 57 FA 9C FF F7	acc 57 FA 9C FF F7	got 57 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଘ୍‌ନ୍ୟ	[0B18 0B4D 200C 0B28 0B4D 0B5F]	pref 57 FA 9C FF BF	acc 57 FA 9C FF BF	got 57 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଙ୍‌ନ	[0B19 0B4D 200C 0B28]	pref 59 FF FA 9C FF	acc 59 FF FA 9C FF	got 59 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଙ୍‍ନ	[0B19 0B4D 200D 0B28]	pref 59 FF FA 9C FF	acc 59 FF FA 9C FF	got 59 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଙ୍‌ନା	[0B19 0B4D 200C 0B28 0B3E]	pref 59 FF FA 9C FF E6	acc 59 FF FA 9C FF E6	got 59 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଙ୍‌ନି	[0B19 0B4D 200C 0B28 0B3F]	pref 59 FF FA 9C FF E7	acc 59 FF FA 9C FF E7	got 59 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଙ୍‌ନୁ	[0B19 0B4D 200C 0B28 0B41]	pref 59 FF FA 9C FF EB	acc 59 FF FA 9C FF EB	got 59 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଙ୍‌ନଂ	[0B19 0B4D 200C 0B28 0B02]	pref 59 FF FA 9C FF F3	acc 59 FF FA 9C FF F3	got 59 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଙେ୍‌ନ	[0B19 0B47 0B4D 200C 0B28]	pref 7B 59 FF FA 9C FF	acc 7B 59 FF FA 9C FF	got 7B 59 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଙ୍‌ର୍ନ	[0B19 0B4D 200C 0B30 0B4D 0B28]	pref 59 FF FA 9C FF F6	acc 59 FF FA 9C FF F6	got 59 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଙ୍‌ନ୍ର	[0B19 0B4D 200C 0B28 0B4D 0B30]	pref 59 FF FA 9C FF F7	acc 59 FF FA 9C FF F7	got 59 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଙ୍‌ନ୍ୟ	[0B19 0B4D 200C 0B28 0B4D 0B5F]	pref 59 FF FA 9C FF BF	acc 59 FF FA 9C FF BF	got 59 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଚ୍‌ନ	[0B1A 0B4D 200C 0B28]	pref 60 FF FA 9C FF	acc 60 FF FA 9C FF	got 60 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଚ୍‍ନ	[0B1A 0B4D 200D 0B28]	pref 60 FF FA 9C FF	acc 60 FF FA 9C FF	got 60 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଚ୍‌ନା	[0B1A 0B4D 200C 0B28 0B3E]	pref 60 FF FA 9C FF E6	acc 60 FF FA 9C FF E6	got 60 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଚ୍‌ନି	[0B1A 0B4D 200C 0B28 0B3F]	pref 60 FF FA 9C FF E7	acc 60 FF FA 9C FF E7	got 60 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଚ୍‌ନୁ	[0B1A 0B4D 200C 0B28 0B41]	pref 60 FF FA 9C FF EB	acc 60 FF FA 9C FF EB	got 60 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଚ୍‌ନଂ	[0B1A 0B4D 200C 0B28 0B02]	pref 60 FF FA 9C FF F3	acc 60 FF FA 9C FF F3	got 60 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଚେ୍‌ନ	[0B1A 0B47 0B4D 200C 0B28]	pref 7B 60 FF FA 9C FF	acc 7B 60 FF FA 9C FF	got 7B 60 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଚ୍‌ର୍ନ	[0B1A 0B4D 200C 0B30 0B4D 0B28]	pref 60 FF FA 9C FF F6	acc 60 FF FA 9C FF F6	got 60 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଚ୍‌ନ୍ର	[0B1A 0B4D 200C 0B28 0B4D 0B30]	pref 60 FF FA 9C FF F7	acc 60 FF FA 9C FF F7	got 60 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଚ୍‌ନ୍ୟ	[0B1A 0B4D 200C 0B28 0B4D 0B5F]	pref 60 FF FA 9C FF BF	acc 60 FF FA 9C FF BF	got 60 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଛ୍‌ନ	[0B1B 0B4D 200C 0B28]	pref 64 FA 9C FF	acc 64 FA 9C FF	got 64 FA 5B FF	reported 
+3 exception: na 9C->5B	ଛ୍‍ନ	[0B1B 0B4D 200D 0B28]	pref 64 FA 9C FF	acc 64 FA 9C FF	got 64 FA 5B FF	reported 
+3 exception: na 9C->5B	ଛ୍‌ନା	[0B1B 0B4D 200C 0B28 0B3E]	pref 64 FA 9C FF E6	acc 64 FA 9C FF E6	got 64 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଛ୍‌ନି	[0B1B 0B4D 200C 0B28 0B3F]	pref 64 FA 9C FF E7	acc 64 FA 9C FF E7	got 64 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଛ୍‌ନୁ	[0B1B 0B4D 200C 0B28 0B41]	pref 64 FA 9C FF EB	acc 64 FA 9C FF EB	got 64 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଛ୍‌ନଂ	[0B1B 0B4D 200C 0B28 0B02]	pref 64 FA 9C FF F3	acc 64 FA 9C FF F3	got 64 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଛେ୍‌ନ	[0B1B 0B47 0B4D 200C 0B28]	pref 7B 64 FA 9C FF	acc 7B 64 FA 9C FF	got 7B 64 FA 5B FF	reported 
+3 exception: na 9C->5B	ଛ୍‌ର୍ନ	[0B1B 0B4D 200C 0B30 0B4D 0B28]	pref 64 FA 9C FF F6	acc 64 FA 9C FF F6	got 64 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଛ୍‌ନ୍ର	[0B1B 0B4D 200C 0B28 0B4D 0B30]	pref 64 FA 9C FF F7	acc 64 FA 9C FF F7	got 64 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଛ୍‌ନ୍ୟ	[0B1B 0B4D 200C 0B28 0B4D 0B5F]	pref 64 FA 9C FF BF	acc 64 FA 9C FF BF	got 64 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଜ୍‌ନ	[0B1C 0B4D 200C 0B28]	pref 66 FA 9C FF	acc 66 FA 9C FF	got 66 FA 5B FF	reported 
+3 exception: na 9C->5B	ଜ୍‍ନ	[0B1C 0B4D 200D 0B28]	pref 66 FA 9C FF	acc 66 FA 9C FF	got 66 FA 5B FF	reported 
+3 exception: na 9C->5B	ଜ୍‌ନା	[0B1C 0B4D 200C 0B28 0B3E]	pref 66 FA 9C FF E6	acc 66 FA 9C FF E6	got 66 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଜ୍‌ନି	[0B1C 0B4D 200C 0B28 0B3F]	pref 66 FA 9C FF E7	acc 66 FA 9C FF E7	got 66 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଜ୍‌ନୁ	[0B1C 0B4D 200C 0B28 0B41]	pref 66 FA 9C FF EB	acc 66 FA 9C FF EB	got 66 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଜ୍‌ନଂ	[0B1C 0B4D 200C 0B28 0B02]	pref 66 FA 9C FF F3	acc 66 FA 9C FF F3	got 66 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଜେ୍‌ନ	[0B1C 0B47 0B4D 200C 0B28]	pref 7B 66 FA 9C FF	acc 7B 66 FA 9C FF	got 7B 66 FA 5B FF	reported 
+3 exception: na 9C->5B	ଜ୍‌ର୍ନ	[0B1C 0B4D 200C 0B30 0B4D 0B28]	pref 66 FA 9C FF F6	acc 66 FA 9C FF F6	got 66 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଜ୍‌ନ୍ର	[0B1C 0B4D 200C 0B28 0B4D 0B30]	pref 66 FA 9C FF F7	acc 66 FA 9C FF F7	got 66 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଜ୍‌ନ୍ୟ	[0B1C 0B4D 200C 0B28 0B4D 0B5F]	pref 66 FA 9C FF BF	acc 66 FA 9C FF BF	got 66 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଝ୍‌ନ	[0B1D 0B4D 200C 0B28]	pref 6C FA 9C FF	acc 6C FA 9C FF	got 6C FA 5B FF	reported 
+3 exception: na 9C->5B	ଝ୍‍ନ	[0B1D 0B4D 200D 0B28]	pref 6C FA 9C FF	acc 6C FA 9C FF	got 6C FA 5B FF	reported 
+3 exception: na 9C->5B	ଝ୍‌ନା	[0B1D 0B4D 200C 0B28 0B3E]	pref 6C FA 9C FF E6	acc 6C FA 9C FF E6	got 6C FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଝ୍‌ନି	[0B1D 0B4D 200C 0B28 0B3F]	pref 6C FA 9C FF E7	acc 6C FA 9C FF E7	got 6C FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଝ୍‌ନୁ	[0B1D 0B4D 200C 0B28 0B41]	pref 6C FA 9C FF EB	acc 6C FA 9C FF EB	got 6C FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଝ୍‌ନଂ	[0B1D 0B4D 200C 0B28 0B02]	pref 6C FA 9C FF F3	acc 6C FA 9C FF F3	got 6C FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଝେ୍‌ନ	[0B1D 0B47 0B4D 200C 0B28]	pref 7B 6C FA 9C FF	acc 7B 6C FA 9C FF	got 7B 6C FA 5B FF	reported 
+3 exception: na 9C->5B	ଝ୍‌ର୍ନ	[0B1D 0B4D 200C 0B30 0B4D 0B28]	pref 6C FA 9C FF F6	acc 6C FA 9C FF F6	got 6C FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଝ୍‌ନ୍ର	[0B1D 0B4D 200C 0B28 0B4D 0B30]	pref 6C FA 9C FF F7	acc 6C FA 9C FF F7	got 6C FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଝ୍‌ନ୍ୟ	[0B1D 0B4D 200C 0B28 0B4D 0B5F]	pref 6C FA 9C FF BF	acc 6C FA 9C FF BF	got 6C FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଞ୍‌ନ	[0B1E 0B4D 200C 0B28]	pref 6E FF FA 9C FF	acc 6E FF FA 9C FF	got 6E FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଞ୍‍ନ	[0B1E 0B4D 200D 0B28]	pref 6E FF FA 9C FF	acc 6E FF FA 9C FF	got 6E FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଞ୍‌ନା	[0B1E 0B4D 200C 0B28 0B3E]	pref 6E FF FA 9C FF E6	acc 6E FF FA 9C FF E6	got 6E FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଞ୍‌ନି	[0B1E 0B4D 200C 0B28 0B3F]	pref 6E FF FA 9C FF E7	acc 6E FF FA 9C FF E7	got 6E FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଞ୍‌ନୁ	[0B1E 0B4D 200C 0B28 0B41]	pref 6E FF FA 9C FF EB	acc 6E FF FA 9C FF EB	got 6E FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଞ୍‌ନଂ	[0B1E 0B4D 200C 0B28 0B02]	pref 6E FF FA 9C FF F3	acc 6E FF FA 9C FF F3	got 6E FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଞେ୍‌ନ	[0B1E 0B47 0B4D 200C 0B28]	pref 7B 6E FF FA 9C FF	acc 7B 6E FF FA 9C FF	got 7B 6E FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଞ୍‌ର୍ନ	[0B1E 0B4D 200C 0B30 0B4D 0B28]	pref 6E FF FA 9C FF F6	acc 6E FF FA 9C FF F6	got 6E FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଞ୍‌ନ୍ର	[0B1E 0B4D 200C 0B28 0B4D 0B30]	pref 6E FF FA 9C FF F7	acc 6E FF FA 9C FF F7	got 6E FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଞ୍‌ନ୍ୟ	[0B1E 0B4D 200C 0B28 0B4D 0B5F]	pref 6E FF FA 9C FF BF	acc 6E FF FA 9C FF BF	got 6E FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଟ୍‌ନ	[0B1F 0B4D 200C 0B28]	pref 73 FA 9C FF	acc 73 FA 9C FF	got 73 FA 5B FF	reported 
+3 exception: na 9C->5B	ଟ୍‍ନ	[0B1F 0B4D 200D 0B28]	pref 73 FA 9C FF	acc 73 FA 9C FF	got 73 FA 5B FF	reported 
+3 exception: na 9C->5B	ଟ୍‌ନା	[0B1F 0B4D 200C 0B28 0B3E]	pref 73 FA 9C FF E6	acc 73 FA 9C FF E6	got 73 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଟ୍‌ନି	[0B1F 0B4D 200C 0B28 0B3F]	pref 73 FA 9C FF E7	acc 73 FA 9C FF E7	got 73 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଟ୍‌ନୁ	[0B1F 0B4D 200C 0B28 0B41]	pref 73 FA 9C FF EB	acc 73 FA 9C FF EB	got 73 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଟ୍‌ନଂ	[0B1F 0B4D 200C 0B28 0B02]	pref 73 FA 9C FF F3	acc 73 FA 9C FF F3	got 73 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଟେ୍‌ନ	[0B1F 0B47 0B4D 200C 0B28]	pref 7B 73 FA 9C FF	acc 7B 73 FA 9C FF	got 7B 73 FA 5B FF	reported 
+3 exception: na 9C->5B	ଟ୍‌ର୍ନ	[0B1F 0B4D 200C 0B30 0B4D 0B28]	pref 73 FA 9C FF F6	acc 73 FA 9C FF F6	got 73 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଟ୍‌ନ୍ର	[0B1F 0B4D 200C 0B28 0B4D 0B30]	pref 73 FA 9C FF F7	acc 73 FA 9C FF F7	got 73 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଟ୍‌ନ୍ୟ	[0B1F 0B4D 200C 0B28 0B4D 0B5F]	pref 73 FA 9C FF BF	acc 73 FA 9C FF BF	got 73 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଠ୍‌ନ	[0B20 0B4D 200C 0B28]	pref 76 FF FA 9C FF	acc 76 FF FA 9C FF	got 76 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଠ୍‍ନ	[0B20 0B4D 200D 0B28]	pref 76 FF FA 9C FF	acc 76 FF FA 9C FF	got 76 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଠ୍‌ନା	[0B20 0B4D 200C 0B28 0B3E]	pref 76 FF FA 9C FF E6	acc 76 FF FA 9C FF E6	got 76 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଠ୍‌ନି	[0B20 0B4D 200C 0B28 0B3F]	pref 76 FF FA 9C FF E7	acc 76 FF FA 9C FF E7	got 76 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଠ୍‌ନୁ	[0B20 0B4D 200C 0B28 0B41]	pref 76 FF FA 9C FF EB	acc 76 FF FA 9C FF EB	got 76 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଠ୍‌ନଂ	[0B20 0B4D 200C 0B28 0B02]	pref 76 FF FA 9C FF F3	acc 76 FF FA 9C FF F3	got 76 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଠେ୍‌ନ	[0B20 0B47 0B4D 200C 0B28]	pref 7B 76 FF FA 9C FF	acc 7B 76 FF FA 9C FF	got 7B 76 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଠ୍‌ର୍ନ	[0B20 0B4D 200C 0B30 0B4D 0B28]	pref 76 FF FA 9C FF F6	acc 76 FF FA 9C FF F6	got 76 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଠ୍‌ନ୍ର	[0B20 0B4D 200C 0B28 0B4D 0B30]	pref 76 FF FA 9C FF F7	acc 76 FF FA 9C FF F7	got 76 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଠ୍‌ନ୍ୟ	[0B20 0B4D 200C 0B28 0B4D 0B5F]	pref 76 FF FA 9C FF BF	acc 76 FF FA 9C FF BF	got 76 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଡ୍‌ନ	[0B21 0B4D 200C 0B28]	pref 78 FF FA 9C FF	acc 78 FF FA 9C FF	got 78 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ୍‍ନ	[0B21 0B4D 200D 0B28]	pref 78 FF FA 9C FF	acc 78 FF FA 9C FF	got 78 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ୍‌ନା	[0B21 0B4D 200C 0B28 0B3E]	pref 78 FF FA 9C FF E6	acc 78 FF FA 9C FF E6	got 78 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଡ୍‌ନି	[0B21 0B4D 200C 0B28 0B3F]	pref 78 FF FA 9C FF E7	acc 78 FF FA 9C FF E7	got 78 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଡ୍‌ନୁ	[0B21 0B4D 200C 0B28 0B41]	pref 78 FF FA 9C FF EB	acc 78 FF FA 9C FF EB	got 78 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଡ୍‌ନଂ	[0B21 0B4D 200C 0B28 0B02]	pref 78 FF FA 9C FF F3	acc 78 FF FA 9C FF F3	got 78 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଡେ୍‌ନ	[0B21 0B47 0B4D 200C 0B28]	pref 7B 78 FF FA 9C FF	acc 7B 78 FF FA 9C FF	got 7B 78 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ୍‌ର୍ନ	[0B21 0B4D 200C 0B30 0B4D 0B28]	pref 78 FF FA 9C FF F6	acc 78 FF FA 9C FF F6	got 78 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଡ୍‌ନ୍ର	[0B21 0B4D 200C 0B28 0B4D 0B30]	pref 78 FF FA 9C FF F7	acc 78 FF FA 9C FF F7	got 78 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଡ୍‌ନ୍ୟ	[0B21 0B4D 200C 0B28 0B4D 0B5F]	pref 78 FF FA 9C FF BF	acc 78 FF FA 9C FF BF	got 78 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଢ୍‌ନ	[0B22 0B4D 200C 0B28]	pref 7C FF FA 9C FF	acc 7C FF FA 9C FF	got 7C FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ୍‍ନ	[0B22 0B4D 200D 0B28]	pref 7C FF FA 9C FF	acc 7C FF FA 9C FF	got 7C FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ୍‌ନା	[0B22 0B4D 200C 0B28 0B3E]	pref 7C FF FA 9C FF E6	acc 7C FF FA 9C FF E6	got 7C FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଢ୍‌ନି	[0B22 0B4D 200C 0B28 0B3F]	pref 7C FF FA 9C FF E7	acc 7C FF FA 9C FF E7	got 7C FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଢ୍‌ନୁ	[0B22 0B4D 200C 0B28 0B41]	pref 7C FF FA 9C FF EB	acc 7C FF FA 9C FF EB	got 7C FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଢ୍‌ନଂ	[0B22 0B4D 200C 0B28 0B02]	pref 7C FF FA 9C FF F3	acc 7C FF FA 9C FF F3	got 7C FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଢେ୍‌ନ	[0B22 0B47 0B4D 200C 0B28]	pref 7B 7C FF FA 9C FF	acc 7B 7C FF FA 9C FF	got 7B 7C FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ୍‌ର୍ନ	[0B22 0B4D 200C 0B30 0B4D 0B28]	pref 7C FF FA 9C FF F6	acc 7C FF FA 9C FF F6	got 7C FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଢ୍‌ନ୍ର	[0B22 0B4D 200C 0B28 0B4D 0B30]	pref 7C FF FA 9C FF F7	acc 7C FF FA 9C FF F7	got 7C FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଢ୍‌ନ୍ୟ	[0B22 0B4D 200C 0B28 0B4D 0B5F]	pref 7C FF FA 9C FF BF	acc 7C FF FA 9C FF BF	got 7C FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଣ୍‌ନ	[0B23 0B4D 200C 0B28]	pref 7E FA 9C FF	acc 7E FA 9C FF	got 7E FA 5B FF	reported 
+3 exception: na 9C->5B	ଣ୍‍ନ	[0B23 0B4D 200D 0B28]	pref 7E FA 9C FF	acc 7E FA 9C FF	got 7E FA 5B FF	reported 
+3 exception: na 9C->5B	ଣ୍‌ନା	[0B23 0B4D 200C 0B28 0B3E]	pref 7E FA 9C FF E6	acc 7E FA 9C FF E6	got 7E FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଣ୍‌ନି	[0B23 0B4D 200C 0B28 0B3F]	pref 7E FA 9C FF E7	acc 7E FA 9C FF E7	got 7E FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଣ୍‌ନୁ	[0B23 0B4D 200C 0B28 0B41]	pref 7E FA 9C FF EB	acc 7E FA 9C FF EB	got 7E FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଣ୍‌ନଂ	[0B23 0B4D 200C 0B28 0B02]	pref 7E FA 9C FF F3	acc 7E FA 9C FF F3	got 7E FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଣେ୍‌ନ	[0B23 0B47 0B4D 200C 0B28]	pref 7B 7E FA 9C FF	acc 7B 7E FA 9C FF	got 7B 7E FA 5B FF	reported 
+3 exception: na 9C->5B	ଣ୍‌ର୍ନ	[0B23 0B4D 200C 0B30 0B4D 0B28]	pref 7E FA 9C FF F6	acc 7E FA 9C FF F6	got 7E FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଣ୍‌ନ୍ର	[0B23 0B4D 200C 0B28 0B4D 0B30]	pref 7E FA 9C FF F7	acc 7E FA 9C FF F7	got 7E FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଣ୍‌ନ୍ୟ	[0B23 0B4D 200C 0B28 0B4D 0B5F]	pref 7E FA 9C FF BF	acc 7E FA 9C FF BF	got 7E FA 5B FF BF	reported 
+3 exception: na 9C->5B	ତ୍‌ନ	[0B24 0B4D 200C 0B28]	pref 86 FF FA 9C FF	acc 86 FF FA 9C FF	got 86 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ତ୍‌ନା	[0B24 0B4D 200C 0B28 0B3E]	pref 86 FF FA 9C FF E6	acc 86 FF FA 9C FF E6	got 86 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ତ୍‌ନି	[0B24 0B4D 200C 0B28 0B3F]	pref 86 FF FA 9C FF E7	acc 86 FF FA 9C FF E7	got 86 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ତ୍‌ନୁ	[0B24 0B4D 200C 0B28 0B41]	pref 86 FF FA 9C FF EB	acc 86 FF FA 9C FF EB	got 86 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ତ୍‌ନଂ	[0B24 0B4D 200C 0B28 0B02]	pref 86 FF FA 9C FF F3	acc 86 FF FA 9C FF F3	got 86 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ତେ୍‌ନ	[0B24 0B47 0B4D 200C 0B28]	pref 7B 86 FF FA 9C FF	acc 7B 86 FF FA 9C FF	got 7B 86 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ତ୍‌ର୍ନ	[0B24 0B4D 200C 0B30 0B4D 0B28]	pref 86 FF FA 9C FF F6	acc 86 FF FA 9C FF F6	got 86 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ତ୍‌ନ୍ର	[0B24 0B4D 200C 0B28 0B4D 0B30]	pref 86 FF FA 9C FF F7	acc 86 FF FA 9C FF F7	got 86 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ତ୍‌ନ୍ୟ	[0B24 0B4D 200C 0B28 0B4D 0B5F]	pref 86 FF FA 9C FF BF	acc 86 FF FA 9C FF BF	got 86 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଥ୍‌ନ	[0B25 0B4D 200C 0B28]	pref 24 FA 9C FF	acc 24 FA 9C FF	got 24 FA 5B FF	reported 
+3 exception: na 9C->5B	ଥ୍‍ନ	[0B25 0B4D 200D 0B28]	pref 24 FA 9C FF	acc 24 FA 9C FF	got 24 FA 5B FF	reported 
+3 exception: na 9C->5B	ଥ୍‌ନା	[0B25 0B4D 200C 0B28 0B3E]	pref 24 FA 9C FF E6	acc 24 FA 9C FF E6	got 24 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଥ୍‌ନି	[0B25 0B4D 200C 0B28 0B3F]	pref 24 FA 9C FF E7	acc 24 FA 9C FF E7	got 24 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଥ୍‌ନୁ	[0B25 0B4D 200C 0B28 0B41]	pref 24 FA 9C FF EB	acc 24 FA 9C FF EB	got 24 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଥ୍‌ନଂ	[0B25 0B4D 200C 0B28 0B02]	pref 24 FA 9C FF F3	acc 24 FA 9C FF F3	got 24 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଥେ୍‌ନ	[0B25 0B47 0B4D 200C 0B28]	pref 7B 24 FA 9C FF	acc 7B 24 FA 9C FF	got 7B 24 FA 5B FF	reported 
+3 exception: na 9C->5B	ଥ୍‌ର୍ନ	[0B25 0B4D 200C 0B30 0B4D 0B28]	pref 24 FA 9C FF F6	acc 24 FA 9C FF F6	got 24 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଥ୍‌ନ୍ର	[0B25 0B4D 200C 0B28 0B4D 0B30]	pref 24 FA 9C FF F7	acc 24 FA 9C FF F7	got 24 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଥ୍‌ନ୍ୟ	[0B25 0B4D 200C 0B28 0B4D 0B5F]	pref 24 FA 9C FF BF	acc 24 FA 9C FF BF	got 24 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଦ୍‌ନ	[0B26 0B4D 200C 0B28]	pref 92 FF FA 9C FF	acc 92 FF FA 9C FF	got 92 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଦ୍‍ନ	[0B26 0B4D 200D 0B28]	pref 92 FF FA 9C FF	acc 92 FF FA 9C FF	got 92 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଦ୍‌ନା	[0B26 0B4D 200C 0B28 0B3E]	pref 92 FF FA 9C FF E6	acc 92 FF FA 9C FF E6	got 92 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଦ୍‌ନି	[0B26 0B4D 200C 0B28 0B3F]	pref 92 FF FA 9C FF E7	acc 92 FF FA 9C FF E7	got 92 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଦ୍‌ନୁ	[0B26 0B4D 200C 0B28 0B41]	pref 92 FF FA 9C FF EB	acc 92 FF FA 9C FF EB	got 92 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଦ୍‌ନଂ	[0B26 0B4D 200C 0B28 0B02]	pref 92 FF FA 9C FF F3	acc 92 FF FA 9C FF F3	got 92 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଦେ୍‌ନ	[0B26 0B47 0B4D 200C 0B28]	pref 7B 92 FF FA 9C FF	acc 7B 92 FF FA 9C FF	got 7B 92 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଦ୍‌ର୍ନ	[0B26 0B4D 200C 0B30 0B4D 0B28]	pref 92 FF FA 9C FF F6	acc 92 FF FA 9C FF F6	got 92 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଦ୍‌ନ୍ର	[0B26 0B4D 200C 0B28 0B4D 0B30]	pref 92 FF FA 9C FF F7	acc 92 FF FA 9C FF F7	got 92 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଦ୍‌ନ୍ୟ	[0B26 0B4D 200C 0B28 0B4D 0B5F]	pref 92 FF FA 9C FF BF	acc 92 FF FA 9C FF BF	got 92 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଧ୍‌ନ	[0B27 0B4D 200C 0B28]	pref 99 FA 9C FF	acc 99 FA 9C FF	got 99 FA 5B FF	reported 
+3 exception: na 9C->5B	ଧ୍‍ନ	[0B27 0B4D 200D 0B28]	pref 99 FA 9C FF	acc 99 FA 9C FF	got 99 FA 5B FF	reported 
+3 exception: na 9C->5B	ଧ୍‌ନା	[0B27 0B4D 200C 0B28 0B3E]	pref 99 FA 9C FF E6	acc 99 FA 9C FF E6	got 99 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଧ୍‌ନି	[0B27 0B4D 200C 0B28 0B3F]	pref 99 FA 9C FF E7	acc 99 FA 9C FF E7	got 99 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଧ୍‌ନୁ	[0B27 0B4D 200C 0B28 0B41]	pref 99 FA 9C FF EB	acc 99 FA 9C FF EB	got 99 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଧ୍‌ନଂ	[0B27 0B4D 200C 0B28 0B02]	pref 99 FA 9C FF F3	acc 99 FA 9C FF F3	got 99 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଧେ୍‌ନ	[0B27 0B47 0B4D 200C 0B28]	pref 7B 99 FA 9C FF	acc 7B 99 FA 9C FF	got 7B 99 FA 5B FF	reported 
+3 exception: na 9C->5B	ଧ୍‌ର୍ନ	[0B27 0B4D 200C 0B30 0B4D 0B28]	pref 99 FA 9C FF F6	acc 99 FA 9C FF F6	got 99 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଧ୍‌ନ୍ର	[0B27 0B4D 200C 0B28 0B4D 0B30]	pref 99 FA 9C FF F7	acc 99 FA 9C FF F7	got 99 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଧ୍‌ନ୍ୟ	[0B27 0B4D 200C 0B28 0B4D 0B5F]	pref 99 FA 9C FF BF	acc 99 FA 9C FF BF	got 99 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌କ	[0B28 0B4D 200C 0B15]	pref 9C FF FA 4C FF	acc 9C FF FA 4C FF	got 5B FF FA 4C FF	reported 
+3 exception: na 9C->5B	ନ୍‍କ	[0B28 0B4D 200D 0B15]	pref 9C FF FA 4C FF	acc 9C FF FA 4C FF	got 5B FF FA 4C FF	reported 
+3 exception: na 9C->5B	ନ୍‌କା	[0B28 0B4D 200C 0B15 0B3E]	pref 9C FF FA 4C FF E6	acc 9C FF FA 4C FF E6	got 5B FF FA 4C FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌କି	[0B28 0B4D 200C 0B15 0B3F]	pref 9C FF FA 4C FF E7	acc 9C FF FA 4C FF E7	got 5B FF FA 4C FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌କୁ	[0B28 0B4D 200C 0B15 0B41]	pref 9C FF FA 4C FF EB	acc 9C FF FA 4C FF EB	got 5B FF FA 4C FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌କଂ	[0B28 0B4D 200C 0B15 0B02]	pref 9C FF FA 4C FF F3	acc 9C FF FA 4C FF F3	got 5B FF FA 4C FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌କ	[0B28 0B47 0B4D 200C 0B15]	pref 7B 9C FF FA 4C FF	acc 7B 9C FF FA 4C FF	got 7B 5B FF FA 4C FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍କ	[0B28 0B4D 200C 0B30 0B4D 0B15]	pref 9C FF FA 4C FF F6	acc 9C FF FA 4C FF F6	got 5B FF FA 4C FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌କ୍ର	[0B28 0B4D 200C 0B15 0B4D 0B30]	pref 9C FF FA 4C FF F7	acc 9C FF FA 4C FF F7	got 5B FF FA 4C FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌କ୍ୟ	[0B28 0B4D 200C 0B15 0B4D 0B5F]	pref 9C FF FA 4C FF BF	acc 9C FF FA 4C FF BF	got 5B FF FA 4C FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଖ	[0B28 0B4D 200C 0B16]	pref 9C FF FA 51	acc 9C FF FA 51	got 5B FF FA 51	reported 
+3 exception: na 9C->5B	ନ୍‍ଖ	[0B28 0B4D 200D 0B16]	pref 9C FF FA 51	acc 9C FF FA 51	got 5B FF FA 51	reported 
+3 exception: na 9C->5B	ନ୍‌ଖା	[0B28 0B4D 200C 0B16 0B3E]	pref 9C FF FA 51 E6	acc 9C FF FA 51 E6	got 5B FF FA 51 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଖି	[0B28 0B4D 200C 0B16 0B3F]	pref 9C FF FA 51 23	acc 9C FF FA 51 23	got 5B FF FA 51 23	reported 
+3 exception: na 9C->5B	ନ୍‌ଖୁ	[0B28 0B4D 200C 0B16 0B41]	pref 9C FF FA 51 EB	acc 9C FF FA 51 EB	got 5B FF FA 51 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଖଂ	[0B28 0B4D 200C 0B16 0B02]	pref 9C FF FA 51 F3	acc 9C FF FA 51 F3	got 5B FF FA 51 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଖ	[0B28 0B47 0B4D 200C 0B16]	pref 7B 9C FF FA 51	acc 7B 9C FF FA 51	got 7B 5B FF FA 51	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଖ	[0B28 0B4D 200C 0B30 0B4D 0B16]	pref 9C FF FA 51 F6	acc 9C FF FA 51 F6	got 5B FF FA 51 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଖ୍ର	[0B28 0B4D 200C 0B16 0B4D 0B30]	pref 9C FF FA 51 F7	acc 9C FF FA 51 F7	got 5B FF FA 51 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଖ୍ୟ	[0B28 0B4D 200C 0B16 0B4D 0B5F]	pref 9C FF FA 51 BF	acc 9C FF FA 51 BF	got 5B FF FA 51 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଗ	[0B28 0B4D 200C 0B17]	pref 9C FF FA 53	acc 9C FF FA 53	got 5B FF FA 53	reported 
+3 exception: na 9C->5B	ନ୍‍ଗ	[0B28 0B4D 200D 0B17]	pref 9C FF FA 53	acc 9C FF FA 53	got 5B FF FA 53	reported 
+3 exception: na 9C->5B	ନ୍‌ଗା	[0B28 0B4D 200C 0B17 0B3E]	pref 9C FF FA 53 E6	acc 9C FF FA 53 E6	got 5B FF FA 53 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଗି	[0B28 0B4D 200C 0B17 0B3F]	pref 9C FF FA 53 E7	acc 9C FF FA 53 E7	got 5B FF FA 53 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଗୁ	[0B28 0B4D 200C 0B17 0B41]	pref 9C FF FA 53 EB	acc 9C FF FA 53 EB	got 5B FF FA 53 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଗଂ	[0B28 0B4D 200C 0B17 0B02]	pref 9C FF FA 53 F3	acc 9C FF FA 53 F3	got 5B FF FA 53 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଗ	[0B28 0B47 0B4D 200C 0B17]	pref 7B 9C FF FA 53	acc 7B 9C FF FA 53	got 7B 5B FF FA 53	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଗ	[0B28 0B4D 200C 0B30 0B4D 0B17]	pref 9C FF FA 53 F6	acc 9C FF FA 53 F6	got 5B FF FA 53 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଗ୍ର	[0B28 0B4D 200C 0B17 0B4D 0B30]	pref 9C FF FA 53 F7	acc 9C FF FA 53 F7	got 5B FF FA 53 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଗ୍ୟ	[0B28 0B4D 200C 0B17 0B4D 0B5F]	pref 9C FF FA 53 BF	acc 9C FF FA 53 BF	got 5B FF FA 53 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଘ	[0B28 0B4D 200C 0B18]	pref 9C FF FA 57	acc 9C FF FA 57	got 5B FF FA 57	reported 
+3 exception: na 9C->5B	ନ୍‍ଘ	[0B28 0B4D 200D 0B18]	pref 9C FF FA 57	acc 9C FF FA 57	got 5B FF FA 57	reported 
+3 exception: na 9C->5B	ନ୍‌ଘା	[0B28 0B4D 200C 0B18 0B3E]	pref 9C FF FA 57 E6	acc 9C FF FA 57 E6	got 5B FF FA 57 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଘି	[0B28 0B4D 200C 0B18 0B3F]	pref 9C FF FA 57 E7	acc 9C FF FA 57 E7	got 5B FF FA 57 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଘୁ	[0B28 0B4D 200C 0B18 0B41]	pref 9C FF FA 57 EB	acc 9C FF FA 57 EB	got 5B FF FA 57 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଘଂ	[0B28 0B4D 200C 0B18 0B02]	pref 9C FF FA 57 F3	acc 9C FF FA 57 F3	got 5B FF FA 57 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଘ	[0B28 0B47 0B4D 200C 0B18]	pref 7B 9C FF FA 57	acc 7B 9C FF FA 57	got 7B 5B FF FA 57	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଘ	[0B28 0B4D 200C 0B30 0B4D 0B18]	pref 9C FF FA 57 F6	acc 9C FF FA 57 F6	got 5B FF FA 57 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଘ୍ର	[0B28 0B4D 200C 0B18 0B4D 0B30]	pref 9C FF FA 57 F7	acc 9C FF FA 57 F7	got 5B FF FA 57 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଘ୍ୟ	[0B28 0B4D 200C 0B18 0B4D 0B5F]	pref 9C FF FA 57 BF	acc 9C FF FA 57 BF	got 5B FF FA 57 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଙ	[0B28 0B4D 200C 0B19]	pref 9C FF FA 59 FF	acc 9C FF FA 59 FF	got 5B FF FA 59 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଙ	[0B28 0B4D 200D 0B19]	pref 9C FF FA 59 FF	acc 9C FF FA 59 FF	got 5B FF FA 59 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଙା	[0B28 0B4D 200C 0B19 0B3E]	pref 9C FF FA 59 FF E6	acc 9C FF FA 59 FF E6	got 5B FF FA 59 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଙି	[0B28 0B4D 200C 0B19 0B3F]	pref 9C FF FA 59 FF E7	acc 9C FF FA 59 FF E7	got 5B FF FA 59 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଙୁ	[0B28 0B4D 200C 0B19 0B41]	pref 9C FF FA 59 FF EB	acc 9C FF FA 59 FF EB	got 5B FF FA 59 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଙଂ	[0B28 0B4D 200C 0B19 0B02]	pref 9C FF FA 59 FF F3	acc 9C FF FA 59 FF F3	got 5B FF FA 59 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଙ	[0B28 0B47 0B4D 200C 0B19]	pref 7B 9C FF FA 59 FF	acc 7B 9C FF FA 59 FF	got 7B 5B FF FA 59 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଙ	[0B28 0B4D 200C 0B30 0B4D 0B19]	pref 9C FF FA 59 FF F6	acc 9C FF FA 59 FF F6	got 5B FF FA 59 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଙ୍ର	[0B28 0B4D 200C 0B19 0B4D 0B30]	pref 9C FF FA 59 FF F7	acc 9C FF FA 59 FF F7	got 5B FF FA 59 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଙ୍ୟ	[0B28 0B4D 200C 0B19 0B4D 0B5F]	pref 9C FF FA 59 FF BF	acc 9C FF FA 59 FF BF	got 5B FF FA 59 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଚ	[0B28 0B4D 200C 0B1A]	pref 9C FF FA 60 FF	acc 9C FF FA 60 FF	got 5B FF FA 60 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଚ	[0B28 0B4D 200D 0B1A]	pref 9C FF FA 60 FF	acc 9C FF FA 60 FF	got 5B FF FA 60 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଚା	[0B28 0B4D 200C 0B1A 0B3E]	pref 9C FF FA 60 FF E6	acc 9C FF FA 60 FF E6	got 5B FF FA 60 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଚି	[0B28 0B4D 200C 0B1A 0B3F]	pref 9C FF FA 60 FF E7	acc 9C FF FA 60 FF E7	got 5B FF FA 60 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଚୁ	[0B28 0B4D 200C 0B1A 0B41]	pref 9C FF FA 60 FF EB	acc 9C FF FA 60 FF EB	got 5B FF FA 60 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଚଂ	[0B28 0B4D 200C 0B1A 0B02]	pref 9C FF FA 60 FF F3	acc 9C FF FA 60 FF F3	got 5B FF FA 60 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଚ	[0B28 0B47 0B4D 200C 0B1A]	pref 7B 9C FF FA 60 FF	acc 7B 9C FF FA 60 FF	got 7B 5B FF FA 60 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଚ	[0B28 0B4D 200C 0B30 0B4D 0B1A]	pref 9C FF FA 60 FF F6	acc 9C FF FA 60 FF F6	got 5B FF FA 60 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଚ୍ର	[0B28 0B4D 200C 0B1A 0B4D 0B30]	pref 9C FF FA 60 FF F7	acc 9C FF FA 60 FF F7	got 5B FF FA 60 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଚ୍ୟ	[0B28 0B4D 200C 0B1A 0B4D 0B5F]	pref 9C FF FA 60 FF BF	acc 9C FF FA 60 FF BF	got 5B FF FA 60 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଛ	[0B28 0B4D 200C 0B1B]	pref 9C FF FA 64	acc 9C FF FA 64	got 5B FF FA 64	reported 
+3 exception: na 9C->5B	ନ୍‍ଛ	[0B28 0B4D 200D 0B1B]	pref 9C FF FA 64	acc 9C FF FA 64	got 5B FF FA 64	reported 
+3 exception: na 9C->5B	ନ୍‌ଛା	[0B28 0B4D 200C 0B1B 0B3E]	pref 9C FF FA 64 E6	acc 9C FF FA 64 E6	got 5B FF FA 64 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଛି	[0B28 0B4D 200C 0B1B 0B3F]	pref 9C FF FA 64 E7	acc 9C FF FA 64 E7	got 5B FF FA 64 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଛୁ	[0B28 0B4D 200C 0B1B 0B41]	pref 9C FF FA 64 EB	acc 9C FF FA 64 EB	got 5B FF FA 64 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଛଂ	[0B28 0B4D 200C 0B1B 0B02]	pref 9C FF FA 64 F3	acc 9C FF FA 64 F3	got 5B FF FA 64 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଛ	[0B28 0B47 0B4D 200C 0B1B]	pref 7B 9C FF FA 64	acc 7B 9C FF FA 64	got 7B 5B FF FA 64	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଛ	[0B28 0B4D 200C 0B30 0B4D 0B1B]	pref 9C FF FA 64 F6	acc 9C FF FA 64 F6	got 5B FF FA 64 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଛ୍ର	[0B28 0B4D 200C 0B1B 0B4D 0B30]	pref 9C FF FA 64 F7	acc 9C FF FA 64 F7	got 5B FF FA 64 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଛ୍ୟ	[0B28 0B4D 200C 0B1B 0B4D 0B5F]	pref 9C FF FA 64 BF	acc 9C FF FA 64 BF	got 5B FF FA 64 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଜ	[0B28 0B4D 200C 0B1C]	pref 9C FF FA 66	acc 9C FF FA 66	got 5B FF FA 66	reported 
+3 exception: na 9C->5B	ନ୍‍ଜ	[0B28 0B4D 200D 0B1C]	pref 9C FF FA 66	acc 9C FF FA 66	got 5B FF FA 66	reported 
+3 exception: na 9C->5B	ନ୍‌ଜା	[0B28 0B4D 200C 0B1C 0B3E]	pref 9C FF FA 66 E6	acc 9C FF FA 66 E6	got 5B FF FA 66 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଜି	[0B28 0B4D 200C 0B1C 0B3F]	pref 9C FF FA 66 E7	acc 9C FF FA 66 E7	got 5B FF FA 66 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଜୁ	[0B28 0B4D 200C 0B1C 0B41]	pref 9C FF FA 66 EB	acc 9C FF FA 66 EB	got 5B FF FA 66 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଜଂ	[0B28 0B4D 200C 0B1C 0B02]	pref 9C FF FA 66 F3	acc 9C FF FA 66 F3	got 5B FF FA 66 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଜ	[0B28 0B47 0B4D 200C 0B1C]	pref 7B 9C FF FA 66	acc 7B 9C FF FA 66	got 7B 5B FF FA 66	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଜ	[0B28 0B4D 200C 0B30 0B4D 0B1C]	pref 9C FF FA 66 F6	acc 9C FF FA 66 F6	got 5B FF FA 66 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଜ୍ର	[0B28 0B4D 200C 0B1C 0B4D 0B30]	pref 9C FF FA 66 F7	acc 9C FF FA 66 F7	got 5B FF FA 66 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଜ୍ୟ	[0B28 0B4D 200C 0B1C 0B4D 0B5F]	pref 9C FF FA 66 BF	acc 9C FF FA 66 BF	got 5B FF FA 66 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଝ	[0B28 0B4D 200C 0B1D]	pref 9C FF FA 6C	acc 9C FF FA 6C	got 5B FF FA 6C	reported 
+3 exception: na 9C->5B	ନ୍‍ଝ	[0B28 0B4D 200D 0B1D]	pref 9C FF FA 6C	acc 9C FF FA 6C	got 5B FF FA 6C	reported 
+3 exception: na 9C->5B	ନ୍‌ଝା	[0B28 0B4D 200C 0B1D 0B3E]	pref 9C FF FA 6C E6	acc 9C FF FA 6C E6	got 5B FF FA 6C E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଝି	[0B28 0B4D 200C 0B1D 0B3F]	pref 9C FF FA 6C E7	acc 9C FF FA 6C E7	got 5B FF FA 6C E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଝୁ	[0B28 0B4D 200C 0B1D 0B41]	pref 9C FF FA 6C EB	acc 9C FF FA 6C EB	got 5B FF FA 6C EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଝଂ	[0B28 0B4D 200C 0B1D 0B02]	pref 9C FF FA 6C F3	acc 9C FF FA 6C F3	got 5B FF FA 6C F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଝ	[0B28 0B47 0B4D 200C 0B1D]	pref 7B 9C FF FA 6C	acc 7B 9C FF FA 6C	got 7B 5B FF FA 6C	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଝ	[0B28 0B4D 200C 0B30 0B4D 0B1D]	pref 9C FF FA 6C F6	acc 9C FF FA 6C F6	got 5B FF FA 6C F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଝ୍ର	[0B28 0B4D 200C 0B1D 0B4D 0B30]	pref 9C FF FA 6C F7	acc 9C FF FA 6C F7	got 5B FF FA 6C F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଝ୍ୟ	[0B28 0B4D 200C 0B1D 0B4D 0B5F]	pref 9C FF FA 6C BF	acc 9C FF FA 6C BF	got 5B FF FA 6C BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଞ	[0B28 0B4D 200C 0B1E]	pref 9C FF FA 6E FF	acc 9C FF FA 6E FF	got 5B FF FA 6E FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଞ	[0B28 0B4D 200D 0B1E]	pref 9C FF FA 6E FF	acc 9C FF FA 6E FF	got 5B FF FA 6E FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଞା	[0B28 0B4D 200C 0B1E 0B3E]	pref 9C FF FA 6E FF E6	acc 9C FF FA 6E FF E6	got 5B FF FA 6E FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଞି	[0B28 0B4D 200C 0B1E 0B3F]	pref 9C FF FA 6E FF E7	acc 9C FF FA 6E FF E7	got 5B FF FA 6E FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଞୁ	[0B28 0B4D 200C 0B1E 0B41]	pref 9C FF FA 6E FF EB	acc 9C FF FA 6E FF EB	got 5B FF FA 6E FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଞଂ	[0B28 0B4D 200C 0B1E 0B02]	pref 9C FF FA 6E FF F3	acc 9C FF FA 6E FF F3	got 5B FF FA 6E FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଞ	[0B28 0B47 0B4D 200C 0B1E]	pref 7B 9C FF FA 6E FF	acc 7B 9C FF FA 6E FF	got 7B 5B FF FA 6E FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଞ	[0B28 0B4D 200C 0B30 0B4D 0B1E]	pref 9C FF FA 6E FF F6	acc 9C FF FA 6E FF F6	got 5B FF FA 6E FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଞ୍ର	[0B28 0B4D 200C 0B1E 0B4D 0B30]	pref 9C FF FA 6E FF F7	acc 9C FF FA 6E FF F7	got 5B FF FA 6E FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଞ୍ୟ	[0B28 0B4D 200C 0B1E 0B4D 0B5F]	pref 9C FF FA 6E FF BF	acc 9C FF FA 6E FF BF	got 5B FF FA 6E FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଟ	[0B28 0B4D 200C 0B1F]	pref 9C FF FA 73	acc 9C FF FA 73	got 5B FF FA 73	reported 
+3 exception: na 9C->5B	ନ୍‍ଟ	[0B28 0B4D 200D 0B1F]	pref 9C FF FA 73	acc 9C FF FA 73	got 5B FF FA 73	reported 
+3 exception: na 9C->5B	ନ୍‌ଟା	[0B28 0B4D 200C 0B1F 0B3E]	pref 9C FF FA 73 E6	acc 9C FF FA 73 E6	got 5B FF FA 73 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଟି	[0B28 0B4D 200C 0B1F 0B3F]	pref 9C FF FA 73 E7	acc 9C FF FA 73 E7	got 5B FF FA 73 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଟୁ	[0B28 0B4D 200C 0B1F 0B41]	pref 9C FF FA 73 EB	acc 9C FF FA 73 EB	got 5B FF FA 73 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଟଂ	[0B28 0B4D 200C 0B1F 0B02]	pref 9C FF FA 73 F3	acc 9C FF FA 73 F3	got 5B FF FA 73 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଟ	[0B28 0B47 0B4D 200C 0B1F]	pref 7B 9C FF FA 73	acc 7B 9C FF FA 73	got 7B 5B FF FA 73	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଟ	[0B28 0B4D 200C 0B30 0B4D 0B1F]	pref 9C FF FA 73 F6	acc 9C FF FA 73 F6	got 5B FF FA 73 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଟ୍ର	[0B28 0B4D 200C 0B1F 0B4D 0B30]	pref 9C FF FA 73 F7	acc 9C FF FA 73 F7	got 5B FF FA 73 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଟ୍ୟ	[0B28 0B4D 200C 0B1F 0B4D 0B5F]	pref 9C FF FA 73 BF	acc 9C FF FA 73 BF	got 5B FF FA 73 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଠ	[0B28 0B4D 200C 0B20]	pref 9C FF FA 76 FF	acc 9C FF FA 76 FF	got 5B FF FA 76 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଠ	[0B28 0B4D 200D 0B20]	pref 9C FF FA 76 FF	acc 9C FF FA 76 FF	got 5B FF FA 76 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଠା	[0B28 0B4D 200C 0B20 0B3E]	pref 9C FF FA 76 FF E6	acc 9C FF FA 76 FF E6	got 5B FF FA 76 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଠି	[0B28 0B4D 200C 0B20 0B3F]	pref 9C FF FA 76 FF E7	acc 9C FF FA 76 FF E7	got 5B FF FA 76 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଠୁ	[0B28 0B4D 200C 0B20 0B41]	pref 9C FF FA 76 FF EB	acc 9C FF FA 76 FF EB	got 5B FF FA 76 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଠଂ	[0B28 0B4D 200C 0B20 0B02]	pref 9C FF FA 76 FF F3	acc 9C FF FA 76 FF F3	got 5B FF FA 76 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଠ	[0B28 0B47 0B4D 200C 0B20]	pref 7B 9C FF FA 76 FF	acc 7B 9C FF FA 76 FF	got 7B 5B FF FA 76 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଠ	[0B28 0B4D 200C 0B30 0B4D 0B20]	pref 9C FF FA 76 FF F6	acc 9C FF FA 76 FF F6	got 5B FF FA 76 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଠ୍ର	[0B28 0B4D 200C 0B20 0B4D 0B30]	pref 9C FF FA 76 FF F7	acc 9C FF FA 76 FF F7	got 5B FF FA 76 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଠ୍ୟ	[0B28 0B4D 200C 0B20 0B4D 0B5F]	pref 9C FF FA 76 FF BF	acc 9C FF FA 76 FF BF	got 5B FF FA 76 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ	[0B28 0B4D 200C 0B21]	pref 9C FF FA 78 FF	acc 9C FF FA 78 FF	got 5B FF FA 78 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଡ	[0B28 0B4D 200D 0B21]	pref 9C FF FA 78 FF	acc 9C FF FA 78 FF	got 5B FF FA 78 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଡା	[0B28 0B4D 200C 0B21 0B3E]	pref 9C FF FA 78 FF E6	acc 9C FF FA 78 FF E6	got 5B FF FA 78 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଡି	[0B28 0B4D 200C 0B21 0B3F]	pref 9C FF FA 78 FF E7	acc 9C FF FA 78 FF E7	got 5B FF FA 78 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଡୁ	[0B28 0B4D 200C 0B21 0B41]	pref 9C FF FA 78 FF EB	acc 9C FF FA 78 FF EB	got 5B FF FA 78 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଡଂ	[0B28 0B4D 200C 0B21 0B02]	pref 9C FF FA 78 FF F3	acc 9C FF FA 78 FF F3	got 5B FF FA 78 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଡ	[0B28 0B47 0B4D 200C 0B21]	pref 7B 9C FF FA 78 FF	acc 7B 9C FF FA 78 FF	got 7B 5B FF FA 78 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଡ	[0B28 0B4D 200C 0B30 0B4D 0B21]	pref 9C FF FA 78 FF F6	acc 9C FF FA 78 FF F6	got 5B FF FA 78 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ୍ର	[0B28 0B4D 200C 0B21 0B4D 0B30]	pref 9C FF FA 78 FF F7	acc 9C FF FA 78 FF F7	got 5B FF FA 78 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ୍ୟ	[0B28 0B4D 200C 0B21 0B4D 0B5F]	pref 9C FF FA 78 FF BF	acc 9C FF FA 78 FF BF	got 5B FF FA 78 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ	[0B28 0B4D 200C 0B22]	pref 9C FF FA 7C FF	acc 9C FF FA 7C FF	got 5B FF FA 7C FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଢ	[0B28 0B4D 200D 0B22]	pref 9C FF FA 7C FF	acc 9C FF FA 7C FF	got 5B FF FA 7C FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଢା	[0B28 0B4D 200C 0B22 0B3E]	pref 9C FF FA 7C FF E6	acc 9C FF FA 7C FF E6	got 5B FF FA 7C FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଢି	[0B28 0B4D 200C 0B22 0B3F]	pref 9C FF FA 7C FF E7	acc 9C FF FA 7C FF E7	got 5B FF FA 7C FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଢୁ	[0B28 0B4D 200C 0B22 0B41]	pref 9C FF FA 7C FF EB	acc 9C FF FA 7C FF EB	got 5B FF FA 7C FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଢଂ	[0B28 0B4D 200C 0B22 0B02]	pref 9C FF FA 7C FF F3	acc 9C FF FA 7C FF F3	got 5B FF FA 7C FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଢ	[0B28 0B47 0B4D 200C 0B22]	pref 7B 9C FF FA 7C FF	acc 7B 9C FF FA 7C FF	got 7B 5B FF FA 7C FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଢ	[0B28 0B4D 200C 0B30 0B4D 0B22]	pref 9C FF FA 7C FF F6	acc 9C FF FA 7C FF F6	got 5B FF FA 7C FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ୍ର	[0B28 0B4D 200C 0B22 0B4D 0B30]	pref 9C FF FA 7C FF F7	acc 9C FF FA 7C FF F7	got 5B FF FA 7C FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ୍ୟ	[0B28 0B4D 200C 0B22 0B4D 0B5F]	pref 9C FF FA 7C FF BF	acc 9C FF FA 7C FF BF	got 5B FF FA 7C FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଣ	[0B28 0B4D 200C 0B23]	pref 9C FF FA 7E	acc 9C FF FA 7E	got 5B FF FA 7E	reported 
+3 exception: na 9C->5B	ନ୍‍ଣ	[0B28 0B4D 200D 0B23]	pref 9C FF FA 7E	acc 9C FF FA 7E	got 5B FF FA 7E	reported 
+3 exception: na 9C->5B	ନ୍‌ଣା	[0B28 0B4D 200C 0B23 0B3E]	pref 9C FF FA 7E E6	acc 9C FF FA 7E E6	got 5B FF FA 7E E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଣି	[0B28 0B4D 200C 0B23 0B3F]	pref 9C FF FA 7E E7	acc 9C FF FA 7E E7	got 5B FF FA 7E E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଣୁ	[0B28 0B4D 200C 0B23 0B41]	pref 9C FF FA 7E EB	acc 9C FF FA 7E EB	got 5B FF FA 7E EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଣଂ	[0B28 0B4D 200C 0B23 0B02]	pref 9C FF FA 7E F3	acc 9C FF FA 7E F3	got 5B FF FA 7E F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଣ	[0B28 0B47 0B4D 200C 0B23]	pref 7B 9C FF FA 7E	acc 7B 9C FF FA 7E	got 7B 5B FF FA 7E	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଣ	[0B28 0B4D 200C 0B30 0B4D 0B23]	pref 9C FF FA 7E F6	acc 9C FF FA 7E F6	got 5B FF FA 7E F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଣ୍ର	[0B28 0B4D 200C 0B23 0B4D 0B30]	pref 9C FF FA 7E F7	acc 9C FF FA 7E F7	got 5B FF FA 7E F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଣ୍ୟ	[0B28 0B4D 200C 0B23 0B4D 0B5F]	pref 9C FF FA 7E BF	acc 9C FF FA 7E BF	got 5B FF FA 7E BF	reported 
+3 exception: na 9C->5B	ନ୍‌ତ	[0B28 0B4D 200C 0B24]	pref 9C FF FA 86 FF	acc 9C FF FA 86 FF	got 5B FF FA 86 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ତ	[0B28 0B4D 200D 0B24]	pref 9C FF FA 86 FF	acc 9C FF FA 86 FF	got 5B FF FA 86 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ତା	[0B28 0B4D 200C 0B24 0B3E]	pref 9C FF FA 86 FF E6	acc 9C FF FA 86 FF E6	got 5B FF FA 86 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ତି	[0B28 0B4D 200C 0B24 0B3F]	pref 9C FF FA 86 FF E7	acc 9C FF FA 86 FF E7	got 5B FF FA 86 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ତୁ	[0B28 0B4D 200C 0B24 0B41]	pref 9C FF FA 86 FF EB	acc 9C FF FA 86 FF EB	got 5B FF FA 86 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ତଂ	[0B28 0B4D 200C 0B24 0B02]	pref 9C FF FA 86 FF F3	acc 9C FF FA 86 FF F3	got 5B FF FA 86 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ତ	[0B28 0B47 0B4D 200C 0B24]	pref 7B 9C FF FA 86 FF	acc 7B 9C FF FA 86 FF	got 7B 5B FF FA 86 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ତ	[0B28 0B4D 200C 0B30 0B4D 0B24]	pref 9C FF FA 86 FF F6	acc 9C FF FA 86 FF F6	got 5B FF FA 86 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ତ୍ର	[0B28 0B4D 200C 0B24 0B4D 0B30]	pref 9C FF FA 86 FF F7	acc 9C FF FA 86 FF F7	got 5B FF FA 86 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ତ୍ୟ	[0B28 0B4D 200C 0B24 0B4D 0B5F]	pref 9C FF FA 86 FF BF	acc 9C FF FA 86 FF BF	got 5B FF FA 86 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଥ	[0B28 0B4D 200C 0B25]	pref 9C FF FA 24	acc 9C FF FA 24	got 5B FF FA 24	reported 
+3 exception: na 9C->5B	ନ୍‍ଥ	[0B28 0B4D 200D 0B25]	pref 9C FF FA 24	acc 9C FF FA 24	got 5B FF FA 24	reported 
+3 exception: na 9C->5B	ନ୍‌ଥା	[0B28 0B4D 200C 0B25 0B3E]	pref 9C FF FA 24 E6	acc 9C FF FA 24 E6	got 5B FF FA 24 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଥି	[0B28 0B4D 200C 0B25 0B3F]	pref 9C FF FA 24 23	acc 9C FF FA 24 23	got 5B FF FA 24 23	reported 
+3 exception: na 9C->5B	ନ୍‌ଥୁ	[0B28 0B4D 200C 0B25 0B41]	pref 9C FF FA 24 EB	acc 9C FF FA 24 EB	got 5B FF FA 24 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଥଂ	[0B28 0B4D 200C 0B25 0B02]	pref 9C FF FA 24 F3	acc 9C FF FA 24 F3	got 5B FF FA 24 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଥ	[0B28 0B47 0B4D 200C 0B25]	pref 7B 9C FF FA 24	acc 7B 9C FF FA 24	got 7B 5B FF FA 24	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଥ	[0B28 0B4D 200C 0B30 0B4D 0B25]	pref 9C FF FA 24 F6	acc 9C FF FA 24 F6	got 5B FF FA 24 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଥ୍ର	[0B28 0B4D 200C 0B25 0B4D 0B30]	pref 9C FF FA 24 F7	acc 9C FF FA 24 F7	got 5B FF FA 24 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଥ୍ୟ	[0B28 0B4D 200C 0B25 0B4D 0B5F]	pref 9C FF FA 24 BF	acc 9C FF FA 24 BF	got 5B FF FA 24 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଦ	[0B28 0B4D 200C 0B26]	pref 9C FF FA 92 FF	acc 9C FF FA 92 FF	got 5B FF FA 92 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଦ	[0B28 0B4D 200D 0B26]	pref 9C FF FA 92 FF	acc 9C FF FA 92 FF	got 5B FF FA 92 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଦା	[0B28 0B4D 200C 0B26 0B3E]	pref 9C FF FA 92 FF E6	acc 9C FF FA 92 FF E6	got 5B FF FA 92 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଦି	[0B28 0B4D 200C 0B26 0B3F]	pref 9C FF FA 92 FF E7	acc 9C FF FA 92 FF E7	got 5B FF FA 92 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଦୁ	[0B28 0B4D 200C 0B26 0B41]	pref 9C FF FA 92 FF EB	acc 9C FF FA 92 FF EB	got 5B FF FA 92 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଦଂ	[0B28 0B4D 200C 0B26 0B02]	pref 9C FF FA 92 FF F3	acc 9C FF FA 92 FF F3	got 5B FF FA 92 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଦ	[0B28 0B47 0B4D 200C 0B26]	pref 7B 9C FF FA 92 FF	acc 7B 9C FF FA 92 FF	got 7B 5B FF FA 92 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଦ	[0B28 0B4D 200C 0B30 0B4D 0B26]	pref 9C FF FA 92 FF F6	acc 9C FF FA 92 FF F6	got 5B FF FA 92 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଦ୍ର	[0B28 0B4D 200C 0B26 0B4D 0B30]	pref 9C FF FA 92 FF F7	acc 9C FF FA 92 FF F7	got 5B FF FA 92 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଦ୍ୟ	[0B28 0B4D 200C 0B26 0B4D 0B5F]	pref 9C FF FA 92 FF BF	acc 9C FF FA 92 FF BF	got 5B FF FA 92 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଧ	[0B28 0B4D 200C 0B27]	pref 9C FF FA 99	acc 9C FF FA 99	got 5B FF FA 99	reported 
+3 exception: na 9C->5B	ନ୍‍ଧ	[0B28 0B4D 200D 0B27]	pref 9C FF FA 99	acc 9C FF FA 99	got 5B FF FA 99	reported 
+3 exception: na 9C->5B	ନ୍‌ଧା	[0B28 0B4D 200C 0B27 0B3E]	pref 9C FF FA 99 E6	acc 9C FF FA 99 E6	got 5B FF FA 99 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଧି	[0B28 0B4D 200C 0B27 0B3F]	pref 9C FF FA 99 23	acc 9C FF FA 99 23	got 5B FF FA 99 23	reported 
+3 exception: na 9C->5B	ନ୍‌ଧୁ	[0B28 0B4D 200C 0B27 0B41]	pref 9C FF FA 99 EB	acc 9C FF FA 99 EB	got 5B FF FA 99 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଧଂ	[0B28 0B4D 200C 0B27 0B02]	pref 9C FF FA 99 F3	acc 9C FF FA 99 F3	got 5B FF FA 99 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଧ	[0B28 0B47 0B4D 200C 0B27]	pref 7B 9C FF FA 99	acc 7B 9C FF FA 99	got 7B 5B FF FA 99	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଧ	[0B28 0B4D 200C 0B30 0B4D 0B27]	pref 9C FF FA 99 F6	acc 9C FF FA 99 F6	got 5B FF FA 99 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଧ୍ର	[0B28 0B4D 200C 0B27 0B4D 0B30]	pref 9C FF FA 99 F7	acc 9C FF FA 99 F7	got 5B FF FA 99 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଧ୍ୟ	[0B28 0B4D 200C 0B27 0B4D 0B5F]	pref 9C FF FA 99 BF	acc 9C FF FA 99 BF	got 5B FF FA 99 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ନ	[0B28 0B4D 200C 0B28]	pref 9C FF FA 9C FF	acc 9C FF FA 9C FF	got 5B FF FA 5B FF	reported 
+3 exception: na 9C->5B	ନ୍‍ନ	[0B28 0B4D 200D 0B28]	pref 9C FF FA 9C FF	acc 9C FF FA 9C FF	got 5B FF FA 5B FF	reported 
+3 exception: na 9C->5B	ନ୍‌ନା	[0B28 0B4D 200C 0B28 0B3E]	pref 9C FF FA 9C FF E6	acc 9C FF FA 9C FF E6	got 5B FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ନି	[0B28 0B4D 200C 0B28 0B3F]	pref 9C FF FA 9C FF E7	acc 9C FF FA 9C FF E7	got 5B FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ନୁ	[0B28 0B4D 200C 0B28 0B41]	pref 9C FF FA 9C FF EB	acc 9C FF FA 9C FF EB	got 5B FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ନଂ	[0B28 0B4D 200C 0B28 0B02]	pref 9C FF FA 9C FF F3	acc 9C FF FA 9C FF F3	got 5B FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ନ	[0B28 0B47 0B4D 200C 0B28]	pref 7B 9C FF FA 9C FF	acc 7B 9C FF FA 9C FF	got 7B 5B FF FA 5B FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ନ	[0B28 0B4D 200C 0B30 0B4D 0B28]	pref 9C FF FA 9C FF F6	acc 9C FF FA 9C FF F6	got 5B FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ନ୍ର	[0B28 0B4D 200C 0B28 0B4D 0B30]	pref 9C FF FA 9C FF F7	acc 9C FF FA 9C FF F7	got 5B FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ନ୍ୟ	[0B28 0B4D 200C 0B28 0B4D 0B5F]	pref 9C FF FA 9C FF BF	acc 9C FF FA 9C FF BF	got 5B FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ପ	[0B28 0B4D 200C 0B2A]	pref 9C FF FA A8	acc 9C FF FA A8	got 5B FF FA A8	reported 
+3 exception: na 9C->5B	ନ୍‍ପ	[0B28 0B4D 200D 0B2A]	pref 9C FF FA A8	acc 9C FF FA A8	got 5B FF FA A8	reported 
+3 exception: na 9C->5B	ନ୍‌ପା	[0B28 0B4D 200C 0B2A 0B3E]	pref 9C FF FA A8 E6	acc 9C FF FA A8 E6	got 5B FF FA A8 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ପି	[0B28 0B4D 200C 0B2A 0B3F]	pref 9C FF FA A8 E7	acc 9C FF FA A8 E7	got 5B FF FA A8 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ପୁ	[0B28 0B4D 200C 0B2A 0B41]	pref 9C FF FA A8 EB	acc 9C FF FA A8 EB	got 5B FF FA A8 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ପଂ	[0B28 0B4D 200C 0B2A 0B02]	pref 9C FF FA A8 F3	acc 9C FF FA A8 F3	got 5B FF FA A8 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ପ	[0B28 0B47 0B4D 200C 0B2A]	pref 7B 9C FF FA A8	acc 7B 9C FF FA A8	got 7B 5B FF FA A8	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ପ	[0B28 0B4D 200C 0B30 0B4D 0B2A]	pref 9C FF FA A8 F6	acc 9C FF FA A8 F6	got 5B FF FA A8 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ପ୍ର	[0B28 0B4D 200C 0B2A 0B4D 0B30]	pref 9C FF FA A8 F7	acc 9C FF FA A8 F7	got 5B FF FA A8 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ପ୍ୟ	[0B28 0B4D 200C 0B2A 0B4D 0B5F]	pref 9C FF FA A8 BF	acc 9C FF FA A8 BF	got 5B FF FA A8 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଫ	[0B28 0B4D 200C 0B2B]	pref 9C FF FA FC FF	acc 9C FF FA FC FF	got 5B FF FA FC FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଫ	[0B28 0B4D 200D 0B2B]	pref 9C FF FA FC FF	acc 9C FF FA FC FF	got 5B FF FA FC FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଫା	[0B28 0B4D 200C 0B2B 0B3E]	pref 9C FF FA FC FF E6	acc 9C FF FA FC FF E6	got 5B FF FA FC FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଫି	[0B28 0B4D 200C 0B2B 0B3F]	pref 9C FF FA FC FF E7	acc 9C FF FA FC FF E7	got 5B FF FA FC FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଫୁ	[0B28 0B4D 200C 0B2B 0B41]	pref 9C FF FA FC FF EB	acc 9C FF FA FC FF EB	got 5B FF FA FC FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଫଂ	[0B28 0B4D 200C 0B2B 0B02]	pref 9C FF FA FC FF F3	acc 9C FF FA FC FF F3	got 5B FF FA FC FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଫ	[0B28 0B47 0B4D 200C 0B2B]	pref 7B 9C FF FA FC FF	acc 7B 9C FF FA FC FF	got 7B 5B FF FA FC FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଫ	[0B28 0B4D 200C 0B30 0B4D 0B2B]	pref 9C FF FA FC FF F6	acc 9C FF FA FC FF F6	got 5B FF FA FC FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଫ୍ର	[0B28 0B4D 200C 0B2B 0B4D 0B30]	pref 9C FF FA FC FF F7	acc 9C FF FA FC FF F7	got 5B FF FA FC FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଫ୍ୟ	[0B28 0B4D 200C 0B2B 0B4D 0B5F]	pref 9C FF FA FC FF BF	acc 9C FF FA FC FF BF	got 5B FF FA FC FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ବ	[0B28 0B4D 200C 0B2C]	pref 9C FF FA AF FF	acc 9C FF FA AF FF	got 5B FF FA AF FF	reported 
+3 exception: na 9C->5B	ନ୍‍ବ	[0B28 0B4D 200D 0B2C]	pref 9C FF FA AF FF	acc 9C FF FA AF FF	got 5B FF FA AF FF	reported 
+3 exception: na 9C->5B	ନ୍‌ବା	[0B28 0B4D 200C 0B2C 0B3E]	pref 9C FF FA AF FF E6	acc 9C FF FA AF FF E6	got 5B FF FA AF FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ବି	[0B28 0B4D 200C 0B2C 0B3F]	pref 9C FF FA AF FF E7	acc 9C FF FA AF FF E7	got 5B FF FA AF FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ବୁ	[0B28 0B4D 200C 0B2C 0B41]	pref 9C FF FA AF FF EB	acc 9C FF FA AF FF EB	got 5B FF FA AF FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ବଂ	[0B28 0B4D 200C 0B2C 0B02]	pref 9C FF FA AF FF F3	acc 9C FF FA AF FF F3	got 5B FF FA AF FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ବ	[0B28 0B47 0B4D 200C 0B2C]	pref 7B 9C FF FA AF FF	acc 7B 9C FF FA AF FF	got 7B 5B FF FA AF FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ବ	[0B28 0B4D 200C 0B30 0B4D 0B2C]	pref 9C FF FA AF FF F6	acc 9C FF FA AF FF F6	got 5B FF FA AF FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ବ୍ର	[0B28 0B4D 200C 0B2C 0B4D 0B30]	pref 9C FF FA AF FF F7	acc 9C FF FA AF FF F7	got 5B FF FA AF FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ବ୍ୟ	[0B28 0B4D 200C 0B2C 0B4D 0B5F]	pref 9C FF FA AF FF BF	acc 9C FF FA AF FF BF	got 5B FF FA AF FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଭ	[0B28 0B4D 200C 0B2D]	pref 9C FF FA B5 FF	acc 9C FF FA B5 FF	got 5B FF FA B5 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଭ	[0B28 0B4D 200D 0B2D]	pref 9C FF FA B5 FF	acc 9C FF FA B5 FF	got 5B FF FA B5 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଭା	[0B28 0B4D 200C 0B2D 0B3E]	pref 9C FF FA B5 FF E6	acc 9C FF FA B5 FF E6	got 5B FF FA B5 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଭି	[0B28 0B4D 200C 0B2D 0B3F]	pref 9C FF FA B5 FF E7	acc 9C FF FA B5 FF E7	got 5B FF FA B5 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଭୁ	[0B28 0B4D 200C 0B2D 0B41]	pref 9C FF FA B5 FF EB	acc 9C FF FA B5 FF EB	got 5B FF FA B5 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଭଂ	[0B28 0B4D 200C 0B2D 0B02]	pref 9C FF FA B5 FF F3	acc 9C FF FA B5 FF F3	got 5B FF FA B5 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଭ	[0B28 0B47 0B4D 200C 0B2D]	pref 7B 9C FF FA B5 FF	acc 7B 9C FF FA B5 FF	got 7B 5B FF FA B5 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଭ	[0B28 0B4D 200C 0B30 0B4D 0B2D]	pref 9C FF FA B5 FF F6	acc 9C FF FA B5 FF F6	got 5B FF FA B5 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଭ୍ର	[0B28 0B4D 200C 0B2D 0B4D 0B30]	pref 9C FF FA B5 FF F7	acc 9C FF FA B5 FF F7	got 5B FF FA B5 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଭ୍ୟ	[0B28 0B4D 200C 0B2D 0B4D 0B5F]	pref 9C FF FA B5 FF BF	acc 9C FF FA B5 FF BF	got 5B FF FA B5 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ମ	[0B28 0B4D 200C 0B2E]	pref 9C FF FA FE	acc 9C FF FA FE	got 5B FF FA FE	reported 
+3 exception: na 9C->5B	ନ୍‍ମ	[0B28 0B4D 200D 0B2E]	pref 9C FF FA FE	acc 9C FF FA FE	got 5B FF FA FE	reported 
+3 exception: na 9C->5B	ନ୍‌ମା	[0B28 0B4D 200C 0B2E 0B3E]	pref 9C FF FA FE E6	acc 9C FF FA FE E6	got 5B FF FA FE E6	reported 
+3 exception: na 9C->5B	ନ୍‌ମି	[0B28 0B4D 200C 0B2E 0B3F]	pref 9C FF FA FE E7	acc 9C FF FA FE E7	got 5B FF FA FE E7	reported 
+3 exception: na 9C->5B	ନ୍‌ମୁ	[0B28 0B4D 200C 0B2E 0B41]	pref 9C FF FA FE EB	acc 9C FF FA FE EB	got 5B FF FA FE EB	reported 
+3 exception: na 9C->5B	ନ୍‌ମଂ	[0B28 0B4D 200C 0B2E 0B02]	pref 9C FF FA FE F3	acc 9C FF FA FE F3	got 5B FF FA FE F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ମ	[0B28 0B47 0B4D 200C 0B2E]	pref 7B 9C FF FA FE	acc 7B 9C FF FA FE	got 7B 5B FF FA FE	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ମ	[0B28 0B4D 200C 0B30 0B4D 0B2E]	pref 9C FF FA FE F6	acc 9C FF FA FE F6	got 5B FF FA FE F6	reported 
+3 exception: na 9C->5B	ନ୍‌ମ୍ର	[0B28 0B4D 200C 0B2E 0B4D 0B30]	pref 9C FF FA FE F7	acc 9C FF FA FE F7	got 5B FF FA FE F7	reported 
+3 exception: na 9C->5B	ନ୍‌ମ୍ୟ	[0B28 0B4D 200C 0B2E 0B4D 0B5F]	pref 9C FF FA FE BF	acc 9C FF FA FE BF	got 5B FF FA FE BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଯ	[0B28 0B4D 200C 0B2F]	pref 9C FF FA BE	acc 9C FF FA BE	got 5B FF FA BE	reported 
+3 exception: na 9C->5B	ନ୍‍ଯ	[0B28 0B4D 200D 0B2F]	pref 9C FF FA BE	acc 9C FF FA BE	got 5B FF FA BE	reported 
+3 exception: na 9C->5B	ନ୍‌ଯା	[0B28 0B4D 200C 0B2F 0B3E]	pref 9C FF FA BE E6	acc 9C FF FA BE E6	got 5B FF FA BE E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଯି	[0B28 0B4D 200C 0B2F 0B3F]	pref 9C FF FA BE E7	acc 9C FF FA BE E7	got 5B FF FA BE E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଯୁ	[0B28 0B4D 200C 0B2F 0B41]	pref 9C FF FA BE EB	acc 9C FF FA BE EB	got 5B FF FA BE EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଯଂ	[0B28 0B4D 200C 0B2F 0B02]	pref 9C FF FA BE F3	acc 9C FF FA BE F3	got 5B FF FA BE F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଯ	[0B28 0B47 0B4D 200C 0B2F]	pref 7B 9C FF FA BE	acc 7B 9C FF FA BE	got 7B 5B FF FA BE	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଯ	[0B28 0B4D 200C 0B30 0B4D 0B2F]	pref 9C FF FA BE F6	acc 9C FF FA BE F6	got 5B FF FA BE F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଯ୍ର	[0B28 0B4D 200C 0B2F 0B4D 0B30]	pref 9C FF FA BE F7	acc 9C FF FA BE F7	got 5B FF FA BE F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଯ୍ୟ	[0B28 0B4D 200C 0B2F 0B4D 0B5F]	pref 9C FF FA BE BF	acc 9C FF FA BE BF	got 5B FF FA BE BF	reported 
+3 exception: na 9C->5B	ନ୍‌ର	[0B28 0B4D 200C 0B30]	pref 9C FF FA C0 FF	acc 9C FF FA C0 FF	got 5B FF FA C0 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ର	[0B28 0B4D 200D 0B30]	pref 9C FF FA C0 FF	acc 9C FF FA C0 FF	got 5B FF FA C0 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ରା	[0B28 0B4D 200C 0B30 0B3E]	pref 9C FF FA C0 FF E6	acc 9C FF FA C0 FF E6	got 5B FF FA C0 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ରି	[0B28 0B4D 200C 0B30 0B3F]	pref 9C FF FA C0 FF E7	acc 9C FF FA C0 FF E7	got 5B FF FA C0 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ରୁ	[0B28 0B4D 200C 0B30 0B41]	pref 9C FF FA C0 FF EB	acc 9C FF FA C0 FF EB	got 5B FF FA C0 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ରଂ	[0B28 0B4D 200C 0B30 0B02]	pref 9C FF FA C0 FF F3	acc 9C FF FA C0 FF F3	got 5B FF FA C0 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ର	[0B28 0B47 0B4D 200C 0B30]	pref 7B 9C FF FA C0 FF	acc 7B 9C FF FA C0 FF	got 7B 5B FF FA C0 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ର	[0B28 0B4D 200C 0B30 0B4D 0B30]	pref 9C FF FA C0 FF F6	acc 9C FF FA C0 FF F6 | 9C FF FA C0 FF F7	got 5B FF FA C0 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ୟ	[0B28 0B4D 200C 0B30 0B4D 0B5F]	pref 9C FF FA DF F6	acc 9C FF FA DF F6 | 9C FF FA C0 FF BF	got 5B FF FA DF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଲ	[0B28 0B4D 200C 0B32]	pref 9C FF FA E0 FF	acc 9C FF FA E0 FF	got 5B FF FA E0 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଲ	[0B28 0B4D 200D 0B32]	pref 9C FF FA E0 FF	acc 9C FF FA E0 FF	got 5B FF FA E0 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଲା	[0B28 0B4D 200C 0B32 0B3E]	pref 9C FF FA E0 FF E6	acc 9C FF FA E0 FF E6	got 5B FF FA E0 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଲି	[0B28 0B4D 200C 0B32 0B3F]	pref 9C FF FA E0 FF E7	acc 9C FF FA E0 FF E7	got 5B FF FA E0 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଲୁ	[0B28 0B4D 200C 0B32 0B41]	pref 9C FF FA E0 FF EB	acc 9C FF FA E0 FF EB	got 5B FF FA E0 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଲଂ	[0B28 0B4D 200C 0B32 0B02]	pref 9C FF FA E0 FF F3	acc 9C FF FA E0 FF F3	got 5B FF FA E0 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଲ	[0B28 0B47 0B4D 200C 0B32]	pref 7B 9C FF FA E0 FF	acc 7B 9C FF FA E0 FF	got 7B 5B FF FA E0 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଲ	[0B28 0B4D 200C 0B30 0B4D 0B32]	pref 9C FF FA E0 FF F6	acc 9C FF FA E0 FF F6	got 5B FF FA E0 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଲ୍ର	[0B28 0B4D 200C 0B32 0B4D 0B30]	pref 9C FF FA E0 FF F7	acc 9C FF FA E0 FF F7	got 5B FF FA E0 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଲ୍ୟ	[0B28 0B4D 200C 0B32 0B4D 0B5F]	pref 9C FF FA E0 FF BF	acc 9C FF FA E0 FF BF	got 5B FF FA E0 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଳ	[0B28 0B4D 200C 0B33]	pref 9C FF FA C1 FF	acc 9C FF FA C1 FF	got 5B FF FA C1 FF	reported 
+3 exception: na 9C->5B	ନ୍‍ଳ	[0B28 0B4D 200D 0B33]	pref 9C FF FA C1 FF	acc 9C FF FA C1 FF	got 5B FF FA C1 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ଳା	[0B28 0B4D 200C 0B33 0B3E]	pref 9C FF FA C1 FF E6	acc 9C FF FA C1 FF E6	got 5B FF FA C1 FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଳି	[0B28 0B4D 200C 0B33 0B3F]	pref 9C FF FA C1 FF E7	acc 9C FF FA C1 FF E7	got 5B FF FA C1 FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଳୁ	[0B28 0B4D 200C 0B33 0B41]	pref 9C FF FA C1 FF EB	acc 9C FF FA C1 FF EB	got 5B FF FA C1 FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଳଂ	[0B28 0B4D 200C 0B33 0B02]	pref 9C FF FA C1 FF F3	acc 9C FF FA C1 FF F3	got 5B FF FA C1 FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଳ	[0B28 0B47 0B4D 200C 0B33]	pref 7B 9C FF FA C1 FF	acc 7B 9C FF FA C1 FF	got 7B 5B FF FA C1 FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଳ	[0B28 0B4D 200C 0B30 0B4D 0B33]	pref 9C FF FA C1 FF F6	acc 9C FF FA C1 FF F6	got 5B FF FA C1 FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଳ୍ର	[0B28 0B4D 200C 0B33 0B4D 0B30]	pref 9C FF FA C1 FF F7	acc 9C FF FA C1 FF F7	got 5B FF FA C1 FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଳ୍ୟ	[0B28 0B4D 200C 0B33 0B4D 0B5F]	pref 9C FF FA C1 FF BF	acc 9C FF FA C1 FF BF	got 5B FF FA C1 FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଶ	[0B28 0B4D 200C 0B36]	pref 9C FF FA C9	acc 9C FF FA C9	got 5B FF FA C9	reported 
+3 exception: na 9C->5B	ନ୍‍ଶ	[0B28 0B4D 200D 0B36]	pref 9C FF FA C9	acc 9C FF FA C9	got 5B FF FA C9	reported 
+3 exception: na 9C->5B	ନ୍‌ଶା	[0B28 0B4D 200C 0B36 0B3E]	pref 9C FF FA C9 E6	acc 9C FF FA C9 E6	got 5B FF FA C9 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଶି	[0B28 0B4D 200C 0B36 0B3F]	pref 9C FF FA C9 E7	acc 9C FF FA C9 E7	got 5B FF FA C9 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଶୁ	[0B28 0B4D 200C 0B36 0B41]	pref 9C FF FA C9 EB	acc 9C FF FA C9 EB	got 5B FF FA C9 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଶଂ	[0B28 0B4D 200C 0B36 0B02]	pref 9C FF FA C9 F3	acc 9C FF FA C9 F3	got 5B FF FA C9 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଶ	[0B28 0B47 0B4D 200C 0B36]	pref 7B 9C FF FA C9	acc 7B 9C FF FA C9	got 7B 5B FF FA C9	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଶ	[0B28 0B4D 200C 0B30 0B4D 0B36]	pref 9C FF FA C9 F6	acc 9C FF FA C9 F6	got 5B FF FA C9 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଶ୍ର	[0B28 0B4D 200C 0B36 0B4D 0B30]	pref 9C FF FA C9 F7	acc 9C FF FA C9 F7	got 5B FF FA C9 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଶ୍ୟ	[0B28 0B4D 200C 0B36 0B4D 0B5F]	pref 9C FF FA C9 BF	acc 9C FF FA C9 BF	got 5B FF FA C9 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଷ	[0B28 0B4D 200C 0B37]	pref 9C FF FA CC	acc 9C FF FA CC	got 5B FF FA CC	reported 
+3 exception: na 9C->5B	ନ୍‍ଷ	[0B28 0B4D 200D 0B37]	pref 9C FF FA CC	acc 9C FF FA CC	got 5B FF FA CC	reported 
+3 exception: na 9C->5B	ନ୍‌ଷା	[0B28 0B4D 200C 0B37 0B3E]	pref 9C FF FA CC E6	acc 9C FF FA CC E6	got 5B FF FA CC E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଷି	[0B28 0B4D 200C 0B37 0B3F]	pref 9C FF FA CC E7	acc 9C FF FA CC E7	got 5B FF FA CC E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଷୁ	[0B28 0B4D 200C 0B37 0B41]	pref 9C FF FA CC EB	acc 9C FF FA CC EB	got 5B FF FA CC EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଷଂ	[0B28 0B4D 200C 0B37 0B02]	pref 9C FF FA CC F3	acc 9C FF FA CC F3	got 5B FF FA CC F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଷ	[0B28 0B47 0B4D 200C 0B37]	pref 7B 9C FF FA CC	acc 7B 9C FF FA CC	got 7B 5B FF FA CC	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଷ	[0B28 0B4D 200C 0B30 0B4D 0B37]	pref 9C FF FA CC F6	acc 9C FF FA CC F6	got 5B FF FA CC F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଷ୍ର	[0B28 0B4D 200C 0B37 0B4D 0B30]	pref 9C FF FA CC F7	acc 9C FF FA CC F7	got 5B FF FA CC F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଷ୍ୟ	[0B28 0B4D 200C 0B37 0B4D 0B5F]	pref 9C FF FA CC BF	acc 9C FF FA CC BF	got 5B FF FA CC BF	reported 
+3 exception: na 9C->5B	ନ୍‌ସ	[0B28 0B4D 200C 0B38]	pref 9C FF FA D3	acc 9C FF FA D3	got 5B FF FA D3	reported 
+3 exception: na 9C->5B	ନ୍‍ସ	[0B28 0B4D 200D 0B38]	pref 9C FF FA D3	acc 9C FF FA D3	got 5B FF FA D3	reported 
+3 exception: na 9C->5B	ନ୍‌ସା	[0B28 0B4D 200C 0B38 0B3E]	pref 9C FF FA D3 E6	acc 9C FF FA D3 E6	got 5B FF FA D3 E6	reported 
+3 exception: na 9C->5B	ନ୍‌ସି	[0B28 0B4D 200C 0B38 0B3F]	pref 9C FF FA D3 E7	acc 9C FF FA D3 E7	got 5B FF FA D3 E7	reported 
+3 exception: na 9C->5B	ନ୍‌ସୁ	[0B28 0B4D 200C 0B38 0B41]	pref 9C FF FA D3 EB	acc 9C FF FA D3 EB	got 5B FF FA D3 EB	reported 
+3 exception: na 9C->5B	ନ୍‌ସଂ	[0B28 0B4D 200C 0B38 0B02]	pref 9C FF FA D3 F3	acc 9C FF FA D3 F3	got 5B FF FA D3 F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ସ	[0B28 0B47 0B4D 200C 0B38]	pref 7B 9C FF FA D3	acc 7B 9C FF FA D3	got 7B 5B FF FA D3	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ସ	[0B28 0B4D 200C 0B30 0B4D 0B38]	pref 9C FF FA D3 F6	acc 9C FF FA D3 F6	got 5B FF FA D3 F6	reported 
+3 exception: na 9C->5B	ନ୍‌ସ୍ର	[0B28 0B4D 200C 0B38 0B4D 0B30]	pref 9C FF FA D3 F7	acc 9C FF FA D3 F7	got 5B FF FA D3 F7	reported 
+3 exception: na 9C->5B	ନ୍‌ସ୍ୟ	[0B28 0B4D 200C 0B38 0B4D 0B5F]	pref 9C FF FA D3 BF	acc 9C FF FA D3 BF	got 5B FF FA D3 BF	reported 
+3 exception: na 9C->5B	ନ୍‌ହ	[0B28 0B4D 200C 0B39]	pref 9C FF FA DC FF	acc 9C FF FA DC FF	got 5B FF FA DC FF	reported 
+3 exception: na 9C->5B	ନ୍‍ହ	[0B28 0B4D 200D 0B39]	pref 9C FF FA DC FF	acc 9C FF FA DC FF	got 5B FF FA DC FF	reported 
+3 exception: na 9C->5B	ନ୍‌ହା	[0B28 0B4D 200C 0B39 0B3E]	pref 9C FF FA DC FF E6	acc 9C FF FA DC FF E6	got 5B FF FA DC FF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ହି	[0B28 0B4D 200C 0B39 0B3F]	pref 9C FF FA DC FF E7	acc 9C FF FA DC FF E7	got 5B FF FA DC FF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ହୁ	[0B28 0B4D 200C 0B39 0B41]	pref 9C FF FA DC FF EB	acc 9C FF FA DC FF EB	got 5B FF FA DC FF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ହଂ	[0B28 0B4D 200C 0B39 0B02]	pref 9C FF FA DC FF F3	acc 9C FF FA DC FF F3	got 5B FF FA DC FF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ହ	[0B28 0B47 0B4D 200C 0B39]	pref 7B 9C FF FA DC FF	acc 7B 9C FF FA DC FF	got 7B 5B FF FA DC FF	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ହ	[0B28 0B4D 200C 0B30 0B4D 0B39]	pref 9C FF FA DC FF F6	acc 9C FF FA DC FF F6	got 5B FF FA DC FF F6	reported 
+3 exception: na 9C->5B	ନ୍‌ହ୍ର	[0B28 0B4D 200C 0B39 0B4D 0B30]	pref 9C FF FA DC FF F7	acc 9C FF FA DC FF F7	got 5B FF FA DC FF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ହ୍ୟ	[0B28 0B4D 200C 0B39 0B4D 0B5F]	pref 9C FF FA DC FF BF	acc 9C FF FA DC FF BF	got 5B FF FA DC FF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ୟ	[0B28 0B4D 200C 0B5F]	pref 9C FF FA DF	acc 9C FF FA DF	got 5B FF FA DF	reported 
+3 exception: na 9C->5B	ନ୍‍ୟ	[0B28 0B4D 200D 0B5F]	pref 9C FF FA DF	acc 9C FF FA DF	got 5B FF FA DF	reported 
+3 exception: na 9C->5B	ନ୍‌ୟା	[0B28 0B4D 200C 0B5F 0B3E]	pref 9C FF FA DF E6	acc 9C FF FA DF E6	got 5B FF FA DF E6	reported 
+3 exception: na 9C->5B	ନ୍‌ୟି	[0B28 0B4D 200C 0B5F 0B3F]	pref 9C FF FA DF E7	acc 9C FF FA DF E7	got 5B FF FA DF E7	reported 
+3 exception: na 9C->5B	ନ୍‌ୟୁ	[0B28 0B4D 200C 0B5F 0B41]	pref 9C FF FA DF EB	acc 9C FF FA DF EB	got 5B FF FA DF EB	reported 
+3 exception: na 9C->5B	ନ୍‌ୟଂ	[0B28 0B4D 200C 0B5F 0B02]	pref 9C FF FA DF F3	acc 9C FF FA DF F3	got 5B FF FA DF F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ୟ	[0B28 0B47 0B4D 200C 0B5F]	pref 7B 9C FF FA DF	acc 7B 9C FF FA DF	got 7B 5B FF FA DF	reported 
+3 exception: na 9C->5B	ନ୍‌ୟ୍ର	[0B28 0B4D 200C 0B5F 0B4D 0B30]	pref 9C FF FA DF F7	acc 9C FF FA DF F7	got 5B FF FA DF F7	reported 
+3 exception: na 9C->5B	ନ୍‌ୟ୍ୟ	[0B28 0B4D 200C 0B5F 0B4D 0B5F]	pref 9C FF FA DF BF	acc 9C FF FA DF BF	got 5B FF FA DF BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼	[0B28 0B4D 200C 0B5C]	pref 9C FF FA DD	acc 9C FF FA DD	got 5B FF FA DD	reported 
+3 exception: na 9C->5B	ନ୍‍ଡ଼	[0B28 0B4D 200D 0B5C]	pref 9C FF FA DD	acc 9C FF FA DD	got 5B FF FA DD	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼ା	[0B28 0B4D 200C 0B5C 0B3E]	pref 9C FF FA DD E6	acc 9C FF FA DD E6	got 5B FF FA DD E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼ି	[0B28 0B4D 200C 0B5C 0B3F]	pref 9C FF FA DD E7	acc 9C FF FA DD E7	got 5B FF FA DD E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼ୁ	[0B28 0B4D 200C 0B5C 0B41]	pref 9C FF FA DD EB	acc 9C FF FA DD EB	got 5B FF FA DD EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼ଂ	[0B28 0B4D 200C 0B5C 0B02]	pref 9C FF FA DD F3	acc 9C FF FA DD F3	got 5B FF FA DD F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଡ଼	[0B28 0B47 0B4D 200C 0B5C]	pref 7B 9C FF FA DD	acc 7B 9C FF FA DD	got 7B 5B FF FA DD	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଡ଼	[0B28 0B4D 200C 0B30 0B4D 0B5C]	pref 9C FF FA DD F6	acc 9C FF FA DD F6	got 5B FF FA DD F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼୍ର	[0B28 0B4D 200C 0B5C 0B4D 0B30]	pref 9C FF FA DD F7	acc 9C FF FA DD F7	got 5B FF FA DD F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଡ଼୍ୟ	[0B28 0B4D 200C 0B5C 0B4D 0B5F]	pref 9C FF FA DD BF	acc 9C FF FA DD BF	got 5B FF FA DD BF	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼	[0B28 0B4D 200C 0B5D]	pref 9C FF FA DE	acc 9C FF FA DE	got 5B FF FA DE	reported 
+3 exception: na 9C->5B	ନ୍‍ଢ଼	[0B28 0B4D 200D 0B5D]	pref 9C FF FA DE	acc 9C FF FA DE	got 5B FF FA DE	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼ା	[0B28 0B4D 200C 0B5D 0B3E]	pref 9C FF FA DE E6	acc 9C FF FA DE E6	got 5B FF FA DE E6	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼ି	[0B28 0B4D 200C 0B5D 0B3F]	pref 9C FF FA DE E7	acc 9C FF FA DE E7	got 5B FF FA DE E7	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼ୁ	[0B28 0B4D 200C 0B5D 0B41]	pref 9C FF FA DE EB	acc 9C FF FA DE EB	got 5B FF FA DE EB	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼ଂ	[0B28 0B4D 200C 0B5D 0B02]	pref 9C FF FA DE F3	acc 9C FF FA DE F3	got 5B FF FA DE F3	reported 
+3 exception: na 9C->5B	ନେ୍‌ଢ଼	[0B28 0B47 0B4D 200C 0B5D]	pref 7B 9C FF FA DE	acc 7B 9C FF FA DE	got 7B 5B FF FA DE	reported 
+3 exception: na 9C->5B	ନ୍‌ର୍ଢ଼	[0B28 0B4D 200C 0B30 0B4D 0B5D]	pref 9C FF FA DE F6	acc 9C FF FA DE F6	got 5B FF FA DE F6	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼୍ର	[0B28 0B4D 200C 0B5D 0B4D 0B30]	pref 9C FF FA DE F7	acc 9C FF FA DE F7	got 5B FF FA DE F7	reported 
+3 exception: na 9C->5B	ନ୍‌ଢ଼୍ୟ	[0B28 0B4D 200C 0B5D 0B4D 0B5F]	pref 9C FF FA DE BF	acc 9C FF FA DE BF	got 5B FF FA DE BF	reported 
+3 exception: na 9C->5B	ପ୍‌ନ	[0B2A 0B4D 200C 0B28]	pref A8 FA 9C FF	acc A8 FA 9C FF	got A8 FA 5B FF	reported 
+3 exception: na 9C->5B	ପ୍‍ନ	[0B2A 0B4D 200D 0B28]	pref A8 FA 9C FF	acc A8 FA 9C FF	got A8 FA 5B FF	reported 
+3 exception: na 9C->5B	ପ୍‌ନା	[0B2A 0B4D 200C 0B28 0B3E]	pref A8 FA 9C FF E6	acc A8 FA 9C FF E6	got A8 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ପ୍‌ନି	[0B2A 0B4D 200C 0B28 0B3F]	pref A8 FA 9C FF E7	acc A8 FA 9C FF E7	got A8 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ପ୍‌ନୁ	[0B2A 0B4D 200C 0B28 0B41]	pref A8 FA 9C FF EB	acc A8 FA 9C FF EB	got A8 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ପ୍‌ନଂ	[0B2A 0B4D 200C 0B28 0B02]	pref A8 FA 9C FF F3	acc A8 FA 9C FF F3	got A8 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ପେ୍‌ନ	[0B2A 0B47 0B4D 200C 0B28]	pref 7B A8 FA 9C FF	acc 7B A8 FA 9C FF	got 7B A8 FA 5B FF	reported 
+3 exception: na 9C->5B	ପ୍‌ର୍ନ	[0B2A 0B4D 200C 0B30 0B4D 0B28]	pref A8 FA 9C FF F6	acc A8 FA 9C FF F6	got A8 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ପ୍‌ନ୍ର	[0B2A 0B4D 200C 0B28 0B4D 0B30]	pref A8 FA 9C FF F7	acc A8 FA 9C FF F7	got A8 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ପ୍‌ନ୍ୟ	[0B2A 0B4D 200C 0B28 0B4D 0B5F]	pref A8 FA 9C FF BF	acc A8 FA 9C FF BF	got A8 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଫ୍‌ନ	[0B2B 0B4D 200C 0B28]	pref FC FF FA 9C FF	acc FC FF FA 9C FF	got FC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଫ୍‍ନ	[0B2B 0B4D 200D 0B28]	pref FC FF FA 9C FF	acc FC FF FA 9C FF	got FC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଫ୍‌ନା	[0B2B 0B4D 200C 0B28 0B3E]	pref FC FF FA 9C FF E6	acc FC FF FA 9C FF E6	got FC FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଫ୍‌ନି	[0B2B 0B4D 200C 0B28 0B3F]	pref FC FF FA 9C FF E7	acc FC FF FA 9C FF E7	got FC FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଫ୍‌ନୁ	[0B2B 0B4D 200C 0B28 0B41]	pref FC FF FA 9C FF EB	acc FC FF FA 9C FF EB	got FC FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଫ୍‌ନଂ	[0B2B 0B4D 200C 0B28 0B02]	pref FC FF FA 9C FF F3	acc FC FF FA 9C FF F3	got FC FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଫେ୍‌ନ	[0B2B 0B47 0B4D 200C 0B28]	pref 7B FC FF FA 9C FF	acc 7B FC FF FA 9C FF	got 7B FC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଫ୍‌ର୍ନ	[0B2B 0B4D 200C 0B30 0B4D 0B28]	pref FC FF FA 9C FF F6	acc FC FF FA 9C FF F6	got FC FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଫ୍‌ନ୍ର	[0B2B 0B4D 200C 0B28 0B4D 0B30]	pref FC FF FA 9C FF F7	acc FC FF FA 9C FF F7	got FC FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଫ୍‌ନ୍ୟ	[0B2B 0B4D 200C 0B28 0B4D 0B5F]	pref FC FF FA 9C FF BF	acc FC FF FA 9C FF BF	got FC FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ବ୍‌ନ	[0B2C 0B4D 200C 0B28]	pref AF FF FA 9C FF	acc AF FF FA 9C FF	got AF FF FA 5B FF	reported 
+3 exception: na 9C->5B	ବ୍‍ନ	[0B2C 0B4D 200D 0B28]	pref AF FF FA 9C FF	acc AF FF FA 9C FF	got AF FF FA 5B FF	reported 
+3 exception: na 9C->5B	ବ୍‌ନା	[0B2C 0B4D 200C 0B28 0B3E]	pref AF FF FA 9C FF E6	acc AF FF FA 9C FF E6	got AF FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ବ୍‌ନି	[0B2C 0B4D 200C 0B28 0B3F]	pref AF FF FA 9C FF E7	acc AF FF FA 9C FF E7	got AF FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ବ୍‌ନୁ	[0B2C 0B4D 200C 0B28 0B41]	pref AF FF FA 9C FF EB	acc AF FF FA 9C FF EB	got AF FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ବ୍‌ନଂ	[0B2C 0B4D 200C 0B28 0B02]	pref AF FF FA 9C FF F3	acc AF FF FA 9C FF F3	got AF FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ବେ୍‌ନ	[0B2C 0B47 0B4D 200C 0B28]	pref 7B AF FF FA 9C FF	acc 7B AF FF FA 9C FF	got 7B AF FF FA 5B FF	reported 
+3 exception: na 9C->5B	ବ୍‌ର୍ନ	[0B2C 0B4D 200C 0B30 0B4D 0B28]	pref AF FF FA 9C FF F6	acc AF FF FA 9C FF F6	got AF FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ବ୍‌ନ୍ର	[0B2C 0B4D 200C 0B28 0B4D 0B30]	pref AF FF FA 9C FF F7	acc AF FF FA 9C FF F7	got AF FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ବ୍‌ନ୍ୟ	[0B2C 0B4D 200C 0B28 0B4D 0B5F]	pref AF FF FA 9C FF BF	acc AF FF FA 9C FF BF	got AF FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଭ୍‌ନ	[0B2D 0B4D 200C 0B28]	pref B5 FF FA 9C FF	acc B5 FF FA 9C FF	got B5 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଭ୍‍ନ	[0B2D 0B4D 200D 0B28]	pref B5 FF FA 9C FF	acc B5 FF FA 9C FF	got B5 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଭ୍‌ନା	[0B2D 0B4D 200C 0B28 0B3E]	pref B5 FF FA 9C FF E6	acc B5 FF FA 9C FF E6	got B5 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଭ୍‌ନି	[0B2D 0B4D 200C 0B28 0B3F]	pref B5 FF FA 9C FF E7	acc B5 FF FA 9C FF E7	got B5 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଭ୍‌ନୁ	[0B2D 0B4D 200C 0B28 0B41]	pref B5 FF FA 9C FF EB	acc B5 FF FA 9C FF EB	got B5 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଭ୍‌ନଂ	[0B2D 0B4D 200C 0B28 0B02]	pref B5 FF FA 9C FF F3	acc B5 FF FA 9C FF F3	got B5 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଭେ୍‌ନ	[0B2D 0B47 0B4D 200C 0B28]	pref 7B B5 FF FA 9C FF	acc 7B B5 FF FA 9C FF	got 7B B5 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଭ୍‌ର୍ନ	[0B2D 0B4D 200C 0B30 0B4D 0B28]	pref B5 FF FA 9C FF F6	acc B5 FF FA 9C FF F6	got B5 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଭ୍‌ନ୍ର	[0B2D 0B4D 200C 0B28 0B4D 0B30]	pref B5 FF FA 9C FF F7	acc B5 FF FA 9C FF F7	got B5 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଭ୍‌ନ୍ୟ	[0B2D 0B4D 200C 0B28 0B4D 0B5F]	pref B5 FF FA 9C FF BF	acc B5 FF FA 9C FF BF	got B5 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ମ୍‌ନ	[0B2E 0B4D 200C 0B28]	pref FE FA 9C FF	acc FE FA 9C FF	got FE FA 5B FF	reported 
+3 exception: na 9C->5B	ମ୍‍ନ	[0B2E 0B4D 200D 0B28]	pref FE FA 9C FF	acc FE FA 9C FF	got FE FA 5B FF	reported 
+3 exception: na 9C->5B	ମ୍‌ନା	[0B2E 0B4D 200C 0B28 0B3E]	pref FE FA 9C FF E6	acc FE FA 9C FF E6	got FE FA 5B FF E6	reported 
+3 exception: na 9C->5B	ମ୍‌ନି	[0B2E 0B4D 200C 0B28 0B3F]	pref FE FA 9C FF E7	acc FE FA 9C FF E7	got FE FA 5B FF E7	reported 
+3 exception: na 9C->5B	ମ୍‌ନୁ	[0B2E 0B4D 200C 0B28 0B41]	pref FE FA 9C FF EB	acc FE FA 9C FF EB	got FE FA 5B FF EB	reported 
+3 exception: na 9C->5B	ମ୍‌ନଂ	[0B2E 0B4D 200C 0B28 0B02]	pref FE FA 9C FF F3	acc FE FA 9C FF F3	got FE FA 5B FF F3	reported 
+3 exception: na 9C->5B	ମେ୍‌ନ	[0B2E 0B47 0B4D 200C 0B28]	pref 7B FE FA 9C FF	acc 7B FE FA 9C FF	got 7B FE FA 5B FF	reported 
+3 exception: na 9C->5B	ମ୍‌ର୍ନ	[0B2E 0B4D 200C 0B30 0B4D 0B28]	pref FE FA 9C FF F6	acc FE FA 9C FF F6	got FE FA 5B FF F6	reported 
+3 exception: na 9C->5B	ମ୍‌ନ୍ର	[0B2E 0B4D 200C 0B28 0B4D 0B30]	pref FE FA 9C FF F7	acc FE FA 9C FF F7	got FE FA 5B FF F7	reported 
+3 exception: na 9C->5B	ମ୍‌ନ୍ୟ	[0B2E 0B4D 200C 0B28 0B4D 0B5F]	pref FE FA 9C FF BF	acc FE FA 9C FF BF	got FE FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଯ୍‌ନ	[0B2F 0B4D 200C 0B28]	pref BE FA 9C FF	acc BE FA 9C FF	got BE FA 5B FF	reported 
+3 exception: na 9C->5B	ଯ୍‍ନ	[0B2F 0B4D 200D 0B28]	pref BE FA 9C FF	acc BE FA 9C FF	got BE FA 5B FF	reported 
+3 exception: na 9C->5B	ଯ୍‌ନା	[0B2F 0B4D 200C 0B28 0B3E]	pref BE FA 9C FF E6	acc BE FA 9C FF E6	got BE FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଯ୍‌ନି	[0B2F 0B4D 200C 0B28 0B3F]	pref BE FA 9C FF E7	acc BE FA 9C FF E7	got BE FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଯ୍‌ନୁ	[0B2F 0B4D 200C 0B28 0B41]	pref BE FA 9C FF EB	acc BE FA 9C FF EB	got BE FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଯ୍‌ନଂ	[0B2F 0B4D 200C 0B28 0B02]	pref BE FA 9C FF F3	acc BE FA 9C FF F3	got BE FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଯେ୍‌ନ	[0B2F 0B47 0B4D 200C 0B28]	pref 7B BE FA 9C FF	acc 7B BE FA 9C FF	got 7B BE FA 5B FF	reported 
+3 exception: na 9C->5B	ଯ୍‌ର୍ନ	[0B2F 0B4D 200C 0B30 0B4D 0B28]	pref BE FA 9C FF F6	acc BE FA 9C FF F6	got BE FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଯ୍‌ନ୍ର	[0B2F 0B4D 200C 0B28 0B4D 0B30]	pref BE FA 9C FF F7	acc BE FA 9C FF F7	got BE FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଯ୍‌ନ୍ୟ	[0B2F 0B4D 200C 0B28 0B4D 0B5F]	pref BE FA 9C FF BF	acc BE FA 9C FF BF	got BE FA 5B FF BF	reported 
+3 exception: na 9C->5B	ର୍‌ନା	[0B30 0B4D 200C 0B28 0B3E]	pref C0 FF FA 9C FF E6	acc C0 FF FA 9C FF E6	got C0 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ର୍‌ନି	[0B30 0B4D 200C 0B28 0B3F]	pref C0 FF FA 9C FF E7	acc C0 FF FA 9C FF E7	got C0 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ର୍‌ନୁ	[0B30 0B4D 200C 0B28 0B41]	pref C0 FF FA 9C FF EB	acc C0 FF FA 9C FF EB	got C0 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ର୍‌ନଂ	[0B30 0B4D 200C 0B28 0B02]	pref C0 FF FA 9C FF F3	acc C0 FF FA 9C FF F3	got C0 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ରେ୍‌ନ	[0B30 0B47 0B4D 200C 0B28]	pref 7B C0 FF FA 9C FF	acc 7B C0 FF FA 9C FF	got 7B C0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ର୍‌ର୍ନ	[0B30 0B4D 200C 0B30 0B4D 0B28]	pref C0 FF FA 9C FF F6	acc C0 FF FA 9C FF F6	got C0 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ର୍‌ନ୍ର	[0B30 0B4D 200C 0B28 0B4D 0B30]	pref C0 FF FA 9C FF F7	acc C0 FF FA 9C FF F7	got C0 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ର୍‌ନ୍ୟ	[0B30 0B4D 200C 0B28 0B4D 0B5F]	pref C0 FF FA 9C FF BF	acc C0 FF FA 9C FF BF	got C0 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଲ୍‌ନ	[0B32 0B4D 200C 0B28]	pref E0 FF FA 9C FF	acc E0 FF FA 9C FF	got E0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଲ୍‍ନ	[0B32 0B4D 200D 0B28]	pref E0 FF FA 9C FF	acc E0 FF FA 9C FF	got E0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଲ୍‌ନା	[0B32 0B4D 200C 0B28 0B3E]	pref E0 FF FA 9C FF E6	acc E0 FF FA 9C FF E6	got E0 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଲ୍‌ନି	[0B32 0B4D 200C 0B28 0B3F]	pref E0 FF FA 9C FF E7	acc E0 FF FA 9C FF E7	got E0 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଲ୍‌ନୁ	[0B32 0B4D 200C 0B28 0B41]	pref E0 FF FA 9C FF EB	acc E0 FF FA 9C FF EB	got E0 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଲ୍‌ନଂ	[0B32 0B4D 200C 0B28 0B02]	pref E0 FF FA 9C FF F3	acc E0 FF FA 9C FF F3	got E0 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଲେ୍‌ନ	[0B32 0B47 0B4D 200C 0B28]	pref 7B E0 FF FA 9C FF	acc 7B E0 FF FA 9C FF	got 7B E0 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଲ୍‌ର୍ନ	[0B32 0B4D 200C 0B30 0B4D 0B28]	pref E0 FF FA 9C FF F6	acc E0 FF FA 9C FF F6	got E0 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଲ୍‌ନ୍ର	[0B32 0B4D 200C 0B28 0B4D 0B30]	pref E0 FF FA 9C FF F7	acc E0 FF FA 9C FF F7	got E0 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଲ୍‌ନ୍ୟ	[0B32 0B4D 200C 0B28 0B4D 0B5F]	pref E0 FF FA 9C FF BF	acc E0 FF FA 9C FF BF	got E0 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଳ୍‌ନ	[0B33 0B4D 200C 0B28]	pref C1 FF FA 9C FF	acc C1 FF FA 9C FF	got C1 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଳ୍‍ନ	[0B33 0B4D 200D 0B28]	pref C1 FF FA 9C FF	acc C1 FF FA 9C FF	got C1 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଳ୍‌ନା	[0B33 0B4D 200C 0B28 0B3E]	pref C1 FF FA 9C FF E6	acc C1 FF FA 9C FF E6	got C1 FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଳ୍‌ନି	[0B33 0B4D 200C 0B28 0B3F]	pref C1 FF FA 9C FF E7	acc C1 FF FA 9C FF E7	got C1 FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଳ୍‌ନୁ	[0B33 0B4D 200C 0B28 0B41]	pref C1 FF FA 9C FF EB	acc C1 FF FA 9C FF EB	got C1 FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଳ୍‌ନଂ	[0B33 0B4D 200C 0B28 0B02]	pref C1 FF FA 9C FF F3	acc C1 FF FA 9C FF F3	got C1 FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଳେ୍‌ନ	[0B33 0B47 0B4D 200C 0B28]	pref 7B C1 FF FA 9C FF	acc 7B C1 FF FA 9C FF	got 7B C1 FF FA 5B FF	reported 
+3 exception: na 9C->5B	ଳ୍‌ର୍ନ	[0B33 0B4D 200C 0B30 0B4D 0B28]	pref C1 FF FA 9C FF F6	acc C1 FF FA 9C FF F6	got C1 FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଳ୍‌ନ୍ର	[0B33 0B4D 200C 0B28 0B4D 0B30]	pref C1 FF FA 9C FF F7	acc C1 FF FA 9C FF F7	got C1 FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଳ୍‌ନ୍ୟ	[0B33 0B4D 200C 0B28 0B4D 0B5F]	pref C1 FF FA 9C FF BF	acc C1 FF FA 9C FF BF	got C1 FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଶ୍‌ନ	[0B36 0B4D 200C 0B28]	pref C9 FA 9C FF	acc C9 FA 9C FF	got C9 FA 5B FF	reported 
+3 exception: na 9C->5B	ଶ୍‍ନ	[0B36 0B4D 200D 0B28]	pref C9 FA 9C FF	acc C9 FA 9C FF	got C9 FA 5B FF	reported 
+3 exception: na 9C->5B	ଶ୍‌ନା	[0B36 0B4D 200C 0B28 0B3E]	pref C9 FA 9C FF E6	acc C9 FA 9C FF E6	got C9 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଶ୍‌ନି	[0B36 0B4D 200C 0B28 0B3F]	pref C9 FA 9C FF E7	acc C9 FA 9C FF E7	got C9 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଶ୍‌ନୁ	[0B36 0B4D 200C 0B28 0B41]	pref C9 FA 9C FF EB	acc C9 FA 9C FF EB	got C9 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଶ୍‌ନଂ	[0B36 0B4D 200C 0B28 0B02]	pref C9 FA 9C FF F3	acc C9 FA 9C FF F3	got C9 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଶେ୍‌ନ	[0B36 0B47 0B4D 200C 0B28]	pref 7B C9 FA 9C FF	acc 7B C9 FA 9C FF	got 7B C9 FA 5B FF	reported 
+3 exception: na 9C->5B	ଶ୍‌ର୍ନ	[0B36 0B4D 200C 0B30 0B4D 0B28]	pref C9 FA 9C FF F6	acc C9 FA 9C FF F6	got C9 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଶ୍‌ନ୍ର	[0B36 0B4D 200C 0B28 0B4D 0B30]	pref C9 FA 9C FF F7	acc C9 FA 9C FF F7	got C9 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଶ୍‌ନ୍ୟ	[0B36 0B4D 200C 0B28 0B4D 0B5F]	pref C9 FA 9C FF BF	acc C9 FA 9C FF BF	got C9 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଷ୍‌ନ	[0B37 0B4D 200C 0B28]	pref CC FA 9C FF	acc CC FA 9C FF	got CC FA 5B FF	reported 
+3 exception: na 9C->5B	ଷ୍‍ନ	[0B37 0B4D 200D 0B28]	pref CC FA 9C FF	acc CC FA 9C FF	got CC FA 5B FF	reported 
+3 exception: na 9C->5B	ଷ୍‌ନା	[0B37 0B4D 200C 0B28 0B3E]	pref CC FA 9C FF E6	acc CC FA 9C FF E6	got CC FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଷ୍‌ନି	[0B37 0B4D 200C 0B28 0B3F]	pref CC FA 9C FF E7	acc CC FA 9C FF E7	got CC FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଷ୍‌ନୁ	[0B37 0B4D 200C 0B28 0B41]	pref CC FA 9C FF EB	acc CC FA 9C FF EB	got CC FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଷ୍‌ନଂ	[0B37 0B4D 200C 0B28 0B02]	pref CC FA 9C FF F3	acc CC FA 9C FF F3	got CC FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଷେ୍‌ନ	[0B37 0B47 0B4D 200C 0B28]	pref 7B CC FA 9C FF	acc 7B CC FA 9C FF	got 7B CC FA 5B FF	reported 
+3 exception: na 9C->5B	ଷ୍‌ର୍ନ	[0B37 0B4D 200C 0B30 0B4D 0B28]	pref CC FA 9C FF F6	acc CC FA 9C FF F6	got CC FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଷ୍‌ନ୍ର	[0B37 0B4D 200C 0B28 0B4D 0B30]	pref CC FA 9C FF F7	acc CC FA 9C FF F7	got CC FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଷ୍‌ନ୍ୟ	[0B37 0B4D 200C 0B28 0B4D 0B5F]	pref CC FA 9C FF BF	acc CC FA 9C FF BF	got CC FA 5B FF BF	reported 
+3 exception: na 9C->5B	ସ୍‌ନ	[0B38 0B4D 200C 0B28]	pref D3 FA 9C FF	acc D3 FA 9C FF	got D3 FA 5B FF	reported 
+3 exception: na 9C->5B	ସ୍‍ନ	[0B38 0B4D 200D 0B28]	pref D3 FA 9C FF	acc D3 FA 9C FF	got D3 FA 5B FF	reported 
+3 exception: na 9C->5B	ସ୍‌ନା	[0B38 0B4D 200C 0B28 0B3E]	pref D3 FA 9C FF E6	acc D3 FA 9C FF E6	got D3 FA 5B FF E6	reported 
+3 exception: na 9C->5B	ସ୍‌ନି	[0B38 0B4D 200C 0B28 0B3F]	pref D3 FA 9C FF E7	acc D3 FA 9C FF E7	got D3 FA 5B FF E7	reported 
+3 exception: na 9C->5B	ସ୍‌ନୁ	[0B38 0B4D 200C 0B28 0B41]	pref D3 FA 9C FF EB	acc D3 FA 9C FF EB	got D3 FA 5B FF EB	reported 
+3 exception: na 9C->5B	ସ୍‌ନଂ	[0B38 0B4D 200C 0B28 0B02]	pref D3 FA 9C FF F3	acc D3 FA 9C FF F3	got D3 FA 5B FF F3	reported 
+3 exception: na 9C->5B	ସେ୍‌ନ	[0B38 0B47 0B4D 200C 0B28]	pref 7B D3 FA 9C FF	acc 7B D3 FA 9C FF	got 7B D3 FA 5B FF	reported 
+3 exception: na 9C->5B	ସ୍‌ର୍ନ	[0B38 0B4D 200C 0B30 0B4D 0B28]	pref D3 FA 9C FF F6	acc D3 FA 9C FF F6	got D3 FA 5B FF F6	reported 
+3 exception: na 9C->5B	ସ୍‌ନ୍ର	[0B38 0B4D 200C 0B28 0B4D 0B30]	pref D3 FA 9C FF F7	acc D3 FA 9C FF F7	got D3 FA 5B FF F7	reported 
+3 exception: na 9C->5B	ସ୍‌ନ୍ୟ	[0B38 0B4D 200C 0B28 0B4D 0B5F]	pref D3 FA 9C FF BF	acc D3 FA 9C FF BF	got D3 FA 5B FF BF	reported 
+3 exception: na 9C->5B	ହ୍‌ନ	[0B39 0B4D 200C 0B28]	pref DC FF FA 9C FF	acc DC FF FA 9C FF	got DC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ହ୍‍ନ	[0B39 0B4D 200D 0B28]	pref DC FF FA 9C FF	acc DC FF FA 9C FF	got DC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ହ୍‌ନା	[0B39 0B4D 200C 0B28 0B3E]	pref DC FF FA 9C FF E6	acc DC FF FA 9C FF E6	got DC FF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ହ୍‌ନି	[0B39 0B4D 200C 0B28 0B3F]	pref DC FF FA 9C FF E7	acc DC FF FA 9C FF E7	got DC FF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ହ୍‌ନୁ	[0B39 0B4D 200C 0B28 0B41]	pref DC FF FA 9C FF EB	acc DC FF FA 9C FF EB	got DC FF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ହ୍‌ନଂ	[0B39 0B4D 200C 0B28 0B02]	pref DC FF FA 9C FF F3	acc DC FF FA 9C FF F3	got DC FF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ହେ୍‌ନ	[0B39 0B47 0B4D 200C 0B28]	pref 7B DC FF FA 9C FF	acc 7B DC FF FA 9C FF	got 7B DC FF FA 5B FF	reported 
+3 exception: na 9C->5B	ହ୍‌ର୍ନ	[0B39 0B4D 200C 0B30 0B4D 0B28]	pref DC FF FA 9C FF F6	acc DC FF FA 9C FF F6	got DC FF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ହ୍‌ନ୍ର	[0B39 0B4D 200C 0B28 0B4D 0B30]	pref DC FF FA 9C FF F7	acc DC FF FA 9C FF F7	got DC FF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ହ୍‌ନ୍ୟ	[0B39 0B4D 200C 0B28 0B4D 0B5F]	pref DC FF FA 9C FF BF	acc DC FF FA 9C FF BF	got DC FF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ୟ୍‌ନ	[0B5F 0B4D 200C 0B28]	pref DF FA 9C FF	acc DF FA 9C FF	got DF FA 5B FF	reported 
+3 exception: na 9C->5B	ୟ୍‍ନ	[0B5F 0B4D 200D 0B28]	pref DF FA 9C FF	acc DF FA 9C FF	got DF FA 5B FF	reported 
+3 exception: na 9C->5B	ୟ୍‌ନା	[0B5F 0B4D 200C 0B28 0B3E]	pref DF FA 9C FF E6	acc DF FA 9C FF E6	got DF FA 5B FF E6	reported 
+3 exception: na 9C->5B	ୟ୍‌ନି	[0B5F 0B4D 200C 0B28 0B3F]	pref DF FA 9C FF E7	acc DF FA 9C FF E7	got DF FA 5B FF E7	reported 
+3 exception: na 9C->5B	ୟ୍‌ନୁ	[0B5F 0B4D 200C 0B28 0B41]	pref DF FA 9C FF EB	acc DF FA 9C FF EB	got DF FA 5B FF EB	reported 
+3 exception: na 9C->5B	ୟ୍‌ନଂ	[0B5F 0B4D 200C 0B28 0B02]	pref DF FA 9C FF F3	acc DF FA 9C FF F3	got DF FA 5B FF F3	reported 
+3 exception: na 9C->5B	ୟେ୍‌ନ	[0B5F 0B47 0B4D 200C 0B28]	pref 7B DF FA 9C FF	acc 7B DF FA 9C FF	got 7B DF FA 5B FF	reported 
+3 exception: na 9C->5B	ୟ୍‌ର୍ନ	[0B5F 0B4D 200C 0B30 0B4D 0B28]	pref DF FA 9C FF F6	acc DF FA 9C FF F6	got DF FA 5B FF F6	reported 
+3 exception: na 9C->5B	ୟ୍‌ନ୍ର	[0B5F 0B4D 200C 0B28 0B4D 0B30]	pref DF FA 9C FF F7	acc DF FA 9C FF F7	got DF FA 5B FF F7	reported 
+3 exception: na 9C->5B	ୟ୍‌ନ୍ୟ	[0B5F 0B4D 200C 0B28 0B4D 0B5F]	pref DF FA 9C FF BF	acc DF FA 9C FF BF	got DF FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନ	[0B5C 0B4D 200C 0B28]	pref DD FA 9C FF	acc DD FA 9C FF	got DD FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ଼୍‍ନ	[0B5C 0B4D 200D 0B28]	pref DD FA 9C FF	acc DD FA 9C FF	got DD FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନା	[0B5C 0B4D 200C 0B28 0B3E]	pref DD FA 9C FF E6	acc DD FA 9C FF E6	got DD FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନି	[0B5C 0B4D 200C 0B28 0B3F]	pref DD FA 9C FF E7	acc DD FA 9C FF E7	got DD FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନୁ	[0B5C 0B4D 200C 0B28 0B41]	pref DD FA 9C FF EB	acc DD FA 9C FF EB	got DD FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନଂ	[0B5C 0B4D 200C 0B28 0B02]	pref DD FA 9C FF F3	acc DD FA 9C FF F3	got DD FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଡ଼େ୍‌ନ	[0B5C 0B47 0B4D 200C 0B28]	pref 7B DD FA 9C FF	acc 7B DD FA 9C FF	got 7B DD FA 5B FF	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ର୍ନ	[0B5C 0B4D 200C 0B30 0B4D 0B28]	pref DD FA 9C FF F6	acc DD FA 9C FF F6	got DD FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନ୍ର	[0B5C 0B4D 200C 0B28 0B4D 0B30]	pref DD FA 9C FF F7	acc DD FA 9C FF F7	got DD FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଡ଼୍‌ନ୍ୟ	[0B5C 0B4D 200C 0B28 0B4D 0B5F]	pref DD FA 9C FF BF	acc DD FA 9C FF BF	got DD FA 5B FF BF	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନ	[0B5D 0B4D 200C 0B28]	pref DE FA 9C FF	acc DE FA 9C FF	got DE FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ଼୍‍ନ	[0B5D 0B4D 200D 0B28]	pref DE FA 9C FF	acc DE FA 9C FF	got DE FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନା	[0B5D 0B4D 200C 0B28 0B3E]	pref DE FA 9C FF E6	acc DE FA 9C FF E6	got DE FA 5B FF E6	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନି	[0B5D 0B4D 200C 0B28 0B3F]	pref DE FA 9C FF E7	acc DE FA 9C FF E7	got DE FA 5B FF E7	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନୁ	[0B5D 0B4D 200C 0B28 0B41]	pref DE FA 9C FF EB	acc DE FA 9C FF EB	got DE FA 5B FF EB	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନଂ	[0B5D 0B4D 200C 0B28 0B02]	pref DE FA 9C FF F3	acc DE FA 9C FF F3	got DE FA 5B FF F3	reported 
+3 exception: na 9C->5B	ଢ଼େ୍‌ନ	[0B5D 0B47 0B4D 200C 0B28]	pref 7B DE FA 9C FF	acc 7B DE FA 9C FF	got 7B DE FA 5B FF	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ର୍ନ	[0B5D 0B4D 200C 0B30 0B4D 0B28]	pref DE FA 9C FF F6	acc DE FA 9C FF F6	got DE FA 5B FF F6	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନ୍ର	[0B5D 0B4D 200C 0B28 0B4D 0B30]	pref DE FA 9C FF F7	acc DE FA 9C FF F7	got DE FA 5B FF F7	reported 
+3 exception: na 9C->5B	ଢ଼୍‌ନ୍ୟ	[0B5D 0B4D 200C 0B28 0B4D 0B5F]	pref DE FA 9C FF BF	acc DE FA 9C FF BF	got DE FA 5B FF BF	reported 

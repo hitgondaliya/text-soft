@@ -1,0 +1,98 @@
+Shree-Lipi 7 Odia: how S8Ori764.dll spells Unicode, read from 41470 truth strings (ori7-groundtruth.json). Bytes are hex, one per glyph; fonts SHREE-ORI7-06xx (S06xx892.TTF, WORI7001/2.TTF) and SHREE-ORI-06xx (S06xx0F2.TTF) draw them identically except ₹ 3C (WORI7001/2 only). A "check" line counts the truth strings that follow the rule (preferred or accepted spelling).
+
+1. Internal codes (what each code of a .ORI keyboard means; single-code probes, both composers; - = no answer):
+   21=!→21  22=‘→22  24=ଅ→41  25=%→25  26=୰→8F  27=’→27  28=(→28  29=)→29
+   2A=*→2A  2B=+→nothing  2C=,→2C  2D=-→2D  2E=.→2E  2F=/→2F  30=୦→30  31=୧→31
+   32=୨→32  33=୩→33  34=୪→34  35=୫→35  36=୬→36  37=୭→37  38=୮→38  39=୯→39
+   3A=:→3A  3B=;→nothing  3C=ଏ→46  3D==→nothing  3E=ଐ→47  3F=?→3F  40=ର୍→F6  41=ଢ଼→DE
+   42=ଉ→44  43=ଝ→6C  44=୍‌→FA  45=ଡ଼→DD  46=ଥ→24  47=ଇ→42  48=ଈ→43  49=ଠ→76 FF
+   4A=ଣ→7E  4B=ଶ→C9  4C=ଷ→CC  4D=ଲ→E0 FF  4E=ଊ→45  4F=ଡ→78 FF  50=ଢ→7C FF  51=-→23
+   52=ଧ→99  53=ଖ→51  54=ଓ→48  55=ଟ→73  56=ଛ→64  57=ଫ→FC FF  58=ଘ→57  59=ଔ→49
+   5A=ଙ→59 FF  5B=[→nothing  5C=କ୍ଷ→E4  5D=]→nothing  5E=ଋ→4A  5F=ଽ→90  61=ମ→FE  62=ୁ→EB
+   63=ଜ→66  65=ନ→9C FF  66=ତ→86 FF  67=ି→E7  68=ୀ→EA  69=ଂ→F3  6A=ର→C0 FF  6B=ା→E6
+   6C=େ→7B  6D=ଳ→C1 FF  6E=ୂ→ED  6F=ହ→DC FF  70=ୖ→F0  71=ବ→AF FF  72=ଦ→92 FF  73=କ→4C FF
+   74=ସ→D3  75=ଯ→BE  76=ଚ→60 FF  77=ପ→A8  78=ଗ→53  79=ୗ→F2  7A=ଭ→B5 FF  7B=—→nothing
+   7C=“→nothing  7D=–→nothing  7E=”→nothing  D0=ୃ→F5  D1=୍ର→F7  D2=୍ୟ→BF  D3=।→3E  D4=ଃ→85
+   D6=ଁ→F4  D7=ୟ→DF  D8=ଞ→6E FF  DD=॥→nothing  DE=×→nothing  DF=÷→nothing  E0=-→E3  E1=-→FD
+   E2=ୠ→4B  E3=ଌ→68  E4=ୡ→nothing  E5=ୱ→nothing  E6=଼→nothing  E7=ୈ→nothing  E8=ୋ→nothing  E9=ୌ→nothing
+   EA=ଵ→nothing  EB=॑→nothing  EC=॓→nothing  ED=॒→nothing  F4=ଓଁ→nothing  F5=₹→3C  F6=ୢ→nothing  F7=ୣ→nothing
+   F8=ୄ→nothing  F9=‍→nothing  FA=‌→nothing
+   64 = link (virama: alone it types nothing; after a letter FA, before a letter the conjunct), 44 = virama+ZWNJ (FA), D5 = virama+ZWJ (FA), 40 = reph (F6), D1 = ra-phala (F7), D2 = ya-phala (BF; the Unicode composer writes ୍ୟ = 0B4D 0B5F), E6 = nukta (the 7 composer types NOTHING), F9/FA = ZWJ/ZWNJ (no glyph).
+   The 7 composer types NOTHING for: E4 ୡ, E5 ୱ, E6 nukta, E7/E8/E9 (ୈ ୋ ୌ as one code), EA ଵ, F4 ଓଁ, F6 ୢ, F7 ୣ, F8 ୄ, EB/EC/ED (Vedic), DD ॥, DE ×, DF ÷, 7B —, 7C “, 7D –, 7E ”, 2B +, 3B ;, 3D =, 5B [, 5D ].
+   Codes only the 7 composer types (the Unicode composer writes nothing for them): E1 -> FD (a second ba-phala form), E0 -> E3 (a dotted letter), 51 -> 23 (the hook that is also ଖି ଥି ଧି's i-sign); the Unicode composer reads 51 after କ as ତ୍କ and after ଖ as ଖି - unreliable, kept as quirks.
+
+2. Consonants, one glyph each, 17 followed by the blank spacer FF (part of the letter, like Gujarati $): କ 4C FF, ଖ 51, ଗ 53, ଘ 57, ଙ 59 FF, ଚ 60 FF, ଛ 64, ଜ 66, ଝ 6C, ଞ 6E FF, ଟ 73, ଠ 76 FF, ଡ 78 FF, ଢ 7C FF, ଣ 7E, ତ 86 FF, ଥ 24, ଦ 92 FF, ଧ 99, ନ 9C FF, ପ A8, ଫ FC FF, ବ AF FF, ଭ B5 FF, ମ FE, ଯ BE, ର C0 FF, ଲ E0 FF, ଳ C1 FF, ଶ C9, ଷ CC, ସ D3, ହ DC FF, ୟ DF. Nukta letters: ଡ଼ DD, ଢ଼ DE (the Unicode composer writes U+0B5C/U+0B5D; NFC text holds ଡ/ଢ + U+0B3C). ୱ = 48 B4 (ଓ 48 + the ba-phala stroke B4; typed ଓ + link + ବ, vendor slot 54 64 71). କ୍ଷ = E4 (code 5C; C + link + ଷ gives the visible-halant spelling 4C FF FA CC, accepted).
+
+3. Vowel signs after a plain consonant: the sign glyph follows the letter (and its spacer): ା E6, ି E7, ୀ EA, ୁ EB, ୂ ED, ୃ F5, ୖ F0, ୗ F2; େ is 7B written BEFORE the cluster; ୈ = 7B ... F0, ୋ = 7B ... E6, ୌ = 7B ... F2 (e-glyph first, the length mark after).
+  check "C + post sign = letter + sign glyph": 269/272 truth strings follow it; exceptions: ଖି rule 51 E7 / truth 51 23; ଥି rule 24 E7 / truth 24 23; ଧି rule 99 E7 / truth 99 23
+  check "C + େ/ୈ/ୋ/ୌ = 7B letter (+ F0/E6/F2)": 136/136 truth strings follow it
+   exceptions: ି on ଖ ଥ ଧ is the hook 23 (ଖି 51 23, ଥି 24 23, ଧି 99 23). ି + ଁ = the ligature 5D (କିଁ 4C FF 5D), but ଖିଁ = 51 23 F4.
+
+4. ଂ F3, ଁ F4, ଃ 85 after the sign. Typed twice (ଂ then ଁ ...) the Unicode composer keeps only the first (quirk).
+  check "C + sign + ଂ = (C + sign) + F3": 204/204 truth strings follow it
+
+5. Conjuncts C1 + ୍ + C2 (typed C1, link 64, C2): the first letter (with its spacer) + the SUBJOINED form of C2. Subjoined glyphs (the spelling of ପ୍C2 without ପ, except where ପ ligates):
+   ୍କ 50, ୍ଖ 52, ୍ଗ 56, ୍ଘ 58, ୍ଙ FA 59 FF, ୍ଚ 63, ୍ଛ 65, ୍ଜ 6B, ୍ଝ 6D, ୍ଞ FA 6E FF, ୍ଟ 75, ୍ଠ 77, ୍ଡ EF, ୍ଢ E9, ୍ଣ 40, ୍ତ FA 86 FF, ୍ଥ 91, ୍ଦ 98, ୍ଧ 9B, ୍ନ A7, ୍ପ AC, ୍ଫ AE, ୍ବ B4, ୍ଭ B6, ୍ମ BD, ୍ଯ null, ୍ର F7, ୍ଲ E2, ୍ଳ C8, ୍ଶ FA C9, ୍ଷ FA CC, ୍ସ DB, ୍ହ FA DC FF, ୍ୟ BF
+   (FA + full letter = no subjoined form: Shree writes a visible virama, e.g. ଙ ଞ ଶ ଷ ହ ତ; ୍ଯ is FA BE - the ya-phala is ୍ୟ = BF; ୍ର = F7.)
+  check "C1୍C2 = letter(C1) + subjoined(C2)": 1016/1123 truth strings follow it; exceptions: କ୍କ rule 4C FF 50 / truth 4D; କ୍ତ rule 4C FF FA 86 FF / truth 4E FF; କ୍ସ rule 4C FF DB / truth 4F FF; ଗ୍ଦ rule 53 98 / truth 54; ଗ୍ଧ rule 53 9B / truth 55; ଙ୍କ rule 59 FF 50 / truth 5A FF; ଙ୍ଖ rule 59 FF 52 / truth 5C FF; ଙ୍ଗ rule 59 FF 56 / truth E8 FF
+   Ligatures (C1୍C2 with its own glyph, 77): କ୍କ 4D, କ୍ତ 4E FF, କ୍ଷ E4, କ୍ସ 4F FF, ଗ୍ଦ 54, ଗ୍ଧ 55, ଙ୍କ 5A FF, ଙ୍ଖ 5C FF, ଙ୍ଗ E8 FF, ଙ୍ଘ 5E FF, ଚ୍ଚ 61 FF, ଚ୍ଛ 62 FF, ଜ୍ଜ 67, ଜ୍ଝ 69, ଜ୍ଞ 6A, ଞ୍ଚ 6F, ଞ୍ଛ 70, ଞ୍ଜ 71, ଞ୍ଝ 72 FF, ଟ୍ଟ 74, ଡ୍ଟ 79, ଡ୍ଡ 7A FF, ଣ୍ଟ 2B, ଣ୍ଠ 3D FF, ଣ୍ଡ 83, ଣ୍ଢ 84, ଣ୍ଣ 82 FF, ତ୍କ 87, ତ୍ତ 88 FF, ତ୍ଥ 8B, ତ୍ନ 9C FF 23, ତ୍ପ 8C, ତ୍ମ 8A, ତ୍ସ FB, ଦ୍ଘ 93 FF, ଦ୍ଦ 94, ଦ୍ଧ 95, ଦ୍ଭ 97 FF, ଧ୍ୟ 9A, ନ୍ତ 3B FF, ନ୍ଥ A1 FF, ନ୍ଦ A2 FF, ନ୍ଧ A4 FF, ନ୍ନ 9F, ପ୍ତ A9, ପ୍ପ AA, ପ୍ସ AB, ବ୍ଜ B0 FF, ବ୍ଦ B1 FF, ବ୍ଧ B2, ବ୍ବ B3, ମ୍ପ B8, ମ୍ଫ B9 FF, ମ୍ବ BA, ମ୍ଭ BB, ମ୍ମ BC, ଲ୍କ E1 FF, ଳ୍କ C2 FF, ଳ୍ଗ C4 FF, ଳ୍ପ C5 FF, ଳ୍ଫ C6 FF, ଳ୍ଭ C7, ଳ୍ଳ C3 FF, ଶ୍ଚ CA FF, ଶ୍ଛ CB, ଷ୍କ CD, ଷ୍ଟ CE, ଷ୍ଠ CF, ଷ୍ଣ D0, ଷ୍ପ D1, ଷ୍ଫ D2, ସ୍କ D4 FF, ସ୍ଖ D5, ସ୍ତ D6, ସ୍ଥ D7, ସ୍ପ D8, ସ୍ଫ D9 FF
+   ର୍C is never a conjunct: Unicode ର୍C is the reph (rule 8).
+
+6. A sign after a subjoined form / ligature: ୁ is EC and ୂ is EE (the low forms), ୃ is 26 F5, the ra-phala 26 F7, the virama 26 FA (26 = a zero-width lowering spacer) - but only after a subjoined glyph that hangs below; ା ି ୀ ୖ ୗ ଂ ଁ ଃ do not change.
+  check "C୍C + ୁ = (C୍C) + EB|EC": 1089/1123 truth strings follow it; exceptions: ର୍କୁ rule 4C FF F6 EB / truth 4C FF EB F6; ର୍ଖୁ rule 51 F6 EB / truth 51 EB F6; ର୍ଗୁ rule 53 F6 EB / truth 53 EB F6; ର୍ଘୁ rule 57 F6 EB / truth 57 EB F6; ର୍ଙୁ rule 59 FF F6 EB / truth 59 FF EB F6; ର୍ଚୁ rule 60 FF F6 EB / truth 60 FF EB F6; ର୍ଛୁ rule 64 F6 EB / truth 64 EB F6; ର୍ଜୁ rule 66 F6 EB / truth 66 EB F6
+   ୁ after a C୍C: EC in 788, EB in 268 (EB where the second letter is a full letter after FA, or a ligature that sits on the line).
+   ୃ after a C୍C: 26 F5 in 757, plain F5 in 45. e.g. କ୍ଟୃ 4C FF 75 26 F5, କ୍କୃ 4D F5, କ୍ଟୁ 4C FF 75 EC, କ୍ଟ୍ର 4C FF 75 26 F7, କ୍ଟ୍ 4C FF 75 26 FA.
+
+7. Phala forms: ra-phala ୍ର F7 (ଶ୍ରୁ C9 F8 and ଶ୍ରୂ C9 F9 = the ra-phala+u ligatures F8/F9), ya-phala ୍ୟ BF (U+0B5F; ଧ୍ୟ = 9A, accepted ["9A","99 BF"]), ba-phala ୍ବ B4 (the stroke; code E1 writes the other form FD, Unicode composer: nothing). C୍ୱ (U+0B71 after a virama) has NO 7 spelling: the composer drops ୱ (C + link + ୱ = C FA).
+  check "C୍ର = letter + F7": 33/33 truth strings follow it
+  check "C୍ୟ (0B5F) = letter + BF": 34/34 truth strings follow it
+  check "C୍ବ = letter + B4": 31/34 truth strings follow it; exceptions: ବ୍ବ rule AF FF B4 / truth B3; ମ୍ବ rule FE B4 / truth BA; ର୍ବ rule C0 FF B4 / truth AF FF F6
+
+8. Reph ର୍: written F6 AFTER its syllable (the base, its subjoined forms and its signs), before ଂ ଁ ଃ (sign, reph, tail - preferred; tail then reph F3 F6 is accepted); ି + reph = the ligature 7D, ୖ + reph = F1. Typed reph-first (F6 before the letter) the mark floats over the previous glyph (alt). ର + link + C is ର with C subjoined (C0 FF + subjoined), not a reph (alt).
+  check "ର୍C = letter(C) + F6": 34/34 truth strings follow it
+  check "ର୍C + sign = (C + sign) + F6 (ି: 7D, ୖ: F1)": 272/272 truth strings follow it
+  check "ର୍C + ି = letter + 7D": 31/34 truth strings follow it; exceptions: ର୍ଖି rule 51 7D / truth 51 23 F6; ର୍ଥି rule 24 7D / truth 24 23 F6; ର୍ଧି rule 99 7D / truth 99 23 F6
+  check "ର୍C୍C = (C୍C) + F6": 165/165 truth strings follow it
+   ର୍ at a word end = C0 FF FA (ର + visible virama); the lone reph key (code 40) writes F6 alone (alt).
+
+9. Virama: word-final C୍ = letter + FA (କ୍ 4C FF FA); C୍‌ (ZWNJ, code 44) and C୍‍ (ZWJ, code D5) are the same visible FA, then the next letter in full (କ୍‌ତ 4C FF FA 86 FF).
+  check "C୍ = letter + FA": 33/33 truth strings follow it
+  check "C1୍‌C2 = letter(C1) FA letter(C2)": 170/170 truth strings follow it
+
+10. Independent vowels: ଅ 41, ଆ 41 E6, ଇ 42, ଈ 43, ଉ 44, ଊ 45, ଋ 4A, ୠ 4B, ଌ 68, ଏ 46, ଐ 47, ଓ 48, ଔ 49. ୡ has no 7 spelling. ଆ is typed ଅ + ା (41 E6).
+
+11. Digits ୦30 ୧31 ୨32 ୩33 ୪34 ୫35 ୬36 ୭37 ୮38 ୯39; । 3E, ୰ 8F (byte 8F: the fonts map it at U+008F), ଽ 90 (byte 90: U+0090), ₹ 3C (WORI7001/2 only), ‘ 22, ’ 27. No 7 spelling (the composer types nothing): ॥ × ÷ — – “ ” + ; = [ ] ଓଁ ୄ ୢ ୣ and the Vedic marks.
+
+12. Syllables join by concatenation: 201/201 two-syllable probes (କି/କା/କେ/ର୍କ/କୁ/କଂ + every consonant) are exactly the two syllables' own preferred bytes.
+
+13. Not in the truth (4 codes per key): C୍C + ୈ/ୋ/ୌ, C୍C୍ର / C୍C୍ୟ + a sign (ମନ୍ତ୍ରୀ, ସ୍ତ୍ରୀ, ସନ୍ଧ୍ୟା), three-consonant clusters other than C୍C୍ର/C୍C୍ୟ, reph + C୍C + sign; C୍ୱ (no spelling at all). Rules 3, 6, 7 and 8 predict them (sign glyphs append to the cluster; the reph goes last).
+
+14. Composer quirks and other typing orders (kept in pairs with kind quirk:* / alt:*, not used as truth):
+      13  alt:lone reph key (code 40 alone = F6, the reph mark with no letter under it; Unicode ର୍ at a word end is ର + virama = C0 FF FA)
+     144  quirk:vendor-key-types-other-than-its-codes (phonetic/inscript mode)
+      18  quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-ORI font has)
+    1546  quirk:7-composer-drops-ୱ (code E5; ୱ is typed ଓ + link + ବ = 48 B4)
+     383  quirk:7-composer-drops-nukta ଼ (code E6)
+    3769  quirk:7-only-code: ba-phala ୍ବ (code E1 -> FD; the Unicode composer writes nothing; Unicode C୍ବ is typed C + link + ବ = C B4)
+      39  quirk:7-only-code: code 51 -> 23 (a subscript hook, the half-ta of ତ୍କ ତ୍ନ...; the Unicode composer writes ତ୍ before କ only, else nothing or ି)
+      39  quirk:7-only-code: code E0 -> E3 (a dotted letter glyph; the Unicode composer writes nothing)
+      78  alt:reph struck before the letter (the 7 composer writes F6 BEFORE the letter: the reph floats over the previous glyph)
+     697  alt:ର + link + C (ର with C subjoined, e.g. ର୍କ = C0 FF 50; Unicode ର୍C is the reph, typed C + reph = C F6)
+    1230  quirk:U-composer-wrote-*
+     659  alt:reph struck before the post-base sign
+     263  quirk:7-composer-drops-ୄ (code F8)
+     263  quirk:7-composer-drops-ୢ (code F6)
+     263  quirk:7-composer-drops-ୣ (code F7)
+     263  quirk:7-composer-drops-ୈ (code E7; ୈ is typed େ + C + ୖ)
+     263  quirk:7-composer-drops-ୋ (code E8; ୋ is typed େ + C + ା)
+     263  quirk:7-composer-drops-ୌ (code E9; ୌ is typed େ + C + ୗ)
+      34  quirk:7-composer-dropped-code-40 (ର୍)
+     111  alt:େ struck after the letter (the Unicode composer writes it on a carrier, କ.େ; the 7 composer writes 7B AFTER the letter)
+    1545  quirk:7-composer-drops-ଵ (code EA)
+     620  alt:vowel sign struck before the phala code
+     677  alt:C + link + ଯ (U+0B2F): visible halant FA + full ଯ BE, not the ya-phala (Shree's ya-phala is ୍ୟ = 0B4D 0B5F, code D2 -> BF)
+      10  quirk:7-composer-drops-ୡ (code E4)
+      10  quirk:7-composer-drops-ଓଁ (code F4)
+       1  alt:lone reph (code 40 alone = F6, the reph mark with no letter under it; Unicode ର୍ at a word end is ର + virama = C0 FF FA)
+       3  quirk:U-composer-carrier-in-answer
+       1  quirk:7-composer-drops-” (code 7E)

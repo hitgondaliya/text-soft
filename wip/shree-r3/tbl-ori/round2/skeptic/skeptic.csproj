@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>skeptic</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <NoWarn>CS8618;CS8602;CS8604;CS8600;CS0168;CS8625;CS8632</NoWarn>
+    <RepoDir>..\..\repo</RepoDir>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(RepoDir)\src\FontSoftware.Core\FontSoftware.Core.csproj" />
+    <ProjectReference Include="$(RepoDir)\src\FontSoftware.Engine\FontSoftware.Engine.csproj" />
+  </ItemGroup>
+</Project>

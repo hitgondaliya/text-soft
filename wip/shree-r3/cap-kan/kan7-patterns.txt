@@ -1,0 +1,113 @@
+Shree-Lipi 7 Kannada: how S8Kan764.dll spells Unicode, read from 24825 truth strings (kan7-groundtruth.json). Bytes are hex, one per glyph; the 7 faces (SHREE-KAN7-0850..0855/0899, Shree-Kan7-001/002) and the 4/5/6 faces (SHREE-KAN-0850..0855/0899) have the same 215 codes, and the same design number draws identical glyphs in both families. A "check" line counts the truth strings that follow the rule (preferred or accepted spelling).
+
+1. Internal codes (what each code of a .KAN keyboard means; single-code probes under a neutral keyboard name, both composers; "-" = no answer):
+   20= →20  21=!→21  22=‘→22  24=ಏ→48  25=%→25  26=ೂ→46  27=’→27  28=[→28
+   29=]→29  2A=*→2A  2B=+→2B  2C=,→2C  2D=-→26  2E=.→2E  2F=/→2F  30=೦→30
+   31=೧→31  32=೨→32  33=೩→33  34=೪→34  35=೫→35  36=೬→36  37=೭→37  38=೮→38
+   39=೯→39  3A=:→3A  3B=;→3B  3C=ಂ→ED  3D==→3D  3E=ಃ→40  3F=?→3F  40=ೌ→4C
+   41=ಆ→42  42=ಎ→47  43=ಛ→64 DC  44=್‌→nothing  45=ಖ→53  46=ಣ→7C  47=ಥ→A5 DC  48=ಧ→AB DC
+   49=ಳ→D9 DC  4A=ಭ→BB DC  4B=ರ→EC  4C=ಹ→D6 DC  4D=ಐ→49  4E=ಉ→45  4F=ಶ→CD DC  50=ಒ→4A
+   51=ಅ→41  52=ಠ→73 DC  53=ಇ→43  54=ಢ→79 DC  55=ಬ→9F  56=ಈ→44  57=ಘ→5A  58=ಝ→C3 DC 6B E1
+   59=ಫ→B4 DC  5A=ಋ→4D E1  5C=‌→nothing  5E=‍→nothing  5F=ೠ→4D E3  61=ಾ→42  62=ೆ→47  63=ಚ→61 DC
+   64=್→nothing  65=ಕ→50 DC  66=ಯ→BF E1  67=ತ→F1 DC  68=ದ→A8 DC  69=ಲ→C6  6A=ನ→AE DC  6B=ರ→C3 DC
+   6C=ಸ→D3 DC  6D=ೈ→49  6E=ು→45  6F=ವ→CA DC  70=ೊ→4A  71=ಷ→D0 DC  72=ಟ→6F  73=ಿ→43
+   74=ಡ→76 DC  75=ಮ→CA DC E1  76=-→44  77=ಗ→57 DC  78=ಜ→67  79=ಪ→B1 DC  7A=ೃ→4D E1  7B=—→AC
+   7D=–→B6  7E=।→3E  86=-→2D  D0=ಓ→4B  D1=ಙ→5F  D2=ಞ→6D  D3=಼→98  D4=ಽ→98
+   D5=ಊ→46  D6=ಔ→4C  D7=-→23  D8=ಶ್ರೀ→5D  D9=ೢ→nothing  DA=ೣ→nothing  DB=₹→3C  DC=×→8D
+   DD=÷→8A  DE=॥→nothing  E0=ಜ್ಞ→FD  E1=ಕ್ಷ→FB DC  E2=ೄ→4D E3  E3=ಱ→93  E5=ೞ→91  E6=-→89
+   E7=-→87  E8=-→88  E9=ಌ→nothing  EA=-→8B  EB=-→7D  ED=ೡ→99  EE=-→9A  F0=ೈ→nothing
+   F1=ೀ→nothing  F2=ೇ→nothing  F3=ೋ→nothing
+   64 = link (virama; before a consonant the conjunct: C1 + the subjoined form of C2; at a word end or before a space the 7 composer writes NO virama), 44 = virama + ZWNJ (the visible virama glyph 85 in place of the head DC), 4B = the reph (arkavattu EC) struck AFTER its syllable, 76 = the length mark (ೀ = ಿ + 76, ೇ = ೆ + 76, ೋ = ೊ + 76), D3 = nukta (82 after a letter), 5E/5C = ZWJ/ZWNJ (no glyph; ignored by the 7 composer after the link). F0-F3 (precomposed ೈ ೀ ೇ ೋ, TYPEWRIT only): the 7 composer writes nothing. A lone vowel-sign code makes the 7 composer write the INDEPENDENT vowel glyph (61 ಾ → 42 = ಆ).
+   The 7 composer types NOTHING for: D9 ೢ, DA ೣ, E9 ಌ, DE ॥, F0-F3. Codes only the 7 composer types (the Unicode composer writes nothing): D7 → 23, 86 → 2D, E6 → 89, E7 → 87, E8 → 88, EA → 8B (9B after a letter), EB → 7D, EE → 9A (fonts/only7.png: glyph pieces, 9A = a second ಙ glyph).
+   GLYPH CHECK (fonts/punct-check.png, fonts/all-codes-3faces.png, every installed face): the composer bytes for some symbols do not draw the symbol: ಽ (D4) → 98 = the nukta-on-carrier glyph (the avagraha glyph is 97); — (7B) → AC = an empty 100-unit glyph; – (7D) → B6 = a ಫ variant; ÷ (DD) → 8A = a zero-width curve; ₹ (DB) → 3C = no glyph in any Kannada face; codes 28/29: the Unicode composer writes [ ] but 28/29 draw ( ) (no face has [ ]). × (DC) → 8D, । (7E) → 3E, ‘ ’ → 22 27 are right.
+
+2. Consonants: the body glyph + the talakattu head DC (zero-width), or one glyph for letters drawn without a separate head:
+   ಕ 50 DC, ಖ 53, ಗ 57 DC, ಘ 5A, ಙ 5F, ಚ 61 DC, ಛ 64 DC, ಜ 67, ಝ C3 DC 6B E1, ಞ 6D, ಟ 6F, ಠ 73 DC, ಡ 76 DC, ಢ 79 DC, ಣ 7C, ತ F1 DC, ಥ A5 DC, ದ A8 DC, ಧ AB DC, ನ AE DC, ಪ B1 DC, ಫ B4 DC, ಬ 9F, ಭ BB DC, ಮ CA DC E1, ಯ BF E1, ರ C3 DC, ಱ 93, ಲ C6, ಳ D9 DC, ವ CA DC, ಶ CD DC, ಷ D0 DC, ಸ D3 DC, ಹ D6 DC, ೞ 91
+   ಕ್ಷ = FB DC (code E1; C + link + ಷ = 50 DC D2, accepted); ಜ್ಞ = FD (code E0; also 67 6E); ಶ್ರೀ = 5D (code D8).
+
+3. Vowel signs (gunitakshara): ಾ ೆ ೌ REPLACE the head DC (ಕಾ 50 DD, ಕೆ 50 E6, ಕೌ 50 E8); ಿ is one glyph per letter (ಕಿ 51); ು ೂ ೃ ೄ follow the letter + head (ಕು 50 DC E1; ಪ ಫ ವ take the second u-shape E2 / E4); ೈ = ೆ + E7; ೊ = ೆ + E3/E4; the length mark E0 makes ೀ ೇ ೋ. Full table:
+   ಕ: ಾ 50 DD | ಿ 51 | ೀ 51 E0 | ು 50 DC E1 | ೂ 50 DC E3 | ೃ 50 DC EA | ೄ 50 DC EB | ೆ 50 E6 | ೇ 50 E6 E0 | ೈ 50 E6 E7 | ೊ 50 E6 E3 | ೋ 50 E6 E3 E0 | ೌ 50 E8
+   ಖ: ಾ 54 DD | ಿ 55 | ೀ 55 E0 | ು 53 E1 | ೂ 53 E3 | ೃ 53 EA | ೄ 53 EB | ೆ 54 E6 | ೇ 54 E6 E0 | ೈ 54 E6 E7 | ೊ 54 E6 E3 | ೋ 54 E6 E3 E0 | ೌ 54 E8
+   ಗ: ಾ 57 DD | ಿ 58 | ೀ 58 E0 | ು 57 DC E1 | ೂ 57 DC E3 | ೃ 57 DC EA | ೄ 57 DC EB | ೆ 57 E6 | ೇ 57 E6 E0 | ೈ 57 E6 E7 | ೊ 57 E6 E3 | ೋ 57 E6 E3 E0 | ೌ 57 E8
+   ಘ: ಾ 5B DD | ಿ 5C | ೀ 5C E0 | ು 5A E1 | ೂ 5A E3 | ೃ 5A EA | ೄ 5A EB | ೆ 5B E6 | ೇ 5B E6 E0 | ೈ 5B E6 E7 | ೊ 4E E3 | ೋ 4E E3 E0 | ೌ 5B E8
+   ಙ: ಾ 5F EE DD | ಿ 5F DF | ೀ 5F DF E0 | ು 5F E1 | ೂ 5F E3 | ೃ 5F EA | ೄ 5F EB | ೆ 5F EF | ೇ 5F EF E0 | ೈ 5F EF E7 | ೊ 5F EF E3 | ೋ 5F EF E3 E0 | ೌ 5F E5 E8
+   ಚ: ಾ 61 DD | ಿ 62 | ೀ 62 E0 | ು 61 DC E1 | ೂ 61 DC E3 | ೃ 61 DC EA | ೄ 61 DC EB | ೆ 61 E6 | ೇ 61 E6 E0 | ೈ 61 E6 E7 | ೊ 61 E6 E3 | ೋ 61 E6 E3 E0 | ೌ 61 E8
+   ಛ: ಾ 64 DD | ಿ 65 | ೀ 65 E0 | ು 64 DC E1 | ೂ 64 DC E3 | ೃ 64 DC EA | ೄ 64 DC EB | ೆ 64 E6 | ೇ 64 E6 E0 | ೈ 64 E6 E7 | ೊ 64 E6 E3 | ೋ 64 E6 E3 E0 | ೌ 64 E8
+   ಜ: ಾ 68 DD | ಿ 69 | ೀ 69 E0 | ು 67 E1 | ೂ 67 E3 | ೃ 67 EA | ೄ 67 EB | ೆ 68 E6 | ೇ 68 E6 E0 | ೈ 68 E6 E7 | ೊ 68 E6 E3 | ೋ 68 E6 E3 E0 | ೌ 68 E8
+   ಝ: ಾ C3 DC 6B DE | ಿ C4 6B E1 | ೀ C4 6B E1 E0 | ು C3 DC 6B E1 E1 | ೂ C3 DC 6B E1 E3 | ೃ C3 DC 6B E1 EA | ೄ C3 DC 6B E1 EB | ೆ C3 E6 6B E1 | ೇ C3 E6 6B E1 E0 | ೈ C3 E6 6B E1 E7 | ೊ C3 E6 6B E3 | ೋ C3 E6 6B E3 E0 | ೌ C3 DC 6B E5 E8
+   ಞ: ಾ 6D EE DD | ಿ 6D DF | ೀ 6D DF E0 | ು 6D E1 | ೂ 6D E3 | ೃ 6D EA | ೄ 6D EB | ೆ 6D EF | ೇ 6D EF E0 | ೈ 6D EF E7 | ೊ 6D EF E3 | ೋ 6D EF E3 E0 | ೌ 6D E5 E8
+   ಟ: ಾ 70 DD | ಿ 71 | ೀ 71 E0 | ು 6F E1 | ೂ 6F E3 | ೃ 6F EA | ೄ 6F EB | ೆ 70 E6 | ೇ 70 E6 E0 | ೈ 70 E6 E7 | ೊ 70 E6 E3 | ೋ 70 E6 E3 E0 | ೌ 70 E8
+   ಠ: ಾ 73 DD | ಿ 74 | ೀ 74 E0 | ು 73 DC E1 | ೂ 73 DC E3 | ೃ 73 DC EA | ೄ 73 DC EB | ೆ 73 E6 | ೇ 73 E6 E0 | ೈ 73 E6 E7 | ೊ 73 E6 E3 | ೋ 73 E6 E3 E0 | ೌ 73 E8
+   ಡ: ಾ 76 DD | ಿ 77 | ೀ 77 E0 | ು 76 DC E1 | ೂ 76 DC E3 | ೃ 76 DC EA | ೄ 76 DC EB | ೆ 76 E6 | ೇ 76 E6 E0 | ೈ 76 E6 E7 | ೊ 76 E6 E3 | ೋ 76 E6 E3 E0 | ೌ 76 E8
+   ಢ: ಾ 79 DD | ಿ 7B | ೀ 7B E0 | ು 79 DC E1 | ೂ 79 DC E3 | ೃ 79 DC EA | ೄ 79 DC EB | ೆ 79 E6 | ೇ 79 E6 E0 | ೈ 79 E6 E7 | ೊ 79 E6 E3 | ೋ 79 E6 E3 E0 | ೌ 79 E8
+   ಣ: ಾ 4F DD | ಿ 7E | ೀ 7E E0 | ು 7C E1 | ೂ 7C E3 | ೃ 7C EA | ೄ 7C EB | ೆ 4F E6 | ೇ 4F E6 E0 | ೈ 4F E6 E7 | ೊ 4F E6 E3 | ೋ 4F E6 E3 E0 | ೌ 4F E8
+   ತ: ಾ F1 DD | ಿ A3 | ೀ A3 E0 | ು F1 DC E1 | ೂ F1 DC E3 | ೃ F1 DC EA | ೄ F1 DC EB | ೆ F1 E6 | ೇ F1 E6 E0 | ೈ F1 E6 E7 | ೊ F1 E6 E3 | ೋ F1 E6 E3 E0 | ೌ F1 E8
+   ಥ: ಾ A5 DD | ಿ A6 | ೀ A6 E0 | ು A5 DC E1 | ೂ A5 DC E3 | ೃ A5 DC EA | ೄ A5 DC EB | ೆ A5 E6 | ೇ A5 E6 E0 | ೈ A5 E6 E7 | ೊ A5 E6 E3 | ೋ A5 E6 E3 E0 | ೌ A5 E8
+   ದ: ಾ A8 DD | ಿ A9 | ೀ A9 E0 | ು A8 DC E1 | ೂ A8 DC E3 | ೃ A8 DC EA | ೄ A8 DC EB | ೆ A8 E6 | ೇ A8 E6 E0 | ೈ A8 E6 E7 | ೊ A8 E6 E3 | ೋ A8 E6 E3 E0 | ೌ A8 E8
+   ಧ: ಾ AB DD | ಿ 97 | ೀ 97 E0 | ು AB DC E1 | ೂ AB DC E3 | ೃ AB DC EA | ೄ AB DC EB | ೆ AB E6 | ೇ AB E6 E0 | ೈ AB E6 E7 | ೊ AB E6 E3 | ೋ AB E6 E3 E0 | ೌ AB E8
+   ನ: ಾ AE DD | ಿ AF | ೀ AF E0 | ು AE DC E1 | ೂ AE DC E3 | ೃ AE DC EA | ೄ AE DC EB | ೆ AE E6 | ೇ AE E6 E0 | ೈ AE E6 E7 | ೊ AE E6 E3 | ೋ AE E6 E3 E0 | ೌ AE E8
+   ಪ: ಾ B1 DD | ಿ B2 | ೀ B2 E0 | ು B1 DC E2 | ೂ B1 DC E4 | ೃ B1 DC EA | ೄ B1 DC EB | ೆ B1 E6 | ೇ B1 E6 E0 | ೈ B1 E6 E7 | ೊ B1 E6 E4 | ೋ B1 E6 E4 E0 | ೌ B1 E8
+   ಫ: ಾ B4 DD | ಿ B5 | ೀ B5 E0 | ು B4 DC E2 | ೂ B4 DC E4 | ೃ B4 DC EA | ೄ B4 DC EB | ೆ B4 E6 | ೇ B4 E6 E0 | ೈ B4 E6 E7 | ೊ B4 E6 E4 | ೋ B4 E6 E4 E0 | ೌ B4 E8
+   ಬ: ಾ B8 DD | ಿ B9 | ೀ B9 E0 | ು 9F E1 | ೂ 9F E3 | ೃ 9F EA | ೄ 9F EB | ೆ B8 E6 | ೇ B8 E6 E0 | ೈ B8 E6 E7 | ೊ B8 E6 E3 | ೋ B8 E6 E3 E0 | ೌ B8 E8
+   ಭ: ಾ BB DD | ಿ BC | ೀ BC E0 | ು BB DC E1 | ೂ BB DC E3 | ೃ BB DC EA | ೄ BB DC EB | ೆ BB E6 | ೇ BB E6 E0 | ೈ BB E6 E7 | ೊ BB E6 E3 | ೋ BB E6 E3 E0 | ೌ BB E8
+   ಮ: ಾ CA DC DE | ಿ CB E1 | ೀ CB E1 E0 | ು CA DC E1 E1 | ೂ CA DC E1 E3 | ೃ CA DC E1 EA | ೄ CA DC E1 EB | ೆ CA E6 E1 | ೇ CA E6 E1 E0 | ೈ CA E6 E1 E7 | ೊ CA E6 E3 | ೋ CA E6 E3 E0 | ೌ CA DC E5 E8
+   ಯ: ಾ BF DE | ಿ C0 E1 | ೀ C0 E1 E0 | ು BF E1 E1 | ೂ BF E1 E3 | ೃ BF E1 EA | ೄ BF E1 EB | ೆ C1 E1 | ೇ C1 E1 E0 | ೈ C1 E1 E7 | ೊ C1 E3 | ೋ C1 E3 E0 | ೌ BF E5 E8
+   ರ: ಾ C3 DD | ಿ C4 | ೀ C4 E0 | ು C3 DC E1 | ೂ C3 DC E3 | ೃ C3 DC EA | ೄ C3 DC EB | ೆ C3 E6 | ೇ C3 E6 E0 | ೈ C3 E6 E7 | ೊ C3 E6 E3 | ೋ C3 E6 E3 E0 | ೌ C3 E8
+   ಱ: ಾ 94 DD | ಿ 93 DF | ೀ 93 DF E0 | ು 93 E1 | ೂ 93 E3 | ೃ 93 EA | ೄ 93 EB | ೆ 93 EF | ೇ 93 EF E0 | ೈ 93 EF E7 | ೊ 93 EF E3 | ೋ 93 EF E3 E0 | ೌ 94 E8
+   ಲ: ಾ C7 DD | ಿ C8 | ೀ C8 E0 | ು C6 E1 | ೂ C6 E3 | ೃ C6 EA | ೄ C6 EB | ೆ C7 E6 | ೇ C7 E6 E0 | ೈ C7 E6 E7 | ೊ C7 E6 E3 | ೋ C7 E6 E3 E0 | ೌ C7 E8
+   ಳ: ಾ D9 DD | ಿ DA | ೀ DA E0 | ು D9 DC E1 | ೂ D9 DC E3 | ೃ D9 DC EA | ೄ D9 DC EB | ೆ D9 E6 | ೇ D9 E6 E0 | ೈ D9 E6 E7 | ೊ D9 E6 E3 | ೋ D9 E6 E3 E0 | ೌ D9 E8
+   ವ: ಾ CA DD | ಿ CB | ೀ CB E0 | ು CA DC E2 | ೂ CA DC E4 | ೃ CA DC EA | ೄ CA DC EB | ೆ CA E6 | ೇ CA E6 E0 | ೈ CA E6 E7 | ೊ CA E6 E4 | ೋ CA E6 E4 E0 | ೌ CA E8
+   ಶ: ಾ CD DD | ಿ CE | ೀ CE E0 | ು CD DC E1 | ೂ CD DC E3 | ೃ CD DC EA | ೄ CD DC EB | ೆ CD E6 | ೇ CD E6 E0 | ೈ CD E6 E7 | ೊ CD E6 E3 | ೋ CD E6 E3 E0 | ೌ CD E8
+   ಷ: ಾ D0 DD | ಿ D1 | ೀ D1 E0 | ು D0 DC E1 | ೂ D0 DC E3 | ೃ D0 DC EA | ೄ D0 DC EB | ೆ D0 E6 | ೇ D0 E6 E0 | ೈ D0 E6 E7 | ೊ D0 E6 E3 | ೋ D0 E6 E3 E0 | ೌ D0 E8
+   ಸ: ಾ D3 DD | ಿ D4 | ೀ D4 E0 | ು D3 DC E1 | ೂ D3 DC E3 | ೃ D3 DC EA | ೄ D3 DC EB | ೆ D3 E6 | ೇ D3 E6 E0 | ೈ D3 E6 E7 | ೊ D3 E6 E3 | ೋ D3 E6 E3 E0 | ೌ D3 E8
+   ಹ: ಾ D6 DD | ಿ D7 | ೀ D7 E0 | ು D6 DC E1 | ೂ D6 DC E3 | ೃ D6 DC EA | ೄ D6 DC EB | ೆ D6 E6 | ೇ D6 E6 E0 | ೈ D6 E6 E7 | ೊ D6 E6 E3 | ೋ D6 E6 E3 E0 | ೌ D6 E8
+   ೞ: ಾ 92 DD | ಿ 91 DF | ೀ 91 DF E0 | ು 91 E1 | ೂ 91 E3 | ೃ 91 EA | ೄ 91 EB | ೆ 91 EF | ೇ 91 EF E0 | ೈ 91 EF E7 | ೊ 91 EF E3 | ೋ 91 EF E3 E0 | ೌ 92 E8
+  check "C + ು = C + E1 (or E2)": 36/36 truth strings follow it
+  check "C + ೂ = C + E3 (or E4)": 36/36 truth strings follow it
+  check "C + ೃ = C + EA": 36/36 truth strings follow it
+  check "C + ೄ = C + EB": 36/36 truth strings follow it
+  check "C + ೀ = (C + ಿ) + E0": 36/36 truth strings follow it
+  check "C + ೇ = (C + ೆ) + E0": 36/36 truth strings follow it
+  check "C + ೋ = (C + ೊ) + E0": 36/36 truth strings follow it
+  check "C + ೈ = (C + ೆ) + E7": 36/36 truth strings follow it
+
+4. ಂ ಃ after the letter/sign: + ED / 40.
+  check "C(+sign) + ಂ = (C + sign) + ED": 504/504 truth strings follow it
+  check "C(+sign) + ಃ = (C + sign) + 40": 504/504 truth strings follow it
+
+5. Reph (arkavattu) ರ್ + C...: typed AFTER the syllable (code 4B); the 7 composer writes the syllable, then EC, then ಂ ಃ. ರ್ಕ = 50 DC EC, ರ್ಕಾ = 50 DD EC, ರ್ಕಿಂ = 51 EC ED. The other orders are alternatives (alt): reph before the sign (50 DC EC E1 for ರ್ಕು: the arkavattu between the letter and its sign; for ಾ ಿ the sign shape is lost), reph before the letter (EC 50 DC), tail before the reph (50 DD ED EC). ರ + link + C (C3 DC 52) is the non-arkavattu form (Unicode ರ್‍ಕ), kept as alt.
+  check "ರ್ + syllable = syllable + EC (before ಂ ಃ)": 2629/2629 truth strings follow it
+
+6. Conjuncts C1 + ್ + C2 (link code 64): C1 as written alone (with its head DC), then the subjoined form (ottakshara) of C2. Subjoined glyphs (read from ಕ್C2 = 50 DC + sub):
+   ್ಕ 52, ್ಖ 56, ್ಗ 59, ್ಘ 5E, ್ಙ 60, ್ಚ 63, ್ಛ 66, ್ಜ 6A, ್ಝ 6C, ್ಞ 6E, ್ಟ 72, ್ಠ 75, ್ಡ 78, ್ಢ 7A, ್ಣ A1, ್ತ A4, ್ಥ A7, ್ದ AA, ್ಧ 9C, ್ನ B0, ್ಪ B3, ್ಫ 96, ್ಬ BA, ್ಭ BD, ್ಮ BE, ್ಯ C2, ್ರ C5, ್ಱ 95, ್ಲ C9, ್ಳ DB, ್ವ CC, ್ಶ CF, ್ಸ D5, ್ಹ D8
+   ್ೞ: no subjoined form (C + link + ೞ = C alone in 7). C + link + ಕ್ಷ (E1): both composers drop the ಕ್ಷ, so C್ಕ್ಷ is not in the truth.
+  check "C1್C2 = C1 + sub(C2)": 1190/1190 truth strings follow it
+   A sign on a cluster shapes C1 as it would alone and the subjoined form follows; ೃ ೄ ೈ fuse with or follow the subjoined form (ಕ್ಕೃ = 50 DC A2, ಕ್ತೃ = 50 DC F5, ಕ್ಖೃ = 50 DC 56 24 EA; ಕ್ತೈ = 50 E6 F4, ಕ್ಕೈ = 50 E6 52 24 E7):
+  check "C1್C2 + ಾ = (C1 + ಾ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ಿ = (C1 + ಿ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ು = (C1 + ು) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ೂ = (C1 + ೂ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ೆ = (C1 + ೆ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ೊ = (C1 + ೊ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ೌ = (C1 + ೌ) + sub(C2)": 1190/1190 truth strings follow it
+  check "C1್C2 + ೃ = C1 + sub(C2) + 24 EA (unless fused)": 1120/1190 truth strings follow it; exceptions (first 8): ಕ್ಕೃ rule 50 DC 52 24 EA / truth 50 DC A2; ಕ್ತೃ rule 50 DC A4 24 EA / truth 50 DC F5; ಖ್ಕೃ rule 53 52 24 EA / truth 53 A2; ಖ್ತೃ rule 53 A4 24 EA / truth 53 F5; ಗ್ಕೃ rule 57 DC 52 24 EA / truth 57 DC A2; ಗ್ತೃ rule 57 DC A4 24 EA / truth 57 DC F5; ಘ್ಕೃ rule 5A 52 24 EA / truth 5A A2; ಘ್ತೃ rule 5A A4 24 EA / truth 5A F5
+  check "C1್C2 + ೈ = (C1 + ೆ) + sub(C2) + 24 E7 (unless fused)": 1085/1190 truth strings follow it; exceptions (first 8): ಕ್ಚೈ rule 50 E6 63 24 E7 / truth 50 E6 F2; ಕ್ತೈ rule 50 E6 A4 24 E7 / truth 50 E6 F4; ಕ್ರೈ rule 50 E6 C5 24 E7 / truth 50 E6 F9; ಖ್ಚೈ rule 54 E6 63 24 E7 / truth 54 E6 F2; ಖ್ತೈ rule 54 E6 A4 24 E7 / truth 54 E6 F4; ಖ್ರೈ rule 54 E6 C5 24 E7 / truth 54 E6 F9; ಗ್ಚೈ rule 57 E6 63 24 E7 / truth 57 E6 F2; ಗ್ತೈ rule 57 E6 A4 24 E7 / truth 57 E6 F4
+  check "C1್C2 + ಂ = C1್C2 + ED": 1225/1225 truth strings follow it
+  check "ರ್ + C1್C2 = C1್C2 + EC": 1225/1225 truth strings follow it
+   ೃ fused or placed otherwise (71): ಕ್ಕೃ 50 DC A2, ಕ್ತೃ 50 DC F5, ಖ್ಕೃ 53 A2, ಖ್ತೃ 53 F5, ಗ್ಕೃ 57 DC A2, ಗ್ತೃ 57 DC F5, ಘ್ಕೃ 5A A2, ಘ್ತೃ 5A F5, ಙ್ಕೃ 5F A2, ಙ್ತೃ 5F F5, ಚ್ಕೃ 61 DC A2, ಚ್ತೃ 61 DC F5, ಛ್ಕೃ 64 DC A2, ಛ್ತೃ 64 DC F5, ಜ್ಕೃ 67 A2, ಜ್ಞೃ FD 24 EA, ಜ್ತೃ 67 F5, ಝ್ಕೃ C3 DC 6B E1 A2, ಝ್ತೃ C3 DC 6B E1 F5, ಞ್ಕೃ 6D A2, ಞ್ತೃ 6D F5, ಟ್ಕೃ 6F A2, ಟ್ತೃ 6F F5, ಠ್ಕೃ 73 DC A2, ಠ್ತೃ 73 DC F5, ಡ್ಕೃ 76 DC A2, ಡ್ತೃ 76 DC F5, ಢ್ಕೃ 79 DC A2, ಢ್ತೃ 79 DC F5, ಣ್ಕೃ 7C A2, ಣ್ತೃ 7C F5, ತ್ಕೃ F1 DC A2, ತ್ತೃ F1 DC F5, ಥ್ಕೃ A5 DC A2, ಥ್ತೃ A5 DC F5, ದ್ಕೃ A8 DC A2, ದ್ತೃ A8 DC F5, ಧ್ಕೃ AB DC A2, ಧ್ತೃ AB DC F5, ನ್ಕೃ AE DC A2 ...
+   ೀ ೇ ೋ on a cluster need 5 codes (C1 64 C2 + sign + 76): not probed; derived as (C1್C2 + ಿ/ೆ/ೊ) + E0 in kan7-composer-gaps.json, the rule all 114/114 single-letter cases follow.
+
+7. Halant (code 44 = virama + ZWNJ): the head DC (or the letter's own top) becomes the virama glyph 85: ಕ್‌ = 50 85; the bare Unicode virama at a word end (C್) has NO direct composer spelling (the pending link writes no virama): kan7-composer-gaps.json derives it from the halant spelling.
+   (letters without a separate head take a letter-specific top before 85: ಖ್‌ 54 85, ಜ್‌ 68 85, ಮ್‌ CA DC E5 85; full list below)
+   ಕ್‌ 50 85, ಖ್‌ 54 85, ಗ್‌ 57 85, ಘ್‌ 5B 85, ಙ್‌ 5F 85, ಚ್‌ 61 85, ಛ್‌ 64 85, ಜ್‌ 68 85, ಝ್‌ C3 DC 6B E5 85, ಞ್‌ 6D 85, ಟ್‌ 70 85, ಠ್‌ 73 85, ಡ್‌ 76 85, ಢ್‌ 79 85, ಣ್‌ 4F 85, ತ್‌ F1 85, ಥ್‌ A5 85, ದ್‌ A8 85, ಧ್‌ AB 85, ನ್‌ AE 85, ಪ್‌ B1 85, ಫ್‌ B4 85, ಬ್‌ B8 85, ಭ್‌ BB 85, ಮ್‌ CA DC E5 85, ಯ್‌ BF E5 85, ರ್‌ C3 85, ಱ್‌ 94 85, ಲ್‌ C7 85, ಳ್‌ D9 85, ವ್‌ CA 85, ಶ್‌ CD 85, ಷ್‌ D0 85, ಸ್‌ D3 85, ಹ್‌ D6 85, ೞ್‌ 92 85
+  check "C್‌ = C (without the head DC) + 85": 24/36 truth strings follow it; exceptions (first 8): ಖ್‌ rule 53 85 / truth 54 85; ಘ್‌ rule 5A 85 / truth 5B 85; ಜ್‌ rule 67 85 / truth 68 85; ಝ್‌ rule C3 DC 6B E1 85 / truth C3 DC 6B E5 85; ಟ್‌ rule 6F 85 / truth 70 85; ಣ್‌ rule 7C 85 / truth 4F 85; ಬ್‌ rule 9F 85 / truth B8 85; ಮ್‌ rule CA DC E1 85 / truth CA DC E5 85
+
+8. Three-consonant clusters C1್C2್C3 (5 codes, not probed whole): the pieces "link C2 link C3" were probed (4 codes) and give the subjoined pair, e.g. ್ತ್ರ = F7 (one glyph), ್ತ್ಯ = F6. C1 + those bytes is the derived spelling (not truth):
+   ್ತ್ತ A4 24 A4, ್ತ್ರ F7, ್ತ್ಯ F6, ್ತ್ವ A4 24 CC, ್ತ್ಟ A4 24 72, ್ತ್ಕ A4 24 52, ್ತ್ಷ A4 24 D2, ್ತ್ಪ A4 24 B3, ್ತ್ಮ A4 24 BE, ್ತ್ನ A4 24 B0, ್ತ್ಣ A4 24 A1, ್ತ್ದ A4 24 AA, ್ತ್ಧ A4 24 9C, ್ತ್ಥ A4 24 A7, ್ತ್ಸ A4 24 D5, ್ತ್ಚ A4 24 63, ್ತ್ಞ A4 24 6E, ್ತ್ಲ A4 24 C9, ್ರ್ತ C5 24 A4, ್ರ್ರ C5 86, ್ರ್ಯ C5 24 C2, ್ರ್ವ C5 24 CC, ್ರ್ಟ C5 24 72, ್ರ್ಕ C5 24 52, ್ರ್ಷ C5 24 D2, ್ರ್ಪ C5 24 B3, ್ರ್ಮ C5 24 BE, ್ರ್ನ C5 24 B0, ್ರ್ಣ C5 24 A1, ್ರ್ದ C5 24 AA, ್ರ್ಧ C5 24 9C, ್ರ್ಥ C5 24 A7, ್ರ್ಸ C5 24 D5, ್ರ್ಚ C5 24 63, ್ರ್ಞ C5 24 6E, ್ರ್ಲ C5 24 C9, ್ಯ್ತ C2 24 A4, ್ಯ್ರ C2 86, ್ಯ್ಯ C2 24 C2, ್ಯ್ವ C2 24 CC, ್ಯ್ಟ C2 24 72, ್ಯ್ಕ C2 24 52, ್ಯ್ಷ C2 24 D2, ್ಯ್ಪ C2 24 B3, ್ಯ್ಮ C2 24 BE, ್ಯ್ನ C2 24 B0, ್ಯ್ಣ C2 24 A1, ್ಯ್ದ C2 24 AA, ್ಯ್ಧ C2 24 9C, ್ಯ್ಥ C2 24 A7, ್ಯ್ಸ C2 24 D5, ್ಯ್ಚ C2 24 63, ್ಯ್ಞ C2 24 6E, ್ಯ್ಲ C2 24 C9, ್ವ್ತ CC 24 A4, ್ವ್ರ CC 86, ್ವ್ಯ CC 24 C2, ್ವ್ವ CC 24 CC, ್ವ್ಟ CC 24 72, ್ವ್ಕ CC 24 52, ್ವ್ಷ CC 24 D2, ್ವ್ಪ CC 24 B3, ್ವ್ಮ CC 24 BE, ್ವ್ನ CC 24 B0, ್ವ್ಣ CC 24 A1, ್ವ್ದ CC 24 AA, ್ವ್ಧ CC 24 9C, ್ವ್ಥ CC 24 A7, ್ವ್ಸ CC 24 D5, ್ವ್ಚ CC 24 63, ್ವ್ಞ CC 24 6E, ್ವ್ಲ CC 24 C9, ್ಟ್ತ 72 24 A4, ್ಟ್ರ F3, ್ಟ್ಯ 72 24 C2, ್ಟ್ವ 72 24 CC, ್ಟ್ಟ 72 24 72, ್ಟ್ಕ 72 24 52, ್ಟ್ಷ 72 24 D2, ್ಟ್ಪ 72 24 B3 ... (324)
+
+9. Syllables join by plain concatenation (two-syllable probes, P set: ಕಿ/ಕಾ/ಕೆ/ಕು/ಕಂ/ಕ್ಕ/ರ್ಕ/ರ್ಕಾ/ಕ್‌/ಕೀ/ಕೈ/ಕೊ + C, Cಾ + ಕ, ರ್C + ಕ):
+  check "syllable + letter = concatenation": 432/432
+
+10. Nukta (D3): C + 82 (ಕ಼ = 50 DC 82); before a sign the 7 composer keeps the head and adds the sign (ಕ಼ಾ = 50 DC 82 DD, ಕ಼ೆ = 50 E6 82); before ಿ (all letters), ೊ (all), and ಾ/ೌ on letters without a separate head (ಖ ಘ ಜ ಮ ...) it garbles (the letter twice, or the nukta lost): quirk, not truth.
+
+Rule checks overall: 18124/18311.

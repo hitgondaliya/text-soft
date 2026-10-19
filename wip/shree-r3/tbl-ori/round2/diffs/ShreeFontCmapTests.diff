@@ -1,0 +1,11 @@
+--- ../main-base/tests/FontSoftware.Tests/ShreeFontCmapTests.cs	2026-10-18 20:45:15.086389700 +0530
++++ ../../repo/tests/FontSoftware.Tests/ShreeFontCmapTests.cs	2026-10-18 21:35:02.848390800 +0530
+@@ -27,6 +27,8 @@
+         { "mangal", "shree-dev7", "^(SHREE-DEV7-|Shree-Dev7-)", "shree-dev7-truth.json" },
+         { "mangal", "shree-dev456", "^SHREE-DEV-", "shree-dev7-truth.json" },
+         { "mangal", "shree-san7", "^SHREE-SAN7-", "shree-san7-truth.json" },
++        { "kalinga", "shree-ori7", "^SHREE-ORI7-", "shree-ori7-truth.json" },
++        { "kalinga", "shree-ori7", "^SHREE-ORI-", "shree-ori7-truth.json" },
+     };
+ 
+     [Theory]

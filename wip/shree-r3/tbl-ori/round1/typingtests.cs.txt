@@ -1,0 +1,159 @@
+
+/// <summary>
+/// Typing in a Shree-Lipi Odia font (P6): the real TypingEngine on the Odia keyboards, in a SHREE-ORI7 profile, puts down
+/// the bytes the converter writes for the word - Shree's own spelling - at the end and after every key; and the keys the
+/// per-key audit fixed (r3\tbl-ori\round1\patch-layouts.js, patch-eng.js) type what Shree's own keyboards type.
+/// </summary>
+[Collection("typing engine")]
+public class ShreeOdiaTypingTests : IDisposable
+{
+    private const int VkShift = 0x10, VkControl = 0x11, VkSpace = 0x20;
+    private const char CtrlSpace = (char)0xD8;   // EscapeLayer.Mark, as the charts write Ctrl+Space
+    private readonly AssetBundle _config;
+    private readonly FontConverter _conv;
+    private readonly HashSet<int> _down = new();
+
+    public ShreeOdiaTypingTests()
+    {
+        TypingEngine.KeyDownProbe = vk => _down.Contains(vk);
+        _config = new ConfigLoader(Path.Combine(AppContext.BaseDirectory, "config")).Load();
+        _conv = _config.CreateConverterToLegacy("shree-ori7")!;
+    }
+
+    public void Dispose() => TypingEngine.KeyDownProbe = vk => false;
+
+    private static int Vk(char c, out bool shift)
+    {
+        shift = char.IsUpper(c) || "~!@#$%^&*()_+{}|:\"<>?".IndexOf(c) >= 0;
+        if (char.IsAsciiLetter(c)) return char.ToUpperInvariant(c);
+        if (char.IsAsciiDigit(c)) return c;
+        int d = ")!@#$%^&*(".IndexOf(c);
+        if (d >= 0) return '0' + d;
+        return c switch
+        {
+            ';' or ':' => 186, '=' or '+' => 187, ',' or '<' => 188, '-' or '_' => 189, '.' or '>' => 190, '/' or '?' => 191,
+            '`' or '~' => 192, '[' or '{' => 219, '|' => 220, ']' or '}' => 221, '\'' or '"' => 222, ' ' => VkSpace, _ => 0,
+        };
+    }
+
+    /// <summary>
+    /// What the document holds after each key, typed on a layout in a Shree font (<paramref name="legacy"/>) or in Unicode:
+    /// Ø is Ctrl+Space; a key the engine does not take is typed by the application itself.
+    /// </summary>
+    private List<string> Type(string layoutId, string keys, bool legacy)
+    {
+        var odia = _config.Languages.First(l => l.Id == "or");
+        var injector = new RecordingInjector();
+        using var hook = new LowLevelKeyboardHook();
+        using var engine = new TypingEngine(hook, injector);
+        engine.SetProfile(_config.GetLayout(odia.Layouts.First(l => l.Id == layoutId)), odia.Name, "Unicode");
+        engine.SetTransliterator(_config.GetTransliterator(odia));
+        engine.SetLegacyConverter(legacy ? _conv : null, null);
+        engine.SetEnabled(true);
+        var field = typeof(LowLevelKeyboardHook).GetField("KeyEvent", BindingFlags.Instance | BindingFlags.NonPublic)!;
+        var handler = (EventHandler<HookKeyEventArgs>?)field.GetValue(hook);
+        var states = new List<string>();
+        foreach (char c in keys)
+        {
+            if (c == CtrlSpace)
+            {
+                _down.Add(VkControl);
+                handler!(hook, new HookKeyEventArgs { VirtualKey = VkSpace, IsKeyDown = true });
+                handler!(hook, new HookKeyEventArgs { VirtualKey = VkSpace, IsKeyDown = false });
+                _down.Remove(VkControl);
+                continue;
+            }
+            int vk = Vk(c, out bool shift);
+            if (shift) _down.Add(VkShift);
+            var down = new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = true };
+            handler!(hook, down);
+            handler!(hook, new HookKeyEventArgs { VirtualKey = vk, IsKeyDown = false });
+            _down.Remove(VkShift);
+            if (!down.Handled) injector.SendText(c.ToString());
+            states.Add(injector.Text);
+        }
+        return states;
+    }
+
+    // Words typed key by key (plans the audit found on the real engine): the bytes are Shree's own spelling of the word
+    // (its syllables joined, `oritruth common`), and after every key the document holds the converter's bytes for the
+    // Unicode the same keys typed so far.
+    [Theory]
+    [InlineData("odia-inscript", "BgbvsMdVj", "ଭୁବନେଶ୍ୱର", "B5 FF EB AF FF 7B 5B FF C9 B4 C0 FF")]
+    [InlineData("odia-inscript", "mUdirl", "ସଙ୍ଗୀତ", "D3 E8 FF EA 86 FF")]                  // U d i: was the chart's ସଙ୍ର
+    [InlineData("odia-inscript", "k$c", "କର୍ମ", "4C FF FE F6")]
+    [InlineData("ori-typewrit", "cxedekF", "ଜଗନ୍ନାଥ", "66 53 9F E6 24")]                  // d: the link key (was a Latin d)
+    [InlineData("ori-typewrit", "lsk", "କୋ", "7B 4C FF E6")]
+    [InlineData("ori-typewrit", "s'a", "କର୍ମ", "4C FF FE F6")]
+    [InlineData("ori-doe", "cvd^r", "ମନ୍ତ୍ରୀ", "FE A6 EA")]
+    [InlineData("ori-newroma", "lok", "ଲୋକ", "7B E0 FF E6 4C FF")]                          // o after a letter: its sign (was ଲଓକ)
+    [InlineData("ori-newroma", "jgn=nat=h", "ଜଗନ୍ନାଥ", "66 53 9F E6 24")]                  // =: the link key (was raw 3D, ଣ୍ଠ)
+    [InlineData("ori-roma", "mnftRI", "ମନ୍ତ୍ରୀ", "FE A6 EA")]                                // f: the link key
+    [InlineData("ori-eng", "ke", "କେ", "7B 4C FF")]                                          // Eng: the e-sign (was କ)
+    [InlineData("ori-eng", "kj", "କ୍ଜ", "4C FF 6B")]
+    [InlineData("ori-eng", "vidyaalaya", "ବିଦ୍ୟାଲୟ", "AF FF E7 92 FF BF E6 E0 FF DF")]
+    public void TypingInAShreeFontWritesShreesBytes(string layoutId, string keys, string word, string bytes)
+    {
+        var uni = Type(layoutId, keys, false);
+        var leg = Type(layoutId, keys, true);
+        Assert.Equal(word.Normalize(NormalizationForm.FormC), uni[^1].Normalize(NormalizationForm.FormC));
+        Assert.Equal(bytes, ShreeOdiaTruthTests.Hex(leg[^1]));
+        Assert.Equal(bytes, ShreeOdiaTruthTests.Hex(_conv.ConvertText(word)));
+        for (int i = 0; i < uni.Count; i++)
+            Assert.True(_conv.ConvertText(uni[i]) == leg[i], $"after '{keys[..(i + 1)]}': typed {ShreeOdiaTruthTests.Hex(leg[i])}, the converter writes {ShreeOdiaTruthTests.Hex(_conv.ConvertText(uni[i]))}");
+    }
+
+    // The keys the audit gave their Shree code: DOE Z is the half key (virama + ZWJ: the visible virama, then the letter in
+    // full), Crtronic Ctrl+Space l is the ba-phala (it typed ୀ, the l key's own sign).
+    [Fact]
+    public void HalfKeyAndBaPhalaKey()
+    {
+        Assert.Equal("4C FF FA 86 FF", ShreeOdiaTruthTests.Hex(Type("ori-doe", "kZl", true)[^1]));
+        Assert.Equal("କ୍‍ତ", Type("ori-doe", "kZl", false)[^1]);
+        Assert.Equal("4C FF B4", ShreeOdiaTruthTests.Hex(Type("ori-crtronic", "w" + CtrlSpace + "l", true)[^1]));
+        Assert.Equal("କ୍ବ", Type("ori-crtronic", "w" + CtrlSpace + "l", false)[^1]);
+    }
+
+    // A key Shree's own keyboard types nothing for, or only a glyph with no Unicode (the hook, code 51), types nothing -
+    // never the raw key, whose code draws an Odia glyph in these fonts ('=' 3D ଣ୍ଠ, ';' 3B ନ୍ତ, '`' 60 ଚ), nor the unshifted
+    // key's letter, nor a Latin letter from the chart.
+    [Theory]
+    [InlineData("ori-doe", "B")]
+    [InlineData("ori-doe", "=")]
+    [InlineData("ori-doe", "]")]
+    [InlineData("ori-typewrit", "Q")]
+    [InlineData("ori-typewrit", "+")]
+    [InlineData("ori-typewrit", ";")]
+    [InlineData("ori-newroma", ";")]
+    [InlineData("ori-newroma", "#")]
+    [InlineData("ori-crtronic", "M")]
+    [InlineData("ori-phonetic", "K")]
+    [InlineData("ori-roma", "]")]
+    [InlineData("odia-inscript", "`")]
+    public void AKeyShreeLeavesEmptyTypesNothing(string layoutId, string key)
+    {
+        Assert.Equal("", Type(layoutId, key, true)[^1]);
+        Assert.Equal("", Type(layoutId, key, false)[^1]);
+    }
+
+    // InScript's Ctrl+Space q and w are % and ‘ (INSCRIPT.ORI codes 25 22), not the chart's repeat of the normal layer.
+    [Fact]
+    public void InScriptCtrlSpaceLayer()
+    {
+        Assert.Equal("25", ShreeOdiaTruthTests.Hex(Type("odia-inscript", CtrlSpace + "q", true)[^1]));
+        Assert.Equal("‘", Type("odia-inscript", CtrlSpace + "w", false)[^1]);
+    }
+
+    // The ra + virama of a reph key struck before its letter, while it waits: a table that knows the waiting mark main's
+    // engine puts after such a word writes the reph alone, F6, as Shree shows it; the word that ends there is ra + the
+    // visible virama.
+    [Fact]
+    public void AWaitingRephIsTheRephAlone()
+    {
+        string waiting = ((char)0xFDEF).ToString();
+        Assert.Equal("F6", ShreeOdiaTruthTests.Hex(_conv.ConvertText("ର୍" + waiting)));
+        Assert.Equal("C0 FF FA", ShreeOdiaTruthTests.Hex(_conv.ConvertText("ର୍")));
+        Assert.Equal("4C FF FA", ShreeOdiaTruthTests.Hex(_conv.ConvertText("କ୍" + waiting)));
+        Assert.Equal("4C FF 75 26 FA", ShreeOdiaTruthTests.Hex(_conv.ConvertText("କ୍ଟ୍" + waiting)));
+    }
+}

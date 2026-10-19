@@ -1,0 +1,25 @@
+vowels "e": ["ଏ",""] -> ["ଏ","େ"]
+specials "ke": "କ" -> removed
+vowels "Aa": ["ଆ",""] -> ["ଆ","ା"]
+specials "j": "ଜ" -> removed
+consonants "j": undefined -> "ଜ"
+consonants "v": undefined -> "ବ"
+consonants "J": undefined -> "ଯ"
+consonants "y": undefined -> "ୟ"
+consonants "X": undefined -> "ଢ଼"
+consonants "V": "ବ" -> "ୱ"
+vowels "E": undefined -> ["ଏ","େ"]
+vowels "I": undefined -> ["ଇ","ି"]
+vowels "O": undefined -> ["ଓ","ୋ"]
+vowels "U": undefined -> ["ଉ","ୁ"]
+specials "B": undefined -> "୰"
+specials "Y": undefined -> "୍ୟ"
+specials "Q": undefined -> "୍‍"
+specials "F": undefined -> "଼"
+specials "R": undefined -> "ୃ"
+specials "C": undefined -> ""
+specials "K": undefined -> ""
+specials "P": undefined -> ""
+specials "ya": "ୟ" -> removed
+specials "Xa": "ଢ଼" -> removed
+24 changes

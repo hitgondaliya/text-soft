@@ -1,0 +1,34 @@
+Test run for C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\tests\FontSoftware.Tests\bin\Release\net8.0-windows\FontSoftware.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:01.71]     FontSoftware.Tests.ShreeFontCmapTests.TheFontsMapNoCodeTheTablesDoNotKnow(unicodeFont: "gautami", encoding: "shree-tel7w", family: "^Shree-Tel7-00[12]$", fixture: "shree-tel7-truth.json") [FAIL]
+  Failed FontSoftware.Tests.ShreeFontCmapTests.TheFontsMapNoCodeTheTablesDoNotKnow(unicodeFont: "gautami", encoding: "shree-tel7w", family: "^Shree-Tel7-00[12]$", fixture: "shree-tel7-truth.json") [1 ms]
+  Error Message:
+   shree-tel7w: 2:
+WTEL7001.TTF (Shree-Tel7-001) maps U+0090
+WTEL7002.TTF (Shree-Tel7-002) maps U+0090
+  Stack Trace:
+     at FontSoftware.Tests.ShreeFontCmapTests.TheFontsMapNoCodeTheTablesDoNotKnow(String unicodeFont, String encoding, String family, String fixture) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\tests\FontSoftware.Tests\ShreeFontCmapTests.cs:line 68
+   at InvokeStub_ShreeFontCmapTests.TheFontsMapNoCodeTheTablesDoNotKnow(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+[xUnit.net 00:00:26.73]     FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(id: "shree-tel7") [FAIL]
+[xUnit.net 00:00:26.86]     FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(id: "shree-tel7w") [FAIL]
+  Failed FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(id: "shree-tel7") [147 ms]
+  Error Message:
+   shree-tel7: 2 of 33340 wrong:
+84 E6 FC 9B 97: want క్ష్ఝఁ [0C15 0C4D 0C37 0C4D 0C1D 0C01], got క్షఁ [0C15 0C4D 0C37 0C01] (written back 84 E6 FC 97)
+84 E6 FC 9B 5D: want క్ష్ఝః [0C15 0C4D 0C37 0C4D 0C1D 0C03], got క్ష్ఙ [0C15 0C4D 0C37 0C4D 0C19] (written back 84 E6 FC 9B 94)
+  Stack Trace:
+     at FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(String id) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\tests\FontSoftware.Tests\ShreeTeluguTruthTests.cs:line 141
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+  Failed FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(id: "shree-tel7w") [129 ms]
+  Error Message:
+   shree-tel7w: 2 of 33340 wrong:
+84 E6 FC 9B 97: want క్ష్ఝఁ [0C15 0C4D 0C37 0C4D 0C1D 0C01], got క్షఁ [0C15 0C4D 0C37 0C01] (written back 84 E6 FC 97)
+84 E6 FC 9B 5D: want క్ష్ఝః [0C15 0C4D 0C37 0C4D 0C1D 0C03], got క్ష్ఙ [0C15 0C4D 0C37 0C4D 0C19] (written back 84 E6 FC 9B 94)
+  Stack Trace:
+     at FontSoftware.Tests.ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(String id) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\tests\FontSoftware.Tests\ShreeTeluguTruthTests.cs:line 141
+   at InvokeStub_ShreeTeluguTruthTests.EveryComposerSpellingReadsBack(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+Failed!  - Failed:     3, Passed:   145, Skipped:     0, Total:   148, Duration: 34 s - FontSoftware.Tests.dll (net8.0)

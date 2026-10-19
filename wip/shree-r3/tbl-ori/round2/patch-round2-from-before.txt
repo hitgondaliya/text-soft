@@ -1,0 +1,230 @@
+ori-phonetic	'a'	base vk 65	"ା" -> "ଅ"	P1: PHONETIC.ORI a = ଅ (code 6B); after a consonant the inherent a
+ori-phonetic	'h'	base vk 72	"ହ" -> "ହ୍"	P2: PHONETIC.ORI h = ହ୍ (code 6F), the virama form like every consonant key
+ori-phonetic	Ctrl+Space 't'	sequence	(none) -> "ତ୍"	P4: PHONETIC.ORI Ctrl+Space t = ତ୍ (code 66, 86 FF FA)
+ori-phonetic	run 'aa'	added	(none) -> "ଆ"	P5
+ori-phonetic	run 'Da'	removed	"ଡ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'La'	removed	"ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Na'	removed	"ଣ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Sa'	removed	"ଷ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Ta'	removed	"ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Va'	removed	"ୱ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Xa'	removed	"ଢ଼": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ba'	removed	"ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ca'	removed	"ଚ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'da'	removed	"ଦ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'fa'	removed	"ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ga'	removed	"ଗ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ja'	removed	"ଜ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'la'	removed	"ଲ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ma'	removed	"ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'na'	removed	"ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'pa'	removed	"ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ra'	removed	"ର": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sa'	removed	"ସ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ta'	removed	"ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'xa'	removed	"କ୍ଷ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ya'	removed	"ୟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'za'	removed	"ଝ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'DDa'	removed	"ଡ୍ଡ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'DTa'	removed	"ଡ୍ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Dh'	added	(none) -> "ଢ୍": 'Dha' = ଢ, so 'Dh' is its virama form (its keys alone type ଡ୍ହ୍)	P3
+ori-phonetic	run 'Dha'	removed	"ଢ": 'Dh' + the inherent a	P3
+ori-phonetic	run 'LLa'	removed	"ଳ୍ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Lfa'	removed	"ଳ୍ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Lga'	removed	"ଳ୍ଗ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Lka'	removed	"ଳ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Lpa'	removed	"ଳ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'NDa'	removed	"ଣ୍ଡ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'NNa'	removed	"ଣ୍ଣ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'NTa'	removed	"ଣ୍ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Ps'	added	(none) -> "ପ୍ସ୍": 'Psa' = ପ୍ସ, so 'Ps' is its virama form (its keys alone type ସ୍)	P3
+ori-phonetic	run 'Psa'	removed	"ପ୍ସ": 'Ps' + the inherent a	P3
+ori-phonetic	run 'SNa'	removed	"ଷ୍ଣ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'STa'	removed	"ଷ୍ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Sfa'	removed	"ଷ୍ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Ska'	removed	"ଷ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Spa'	removed	"ଷ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'TTa'	removed	"ଟ୍ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Th'	added	(none) -> "ଠ୍": 'Tha' = ଠ, so 'Th' is its virama form (its keys alone type ଟ୍ହ୍)	P3
+ori-phonetic	run 'Tha'	removed	"ଠ": 'Th' + the inherent a	P3
+ori-phonetic	run 'bba'	removed	"ବ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'bda'	removed	"ବ୍ଦ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'bh'	added	(none) -> "ଭ୍": 'bha' = ଭ, so 'bh' is its virama form (its keys alone type ବ୍ହ୍)	P3
+ori-phonetic	run 'bha'	removed	"ଭ": 'bh' + the inherent a	P3
+ori-phonetic	run 'bja'	removed	"ବ୍ଜ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'cca'	removed	"ଚ୍ଚ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ch'	added	(none) -> "ଛ୍": 'cha' = ଛ, so 'ch' is its virama form (its keys alone type ଚ୍ହ୍)	P3
+ori-phonetic	run 'cha'	removed	"ଛ": 'ch' + the inherent a	P3
+ori-phonetic	run 'dba'	removed	"ଦ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dga'	removed	"ଦ୍ଗ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dh'	added	(none) -> "ଧ୍": 'dha' = ଧ, so 'dh' is its virama form (its keys alone type ଦ୍ହ୍)	P3
+ori-phonetic	run 'dha'	removed	"ଧ": 'dh' + the inherent a	P3
+ori-phonetic	run 'dma'	removed	"ଦ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'gLa'	removed	"ଗ୍ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'gda'	removed	"ଗ୍ଦ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'gh'	added	(none) -> "ଘ୍": 'gha' = ଘ, so 'gh' is its virama form (its keys alone type ଗ୍ହ୍)	P3
+ori-phonetic	run 'gha'	removed	"ଘ": 'gh' + the inherent a	P3
+ori-phonetic	run 'gna'	removed	"ଗ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'hma'	removed	"ହ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'hna'	removed	"ହ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'jba'	removed	"ଜ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'jja'	removed	"ଜ୍ଜ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'jza'	removed	"ଜ୍ଝ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'kLa'	removed	"କ୍ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'kba'	removed	"କ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'kh'	added	(none) -> "ଖ୍": 'kha' = ଖ, so 'kh' is its virama form (its keys alone type କ୍ହ୍)	P3
+ori-phonetic	run 'kha'	removed	"ଖ": 'kh' + the inherent a	P3
+ori-phonetic	run 'kka'	removed	"କ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ksa'	removed	"କ୍ସ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'kta'	removed	"କ୍ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'lga'	removed	"ଲ୍ଗ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'lka'	removed	"ଲ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'lla'	removed	"ଲ୍ଲ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'mba'	removed	"ମ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'mfa'	removed	"ମ୍ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'mma'	removed	"ମ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'mpa'	removed	"ମ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'nda'	removed	"ନ୍ଦ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'nna'	removed	"ନ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'nta'	removed	"ନ୍ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'pLa'	removed	"ପ୍ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ppa'	removed	"ପ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'pta'	removed	"ପ୍ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sba'	removed	"ସ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sfa'	removed	"ସ୍ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sh'	added	(none) -> "ଶ୍": 'sha' = ଶ, so 'sh' is its virama form (its keys alone type ସ୍ହ୍)	P3
+ori-phonetic	run 'sha'	removed	"ଶ": 'sh' + the inherent a	P3
+ori-phonetic	run 'ska'	removed	"ସ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sma'	removed	"ସ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sna'	removed	"ସ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'spa'	removed	"ସ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sta'	removed	"ସ୍ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'tba'	removed	"ତ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'th'	added	(none) -> "ଥ୍": 'tha' = ଥ, so 'th' is its virama form (its keys alone type ତ୍ହ୍)	P3
+ori-phonetic	run 'tha'	removed	"ଥ": 'th' + the inherent a	P3
+ori-phonetic	run 'tka'	removed	"ତ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'tma'	removed	"ତ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'tna'	removed	"ତ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'tta'	removed	"ତ୍ତ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'xNa'	removed	"କ୍ଷ୍ଣ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'xma'	removed	"କ୍ଷ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Lbha'	removed	"ଳ୍ଭ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'NDha'	removed	"ଣ୍ଢ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'NTha'	removed	"ଣ୍ଠ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'STha'	removed	"ଷ୍ଠ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'bdha'	removed	"ବ୍ଧ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ccha'	removed	"ଚ୍ଛ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dbha'	removed	"ଦ୍ଭ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ddh'	added	(none) -> "ଦ୍ଧ୍": 'ddha' = ଦ୍ଧ, so 'ddh' is its virama form (its keys alone type ଦ୍ଦ୍ହ୍)	P3
+ori-phonetic	run 'ddha'	removed	"ଦ୍ଧ": 'ddh' + the inherent a	P3
+ori-phonetic	run 'dgha'	removed	"ଦ୍ଘ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dhba'	removed	"ଧ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dhya'	removed	"ଧ୍ୟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'gdha'	removed	"ଗ୍ଧ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ghna'	removed	"ଘ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'jjba'	removed	"ଜ୍ଜ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'kgha'	removed	"କ୍ଘ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khDa'	removed	"ଖ୍ଡ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khLa'	removed	"ଖ୍ଳ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khNa'	removed	"ଖ୍ଣ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khTa'	removed	"ଖ୍ଟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khba'	removed	"ଖ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khfa'	removed	"ଖ୍ଫ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khga'	removed	"ଖ୍ଗ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khja'	removed	"ଖ୍ଜ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khka'	removed	"ଖ୍କ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khla'	removed	"ଖ୍ଲ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khma'	removed	"ଖ୍ମ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khna'	removed	"ଖ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khpa'	removed	"ଖ୍ପ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khsa'	removed	"ଖ୍ସ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khza'	removed	"ଖ୍ଝ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'mbha'	removed	"ମ୍ଭ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ndba'	removed	"ନ୍ଦ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ndh'	added	(none) -> "ନ୍ଧ୍": 'ndha' = ନ୍ଧ, so 'ndh' is its virama form (its keys alone type ନ୍ଦ୍ହ୍)	P3
+ori-phonetic	run 'ndha'	removed	"ନ୍ଧ": 'ndh' + the inherent a	P3
+ori-phonetic	run 'nth'	added	(none) -> "ନ୍ଥ୍": 'ntha' = ନ୍ଥ, so 'nth' is its virama form (its keys alone type ନ୍ତ୍ହ୍)	P3
+ori-phonetic	run 'ntha'	removed	"ନ୍ଥ": 'nth' + the inherent a	P3
+ori-phonetic	run 'ntra'	removed	"ନ୍ତ୍ର": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'shba'	removed	"ଶ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'shca'	removed	"ଶ୍ଚ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'shna'	removed	"ଶ୍ନ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'skha'	removed	"ସ୍ଖ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'sth'	added	(none) -> "ସ୍ଥ୍": 'stha' = ସ୍ଥ, so 'sth' is its virama form (its keys alone type ସ୍ତ୍ହ୍)	P3
+ori-phonetic	run 'stha'	removed	"ସ୍ଥ": 'sth' + the inherent a	P3
+ori-phonetic	run 'stra'	removed	"ସ୍ତ୍ର": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'tmya'	removed	"ତ୍ମ୍ୟ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ttba'	removed	"ତ୍ତ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ttha'	removed	"ତ୍ଥ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ddhba'	removed	"ଦ୍ଧ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'dhdha'	removed	"ଧ୍ଧ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khTha'	removed	"ଖ୍ଠ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khbha'	removed	"ଖ୍ଭ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khdha'	removed	"ଖ୍ଧ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khkha'	removed	"ଖ୍ଖ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'khtha'	removed	"ଖ୍ଥ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'ndhba'	removed	"ନ୍ଧ୍ବ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'shcha'	removed	"ଶ୍ଛ": its keys type it by themselves (the vowel join)	P3
+ori-phonetic	run 'Ødaa'	added	(none) -> "ଡ଼ା" (its keys typed "ଡ଼ଅ")	P6
+ori-phonetic	run 'Ødai'	added	(none) -> "ଡ଼ୈ" (its keys typed "ଡ଼ଇ")	P6
+ori-phonetic	run 'Ødau'	added	(none) -> "ଡ଼ୌ" (its keys typed "ଡ଼ଉ")	P6
+ori-phonetic	run 'Ømaa'	added	(none) -> "ଞା" (its keys typed "ଞଅ")	P6
+ori-phonetic	run 'Ømai'	added	(none) -> "ଞୈ" (its keys typed "ଞଇ")	P6
+ori-phonetic	run 'Ømau'	added	(none) -> "ଞୌ" (its keys typed "ଞଉ")	P6
+ori-phonetic	run 'Ønaa'	added	(none) -> "ଙା" (its keys typed "ଙଅ")	P6
+ori-phonetic	run 'Ønai'	added	(none) -> "ଙୈ" (its keys typed "ଙଇ")	P6
+ori-phonetic	run 'Ønau'	added	(none) -> "ଙୌ" (its keys typed "ଙଉ")	P6
+ori-phonetic	run 'Øyaa'	added	(none) -> "ଯା" (its keys typed "ଯଅ")	P6
+ori-phonetic	run 'Øyai'	added	(none) -> "ଯୈ" (its keys typed "ଯଇ")	P6
+ori-phonetic	run 'Øyau'	added	(none) -> "ଯୌ" (its keys typed "ଯଉ")	P6
+ori-phonetic	run 'jØm'	added	(none) -> "ଜ୍ଞ୍": the virama form of 'jØma' = ଜ୍ଞ	P6
+ori-phonetic	run 'jØmaa'	added	(none) -> "ଜ୍ଞା" (its keys typed "ଜ୍ଞଞା")	P6
+ori-phonetic	run 'jØmai'	added	(none) -> "ଜ୍ଞୈ" (its keys typed "ଜ୍ଞଞୈ")	P6
+ori-phonetic	run 'jØmau'	added	(none) -> "ଜ୍ଞୌ" (its keys typed "ଜ୍ଞଞୌ")	P6
+ori-phonetic	run 'Ømcaa'	added	(none) -> "ଞ୍ଚା" (its keys typed "ଞ୍ଚଅ")	P6
+ori-phonetic	run 'Ømcai'	added	(none) -> "ଞ୍ଚୈ" (its keys typed "ଞ୍ଚଇ")	P6
+ori-phonetic	run 'Ømcau'	added	(none) -> "ଞ୍ଚୌ" (its keys typed "ଞ୍ଚଉ")	P6
+ori-phonetic	run 'Ømjaa'	added	(none) -> "ଞ୍ଜା" (its keys typed "ଞ୍ଜଅ")	P6
+ori-phonetic	run 'Ømjai'	added	(none) -> "ଞ୍ଜୈ" (its keys typed "ଞ୍ଜଇ")	P6
+ori-phonetic	run 'Ømjau'	added	(none) -> "ଞ୍ଜୌ" (its keys typed "ଞ୍ଜଉ")	P6
+ori-phonetic	run 'Ømzaa'	added	(none) -> "ଞ୍ଝା" (its keys typed "ଞ୍ଝଅ")	P6
+ori-phonetic	run 'Ømzai'	added	(none) -> "ଞ୍ଝୈ" (its keys typed "ଞ୍ଝଇ")	P6
+ori-phonetic	run 'Ømzau'	added	(none) -> "ଞ୍ଝୌ" (its keys typed "ଞ୍ଝଉ")	P6
+ori-phonetic	run 'Øngaa'	added	(none) -> "ଙ୍ଗା" (its keys typed "ଙ୍ଗଅ")	P6
+ori-phonetic	run 'Øngai'	added	(none) -> "ଙ୍ଗୈ" (its keys typed "ଙ୍ଗଇ")	P6
+ori-phonetic	run 'Øngau'	added	(none) -> "ଙ୍ଗୌ" (its keys typed "ଙ୍ଗଉ")	P6
+ori-phonetic	run 'Ønkaa'	added	(none) -> "ଙ୍କା" (its keys typed "ଙ୍କଅ")	P6
+ori-phonetic	run 'Ønkai'	added	(none) -> "ଙ୍କୈ" (its keys typed "ଙ୍କଇ")	P6
+ori-phonetic	run 'Ønkau'	added	(none) -> "ଙ୍କୌ" (its keys typed "ଙ୍କଉ")	P6
+ori-phonetic	run 'Ønxaa'	added	(none) -> "ଙ୍କ୍ଷା" (its keys typed "ଙ୍କ୍ଷଅ")	P6
+ori-phonetic	run 'Ønxai'	added	(none) -> "ଙ୍କ୍ଷୈ" (its keys typed "ଙ୍କ୍ଷଇ")	P6
+ori-phonetic	run 'Ønxau'	added	(none) -> "ଙ୍କ୍ଷୌ" (its keys typed "ଙ୍କ୍ଷଉ")	P6
+ori-phonetic	run 'Ømch'	added	(none) -> "ଞ୍ଛ୍": the virama form of 'Ømcha' = ଞ୍ଛ	P6
+ori-phonetic	run 'Ømchaa'	added	(none) -> "ଞ୍ଛା" (its keys typed "ଞ୍ଛଅ")	P6
+ori-phonetic	run 'Ømchai'	added	(none) -> "ଞ୍ଛୈ" (its keys typed "ଞ୍ଛଇ")	P6
+ori-phonetic	run 'Ømchau'	added	(none) -> "ଞ୍ଛୌ" (its keys typed "ଞ୍ଛଉ")	P6
+ori-phonetic	run 'Øngh'	added	(none) -> "ଙ୍ଘ୍": the virama form of 'Øngha' = ଙ୍ଘ	P6
+ori-phonetic	run 'Ønghaa'	added	(none) -> "ଙ୍ଘା" (its keys typed "ଙ୍ଘଅ")	P6
+ori-phonetic	run 'Ønghai'	added	(none) -> "ଙ୍ଘୈ" (its keys typed "ଙ୍ଘଇ")	P6
+ori-phonetic	run 'Ønghau'	added	(none) -> "ଙ୍ଘୌ" (its keys typed "ଙ୍ଘଉ")	P6
+ori-phonetic	run 'Ønkh'	added	(none) -> "ଙ୍ଖ୍": the virama form of 'Ønkha' = ଙ୍ଖ	P6
+ori-phonetic	run 'Ønkhaa'	added	(none) -> "ଙ୍ଖା" (its keys typed "ଙ୍ଖଅ")	P6
+ori-phonetic	run 'Ønkhai'	added	(none) -> "ଙ୍ଖୈ" (its keys typed "ଙ୍ଖଇ")	P6
+ori-phonetic	run 'Ønkhau'	added	(none) -> "ଙ୍ଖୌ" (its keys typed "ଙ୍ଖଉ")	P6
+ori-phonetic	run 'Ønktaa'	added	(none) -> "ଙ୍କ୍ତା" (its keys typed "ଙ୍କ୍ତଅ")	P6
+ori-phonetic	run 'Ønktai'	added	(none) -> "ଙ୍କ୍ତୈ" (its keys typed "ଙ୍କ୍ତଇ")	P6
+ori-phonetic	run 'Ønktau'	added	(none) -> "ଙ୍କ୍ତୌ" (its keys typed "ଙ୍କ୍ତଉ")	P6
+ori-phonetic	P6 summary: 49 runs added for 15 runs through Ctrl+Space
+ori-phonetic	P3 summary: 149 runs removed, 14 virama-form runs added; kept 0: 
+ori-phonetic	sample: de=ଦେ  di=ଦି  do=ଦୋ  du=ଦୁ  dee=ଦୀ  doo=ଦୂ  dai=ଦୈ  dau=ଦୌ  da=ଦ  daa=ଦା  he=ହେ  dhe=ଧେ  sthe=ସ୍ଥେ  ntre=ନ୍ତ୍ରେ  kSe=କ୍ଷେ  Odisha=ଓଦିଶ  amar=ଅମର୍  d~=ଦୃ  d@=ଦୌ  dR=ଦୃ  aa=ଆ  naA=ନଅ  chaA=ଛଅ  kaa=କା  kai=କୈ  khe=ଖେ  OØdishaa=ଓଡ଼ିଶା  jØmaana=ଜ୍ଞାନ  jØme=ଜ୍ଞେ  Ømaa=ଞା  Ønka=ଙ୍କ  Ønke=ଙ୍କେ
+ori-eng	Ctrl+Space 't'	sequence	(none) -> "ତ୍"	E1: ENG.ORI Ctrl+Space t = ତ୍ (code 66, 86 FF FA)
+ori-eng	'['	base vk 219	undefined -> ""	E2: ENG.ORI has nothing for '[' (byte FF)
+ori-eng	'^'	shift vk 54	undefined -> ""	E2: ENG.ORI has nothing for '^' (byte FF)
+ori-eng	'_'	shift vk 189	undefined -> ""	E2: ENG.ORI has nothing for '_' (byte FF)
+odia-shree-eng	special ';'	"ଞ" -> removed	T1: ENG.ORI types ';' (code 3B)
+odia-shree-eng	special '['	"ଵ" -> removed	T2: ENG.ORI has nothing for '['
+odia-shree-eng	special '@'	undefined -> "ୌ"	T3: ENG.ORI @ is the au sign (code E9), read with the word
+odia-shree-eng	special 'C'	"" -> removed	T4: ENG.ORI has nothing for 'C' (FF); a letter no token spells types nothing and the word goes on
+odia-shree-eng	special 'K'	"" -> removed	T4: ENG.ORI has nothing for 'K' (FF); a letter no token spells types nothing and the word goes on
+odia-shree-eng	special 'P'	"" -> removed	T4: ENG.ORI has nothing for 'P' (FF); a letter no token spells types nothing and the word goes on
+changes: 226

@@ -1,0 +1,15 @@
+// Compare what the codes mean (expected.js) with the Unicode composer answer for every probe; group mismatches by tag shape.
+const { expected, norm } = require('./expected');
+const r = require('./capp/P-results.json');
+const groups = new Map();
+let same = 0, nou = 0;
+for (const x of r) {
+  if (x.u == null) { nou++; continue; }
+  const e = expected(x.codes.split(' ').map(h => parseInt(h, 16)));
+  if (norm(e) === norm(x.u)) { same++; continue; }
+  const shape = x.tag.replace(/[ಀ-೿]+/g, 'X').replace(/\(F\d\)/g, '');
+  if (!groups.has(shape)) groups.set(shape, []);
+  groups.get(shape).push(x.codes + ' | U ' + JSON.stringify(x.u) + ' exp ' + JSON.stringify(e) + ' | ' + x.bytes + ' | ' + x.tag);
+}
+console.log('same', same, 'noU', nou, 'diff', r.length - same - nou);
+for (const [k, v] of [...groups].sort((a, b) => b[1].length - a[1].length)) { console.log('##', k, v.length); for (const l of v.slice(0, 3)) console.log('   ', l); }

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>telcheck</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>CS8618;CS8602;CS8604;CS8600;CS8625;CS8619;CS8620</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\src\*.cs" />
+    <ProjectReference Include="..\..\..\repo\src\FontSoftware.Core\FontSoftware.Core.csproj" />
+    <ProjectReference Include="..\..\..\repo\src\FontSoftware.Engine\FontSoftware.Engine.csproj" />
+  </ItemGroup>
+</Project>

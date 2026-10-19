@@ -1,0 +1,7036 @@
+{
+  "id": "unicode-to-shree-kanx",
+  "name": "Unicode -\u003E Shree-KanX (ShreeLipi-Ex)",
+  "sourceFontId": "tunga",
+  "targetFontId": "shree-kanx",
+  "sourceType": "unicode",
+  "targetType": "legacy",
+  "preRules": [],
+  "pairs": [
+    {
+      "from": "\u0C95\u0CCD\u0CB7\u0CCD\u0CCB",
+      "to": "\uECA4"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB7\u0CCD",
+      "to": "\uEB6C"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9E\u0CCD",
+      "to": "\uEB6D"
+    },
+    {
+      "from": "\u0C95\u0CBE\u0CB7\u0CCD",
+      "to": "\uEB93"
+    },
+    {
+      "from": "\u0C9C\u0CBE\u0C9E\u0CCD",
+      "to": "\uEB94"
+    },
+    {
+      "from": "\u0C95\u0CC0\u0CB7\u0CCD",
+      "to": "\uEBE1"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CB7\u0CCD",
+      "to": "\uEC08"
+    },
+    {
+      "from": "\u0C9C\u0CC6\u0C9E\u0CCD",
+      "to": "\uEC09"
+    },
+    {
+      "from": "\u0C95\u0CC7\u0CB7\u0CCD",
+      "to": "\uEC2F"
+    },
+    {
+      "from": "\u0C9C\u0CC7\u0C9E\u0CCD",
+      "to": "\uEC30"
+    },
+    {
+      "from": "\u0C9C\u0CD6\u0C9E\u0CCD",
+      "to": "\uEC57"
+    },
+    {
+      "from": "\u0C95\u0CCC\u0CB7\u0CCD",
+      "to": "\uECCB"
+    },
+    {
+      "from": "\u0C9C\u0CCC\u0C9E\u0CCD",
+      "to": "\uECCC"
+    },
+    {
+      "from": "\u0CB6\u0CBF\u0CCD\u0CB0",
+      "to": "\uED25"
+    },
+    {
+      "from": "\u0CCD\u0CA4\u0CCD\u0CAF",
+      "to": "\uED2B"
+    },
+    {
+      "from": "\u0CCD\u0C95\u0CCD\u0CB0",
+      "to": "\uED2D"
+    },
+    {
+      "from": "\u0CCD\u0CB0\u0CCD\u0CAF",
+      "to": "\uEDF6"
+    },
+    {
+      "from": "\u0CCD\u0CB0\u0CD6",
+      "to": "\uED26"
+    },
+    {
+      "from": "\u0CCD\u0CA4\u0CD6",
+      "to": "\uED2A"
+    },
+    {
+      "from": "\u0CCD\u0CA4\u0CC3",
+      "to": "\uED2C"
+    },
+    {
+      "from": "\u0CCD\u0C95\u0CC3",
+      "to": "\uED2E"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA8",
+      "to": "\uEB14\uED09"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAE",
+      "to": "\uEB14\uED0E"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAF",
+      "to": "\uEB14\uED0F"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB0",
+      "to": "\uEB14\uED10"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB1",
+      "to": "\uEB14\uED11"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C97",
+      "to": "\uEB14\uED52"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C99",
+      "to": "\uEB14\uED54"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9A",
+      "to": "\uEB14\uED55"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9C",
+      "to": "\uEB14\uED57"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9D",
+      "to": "\uEB14\uED58"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9F",
+      "to": "\uEB14\uED5A"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA0",
+      "to": "\uEB14\uED5B"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA1",
+      "to": "\uEB14\uED5C"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA2",
+      "to": "\uEB14\uED5D"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA3",
+      "to": "\uEB14\uED5E"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA4",
+      "to": "\uEB14\uED5F"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA5",
+      "to": "\uEB14\uED60"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA6",
+      "to": "\uEB14\uED61"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CA7",
+      "to": "\uEB14\uED62"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAA",
+      "to": "\uEB14\uED64"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAB",
+      "to": "\uEB14\uED65"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAC",
+      "to": "\uEB14\uED66"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CAD",
+      "to": "\uEB14\uED67"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB3",
+      "to": "\uEB14\uED6D"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB6",
+      "to": "\uEB14\uED6F"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB7",
+      "to": "\uEB14\uED70"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB8",
+      "to": "\uEB14\uED71"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB9",
+      "to": "\uEB14\uED72"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C95",
+      "to": "\uEB14\uED80"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C96",
+      "to": "\uEB14\uED81"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C98",
+      "to": "\uEB14\uED83"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9B",
+      "to": "\uEB14\uED86"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0C9E",
+      "to": "\uEB14\uED89"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB5",
+      "to": "\uEB14\uED9E"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA8",
+      "to": "\uEB15\uED09"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAE",
+      "to": "\uEB15\uED0E"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAF",
+      "to": "\uEB15\uED0F"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB0",
+      "to": "\uEB15\uED10"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB1",
+      "to": "\uEB15\uED11"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C97",
+      "to": "\uEB15\uED52"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C99",
+      "to": "\uEB15\uED54"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9A",
+      "to": "\uEB15\uED55"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9C",
+      "to": "\uEB15\uED57"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9D",
+      "to": "\uEB15\uED58"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9F",
+      "to": "\uEB15\uED5A"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA0",
+      "to": "\uEB15\uED5B"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA1",
+      "to": "\uEB15\uED5C"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA2",
+      "to": "\uEB15\uED5D"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA3",
+      "to": "\uEB15\uED5E"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA4",
+      "to": "\uEB15\uED5F"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA5",
+      "to": "\uEB15\uED60"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA6",
+      "to": "\uEB15\uED61"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CA7",
+      "to": "\uEB15\uED62"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAA",
+      "to": "\uEB15\uED64"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAB",
+      "to": "\uEB15\uED65"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAC",
+      "to": "\uEB15\uED66"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CAD",
+      "to": "\uEB15\uED67"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB3",
+      "to": "\uEB15\uED6D"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB6",
+      "to": "\uEB15\uED6F"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB7",
+      "to": "\uEB15\uED70"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB8",
+      "to": "\uEB15\uED71"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB9",
+      "to": "\uEB15\uED72"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C95",
+      "to": "\uEB15\uED80"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C96",
+      "to": "\uEB15\uED81"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C98",
+      "to": "\uEB15\uED83"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9B",
+      "to": "\uEB15\uED86"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0C9E",
+      "to": "\uEB15\uED89"
+    },
+    {
+      "from": "\u0C96\u0CCD\u0CB5",
+      "to": "\uEB15\uED9E"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA8",
+      "to": "\uEB16\uED09"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAE",
+      "to": "\uEB16\uED0E"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAF",
+      "to": "\uEB16\uED0F"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB0",
+      "to": "\uEB16\uED10"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB1",
+      "to": "\uEB16\uED11"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C97",
+      "to": "\uEB16\uED52"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C99",
+      "to": "\uEB16\uED54"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9A",
+      "to": "\uEB16\uED55"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9C",
+      "to": "\uEB16\uED57"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9D",
+      "to": "\uEB16\uED58"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9F",
+      "to": "\uEB16\uED5A"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA0",
+      "to": "\uEB16\uED5B"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA1",
+      "to": "\uEB16\uED5C"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA2",
+      "to": "\uEB16\uED5D"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA3",
+      "to": "\uEB16\uED5E"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA4",
+      "to": "\uEB16\uED5F"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA5",
+      "to": "\uEB16\uED60"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA6",
+      "to": "\uEB16\uED61"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CA7",
+      "to": "\uEB16\uED62"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAA",
+      "to": "\uEB16\uED64"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAB",
+      "to": "\uEB16\uED65"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAC",
+      "to": "\uEB16\uED66"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CAD",
+      "to": "\uEB16\uED67"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB3",
+      "to": "\uEB16\uED6D"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB6",
+      "to": "\uEB16\uED6F"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB7",
+      "to": "\uEB16\uED70"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB8",
+      "to": "\uEB16\uED71"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB9",
+      "to": "\uEB16\uED72"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C95",
+      "to": "\uEB16\uED80"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C96",
+      "to": "\uEB16\uED81"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C98",
+      "to": "\uEB16\uED83"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9B",
+      "to": "\uEB16\uED86"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0C9E",
+      "to": "\uEB16\uED89"
+    },
+    {
+      "from": "\u0C97\u0CCD\u0CB5",
+      "to": "\uEB16\uED9E"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA8",
+      "to": "\uEB17\uED09"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAE",
+      "to": "\uEB17\uED0E"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAF",
+      "to": "\uEB17\uED0F"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB0",
+      "to": "\uEB17\uED10"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB1",
+      "to": "\uEB17\uED11"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C97",
+      "to": "\uEB17\uED52"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C99",
+      "to": "\uEB17\uED54"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9A",
+      "to": "\uEB17\uED55"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9C",
+      "to": "\uEB17\uED57"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9D",
+      "to": "\uEB17\uED58"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9F",
+      "to": "\uEB17\uED5A"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA0",
+      "to": "\uEB17\uED5B"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA1",
+      "to": "\uEB17\uED5C"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA2",
+      "to": "\uEB17\uED5D"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA3",
+      "to": "\uEB17\uED5E"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA4",
+      "to": "\uEB17\uED5F"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA5",
+      "to": "\uEB17\uED60"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA6",
+      "to": "\uEB17\uED61"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CA7",
+      "to": "\uEB17\uED62"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAA",
+      "to": "\uEB17\uED64"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAB",
+      "to": "\uEB17\uED65"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAC",
+      "to": "\uEB17\uED66"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CAD",
+      "to": "\uEB17\uED67"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB3",
+      "to": "\uEB17\uED6D"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB6",
+      "to": "\uEB17\uED6F"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB7",
+      "to": "\uEB17\uED70"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB8",
+      "to": "\uEB17\uED71"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB9",
+      "to": "\uEB17\uED72"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C95",
+      "to": "\uEB17\uED80"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C96",
+      "to": "\uEB17\uED81"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C98",
+      "to": "\uEB17\uED83"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9B",
+      "to": "\uEB17\uED86"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0C9E",
+      "to": "\uEB17\uED89"
+    },
+    {
+      "from": "\u0C98\u0CCD\u0CB5",
+      "to": "\uEB17\uED9E"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA8",
+      "to": "\uEB18\uED09"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAE",
+      "to": "\uEB18\uED0E"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAF",
+      "to": "\uEB18\uED0F"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB0",
+      "to": "\uEB18\uED10"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB1",
+      "to": "\uEB18\uED11"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C97",
+      "to": "\uEB18\uED52"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C99",
+      "to": "\uEB18\uED54"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9A",
+      "to": "\uEB18\uED55"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9C",
+      "to": "\uEB18\uED57"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9D",
+      "to": "\uEB18\uED58"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9F",
+      "to": "\uEB18\uED5A"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA0",
+      "to": "\uEB18\uED5B"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA1",
+      "to": "\uEB18\uED5C"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA2",
+      "to": "\uEB18\uED5D"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA3",
+      "to": "\uEB18\uED5E"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA4",
+      "to": "\uEB18\uED5F"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA5",
+      "to": "\uEB18\uED60"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA6",
+      "to": "\uEB18\uED61"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CA7",
+      "to": "\uEB18\uED62"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAA",
+      "to": "\uEB18\uED64"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAB",
+      "to": "\uEB18\uED65"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAC",
+      "to": "\uEB18\uED66"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CAD",
+      "to": "\uEB18\uED67"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB3",
+      "to": "\uEB18\uED6D"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB6",
+      "to": "\uEB18\uED6F"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB7",
+      "to": "\uEB18\uED70"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB8",
+      "to": "\uEB18\uED71"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB9",
+      "to": "\uEB18\uED72"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C95",
+      "to": "\uEB18\uED80"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C96",
+      "to": "\uEB18\uED81"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C98",
+      "to": "\uEB18\uED83"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9B",
+      "to": "\uEB18\uED86"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0C9E",
+      "to": "\uEB18\uED89"
+    },
+    {
+      "from": "\u0C99\u0CCD\u0CB5",
+      "to": "\uEB18\uED9E"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA8",
+      "to": "\uEB19\uED09"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAE",
+      "to": "\uEB19\uED0E"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAF",
+      "to": "\uEB19\uED0F"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB0",
+      "to": "\uEB19\uED10"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB1",
+      "to": "\uEB19\uED11"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C97",
+      "to": "\uEB19\uED52"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C99",
+      "to": "\uEB19\uED54"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9A",
+      "to": "\uEB19\uED55"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9C",
+      "to": "\uEB19\uED57"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9D",
+      "to": "\uEB19\uED58"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9F",
+      "to": "\uEB19\uED5A"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA0",
+      "to": "\uEB19\uED5B"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA1",
+      "to": "\uEB19\uED5C"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA2",
+      "to": "\uEB19\uED5D"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA3",
+      "to": "\uEB19\uED5E"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA4",
+      "to": "\uEB19\uED5F"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA5",
+      "to": "\uEB19\uED60"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA6",
+      "to": "\uEB19\uED61"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CA7",
+      "to": "\uEB19\uED62"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAA",
+      "to": "\uEB19\uED64"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAB",
+      "to": "\uEB19\uED65"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAC",
+      "to": "\uEB19\uED66"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CAD",
+      "to": "\uEB19\uED67"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB3",
+      "to": "\uEB19\uED6D"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB6",
+      "to": "\uEB19\uED6F"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB7",
+      "to": "\uEB19\uED70"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB8",
+      "to": "\uEB19\uED71"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB9",
+      "to": "\uEB19\uED72"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C95",
+      "to": "\uEB19\uED80"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C96",
+      "to": "\uEB19\uED81"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C98",
+      "to": "\uEB19\uED83"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9B",
+      "to": "\uEB19\uED86"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0C9E",
+      "to": "\uEB19\uED89"
+    },
+    {
+      "from": "\u0C9A\u0CCD\u0CB5",
+      "to": "\uEB19\uED9E"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA8",
+      "to": "\uEB1A\uED09"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAE",
+      "to": "\uEB1A\uED0E"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAF",
+      "to": "\uEB1A\uED0F"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB0",
+      "to": "\uEB1A\uED10"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB1",
+      "to": "\uEB1A\uED11"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C97",
+      "to": "\uEB1A\uED52"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C99",
+      "to": "\uEB1A\uED54"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9A",
+      "to": "\uEB1A\uED55"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9C",
+      "to": "\uEB1A\uED57"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9D",
+      "to": "\uEB1A\uED58"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9F",
+      "to": "\uEB1A\uED5A"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA0",
+      "to": "\uEB1A\uED5B"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA1",
+      "to": "\uEB1A\uED5C"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA2",
+      "to": "\uEB1A\uED5D"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA3",
+      "to": "\uEB1A\uED5E"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA4",
+      "to": "\uEB1A\uED5F"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA5",
+      "to": "\uEB1A\uED60"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA6",
+      "to": "\uEB1A\uED61"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CA7",
+      "to": "\uEB1A\uED62"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAA",
+      "to": "\uEB1A\uED64"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAB",
+      "to": "\uEB1A\uED65"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAC",
+      "to": "\uEB1A\uED66"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CAD",
+      "to": "\uEB1A\uED67"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB3",
+      "to": "\uEB1A\uED6D"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB6",
+      "to": "\uEB1A\uED6F"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB7",
+      "to": "\uEB1A\uED70"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB8",
+      "to": "\uEB1A\uED71"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB9",
+      "to": "\uEB1A\uED72"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C95",
+      "to": "\uEB1A\uED80"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C96",
+      "to": "\uEB1A\uED81"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C98",
+      "to": "\uEB1A\uED83"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9B",
+      "to": "\uEB1A\uED86"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0C9E",
+      "to": "\uEB1A\uED89"
+    },
+    {
+      "from": "\u0C9B\u0CCD\u0CB5",
+      "to": "\uEB1A\uED9E"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA8",
+      "to": "\uEB1B\uED09"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAE",
+      "to": "\uEB1B\uED0E"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAF",
+      "to": "\uEB1B\uED0F"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB0",
+      "to": "\uEB1B\uED10"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB1",
+      "to": "\uEB1B\uED11"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C97",
+      "to": "\uEB1B\uED52"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C99",
+      "to": "\uEB1B\uED54"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9A",
+      "to": "\uEB1B\uED55"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9C",
+      "to": "\uEB1B\uED57"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9D",
+      "to": "\uEB1B\uED58"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9F",
+      "to": "\uEB1B\uED5A"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA0",
+      "to": "\uEB1B\uED5B"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA1",
+      "to": "\uEB1B\uED5C"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA2",
+      "to": "\uEB1B\uED5D"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA3",
+      "to": "\uEB1B\uED5E"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA4",
+      "to": "\uEB1B\uED5F"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA5",
+      "to": "\uEB1B\uED60"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA6",
+      "to": "\uEB1B\uED61"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CA7",
+      "to": "\uEB1B\uED62"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAA",
+      "to": "\uEB1B\uED64"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAB",
+      "to": "\uEB1B\uED65"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAC",
+      "to": "\uEB1B\uED66"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CAD",
+      "to": "\uEB1B\uED67"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB3",
+      "to": "\uEB1B\uED6D"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB6",
+      "to": "\uEB1B\uED6F"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB7",
+      "to": "\uEB1B\uED70"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB8",
+      "to": "\uEB1B\uED71"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB9",
+      "to": "\uEB1B\uED72"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C95",
+      "to": "\uEB1B\uED80"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C96",
+      "to": "\uEB1B\uED81"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C98",
+      "to": "\uEB1B\uED83"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9B",
+      "to": "\uEB1B\uED86"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0C9E",
+      "to": "\uEB1B\uED89"
+    },
+    {
+      "from": "\u0C9C\u0CCD\u0CB5",
+      "to": "\uEB1B\uED9E"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA8",
+      "to": "\uEB1D\uED09"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAE",
+      "to": "\uEB1D\uED0E"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAF",
+      "to": "\uEB1D\uED0F"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB0",
+      "to": "\uEB1D\uED10"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB1",
+      "to": "\uEB1D\uED11"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C97",
+      "to": "\uEB1D\uED52"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C99",
+      "to": "\uEB1D\uED54"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9A",
+      "to": "\uEB1D\uED55"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9C",
+      "to": "\uEB1D\uED57"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9D",
+      "to": "\uEB1D\uED58"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9F",
+      "to": "\uEB1D\uED5A"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA0",
+      "to": "\uEB1D\uED5B"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA1",
+      "to": "\uEB1D\uED5C"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA2",
+      "to": "\uEB1D\uED5D"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA3",
+      "to": "\uEB1D\uED5E"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA4",
+      "to": "\uEB1D\uED5F"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA5",
+      "to": "\uEB1D\uED60"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA6",
+      "to": "\uEB1D\uED61"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CA7",
+      "to": "\uEB1D\uED62"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAA",
+      "to": "\uEB1D\uED64"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAB",
+      "to": "\uEB1D\uED65"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAC",
+      "to": "\uEB1D\uED66"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CAD",
+      "to": "\uEB1D\uED67"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB3",
+      "to": "\uEB1D\uED6D"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB6",
+      "to": "\uEB1D\uED6F"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB7",
+      "to": "\uEB1D\uED70"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB8",
+      "to": "\uEB1D\uED71"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB9",
+      "to": "\uEB1D\uED72"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C95",
+      "to": "\uEB1D\uED80"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C96",
+      "to": "\uEB1D\uED81"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C98",
+      "to": "\uEB1D\uED83"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9B",
+      "to": "\uEB1D\uED86"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0C9E",
+      "to": "\uEB1D\uED89"
+    },
+    {
+      "from": "\u0C9E\u0CCD\u0CB5",
+      "to": "\uEB1D\uED9E"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA8",
+      "to": "\uEB1E\uED09"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAE",
+      "to": "\uEB1E\uED0E"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAF",
+      "to": "\uEB1E\uED0F"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB0",
+      "to": "\uEB1E\uED10"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB1",
+      "to": "\uEB1E\uED11"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C97",
+      "to": "\uEB1E\uED52"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C99",
+      "to": "\uEB1E\uED54"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9A",
+      "to": "\uEB1E\uED55"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9C",
+      "to": "\uEB1E\uED57"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9D",
+      "to": "\uEB1E\uED58"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9F",
+      "to": "\uEB1E\uED5A"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA0",
+      "to": "\uEB1E\uED5B"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA1",
+      "to": "\uEB1E\uED5C"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA2",
+      "to": "\uEB1E\uED5D"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA3",
+      "to": "\uEB1E\uED5E"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA4",
+      "to": "\uEB1E\uED5F"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA5",
+      "to": "\uEB1E\uED60"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA6",
+      "to": "\uEB1E\uED61"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CA7",
+      "to": "\uEB1E\uED62"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAA",
+      "to": "\uEB1E\uED64"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAB",
+      "to": "\uEB1E\uED65"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAC",
+      "to": "\uEB1E\uED66"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CAD",
+      "to": "\uEB1E\uED67"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB3",
+      "to": "\uEB1E\uED6D"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB6",
+      "to": "\uEB1E\uED6F"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB7",
+      "to": "\uEB1E\uED70"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB8",
+      "to": "\uEB1E\uED71"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB9",
+      "to": "\uEB1E\uED72"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C95",
+      "to": "\uEB1E\uED80"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C96",
+      "to": "\uEB1E\uED81"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C98",
+      "to": "\uEB1E\uED83"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9B",
+      "to": "\uEB1E\uED86"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0C9E",
+      "to": "\uEB1E\uED89"
+    },
+    {
+      "from": "\u0C9F\u0CCD\u0CB5",
+      "to": "\uEB1E\uED9E"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA8",
+      "to": "\uEB20\uED09"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAE",
+      "to": "\uEB20\uED0E"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAF",
+      "to": "\uEB20\uED0F"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB0",
+      "to": "\uEB20\uED10"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB1",
+      "to": "\uEB20\uED11"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C97",
+      "to": "\uEB20\uED52"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C99",
+      "to": "\uEB20\uED54"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9A",
+      "to": "\uEB20\uED55"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9C",
+      "to": "\uEB20\uED57"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9D",
+      "to": "\uEB20\uED58"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9F",
+      "to": "\uEB20\uED5A"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA0",
+      "to": "\uEB20\uED5B"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA1",
+      "to": "\uEB20\uED5C"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA2",
+      "to": "\uEB20\uED5D"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA3",
+      "to": "\uEB20\uED5E"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA4",
+      "to": "\uEB20\uED5F"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA5",
+      "to": "\uEB20\uED60"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA6",
+      "to": "\uEB20\uED61"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CA7",
+      "to": "\uEB20\uED62"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAA",
+      "to": "\uEB20\uED64"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAB",
+      "to": "\uEB20\uED65"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAC",
+      "to": "\uEB20\uED66"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CAD",
+      "to": "\uEB20\uED67"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB3",
+      "to": "\uEB20\uED6D"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB6",
+      "to": "\uEB20\uED6F"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB7",
+      "to": "\uEB20\uED70"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB8",
+      "to": "\uEB20\uED71"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB9",
+      "to": "\uEB20\uED72"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C95",
+      "to": "\uEB20\uED80"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C96",
+      "to": "\uEB20\uED81"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C98",
+      "to": "\uEB20\uED83"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9B",
+      "to": "\uEB20\uED86"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0C9E",
+      "to": "\uEB20\uED89"
+    },
+    {
+      "from": "\u0CA1\u0CCD\u0CB5",
+      "to": "\uEB20\uED9E"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA8",
+      "to": "\uEB22\uED09"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAE",
+      "to": "\uEB22\uED0E"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAF",
+      "to": "\uEB22\uED0F"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB0",
+      "to": "\uEB22\uED10"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB1",
+      "to": "\uEB22\uED11"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C97",
+      "to": "\uEB22\uED52"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C99",
+      "to": "\uEB22\uED54"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9A",
+      "to": "\uEB22\uED55"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9C",
+      "to": "\uEB22\uED57"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9D",
+      "to": "\uEB22\uED58"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9F",
+      "to": "\uEB22\uED5A"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA0",
+      "to": "\uEB22\uED5B"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA1",
+      "to": "\uEB22\uED5C"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA2",
+      "to": "\uEB22\uED5D"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA3",
+      "to": "\uEB22\uED5E"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA4",
+      "to": "\uEB22\uED5F"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA5",
+      "to": "\uEB22\uED60"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA6",
+      "to": "\uEB22\uED61"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CA7",
+      "to": "\uEB22\uED62"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAA",
+      "to": "\uEB22\uED64"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAB",
+      "to": "\uEB22\uED65"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAC",
+      "to": "\uEB22\uED66"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CAD",
+      "to": "\uEB22\uED67"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB3",
+      "to": "\uEB22\uED6D"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB6",
+      "to": "\uEB22\uED6F"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB7",
+      "to": "\uEB22\uED70"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB8",
+      "to": "\uEB22\uED71"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB9",
+      "to": "\uEB22\uED72"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C95",
+      "to": "\uEB22\uED80"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C96",
+      "to": "\uEB22\uED81"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C98",
+      "to": "\uEB22\uED83"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9B",
+      "to": "\uEB22\uED86"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0C9E",
+      "to": "\uEB22\uED89"
+    },
+    {
+      "from": "\u0CA3\u0CCD\u0CB5",
+      "to": "\uEB22\uED9E"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA8",
+      "to": "\uEB23\uED09"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAE",
+      "to": "\uEB23\uED0E"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAF",
+      "to": "\uEB23\uED0F"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB0",
+      "to": "\uEB23\uED10"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB1",
+      "to": "\uEB23\uED11"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C97",
+      "to": "\uEB23\uED52"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C99",
+      "to": "\uEB23\uED54"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9A",
+      "to": "\uEB23\uED55"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9C",
+      "to": "\uEB23\uED57"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9D",
+      "to": "\uEB23\uED58"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9F",
+      "to": "\uEB23\uED5A"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA0",
+      "to": "\uEB23\uED5B"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA1",
+      "to": "\uEB23\uED5C"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA2",
+      "to": "\uEB23\uED5D"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA3",
+      "to": "\uEB23\uED5E"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA4",
+      "to": "\uEB23\uED5F"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA5",
+      "to": "\uEB23\uED60"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA6",
+      "to": "\uEB23\uED61"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CA7",
+      "to": "\uEB23\uED62"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAA",
+      "to": "\uEB23\uED64"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAB",
+      "to": "\uEB23\uED65"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAC",
+      "to": "\uEB23\uED66"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CAD",
+      "to": "\uEB23\uED67"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB3",
+      "to": "\uEB23\uED6D"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB6",
+      "to": "\uEB23\uED6F"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB7",
+      "to": "\uEB23\uED70"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB8",
+      "to": "\uEB23\uED71"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB9",
+      "to": "\uEB23\uED72"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C95",
+      "to": "\uEB23\uED80"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C96",
+      "to": "\uEB23\uED81"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C98",
+      "to": "\uEB23\uED83"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9B",
+      "to": "\uEB23\uED86"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0C9E",
+      "to": "\uEB23\uED89"
+    },
+    {
+      "from": "\u0CA4\u0CCD\u0CB5",
+      "to": "\uEB23\uED9E"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA8",
+      "to": "\uEB25\uED09"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAE",
+      "to": "\uEB25\uED0E"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAF",
+      "to": "\uEB25\uED0F"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB0",
+      "to": "\uEB25\uED10"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB1",
+      "to": "\uEB25\uED11"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C97",
+      "to": "\uEB25\uED52"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C99",
+      "to": "\uEB25\uED54"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9A",
+      "to": "\uEB25\uED55"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9C",
+      "to": "\uEB25\uED57"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9D",
+      "to": "\uEB25\uED58"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9F",
+      "to": "\uEB25\uED5A"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA0",
+      "to": "\uEB25\uED5B"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA1",
+      "to": "\uEB25\uED5C"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA2",
+      "to": "\uEB25\uED5D"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA3",
+      "to": "\uEB25\uED5E"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA4",
+      "to": "\uEB25\uED5F"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA5",
+      "to": "\uEB25\uED60"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA6",
+      "to": "\uEB25\uED61"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CA7",
+      "to": "\uEB25\uED62"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAA",
+      "to": "\uEB25\uED64"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAB",
+      "to": "\uEB25\uED65"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAC",
+      "to": "\uEB25\uED66"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CAD",
+      "to": "\uEB25\uED67"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB3",
+      "to": "\uEB25\uED6D"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB6",
+      "to": "\uEB25\uED6F"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB7",
+      "to": "\uEB25\uED70"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB8",
+      "to": "\uEB25\uED71"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB9",
+      "to": "\uEB25\uED72"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C95",
+      "to": "\uEB25\uED80"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C96",
+      "to": "\uEB25\uED81"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C98",
+      "to": "\uEB25\uED83"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9B",
+      "to": "\uEB25\uED86"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0C9E",
+      "to": "\uEB25\uED89"
+    },
+    {
+      "from": "\u0CA6\u0CCD\u0CB5",
+      "to": "\uEB25\uED9E"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA8",
+      "to": "\uEB26\uED09"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAE",
+      "to": "\uEB26\uED0E"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAF",
+      "to": "\uEB26\uED0F"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB0",
+      "to": "\uEB26\uED10"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB1",
+      "to": "\uEB26\uED11"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C97",
+      "to": "\uEB26\uED52"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C99",
+      "to": "\uEB26\uED54"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9A",
+      "to": "\uEB26\uED55"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9C",
+      "to": "\uEB26\uED57"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9D",
+      "to": "\uEB26\uED58"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9F",
+      "to": "\uEB26\uED5A"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA0",
+      "to": "\uEB26\uED5B"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA1",
+      "to": "\uEB26\uED5C"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA2",
+      "to": "\uEB26\uED5D"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA3",
+      "to": "\uEB26\uED5E"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA4",
+      "to": "\uEB26\uED5F"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA5",
+      "to": "\uEB26\uED60"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA6",
+      "to": "\uEB26\uED61"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CA7",
+      "to": "\uEB26\uED62"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAA",
+      "to": "\uEB26\uED64"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAB",
+      "to": "\uEB26\uED65"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAC",
+      "to": "\uEB26\uED66"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CAD",
+      "to": "\uEB26\uED67"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB3",
+      "to": "\uEB26\uED6D"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB6",
+      "to": "\uEB26\uED6F"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB7",
+      "to": "\uEB26\uED70"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB8",
+      "to": "\uEB26\uED71"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB9",
+      "to": "\uEB26\uED72"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C95",
+      "to": "\uEB26\uED80"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C96",
+      "to": "\uEB26\uED81"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C98",
+      "to": "\uEB26\uED83"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9B",
+      "to": "\uEB26\uED86"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0C9E",
+      "to": "\uEB26\uED89"
+    },
+    {
+      "from": "\u0CA7\u0CCD\u0CB5",
+      "to": "\uEB26\uED9E"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA8",
+      "to": "\uEB27\uED09"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAE",
+      "to": "\uEB27\uED0E"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAF",
+      "to": "\uEB27\uED0F"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB0",
+      "to": "\uEB27\uED10"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB1",
+      "to": "\uEB27\uED11"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C97",
+      "to": "\uEB27\uED52"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C99",
+      "to": "\uEB27\uED54"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9A",
+      "to": "\uEB27\uED55"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9C",
+      "to": "\uEB27\uED57"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9D",
+      "to": "\uEB27\uED58"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9F",
+      "to": "\uEB27\uED5A"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA0",
+      "to": "\uEB27\uED5B"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA1",
+      "to": "\uEB27\uED5C"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA2",
+      "to": "\uEB27\uED5D"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA3",
+      "to": "\uEB27\uED5E"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA4",
+      "to": "\uEB27\uED5F"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA5",
+      "to": "\uEB27\uED60"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA6",
+      "to": "\uEB27\uED61"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CA7",
+      "to": "\uEB27\uED62"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAA",
+      "to": "\uEB27\uED64"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAB",
+      "to": "\uEB27\uED65"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAC",
+      "to": "\uEB27\uED66"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CAD",
+      "to": "\uEB27\uED67"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB3",
+      "to": "\uEB27\uED6D"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB6",
+      "to": "\uEB27\uED6F"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB7",
+      "to": "\uEB27\uED70"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB8",
+      "to": "\uEB27\uED71"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB9",
+      "to": "\uEB27\uED72"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C95",
+      "to": "\uEB27\uED80"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C96",
+      "to": "\uEB27\uED81"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C98",
+      "to": "\uEB27\uED83"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9B",
+      "to": "\uEB27\uED86"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0C9E",
+      "to": "\uEB27\uED89"
+    },
+    {
+      "from": "\u0CA8\u0CCD\u0CB5",
+      "to": "\uEB27\uED9E"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA8",
+      "to": "\uEB28\uED09"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAE",
+      "to": "\uEB28\uED0E"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAF",
+      "to": "\uEB28\uED0F"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB0",
+      "to": "\uEB28\uED10"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB1",
+      "to": "\uEB28\uED11"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C97",
+      "to": "\uEB28\uED52"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C99",
+      "to": "\uEB28\uED54"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9A",
+      "to": "\uEB28\uED55"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9C",
+      "to": "\uEB28\uED57"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9D",
+      "to": "\uEB28\uED58"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9F",
+      "to": "\uEB28\uED5A"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA0",
+      "to": "\uEB28\uED5B"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA1",
+      "to": "\uEB28\uED5C"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA2",
+      "to": "\uEB28\uED5D"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA3",
+      "to": "\uEB28\uED5E"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA4",
+      "to": "\uEB28\uED5F"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA5",
+      "to": "\uEB28\uED60"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA6",
+      "to": "\uEB28\uED61"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CA7",
+      "to": "\uEB28\uED62"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAA",
+      "to": "\uEB28\uED64"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAB",
+      "to": "\uEB28\uED65"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAC",
+      "to": "\uEB28\uED66"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CAD",
+      "to": "\uEB28\uED67"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB3",
+      "to": "\uEB28\uED6D"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB6",
+      "to": "\uEB28\uED6F"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB7",
+      "to": "\uEB28\uED70"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB8",
+      "to": "\uEB28\uED71"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB9",
+      "to": "\uEB28\uED72"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C95",
+      "to": "\uEB28\uED80"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C96",
+      "to": "\uEB28\uED81"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C98",
+      "to": "\uEB28\uED83"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9B",
+      "to": "\uEB28\uED86"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0C9E",
+      "to": "\uEB28\uED89"
+    },
+    {
+      "from": "\u0CAA\u0CCD\u0CB5",
+      "to": "\uEB28\uED9E"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA8",
+      "to": "\uEB29\uED09"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAE",
+      "to": "\uEB29\uED0E"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAF",
+      "to": "\uEB29\uED0F"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB0",
+      "to": "\uEB29\uED10"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB1",
+      "to": "\uEB29\uED11"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C97",
+      "to": "\uEB29\uED52"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C99",
+      "to": "\uEB29\uED54"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9A",
+      "to": "\uEB29\uED55"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9C",
+      "to": "\uEB29\uED57"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9D",
+      "to": "\uEB29\uED58"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9F",
+      "to": "\uEB29\uED5A"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA0",
+      "to": "\uEB29\uED5B"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA1",
+      "to": "\uEB29\uED5C"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA2",
+      "to": "\uEB29\uED5D"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA3",
+      "to": "\uEB29\uED5E"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA4",
+      "to": "\uEB29\uED5F"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA5",
+      "to": "\uEB29\uED60"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA6",
+      "to": "\uEB29\uED61"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CA7",
+      "to": "\uEB29\uED62"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAA",
+      "to": "\uEB29\uED64"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAB",
+      "to": "\uEB29\uED65"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAC",
+      "to": "\uEB29\uED66"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CAD",
+      "to": "\uEB29\uED67"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB3",
+      "to": "\uEB29\uED6D"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB6",
+      "to": "\uEB29\uED6F"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB7",
+      "to": "\uEB29\uED70"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB8",
+      "to": "\uEB29\uED71"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB9",
+      "to": "\uEB29\uED72"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C95",
+      "to": "\uEB29\uED80"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C96",
+      "to": "\uEB29\uED81"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C98",
+      "to": "\uEB29\uED83"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9B",
+      "to": "\uEB29\uED86"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0C9E",
+      "to": "\uEB29\uED89"
+    },
+    {
+      "from": "\u0CAB\u0CCD\u0CB5",
+      "to": "\uEB29\uED9E"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA8",
+      "to": "\uEB2A\uED09"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAE",
+      "to": "\uEB2A\uED0E"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAF",
+      "to": "\uEB2A\uED0F"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB0",
+      "to": "\uEB2A\uED10"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB1",
+      "to": "\uEB2A\uED11"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C97",
+      "to": "\uEB2A\uED52"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C99",
+      "to": "\uEB2A\uED54"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9A",
+      "to": "\uEB2A\uED55"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9C",
+      "to": "\uEB2A\uED57"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9D",
+      "to": "\uEB2A\uED58"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9F",
+      "to": "\uEB2A\uED5A"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA0",
+      "to": "\uEB2A\uED5B"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA1",
+      "to": "\uEB2A\uED5C"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA2",
+      "to": "\uEB2A\uED5D"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA3",
+      "to": "\uEB2A\uED5E"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA4",
+      "to": "\uEB2A\uED5F"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA5",
+      "to": "\uEB2A\uED60"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA6",
+      "to": "\uEB2A\uED61"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CA7",
+      "to": "\uEB2A\uED62"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAA",
+      "to": "\uEB2A\uED64"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAB",
+      "to": "\uEB2A\uED65"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAC",
+      "to": "\uEB2A\uED66"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CAD",
+      "to": "\uEB2A\uED67"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB3",
+      "to": "\uEB2A\uED6D"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB6",
+      "to": "\uEB2A\uED6F"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB7",
+      "to": "\uEB2A\uED70"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB8",
+      "to": "\uEB2A\uED71"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB9",
+      "to": "\uEB2A\uED72"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C95",
+      "to": "\uEB2A\uED80"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C96",
+      "to": "\uEB2A\uED81"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C98",
+      "to": "\uEB2A\uED83"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9B",
+      "to": "\uEB2A\uED86"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0C9E",
+      "to": "\uEB2A\uED89"
+    },
+    {
+      "from": "\u0CAC\u0CCD\u0CB5",
+      "to": "\uEB2A\uED9E"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA8",
+      "to": "\uEB2E\uED09"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAE",
+      "to": "\uEB2E\uED0E"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAF",
+      "to": "\uEB2E\uED0F"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB0",
+      "to": "\uEB2E\uED10"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB1",
+      "to": "\uEB2E\uED11"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C97",
+      "to": "\uEB2E\uED52"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C99",
+      "to": "\uEB2E\uED54"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9A",
+      "to": "\uEB2E\uED55"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9C",
+      "to": "\uEB2E\uED57"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9D",
+      "to": "\uEB2E\uED58"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9F",
+      "to": "\uEB2E\uED5A"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA0",
+      "to": "\uEB2E\uED5B"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA1",
+      "to": "\uEB2E\uED5C"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA2",
+      "to": "\uEB2E\uED5D"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA3",
+      "to": "\uEB2E\uED5E"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA4",
+      "to": "\uEB2E\uED5F"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA5",
+      "to": "\uEB2E\uED60"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA6",
+      "to": "\uEB2E\uED61"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CA7",
+      "to": "\uEB2E\uED62"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAA",
+      "to": "\uEB2E\uED64"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAB",
+      "to": "\uEB2E\uED65"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAC",
+      "to": "\uEB2E\uED66"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CAD",
+      "to": "\uEB2E\uED67"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB3",
+      "to": "\uEB2E\uED6D"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB6",
+      "to": "\uEB2E\uED6F"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB7",
+      "to": "\uEB2E\uED70"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB8",
+      "to": "\uEB2E\uED71"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB9",
+      "to": "\uEB2E\uED72"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C95",
+      "to": "\uEB2E\uED80"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C96",
+      "to": "\uEB2E\uED81"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C98",
+      "to": "\uEB2E\uED83"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9B",
+      "to": "\uEB2E\uED86"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0C9E",
+      "to": "\uEB2E\uED89"
+    },
+    {
+      "from": "\u0CB0\u0CCD\u0CB5",
+      "to": "\uEB2E\uED9E"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA8",
+      "to": "\uEB30\uED09"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAE",
+      "to": "\uEB30\uED0E"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAF",
+      "to": "\uEB30\uED0F"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB0",
+      "to": "\uEB30\uED10"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB1",
+      "to": "\uEB30\uED11"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C97",
+      "to": "\uEB30\uED52"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C99",
+      "to": "\uEB30\uED54"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9A",
+      "to": "\uEB30\uED55"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9C",
+      "to": "\uEB30\uED57"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9D",
+      "to": "\uEB30\uED58"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9F",
+      "to": "\uEB30\uED5A"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA0",
+      "to": "\uEB30\uED5B"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA1",
+      "to": "\uEB30\uED5C"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA2",
+      "to": "\uEB30\uED5D"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA3",
+      "to": "\uEB30\uED5E"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA4",
+      "to": "\uEB30\uED5F"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA5",
+      "to": "\uEB30\uED60"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA6",
+      "to": "\uEB30\uED61"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CA7",
+      "to": "\uEB30\uED62"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAA",
+      "to": "\uEB30\uED64"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAB",
+      "to": "\uEB30\uED65"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAC",
+      "to": "\uEB30\uED66"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CAD",
+      "to": "\uEB30\uED67"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB3",
+      "to": "\uEB30\uED6D"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB6",
+      "to": "\uEB30\uED6F"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB7",
+      "to": "\uEB30\uED70"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB8",
+      "to": "\uEB30\uED71"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB9",
+      "to": "\uEB30\uED72"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C95",
+      "to": "\uEB30\uED80"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C96",
+      "to": "\uEB30\uED81"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C98",
+      "to": "\uEB30\uED83"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9B",
+      "to": "\uEB30\uED86"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0C9E",
+      "to": "\uEB30\uED89"
+    },
+    {
+      "from": "\u0CB2\u0CCD\u0CB5",
+      "to": "\uEB30\uED9E"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA8",
+      "to": "\uEB31\uED09"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAE",
+      "to": "\uEB31\uED0E"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAF",
+      "to": "\uEB31\uED0F"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB0",
+      "to": "\uEB31\uED10"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB1",
+      "to": "\uEB31\uED11"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C97",
+      "to": "\uEB31\uED52"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C99",
+      "to": "\uEB31\uED54"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9A",
+      "to": "\uEB31\uED55"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9C",
+      "to": "\uEB31\uED57"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9D",
+      "to": "\uEB31\uED58"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9F",
+      "to": "\uEB31\uED5A"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA0",
+      "to": "\uEB31\uED5B"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA1",
+      "to": "\uEB31\uED5C"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA2",
+      "to": "\uEB31\uED5D"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA3",
+      "to": "\uEB31\uED5E"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA4",
+      "to": "\uEB31\uED5F"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA5",
+      "to": "\uEB31\uED60"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA6",
+      "to": "\uEB31\uED61"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CA7",
+      "to": "\uEB31\uED62"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAA",
+      "to": "\uEB31\uED64"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAB",
+      "to": "\uEB31\uED65"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAC",
+      "to": "\uEB31\uED66"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CAD",
+      "to": "\uEB31\uED67"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB3",
+      "to": "\uEB31\uED6D"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB6",
+      "to": "\uEB31\uED6F"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB7",
+      "to": "\uEB31\uED70"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB8",
+      "to": "\uEB31\uED71"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB9",
+      "to": "\uEB31\uED72"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C95",
+      "to": "\uEB31\uED80"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C96",
+      "to": "\uEB31\uED81"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C98",
+      "to": "\uEB31\uED83"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9B",
+      "to": "\uEB31\uED86"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0C9E",
+      "to": "\uEB31\uED89"
+    },
+    {
+      "from": "\u0CB3\u0CCD\u0CB5",
+      "to": "\uEB31\uED9E"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA8",
+      "to": "\uEB32\uED09"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAE",
+      "to": "\uEB32\uED0E"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAF",
+      "to": "\uEB32\uED0F"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB0",
+      "to": "\uEB32\uED10"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB1",
+      "to": "\uEB32\uED11"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C97",
+      "to": "\uEB32\uED52"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C99",
+      "to": "\uEB32\uED54"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9A",
+      "to": "\uEB32\uED55"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9C",
+      "to": "\uEB32\uED57"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9D",
+      "to": "\uEB32\uED58"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9F",
+      "to": "\uEB32\uED5A"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA0",
+      "to": "\uEB32\uED5B"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA1",
+      "to": "\uEB32\uED5C"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA2",
+      "to": "\uEB32\uED5D"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA3",
+      "to": "\uEB32\uED5E"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA4",
+      "to": "\uEB32\uED5F"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA5",
+      "to": "\uEB32\uED60"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA6",
+      "to": "\uEB32\uED61"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CA7",
+      "to": "\uEB32\uED62"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAA",
+      "to": "\uEB32\uED64"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAB",
+      "to": "\uEB32\uED65"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAC",
+      "to": "\uEB32\uED66"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CAD",
+      "to": "\uEB32\uED67"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB3",
+      "to": "\uEB32\uED6D"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB6",
+      "to": "\uEB32\uED6F"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB7",
+      "to": "\uEB32\uED70"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB8",
+      "to": "\uEB32\uED71"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB9",
+      "to": "\uEB32\uED72"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C95",
+      "to": "\uEB32\uED80"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C96",
+      "to": "\uEB32\uED81"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C98",
+      "to": "\uEB32\uED83"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9B",
+      "to": "\uEB32\uED86"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0C9E",
+      "to": "\uEB32\uED89"
+    },
+    {
+      "from": "\u0CB5\u0CCD\u0CB5",
+      "to": "\uEB32\uED9E"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA8",
+      "to": "\uEB33\uED09"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAE",
+      "to": "\uEB33\uED0E"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAF",
+      "to": "\uEB33\uED0F"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB0",
+      "to": "\uEB33\uED10"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB1",
+      "to": "\uEB33\uED11"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C97",
+      "to": "\uEB33\uED52"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C99",
+      "to": "\uEB33\uED54"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9A",
+      "to": "\uEB33\uED55"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9C",
+      "to": "\uEB33\uED57"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9D",
+      "to": "\uEB33\uED58"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9F",
+      "to": "\uEB33\uED5A"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA0",
+      "to": "\uEB33\uED5B"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA1",
+      "to": "\uEB33\uED5C"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA2",
+      "to": "\uEB33\uED5D"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA3",
+      "to": "\uEB33\uED5E"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA4",
+      "to": "\uEB33\uED5F"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA5",
+      "to": "\uEB33\uED60"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA6",
+      "to": "\uEB33\uED61"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CA7",
+      "to": "\uEB33\uED62"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAA",
+      "to": "\uEB33\uED64"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAB",
+      "to": "\uEB33\uED65"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAC",
+      "to": "\uEB33\uED66"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CAD",
+      "to": "\uEB33\uED67"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB3",
+      "to": "\uEB33\uED6D"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB6",
+      "to": "\uEB33\uED6F"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB7",
+      "to": "\uEB33\uED70"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB8",
+      "to": "\uEB33\uED71"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB9",
+      "to": "\uEB33\uED72"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C95",
+      "to": "\uEB33\uED80"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C96",
+      "to": "\uEB33\uED81"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C98",
+      "to": "\uEB33\uED83"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9B",
+      "to": "\uEB33\uED86"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0C9E",
+      "to": "\uEB33\uED89"
+    },
+    {
+      "from": "\u0CB6\u0CCD\u0CB5",
+      "to": "\uEB33\uED9E"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA8",
+      "to": "\uEB35\uED09"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAE",
+      "to": "\uEB35\uED0E"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAF",
+      "to": "\uEB35\uED0F"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB0",
+      "to": "\uEB35\uED10"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB1",
+      "to": "\uEB35\uED11"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C97",
+      "to": "\uEB35\uED52"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C99",
+      "to": "\uEB35\uED54"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9A",
+      "to": "\uEB35\uED55"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9C",
+      "to": "\uEB35\uED57"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9D",
+      "to": "\uEB35\uED58"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9F",
+      "to": "\uEB35\uED5A"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA0",
+      "to": "\uEB35\uED5B"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA1",
+      "to": "\uEB35\uED5C"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA2",
+      "to": "\uEB35\uED5D"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA3",
+      "to": "\uEB35\uED5E"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA4",
+      "to": "\uEB35\uED5F"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA5",
+      "to": "\uEB35\uED60"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA6",
+      "to": "\uEB35\uED61"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CA7",
+      "to": "\uEB35\uED62"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAA",
+      "to": "\uEB35\uED64"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAB",
+      "to": "\uEB35\uED65"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAC",
+      "to": "\uEB35\uED66"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CAD",
+      "to": "\uEB35\uED67"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB3",
+      "to": "\uEB35\uED6D"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB6",
+      "to": "\uEB35\uED6F"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB7",
+      "to": "\uEB35\uED70"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB8",
+      "to": "\uEB35\uED71"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB9",
+      "to": "\uEB35\uED72"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C95",
+      "to": "\uEB35\uED80"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C96",
+      "to": "\uEB35\uED81"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C98",
+      "to": "\uEB35\uED83"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9B",
+      "to": "\uEB35\uED86"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0C9E",
+      "to": "\uEB35\uED89"
+    },
+    {
+      "from": "\u0CB8\u0CCD\u0CB5",
+      "to": "\uEB35\uED9E"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA8",
+      "to": "\uEB36\uED09"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAE",
+      "to": "\uEB36\uED0E"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAF",
+      "to": "\uEB36\uED0F"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB0",
+      "to": "\uEB36\uED10"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB1",
+      "to": "\uEB36\uED11"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C97",
+      "to": "\uEB36\uED52"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C99",
+      "to": "\uEB36\uED54"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9A",
+      "to": "\uEB36\uED55"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9C",
+      "to": "\uEB36\uED57"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9D",
+      "to": "\uEB36\uED58"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9F",
+      "to": "\uEB36\uED5A"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA0",
+      "to": "\uEB36\uED5B"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA1",
+      "to": "\uEB36\uED5C"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA2",
+      "to": "\uEB36\uED5D"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA3",
+      "to": "\uEB36\uED5E"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA4",
+      "to": "\uEB36\uED5F"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA5",
+      "to": "\uEB36\uED60"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA6",
+      "to": "\uEB36\uED61"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CA7",
+      "to": "\uEB36\uED62"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAA",
+      "to": "\uEB36\uED64"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAB",
+      "to": "\uEB36\uED65"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAC",
+      "to": "\uEB36\uED66"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CAD",
+      "to": "\uEB36\uED67"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB3",
+      "to": "\uEB36\uED6D"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB6",
+      "to": "\uEB36\uED6F"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB7",
+      "to": "\uEB36\uED70"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB8",
+      "to": "\uEB36\uED71"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB9",
+      "to": "\uEB36\uED72"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C95",
+      "to": "\uEB36\uED80"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C96",
+      "to": "\uEB36\uED81"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C98",
+      "to": "\uEB36\uED83"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9B",
+      "to": "\uEB36\uED86"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0C9E",
+      "to": "\uEB36\uED89"
+    },
+    {
+      "from": "\u0CB9\u0CCD\u0CB5",
+      "to": "\uEB36\uED9E"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA8",
+      "to": "\uEB1C\uED09"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAE",
+      "to": "\uEB1C\uED0E"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAF",
+      "to": "\uEB1C\uED0F"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB0",
+      "to": "\uEB1C\uED10"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB1",
+      "to": "\uEB1C\uED11"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C97",
+      "to": "\uEB1C\uED52"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C99",
+      "to": "\uEB1C\uED54"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9A",
+      "to": "\uEB1C\uED55"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9C",
+      "to": "\uEB1C\uED57"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9D",
+      "to": "\uEB1C\uED58"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9F",
+      "to": "\uEB1C\uED5A"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA0",
+      "to": "\uEB1C\uED5B"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA1",
+      "to": "\uEB1C\uED5C"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA2",
+      "to": "\uEB1C\uED5D"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA3",
+      "to": "\uEB1C\uED5E"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA4",
+      "to": "\uEB1C\uED5F"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA5",
+      "to": "\uEB1C\uED60"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA6",
+      "to": "\uEB1C\uED61"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CA7",
+      "to": "\uEB1C\uED62"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAA",
+      "to": "\uEB1C\uED64"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAB",
+      "to": "\uEB1C\uED65"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAC",
+      "to": "\uEB1C\uED66"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CAD",
+      "to": "\uEB1C\uED67"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB3",
+      "to": "\uEB1C\uED6D"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB6",
+      "to": "\uEB1C\uED6F"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB7",
+      "to": "\uEB1C\uED70"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB8",
+      "to": "\uEB1C\uED71"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB9",
+      "to": "\uEB1C\uED72"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C95",
+      "to": "\uEB1C\uED80"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C96",
+      "to": "\uEB1C\uED81"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C98",
+      "to": "\uEB1C\uED83"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9B",
+      "to": "\uEB1C\uED86"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0C9E",
+      "to": "\uEB1C\uED89"
+    },
+    {
+      "from": "\u0C9D\u0CCD\u0CB5",
+      "to": "\uEB1C\uED9E"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA8",
+      "to": "\uEB1F\uED09"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAE",
+      "to": "\uEB1F\uED0E"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAF",
+      "to": "\uEB1F\uED0F"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB0",
+      "to": "\uEB1F\uED10"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB1",
+      "to": "\uEB1F\uED11"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C97",
+      "to": "\uEB1F\uED52"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C99",
+      "to": "\uEB1F\uED54"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9A",
+      "to": "\uEB1F\uED55"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9C",
+      "to": "\uEB1F\uED57"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9D",
+      "to": "\uEB1F\uED58"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9F",
+      "to": "\uEB1F\uED5A"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA0",
+      "to": "\uEB1F\uED5B"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA1",
+      "to": "\uEB1F\uED5C"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA2",
+      "to": "\uEB1F\uED5D"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA3",
+      "to": "\uEB1F\uED5E"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA4",
+      "to": "\uEB1F\uED5F"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA5",
+      "to": "\uEB1F\uED60"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA6",
+      "to": "\uEB1F\uED61"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CA7",
+      "to": "\uEB1F\uED62"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAA",
+      "to": "\uEB1F\uED64"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAB",
+      "to": "\uEB1F\uED65"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAC",
+      "to": "\uEB1F\uED66"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CAD",
+      "to": "\uEB1F\uED67"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB3",
+      "to": "\uEB1F\uED6D"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB6",
+      "to": "\uEB1F\uED6F"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB7",
+      "to": "\uEB1F\uED70"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB8",
+      "to": "\uEB1F\uED71"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB9",
+      "to": "\uEB1F\uED72"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C95",
+      "to": "\uEB1F\uED80"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C96",
+      "to": "\uEB1F\uED81"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C98",
+      "to": "\uEB1F\uED83"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9B",
+      "to": "\uEB1F\uED86"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0C9E",
+      "to": "\uEB1F\uED89"
+    },
+    {
+      "from": "\u0CA0\u0CCD\u0CB5",
+      "to": "\uEB1F\uED9E"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA8",
+      "to": "\uEB21\uED09"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAE",
+      "to": "\uEB21\uED0E"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAF",
+      "to": "\uEB21\uED0F"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB0",
+      "to": "\uEB21\uED10"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB1",
+      "to": "\uEB21\uED11"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C97",
+      "to": "\uEB21\uED52"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C99",
+      "to": "\uEB21\uED54"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9A",
+      "to": "\uEB21\uED55"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9C",
+      "to": "\uEB21\uED57"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9D",
+      "to": "\uEB21\uED58"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9F",
+      "to": "\uEB21\uED5A"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA0",
+      "to": "\uEB21\uED5B"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA1",
+      "to": "\uEB21\uED5C"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA2",
+      "to": "\uEB21\uED5D"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA3",
+      "to": "\uEB21\uED5E"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA4",
+      "to": "\uEB21\uED5F"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA5",
+      "to": "\uEB21\uED60"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA6",
+      "to": "\uEB21\uED61"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CA7",
+      "to": "\uEB21\uED62"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAA",
+      "to": "\uEB21\uED64"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAB",
+      "to": "\uEB21\uED65"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAC",
+      "to": "\uEB21\uED66"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CAD",
+      "to": "\uEB21\uED67"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB3",
+      "to": "\uEB21\uED6D"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB6",
+      "to": "\uEB21\uED6F"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB7",
+      "to": "\uEB21\uED70"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB8",
+      "to": "\uEB21\uED71"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB9",
+      "to": "\uEB21\uED72"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C95",
+      "to": "\uEB21\uED80"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C96",
+      "to": "\uEB21\uED81"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C98",
+      "to": "\uEB21\uED83"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9B",
+      "to": "\uEB21\uED86"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0C9E",
+      "to": "\uEB21\uED89"
+    },
+    {
+      "from": "\u0CA2\u0CCD\u0CB5",
+      "to": "\uEB21\uED9E"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA8",
+      "to": "\uEB24\uED09"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAE",
+      "to": "\uEB24\uED0E"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAF",
+      "to": "\uEB24\uED0F"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB0",
+      "to": "\uEB24\uED10"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB1",
+      "to": "\uEB24\uED11"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C97",
+      "to": "\uEB24\uED52"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C99",
+      "to": "\uEB24\uED54"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9A",
+      "to": "\uEB24\uED55"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9C",
+      "to": "\uEB24\uED57"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9D",
+      "to": "\uEB24\uED58"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9F",
+      "to": "\uEB24\uED5A"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA0",
+      "to": "\uEB24\uED5B"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA1",
+      "to": "\uEB24\uED5C"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA2",
+      "to": "\uEB24\uED5D"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA3",
+      "to": "\uEB24\uED5E"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA4",
+      "to": "\uEB24\uED5F"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA5",
+      "to": "\uEB24\uED60"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA6",
+      "to": "\uEB24\uED61"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CA7",
+      "to": "\uEB24\uED62"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAA",
+      "to": "\uEB24\uED64"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAB",
+      "to": "\uEB24\uED65"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAC",
+      "to": "\uEB24\uED66"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CAD",
+      "to": "\uEB24\uED67"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB3",
+      "to": "\uEB24\uED6D"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB6",
+      "to": "\uEB24\uED6F"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB7",
+      "to": "\uEB24\uED70"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB8",
+      "to": "\uEB24\uED71"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB9",
+      "to": "\uEB24\uED72"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C95",
+      "to": "\uEB24\uED80"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C96",
+      "to": "\uEB24\uED81"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C98",
+      "to": "\uEB24\uED83"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9B",
+      "to": "\uEB24\uED86"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0C9E",
+      "to": "\uEB24\uED89"
+    },
+    {
+      "from": "\u0CA5\u0CCD\u0CB5",
+      "to": "\uEB24\uED9E"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA8",
+      "to": "\uEB2B\uED09"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAE",
+      "to": "\uEB2B\uED0E"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAF",
+      "to": "\uEB2B\uED0F"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB0",
+      "to": "\uEB2B\uED10"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB1",
+      "to": "\uEB2B\uED11"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C97",
+      "to": "\uEB2B\uED52"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C99",
+      "to": "\uEB2B\uED54"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9A",
+      "to": "\uEB2B\uED55"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9C",
+      "to": "\uEB2B\uED57"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9D",
+      "to": "\uEB2B\uED58"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9F",
+      "to": "\uEB2B\uED5A"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA0",
+      "to": "\uEB2B\uED5B"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA1",
+      "to": "\uEB2B\uED5C"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA2",
+      "to": "\uEB2B\uED5D"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA3",
+      "to": "\uEB2B\uED5E"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA4",
+      "to": "\uEB2B\uED5F"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA5",
+      "to": "\uEB2B\uED60"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA6",
+      "to": "\uEB2B\uED61"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CA7",
+      "to": "\uEB2B\uED62"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAA",
+      "to": "\uEB2B\uED64"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAB",
+      "to": "\uEB2B\uED65"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAC",
+      "to": "\uEB2B\uED66"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CAD",
+      "to": "\uEB2B\uED67"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB3",
+      "to": "\uEB2B\uED6D"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB6",
+      "to": "\uEB2B\uED6F"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB7",
+      "to": "\uEB2B\uED70"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB8",
+      "to": "\uEB2B\uED71"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB9",
+      "to": "\uEB2B\uED72"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C95",
+      "to": "\uEB2B\uED80"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C96",
+      "to": "\uEB2B\uED81"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C98",
+      "to": "\uEB2B\uED83"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9B",
+      "to": "\uEB2B\uED86"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0C9E",
+      "to": "\uEB2B\uED89"
+    },
+    {
+      "from": "\u0CAD\u0CCD\u0CB5",
+      "to": "\uEB2B\uED9E"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA8",
+      "to": "\uEB2C\uED09"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAE",
+      "to": "\uEB2C\uED0E"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAF",
+      "to": "\uEB2C\uED0F"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB0",
+      "to": "\uEB2C\uED10"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB1",
+      "to": "\uEB2C\uED11"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C97",
+      "to": "\uEB2C\uED52"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C99",
+      "to": "\uEB2C\uED54"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9A",
+      "to": "\uEB2C\uED55"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9C",
+      "to": "\uEB2C\uED57"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9D",
+      "to": "\uEB2C\uED58"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9F",
+      "to": "\uEB2C\uED5A"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA0",
+      "to": "\uEB2C\uED5B"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA1",
+      "to": "\uEB2C\uED5C"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA2",
+      "to": "\uEB2C\uED5D"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA3",
+      "to": "\uEB2C\uED5E"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA4",
+      "to": "\uEB2C\uED5F"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA5",
+      "to": "\uEB2C\uED60"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA6",
+      "to": "\uEB2C\uED61"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CA7",
+      "to": "\uEB2C\uED62"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAA",
+      "to": "\uEB2C\uED64"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAB",
+      "to": "\uEB2C\uED65"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAC",
+      "to": "\uEB2C\uED66"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CAD",
+      "to": "\uEB2C\uED67"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB3",
+      "to": "\uEB2C\uED6D"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB6",
+      "to": "\uEB2C\uED6F"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB7",
+      "to": "\uEB2C\uED70"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB8",
+      "to": "\uEB2C\uED71"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB9",
+      "to": "\uEB2C\uED72"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C95",
+      "to": "\uEB2C\uED80"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C96",
+      "to": "\uEB2C\uED81"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C98",
+      "to": "\uEB2C\uED83"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9B",
+      "to": "\uEB2C\uED86"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0C9E",
+      "to": "\uEB2C\uED89"
+    },
+    {
+      "from": "\u0CAE\u0CCD\u0CB5",
+      "to": "\uEB2C\uED9E"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA8",
+      "to": "\uEB2D\uED09"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAE",
+      "to": "\uEB2D\uED0E"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAF",
+      "to": "\uEB2D\uED0F"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB0",
+      "to": "\uEB2D\uED10"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB1",
+      "to": "\uEB2D\uED11"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C97",
+      "to": "\uEB2D\uED52"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C99",
+      "to": "\uEB2D\uED54"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9A",
+      "to": "\uEB2D\uED55"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9C",
+      "to": "\uEB2D\uED57"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9D",
+      "to": "\uEB2D\uED58"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9F",
+      "to": "\uEB2D\uED5A"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA0",
+      "to": "\uEB2D\uED5B"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA1",
+      "to": "\uEB2D\uED5C"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA2",
+      "to": "\uEB2D\uED5D"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA3",
+      "to": "\uEB2D\uED5E"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA4",
+      "to": "\uEB2D\uED5F"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA5",
+      "to": "\uEB2D\uED60"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA6",
+      "to": "\uEB2D\uED61"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CA7",
+      "to": "\uEB2D\uED62"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAA",
+      "to": "\uEB2D\uED64"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAB",
+      "to": "\uEB2D\uED65"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAC",
+      "to": "\uEB2D\uED66"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CAD",
+      "to": "\uEB2D\uED67"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB3",
+      "to": "\uEB2D\uED6D"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB6",
+      "to": "\uEB2D\uED6F"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB7",
+      "to": "\uEB2D\uED70"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB8",
+      "to": "\uEB2D\uED71"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB9",
+      "to": "\uEB2D\uED72"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C95",
+      "to": "\uEB2D\uED80"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C96",
+      "to": "\uEB2D\uED81"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C98",
+      "to": "\uEB2D\uED83"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9B",
+      "to": "\uEB2D\uED86"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0C9E",
+      "to": "\uEB2D\uED89"
+    },
+    {
+      "from": "\u0CAF\u0CCD\u0CB5",
+      "to": "\uEB2D\uED9E"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA8",
+      "to": "\uEB2F\uED09"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAE",
+      "to": "\uEB2F\uED0E"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAF",
+      "to": "\uEB2F\uED0F"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB0",
+      "to": "\uEB2F\uED10"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB1",
+      "to": "\uEB2F\uED11"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C97",
+      "to": "\uEB2F\uED52"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C99",
+      "to": "\uEB2F\uED54"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9A",
+      "to": "\uEB2F\uED55"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9C",
+      "to": "\uEB2F\uED57"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9D",
+      "to": "\uEB2F\uED58"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9F",
+      "to": "\uEB2F\uED5A"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA0",
+      "to": "\uEB2F\uED5B"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA1",
+      "to": "\uEB2F\uED5C"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA2",
+      "to": "\uEB2F\uED5D"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA3",
+      "to": "\uEB2F\uED5E"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA4",
+      "to": "\uEB2F\uED5F"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA5",
+      "to": "\uEB2F\uED60"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA6",
+      "to": "\uEB2F\uED61"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CA7",
+      "to": "\uEB2F\uED62"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAA",
+      "to": "\uEB2F\uED64"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAB",
+      "to": "\uEB2F\uED65"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAC",
+      "to": "\uEB2F\uED66"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CAD",
+      "to": "\uEB2F\uED67"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB3",
+      "to": "\uEB2F\uED6D"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB6",
+      "to": "\uEB2F\uED6F"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB7",
+      "to": "\uEB2F\uED70"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB8",
+      "to": "\uEB2F\uED71"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB9",
+      "to": "\uEB2F\uED72"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C95",
+      "to": "\uEB2F\uED80"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C96",
+      "to": "\uEB2F\uED81"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C98",
+      "to": "\uEB2F\uED83"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9B",
+      "to": "\uEB2F\uED86"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0C9E",
+      "to": "\uEB2F\uED89"
+    },
+    {
+      "from": "\u0CB1\u0CCD\u0CB5",
+      "to": "\uEB2F\uED9E"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA8",
+      "to": "\uEB34\uED09"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAE",
+      "to": "\uEB34\uED0E"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAF",
+      "to": "\uEB34\uED0F"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB0",
+      "to": "\uEB34\uED10"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB1",
+      "to": "\uEB34\uED11"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C97",
+      "to": "\uEB34\uED52"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C99",
+      "to": "\uEB34\uED54"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9A",
+      "to": "\uEB34\uED55"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9C",
+      "to": "\uEB34\uED57"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9D",
+      "to": "\uEB34\uED58"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9F",
+      "to": "\uEB34\uED5A"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA0",
+      "to": "\uEB34\uED5B"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA1",
+      "to": "\uEB34\uED5C"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA2",
+      "to": "\uEB34\uED5D"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA3",
+      "to": "\uEB34\uED5E"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA4",
+      "to": "\uEB34\uED5F"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA5",
+      "to": "\uEB34\uED60"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA6",
+      "to": "\uEB34\uED61"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CA7",
+      "to": "\uEB34\uED62"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAA",
+      "to": "\uEB34\uED64"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAB",
+      "to": "\uEB34\uED65"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAC",
+      "to": "\uEB34\uED66"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CAD",
+      "to": "\uEB34\uED67"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB3",
+      "to": "\uEB34\uED6D"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB6",
+      "to": "\uEB34\uED6F"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB7",
+      "to": "\uEB34\uED70"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB8",
+      "to": "\uEB34\uED71"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB9",
+      "to": "\uEB34\uED72"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C95",
+      "to": "\uEB34\uED80"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C96",
+      "to": "\uEB34\uED81"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C98",
+      "to": "\uEB34\uED83"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9B",
+      "to": "\uEB34\uED86"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0C9E",
+      "to": "\uEB34\uED89"
+    },
+    {
+      "from": "\u0CB7\u0CCD\u0CB5",
+      "to": "\uEB34\uED9E"
+    },
+    {
+      "from": "\u0C95\u0CBE",
+      "to": "\uEB70"
+    },
+    {
+      "from": "\u0C96\u0CBE",
+      "to": "\uEB71"
+    },
+    {
+      "from": "\u0C97\u0CBE",
+      "to": "\uEB72"
+    },
+    {
+      "from": "\u0C98\u0CBE",
+      "to": "\uEB73"
+    },
+    {
+      "from": "\u0C99\u0CBE",
+      "to": "\uEB74"
+    },
+    {
+      "from": "\u0C9A\u0CBE",
+      "to": "\uEB75"
+    },
+    {
+      "from": "\u0C9B\u0CBE",
+      "to": "\uEB76"
+    },
+    {
+      "from": "\u0C9C\u0CBE",
+      "to": "\uEB77"
+    },
+    {
+      "from": "\u0C9D\u0CBE",
+      "to": "\uEB78"
+    },
+    {
+      "from": "\u0C9E\u0CBE",
+      "to": "\uEB79"
+    },
+    {
+      "from": "\u0C9F\u0CBE",
+      "to": "\uEB7A"
+    },
+    {
+      "from": "\u0CA0\u0CBE",
+      "to": "\uEB7B"
+    },
+    {
+      "from": "\u0CA1\u0CBE",
+      "to": "\uEB7C"
+    },
+    {
+      "from": "\u0CA2\u0CBE",
+      "to": "\uEB7D"
+    },
+    {
+      "from": "\u0CA3\u0CBE",
+      "to": "\uEB7E"
+    },
+    {
+      "from": "\u0CA4\u0CBE",
+      "to": "\uEB7F"
+    },
+    {
+      "from": "\u0CA5\u0CBE",
+      "to": "\uEB80"
+    },
+    {
+      "from": "\u0CA6\u0CBE",
+      "to": "\uEB81"
+    },
+    {
+      "from": "\u0CA7\u0CBE",
+      "to": "\uEB82"
+    },
+    {
+      "from": "\u0CA8\u0CBE",
+      "to": "\uEB83"
+    },
+    {
+      "from": "\u0CAA\u0CBE",
+      "to": "\uEB84"
+    },
+    {
+      "from": "\u0CAB\u0CBE",
+      "to": "\uEB85"
+    },
+    {
+      "from": "\u0CAC\u0CBE",
+      "to": "\uEB86"
+    },
+    {
+      "from": "\u0CAD\u0CBE",
+      "to": "\uEB87"
+    },
+    {
+      "from": "\u0CAE\u0CBE",
+      "to": "\uEB88"
+    },
+    {
+      "from": "\u0CAF\u0CBE",
+      "to": "\uEB89"
+    },
+    {
+      "from": "\u0CB0\u0CBE",
+      "to": "\uEB8A"
+    },
+    {
+      "from": "\u0CB1\u0CBE",
+      "to": "\uEB8B"
+    },
+    {
+      "from": "\u0CB2\u0CBE",
+      "to": "\uEB8C"
+    },
+    {
+      "from": "\u0CB3\u0CBE",
+      "to": "\uEB8D"
+    },
+    {
+      "from": "\u0CB5\u0CBE",
+      "to": "\uEB8E"
+    },
+    {
+      "from": "\u0CB6\u0CBE",
+      "to": "\uEB8F"
+    },
+    {
+      "from": "\u0CB7\u0CBE",
+      "to": "\uEB90"
+    },
+    {
+      "from": "\u0CB8\u0CBE",
+      "to": "\uEB91"
+    },
+    {
+      "from": "\u0CB9\u0CBE",
+      "to": "\uEB92"
+    },
+    {
+      "from": "\u0C97\u0CBF",
+      "to": "\uEB99"
+    },
+    {
+      "from": "\u0C99\u0CBF",
+      "to": "\uEB9B"
+    },
+    {
+      "from": "\u0C9E\u0CBF",
+      "to": "\uEBA0"
+    },
+    {
+      "from": "\u0C9F\u0CBF",
+      "to": "\uEBA1"
+    },
+    {
+      "from": "\u0CA0\u0CBF",
+      "to": "\uEBA2"
+    },
+    {
+      "from": "\u0CA4\u0CBF",
+      "to": "\uEBA6"
+    },
+    {
+      "from": "\u0CAA\u0CBF",
+      "to": "\uEBAB"
+    },
+    {
+      "from": "\u0CAB\u0CBF",
+      "to": "\uEBAC"
+    },
+    {
+      "from": "\u0CAE\u0CBF",
+      "to": "\uEBAF"
+    },
+    {
+      "from": "\u0CAF\u0CBF",
+      "to": "\uEBB0"
+    },
+    {
+      "from": "\u0CB0\u0CBF",
+      "to": "\uEBB1"
+    },
+    {
+      "from": "\u0CB1\u0CBF",
+      "to": "\uEBB2"
+    },
+    {
+      "from": "\u0CB3\u0CBF",
+      "to": "\uEBB4"
+    },
+    {
+      "from": "\u0CB6\u0CBF",
+      "to": "\uEBB6"
+    },
+    {
+      "from": "\u0CB7\u0CBF",
+      "to": "\uEBB7"
+    },
+    {
+      "from": "\u0C95\u0CC0",
+      "to": "\uEBBE"
+    },
+    {
+      "from": "\u0C96\u0CC0",
+      "to": "\uEBBF"
+    },
+    {
+      "from": "\u0C97\u0CC0",
+      "to": "\uEBC0"
+    },
+    {
+      "from": "\u0C98\u0CC0",
+      "to": "\uEBC1"
+    },
+    {
+      "from": "\u0C99\u0CC0",
+      "to": "\uEBC2"
+    },
+    {
+      "from": "\u0C9A\u0CC0",
+      "to": "\uEBC3"
+    },
+    {
+      "from": "\u0C9B\u0CC0",
+      "to": "\uEBC4"
+    },
+    {
+      "from": "\u0C9C\u0CC0",
+      "to": "\uEBC5"
+    },
+    {
+      "from": "\u0C9E\u0CC0",
+      "to": "\uEBC7"
+    },
+    {
+      "from": "\u0C9F\u0CC0",
+      "to": "\uEBC8"
+    },
+    {
+      "from": "\u0CA0\u0CC0",
+      "to": "\uEBC9"
+    },
+    {
+      "from": "\u0CA1\u0CC0",
+      "to": "\uEBCA"
+    },
+    {
+      "from": "\u0CA2\u0CC0",
+      "to": "\uEBCB"
+    },
+    {
+      "from": "\u0CA3\u0CC0",
+      "to": "\uEBCC"
+    },
+    {
+      "from": "\u0CA4\u0CC0",
+      "to": "\uEBCD"
+    },
+    {
+      "from": "\u0CA5\u0CC0",
+      "to": "\uEBCE"
+    },
+    {
+      "from": "\u0CA6\u0CC0",
+      "to": "\uEBCF"
+    },
+    {
+      "from": "\u0CA7\u0CC0",
+      "to": "\uEBD0"
+    },
+    {
+      "from": "\u0CA8\u0CC0",
+      "to": "\uEBD1"
+    },
+    {
+      "from": "\u0CAA\u0CC0",
+      "to": "\uEBD2"
+    },
+    {
+      "from": "\u0CAB\u0CC0",
+      "to": "\uEBD3"
+    },
+    {
+      "from": "\u0CAC\u0CC0",
+      "to": "\uEBD4"
+    },
+    {
+      "from": "\u0CAD\u0CC0",
+      "to": "\uEBD5"
+    },
+    {
+      "from": "\u0CAE\u0CC0",
+      "to": "\uEBD6"
+    },
+    {
+      "from": "\u0CAF\u0CC0",
+      "to": "\uEBD7"
+    },
+    {
+      "from": "\u0CB0\u0CC0",
+      "to": "\uEBD8"
+    },
+    {
+      "from": "\u0CB1\u0CC0",
+      "to": "\uEBD9"
+    },
+    {
+      "from": "\u0CB2\u0CC0",
+      "to": "\uEBDA"
+    },
+    {
+      "from": "\u0CB3\u0CC0",
+      "to": "\uEBDB"
+    },
+    {
+      "from": "\u0CB5\u0CC0",
+      "to": "\uEBDC"
+    },
+    {
+      "from": "\u0CB6\u0CC0",
+      "to": "\uEBDD"
+    },
+    {
+      "from": "\u0CB7\u0CC0",
+      "to": "\uEBDE"
+    },
+    {
+      "from": "\u0CB8\u0CC0",
+      "to": "\uEBDF"
+    },
+    {
+      "from": "\u0CB9\u0CC0",
+      "to": "\uEBE0"
+    },
+    {
+      "from": "\u0C95\u0CC6",
+      "to": "\uEBE5"
+    },
+    {
+      "from": "\u0C96\u0CC6",
+      "to": "\uEBE6"
+    },
+    {
+      "from": "\u0C97\u0CC6",
+      "to": "\uEBE7"
+    },
+    {
+      "from": "\u0C98\u0CC6",
+      "to": "\uEBE8"
+    },
+    {
+      "from": "\u0C99\u0CC6",
+      "to": "\uEBE9"
+    },
+    {
+      "from": "\u0C9A\u0CC6",
+      "to": "\uEBEA"
+    },
+    {
+      "from": "\u0C9B\u0CC6",
+      "to": "\uEBEB"
+    },
+    {
+      "from": "\u0C9C\u0CC6",
+      "to": "\uEBEC"
+    },
+    {
+      "from": "\u0C9E\u0CC6",
+      "to": "\uEBEE"
+    },
+    {
+      "from": "\u0C9F\u0CC6",
+      "to": "\uEBEF"
+    },
+    {
+      "from": "\u0CA0\u0CC6",
+      "to": "\uEBF0"
+    },
+    {
+      "from": "\u0CA1\u0CC6",
+      "to": "\uEBF1"
+    },
+    {
+      "from": "\u0CA2\u0CC6",
+      "to": "\uEBF2"
+    },
+    {
+      "from": "\u0CA3\u0CC6",
+      "to": "\uEBF3"
+    },
+    {
+      "from": "\u0CA4\u0CC6",
+      "to": "\uEBF4"
+    },
+    {
+      "from": "\u0CA5\u0CC6",
+      "to": "\uEBF5"
+    },
+    {
+      "from": "\u0CA6\u0CC6",
+      "to": "\uEBF6"
+    },
+    {
+      "from": "\u0CA7\u0CC6",
+      "to": "\uEBF7"
+    },
+    {
+      "from": "\u0CA8\u0CC6",
+      "to": "\uEBF8"
+    },
+    {
+      "from": "\u0CAA\u0CC6",
+      "to": "\uEBF9"
+    },
+    {
+      "from": "\u0CAB\u0CC6",
+      "to": "\uEBFA"
+    },
+    {
+      "from": "\u0CAC\u0CC6",
+      "to": "\uEBFB"
+    },
+    {
+      "from": "\u0CAD\u0CC6",
+      "to": "\uEBFC"
+    },
+    {
+      "from": "\u0CAE\u0CC6",
+      "to": "\uEBFD"
+    },
+    {
+      "from": "\u0CAF\u0CC6",
+      "to": "\uEBFE"
+    },
+    {
+      "from": "\u0CB0\u0CC6",
+      "to": "\uEBFF"
+    },
+    {
+      "from": "\u0CB1\u0CC6",
+      "to": "\uEC00"
+    },
+    {
+      "from": "\u0CB2\u0CC6",
+      "to": "\uEC01"
+    },
+    {
+      "from": "\u0CB3\u0CC6",
+      "to": "\uEC02"
+    },
+    {
+      "from": "\u0CB5\u0CC6",
+      "to": "\uEC03"
+    },
+    {
+      "from": "\u0CB6\u0CC6",
+      "to": "\uEC04"
+    },
+    {
+      "from": "\u0CB7\u0CC6",
+      "to": "\uEC05"
+    },
+    {
+      "from": "\u0CB8\u0CC6",
+      "to": "\uEC06"
+    },
+    {
+      "from": "\u0CB9\u0CC6",
+      "to": "\uEC07"
+    },
+    {
+      "from": "\u0C95\u0CC7",
+      "to": "\uEC0C"
+    },
+    {
+      "from": "\u0C96\u0CC7",
+      "to": "\uEC0D"
+    },
+    {
+      "from": "\u0C97\u0CC7",
+      "to": "\uEC0E"
+    },
+    {
+      "from": "\u0C98\u0CC7",
+      "to": "\uEC0F"
+    },
+    {
+      "from": "\u0C99\u0CC7",
+      "to": "\uEC10"
+    },
+    {
+      "from": "\u0C9A\u0CC7",
+      "to": "\uEC11"
+    },
+    {
+      "from": "\u0C9B\u0CC7",
+      "to": "\uEC12"
+    },
+    {
+      "from": "\u0C9C\u0CC7",
+      "to": "\uEC13"
+    },
+    {
+      "from": "\u0C9E\u0CC7",
+      "to": "\uEC15"
+    },
+    {
+      "from": "\u0C9F\u0CC7",
+      "to": "\uEC16"
+    },
+    {
+      "from": "\u0CA0\u0CC7",
+      "to": "\uEC17"
+    },
+    {
+      "from": "\u0CA1\u0CC7",
+      "to": "\uEC18"
+    },
+    {
+      "from": "\u0CA2\u0CC7",
+      "to": "\uEC19"
+    },
+    {
+      "from": "\u0CA3\u0CC7",
+      "to": "\uEC1A"
+    },
+    {
+      "from": "\u0CA4\u0CC7",
+      "to": "\uEC1B"
+    },
+    {
+      "from": "\u0CA5\u0CC7",
+      "to": "\uEC1C"
+    },
+    {
+      "from": "\u0CA6\u0CC7",
+      "to": "\uEC1D"
+    },
+    {
+      "from": "\u0CA7\u0CC7",
+      "to": "\uEC1E"
+    },
+    {
+      "from": "\u0CA8\u0CC7",
+      "to": "\uEC1F"
+    },
+    {
+      "from": "\u0CAA\u0CC7",
+      "to": "\uEC20"
+    },
+    {
+      "from": "\u0CAB\u0CC7",
+      "to": "\uEC21"
+    },
+    {
+      "from": "\u0CAC\u0CC7",
+      "to": "\uEC22"
+    },
+    {
+      "from": "\u0CAD\u0CC7",
+      "to": "\uEC23"
+    },
+    {
+      "from": "\u0CAE\u0CC7",
+      "to": "\uEC24"
+    },
+    {
+      "from": "\u0CAF\u0CC7",
+      "to": "\uEC25"
+    },
+    {
+      "from": "\u0CB0\u0CC7",
+      "to": "\uEC26"
+    },
+    {
+      "from": "\u0CB1\u0CC7",
+      "to": "\uEC27"
+    },
+    {
+      "from": "\u0CB2\u0CC7",
+      "to": "\uEC28"
+    },
+    {
+      "from": "\u0CB3\u0CC7",
+      "to": "\uEC29"
+    },
+    {
+      "from": "\u0CB5\u0CC7",
+      "to": "\uEC2A"
+    },
+    {
+      "from": "\u0CB6\u0CC7",
+      "to": "\uEC2B"
+    },
+    {
+      "from": "\u0CB7\u0CC7",
+      "to": "\uEC2C"
+    },
+    {
+      "from": "\u0CB8\u0CC7",
+      "to": "\uEC2D"
+    },
+    {
+      "from": "\u0CB9\u0CC7",
+      "to": "\uEC2E"
+    },
+    {
+      "from": "\u0C95\u0CC8",
+      "to": "\uEC33"
+    },
+    {
+      "from": "\u0C96\u0CC8",
+      "to": "\uEC34"
+    },
+    {
+      "from": "\u0C97\u0CC8",
+      "to": "\uEC35"
+    },
+    {
+      "from": "\u0C98\u0CC8",
+      "to": "\uEC36"
+    },
+    {
+      "from": "\u0C99\u0CC8",
+      "to": "\uEC37"
+    },
+    {
+      "from": "\u0C9A\u0CC8",
+      "to": "\uEC38"
+    },
+    {
+      "from": "\u0C9B\u0CC8",
+      "to": "\uEC39"
+    },
+    {
+      "from": "\u0C9C\u0CC8",
+      "to": "\uEC3A"
+    },
+    {
+      "from": "\u0C9D\u0CC8",
+      "to": "\uEC3B"
+    },
+    {
+      "from": "\u0C9E\u0CC8",
+      "to": "\uEC3C"
+    },
+    {
+      "from": "\u0C9F\u0CC8",
+      "to": "\uEC3D"
+    },
+    {
+      "from": "\u0CA0\u0CC8",
+      "to": "\uEC3E"
+    },
+    {
+      "from": "\u0CA1\u0CC8",
+      "to": "\uEC3F"
+    },
+    {
+      "from": "\u0CA2\u0CC8",
+      "to": "\uEC40"
+    },
+    {
+      "from": "\u0CA3\u0CC8",
+      "to": "\uEC41"
+    },
+    {
+      "from": "\u0CA4\u0CC8",
+      "to": "\uEC42"
+    },
+    {
+      "from": "\u0CA5\u0CC8",
+      "to": "\uEC43"
+    },
+    {
+      "from": "\u0CA6\u0CC8",
+      "to": "\uEC44"
+    },
+    {
+      "from": "\u0CA7\u0CC8",
+      "to": "\uEC45"
+    },
+    {
+      "from": "\u0CA8\u0CC8",
+      "to": "\uEC46"
+    },
+    {
+      "from": "\u0CAA\u0CC8",
+      "to": "\uEC47"
+    },
+    {
+      "from": "\u0CAB\u0CC8",
+      "to": "\uEC48"
+    },
+    {
+      "from": "\u0CAC\u0CC8",
+      "to": "\uEC49"
+    },
+    {
+      "from": "\u0CAD\u0CC8",
+      "to": "\uEC4A"
+    },
+    {
+      "from": "\u0CAE\u0CC8",
+      "to": "\uEC4B"
+    },
+    {
+      "from": "\u0CAF\u0CC8",
+      "to": "\uEC4C"
+    },
+    {
+      "from": "\u0CB0\u0CC8",
+      "to": "\uEC4D"
+    },
+    {
+      "from": "\u0CB1\u0CC8",
+      "to": "\uEC4E"
+    },
+    {
+      "from": "\u0CB2\u0CC8",
+      "to": "\uEC4F"
+    },
+    {
+      "from": "\u0CB3\u0CC8",
+      "to": "\uEC50"
+    },
+    {
+      "from": "\u0CB5\u0CC8",
+      "to": "\uEC51"
+    },
+    {
+      "from": "\u0CB6\u0CC8",
+      "to": "\uEC52"
+    },
+    {
+      "from": "\u0CB7\u0CC8",
+      "to": "\uEC53"
+    },
+    {
+      "from": "\u0CB8\u0CC8",
+      "to": "\uEC54"
+    },
+    {
+      "from": "\u0CB9\u0CC8",
+      "to": "\uEC55"
+    },
+    {
+      "from": "\u0C95\u0CCA",
+      "to": "\uEC5A"
+    },
+    {
+      "from": "\u0C97\u0CCA",
+      "to": "\uEC5C"
+    },
+    {
+      "from": "\u0CA0\u0CCA",
+      "to": "\uEC65"
+    },
+    {
+      "from": "\u0CA4\u0CCA",
+      "to": "\uEC69"
+    },
+    {
+      "from": "\u0CA8\u0CCA",
+      "to": "\uEC6D"
+    },
+    {
+      "from": "\u0CB0\u0CCA",
+      "to": "\uEC74"
+    },
+    {
+      "from": "\u0CB3\u0CCA",
+      "to": "\uEC77"
+    },
+    {
+      "from": "\u0CB8\u0CCA",
+      "to": "\uEC7B"
+    },
+    {
+      "from": "\u0C95\u0CCB",
+      "to": "\uEC81"
+    },
+    {
+      "from": "\u0C97\u0CCB",
+      "to": "\uEC83"
+    },
+    {
+      "from": "\u0CA0\u0CCB",
+      "to": "\uEC8C"
+    },
+    {
+      "from": "\u0CA4\u0CCB",
+      "to": "\uEC90"
+    },
+    {
+      "from": "\u0CA8\u0CCB",
+      "to": "\uEC94"
+    },
+    {
+      "from": "\u0CB0\u0CCB",
+      "to": "\uEC9B"
+    },
+    {
+      "from": "\u0CB3\u0CCB",
+      "to": "\uEC9E"
+    },
+    {
+      "from": "\u0CB6\u0CCB",
+      "to": "\uECA0"
+    },
+    {
+      "from": "\u0CB8\u0CCB",
+      "to": "\uECA2"
+    },
+    {
+      "from": "\u0C95\u0CCC",
+      "to": "\uECA8"
+    },
+    {
+      "from": "\u0C96\u0CCC",
+      "to": "\uECA9"
+    },
+    {
+      "from": "\u0C97\u0CCC",
+      "to": "\uECAA"
+    },
+    {
+      "from": "\u0C98\u0CCC",
+      "to": "\uECAB"
+    },
+    {
+      "from": "\u0C99\u0CCC",
+      "to": "\uECAC"
+    },
+    {
+      "from": "\u0C9A\u0CCC",
+      "to": "\uECAD"
+    },
+    {
+      "from": "\u0C9B\u0CCC",
+      "to": "\uECAE"
+    },
+    {
+      "from": "\u0C9C\u0CCC",
+      "to": "\uECAF"
+    },
+    {
+      "from": "\u0C9D\u0CCC",
+      "to": "\uECB0"
+    },
+    {
+      "from": "\u0C9E\u0CCC",
+      "to": "\uECB1"
+    },
+    {
+      "from": "\u0C9F\u0CCC",
+      "to": "\uECB2"
+    },
+    {
+      "from": "\u0CA0\u0CCC",
+      "to": "\uECB3"
+    },
+    {
+      "from": "\u0CA1\u0CCC",
+      "to": "\uECB4"
+    },
+    {
+      "from": "\u0CA2\u0CCC",
+      "to": "\uECB5"
+    },
+    {
+      "from": "\u0CA3\u0CCC",
+      "to": "\uECB6"
+    },
+    {
+      "from": "\u0CA4\u0CCC",
+      "to": "\uECB7"
+    },
+    {
+      "from": "\u0CA5\u0CCC",
+      "to": "\uECB8"
+    },
+    {
+      "from": "\u0CA6\u0CCC",
+      "to": "\uECB9"
+    },
+    {
+      "from": "\u0CA7\u0CCC",
+      "to": "\uECBA"
+    },
+    {
+      "from": "\u0CA8\u0CCC",
+      "to": "\uECBB"
+    },
+    {
+      "from": "\u0CAA\u0CCC",
+      "to": "\uECBC"
+    },
+    {
+      "from": "\u0CAB\u0CCC",
+      "to": "\uECBD"
+    },
+    {
+      "from": "\u0CAC\u0CCC",
+      "to": "\uECBE"
+    },
+    {
+      "from": "\u0CAD\u0CCC",
+      "to": "\uECBF"
+    },
+    {
+      "from": "\u0CAE\u0CCC",
+      "to": "\uECC0"
+    },
+    {
+      "from": "\u0CAF\u0CCC",
+      "to": "\uECC1"
+    },
+    {
+      "from": "\u0CB0\u0CCC",
+      "to": "\uECC2"
+    },
+    {
+      "from": "\u0CB1\u0CCC",
+      "to": "\uECC3"
+    },
+    {
+      "from": "\u0CB2\u0CCC",
+      "to": "\uECC4"
+    },
+    {
+      "from": "\u0CB3\u0CCC",
+      "to": "\uECC5"
+    },
+    {
+      "from": "\u0CB5\u0CCC",
+      "to": "\uECC6"
+    },
+    {
+      "from": "\u0CB6\u0CCC",
+      "to": "\uECC7"
+    },
+    {
+      "from": "\u0CB7\u0CCC",
+      "to": "\uECC8"
+    },
+    {
+      "from": "\u0CB8\u0CCC",
+      "to": "\uECC9"
+    },
+    {
+      "from": "\u0CB9\u0CCC",
+      "to": "\uECCA"
+    },
+    {
+      "from": "\u0C95\u0CCD",
+      "to": "\uECCF"
+    },
+    {
+      "from": "\u0C96\u0CCD",
+      "to": "\uECD0"
+    },
+    {
+      "from": "\u0C97\u0CCD",
+      "to": "\uECD1"
+    },
+    {
+      "from": "\u0C98\u0CCD",
+      "to": "\uECD2"
+    },
+    {
+      "from": "\u0C99\u0CCD",
+      "to": "\uECD3"
+    },
+    {
+      "from": "\u0C9A\u0CCD",
+      "to": "\uECD4"
+    },
+    {
+      "from": "\u0C9B\u0CCD",
+      "to": "\uECD5"
+    },
+    {
+      "from": "\u0C9C\u0CCD",
+      "to": "\uECD6"
+    },
+    {
+      "from": "\u0C9D\u0CCD",
+      "to": "\uECD7"
+    },
+    {
+      "from": "\u0C9E\u0CCD",
+      "to": "\uECD8"
+    },
+    {
+      "from": "\u0C9F\u0CCD",
+      "to": "\uECD9"
+    },
+    {
+      "from": "\u0CA0\u0CCD",
+      "to": "\uECDA"
+    },
+    {
+      "from": "\u0CA1\u0CCD",
+      "to": "\uECDB"
+    },
+    {
+      "from": "\u0CA2\u0CCD",
+      "to": "\uECDC"
+    },
+    {
+      "from": "\u0CA3\u0CCD",
+      "to": "\uECDD"
+    },
+    {
+      "from": "\u0CA4\u0CCD",
+      "to": "\uECDE"
+    },
+    {
+      "from": "\u0CA5\u0CCD",
+      "to": "\uECDF"
+    },
+    {
+      "from": "\u0CA6\u0CCD",
+      "to": "\uECE0"
+    },
+    {
+      "from": "\u0CA7\u0CCD",
+      "to": "\uECE1"
+    },
+    {
+      "from": "\u0CA8\u0CCD",
+      "to": "\uECE2"
+    },
+    {
+      "from": "\u0CAA\u0CCD",
+      "to": "\uECE3"
+    },
+    {
+      "from": "\u0CAB\u0CCD",
+      "to": "\uECE4"
+    },
+    {
+      "from": "\u0CAC\u0CCD",
+      "to": "\uECE5"
+    },
+    {
+      "from": "\u0CAD\u0CCD",
+      "to": "\uECE6"
+    },
+    {
+      "from": "\u0CAE\u0CCD",
+      "to": "\uECE7"
+    },
+    {
+      "from": "\u0CAF\u0CCD",
+      "to": "\uECE8"
+    },
+    {
+      "from": "\u0CB0\u0CCD",
+      "to": "\uECE9"
+    },
+    {
+      "from": "\u0CB1\u0CCD",
+      "to": "\uECEA"
+    },
+    {
+      "from": "\u0CB2\u0CCD",
+      "to": "\uECEB"
+    },
+    {
+      "from": "\u0CB3\u0CCD",
+      "to": "\uECEC"
+    },
+    {
+      "from": "\u0CB5\u0CCD",
+      "to": "\uECED"
+    },
+    {
+      "from": "\u0CB6\u0CCD",
+      "to": "\uECEE"
+    },
+    {
+      "from": "\u0CB7\u0CCD",
+      "to": "\uECEF"
+    },
+    {
+      "from": "\u0CB8\u0CCD",
+      "to": "\uECF0"
+    },
+    {
+      "from": "\u0CB9\u0CCD",
+      "to": "\uECF1"
+    },
+    {
+      "from": "\u0CCD\u0CA8",
+      "to": "\uED09"
+    },
+    {
+      "from": "\u0CCD\u0CAE",
+      "to": "\uED0E"
+    },
+    {
+      "from": "\u0CCD\u0CAF",
+      "to": "\uED0F"
+    },
+    {
+      "from": "\u0CCD\u0CB0",
+      "to": "\uED10"
+    },
+    {
+      "from": "\u0CCD\u0CB1",
+      "to": "\uED11"
+    },
+    {
+      "from": "\u0CAA\u0CC1",
+      "to": "\uED19"
+    },
+    {
+      "from": "\u0CAA\u0CC2",
+      "to": "\uED1A"
+    },
+    {
+      "from": "\u0CAB\u0CC1",
+      "to": "\uED1D"
+    },
+    {
+      "from": "\u0CAB\u0CC2",
+      "to": "\uED1E"
+    },
+    {
+      "from": "\u0CB5\u0CC1",
+      "to": "\uED21"
+    },
+    {
+      "from": "\u0CB5\u0CC2",
+      "to": "\uED22"
+    },
+    {
+      "from": "\u0CCD\u0C97",
+      "to": "\uED52"
+    },
+    {
+      "from": "\u0CCD\u0C99",
+      "to": "\uED54"
+    },
+    {
+      "from": "\u0CCD\u0C9A",
+      "to": "\uED55"
+    },
+    {
+      "from": "\u0CCD\u0C9C",
+      "to": "\uED57"
+    },
+    {
+      "from": "\u0CCD\u0C9D",
+      "to": "\uED58"
+    },
+    {
+      "from": "\u0CCD\u0C9F",
+      "to": "\uED5A"
+    },
+    {
+      "from": "\u0CCD\u0CA0",
+      "to": "\uED5B"
+    },
+    {
+      "from": "\u0CCD\u0CA1",
+      "to": "\uED5C"
+    },
+    {
+      "from": "\u0CCD\u0CA2",
+      "to": "\uED5D"
+    },
+    {
+      "from": "\u0CCD\u0CA3",
+      "to": "\uED5E"
+    },
+    {
+      "from": "\u0CCD\u0CA4",
+      "to": "\uED5F"
+    },
+    {
+      "from": "\u0CCD\u0CA5",
+      "to": "\uED60"
+    },
+    {
+      "from": "\u0CCD\u0CA6",
+      "to": "\uED61"
+    },
+    {
+      "from": "\u0CCD\u0CA7",
+      "to": "\uED62"
+    },
+    {
+      "from": "\u0CCD\u0CAA",
+      "to": "\uED64"
+    },
+    {
+      "from": "\u0CCD\u0CAB",
+      "to": "\uED65"
+    },
+    {
+      "from": "\u0CCD\u0CAC",
+      "to": "\uED66"
+    },
+    {
+      "from": "\u0CCD\u0CAD",
+      "to": "\uED67"
+    },
+    {
+      "from": "\u0CCD\u0CB3",
+      "to": "\uED6D"
+    },
+    {
+      "from": "\u0CCD\u0CB6",
+      "to": "\uED6F"
+    },
+    {
+      "from": "\u0CCD\u0CB7",
+      "to": "\uED70"
+    },
+    {
+      "from": "\u0CCD\u0CB8",
+      "to": "\uED71"
+    },
+    {
+      "from": "\u0CCD\u0CB9",
+      "to": "\uED72"
+    },
+    {
+      "from": "\u0CCD\u0C95",
+      "to": "\uED80"
+    },
+    {
+      "from": "\u0CCD\u0C96",
+      "to": "\uED81"
+    },
+    {
+      "from": "\u0CCD\u0C98",
+      "to": "\uED83"
+    },
+    {
+      "from": "\u0CCD\u0C9B",
+      "to": "\uED86"
+    },
+    {
+      "from": "\u0CCD\u0C9E",
+      "to": "\uED89"
+    },
+    {
+      "from": "\u0CCD\u0CB5",
+      "to": "\uED9E"
+    },
+    {
+      "from": "\u00A2",
+      "to": "\u00A2"
+    },
+    {
+      "from": "\u00D7",
+      "to": "\u00D7"
+    },
+    {
+      "from": "\u00F7",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u2013",
+      "to": "\u2013"
+    },
+    {
+      "from": "\u2014",
+      "to": "\u2014"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u2018"
+    },
+    {
+      "from": "\u2019",
+      "to": "\u2019"
+    },
+    {
+      "from": "\u201C",
+      "to": "\u201C"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u201D"
+    },
+    {
+      "from": "\u2026",
+      "to": "\u2026"
+    },
+    {
+      "from": "\u20B9",
+      "to": "\u20B9"
+    },
+    {
+      "from": "\u0C82",
+      "to": "\uEB04"
+    },
+    {
+      "from": "\u0C83",
+      "to": "\uEB05"
+    },
+    {
+      "from": "\u0C85",
+      "to": "\uEB06"
+    },
+    {
+      "from": "\u0C86",
+      "to": "\uEB07"
+    },
+    {
+      "from": "\u0C87",
+      "to": "\uEB08"
+    },
+    {
+      "from": "\u0C88",
+      "to": "\uEB09"
+    },
+    {
+      "from": "\u0C89",
+      "to": "\uEB0A"
+    },
+    {
+      "from": "\u0C8A",
+      "to": "\uEB0B"
+    },
+    {
+      "from": "\u0C8B",
+      "to": "\uEB0C"
+    },
+    {
+      "from": "\u0C8C",
+      "to": "\uEB0D"
+    },
+    {
+      "from": "\u0C8E",
+      "to": "\uEB0E"
+    },
+    {
+      "from": "\u0C8F",
+      "to": "\uEB0F"
+    },
+    {
+      "from": "\u0C90",
+      "to": "\uEB10"
+    },
+    {
+      "from": "\u0C92",
+      "to": "\uEB11"
+    },
+    {
+      "from": "\u0C93",
+      "to": "\uEB12"
+    },
+    {
+      "from": "\u0C94",
+      "to": "\uEB13"
+    },
+    {
+      "from": "\u0C95",
+      "to": "\uEB14"
+    },
+    {
+      "from": "\u0C96",
+      "to": "\uEB15"
+    },
+    {
+      "from": "\u0C97",
+      "to": "\uEB16"
+    },
+    {
+      "from": "\u0C98",
+      "to": "\uEB17"
+    },
+    {
+      "from": "\u0C99",
+      "to": "\uEB18"
+    },
+    {
+      "from": "\u0C9A",
+      "to": "\uEB19"
+    },
+    {
+      "from": "\u0C9B",
+      "to": "\uEB1A"
+    },
+    {
+      "from": "\u0C9C",
+      "to": "\uEB1B"
+    },
+    {
+      "from": "\u0C9E",
+      "to": "\uEB1D"
+    },
+    {
+      "from": "\u0C9F",
+      "to": "\uEB1E"
+    },
+    {
+      "from": "\u0CA1",
+      "to": "\uEB20"
+    },
+    {
+      "from": "\u0CA3",
+      "to": "\uEB22"
+    },
+    {
+      "from": "\u0CA4",
+      "to": "\uEB23"
+    },
+    {
+      "from": "\u0CA6",
+      "to": "\uEB25"
+    },
+    {
+      "from": "\u0CA7",
+      "to": "\uEB26"
+    },
+    {
+      "from": "\u0CA8",
+      "to": "\uEB27"
+    },
+    {
+      "from": "\u0CAA",
+      "to": "\uEB28"
+    },
+    {
+      "from": "\u0CAB",
+      "to": "\uEB29"
+    },
+    {
+      "from": "\u0CAC",
+      "to": "\uEB2A"
+    },
+    {
+      "from": "\u0CB0",
+      "to": "\uEB2E"
+    },
+    {
+      "from": "\u0CB2",
+      "to": "\uEB30"
+    },
+    {
+      "from": "\u0CB3",
+      "to": "\uEB31"
+    },
+    {
+      "from": "\u0CB5",
+      "to": "\uEB32"
+    },
+    {
+      "from": "\u0CB6",
+      "to": "\uEB33"
+    },
+    {
+      "from": "\u0CB8",
+      "to": "\uEB35"
+    },
+    {
+      "from": "\u0CB9",
+      "to": "\uEB36"
+    },
+    {
+      "from": "\u0CBE",
+      "to": "\uEB37"
+    },
+    {
+      "from": "\u0CBF",
+      "to": "\uEB38"
+    },
+    {
+      "from": "\u0CC1",
+      "to": "\uEB3A"
+    },
+    {
+      "from": "\u0CC2",
+      "to": "\uEB3B"
+    },
+    {
+      "from": "\u0CC3",
+      "to": "\uEB3C"
+    },
+    {
+      "from": "\u0CC4",
+      "to": "\uEB3D"
+    },
+    {
+      "from": "\u0CCC",
+      "to": "\uEB43"
+    },
+    {
+      "from": "\u0CCD",
+      "to": "\uEB44"
+    },
+    {
+      "from": "\u0CD5",
+      "to": "\uEB45"
+    },
+    {
+      "from": "\u0CD6",
+      "to": "\uEB46"
+    },
+    {
+      "from": "\u0CDE",
+      "to": "\uEB47"
+    },
+    {
+      "from": "\u0CE0",
+      "to": "\uEB48"
+    },
+    {
+      "from": "\u0CE1",
+      "to": "\uEB49"
+    },
+    {
+      "from": "\u0CE6",
+      "to": "\uEB4A"
+    },
+    {
+      "from": "\u0CE7",
+      "to": "\uEB4B"
+    },
+    {
+      "from": "\u0CE8",
+      "to": "\uEB4C"
+    },
+    {
+      "from": "\u0CE9",
+      "to": "\uEB4D"
+    },
+    {
+      "from": "\u0CEA",
+      "to": "\uEB4E"
+    },
+    {
+      "from": "\u0CEB",
+      "to": "\uEB4F"
+    },
+    {
+      "from": "\u0CEC",
+      "to": "\uEB50"
+    },
+    {
+      "from": "\u0CED",
+      "to": "\uEB51"
+    },
+    {
+      "from": "\u0CEE",
+      "to": "\uEB52"
+    },
+    {
+      "from": "\u0CEF",
+      "to": "\uEB53"
+    },
+    {
+      "from": "\u0CBC",
+      "to": "\uEB54"
+    },
+    {
+      "from": "\u0CBD",
+      "to": "\uEB55"
+    },
+    {
+      "from": "\u0964",
+      "to": "\uEB5A"
+    },
+    {
+      "from": "\u0965",
+      "to": "\uEB5B"
+    },
+    {
+      "from": "\u0CE2",
+      "to": "\uEDEE"
+    },
+    {
+      "from": "\u0CE3",
+      "to": "\uEDEF"
+    },
+    {
+      "from": "\u0C9D",
+      "to": "\uEB1C"
+    },
+    {
+      "from": "\u0CA0",
+      "to": "\uEB1F"
+    },
+    {
+      "from": "\u0CA2",
+      "to": "\uEB21"
+    },
+    {
+      "from": "\u0CA5",
+      "to": "\uEB24"
+    },
+    {
+      "from": "\u0CAD",
+      "to": "\uEB2B"
+    },
+    {
+      "from": "\u0CAE",
+      "to": "\uEB2C"
+    },
+    {
+      "from": "\u0CAF",
+      "to": "\uEB2D"
+    },
+    {
+      "from": "\u0CB1",
+      "to": "\uEB2F"
+    },
+    {
+      "from": "\u0CB7",
+      "to": "\uEB34"
+    },
+    {
+      "from": "\u0CC0",
+      "to": "\uEB39"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB7\u0CCD\u0CC6\u0CC2\u0CD5",
+      "to": "\uECA4"
+    },
+    {
+      "from": "\u0C95\u0CBE\u0CB7",
+      "to": "\uEB93"
+    },
+    {
+      "from": "\u0C9C\u0CBE\u0C9E",
+      "to": "\uEB94"
+    },
+    {
+      "from": "\u0C95\u0CBF\u0CD5\u0CB7\u0CCD",
+      "to": "\uEBE1"
+    },
+    {
+      "from": "\u0C95\u0CC0\u0CB7",
+      "to": "\uEBE1"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CB7",
+      "to": "\uEC08"
+    },
+    {
+      "from": "\u0C9C\u0CC6\u0C9E",
+      "to": "\uEC09"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CD5\u0CB7\u0CCD",
+      "to": "\uEC2F"
+    },
+    {
+      "from": "\u0C95\u0CC7\u0CB7",
+      "to": "\uEC2F"
+    },
+    {
+      "from": "\u0C9C\u0CC6\u0CD5\u0C9E\u0CCD",
+      "to": "\uEC30"
+    },
+    {
+      "from": "\u0C9C\u0CC7\u0C9E",
+      "to": "\uEC30"
+    },
+    {
+      "from": "\u0C9C\u0CD6\u0C9E",
+      "to": "\uEC57"
+    },
+    {
+      "from": "\u0C95\u0CCC\u0CB7",
+      "to": "\uECCB"
+    },
+    {
+      "from": "\u0C9C\u0CCC\u0C9E",
+      "to": "\uECCC"
+    },
+    {
+      "from": "\u0C95\u0CBF\u0CD5",
+      "to": "\uEBBE"
+    },
+    {
+      "from": "\u0C96\u0CBF\u0CD5",
+      "to": "\uEBBF"
+    },
+    {
+      "from": "\u0C97\u0CBF\u0CD5",
+      "to": "\uEBC0"
+    },
+    {
+      "from": "\u0C98\u0CBF\u0CD5",
+      "to": "\uEBC1"
+    },
+    {
+      "from": "\u0C99\u0CBF\u0CD5",
+      "to": "\uEBC2"
+    },
+    {
+      "from": "\u0C9A\u0CBF\u0CD5",
+      "to": "\uEBC3"
+    },
+    {
+      "from": "\u0C9B\u0CBF\u0CD5",
+      "to": "\uEBC4"
+    },
+    {
+      "from": "\u0C9C\u0CBF\u0CD5",
+      "to": "\uEBC5"
+    },
+    {
+      "from": "\u0C9E\u0CBF\u0CD5",
+      "to": "\uEBC7"
+    },
+    {
+      "from": "\u0C9F\u0CBF\u0CD5",
+      "to": "\uEBC8"
+    },
+    {
+      "from": "\u0CA0\u0CBF\u0CD5",
+      "to": "\uEBC9"
+    },
+    {
+      "from": "\u0CA1\u0CBF\u0CD5",
+      "to": "\uEBCA"
+    },
+    {
+      "from": "\u0CA2\u0CBF\u0CD5",
+      "to": "\uEBCB"
+    },
+    {
+      "from": "\u0CA3\u0CBF\u0CD5",
+      "to": "\uEBCC"
+    },
+    {
+      "from": "\u0CA4\u0CBF\u0CD5",
+      "to": "\uEBCD"
+    },
+    {
+      "from": "\u0CA5\u0CBF\u0CD5",
+      "to": "\uEBCE"
+    },
+    {
+      "from": "\u0CA6\u0CBF\u0CD5",
+      "to": "\uEBCF"
+    },
+    {
+      "from": "\u0CA7\u0CBF\u0CD5",
+      "to": "\uEBD0"
+    },
+    {
+      "from": "\u0CA8\u0CBF\u0CD5",
+      "to": "\uEBD1"
+    },
+    {
+      "from": "\u0CAA\u0CBF\u0CD5",
+      "to": "\uEBD2"
+    },
+    {
+      "from": "\u0CAB\u0CBF\u0CD5",
+      "to": "\uEBD3"
+    },
+    {
+      "from": "\u0CAC\u0CBF\u0CD5",
+      "to": "\uEBD4"
+    },
+    {
+      "from": "\u0CAD\u0CBF\u0CD5",
+      "to": "\uEBD5"
+    },
+    {
+      "from": "\u0CAE\u0CBF\u0CD5",
+      "to": "\uEBD6"
+    },
+    {
+      "from": "\u0CAF\u0CBF\u0CD5",
+      "to": "\uEBD7"
+    },
+    {
+      "from": "\u0CB0\u0CBF\u0CD5",
+      "to": "\uEBD8"
+    },
+    {
+      "from": "\u0CB1\u0CBF\u0CD5",
+      "to": "\uEBD9"
+    },
+    {
+      "from": "\u0CB2\u0CBF\u0CD5",
+      "to": "\uEBDA"
+    },
+    {
+      "from": "\u0CB3\u0CBF\u0CD5",
+      "to": "\uEBDB"
+    },
+    {
+      "from": "\u0CB5\u0CBF\u0CD5",
+      "to": "\uEBDC"
+    },
+    {
+      "from": "\u0CB6\u0CBF\u0CD5",
+      "to": "\uEBDD"
+    },
+    {
+      "from": "\u0CB7\u0CBF\u0CD5",
+      "to": "\uEBDE"
+    },
+    {
+      "from": "\u0CB8\u0CBF\u0CD5",
+      "to": "\uEBDF"
+    },
+    {
+      "from": "\u0CB9\u0CBF\u0CD5",
+      "to": "\uEBE0"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CD5",
+      "to": "\uEC0C"
+    },
+    {
+      "from": "\u0C96\u0CC6\u0CD5",
+      "to": "\uEC0D"
+    },
+    {
+      "from": "\u0C97\u0CC6\u0CD5",
+      "to": "\uEC0E"
+    },
+    {
+      "from": "\u0C98\u0CC6\u0CD5",
+      "to": "\uEC0F"
+    },
+    {
+      "from": "\u0C99\u0CC6\u0CD5",
+      "to": "\uEC10"
+    },
+    {
+      "from": "\u0C9A\u0CC6\u0CD5",
+      "to": "\uEC11"
+    },
+    {
+      "from": "\u0C9B\u0CC6\u0CD5",
+      "to": "\uEC12"
+    },
+    {
+      "from": "\u0C9C\u0CC6\u0CD5",
+      "to": "\uEC13"
+    },
+    {
+      "from": "\u0C9E\u0CC6\u0CD5",
+      "to": "\uEC15"
+    },
+    {
+      "from": "\u0C9F\u0CC6\u0CD5",
+      "to": "\uEC16"
+    },
+    {
+      "from": "\u0CA0\u0CC6\u0CD5",
+      "to": "\uEC17"
+    },
+    {
+      "from": "\u0CA1\u0CC6\u0CD5",
+      "to": "\uEC18"
+    },
+    {
+      "from": "\u0CA2\u0CC6\u0CD5",
+      "to": "\uEC19"
+    },
+    {
+      "from": "\u0CA3\u0CC6\u0CD5",
+      "to": "\uEC1A"
+    },
+    {
+      "from": "\u0CA4\u0CC6\u0CD5",
+      "to": "\uEC1B"
+    },
+    {
+      "from": "\u0CA5\u0CC6\u0CD5",
+      "to": "\uEC1C"
+    },
+    {
+      "from": "\u0CA6\u0CC6\u0CD5",
+      "to": "\uEC1D"
+    },
+    {
+      "from": "\u0CA7\u0CC6\u0CD5",
+      "to": "\uEC1E"
+    },
+    {
+      "from": "\u0CA8\u0CC6\u0CD5",
+      "to": "\uEC1F"
+    },
+    {
+      "from": "\u0CAA\u0CC6\u0CD5",
+      "to": "\uEC20"
+    },
+    {
+      "from": "\u0CAB\u0CC6\u0CD5",
+      "to": "\uEC21"
+    },
+    {
+      "from": "\u0CAC\u0CC6\u0CD5",
+      "to": "\uEC22"
+    },
+    {
+      "from": "\u0CAD\u0CC6\u0CD5",
+      "to": "\uEC23"
+    },
+    {
+      "from": "\u0CAE\u0CC6\u0CD5",
+      "to": "\uEC24"
+    },
+    {
+      "from": "\u0CAF\u0CC6\u0CD5",
+      "to": "\uEC25"
+    },
+    {
+      "from": "\u0CB0\u0CC6\u0CD5",
+      "to": "\uEC26"
+    },
+    {
+      "from": "\u0CB1\u0CC6\u0CD5",
+      "to": "\uEC27"
+    },
+    {
+      "from": "\u0CB2\u0CC6\u0CD5",
+      "to": "\uEC28"
+    },
+    {
+      "from": "\u0CB3\u0CC6\u0CD5",
+      "to": "\uEC29"
+    },
+    {
+      "from": "\u0CB5\u0CC6\u0CD5",
+      "to": "\uEC2A"
+    },
+    {
+      "from": "\u0CB6\u0CC6\u0CD5",
+      "to": "\uEC2B"
+    },
+    {
+      "from": "\u0CB7\u0CC6\u0CD5",
+      "to": "\uEC2C"
+    },
+    {
+      "from": "\u0CB8\u0CC6\u0CD5",
+      "to": "\uEC2D"
+    },
+    {
+      "from": "\u0CB9\u0CC6\u0CD5",
+      "to": "\uEC2E"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CD6",
+      "to": "\uEC33"
+    },
+    {
+      "from": "\u0C96\u0CC6\u0CD6",
+      "to": "\uEC34"
+    },
+    {
+      "from": "\u0C97\u0CC6\u0CD6",
+      "to": "\uEC35"
+    },
+    {
+      "from": "\u0C98\u0CC6\u0CD6",
+      "to": "\uEC36"
+    },
+    {
+      "from": "\u0C99\u0CC6\u0CD6",
+      "to": "\uEC37"
+    },
+    {
+      "from": "\u0C9A\u0CC6\u0CD6",
+      "to": "\uEC38"
+    },
+    {
+      "from": "\u0C9B\u0CC6\u0CD6",
+      "to": "\uEC39"
+    },
+    {
+      "from": "\u0C9C\u0CC6\u0CD6",
+      "to": "\uEC3A"
+    },
+    {
+      "from": "\u0C9D\u0CC6\u0CD6",
+      "to": "\uEC3B"
+    },
+    {
+      "from": "\u0C9E\u0CC6\u0CD6",
+      "to": "\uEC3C"
+    },
+    {
+      "from": "\u0C9F\u0CC6\u0CD6",
+      "to": "\uEC3D"
+    },
+    {
+      "from": "\u0CA0\u0CC6\u0CD6",
+      "to": "\uEC3E"
+    },
+    {
+      "from": "\u0CA1\u0CC6\u0CD6",
+      "to": "\uEC3F"
+    },
+    {
+      "from": "\u0CA2\u0CC6\u0CD6",
+      "to": "\uEC40"
+    },
+    {
+      "from": "\u0CA3\u0CC6\u0CD6",
+      "to": "\uEC41"
+    },
+    {
+      "from": "\u0CA4\u0CC6\u0CD6",
+      "to": "\uEC42"
+    },
+    {
+      "from": "\u0CA5\u0CC6\u0CD6",
+      "to": "\uEC43"
+    },
+    {
+      "from": "\u0CA6\u0CC6\u0CD6",
+      "to": "\uEC44"
+    },
+    {
+      "from": "\u0CA7\u0CC6\u0CD6",
+      "to": "\uEC45"
+    },
+    {
+      "from": "\u0CA8\u0CC6\u0CD6",
+      "to": "\uEC46"
+    },
+    {
+      "from": "\u0CAA\u0CC6\u0CD6",
+      "to": "\uEC47"
+    },
+    {
+      "from": "\u0CAB\u0CC6\u0CD6",
+      "to": "\uEC48"
+    },
+    {
+      "from": "\u0CAC\u0CC6\u0CD6",
+      "to": "\uEC49"
+    },
+    {
+      "from": "\u0CAD\u0CC6\u0CD6",
+      "to": "\uEC4A"
+    },
+    {
+      "from": "\u0CAE\u0CC6\u0CD6",
+      "to": "\uEC4B"
+    },
+    {
+      "from": "\u0CAF\u0CC6\u0CD6",
+      "to": "\uEC4C"
+    },
+    {
+      "from": "\u0CB0\u0CC6\u0CD6",
+      "to": "\uEC4D"
+    },
+    {
+      "from": "\u0CB1\u0CC6\u0CD6",
+      "to": "\uEC4E"
+    },
+    {
+      "from": "\u0CB2\u0CC6\u0CD6",
+      "to": "\uEC4F"
+    },
+    {
+      "from": "\u0CB3\u0CC6\u0CD6",
+      "to": "\uEC50"
+    },
+    {
+      "from": "\u0CB5\u0CC6\u0CD6",
+      "to": "\uEC51"
+    },
+    {
+      "from": "\u0CB6\u0CC6\u0CD6",
+      "to": "\uEC52"
+    },
+    {
+      "from": "\u0CB7\u0CC6\u0CD6",
+      "to": "\uEC53"
+    },
+    {
+      "from": "\u0CB8\u0CC6\u0CD6",
+      "to": "\uEC54"
+    },
+    {
+      "from": "\u0CB9\u0CC6\u0CD6",
+      "to": "\uEC55"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CC2",
+      "to": "\uEC5A"
+    },
+    {
+      "from": "\u0C97\u0CC6\u0CC2",
+      "to": "\uEC5C"
+    },
+    {
+      "from": "\u0CA0\u0CC6\u0CC2",
+      "to": "\uEC65"
+    },
+    {
+      "from": "\u0CA4\u0CC6\u0CC2",
+      "to": "\uEC69"
+    },
+    {
+      "from": "\u0CA8\u0CC6\u0CC2",
+      "to": "\uEC6D"
+    },
+    {
+      "from": "\u0CB0\u0CC6\u0CC2",
+      "to": "\uEC74"
+    },
+    {
+      "from": "\u0CB3\u0CC6\u0CC2",
+      "to": "\uEC77"
+    },
+    {
+      "from": "\u0CB8\u0CC6\u0CC2",
+      "to": "\uEC7B"
+    },
+    {
+      "from": "\u0C95\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC81"
+    },
+    {
+      "from": "\u0C97\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC83"
+    },
+    {
+      "from": "\u0CA0\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC8C"
+    },
+    {
+      "from": "\u0CA4\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC90"
+    },
+    {
+      "from": "\u0CA8\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC94"
+    },
+    {
+      "from": "\u0CB0\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC9B"
+    },
+    {
+      "from": "\u0CB3\u0CC6\u0CC2\u0CD5",
+      "to": "\uEC9E"
+    },
+    {
+      "from": "\u0CB6\u0CC6\u0CC2\u0CD5",
+      "to": "\uECA0"
+    },
+    {
+      "from": "\u0CB8\u0CC6\u0CC2\u0CD5",
+      "to": "\uECA2"
+    },
+    {
+      "from": "\u0CBF\u0CD5",
+      "to": "\uEB39"
+    },
+    {
+      "from": "[",
+      "to": "("
+    },
+    {
+      "from": "]",
+      "to": ")"
+    },
+    {
+      "from": "\u0CCA",
+      "to": "\uEB5D\uEB3B"
+    },
+    {
+      "from": "\u0C95\u0CCD\u0CB2",
+      "to": "\uEB14\uED12"
+    }
+  ],
+  "postRules": []
+}

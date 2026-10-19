@@ -1,0 +1,28 @@
+    /// <summary>The independent vowels (a reph or an e-sign may stand on one: ର୍ଅ = 41 F6, ଅେ = 7B 41).</summary>
+    const string Vowels = "\u0B05-\u0B0C\u0B0F\u0B10\u0B13\u0B14\u0B60\u0B61";
+
+    /// <summary>The letters with no subjoined form (a visible virama before them is part of the cluster: କ୍ଷ alt = 4C FF FA CC).</summary>
+    const string NoJoin = "\u0B19\u0B1E\u0B24\u0B36\u0B37\u0B39\u0B5C\u0B5D";
+
+    /// <summary>A cluster in visual order: letters joined by a virama, with a ZWNJ where the visible virama was read before a joining letter.</summary>
+    const string VisualCluster = "(?:[" + Rules.Cons + "]\u0B3C?\u0B4D\u200C?)*[" + Rules.Cons + "]\u0B3C?";
+
+    public static List<RewriteRule> ReversePost() => new()
+    {
+        R($"{HalantMark}(?={Rules.ESign}|[{Joins}])", "\u200C", "The visible virama FA before a letter with a subjoined form, or before the next syllable's e-sign, is ୍ + ZWNJ (କ୍‌କ = 4C FF FA 4C FF): plain କ୍କ is the ligature 4D, which the bytes do not show."),
+        R(HalantMark, "", "Elsewhere FA is the virama alone (କ୍ତ = 4C FF FA 86 FF, କ୍ at the end of a word = 4C FF FA)."),
+        R($"(?<={Rules.ESign}(?:[{Rules.Cons}]\u0B3C?\u0B4D\u200C?)*[{Rules.Cons}]\u0B3C?\u0B4D)\u200C(?=[{NoJoin}])", "",
+          "Inside an e-sign's cluster, a visible virama before a letter with no subjoined form is the cluster's own (କ୍ଷେ accepted as 7B 4C FF FA CC): no ZWNJ."),
+        R($"{Rules.ESign}({VisualCluster}|[{Vowels}])", "$1\u0B47", "The e-sign 7B goes after its cluster (visual order -> Unicode order), or after the vowel it was struck on (ଅେ = 7B 41)."),
+        R("\u0B47\u0B56", "\u0B48", "େ + ୖ is ୈ (7B C F0)."),
+        R("\u0B47\u0B3E", "\u0B4B", "େ + ା is ୋ (7B C E6)."),
+        R("\u0B47\u0B57", "\u0B4C", "େ + ୗ is ୌ (7B C F2)."),
+        R("([\u0B3E-\u0B44\u0B56\u0B57\u0B62\u0B63]+)(\u0B4D[\u0B30\u0B5F\u0B2C])", "$2$1",
+          "A sign the composer wrote before a phala (struck before the ra-, ya- or ba-phala code: କୃ then the ra-phala = 4C FF F5 26 F7) belongs after it: କ୍ରୃ."),
+        R($"([{Rules.Cons}]\u0B3C?(?:\u0B4D[{Rules.Cons}]\u0B3C?)*|[{Vowels}])([{Signs}]*)([\u0B01-\u0B03]*){Rules.Reph}", "\u0B30\u0B4D$1$2$3",
+          "The reph F6 after a syllable is ର୍ in front of its cluster (ର୍କା = 4C FF E6 F6; written after ଂ ଁ ଃ too, as the composer accepts: 4C FF F3 F6), or of the vowel it stands on (ର୍ଅ = 41 F6)."),
+        R(Rules.Reph, "\u0B30\u0B4D", "A reph with no syllable before it (the lone reph key, or one struck before its letter) is ର୍."),
+        R(Rules.ESign, "\u0B47", "An e-sign with no letter after it is େ."),
+        R("\u0B05\u0B3E", "\u0B06", "ଅ + ା is ଆ (41 E6), as the Unicode composer writes it."),
+        R(Rules.Keep, "", "U+FDD1 is not text."),
+    };

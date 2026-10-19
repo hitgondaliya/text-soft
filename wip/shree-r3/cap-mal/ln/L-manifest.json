@@ -1,0 +1,86 @@
+[
+ {
+  "file": "LAAA.MAL",
+  "key": "a",
+  "slot": 0,
+  "raw": "04 6C 66 64 66",
+  "tag": "reference: header 04, typed 66 64 66 6C (ക്കാ = A8 4C)"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "b",
+  "slot": 2,
+  "raw": "02 6C 66 64 66",
+  "tag": "header 02 with 4 codes: does the header cut it to 2?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "c",
+  "slot": 4,
+  "raw": "05 6C 66 64 66 73",
+  "tag": "header 05, 5th byte (= next slot header) 73: typed 73 66 64 66 6C = ക്കൊ (52 A8 4C)?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "d",
+  "slot": 7,
+  "raw": "06 6C 66 64 66 73 73",
+  "tag": "header 06 running 2 bytes into slot 8: typed 73 73 66 64 66 6C?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "e",
+  "slot": 10,
+  "raw": "08 6C 66 64 66 73 79 64 63",
+  "tag": "header 08: typed 63 64 79 73 66 64 66 6C?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "f",
+  "slot": 13,
+  "raw": "00 6C 66 64 66",
+  "tag": "header 00"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "g",
+  "slot": 15,
+  "raw": "FF 6C 66 64 66",
+  "tag": "header FF"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "h",
+  "slot": 17,
+  "raw": "03 6C 66 64 66",
+  "tag": "header 03 with 4 codes"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "i",
+  "slot": 19,
+  "raw": "01 6C 66 64 66",
+  "tag": "header 01 with 4 codes"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "j",
+  "slot": 21,
+  "raw": "05 79 64 79 64 63",
+  "tag": "header 05: typed 63 64 79 64 79 = സ്റ്റ?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "k",
+  "slot": 24,
+  "raw": "05 4A D7 64 63 59",
+  "tag": "header 05: typed 59 63 64 D7 4A = സ്ത്രീ?"
+ },
+ {
+  "file": "LAAA.MAL",
+  "key": "l",
+  "slot": 27,
+  "raw": "04 4A D7 64 63",
+  "tag": "reference: 63 64 D7 4A (സ്തീ)"
+ }
+]

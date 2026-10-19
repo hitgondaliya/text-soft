@@ -1,0 +1,65 @@
+odia-inscript	'`'	base vk 192	undefined -> ""	A: Shree's INSCRIPT.ORI has no code here (FF); the key reached the Shree font raw as 60, an Odia glyph there
+odia-inscript	'd'	base vk 68	undefined -> "୍"	B: the link key (code 64) - the virama, so any two letters join (was no key)
+odia-inscript	Ctrl+Space 'q'	sequence and escape	"ୌ" -> "%"	F: the chart repeats the normal key's ୌ here; INSCRIPT.ORI has %
+odia-inscript	Ctrl+Space 'w'	sequence and escape	"ୈ" -> "‘"	F: the chart repeats the normal key's ୈ here; INSCRIPT.ORI has ‘
+ori-crtronic	'<'	shift vk 188	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ।
+ori-crtronic	'B'	shift vk 66	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ଡ
+ori-crtronic	'I'	shift vk 73	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ଜ
+ori-crtronic	'M'	shift vk 77	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ଏ
+ori-crtronic	'R'	shift vk 82	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ବ
+ori-crtronic	'V'	shift vk 86	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ଚ
+ori-crtronic	'Z'	shift vk 90	undefined -> "୍‍"	C: the half key (code D5, virama + ZWJ) (was no key)
+ori-crtronic	'~'	shift vk 192	undefined -> ""	A: Shree's CRTRONIC.ORI has no code here (FF); the unset Shift typed the normal key's ଗ
+ori-crtronic	Ctrl+Space 'l'	sequence "Øl"	(none) -> "୍ବ"	E: CRTRONIC.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-doe	'='	base vk 187	undefined -> ""	D: code 51 has no Unicode text (the Unicode composer types nothing) (was the raw key)
+ori-doe	'B'	shift vk 66	undefined -> ""	A: Shree's DOE.ORI has no code here (FF); the unset Shift typed the normal key's ୱ
+ori-doe	'J'	shift vk 74	undefined -> ""	A: Shree's DOE.ORI has no code here (FF); the unset Shift typed the normal key's ର
+ori-doe	'V'	shift vk 86	undefined -> ""	A: Shree's DOE.ORI has no code here (FF); the unset Shift typed the normal key's ନ
+ori-doe	'Z'	shift vk 90	undefined -> "୍‍"	C: the half key (code D5, virama + ZWJ) (was no key)
+ori-doe	']'	base vk 221	undefined -> ""	A: Shree's DOE.ORI has no code here (FF); the key reached the Shree font raw as 5D, an Odia glyph there
+ori-doe	'`'	base vk 192	undefined -> ""	A: Shree's DOE.ORI has no code here (FF); the key reached the Shree font raw as 60, an Odia glyph there
+ori-doe	'd'	base vk 68	"d" -> "୍"	B: the link key (code 64) - the virama, so any two letters join (was the Latin "d")
+ori-doe	Ctrl+Space 'i'	sequence "Øi"	(none) -> "୍ବ"	E: DOE.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-eng	Ctrl+Space 'b'	sequence "Øb"	(none) -> "୍ବ"	E: ENG.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-newroma	'#'	shift vk 51	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୩
+ori-newroma	'$'	shift vk 52	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୪
+ori-newroma	'&'	shift vk 55	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୭
+ori-newroma	'+'	shift vk 187	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the key reached the Shree font raw as 2B, an Odia glyph there
+ori-newroma	';'	base vk 186	undefined -> ""	A: Shree's NEWROMA.ORI has code A0, which neither composer types anything for; the key reached the Shree font raw as 3B, an Odia glyph there
+ori-newroma	'<'	shift vk 188	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ,
+ori-newroma	'='	base vk 187	undefined -> "୍"	B: the link key (code 64) - the virama, so any two letters join (was no key)
+ori-newroma	'@'	shift vk 50	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୨
+ori-newroma	'F'	shift vk 70	undefined -> "୍‍"	C: the half key (code D5, virama + ZWJ) (was an unset Shift typing ଫ)
+ori-newroma	'W'	shift vk 87	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ଽ
+ori-newroma	'['	base vk 219	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the key reached the Shree font raw as 5B, an Odia glyph there
+ori-newroma	'\'	base vk 220	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the key reached the Shree font raw as 5C, an Odia glyph there
+ori-newroma	']'	base vk 221	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the key reached the Shree font raw as 5D, an Odia glyph there
+ori-newroma	'^'	shift vk 54	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୬
+ori-newroma	'_'	shift vk 189	undefined -> ""	A: Shree's NEWROMA.ORI has no code here (FF); the unset Shift typed the normal key's -
+ori-newroma	'`'	base vk 192	undefined -> ""	A: Shree's NEWROMA.ORI has code FE, which neither composer types anything for; the key reached the Shree font raw as 60, an Odia glyph there
+ori-newroma	Ctrl+Space 'b'	sequence "Øb"	(none) -> "୍ବ"	E: NEWROMA.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-phonetic	'C'	shift vk 67	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the unset Shift typed the normal key's ଚ୍
+ori-phonetic	'K'	shift vk 75	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the unset Shift typed the normal key's କ୍
+ori-phonetic	'P'	shift vk 80	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the unset Shift typed the normal key's ପ୍
+ori-phonetic	'Q'	shift vk 81	undefined -> "୍‍"	C: the half key (code D5, virama + ZWJ) (was an unset Shift typing ୰)
+ori-phonetic	'['	base vk 219	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the key reached the Shree font raw as 5B, an Odia glyph there
+ori-phonetic	'\'	base vk 220	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the key reached the Shree font raw as 5C, an Odia glyph there
+ori-phonetic	']'	base vk 221	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the key reached the Shree font raw as 5D, an Odia glyph there
+ori-phonetic	'^'	shift vk 54	undefined -> ""	A: Shree's PHONETIC.ORI has no code here (FF); the unset Shift typed the normal key's ୬
+ori-phonetic	'_'	shift vk 189	undefined -> ""	A: Shree's PHONETIC.ORI has code EE, which neither composer types anything for; the unset Shift typed the normal key's -
+ori-phonetic	'`'	base vk 192	undefined -> ""	A: Shree's PHONETIC.ORI has code FE, which neither composer types anything for; the key reached the Shree font raw as 60, an Odia glyph there
+ori-phonetic	Ctrl+Space 'b'	sequence "Øb"	(none) -> "୍ବ"	E: PHONETIC.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-roma	'#'	shift vk 51	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୩
+ori-roma	'$'	shift vk 52	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୪
+ori-roma	'@'	shift vk 50	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୨
+ori-roma	']'	base vk 221	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the key reached the Shree font raw as 5D, an Odia glyph there
+ori-roma	'^'	shift vk 54	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the unset Shift typed the normal key's ୬
+ori-roma	'_'	shift vk 189	undefined -> ""	A: Shree's ROMA.ORI has no code here (FF); the unset Shift typed the normal key's -
+ori-roma	'f'	base vk 70	undefined -> "୍"	B: the link key (code 64) - the virama, so any two letters join (was no key)
+ori-roma	Ctrl+Space 'd'	sequence "Ød"	(none) -> "୍ବ"	E: ROMA.ORI holds code E1 (the ba-phala the charts call ୍ବ)
+ori-typewrit	'+'	shift vk 187	undefined -> ""	A: Shree's TYPEWRIT.ORI has no code here (FF); the key reached the Shree font raw as 2B, an Odia glyph there
+ori-typewrit	';'	base vk 186	undefined -> ""	A: Shree's TYPEWRIT.ORI has no code here (FF); the key reached the Shree font raw as 3B, an Odia glyph there
+ori-typewrit	'='	base vk 187	undefined -> ""	A: Shree's TYPEWRIT.ORI has no code here (FF); the key reached the Shree font raw as 3D, an Odia glyph there
+ori-typewrit	'Q'	shift vk 81	"Q" -> ""	D: code 51 has no Unicode text (the Unicode composer types nothing) (was the Latin "Q")
+ori-typewrit	'd'	base vk 68	"d" -> "୍"	B: the link key (code 64) - the virama, so any two letters join (was the Latin "d")
+64 changes

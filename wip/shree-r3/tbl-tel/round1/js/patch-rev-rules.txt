@@ -1,0 +1,28 @@
+    /// <summary>Every dependent vowel sign, ై and the length marks included (the backward hook and the move back take them all).</summary>
+    const string AnySign = "[ా-ౄె-ైొ-ౌౕౖ]";
+
+    public static List<RewriteRule> ReversePre() => new()
+    {
+        Rules.NoMarksIn,
+        R($"{Lit("5D")}(?={Class("40 B6")}|{Lit("A0")}{Lit("96")})", FromHex("94"),
+          "5D before the composer's own ః ఁ (40 B6, codes the table never writes) or before ృ behind its spacer (A0 96) is the composer's subjoined ఙ (its 5D), not the visarga: read as ్ఙ (94)."),
+        R($"(?<!{Lit("84")}{Lit("F0")}{Lit("FC")}){Lit("95")}{Lit("5D")}", FromHex("95 94"),
+          "The ై mark 95 before 5D (but after క్ష + ై, whose mark is always 95) is the composer's ై before its subjoined ఙ: read as ్ఙ (94)."),
+        R($"{Class("A0 9B")}(?={Class(VattuCodes)}|{Lit("96")}|{Class("85 5D 97 40 B6")})", "",
+          "The spacer the composer puts before a vattu (A0 or 9B after క్ష: 84 E6 FC A0 50 = క్ష్క) or before ృ after a vattu (50 A0 96) is not text; nor is one left before a tail where the composer dropped what stood there (ౄ, a subjoined ఝ: 84 E6 FC 9B 85)."),
+    };
+
+    public static List<RewriteRule> ReversePost() => new()
+    {
+        R("([" + Cons + "])((?:" + AnySign + "|్‌)+)((?:్[" + Cons + "])+)", "$1$3$2",
+          "A sign (or the visible halant) the bytes put on the first letter of a cluster goes after its subjoined letters (4D EC FC 50 = క్కి; ృ struck before the link, 4D E6 FC 96 50, too)."),
+        R("ై", "ై", "ె + ౖ is ై (కై = 4D F0 FC 4F)."),
+        R(Hook + "(" + Cluster + ")", "$1్ర",
+          "The ra-vattu hook (7B, 5B, 93) belongs to the cluster after it: ్ర after its last consonant, before its sign (7B 4D EC FC = క్రి; 4D E6 FC 7B 4D E6 FC = కక్ర, as the composer reads it)."),
+        R("(" + Cluster + ")((?:" + AnySign + "|[ఀ-ఄ])*)" + Hook, "$1్ర$2",
+          "A hook with no letter after it is the composer's pending ra-vattu (C 7B: the hook struck after the letter, or its third hook 93 typed after a syllable): the cluster before it."),
+        R(Hook, "్ర", "Any other hook: the ra-vattu."),
+        R("్‌(?![" + Cons + "])", "్",
+          "A visible halant with no consonant after it is the virama alone (a word-final virama is drawn with the halant anyway); before a consonant the ZWNJ stays (క్‌క, not క్క)."),
+        R(Rules.Keep, "", "U+FDD1 is not text."),
+    };

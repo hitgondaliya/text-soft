@@ -1,0 +1,1188 @@
+{
+  "family": "Shree-Tel7-00xA",
+  "repFace": "Shree-Tel7-001A",
+  "repFile": "C:\\Windows\\Fonts\\WTEL701T.TTF",
+  "faces": [
+    {
+      "face": "Shree-Tel7-001A",
+      "file": "C:\\Windows\\Fonts\\WTEL701T.TTF",
+      "sameCmap": true
+    },
+    {
+      "face": "Shree-Tel7-002A",
+      "file": "C:\\Windows\\Fonts\\WTEL702T.TTF",
+      "sameCmap": true
+    }
+  ],
+  "allFacesSameCmap": true,
+  "wiring": {
+    "main": null,
+    "worktree": null
+  },
+  "truth": null,
+  "richeditFontFace": "Shree-Tel7-001A/cs0",
+  "codepoints": [
+    {
+      "cp": "U+0020",
+      "gid": 3,
+      "kind": "mapped",
+      "byte": "20",
+      "glyphEmpty": true,
+      "glyphMalformed": null,
+      "advance": 240,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "blank as designed (font glyph is empty)",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 20 -> expected",
+        "pdfInk": "no ink (glyph is blank in the font too)",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 0,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0020"
+          }
+        ],
+        "advanceUnitsPdf": 229,
+        "advanceUnitsEmf": 229
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "blank as designed (font glyph is empty)",
+          "ok": true,
+          "landed": "0020",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": 1,
+          "advancePx": 18
+        },
+        "rtf": {
+          "verdict": "blank as designed (font glyph is empty)",
+          "ok": true,
+          "landed": "0020",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": 1,
+          "advancePx": 18
+        }
+      },
+      "draws": "nothing: blank glyph, advance 240/1024 em",
+      "fails": false
+    },
+    {
+      "cp": "U+0061",
+      "gid": 4,
+      "kind": "mapped",
+      "byte": "61",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 593,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 61 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 297,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0061"
+          }
+        ],
+        "advanceUnitsPdf": 574,
+        "advanceUnitsEmf": 574
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0061",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 207,
+          "f1Expected": 1,
+          "advancePx": 43
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0061",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 207,
+          "f1Expected": 1,
+          "advancePx": 43
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Times New Roman F1 0.64)",
+      "fails": false
+    },
+    {
+      "cp": "U+0062",
+      "gid": 5,
+      "kind": "mapped",
+      "byte": "62",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 821,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 62 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 567,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0062"
+          }
+        ],
+        "advanceUnitsPdf": 799,
+        "advanceUnitsEmf": 799
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0062",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 276,
+          "f1Expected": 0.998,
+          "advancePx": 60
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0062",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 276,
+          "f1Expected": 0.998,
+          "advancePx": 60
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Times New Roman F1 0.39)",
+      "fails": false
+    },
+    {
+      "cp": "U+0063",
+      "gid": 7,
+      "kind": "mapped",
+      "byte": "63",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 741,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 63 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 500,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0063"
+          }
+        ],
+        "advanceUnitsPdf": 719,
+        "advanceUnitsEmf": 719
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0063",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 264,
+          "f1Expected": 1,
+          "advancePx": 54
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0063",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 264,
+          "f1Expected": 1,
+          "advancePx": 54
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Times New Roman F1 0.53)",
+      "fails": false
+    },
+    {
+      "cp": "U+0064",
+      "gid": 8,
+      "kind": "mapped",
+      "byte": "64",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 408,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 64 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 238,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0064"
+          }
+        ],
+        "advanceUnitsPdf": 394,
+        "advanceUnitsEmf": 394
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0064",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 128,
+          "f1Expected": 1,
+          "advancePx": 30
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0064",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 128,
+          "f1Expected": 1,
+          "advancePx": 30
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Times New Roman F1 0.38)",
+      "fails": false
+    },
+    {
+      "cp": "U+0065",
+      "gid": 9,
+      "kind": "mapped",
+      "byte": "65",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 410,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 65 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 287,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0065"
+          }
+        ],
+        "advanceUnitsPdf": 399,
+        "advanceUnitsEmf": 399
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0065",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 144,
+          "f1Expected": 1,
+          "advancePx": 30
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0065",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 144,
+          "f1Expected": 1,
+          "advancePx": 30
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Times New Roman F1 0.60)",
+      "fails": false
+    },
+    {
+      "cp": "U+0066",
+      "gid": 10,
+      "kind": "mapped",
+      "byte": "66",
+      "glyphEmpty": false,
+      "glyphMalformed": null,
+      "advance": 434,
+      "sameGlyphAs": [],
+      "sameOutlineAs": [],
+      "word": {
+        "ok": true,
+        "verdict": "draws",
+        "pdf": "expected-glyph",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 66 -> expected",
+        "pdfInk": "ink = expected glyph",
+        "pdfInkF1": 1,
+        "emf": "shree-font, same code",
+        "emfPlaybackInk": 325,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0066"
+          }
+        ],
+        "advanceUnitsPdf": 419,
+        "advanceUnitsEmf": 419
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0066",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 220,
+          "f1Expected": 1,
+          "advancePx": 32
+        },
+        "rtf": {
+          "verdict": "draws",
+          "ok": true,
+          "landed": "0066",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 220,
+          "f1Expected": 1,
+          "advancePx": 32
+        }
+      },
+      "draws": "unidentified glyph (no table pair, no composer truth; best Latin look-alike Courier New F1 0.51)",
+      "fails": false
+    },
+    {
+      "cp": "U+2013",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "96",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B1 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 225,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2013"
+          }
+        ],
+        "advanceUnitsPdf": 494,
+        "advanceUnitsEmf": 494
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2013",
+          "faces": "Arial/cs1",
+          "inkPx": 246,
+          "f1Expected": null,
+          "advancePx": 42
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2013",
+          "faces": "Arial/cs1",
+          "inkPx": 246,
+          "f1Expected": null,
+          "advancePx": 42
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+2014",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "97",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B2 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 485,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2014"
+          }
+        ],
+        "advanceUnitsPdf": 999,
+        "advanceUnitsEmf": 999
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2014",
+          "faces": "Arial/cs1",
+          "inkPx": 444,
+          "f1Expected": null,
+          "advancePx": 75
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2014",
+          "faces": "Arial/cs1",
+          "inkPx": 444,
+          "f1Expected": null,
+          "advancePx": 75
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+2018",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "91",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B5 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 165,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2018"
+          }
+        ],
+        "advanceUnitsPdf": 329,
+        "advanceUnitsEmf": 329
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "2018",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 42,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "2018",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 42,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+2019",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "92",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B6 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 168,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2019"
+          }
+        ],
+        "advanceUnitsPdf": 329,
+        "advanceUnitsEmf": 329
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "2019",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 38,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "2019",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 38,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+201A",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "82",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code C3 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 157,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "201A"
+          }
+        ],
+        "advanceUnitsPdf": 334,
+        "advanceUnitsEmf": 334
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "201A",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 39,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "201A",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 39,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+201B",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": null,
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code 1E5 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 171,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "201B"
+          }
+        ],
+        "advanceUnitsPdf": 329,
+        "advanceUnitsEmf": 329
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "201B",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 40,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "201B",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 40,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+201C",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "93",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B3 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 349,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "201C"
+          }
+        ],
+        "advanceUnitsPdf": 439,
+        "advanceUnitsEmf": 439
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "201C",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 76,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "201C",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 76,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+201D",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "94",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code B4 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 350,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "201D"
+          }
+        ],
+        "advanceUnitsPdf": 439,
+        "advanceUnitsEmf": 439
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "201D",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 80,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "201D",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 80,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+201E",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "84",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code C4 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 345,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "201E"
+          }
+        ],
+        "advanceUnitsPdf": 444,
+        "advanceUnitsEmf": 444
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "201E",
+          "faces": "Arial/cs1",
+          "inkPx": 173,
+          "f1Expected": null,
+          "advancePx": 25
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "201E",
+          "faces": "Arial/cs1",
+          "inkPx": 173,
+          "f1Expected": null,
+          "advancePx": 25
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+2022",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "95",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code 87 -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 482,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2022"
+          }
+        ],
+        "advanceUnitsPdf": 344,
+        "advanceUnitsEmf": 344
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2022",
+          "faces": "Arial/cs1",
+          "inkPx": 272,
+          "f1Expected": null,
+          "advancePx": 26
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Arial/cs1 (GDI binds it to Arial); ink = the real character drawn by Arial",
+          "ok": false,
+          "landed": "2022",
+          "faces": "Arial/cs1",
+          "inkPx": 272,
+          "f1Expected": null,
+          "advancePx": 26
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+2026",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "85",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:TimesNewRomanPSMT; ink = the real character in TimesNewRomanPSMT; EMF: fallback:Times New Roman",
+        "pdf": "fallback:TimesNewRomanPSMT",
+        "pdfCodes": "TimesNewRomanPSMT/Type0 code AB -> fallback",
+        "pdfInk": "ink = the real character in TimesNewRomanPSMT",
+        "pdfInkF1": null,
+        "emf": "fallback:Times New Roman",
+        "emfPlaybackInk": 298,
+        "emfOuts": [
+          {
+            "face": "Times New Roman",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "2026"
+          }
+        ],
+        "advanceUnitsPdf": 999,
+        "advanceUnitsEmf": 999
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "2026",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 83,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap; font set to Shree-Tel7-001A/cs1 (GDI binds it to Shree-Tel7-001A); ink = the real character drawn by Shree-Tel7-001A",
+          "ok": false,
+          "landed": "2026",
+          "faces": "Shree-Tel7-001A/cs1",
+          "inkPx": 83,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+00B7",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "B7",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:Cambria; ink = the real character in Cambria; EMF: fallback:Cambria",
+        "pdf": "fallback:Cambria",
+        "pdfCodes": "BCDGEE+Cambria/TrueType code B7 -> fallback",
+        "pdfInk": "ink = the real character in Cambria",
+        "pdfInkF1": null,
+        "emf": "fallback:Cambria",
+        "emfPlaybackInk": 152,
+        "emfOuts": [
+          {
+            "face": "Cambria",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "00B7"
+          }
+        ],
+        "advanceUnitsPdf": 274,
+        "advanceUnitsEmf": 274
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "00B7",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 36,
+          "f1Expected": null,
+          "advancePx": 59
+        },
+        "rtf": {
+          "verdict": "not in font cmap",
+          "ok": false,
+          "landed": "00B7",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 36,
+          "f1Expected": null,
+          "advancePx": 59
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+00A0",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "A0",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: other:empty; no ink; EMF: shree-font, codes U+0020",
+        "pdf": "other:empty",
+        "pdfCodes": "BCDEEE+Shree-Tel7-001A/TrueType code 20 -> empty",
+        "pdfInk": "no ink",
+        "pdfInkF1": null,
+        "emf": "shree-font, codes U+0020",
+        "emfPlaybackInk": 0,
+        "emfOuts": [
+          {
+            "face": "Shree-Tel7-001A",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "0020"
+          }
+        ],
+        "advanceUnitsPdf": 779,
+        "advanceUnitsEmf": 779
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; no ink, advance 18 px",
+          "ok": false,
+          "landed": "00A0",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": null,
+          "advancePx": 18
+        },
+        "rtf": {
+          "verdict": "not in font cmap; no ink, advance 18 px",
+          "ok": false,
+          "landed": "00A0",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": null,
+          "advancePx": 18
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    },
+    {
+      "cp": "U+00AD",
+      "gid": null,
+      "kind": "unmapped-punct",
+      "byte": "AD",
+      "glyphEmpty": null,
+      "glyphMalformed": null,
+      "advance": null,
+      "sameGlyphAs": null,
+      "sameOutlineAs": null,
+      "word": {
+        "ok": false,
+        "verdict": "not in font cmap; PDF: fallback:Cambria; ink = the real character in Cambria; EMF: fallback:Cambria",
+        "pdf": "fallback:Cambria",
+        "pdfCodes": "BCDGEE+Cambria/TrueType code AD -> fallback",
+        "pdfInk": "ink = the real character in Cambria",
+        "pdfInkF1": null,
+        "emf": "fallback:Cambria",
+        "emfPlaybackInk": 304,
+        "emfOuts": [
+          {
+            "face": "Cambria",
+            "height": -200,
+            "charset": 0,
+            "glyphIndex": false,
+            "codes": "00AD"
+          }
+        ],
+        "advanceUnitsPdf": 324,
+        "advanceUnitsEmf": 324
+      },
+      "richedit": {
+        "typed": {
+          "verdict": "not in font cmap; no ink, advance 0 px",
+          "ok": false,
+          "landed": "00AD",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": null,
+          "advancePx": 0
+        },
+        "rtf": {
+          "verdict": "not in font cmap; no ink, advance 0 px",
+          "ok": false,
+          "landed": "00AD",
+          "faces": "Shree-Tel7-001A/cs0",
+          "inkPx": 0,
+          "f1Expected": null,
+          "advancePx": 0
+        }
+      },
+      "draws": "not in the font's cmap (another font draws the real character, or nothing)",
+      "fails": true,
+      "tables": [],
+      "alternatives": "none"
+    }
+  ]
+}

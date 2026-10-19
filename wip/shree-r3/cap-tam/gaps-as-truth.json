@@ -1,0 +1,341 @@
+{
+ "about": "NOT truth: derived spellings (tam7-composer-gaps.json) and the composer control bytes for ASCII symbols, to see what the shipped table writes",
+ "truth": {
+  "கெள": {
+   "preferred": "F6 50 CD",
+   "accepted": [
+    "F6 50 CD"
+   ],
+   "alternatives": []
+  },
+  "ஙெள": {
+   "preferred": "F6 56 CD",
+   "accepted": [
+    "F6 56 CD"
+   ],
+   "alternatives": []
+  },
+  "செள": {
+   "preferred": "F6 5C CD",
+   "accepted": [
+    "F6 5C CD"
+   ],
+   "alternatives": []
+  },
+  "ஞெள": {
+   "preferred": "F6 62 CD",
+   "accepted": [
+    "F6 62 CD"
+   ],
+   "alternatives": []
+  },
+  "டெள": {
+   "preferred": "F6 68 CD",
+   "accepted": [
+    "F6 68 CD"
+   ],
+   "alternatives": []
+  },
+  "ணெள": {
+   "preferred": "F6 6E CD",
+   "accepted": [
+    "F6 6E CD"
+   ],
+   "alternatives": []
+  },
+  "தெள": {
+   "preferred": "F6 75 CD",
+   "accepted": [
+    "F6 75 CD"
+   ],
+   "alternatives": []
+  },
+  "நெள": {
+   "preferred": "F6 7C CD",
+   "accepted": [
+    "F6 7C CD"
+   ],
+   "alternatives": []
+  },
+  "பெள": {
+   "preferred": "F6 A3 CD",
+   "accepted": [
+    "F6 A3 CD"
+   ],
+   "alternatives": []
+  },
+  "மெள": {
+   "preferred": "F6 A9 CD",
+   "accepted": [
+    "F6 A9 CD"
+   ],
+   "alternatives": []
+  },
+  "யெள": {
+   "preferred": "F6 AF CD",
+   "accepted": [
+    "F6 AF CD"
+   ],
+   "alternatives": []
+  },
+  "ரெள": {
+   "preferred": "F6 B5 CD",
+   "accepted": [
+    "F6 B5 CD"
+   ],
+   "alternatives": []
+  },
+  "லெள": {
+   "preferred": "F6 BB CD",
+   "accepted": [
+    "F6 BB CD"
+   ],
+   "alternatives": []
+  },
+  "வெள": {
+   "preferred": "F6 C1 CD",
+   "accepted": [
+    "F6 C1 CD"
+   ],
+   "alternatives": []
+  },
+  "ழெள": {
+   "preferred": "F6 C7 CD",
+   "accepted": [
+    "F6 C7 CD"
+   ],
+   "alternatives": []
+  },
+  "ளெள": {
+   "preferred": "F6 CD CD",
+   "accepted": [
+    "F6 CD CD"
+   ],
+   "alternatives": []
+  },
+  "றெள": {
+   "preferred": "F6 D3 CD",
+   "accepted": [
+    "F6 D3 CD"
+   ],
+   "alternatives": []
+  },
+  "னெள": {
+   "preferred": "F6 DA CD",
+   "accepted": [
+    "F6 DA CD"
+   ],
+   "alternatives": []
+  },
+  "ஜெள": {
+   "preferred": "F6 E1 CD",
+   "accepted": [
+    "F6 E1 CD"
+   ],
+   "alternatives": []
+  },
+  "ஷெள": {
+   "preferred": "F6 E5 CD",
+   "accepted": [
+    "F6 E5 CD"
+   ],
+   "alternatives": []
+  },
+  "ஸெள": {
+   "preferred": "F6 E9 CD",
+   "accepted": [
+    "F6 E9 CD"
+   ],
+   "alternatives": []
+  },
+  "ஹெள": {
+   "preferred": "F6 ED CD",
+   "accepted": [
+    "F6 ED CD"
+   ],
+   "alternatives": []
+  },
+  "ஶெள": {
+   "preferred": "F6 86 CD",
+   "accepted": [
+    "F6 86 CD"
+   ],
+   "alternatives": []
+  },
+  "ஔ": {
+   "preferred": "4A CD",
+   "accepted": [
+    "4A CD"
+   ],
+   "alternatives": []
+  },
+  "ௌ": {
+   "preferred": "F6 CD",
+   "accepted": [
+    "F6 CD"
+   ],
+   "alternatives": []
+  },
+  "ொ": {
+   "preferred": "F6 F5",
+   "accepted": [
+    "F6 F5"
+   ],
+   "alternatives": []
+  },
+  "ோ": {
+   "preferred": "F7 F5",
+   "accepted": [
+    "F7 F5"
+   ],
+   "alternatives": []
+  },
+  "-": {
+   "preferred": "26",
+   "accepted": [
+    "26"
+   ],
+   "alternatives": []
+  },
+  "—": {
+   "preferred": "97",
+   "accepted": [
+    "97"
+   ],
+   "alternatives": []
+  },
+  "÷": {
+   "preferred": "24",
+   "accepted": [
+    "24"
+   ],
+   "alternatives": []
+  },
+  "×": {
+   "preferred": "96",
+   "accepted": [
+    "96"
+   ],
+   "alternatives": []
+  },
+  "#": {
+   "preferred": "12",
+   "accepted": [
+    "12"
+   ],
+   "alternatives": []
+  },
+  "$": {
+   "preferred": "13",
+   "accepted": [
+    "13"
+   ],
+   "alternatives": []
+  },
+  "<": {
+   "preferred": "14",
+   "accepted": [
+    "14"
+   ],
+   "alternatives": []
+  },
+  ">": {
+   "preferred": "15",
+   "accepted": [
+    "15"
+   ],
+   "alternatives": []
+  },
+  "@": {
+   "preferred": "16",
+   "accepted": [
+    "16"
+   ],
+   "alternatives": []
+  },
+  "_": {
+   "preferred": "18",
+   "accepted": [
+    "18"
+   ],
+   "alternatives": []
+  },
+  "[": {
+   "preferred": "0B",
+   "accepted": [
+    "0B"
+   ],
+   "alternatives": []
+  },
+  "]": {
+   "preferred": "0C",
+   "accepted": [
+    "0C"
+   ],
+   "alternatives": []
+  },
+  "{": {
+   "preferred": "1A",
+   "accepted": [
+    "1A"
+   ],
+   "alternatives": []
+  },
+  "}": {
+   "preferred": "1B",
+   "accepted": [
+    "1B"
+   ],
+   "alternatives": []
+  },
+  "\\": {
+   "preferred": "17",
+   "accepted": [
+    "17"
+   ],
+   "alternatives": []
+  },
+  "|": {
+   "preferred": "1C",
+   "accepted": [
+    "1C"
+   ],
+   "alternatives": []
+  },
+  "`": {
+   "preferred": "19",
+   "accepted": [
+    "19"
+   ],
+   "alternatives": []
+  },
+  "^": {
+   "preferred": "0F",
+   "accepted": [
+    "0F"
+   ],
+   "alternatives": []
+  },
+  "&": {
+   "preferred": "06",
+   "accepted": [
+    "06"
+   ],
+   "alternatives": []
+  },
+  "“": {
+   "preferred": "0D",
+   "accepted": [
+    "0D"
+   ],
+   "alternatives": []
+  },
+  "”": {
+   "preferred": "0E",
+   "accepted": [
+    "0E"
+   ],
+   "alternatives": []
+  }
+ }
+}

@@ -1,0 +1,572 @@
+65 64 20     C link space             naive "క్ "        U "క్ "          0C15 0C4D 0020 | 7 4D E6 FC 20 4
+65 44 20     C halant space           naive "క్ "        U "క్‌ "         0C15 0C4D 200C 0020 | 7 4D 8A FC 20 4
+65 44 65     C halant క               naive "క్క"        U "క్‌క"         0C15 0C4D 200C 0C15 | 7 4D 8A FC 4D E6 FC 6
+65 64 F3 65  C link zwnj క            naive "క్‌క"       U "క్క"          0C15 0C4D 0C15 | 7 4D E6 FC 3
+65 64 F2 65  C link zwj క             naive "క్‍క"       U "క్క"          0C15 0C4D 0C15 | 7 4D E6 FC 3
+65 64 65 20  C link క space           naive "క్క "       U "క్క "         0C15 0C4D 0C15 0020 | 7 4D E6 FC 50 20 5
+65 20        C space                  naive "క "         U "క "           0C15 0020 | 7 4D E6 FC 20 4
+65 64 64 65  C link link క            naive "క్్క"       U "క్క"          0C15 0C4D 0C15 | 7 4D E6 FC 50 4
+65 44 2C     C halant ,               naive "క్,"        U "క్‌,"         0C15 0C4D 200C 002C | 7 4D 8A FC 2C 4
+79 64 20     C link space             naive "ప్ "        U "ప్ "          0C2A 0C4D 0020 | 7 E7 B3 20 3
+79 44 20     C halant space           naive "ప్ "        U "ప్‌ "         0C2A 0C4D 200C 0020 | 7 8B B3 20 3
+79 44 65     C halant క               naive "ప్క"        U "ప్‌క"         0C2A 0C4D 200C 0C15 | 7 8B B3 4D E6 FC 5
+79 64 F3     C link zwnj              naive "ప్‌"        U "ప్"           0C2A 0C4D | 7 E7 B3 2
+79 64 F2     C link zwj               naive "ప్‍"        U "ప్"           0C2A 0C4D | 7 E7 B3 2
+79 64 F3 65  C link zwnj క            naive "ప్‌క"       U "ప్క"          0C2A 0C4D 0C15 | 7 E7 B3 2
+79 64 F2 65  C link zwj క             naive "ప్‍క"       U "ప్క"          0C2A 0C4D 0C15 | 7 E7 B3 2
+79 64 65 20  C link క space           naive "ప్క "       U "ప్క "         0C2A 0C4D 0C15 0020 | 7 E7 B3 50 20 4
+79 64 2C     C link ,                 naive "ప్,"        U "ప్"           0C2A 0C4D | 7 E7 B3 2
+79 20        C space                  naive "ప "         U "ప "           0C2A 0020 | 7 E7 B3 20 3
+79 64 64 65  C link link క            naive "ప్్క"       U "ప్క"          0C2A 0C4D 0C15 | 7 E7 B3 50 3
+79 44 2C     C halant ,               naive "ప్,"        U "ప్‌,"         0C2A 0C4D 200C 002C | 7 8B B3 2C 3
+6B 64 20     C link space             naive "ర్ "        U "ర్ "          0C30 0C4D 0020 | 7 C6 E6 FF 20 4
+6B 44        C halant                 naive "ర్"         U "ర్‌"          0C30 0C4D 200C | 7 null 139
+6B 44 20     C halant space           naive "ర్ "        U "ర్‌ "         0C30 0C4D 200C 0020 | 7 C6 8A FF 20 4
+6B 44 65     C halant క               naive "ర్క"        U "ర్‌క"         0C30 0C4D 200C 0C15 | 7 C6 8A FF 4D E6 FC 6
+6B 64 F3 65  C link zwnj క            naive "ర్‌క"       U "ర్క"          0C30 0C4D 0C15 | 7 C6 E6 FF 3
+6B 64 F2 65  C link zwj క             naive "ర్‍క"       U "ర్క"          0C30 0C4D 0C15 | 7 C6 E6 FF 3
+6B 64 65 20  C link క space           naive "ర్క "       U "ర్క "         0C30 0C4D 0C15 0020 | 7 C6 E6 FF 50 20 5
+6B 20        C space                  naive "ర "         U "ర "           0C30 0020 | 7 C6 E6 FF 20 4
+6B 64 64 65  C link link క            naive "ర్్క"       U "ర్క"          0C30 0C4D 0C15 | 7 C6 E6 FF 50 4
+6B 44 2C     C halant ,               naive "ర్,"        U "ర్‌,"         0C30 0C4D 200C 002C | 7 C6 8A FF 2C 4
+6B F3        C zwnj                   naive "ర‌"         U "ర‌"           0C30 200C | 7 C6 E6 FF 3
+6B F2        C zwj                    naive "ర‍"         U "ర‍"           0C30 200D | 7 C6 E6 FF 3
+58 64 20     C link space             naive "ఝ్ "        U "ఝ్ "          0C1D 0C4D 0020 | 7 6D 20 2
+58 44        C halant                 naive "ఝ్"         U "ఝ్‌"          0C1D 0C4D 200C | 7 null 139
+58 44 20     C halant space           naive "ఝ్ "        U "ఝ్‌ "         0C1D 0C4D 200C 0020 | 7 C6 8A FF 6E 24 20 6
+58 44 65     C halant క               naive "ఝ్క"        U "ఝ్‌క"         0C1D 0C4D 200C 0C15 | 7 C6 8A FF 6E 24 4D E6 FC 8
+58 64 F3     C link zwnj              naive "ఝ్‌"        U "ఝ్"           0C1D 0C4D | 7 6D 1
+58 64 F2     C link zwj               naive "ఝ్‍"        U "ఝ్"           0C1D 0C4D | 7 6D 1
+58 64 F3 65  C link zwnj క            naive "ఝ్‌క"       U "ఝ్క"          0C1D 0C4D 0C15 | 7 6D 1
+58 64 F2 65  C link zwj క             naive "ఝ్‍క"       U "ఝ్క"          0C1D 0C4D 0C15 | 7 6D 1
+58 64 65 20  C link క space           naive "ఝ్క "       U "ఝ్క "         0C1D 0C4D 0C15 0020 | 7 6D 50 20 3
+58 64 2C     C link ,                 naive "ఝ్,"        U "ఝ్"           0C1D 0C4D | 7 6D 1
+58 20        C space                  naive "ఝ "         U "ఝ "           0C1D 0020 | 7 6D 20 2
+58 64 64 65  C link link క            naive "ఝ్్క"       U "ఝ్క"          0C1D 0C4D 0C15 | 7 6D 50 2
+58 44 2C     C halant ,               naive "ఝ్,"        U "ఝ్‌,"         0C1D 0C4D 200C 002C | 7 C6 8A FF 6E 24 2C 6
+58 F3        C zwnj                   naive "ఝ‌"         U "ఝ‌"           0C1D 200C | 7 6D 1
+58 F2        C zwj                    naive "ఝ‍"         U "ఝ‍"           0C1D 200D | 7 6D 1
+20 65        space క                  naive " క"         U " క"           0020 0C15 | 7 20 4D E6 FC 4
+20           space                    naive " "          U " "            0020 | 7 20 1
+65 D7 20     C d7 space               naive "క్ర "       U "క*్ర "        0C15 002A 0C4D 0C30 0020 | 7 4D E6 FC 7B 20 5
+65 D7 61     C d7 ా                   naive "క్రఆ"       U "క*్రా"        0C15 002A 0C4D 0C30 0C3E | 7 4D E6 FC 7B 4
+65 D7 73     C d7 ి                   naive "క్రఇ"       U "క*్రి"        0C15 002A 0C4D 0C30 0C3F | 7 4D E6 FC 7B 4
+65 D7 65     C d7 క                   naive "క్రక"       U "క*్రక"        0C15 002A 0C4D 0C30 0C15 | 7 4D E6 FC 7B 4D E6 FC 7
+65 61 D7     C ా d7                   naive "కఆ్ర"       U "కా*్ర"        0C15 0C3E 002A 0C4D 0C30 | 7 4D 3E 7B 3
+65 73 D7     C ి d7                   naive "కఇ్ర"       U "కి*్ర"        0C15 0C3F 002A 0C4D 0C30 | 7 4D EC FC 7B 4
+65 6E D7     C ు d7                   naive "కఉ్ర"       U "కు*్ర"        0C15 0C41 002A 0C4D 0C30 | 7 4D E6 FC 24 7B 5
+65 ED 20     C ed space               naive "క్ర "       U "క*్ర "        0C15 002A 0C4D 0C30 0020 | 7 4D E6 FC 5B 20 5
+65 ED 61     C ed ా                   naive "క్రఆ"       U "క*్రా"        0C15 002A 0C4D 0C30 0C3E | 7 4D E6 FC 5B 4
+65 ED 73     C ed ి                   naive "క్రఇ"       U "క*్రి"        0C15 002A 0C4D 0C30 0C3F | 7 4D E6 FC 5B 4
+65 ED 65     C ed క                   naive "క్రక"       U "క*్రక"        0C15 002A 0C4D 0C30 0C15 | 7 4D E6 FC 5B 4D E6 FC 7
+65 61 ED     C ా ed                   naive "కఆ్ర"       U "కా*్ర"        0C15 0C3E 002A 0C4D 0C30 | 7 4D 3E 5B 3
+65 73 ED     C ి ed                   naive "కఇ్ర"       U "కి*్ర"        0C15 0C3F 002A 0C4D 0C30 | 7 4D EC FC 5B 4
+65 6E ED     C ు ed                   naive "కఉ్ర"       U "కు*్ర"        0C15 0C41 002A 0C4D 0C30 | 7 4D E6 FC 24 5B 5
+65 E1 20     C e1 space               naive "క? "        U "క "           0C15 0020 | 7 4D E6 FC 93 20 5
+65 E1 61     C e1 ా                   naive "క?ఆ"        U "కా"           0C15 0C3E | 7 4D E6 FC 93 4
+65 E1 73     C e1 ి                   naive "క?ఇ"        U "కి"           0C15 0C3F | 7 4D E6 FC 93 4
+65 E1 65     C e1 క                   naive "క?క"        U "కక"           0C15 0C15 | 7 4D E6 FC 93 4D E6 FC 7
+65 61 E1     C ా e1                   naive "కఆ?"        U "కా"           0C15 0C3E | 7 4D 3E 93 3
+65 73 E1     C ి e1                   naive "కఇ?"        U "కి"           0C15 0C3F | 7 4D EC FC 93 4
+65 6E E1     C ు e1                   naive "కఉ?"        U "కు"           0C15 0C41 | 7 4D E6 FC 24 93 5
+65 64 6B 20  C link ర space           naive "క్ర "       U "క్ర "         0C15 0C4D 0C30 0020 | 7 4D E6 FC 20 4
+65 64 6B 65  C link ర క               naive "క్రక"       U "క్రక"         0C15 0C4D 0C30 0C15 | 7 4D E6 FC 4D E6 FC 6
+65 64 6B 61  C link ర ా               naive "క్రఆ"       U "క్రా"         0C15 0C4D 0C30 0C3E | 7 4D 3E 2
+65 64 6B 73  C link ర ి               naive "క్రఇ"       U "క్రి"         0C15 0C4D 0C30 0C3F | 7 4D EC FC 3
+65 64 6B 76  C link ర ీ               naive "క్రఈ"       U "క్రీ"         0C15 0C4D 0C30 0C40 | 7 4D EE FC 3
+65 64 6B 6E  C link ర ు               naive "క్రఉ"       U "క్రు"         0C15 0C4D 0C30 0C41 | 7 4D E6 FC 24 4
+65 64 6B 26  C link ర ూ               naive "క్రఊ"       U "క్రూ"         0C15 0C4D 0C30 0C42 | 7 4D E6 FC 2A 4
+65 64 6B 7A  C link ర ృ               naive "క్రఋ"       U "క్రృ"         0C15 0C4D 0C30 0C43 | 7 4D E6 FC 96 4
+65 64 6B 5F  C link ర ౄ               naive "క్రౠ"       U "క్రౄ"         0C15 0C4D 0C30 0C44 | 7 4D E6 FC 3
+65 64 6B 62  C link ర ె               naive "క్రఎ"       U "క్రె"         0C15 0C4D 0C30 0C46 | 7 4D F0 FC 3
+65 64 6B D3  C link ర ే               naive "క్రఏ"       U "క్రే"         0C15 0C4D 0C30 0C47 | 7 4D F3 FC 3
+65 64 6B 6D  C link ర ై               naive "క్రఐ"       U "క్రై"         0C15 0C4D 0C30 0C48 | 7 4F F2 2
+65 64 6B 70  C link ర ొ               naive "క్రఒ"       U "క్రొ"         0C15 0C4D 0C30 0C4A | 7 4D F6 2
+65 64 6B 24  C link ర ో               naive "క్రఓ"       U "క్రో"         0C15 0C4D 0C30 0C4B | 7 4D F8 2
+65 64 6B 40  C link ర ౌ               naive "క్రఔ"       U "క్రౌ"         0C15 0C4D 0C30 0C4C | 7 4D FA 2
+65 64 6B 3C  C link ర ం               naive "క్రం"       U "క్రం"         0C15 0C4D 0C30 0C02 | 7 4D E6 FC 85 4
+65 64 6B 3E  C link ర ః               naive "క్రః"       U "క్రః"         0C15 0C4D 0C30 0C03 | 7 4D E6 FC 40 4
+65 64 6B E0  C link ర ఁ               naive "క్రఁ"       U "క్రఁ"         0C15 0C4D 0C30 0C01 | 7 4D E6 FC B6 4
+65 64 6B 64  C link ర link            naive "క్ర్"       U "క్ర్"         0C15 0C4D 0C30 0C4D | 7 4D E6 FC 3
+65 64 6B 66  C link ర య               naive "క్రయ"       U "క్రయ"         0C15 0C4D 0C30 0C2F | 7 4D E6 FC C4 E6 FD 24 7
+79 D7 20     C d7 space               naive "ప్ర "       U "ప*్ర "        0C2A 002A 0C4D 0C30 0020 | 7 E7 B3 7B 20 4
+D7 79        d7 C                     naive "్రప"        U "*్రప"         002A 0C4D 0C30 0C2A | 7 7B E7 B3 3
+79 D7 61     C d7 ా                   naive "ప్రఆ"       U "ప*్రా"        0C2A 002A 0C4D 0C30 0C3E | 7 E7 B3 7B 3
+79 D7 73     C d7 ి                   naive "ప్రఇ"       U "ప*్రి"        0C2A 002A 0C4D 0C30 0C3F | 7 E7 B3 7B 3
+79 D7 65     C d7 క                   naive "ప్రక"       U "ప*్రక"        0C2A 002A 0C4D 0C30 0C15 | 7 E7 B3 7B 4D E6 FC 6
+79 61 D7     C ా d7                   naive "పఆ్ర"       U "పా*్ర"        0C2A 0C3E 002A 0C4D 0C30 | 7 B4 EB 7B 3
+79 73 D7     C ి d7                   naive "పఇ్ర"       U "పి*్ర"        0C2A 0C3F 002A 0C4D 0C30 | 7 ED B3 7B 3
+79 6E D7     C ు d7                   naive "పఉ్ర"       U "పు*్ర"        0C2A 0C41 002A 0C4D 0C30 | 7 E7 B3 23 7B 4
+79 ED 20     C ed space               naive "ప్ర "       U "ప*్ర "        0C2A 002A 0C4D 0C30 0020 | 7 E7 B3 5B 20 4
+ED 79        ed C                     naive "్రప"        U "*్రప"         002A 0C4D 0C30 0C2A | 7 5B E7 B3 3
+79 ED 61     C ed ా                   naive "ప్రఆ"       U "ప*్రా"        0C2A 002A 0C4D 0C30 0C3E | 7 E7 B3 5B 3
+79 ED 73     C ed ి                   naive "ప్రఇ"       U "ప*్రి"        0C2A 002A 0C4D 0C30 0C3F | 7 E7 B3 5B 3
+79 ED 65     C ed క                   naive "ప్రక"       U "ప*్రక"        0C2A 002A 0C4D 0C30 0C15 | 7 E7 B3 5B 4D E6 FC 6
+79 61 ED     C ా ed                   naive "పఆ్ర"       U "పా*్ర"        0C2A 0C3E 002A 0C4D 0C30 | 7 B4 EB 5B 3
+79 73 ED     C ి ed                   naive "పఇ్ర"       U "పి*్ర"        0C2A 0C3F 002A 0C4D 0C30 | 7 ED B3 5B 3
+79 6E ED     C ు ed                   naive "పఉ్ర"       U "పు*్ర"        0C2A 0C41 002A 0C4D 0C30 | 7 E7 B3 23 5B 4
+79 E1 20     C e1 space               naive "ప? "        U "ప "           0C2A 0020 | 7 E7 B3 93 20 4
+E1 79        e1 C                     naive "?ప"         U "ప"            0C2A | 7 93 E7 B3 3
+79 E1 61     C e1 ా                   naive "ప?ఆ"        U "పా"           0C2A 0C3E | 7 E7 B3 93 3
+79 E1 73     C e1 ి                   naive "ప?ఇ"        U "పి"           0C2A 0C3F | 7 E7 B3 93 3
+79 E1 65     C e1 క                   naive "ప?క"        U "పక"           0C2A 0C15 | 7 E7 B3 93 4D E6 FC 6
+79 61 E1     C ా e1                   naive "పఆ?"        U "పా"           0C2A 0C3E | 7 B4 EB 93 3
+79 73 E1     C ి e1                   naive "పఇ?"        U "పి"           0C2A 0C3F | 7 ED B3 93 3
+79 6E E1     C ు e1                   naive "పఉ?"        U "పు"           0C2A 0C41 | 7 E7 B3 23 93 4
+79 64 6B 20  C link ర space           naive "ప్ర "       U "ప్ర "         0C2A 0C4D 0C30 0020 | 7 E7 B3 20 3
+79 64 6B 65  C link ర క               naive "ప్రక"       U "ప్రక"         0C2A 0C4D 0C30 0C15 | 7 E7 B3 4D E6 FC 5
+79 64 6B 61  C link ర ా               naive "ప్రఆ"       U "ప్రా"         0C2A 0C4D 0C30 0C3E | 7 B4 EB 2
+79 64 6B 73  C link ర ి               naive "ప్రఇ"       U "ప్రి"         0C2A 0C4D 0C30 0C3F | 7 ED B3 2
+79 64 6B 76  C link ర ీ               naive "ప్రఈ"       U "ప్రీ"         0C2A 0C4D 0C30 0C40 | 7 EF B3 2
+79 64 6B 6E  C link ర ు               naive "ప్రఉ"       U "ప్రు"         0C2A 0C4D 0C30 0C41 | 7 E7 B3 23 3
+79 64 6B 26  C link ర ూ               naive "ప్రఊ"       U "ప్రూ"         0C2A 0C4D 0C30 0C42 | 7 E7 B3 4E 3
+79 64 6B 7A  C link ర ృ               naive "ప్రఋ"       U "ప్రృ"         0C2A 0C4D 0C30 0C43 | 7 E7 B3 96 3
+79 64 6B 5F  C link ర ౄ               naive "ప్రౠ"       U "ప్రౄ"         0C2A 0C4D 0C30 0C44 | 7 E7 B3 2
+79 64 6B 62  C link ర ె               naive "ప్రఎ"       U "ప్రె"         0C2A 0C4D 0C30 0C46 | 7 F2 B3 2
+79 64 6B D3  C link ర ే               naive "ప్రఏ"       U "ప్రే"         0C2A 0C4D 0C30 0C47 | 7 F5 B3 2
+79 64 6B 6D  C link ర ై               naive "ప్రఐ"       U "ప్రై"         0C2A 0C4D 0C30 0C48 | 7 4F F2 2
+79 64 6B 70  C link ర ొ               naive "ప్రఒ"       U "ప్రొ"         0C2A 0C4D 0C30 0C4A | 7 B4 F7 2
+79 64 6B 24  C link ర ో               naive "ప్రఓ"       U "ప్రో"         0C2A 0C4D 0C30 0C4B | 7 B4 F9 2
+79 64 6B 40  C link ర ౌ               naive "ప్రఔ"       U "ప్రౌ"         0C2A 0C4D 0C30 0C4C | 7 B4 FB 2
+79 64 6B 3C  C link ర ం               naive "ప్రం"       U "ప్రం"         0C2A 0C4D 0C30 0C02 | 7 E7 B3 85 3
+79 64 6B 3E  C link ర ః               naive "ప్రః"       U "ప్రః"         0C2A 0C4D 0C30 0C03 | 7 E7 B3 40 3
+79 64 6B E0  C link ర ఁ               naive "ప్రఁ"       U "ప్రఁ"         0C2A 0C4D 0C30 0C01 | 7 E7 B3 B6 3
+79 64 6B 64  C link ర link            naive "ప్ర్"       U "ప్ర్"         0C2A 0C4D 0C30 0C4D | 7 E7 B3 2
+79 64 6B 66  C link ర య               naive "ప్రయ"       U "ప్రయ"         0C2A 0C4D 0C30 0C2F | 7 E7 B3 C4 E6 FD 24 6
+4F D7        C d7                     naive "శ్ర"        U "శ*్ర"         0C36 002A 0C4D 0C30 | 7 D4 E8 FD 7B 4
+4F D7 20     C d7 space               naive "శ్ర "       U "శ*్ర "        0C36 002A 0C4D 0C30 0020 | 7 D4 E8 FD 7B 20 5
+D7 4F        d7 C                     naive "్రశ"        U "*్రశ"         002A 0C4D 0C30 0C36 | 7 7B D4 E8 FD 4
+4F D7 61     C d7 ా                   naive "శ్రఆ"       U "శ*్రా"        0C36 002A 0C4D 0C30 0C3E | 7 D4 E8 FD 7B 4
+4F D7 73     C d7 ి                   naive "శ్రఇ"       U "శ*్రి"        0C36 002A 0C4D 0C30 0C3F | 7 D4 E8 FD 7B 4
+4F D7 65     C d7 క                   naive "శ్రక"       U "శ*్రక"        0C36 002A 0C4D 0C30 0C15 | 7 D4 E8 FD 7B 4D E6 FC 7
+4F 61 D7     C ా d7                   naive "శఆ్ర"       U "శా*్ర"        0C36 0C3E 002A 0C4D 0C30 | 7 D4 3E 7B 3
+4F 73 D7     C ి d7                   naive "శఇ్ర"       U "శి*్ర"        0C36 0C3F 002A 0C4D 0C30 | 7 D5 7B 2
+4F 6E D7     C ు d7                   naive "శఉ్ర"       U "శు*్ర"        0C36 0C41 002A 0C4D 0C30 | 7 D4 E8 FD 24 7B 5
+4F ED        C ed                     naive "శ్ర"        U "శ*్ర"         0C36 002A 0C4D 0C30 | 7 D4 E8 FD 5B 4
+4F ED 20     C ed space               naive "శ్ర "       U "శ*్ర "        0C36 002A 0C4D 0C30 0020 | 7 D4 E8 FD 5B 20 5
+ED 4F        ed C                     naive "్రశ"        U "*్రశ"         002A 0C4D 0C30 0C36 | 7 5B D4 E8 FD 4
+4F ED 61     C ed ా                   naive "శ్రఆ"       U "శ*్రా"        0C36 002A 0C4D 0C30 0C3E | 7 D4 E8 FD 5B 4
+4F ED 73     C ed ి                   naive "శ్రఇ"       U "శ*్రి"        0C36 002A 0C4D 0C30 0C3F | 7 D4 E8 FD 5B 4
+4F ED 65     C ed క                   naive "శ్రక"       U "శ*్రక"        0C36 002A 0C4D 0C30 0C15 | 7 D4 E8 FD 5B 4D E6 FC 7
+4F 61 ED     C ా ed                   naive "శఆ్ర"       U "శా*్ర"        0C36 0C3E 002A 0C4D 0C30 | 7 D4 3E 5B 3
+4F 73 ED     C ి ed                   naive "శఇ్ర"       U "శి*్ర"        0C36 0C3F 002A 0C4D 0C30 | 7 D5 5B 2
+4F 6E ED     C ు ed                   naive "శఉ్ర"       U "శు*్ర"        0C36 0C41 002A 0C4D 0C30 | 7 D4 E8 FD 24 5B 5
+4F E1        C e1                     naive "శ?"         U "శ"            0C36 | 7 D4 E8 FD 93 4
+4F E1 20     C e1 space               naive "శ? "        U "శ "           0C36 0020 | 7 D4 E8 FD 93 20 5
+E1 4F        e1 C                     naive "?శ"         U "శ"            0C36 | 7 93 D4 E8 FD 4
+4F E1 61     C e1 ా                   naive "శ?ఆ"        U "శా"           0C36 0C3E | 7 D4 E8 FD 93 4
+4F E1 73     C e1 ి                   naive "శ?ఇ"        U "శి"           0C36 0C3F | 7 D4 E8 FD 93 4
+4F E1 65     C e1 క                   naive "శ?క"        U "శక"           0C36 0C15 | 7 D4 E8 FD 93 4D E6 FC 7
+4F 61 E1     C ా e1                   naive "శఆ?"        U "శా"           0C36 0C3E | 7 D4 3E 93 3
+4F 73 E1     C ి e1                   naive "శఇ?"        U "శి"           0C36 0C3F | 7 D5 93 2
+4F 6E E1     C ు e1                   naive "శఉ?"        U "శు"           0C36 0C41 | 7 D4 E8 FD 24 93 5
+4F 64 6B 20  C link ర space           naive "శ్ర "       U "శ్ర "         0C36 0C4D 0C30 0020 | 7 D4 E8 FD 20 4
+4F 64 6B 65  C link ర క               naive "శ్రక"       U "శ్రక"         0C36 0C4D 0C30 0C15 | 7 D4 E8 FD 4D E6 FC 6
+4F 64 6B 61  C link ర ా               naive "శ్రఆ"       U "శ్రా"         0C36 0C4D 0C30 0C3E | 7 D4 3E 2
+4F 64 6B 73  C link ర ి               naive "శ్రఇ"       U "శ్రి"         0C36 0C4D 0C30 0C3F | 7 D5 1
+4F 64 6B 76  C link ర ీ               naive "శ్రఈ"       U "శ్రీ"         0C36 0C4D 0C30 0C40 | 7 D6 1
+4F 64 6B 6E  C link ర ు               naive "శ్రఉ"       U "శ్రు"         0C36 0C4D 0C30 0C41 | 7 D4 E8 FD 24 4
+4F 64 6B 26  C link ర ూ               naive "శ్రఊ"       U "శ్రూ"         0C36 0C4D 0C30 0C42 | 7 D4 E8 FD 2A 4
+4F 64 6B 7A  C link ర ృ               naive "శ్రఋ"       U "శ్రృ"         0C36 0C4D 0C30 0C43 | 7 D4 E8 FD 96 4
+4F 64 6B 5F  C link ర ౄ               naive "శ్రౠ"       U "శ్రౄ"         0C36 0C4D 0C30 0C44 | 7 D4 E8 FD 3
+4F 64 6B 62  C link ర ె               naive "శ్రఎ"       U "శ్రె"         0C36 0C4D 0C30 0C46 | 7 D4 F0 FD 3
+4F 64 6B D3  C link ర ే               naive "శ్రఏ"       U "శ్రే"         0C36 0C4D 0C30 0C47 | 7 D4 F3 FD 3
+4F 64 6B 6D  C link ర ై               naive "శ్రఐ"       U "శ్రై"         0C36 0C4D 0C30 0C48 | 7 4F F2 2
+4F 64 6B 70  C link ర ొ               naive "శ్రఒ"       U "శ్రొ"         0C36 0C4D 0C30 0C4A | 7 D4 9F 2
+4F 64 6B 24  C link ర ో               naive "శ్రఓ"       U "శ్రో"         0C36 0C4D 0C30 0C4B | 7 D4 5A 2
+4F 64 6B 40  C link ర ౌ               naive "శ్రఔ"       U "శ్రౌ"         0C36 0C4D 0C30 0C4C | 7 D4 6F 2
+4F 64 6B 3C  C link ర ం               naive "శ్రం"       U "శ్రం"         0C36 0C4D 0C30 0C02 | 7 D4 E8 FD 85 4
+4F 64 6B 3E  C link ర ః               naive "శ్రః"       U "శ్రః"         0C36 0C4D 0C30 0C03 | 7 D4 E8 FD 40 4
+4F 64 6B E0  C link ర ఁ               naive "శ్రఁ"       U "శ్రఁ"         0C36 0C4D 0C30 0C01 | 7 D4 E8 FD B6 4
+4F 64 6B 64  C link ర link            naive "శ్ర్"       U "శ్ర్"         0C36 0C4D 0C30 0C4D | 7 D4 E8 FD 3
+4F 64 6B 66  C link ర య               naive "శ్రయ"       U "శ్రయ"         0C36 0C4D 0C30 0C2F | 7 D4 E8 FD C4 E6 FD 24 7
+67 D7        C d7                     naive "త్ర"        U "త*్ర"         0C24 002A 0C4D 0C30 | 7 99 E8 FE 7B 4
+67 D7 20     C d7 space               naive "త్ర "       U "త*్ర "        0C24 002A 0C4D 0C30 0020 | 7 99 E8 FE 7B 20 5
+D7 67        d7 C                     naive "్రత"        U "*్రత"         002A 0C4D 0C30 0C24 | 7 7B 99 E8 FE 4
+67 D7 61     C d7 ా                   naive "త్రఆ"       U "త*్రా"        0C24 002A 0C4D 0C30 0C3E | 7 99 E8 FE 7B 4
+67 D7 73     C d7 ి                   naive "త్రఇ"       U "త*్రి"        0C24 002A 0C4D 0C30 0C3F | 7 99 E8 FE 7B 4
+67 D7 65     C d7 క                   naive "త్రక"       U "త*్రక"        0C24 002A 0C4D 0C30 0C15 | 7 99 E8 FE 7B 4D E6 FC 7
+67 61 D7     C ా d7                   naive "తఆ్ర"       U "తా*్ర"        0C24 0C3E 002A 0C4D 0C30 | 7 99 E9 7B 3
+67 73 D7     C ి d7                   naive "తఇ్ర"       U "తి*్ర"        0C24 0C3F 002A 0C4D 0C30 | 7 86 7B 2
+67 6E D7     C ు d7                   naive "తఉ్ర"       U "తు*్ర"        0C24 0C41 002A 0C4D 0C30 | 7 99 E8 FE 24 7B 5
+67 ED        C ed                     naive "త్ర"        U "త*్ర"         0C24 002A 0C4D 0C30 | 7 99 E8 FE 5B 4
+67 ED 20     C ed space               naive "త్ర "       U "త*్ర "        0C24 002A 0C4D 0C30 0020 | 7 99 E8 FE 5B 20 5
+ED 67        ed C                     naive "్రత"        U "*్రత"         002A 0C4D 0C30 0C24 | 7 5B 99 E8 FE 4
+67 ED 61     C ed ా                   naive "త్రఆ"       U "త*్రా"        0C24 002A 0C4D 0C30 0C3E | 7 99 E8 FE 5B 4
+67 ED 73     C ed ి                   naive "త్రఇ"       U "త*్రి"        0C24 002A 0C4D 0C30 0C3F | 7 99 E8 FE 5B 4
+67 ED 65     C ed క                   naive "త్రక"       U "త*్రక"        0C24 002A 0C4D 0C30 0C15 | 7 99 E8 FE 5B 4D E6 FC 7
+67 61 ED     C ా ed                   naive "తఆ్ర"       U "తా*్ర"        0C24 0C3E 002A 0C4D 0C30 | 7 99 E9 5B 3
+67 73 ED     C ి ed                   naive "తఇ్ర"       U "తి*్ర"        0C24 0C3F 002A 0C4D 0C30 | 7 86 5B 2
+67 6E ED     C ు ed                   naive "తఉ్ర"       U "తు*్ర"        0C24 0C41 002A 0C4D 0C30 | 7 99 E8 FE 24 5B 5
+67 E1        C e1                     naive "త?"         U "త"            0C24 | 7 99 E8 FE 93 4
+67 E1 20     C e1 space               naive "త? "        U "త "           0C24 0020 | 7 99 E8 FE 93 20 5
+E1 67        e1 C                     naive "?త"         U "త"            0C24 | 7 93 99 E8 FE 4
+67 E1 61     C e1 ా                   naive "త?ఆ"        U "తా"           0C24 0C3E | 7 99 E8 FE 93 4
+67 E1 73     C e1 ి                   naive "త?ఇ"        U "తి"           0C24 0C3F | 7 99 E8 FE 93 4
+67 E1 65     C e1 క                   naive "త?క"        U "తక"           0C24 0C15 | 7 99 E8 FE 93 4D E6 FC 7
+67 61 E1     C ా e1                   naive "తఆ?"        U "తా"           0C24 0C3E | 7 99 E9 93 3
+67 73 E1     C ి e1                   naive "తఇ?"        U "తి"           0C24 0C3F | 7 86 93 2
+67 6E E1     C ు e1                   naive "తఉ?"        U "తు"           0C24 0C41 | 7 99 E8 FE 24 93 5
+67 64 6B 20  C link ర space           naive "త్ర "       U "త్ర "         0C24 0C4D 0C30 0020 | 7 99 E8 FE 20 4
+67 64 6B 65  C link ర క               naive "త్రక"       U "త్రక"         0C24 0C4D 0C30 0C15 | 7 99 E8 FE 4D E6 FC 6
+67 64 6B 61  C link ర ా               naive "త్రఆ"       U "త్రా"         0C24 0C4D 0C30 0C3E | 7 99 E9 2
+67 64 6B 73  C link ర ి               naive "త్రఇ"       U "త్రి"         0C24 0C4D 0C30 0C3F | 7 86 1
+67 64 6B 76  C link ర ీ               naive "త్రఈ"       U "త్రీ"         0C24 0C4D 0C30 0C40 | 7 A1 1
+67 64 6B 6E  C link ర ు               naive "త్రఉ"       U "త్రు"         0C24 0C4D 0C30 0C41 | 7 99 E8 FE 24 4
+67 64 6B 26  C link ర ూ               naive "త్రఊ"       U "త్రూ"         0C24 0C4D 0C30 0C42 | 7 99 E8 FE 2A 4
+67 64 6B 7A  C link ర ృ               naive "త్రఋ"       U "త్రృ"         0C24 0C4D 0C30 0C43 | 7 99 E8 FE 96 4
+67 64 6B 5F  C link ర ౄ               naive "త్రౠ"       U "త్రౄ"         0C24 0C4D 0C30 0C44 | 7 99 E8 FE 3
+67 64 6B 62  C link ర ె               naive "త్రఎ"       U "త్రె"         0C24 0C4D 0C30 0C46 | 7 99 F0 FE 3
+67 64 6B D3  C link ర ే               naive "త్రఏ"       U "త్రే"         0C24 0C4D 0C30 0C47 | 7 99 F3 FE 3
+67 64 6B 6D  C link ర ై               naive "త్రఐ"       U "త్రై"         0C24 0C4D 0C30 0C48 | 7 4F F2 2
+67 64 6B 70  C link ర ొ               naive "త్రఒ"       U "త్రొ"         0C24 0C4D 0C30 0C4A | 7 99 F6 2
+67 64 6B 24  C link ర ో               naive "త్రఓ"       U "త్రో"         0C24 0C4D 0C30 0C4B | 7 99 F8 2
+67 64 6B 40  C link ర ౌ               naive "త్రఔ"       U "త్రౌ"         0C24 0C4D 0C30 0C4C | 7 99 FA 2
+67 64 6B 3C  C link ర ం               naive "త్రం"       U "త్రం"         0C24 0C4D 0C30 0C02 | 7 99 E8 FE 85 4
+67 64 6B 3E  C link ర ః               naive "త్రః"       U "త్రః"         0C24 0C4D 0C30 0C03 | 7 99 E8 FE 40 4
+67 64 6B E0  C link ర ఁ               naive "త్రఁ"       U "త్రఁ"         0C24 0C4D 0C30 0C01 | 7 99 E8 FE B6 4
+67 64 6B 64  C link ర link            naive "త్ర్"       U "త్ర్"         0C24 0C4D 0C30 0C4D | 7 99 E8 FE 3
+67 64 6B 66  C link ర య               naive "త్రయ"       U "త్రయ"         0C24 0C4D 0C30 0C2F | 7 99 E8 FE C4 E6 FD 24 7
+68 D7        C d7                     naive "ద్ర"        U "ద*్ర"         0C26 002A 0C4D 0C30 | 7 A7 E6 FE 7B 4
+68 D7 20     C d7 space               naive "ద్ర "       U "ద*్ర "        0C26 002A 0C4D 0C30 0020 | 7 A7 E6 FE 7B 20 5
+D7 68        d7 C                     naive "్రద"        U "*్రద"         002A 0C4D 0C30 0C26 | 7 7B A7 E6 FE 4
+68 D7 61     C d7 ా                   naive "ద్రఆ"       U "ద*్రా"        0C26 002A 0C4D 0C30 0C3E | 7 A7 E6 FE 7B 4
+68 D7 73     C d7 ి                   naive "ద్రఇ"       U "ద*్రి"        0C26 002A 0C4D 0C30 0C3F | 7 A7 E6 FE 7B 4
+68 D7 65     C d7 క                   naive "ద్రక"       U "ద*్రక"        0C26 002A 0C4D 0C30 0C15 | 7 A7 E6 FE 7B 4D E6 FC 7
+68 61 D7     C ా d7                   naive "దఆ్ర"       U "దా*్ర"        0C26 0C3E 002A 0C4D 0C30 | 7 A7 E9 7B 3
+68 73 D7     C ి d7                   naive "దఇ్ర"       U "ది*్ర"        0C26 0C3F 002A 0C4D 0C30 | 7 A8 7B 2
+68 6E D7     C ు d7                   naive "దఉ్ర"       U "దు*్ర"        0C26 0C41 002A 0C4D 0C30 | 7 A7 E6 FE 24 7B 5
+68 ED        C ed                     naive "ద్ర"        U "ద*్ర"         0C26 002A 0C4D 0C30 | 7 A7 E6 FE 5B 4
+68 ED 20     C ed space               naive "ద్ర "       U "ద*్ర "        0C26 002A 0C4D 0C30 0020 | 7 A7 E6 FE 5B 20 5
+ED 68        ed C                     naive "్రద"        U "*్రద"         002A 0C4D 0C30 0C26 | 7 5B A7 E6 FE 4
+68 ED 61     C ed ా                   naive "ద్రఆ"       U "ద*్రా"        0C26 002A 0C4D 0C30 0C3E | 7 A7 E6 FE 5B 4
+68 ED 73     C ed ి                   naive "ద్రఇ"       U "ద*్రి"        0C26 002A 0C4D 0C30 0C3F | 7 A7 E6 FE 5B 4
+68 ED 65     C ed క                   naive "ద్రక"       U "ద*్రక"        0C26 002A 0C4D 0C30 0C15 | 7 A7 E6 FE 5B 4D E6 FC 7
+68 61 ED     C ా ed                   naive "దఆ్ర"       U "దా*్ర"        0C26 0C3E 002A 0C4D 0C30 | 7 A7 E9 5B 3
+68 73 ED     C ి ed                   naive "దఇ్ర"       U "ది*్ర"        0C26 0C3F 002A 0C4D 0C30 | 7 A8 5B 2
+68 6E ED     C ు ed                   naive "దఉ్ర"       U "దు*్ర"        0C26 0C41 002A 0C4D 0C30 | 7 A7 E6 FE 24 5B 5
+68 E1        C e1                     naive "ద?"         U "ద"            0C26 | 7 A7 E6 FE 93 4
+68 E1 20     C e1 space               naive "ద? "        U "ద "           0C26 0020 | 7 A7 E6 FE 93 20 5
+E1 68        e1 C                     naive "?ద"         U "ద"            0C26 | 7 93 A7 E6 FE 4
+68 E1 61     C e1 ా                   naive "ద?ఆ"        U "దా"           0C26 0C3E | 7 A7 E6 FE 93 4
+68 E1 73     C e1 ి                   naive "ద?ఇ"        U "ది"           0C26 0C3F | 7 A7 E6 FE 93 4
+68 E1 65     C e1 క                   naive "ద?క"        U "దక"           0C26 0C15 | 7 A7 E6 FE 93 4D E6 FC 7
+68 61 E1     C ా e1                   naive "దఆ?"        U "దా"           0C26 0C3E | 7 A7 E9 93 3
+68 73 E1     C ి e1                   naive "దఇ?"        U "ది"           0C26 0C3F | 7 A8 93 2
+68 6E E1     C ు e1                   naive "దఉ?"        U "దు"           0C26 0C41 | 7 A7 E6 FE 24 93 5
+68 64 6B 20  C link ర space           naive "ద్ర "       U "ద్ర "         0C26 0C4D 0C30 0020 | 7 A7 E6 FE 20 4
+68 64 6B 65  C link ర క               naive "ద్రక"       U "ద్రక"         0C26 0C4D 0C30 0C15 | 7 A7 E6 FE 4D E6 FC 6
+68 64 6B 61  C link ర ా               naive "ద్రఆ"       U "ద్రా"         0C26 0C4D 0C30 0C3E | 7 A7 E9 2
+68 64 6B 73  C link ర ి               naive "ద్రఇ"       U "ద్రి"         0C26 0C4D 0C30 0C3F | 7 A8 1
+68 64 6B 76  C link ర ీ               naive "ద్రఈ"       U "ద్రీ"         0C26 0C4D 0C30 0C40 | 7 A9 1
+68 64 6B 6E  C link ర ు               naive "ద్రఉ"       U "ద్రు"         0C26 0C4D 0C30 0C41 | 7 A7 E6 FE 24 4
+68 64 6B 26  C link ర ూ               naive "ద్రఊ"       U "ద్రూ"         0C26 0C4D 0C30 0C42 | 7 A7 E6 FE 2A 4
+68 64 6B 7A  C link ర ృ               naive "ద్రఋ"       U "ద్రృ"         0C26 0C4D 0C30 0C43 | 7 A7 E6 FE 96 4
+68 64 6B 5F  C link ర ౄ               naive "ద్రౠ"       U "ద్రౄ"         0C26 0C4D 0C30 0C44 | 7 A7 E6 FE 3
+68 64 6B 62  C link ర ె               naive "ద్రఎ"       U "ద్రె"         0C26 0C4D 0C30 0C46 | 7 A7 F0 FE 3
+68 64 6B D3  C link ర ే               naive "ద్రఏ"       U "ద్రే"         0C26 0C4D 0C30 0C47 | 7 A7 F3 FE 3
+68 64 6B 6D  C link ర ై               naive "ద్రఐ"       U "ద్రై"         0C26 0C4D 0C30 0C48 | 7 4F F2 2
+68 64 6B 70  C link ర ొ               naive "ద్రఒ"       U "ద్రొ"         0C26 0C4D 0C30 0C4A | 7 A7 F6 2
+68 64 6B 24  C link ర ో               naive "ద్రఓ"       U "ద్రో"         0C26 0C4D 0C30 0C4B | 7 A7 F8 2
+68 64 6B 40  C link ర ౌ               naive "ద్రఔ"       U "ద్రౌ"         0C26 0C4D 0C30 0C4C | 7 A7 FA 2
+68 64 6B 3C  C link ర ం               naive "ద్రం"       U "ద్రం"         0C26 0C4D 0C30 0C02 | 7 A7 E6 FE 85 4
+68 64 6B 3E  C link ర ః               naive "ద్రః"       U "ద్రః"         0C26 0C4D 0C30 0C03 | 7 A7 E6 FE 40 4
+68 64 6B E0  C link ర ఁ               naive "ద్రఁ"       U "ద్రఁ"         0C26 0C4D 0C30 0C01 | 7 A7 E6 FE B6 4
+68 64 6B 64  C link ర link            naive "ద్ర్"       U "ద్ర్"         0C26 0C4D 0C30 0C4D | 7 A7 E6 FE 3
+68 64 6B 66  C link ర య               naive "ద్రయ"       U "ద్రయ"         0C26 0C4D 0C30 0C2F | 7 A7 E6 FE C4 E6 FD 24 7
+6A D7        C d7                     naive "న్ర"        U "న*్ర"         0C28 002A 0C4D 0C30 | 7 AF E8 FE 7B 4
+6A D7 20     C d7 space               naive "న్ర "       U "న*్ర "        0C28 002A 0C4D 0C30 0020 | 7 AF E8 FE 7B 20 5
+D7 6A        d7 C                     naive "్రన"        U "*్రన"         002A 0C4D 0C30 0C28 | 7 7B AF E8 FE 4
+6A D7 61     C d7 ా                   naive "న్రఆ"       U "న*్రా"        0C28 002A 0C4D 0C30 0C3E | 7 AF E8 FE 7B 4
+6A D7 73     C d7 ి                   naive "న్రఇ"       U "న*్రి"        0C28 002A 0C4D 0C30 0C3F | 7 AF E8 FE 7B 4
+6A D7 65     C d7 క                   naive "న్రక"       U "న*్రక"        0C28 002A 0C4D 0C30 0C15 | 7 AF E8 FE 7B 4D E6 FC 7
+6A 61 D7     C ా d7                   naive "నఆ్ర"       U "నా*్ర"        0C28 0C3E 002A 0C4D 0C30 | 7 AF E9 7B 3
+6A 73 D7     C ి d7                   naive "నఇ్ర"       U "ని*్ర"        0C28 0C3F 002A 0C4D 0C30 | 7 B0 7B 2
+6A 6E D7     C ు d7                   naive "నఉ్ర"       U "ను*్ర"        0C28 0C41 002A 0C4D 0C30 | 7 AF E8 FE 24 7B 5
+6A ED        C ed                     naive "న్ర"        U "న*్ర"         0C28 002A 0C4D 0C30 | 7 AF E8 FE 5B 4
+6A ED 20     C ed space               naive "న్ర "       U "న*్ర "        0C28 002A 0C4D 0C30 0020 | 7 AF E8 FE 5B 20 5
+ED 6A        ed C                     naive "్రన"        U "*్రన"         002A 0C4D 0C30 0C28 | 7 5B AF E8 FE 4
+6A ED 61     C ed ా                   naive "న్రఆ"       U "న*్రా"        0C28 002A 0C4D 0C30 0C3E | 7 AF E8 FE 5B 4
+6A ED 73     C ed ి                   naive "న్రఇ"       U "న*్రి"        0C28 002A 0C4D 0C30 0C3F | 7 AF E8 FE 5B 4
+6A ED 65     C ed క                   naive "న్రక"       U "న*్రక"        0C28 002A 0C4D 0C30 0C15 | 7 AF E8 FE 5B 4D E6 FC 7
+6A 61 ED     C ా ed                   naive "నఆ్ర"       U "నా*్ర"        0C28 0C3E 002A 0C4D 0C30 | 7 AF E9 5B 3
+6A 73 ED     C ి ed                   naive "నఇ్ర"       U "ని*్ర"        0C28 0C3F 002A 0C4D 0C30 | 7 B0 5B 2
+6A 6E ED     C ు ed                   naive "నఉ్ర"       U "ను*్ర"        0C28 0C41 002A 0C4D 0C30 | 7 AF E8 FE 24 5B 5
+6A E1        C e1                     naive "న?"         U "న"            0C28 | 7 AF E8 FE 93 4
+6A E1 20     C e1 space               naive "న? "        U "న "           0C28 0020 | 7 AF E8 FE 93 20 5
+E1 6A        e1 C                     naive "?న"         U "న"            0C28 | 7 93 AF E8 FE 4
+6A E1 61     C e1 ా                   naive "న?ఆ"        U "నా"           0C28 0C3E | 7 AF E8 FE 93 4
+6A E1 73     C e1 ి                   naive "న?ఇ"        U "ని"           0C28 0C3F | 7 AF E8 FE 93 4
+6A E1 65     C e1 క                   naive "న?క"        U "నక"           0C28 0C15 | 7 AF E8 FE 93 4D E6 FC 7
+6A 61 E1     C ా e1                   naive "నఆ?"        U "నా"           0C28 0C3E | 7 AF E9 93 3
+6A 73 E1     C ి e1                   naive "నఇ?"        U "ని"           0C28 0C3F | 7 B0 93 2
+6A 6E E1     C ు e1                   naive "నఉ?"        U "ను"           0C28 0C41 | 7 AF E8 FE 24 93 5
+6A 64 6B 20  C link ర space           naive "న్ర "       U "న్ర "         0C28 0C4D 0C30 0020 | 7 AF E8 FE 20 4
+6A 64 6B 65  C link ర క               naive "న్రక"       U "న్రక"         0C28 0C4D 0C30 0C15 | 7 AF E8 FE 4D E6 FC 6
+6A 64 6B 61  C link ర ా               naive "న్రఆ"       U "న్రా"         0C28 0C4D 0C30 0C3E | 7 AF E9 2
+6A 64 6B 73  C link ర ి               naive "న్రఇ"       U "న్రి"         0C28 0C4D 0C30 0C3F | 7 B0 1
+6A 64 6B 76  C link ర ీ               naive "న్రఈ"       U "న్రీ"         0C28 0C4D 0C30 0C40 | 7 B1 1
+6A 64 6B 6E  C link ర ు               naive "న్రఉ"       U "న్రు"         0C28 0C4D 0C30 0C41 | 7 AF E8 FE 24 4
+6A 64 6B 26  C link ర ూ               naive "న్రఊ"       U "న్రూ"         0C28 0C4D 0C30 0C42 | 7 AF E8 FE 2A 4
+6A 64 6B 7A  C link ర ృ               naive "న్రఋ"       U "న్రృ"         0C28 0C4D 0C30 0C43 | 7 AF E8 FE 96 4
+6A 64 6B 5F  C link ర ౄ               naive "న్రౠ"       U "న్రౄ"         0C28 0C4D 0C30 0C44 | 7 AF E8 FE 3
+6A 64 6B 62  C link ర ె               naive "న్రఎ"       U "న్రె"         0C28 0C4D 0C30 0C46 | 7 AF F0 FE 3
+6A 64 6B D3  C link ర ే               naive "న్రఏ"       U "న్రే"         0C28 0C4D 0C30 0C47 | 7 AF F3 FE 3
+6A 64 6B 6D  C link ర ై               naive "న్రఐ"       U "న్రై"         0C28 0C4D 0C30 0C48 | 7 4F F2 2
+6A 64 6B 70  C link ర ొ               naive "న్రఒ"       U "న్రొ"         0C28 0C4D 0C30 0C4A | 7 AF F6 2
+6A 64 6B 24  C link ర ో               naive "న్రఓ"       U "న్రో"         0C28 0C4D 0C30 0C4B | 7 AF F8 2
+6A 64 6B 40  C link ర ౌ               naive "న్రఔ"       U "న్రౌ"         0C28 0C4D 0C30 0C4C | 7 AF FA 2
+6A 64 6B 3C  C link ర ం               naive "న్రం"       U "న్రం"         0C28 0C4D 0C30 0C02 | 7 AF E8 FE 85 4
+6A 64 6B 3E  C link ర ః               naive "న్రః"       U "న్రః"         0C28 0C4D 0C30 0C03 | 7 AF E8 FE 40 4
+6A 64 6B E0  C link ర ఁ               naive "న్రఁ"       U "న్రఁ"         0C28 0C4D 0C30 0C01 | 7 AF E8 FE B6 4
+6A 64 6B 64  C link ర link            naive "న్ర్"       U "న్ర్"         0C28 0C4D 0C30 0C4D | 7 AF E8 FE 3
+6A 64 6B 66  C link ర య               naive "న్రయ"       U "న్రయ"         0C28 0C4D 0C30 0C2F | 7 AF E8 FE C4 E6 FD 24 7
+65 6D 20     C ై space                naive "కఐ "        U "కై "          0C15 0C48 0020 | 7 4D F0 FC 4F 20 5
+65 6D 65     C ై క                    naive "కఐక"        U "కైక"          0C15 0C48 0C15 | 7 4D F0 FC 4F 4D E6 FC 7
+65 6D 3C     C ై ం                    naive "కఐం"        U "కైం"          0C15 0C48 0C02 | 7 4D F0 FC 4F 85 5
+65 6D 3C 20  C ై ం space              naive "కఐం "       U "కైం "         0C15 0C48 0C02 0020 | 7 4D F0 FC 4F 85 20 6
+65 62 E5     C ె e5                   naive "కఎఫె"       U "కె"           0C15 0C46 | 7 4D F0 FC 3
+65 62 E6     C ె e6                   naive "కఎబె"       U "కె"           0C15 0C46 | 7 4D F0 FC 3
+65 62 E7     C ె e7                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 3D 1
+65 62 E8     C ె e8                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 4D F0 FC 3
+65 62 E9     C ె e9                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 2B 1
+65 62 EA     C ె ea                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 3B 1
+65 62 EB     C ె eb                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 25 1
+65 62 EC     C ె ec                   naive "కఎవె"       U "కె"           0C15 0C46 | 7 4D F0 FC 3
+65 62 ED     C ె ed                   naive "కఎ్ర"       U "కె*్ర"        0C15 0C46 002A 0C4D 0C30 | 7 4D F0 FC 5B 4
+65 62 EE     C ె ee                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 4D F0 FC AC 4
+65 62 EF     C ె ef                   naive "కఎ?"        U "కె"           0C15 0C46 | 7 4D F0 FC 3
+65 62 6D     C ె ై                    naive "కఎఐ"        U "కెై"          0C15 0C46 0C48 | 7 4F F2 2
+65 6D 6D     C ై ై                    naive "కఐఐ"        U "కైై"          0C15 0C48 0C48 | 7 4F F2 2
+79 6D 20     C ై space                naive "పఐ "        U "పై "          0C2A 0C48 0020 | 7 F2 B3 4F 20 4
+79 6D 65     C ై క                    naive "పఐక"        U "పైక"          0C2A 0C48 0C15 | 7 F2 B3 4F 4D E6 FC 6
+79 6D 3C     C ై ం                    naive "పఐం"        U "పైం"          0C2A 0C48 0C02 | 7 F2 B3 4F 85 4
+79 6D 3C 20  C ై ం space              naive "పఐం "       U "పైం "         0C2A 0C48 0C02 0020 | 7 F2 B3 4F 85 20 5
+79 62 E5     C ె e5                   naive "పఎఫె"       U "పె"           0C2A 0C46 | 7 F2 B3 2
+79 62 E6     C ె e6                   naive "పఎబె"       U "పె"           0C2A 0C46 | 7 F2 B3 2
+79 62 E7     C ె e7                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 3D 1
+79 62 E8     C ె e8                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 F2 B3 2
+79 62 E9     C ె e9                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 2B 1
+79 62 EA     C ె ea                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 3B 1
+79 62 EB     C ె eb                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 25 1
+79 62 EC     C ె ec                   naive "పఎవె"       U "పె"           0C2A 0C46 | 7 F2 B3 2
+79 62 ED     C ె ed                   naive "పఎ్ర"       U "పె*్ర"        0C2A 0C46 002A 0C4D 0C30 | 7 F2 B3 5B 3
+79 62 EE     C ె ee                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 F2 B3 AC 3
+79 62 EF     C ె ef                   naive "పఎ?"        U "పె"           0C2A 0C46 | 7 F2 B3 2
+79 62 6D     C ె ై                    naive "పఎఐ"        U "పెై"          0C2A 0C46 0C48 | 7 4F F2 2
+79 6D 6D     C ై ై                    naive "పఐఐ"        U "పైై"          0C2A 0C48 0C48 | 7 4F F2 2
+4F 6D 20     C ై space                naive "శఐ "        U "శై "          0C36 0C48 0020 | 7 D4 F0 FD 4F 20 5
+4F 6D 65     C ై క                    naive "శఐక"        U "శైక"          0C36 0C48 0C15 | 7 D4 F0 FD 4F 4D E6 FC 7
+4F 6D 3C     C ై ం                    naive "శఐం"        U "శైం"          0C36 0C48 0C02 | 7 D4 F0 FD 4F 85 5
+4F 6D 3C 20  C ై ం space              naive "శఐం "       U "శైం "         0C36 0C48 0C02 0020 | 7 D4 F0 FD 4F 85 20 6
+4F 62 E5     C ె e5                   naive "శఎఫె"       U "శె"           0C36 0C46 | 7 D4 F0 FD 3
+4F 62 E6     C ె e6                   naive "శఎబె"       U "శె"           0C36 0C46 | 7 D4 F0 FD 3
+4F 62 E7     C ె e7                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 3D 1
+4F 62 E8     C ె e8                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 D4 F0 FD 3
+4F 62 E9     C ె e9                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 2B 1
+4F 62 EA     C ె ea                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 3B 1
+4F 62 EB     C ె eb                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 25 1
+4F 62 EC     C ె ec                   naive "శఎవె"       U "శె"           0C36 0C46 | 7 D4 F0 FD 3
+4F 62 ED     C ె ed                   naive "శఎ్ర"       U "శె*్ర"        0C36 0C46 002A 0C4D 0C30 | 7 D4 F0 FD 5B 4
+4F 62 EE     C ె ee                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 D4 F0 FD AC 4
+4F 62 EF     C ె ef                   naive "శఎ?"        U "శె"           0C36 0C46 | 7 D4 F0 FD 3
+4F 62 6D     C ె ై                    naive "శఎఐ"        U "శెై"          0C36 0C46 0C48 | 7 4F F2 2
+4F 6D 6D     C ై ై                    naive "శఐఐ"        U "శైై"          0C36 0C48 0C48 | 7 4F F2 2
+6B 6D 20     C ై space                naive "రఐ "        U "రై "          0C30 0C48 0020 | 7 C6 F0 FF 4F 20 5
+6B 6D 65     C ై క                    naive "రఐక"        U "రైక"          0C30 0C48 0C15 | 7 C6 F0 FF 4F 4D E6 FC 7
+6B 6D 3C     C ై ం                    naive "రఐం"        U "రైం"          0C30 0C48 0C02 | 7 C6 F0 FF 4F 85 5
+6B 6D 3C 20  C ై ం space              naive "రఐం "       U "రైం "         0C30 0C48 0C02 0020 | 7 C6 F0 FF 4F 85 20 6
+6B 62 E5     C ె e5                   naive "రఎఫె"       U "రె"           0C30 0C46 | 7 C6 F0 FF 3
+6B 62 E6     C ె e6                   naive "రఎబె"       U "రె"           0C30 0C46 | 7 C6 F0 FF 3
+6B 62 E7     C ె e7                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 3D 1
+6B 62 E8     C ె e8                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 C6 F0 FF 3
+6B 62 E9     C ె e9                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 2B 1
+6B 62 EA     C ె ea                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 3B 1
+6B 62 EB     C ె eb                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 25 1
+6B 62 EC     C ె ec                   naive "రఎవె"       U "రె"           0C30 0C46 | 7 C6 F0 FF 3
+6B 62 ED     C ె ed                   naive "రఎ్ర"       U "రె*్ర"        0C30 0C46 002A 0C4D 0C30 | 7 C6 F0 FF 5B 4
+6B 62 EE     C ె ee                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 C6 F0 FF AC 4
+6B 62 EF     C ె ef                   naive "రఎ?"        U "రె"           0C30 0C46 | 7 C6 F0 FF 3
+6B 62 6D     C ె ై                    naive "రఎఐ"        U "రెై"          0C30 0C46 0C48 | 7 4F F2 2
+6B 6D 6D     C ై ై                    naive "రఐఐ"        U "రైై"          0C30 0C48 0C48 | 7 4F F2 2
+55 6D 20     C ై space                naive "బఐ "        U "బై "          0C2C 0C48 0020 | 7 BB F1 FD 4F 20 5
+55 6D 65     C ై క                    naive "బఐక"        U "బైక"          0C2C 0C48 0C15 | 7 BB F1 FD 4F 4D E6 FC 7
+55 6D 3C     C ై ం                    naive "బఐం"        U "బైం"          0C2C 0C48 0C02 | 7 BB F1 FD 4F 85 5
+55 6D 3C 20  C ై ం space              naive "బఐం "       U "బైం "         0C2C 0C48 0C02 0020 | 7 BB F1 FD 4F 85 20 6
+55 62 E5     C ె e5                   naive "బఎఫె"       U "బె"           0C2C 0C46 | 7 BB F1 FD 3
+55 62 E6     C ె e6                   naive "బఎబె"       U "బె"           0C2C 0C46 | 7 BB F1 FD 3
+55 62 E7     C ె e7                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 3D 1
+55 62 E8     C ె e8                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 BB F1 FD 3
+55 62 E9     C ె e9                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 2B 1
+55 62 EA     C ె ea                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 3B 1
+55 62 EB     C ె eb                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 25 1
+55 62 EC     C ె ec                   naive "బఎవె"       U "బె"           0C2C 0C46 | 7 BB F1 FD 3
+55 62 ED     C ె ed                   naive "బఎ్ర"       U "బె*్ర"        0C2C 0C46 002A 0C4D 0C30 | 7 BB F1 FD 5B 4
+55 62 EE     C ె ee                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 BB F1 FD AC 4
+55 62 EF     C ె ef                   naive "బఎ?"        U "బె"           0C2C 0C46 | 7 BB F1 FD 3
+55 62 6D     C ె ై                    naive "బఎఐ"        U "బెై"          0C2C 0C46 0C48 | 7 4F F2 2
+55 6D 6D     C ై ై                    naive "బఐఐ"        U "బైై"          0C2C 0C48 0C48 | 7 4F F2 2
+6D 20        ై space                  naive "ఐ "         U " ై "          0020 0C48 0020 | 7 4F F2 2
+6D 65 20     ై క space                naive "ఐక "        U " ైక"          0020 0C48 0C15 | 7 4F F2 2
+51 6D        అ ై                      naive "అఐ"         U "అై"           0C05 0C48 | 7 4F F2 2
+23 6D        23 ై                     naive "?ఐ"         U "ై"            0C48 | 7 4F F2 2
+20 6D        space ై                  naive " ఐ"         U " ై"           0020 0C48 | 7 4F F2 2
+65 64 58 20  C link 58 space          naive "క్ఝ "       U "క్ఝ "         0C15 0C4D 0C1D 0020 | 7 4D E6 FC 20 4
+65 64 58 61  C link 58 ా              naive "క్ఝఆ"       U "క్ఝా"         0C15 0C4D 0C1D 0C3E | 7 4D 3E 2
+65 64 58 65  C link 58 క              naive "క్ఝక"       U "క్ఝక"         0C15 0C4D 0C1D 0C15 | 7 4D E6 FC 4D E6 FC 6
+6A 64 58 20  C link 58 space          naive "న్ఝ "       U "న్ఝ "         0C28 0C4D 0C1D 0020 | 7 AF E8 FE 20 4
+6A 64 58 61  C link 58 ా              naive "న్ఝఆ"       U "న్ఝా"         0C28 0C4D 0C1D 0C3E | 7 AF E9 2
+6A 64 58 65  C link 58 క              naive "న్ఝక"       U "న్ఝక"         0C28 0C4D 0C1D 0C15 | 7 AF E8 FE 4D E6 FC 6
+67 64 58 20  C link 58 space          naive "త్ఝ "       U "త్ఝ "         0C24 0C4D 0C1D 0020 | 7 99 E8 FE 20 4
+67 64 58 61  C link 58 ా              naive "త్ఝఆ"       U "త్ఝా"         0C24 0C4D 0C1D 0C3E | 7 99 E9 2
+67 64 58 65  C link 58 క              naive "త్ఝక"       U "త్ఝక"         0C24 0C4D 0C1D 0C15 | 7 99 E8 FE 4D E6 FC 6
+4F 64 58 20  C link 58 space          naive "శ్ఝ "       U "శ్ఝ "         0C36 0C4D 0C1D 0020 | 7 D4 E8 FD 20 4
+4F 64 58 61  C link 58 ా              naive "శ్ఝఆ"       U "శ్ఝా"         0C36 0C4D 0C1D 0C3E | 7 D4 3E 2
+4F 64 58 65  C link 58 క              naive "శ్ఝక"       U "శ్ఝక"         0C36 0C4D 0C1D 0C15 | 7 D4 E8 FD 4D E6 FC 6
+65 64 D1 20  C link d1 space          naive "క్ఙ "       U "క్ఙ "         0C15 0C4D 0C19 0020 | 7 4D E6 FC 5D 20 5
+65 64 D1 61  C link d1 ా              naive "క్ఙఆ"       U "క్ఙా"         0C15 0C4D 0C19 0C3E | 7 4D 3E 5D 3
+65 64 D1 65  C link d1 క              naive "క్ఙక"       U "క్ఙక"         0C15 0C4D 0C19 0C15 | 7 4D E6 FC 5D 4D E6 FC 7
+6A 64 D1 20  C link d1 space          naive "న్ఙ "       U "న్ఙ "         0C28 0C4D 0C19 0020 | 7 AF E8 FE 5D 20 5
+6A 64 D1 61  C link d1 ా              naive "న్ఙఆ"       U "న్ఙా"         0C28 0C4D 0C19 0C3E | 7 AF E9 5D 3
+6A 64 D1 65  C link d1 క              naive "న్ఙక"       U "న్ఙక"         0C28 0C4D 0C19 0C15 | 7 AF E8 FE 5D 4D E6 FC 7
+67 64 D1 20  C link d1 space          naive "త్ఙ "       U "త్ఙ "         0C24 0C4D 0C19 0020 | 7 99 E8 FE 5D 20 5
+67 64 D1 61  C link d1 ా              naive "త్ఙఆ"       U "త్ఙా"         0C24 0C4D 0C19 0C3E | 7 99 E9 5D 3
+67 64 D1 65  C link d1 క              naive "త్ఙక"       U "త్ఙక"         0C24 0C4D 0C19 0C15 | 7 99 E8 FE 5D 4D E6 FC 7
+4F 64 D1 20  C link d1 space          naive "శ్ఙ "       U "శ్ఙ "         0C36 0C4D 0C19 0020 | 7 D4 E8 FD 5D 20 5
+4F 64 D1 61  C link d1 ా              naive "శ్ఙఆ"       U "శ్ఙా"         0C36 0C4D 0C19 0C3E | 7 D4 3E 5D 3
+4F 64 D1 65  C link d1 క              naive "శ్ఙక"       U "శ్ఙక"         0C36 0C4D 0C19 0C15 | 7 D4 E8 FD 5D 4D E6 FC 7
+65 64 D2 20  C link d2 space          naive "క్ఞ "       U "క్ఞ "         0C15 0C4D 0C1E 0020 | 7 4D E6 FC 71 20 5
+65 64 D2 61  C link d2 ా              naive "క్ఞఆ"       U "క్ఞా"         0C15 0C4D 0C1E 0C3E | 7 4D 3E 71 3
+65 64 D2 65  C link d2 క              naive "క్ఞక"       U "క్ఞక"         0C15 0C4D 0C1E 0C15 | 7 4D E6 FC 71 4D E6 FC 7
+6A 64 D2 20  C link d2 space          naive "న్ఞ "       U "న్ఞ "         0C28 0C4D 0C1E 0020 | 7 AF E8 FE 71 20 5
+6A 64 D2 61  C link d2 ా              naive "న్ఞఆ"       U "న్ఞా"         0C28 0C4D 0C1E 0C3E | 7 AF E9 71 3
+6A 64 D2 65  C link d2 క              naive "న్ఞక"       U "న్ఞక"         0C28 0C4D 0C1E 0C15 | 7 AF E8 FE 71 4D E6 FC 7
+67 64 D2 20  C link d2 space          naive "త్ఞ "       U "త్ఞ "         0C24 0C4D 0C1E 0020 | 7 99 E8 FE 71 20 5
+67 64 D2 61  C link d2 ా              naive "త్ఞఆ"       U "త్ఞా"         0C24 0C4D 0C1E 0C3E | 7 99 E9 71 3
+67 64 D2 65  C link d2 క              naive "త్ఞక"       U "త్ఞక"         0C24 0C4D 0C1E 0C15 | 7 99 E8 FE 71 4D E6 FC 7
+4F 64 D2 20  C link d2 space          naive "శ్ఞ "       U "శ్ఞ "         0C36 0C4D 0C1E 0020 | 7 D4 E8 FD 71 20 5
+4F 64 D2 61  C link d2 ా              naive "శ్ఞఆ"       U "శ్ఞా"         0C36 0C4D 0C1E 0C3E | 7 D4 3E 71 3
+4F 64 D2 65  C link d2 క              naive "శ్ఞక"       U "శ్ఞక"         0C36 0C4D 0C1E 0C15 | 7 D4 E8 FD 71 4D E6 FC 7
+65 64 5E 20  C link 5e space          naive "క్క్ష "     U "క్ "          0C15 0C4D 0020 | 7 4D E6 FC 3C 20 5
+65 64 5E 61  C link 5e ా              naive "క్క్షఆ"     U "క్ా"          0C15 0C4D 0C3E | 7 4D 3E 3C 3
+65 64 5E 65  C link 5e క              naive "క్క్షక"     U "క్క"          0C15 0C4D 0C15 | 7 4D E6 FC 3C 4D E6 FC 7
+6A 64 5E 20  C link 5e space          naive "న్క్ష "     U "న్ "          0C28 0C4D 0020 | 7 AF E8 FE 3C 20 5
+6A 64 5E 61  C link 5e ా              naive "న్క్షఆ"     U "న్ా"          0C28 0C4D 0C3E | 7 AF E9 3C 3
+6A 64 5E 65  C link 5e క              naive "న్క్షక"     U "న్క"          0C28 0C4D 0C15 | 7 AF E8 FE 3C 4D E6 FC 7
+67 64 5E 20  C link 5e space          naive "త్క్ష "     U "త్ "          0C24 0C4D 0020 | 7 99 E8 FE 3C 20 5
+67 64 5E 61  C link 5e ా              naive "త్క్షఆ"     U "త్ా"          0C24 0C4D 0C3E | 7 99 E9 3C 3
+67 64 5E 65  C link 5e క              naive "త్క్షక"     U "త్క"          0C24 0C4D 0C15 | 7 99 E8 FE 3C 4D E6 FC 7
+4F 64 5E 20  C link 5e space          naive "శ్క్ష "     U "శ్ "          0C36 0C4D 0020 | 7 D4 E8 FD 3C 20 5
+4F 64 5E 61  C link 5e ా              naive "శ్క్షఆ"     U "శ్ా"          0C36 0C4D 0C3E | 7 D4 3E 3C 3
+4F 64 5E 65  C link 5e క              naive "శ్క్షక"     U "శ్క"          0C36 0C4D 0C15 | 7 D4 E8 FD 3C 4D E6 FC 7
+65 64 4B 20  C link 4b space          naive "క్ఱ "       U "క్ఱ "         0C15 0C4D 0C31 0020 | 7 4D E6 FC CA 20 5
+65 64 4B 61  C link 4b ా              naive "క్ఱఆ"       U "క్ఱా"         0C15 0C4D 0C31 0C3E | 7 4D 3E CA 3
+65 64 4B 65  C link 4b క              naive "క్ఱక"       U "క్ఱక"         0C15 0C4D 0C31 0C15 | 7 4D E6 FC CA 4D E6 FC 7
+6A 64 4B 20  C link 4b space          naive "న్ఱ "       U "న్ఱ "         0C28 0C4D 0C31 0020 | 7 AF E8 FE CA 20 5
+6A 64 4B 61  C link 4b ా              naive "న్ఱఆ"       U "న్ఱా"         0C28 0C4D 0C31 0C3E | 7 AF E9 CA 3
+6A 64 4B 65  C link 4b క              naive "న్ఱక"       U "న్ఱక"         0C28 0C4D 0C31 0C15 | 7 AF E8 FE CA 4D E6 FC 7
+67 64 4B 20  C link 4b space          naive "త్ఱ "       U "త్ఱ "         0C24 0C4D 0C31 0020 | 7 99 E8 FE CA 20 5
+67 64 4B 61  C link 4b ా              naive "త్ఱఆ"       U "త్ఱా"         0C24 0C4D 0C31 0C3E | 7 99 E9 CA 3
+67 64 4B 65  C link 4b క              naive "త్ఱక"       U "త్ఱక"         0C24 0C4D 0C31 0C15 | 7 99 E8 FE CA 4D E6 FC 7
+4F 64 4B 20  C link 4b space          naive "శ్ఱ "       U "శ్ఱ "         0C36 0C4D 0C31 0020 | 7 D4 E8 FD CA 20 5
+4F 64 4B 61  C link 4b ా              naive "శ్ఱఆ"       U "శ్ఱా"         0C36 0C4D 0C31 0C3E | 7 D4 3E CA 3
+4F 64 4B 65  C link 4b క              naive "శ్ఱక"       U "శ్ఱక"         0C36 0C4D 0C31 0C15 | 7 D4 E8 FD CA 4D E6 FC 7
+23 61        23 ా                     naive "?ఆ"         U "ా"            0C3E | 7 null 234
+20 61        space ా                  naive " ఆ"         U " ా"           0020 0C3E | 7 E6 61 E6 61 4
+51 61        అ ా                      naive "అఆ"         U "అా"           0C05 0C3E | 7 41 1
+61 61        ా ా                      naive "ఆఆ"         U " ా"           0020 0C3E | 7 E6 61 E6 61 4
+65 61 20     క ా space                naive "కఆ "        U "కా "          0C15 0C3E 0020 | 7 4D 3E 20 3
+23 73        23 ి                     naive "?ఇ"         U "ి"            0C3F | 7 null 237
+20 73        space ి                  naive " ఇ"         U " ి"           0020 0C3F | 7 E6 61 E6 61 4
+51 73        అ ి                      naive "అఇ"         U "అి"           0C05 0C3F | 7 41 1
+73 73        ి ి                      naive "ఇఇ"         U " ి"           0020 0C3F | 7 E6 61 E6 61 4
+65 73 20     క ి space                naive "కఇ "        U "కి "          0C15 0C3F 0020 | 7 4D EC FC 20 4
+23 76        23 ీ                     naive "?ఈ"         U "ీ"            0C40 | 7 null 239
+20 76        space ీ                  naive " ఈ"         U " ీ"           0020 0C40 | 7 E6 61 E6 61 4
+51 76        అ ీ                      naive "అఈ"         U "అీ"           0C05 0C40 | 7 41 1
+76 76        ీ ీ                      naive "ఈఈ"         U " ీ"           0020 0C40 | 7 E6 61 E6 61 4
+65 76 20     క ీ space                naive "కఈ "        U "కీ "          0C15 0C40 0020 | 7 4D EE FC 20 4
+23 6E        23 ు                     naive "?ఉ"         U "ు"            0C41 | 7 null 36
+20 6E        space ు                  naive " ఉ"         U " ు"           0020 0C41 | 7 E6 61 E6 61 4
+51 6E        అ ు                      naive "అఉ"         U "అు"           0C05 0C41 | 7 41 1
+6E 6E        ు ు                      naive "ఉఉ"         U "ు"            0C41 | 7 E6 61 E6 61 4
+65 6E 20     క ు space                naive "కఉ "        U "కు "          0C15 0C41 0020 | 7 4D E6 FC 24 20 5
+23 26        23 ూ                     naive "?ఊ"         U "ూ"            0C42 | 7 null 42
+20 26        space ూ                  naive " ఊ"         U " ూ"           0020 0C42 | 7 E6 61 E6 61 4
+51 26        అ ూ                      naive "అఊ"         U "అూ"           0C05 0C42 | 7 41 1
+26 26        ూ ూ                      naive "ఊఊ"         U "ూ"            0C42 | 7 E6 61 E6 61 4
+65 26 20     క ూ space                naive "కఊ "        U "కూ "          0C15 0C42 0020 | 7 4D E6 FC 2A 20 5
+23 7A        23 ృ                     naive "?ఋ"         U "ృ"            0C43 | 7 96 1
+20 7A        space ృ                  naive " ఋ"         U " ృ"           0020 0C43 | 7 E6 61 E6 61 96 5
+51 7A        అ ృ                      naive "అఋ"         U "అృ"           0C05 0C43 | 7 41 96 2
+7A 7A        ృ ృ                      naive "ఋఋ"         U "ృృ"           0C43 0C43 | 7 E6 61 E6 61 96 5
+65 7A 20     క ృ space                naive "కఋ "        U "కృ "          0C15 0C43 0020 | 7 4D E6 FC 96 20 5
+23 5F        23 ౄ                     naive "?ౠ"         U "ౄ"            0C44 | 7 97 1
+20 5F        space ౄ                  naive " ౠ"         U " ౄ"           0020 0C44 | 7 E6 61 E6 61 97 5
+51 5F        అ ౄ                      naive "అౠ"         U "అౄ"           0C05 0C44 | 7 41 97 2
+5F 5F        ౄ ౄ                      naive "ౠౠ"         U "ౄౄ"           0C44 0C44 | 7 E6 61 E6 61 97 5
+65 5F 20     క ౄ space                naive "కౠ "        U "కౄ "          0C15 0C44 0020 | 7 4D E6 FC 20 4
+23 62        23 ె                     naive "?ఎ"         U "ె"            0C46 | 7 null 242
+20 62        space ె                  naive " ఎ"         U " ె"           0020 0C46 | 7 E6 61 E6 61 4
+51 62        అ ె                      naive "అఎ"         U "అె"           0C05 0C46 | 7 41 1
+62 62        ె ె                      naive "ఎఎ"         U " ె"           0020 0C46 | 7 E6 61 E6 61 4
+65 62 20     క ె space                naive "కఎ "        U "కె "          0C15 0C46 0020 | 7 4D F0 FC 20 4
+23 D3        23 ే                     naive "?ఏ"         U "ే"            0C47 | 7 null 245
+20 D3        space ే                  naive " ఏ"         U " ే"           0020 0C47 | 7 E6 61 E6 61 4
+51 D3        అ ే                      naive "అఏ"         U "అే"           0C05 0C47 | 7 41 1
+D3 D3        ే ే                      naive "ఏఏ"         U " ే"           0020 0C47 | 7 E6 61 E6 61 4
+65 D3 20     క ే space                naive "కఏ "        U "కే "          0C15 0C47 0020 | 7 4D F3 FC 20 4
+6D 6D        ై ై                      naive "ఐఐ"         U " ైై"          0020 0C48 0C48 | 7 4F F2 2
+23 70        23 ొ                     naive "?ఒ"         U "ొ"            0C4A | 7 null 246
+20 70        space ొ                  naive " ఒ"         U " ొ"           0020 0C4A | 7 E6 61 E6 61 4
+51 70        అ ొ                      naive "అఒ"         U "అొ"           0C05 0C4A | 7 41 1
+70 70        ొ ొ                      naive "ఒఒ"         U " ొ"           0020 0C4A | 7 E6 61 E6 61 4
+65 70 20     క ొ space                naive "కఒ "        U "కొ "          0C15 0C4A 0020 | 7 4D F6 20 3
+23 24        23 ో                     naive "?ఓ"         U "ో"            0C4B | 7 null 248
+20 24        space ో                  naive " ఓ"         U " ో"           0020 0C4B | 7 E6 61 E6 61 4
+51 24        అ ో                      naive "అఓ"         U "అో"           0C05 0C4B | 7 41 1
+24 24        ో ో                      naive "ఓఓ"         U " ో"           0020 0C4B | 7 E6 61 E6 61 4
+65 24 20     క ో space                naive "కఓ "        U "కో "          0C15 0C4B 0020 | 7 4D F8 20 3
+23 40        23 ౌ                     naive "?ఔ"         U "ౌ"            0C4C | 7 null 250
+20 40        space ౌ                  naive " ఔ"         U " ౌ"           0020 0C4C | 7 E6 61 E6 61 4
+51 40        అ ౌ                      naive "అఔ"         U "అౌ"           0C05 0C4C | 7 41 1
+40 40        ౌ ౌ                      naive "ఔఔ"         U " ౌ"           0020 0C4C | 7 E6 61 E6 61 4
+65 40 20     క ౌ space                naive "కఔ "        U "కౌ "          0C15 0C4C 0020 | 7 4D FA 20 3
+65 61 3C     క ా ం                    naive "కఆం"        U "కాం"          0C15 0C3E 0C02 | 7 4D 3E 85 3
+65 73 3C     క ి ం                    naive "కఇం"        U "కిం"          0C15 0C3F 0C02 | 7 4D EC FC 85 4
+65 76 3C     క ీ ం                    naive "కఈం"        U "కీం"          0C15 0C40 0C02 | 7 4D EE FC 85 4
+65 6E 3C     క ు ం                    naive "కఉం"        U "కుం"          0C15 0C41 0C02 | 7 4D E6 FC 24 85 5
+65 26 3C     క ూ ం                    naive "కఊం"        U "కూం"          0C15 0C42 0C02 | 7 4D E6 FC 2A 85 5
+65 7A 3C     క ృ ం                    naive "కఋం"        U "కృం"          0C15 0C43 0C02 | 7 4D E6 FC 96 85 5
+65 5F 3C     క ౄ ం                    naive "కౠం"        U "కౄం"          0C15 0C44 0C02 | 7 4D E6 FC 85 4
+65 62 3C     క ె ం                    naive "కఎం"        U "కెం"          0C15 0C46 0C02 | 7 4D F0 FC 85 4
+65 D3 3C     క ే ం                    naive "కఏం"        U "కేం"          0C15 0C47 0C02 | 7 4D F3 FC 85 4
+65 70 3C     క ొ ం                    naive "కఒం"        U "కొం"          0C15 0C4A 0C02 | 7 4D F6 85 3
+65 24 3C     క ో ం                    naive "కఓం"        U "కోం"          0C15 0C4B 0C02 | 7 4D F8 85 3
+65 40 3C     క ౌ ం                    naive "కఔం"        U "కౌం"          0C15 0C4C 0C02 | 7 4D FA 85 3
+65 61 3E     క ా ః                    naive "కఆః"        U "కాః"          0C15 0C3E 0C03 | 7 4D 3E 40 3
+65 73 3E     క ి ః                    naive "కఇః"        U "కిః"          0C15 0C3F 0C03 | 7 4D EC FC 40 4
+65 76 3E     క ీ ః                    naive "కఈః"        U "కీః"          0C15 0C40 0C03 | 7 4D EE FC 40 4
+65 6E 3E     క ు ః                    naive "కఉః"        U "కుః"          0C15 0C41 0C03 | 7 4D E6 FC 24 40 5
+65 26 3E     క ూ ః                    naive "కఊః"        U "కూః"          0C15 0C42 0C03 | 7 4D E6 FC 2A 40 5
+65 7A 3E     క ృ ః                    naive "కఋః"        U "కృః"          0C15 0C43 0C03 | 7 4D E6 FC 96 40 5
+65 5F 3E     క ౄ ః                    naive "కౠః"        U "కౄః"          0C15 0C44 0C03 | 7 4D E6 FC 40 4
+65 62 3E     క ె ః                    naive "కఎః"        U "కెః"          0C15 0C46 0C03 | 7 4D F0 FC 40 4
+65 D3 3E     క ే ః                    naive "కఏః"        U "కేః"          0C15 0C47 0C03 | 7 4D F3 FC 40 4
+65 6D 3E     క ై ః                    naive "కఐః"        U "కైః"          0C15 0C48 0C03 | 7 4D F0 FC 4F 40 5
+65 70 3E     క ొ ః                    naive "కఒః"        U "కొః"          0C15 0C4A 0C03 | 7 4D F6 40 3
+65 24 3E     క ో ః                    naive "కఓః"        U "కోః"          0C15 0C4B 0C03 | 7 4D F8 40 3
+65 40 3E     క ౌ ః                    naive "కఔః"        U "కౌః"          0C15 0C4C 0C03 | 7 4D FA 40 3
+65 61 E0     క ా ఁ                    naive "కఆఁ"        U "కాఁ"          0C15 0C3E 0C01 | 7 4D 3E B6 3
+65 73 E0     క ి ఁ                    naive "కఇఁ"        U "కిఁ"          0C15 0C3F 0C01 | 7 4D EC FC B6 4
+65 76 E0     క ీ ఁ                    naive "కఈఁ"        U "కీఁ"          0C15 0C40 0C01 | 7 4D EE FC B6 4
+65 6E E0     క ు ఁ                    naive "కఉఁ"        U "కుఁ"          0C15 0C41 0C01 | 7 4D E6 FC 24 B6 5
+65 26 E0     క ూ ఁ                    naive "కఊఁ"        U "కూఁ"          0C15 0C42 0C01 | 7 4D E6 FC 2A B6 5
+65 7A E0     క ృ ఁ                    naive "కఋఁ"        U "కృఁ"          0C15 0C43 0C01 | 7 4D E6 FC 96 B6 5
+65 5F E0     క ౄ ఁ                    naive "కౠఁ"        U "కౄఁ"          0C15 0C44 0C01 | 7 4D E6 FC B6 4
+65 62 E0     క ె ఁ                    naive "కఎఁ"        U "కెఁ"          0C15 0C46 0C01 | 7 4D F0 FC B6 4
+65 D3 E0     క ే ఁ                    naive "కఏఁ"        U "కేఁ"          0C15 0C47 0C01 | 7 4D F3 FC B6 4
+65 6D E0     క ై ఁ                    naive "కఐఁ"        U "కైఁ"          0C15 0C48 0C01 | 7 4D F0 FC 4F B6 5
+65 70 E0     క ొ ఁ                    naive "కఒఁ"        U "కొఁ"          0C15 0C4A 0C01 | 7 4D F6 B6 3
+65 24 E0     క ో ఁ                    naive "కఓఁ"        U "కోఁ"          0C15 0C4B 0C01 | 7 4D F8 B6 3
+65 40 E0     క ౌ ఁ                    naive "కఔఁ"        U "కౌఁ"          0C15 0C4C 0C01 | 7 4D FA B6 3

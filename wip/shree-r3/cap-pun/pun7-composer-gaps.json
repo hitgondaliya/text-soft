@@ -1,0 +1,837 @@
+{
+ "about": "Unicode strings typed in Shree's canonical order (ਠ/ਨ + subjoined + sign + tail, two subjoined codes, a sign lost to a bindi ligature) for which S8Pun764 loses a glyph, so pun7-groundtruth.json has no truth for them. composerWrote = the broken answers; derived = the spelling the composer's own rules give (head string's truth + the tail as the composer writes it elsewhere), null where no single spelling follows (ੁ/ੂ + tail on ਠ/ਨ: the composer writes 74/76 before or AE/AF after BE depending on the tail).",
+ "count": 83,
+ "derived": 36,
+ "gaps": {
+  "ਕ੍ਹ੍ਰ": {
+   "composerWrote": [
+    "48 6E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਕ੍ਵ੍ਰ": {
+   "composerWrote": [
+    "48 6E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰਾਂ": {
+   "composerWrote": [
+    "53 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE 6F 70 A3",
+   "derivedFrom": "ਠ੍ਰਾ = 53 BE 6F 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਠ੍ਰਾੱ": {
+   "composerWrote": [
+    "53 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE 6F 70 A7",
+   "derivedFrom": "ਠ੍ਰਾ = 53 BE 6F 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਠ੍ਰੁਂ": {
+   "composerWrote": [
+    "53 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੁੰ": {
+   "composerWrote": [
+    "53 BE A5 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੁੱ": {
+   "composerWrote": [
+    "53 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੂਂ": {
+   "composerWrote": [
+    "53 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੂੰ": {
+   "composerWrote": [
+    "53 BE A5 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੂੱ": {
+   "composerWrote": [
+    "53 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਰੇਂ": {
+   "composerWrote": [
+    "53 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7A BE 6F",
+   "derivedFrom": "ਠ੍ਰੇ = 53 79 BE 6F, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਰੈਂ": {
+   "composerWrote": [
+    "53 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7C BE 6F",
+   "derivedFrom": "ਠ੍ਰੈ = 53 B1 BE 6F, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਰੋਂ": {
+   "composerWrote": [
+    "53 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7E BE 6F",
+   "derivedFrom": "ਠ੍ਰੋ = 53 7D BE 6F, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਰੌਂ": {
+   "composerWrote": [
+    "53 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 A2 BE 6F",
+   "derivedFrom": "ਠ੍ਰੌ = 53 A1 BE 6F, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਹਾਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE AA 70 A3",
+   "derivedFrom": "ਠ੍ਹਾ = 53 BE AA 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਠ੍ਹਾੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE AA 70 A7",
+   "derivedFrom": "ਠ੍ਹਾ = 53 BE AA 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਠ੍ਹੁਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੁੰ": {
+   "composerWrote": [
+    "53 BE A5 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੁੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੂਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੂੰ": {
+   "composerWrote": [
+    "53 BE A5 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੂੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਹੇਂ": {
+   "composerWrote": [
+    "53 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7A BE AA",
+   "derivedFrom": "ਠ੍ਹੇ = 53 79 BE AA, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਹੈਂ": {
+   "composerWrote": [
+    "53 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7C BE AA",
+   "derivedFrom": "ਠ੍ਹੈ = 53 B1 BE AA, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਹੋਂ": {
+   "composerWrote": [
+    "53 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7E BE AA",
+   "derivedFrom": "ਠ੍ਹੋ = 53 7D BE AA, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਹੌਂ": {
+   "composerWrote": [
+    "53 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 A2 BE AA",
+   "derivedFrom": "ਠ੍ਹੌ = 53 A1 BE AA, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਵਾਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE AB 70 A3",
+   "derivedFrom": "ਠ੍ਵਾ = 53 BE AB 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਠ੍ਵਾੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "53 BE AB 70 A7",
+   "derivedFrom": "ਠ੍ਵਾ = 53 BE AB 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਠ੍ਵੁਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੁੰ": {
+   "composerWrote": [
+    "53 BE A5 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੁੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੂਂ": {
+   "composerWrote": [
+    "53 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੂੰ": {
+   "composerWrote": [
+    "53 BE A5 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੂੱ": {
+   "composerWrote": [
+    "53 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਠ੍ਵੇਂ": {
+   "composerWrote": [
+    "53 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7A BE AB",
+   "derivedFrom": "ਠ੍ਵੇ = 53 79 BE AB, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਵੈਂ": {
+   "composerWrote": [
+    "53 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7C BE AB",
+   "derivedFrom": "ਠ੍ਵੈ = 53 B1 BE AB, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਵੋਂ": {
+   "composerWrote": [
+    "53 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 7E BE AB",
+   "derivedFrom": "ਠ੍ਵੋ = 53 7D BE AB, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਠ੍ਵੌਂ": {
+   "composerWrote": [
+    "53 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "53 A2 BE AB",
+   "derivedFrom": "ਠ੍ਵੌ = 53 A1 BE AB, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਰਾਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE 6F 70 A3",
+   "derivedFrom": "ਨ੍ਰਾ = B2 BE 6F 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਨ੍ਰਾੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE 6F 70 A7",
+   "derivedFrom": "ਨ੍ਰਾ = B2 BE 6F 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਨ੍ਰੁਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੁੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੁੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੂਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੂੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੂੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE 6F"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਰੇਂ": {
+   "composerWrote": [
+    "B2 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7A BE 6F",
+   "derivedFrom": "ਨ੍ਰੇ = B2 79 BE 6F, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਰੈਂ": {
+   "composerWrote": [
+    "B2 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7C BE 6F",
+   "derivedFrom": "ਨ੍ਰੈ = B2 B1 BE 6F, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਰੋਂ": {
+   "composerWrote": [
+    "B2 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7E BE 6F",
+   "derivedFrom": "ਨ੍ਰੋ = B2 7D BE 6F, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਰੌਂ": {
+   "composerWrote": [
+    "B2 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 A2 BE 6F",
+   "derivedFrom": "ਨ੍ਰੌ = B2 A1 BE 6F, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਹਾਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE AA 70 A3",
+   "derivedFrom": "ਨ੍ਹਾ = B2 BE AA 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਨ੍ਹਾੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE AA 70 A7",
+   "derivedFrom": "ਨ੍ਹਾ = B2 BE AA 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਨ੍ਹੁਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੁੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੁੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੂਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੂੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੂੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AA"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਹੇਂ": {
+   "composerWrote": [
+    "B2 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7A BE AA",
+   "derivedFrom": "ਨ੍ਹੇ = B2 79 BE AA, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਹੈਂ": {
+   "composerWrote": [
+    "B2 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7C BE AA",
+   "derivedFrom": "ਨ੍ਹੈ = B2 B1 BE AA, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਹੋਂ": {
+   "composerWrote": [
+    "B2 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7E BE AA",
+   "derivedFrom": "ਨ੍ਹੋ = B2 7D BE AA, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਹੌਂ": {
+   "composerWrote": [
+    "B2 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 A2 BE AA",
+   "derivedFrom": "ਨ੍ਹੌ = B2 A1 BE AA, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਵਾਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE AB 70 A3",
+   "derivedFrom": "ਨ੍ਵਾ = B2 BE AB 70 + bindi A3 after ਾ (as ਕ੍ਹਾਂ = 48 AA 70 A3; a tippi after ਾ is written as bindi)"
+  },
+  "ਨ੍ਵਾੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": "B2 BE AB 70 A7",
+   "derivedFrom": "ਨ੍ਵਾ = B2 BE AB 70 + addak A7 after ਾ (as ਕਾੱ = 48 70 A7)"
+  },
+  "ਨ੍ਵੁਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੁੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੁੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੂਂ": {
+   "composerWrote": [
+    "B2 BE A3 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੂੰ": {
+   "composerWrote": [
+    "B2 BE A5 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੂੱ": {
+   "composerWrote": [
+    "B2 BE A7 BE AB"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਨ੍ਵੇਂ": {
+   "composerWrote": [
+    "B2 79 BE 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7A BE AB",
+   "derivedFrom": "ਨ੍ਵੇ = B2 79 BE AB, with the sign+bindi ligature 79->7A (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਵੈਂ": {
+   "composerWrote": [
+    "B2 B1 BE 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7C BE AB",
+   "derivedFrom": "ਨ੍ਵੈ = B2 B1 BE AB, with the sign+bindi ligature B1->7C (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਵੋਂ": {
+   "composerWrote": [
+    "B2 7D BE 7E"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 7E BE AB",
+   "derivedFrom": "ਨ੍ਵੋ = B2 7D BE AB, with the sign+bindi ligature 7D->7E (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਨ੍ਵੌਂ": {
+   "composerWrote": [
+    "B2 A1 BE A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)"
+   ],
+   "derived": "B2 A2 BE AB",
+   "derivedFrom": "ਨ੍ਵੌ = B2 A1 BE AB, with the sign+bindi ligature A1->A2 (as ਕੀਂ ਕੇਂ ... and ਨੇਂ = B2 7A BE)"
+  },
+  "ਈਁ": {
+   "composerWrote": [
+    "42 72 73"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਏਁ": {
+   "composerWrote": [
+    "42 79 7A"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਐਁ": {
+   "composerWrote": [
+    "41 B1 7C"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਔਁ": {
+   "composerWrote": [
+    "41 A1 A2"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ੳਁ": {
+   "composerWrote": [
+    "43 44"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਿਂ": {
+   "composerWrote": [
+    "71"
+   ],
+   "why": [
+    "quirk:7-composer-dropped-code-69 (ਂ)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਿੰ": {
+   "composerWrote": [
+    "71"
+   ],
+   "why": [
+    "quirk:7-composer-dropped-code-D6 (ੰ)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ਿੱ": {
+   "composerWrote": [
+    "71"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  },
+  "ੀੌੀਂ": {
+   "composerWrote": [
+    "73"
+   ],
+   "why": [
+    "quirk:7-composer-loses-the-vowel-sign-ੌ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)"
+   ],
+   "derived": null,
+   "derivedFrom": null
+  }
+ }
+}

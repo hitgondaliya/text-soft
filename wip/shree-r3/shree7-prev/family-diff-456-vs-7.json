@@ -1,0 +1,59 @@
+{
+  "method": "cmap read from each TTF (3,1 table, cp1252 code points folded back to bytes); every code rendered by its own glyph id at 56px and compared pixel by pixel, plus raw glyf outline bytes and hmtx advance. A code 'differs' if >3 pixels or advance differ. Source: fc.exe cmp, per-pair output in pairs/<SCRIPT>-<design>.txt/.png",
+  "gujarati": {
+    "faces": ["0750", "0751", "0763", "0768", "0769", "0781", "3700"],
+    "files": "S<dddd>0F2.TTF = SHREE-GUJ-<dddd> (4/5/6), S<dddd>892.TTF = SHREE-GUJ7-<dddd> (7)",
+    "codesInBoth": 218, "identical": 213,
+    "differ": {
+      "0x91": {"456": "ઙ્ક (stacked ligature)", "7": "પ - exact copy of 0x60 (same outline, advance 456), extra glyph id 217"},
+      "0x92": {"456": "ઙ્ખ", "7": "થ - copy of 0x5C (gid 218)"},
+      "0x93": {"456": "ઙ્ગ", "7": "ન - copy of 0x5F (gid 219)"},
+      "0x94": {"456": "ઙ્ઘ", "7": "સ્ત્ર - copy of 0xF7 (gid 220)"},
+      "0xB6": {"456": "ઙ્ક્ષ", "7": "zero-width ્રૂ mark - copy of 0xB4 (gid 221)"}
+    },
+    "sameForAllFaces": true
+  },
+  "devanagari": {
+    "faces": ["0700", "4914"],
+    "files": "S<dddd>0F2.TTF = SHREE-DEV-<dddd> (4/5/6, 248 codes), S<dddd>892.TTF = SHREE-DEV7-<dddd> (7, 219 codes)",
+    "identical": 215,
+    "differ": {
+      "0x91": {"456": "ङ्क", "7": "म - copy of 0x5F"},
+      "0x92": {"456": "ङ्ख", "7": "फ - copy of 0x5C"},
+      "0xB3": {"456": "zero-width subscript ्न", "7": "क् - copy of 0x8A"},
+      "0xB6": {"456": "ङ्म", "7": "य - copy of 0x60"}
+    },
+    "only456_U+0200_to_U+021C": "U+0200 क्क, 0201 क्ल, 0202 क्व, 0203 ङ्क, 0204 ङ्ख, 0205 ङ्ग, 0206 ङ्घ, 0207 ङ्म, 0208 ङ्क्ष, 0209 छ्व, 020A ञ्च, 020B ञ्ज, 020C प्ल, 020D फ्ल, 020E ल्ल, 020F ट्व, 0210 ट्ट, 0211 ट्ठ, 0212 ठ्ठ, 0213 ड्ड, 0214 ड्ढ, 0215 द्ढ, 0216 क्त, 0217 न्न, 0218 प्त; 0219-021C blank",
+    "sameForAllFaces": true
+  },
+  "bangla": {
+    "faces": ["0550", "0552", "0553", "0560", "0562", "0564", "0592", "0593", "0594", "0595", "0597"],
+    "files": "S<dddd>0F2.TTF = SHREE-BAN-<dddd> (4/5/6, 232 codes incl. control codes), S<dddd>892.TTF = SHREE-BAN7-<dddd> (7, 218)",
+    "identical": 210,
+    "differ": {
+      "0x08": {"456": "ব", "7": "absent (7 copies it to 0x8C)"},
+      "0x09": {"456": "দ", "7": "absent (7 copies it to 0xA8)"},
+      "0x0A": {"456": "ড়্গ", "7": "absent (7 has it at 0xFF)"},
+      "0x0B": {"456": "/", "7": "absent"}, "0x0C": {"456": "=", "7": "absent"}, "0x0D": {"456": ";", "7": "absent"},
+      "0x0E": {"456": "+", "7": "absent"}, "0x0F": {"456": "* (Assamese 4/5/6: ৰ)", "7": "absent"},
+      "0x1A": {"456": "— (long dash)", "7": "absent"}, "0x1B": {"456": "×", "7": "absent"}, "0x1C": {"456": "÷", "7": "absent"},
+      "0x1D": {"456": "[", "7": "absent"}, "0x1E": {"456": "]", "7": "absent"}, "0x1F": {"456": "॥", "7": "absent"},
+      "0x25": {"456": "%", "7": "zero-width below mark (looks like the 0x3A mark, not pixel-identical); Assamese 7: absent"},
+      "0x40": {"456": "ঃ", "7": "half-ন hook used in ন্ট/ন্ঠ/ন্ড (swapped with 0x96)"},
+      "0x96": {"456": "half-ন hook", "7": "ঃ"},
+      "0x97": {"456": "zero-width subscript ্ন", "7": "spacing ৺-like sign (swapped with 0xA5)"},
+      "0xA5": {"456": "spacing ৺-like sign", "7": "zero-width subscript ্ন"},
+      "0x8C": {"456": "ঋ", "7": "ব (copy of 4/5/6 0x08)"},
+      "0xA8": {"456": "ঝ", "7": "দ (copy of 4/5/6 0x09)"},
+      "0xFF": {"456": "blank", "7": "ড়্গ"}
+    },
+    "assameseExtra": {"0x3A": {"456": ":", "7": "absent"}, "0x0F": {"456": "ৰ", "7": "absent"}},
+    "sameForAllFaces": true
+  },
+  "tamil": {"faces": ["0800", "0801", "0802", "0803", "1316", "3883"], "identical": 210, "differ": {"0x9B": "ரி redrawn (different ர tail), same character", "0x9F": "ரீ redrawn", "0xBA": "ர் redrawn"}},
+  "kannada": {"faces": ["0850", "0851", "0852", "0853", "0854", "0855", "0899"], "identical": 215, "differ": {}},
+  "telugu": {"faces": ["Apoorva-0900 (N09020F0/N0902890)", "Asmitha-1642 (N16440F0/N1644890)"], "identical": 216, "differ": {}},
+  "odia": {"faces": ["0600", "0601", "0602", "0603", "0604"], "identical": 216, "differ": {"0x3C": "₹ only in the newer 7 files WORI7001/WORI7002 (faces 0603/0604)"}},
+  "punjabi": {"faces": ["0951", "0952"], "identical": 118, "differ": {"0x3C": "₹ only in 7 (WPUN7001/WPUN7002)"}},
+  "malayalam_sanskrit": "only 7-family fonts installed (SHREE-MAL7-*, SHREE-SAN7-*); no 4/5/6 font to compare"
+}

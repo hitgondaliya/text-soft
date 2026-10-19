@@ -1,0 +1,100 @@
+﻿{
+ "round 1 (syllables, clusters, vendor keys)": {
+  "strings": 9871,
+  "acceptedBytes": "5998 = 60.76%",
+  "drawsWhatShreeDraws": "6260 = 63.42%"
+ },
+ "round 2 W (2-3 syllables in one keystroke)": {
+  "strings": 21215,
+  "acceptedBytes": "14083 = 66.38%",
+  "drawsWhatShreeDraws": "17369 = 81.87%"
+ },
+ "all without ZWNJ/ZWJ strings": {
+  "strings": 29428,
+  "acceptedBytes": "20081 = 68.24%",
+  "drawsWhatShreeDraws": "23629 = 80.29%"
+ },
+ "all": {
+  "strings": 31086,
+  "acceptedBytes": "20081 = 64.60%",
+  "drawsWhatShreeDraws": "23629 = 76.01%"
+ }
+}
+{"glyph-equal":3548,"other":1093,"order":4033,"unmapped":673,"joiner-only":1504,"joiner+glyph-equal":50,"joiner+other":8,"joiner+order":96} {
+ "truthStrings": 31086,
+ "acceptedBytes": 20081,
+ "glyphEqualOnly": 3548,
+ "drawsWhatShreeDraws": "23629/31086 = 76.01% (accepted bytes, or other bytes that draw the identical glyphs)",
+ "drawsWhatShreeDrawsIgnoringJoiners": "25183/31086 = 81.01% (also counting rows whose only extra is a passed-through ZWJ/ZWNJ)",
+ "visiblyWrong": 5903
+}
+1012 C்JC | joiner-only :: க்‌க [0B95 0BCD 200C 0B95]: ours 55 U+200C 50 | Shree 55 50
+529 CCே | glyph-equal | 40 for F7 :: களே [0B95 0BB3 0BC7]: ours 50 40 CD | Shree 50 F7 CD
+529 CொC | order :: கொக [0B95 0BCA 0B95]: ours 50 F6 F5 50 | Shree F6 50 F5 50
+529 CோC | order :: கோக [0B95 0BCB 0B95]: ours 50 40 F5 50 | Shree F7 50 F5 50
+528 C்Cெ | order :: க்கெ [0B95 0BCD 0B95 0BC6]: ours F6 55 50 | Shree 55 F6 50
+528 C்Cே | order :: க்கே [0B95 0BCD 0B95 0BC7]: ours 40 55 50 | Shree 55 F7 50
+528 C்Cை | order :: க்கை [0B95 0BCD 0B95 0BC8]: ours F8 55 50 | Shree 55 F8 50
+484 CேC | glyph-equal | 40 for F7 :: டேக [0B9F 0BC7 0B95]: ours 40 68 50 | Shree F7 68 50
+103 CேCை | glyph-equal | 40 for F7 :: கேகை [0B95 0BC7 0B95 0BC8]: ours 40 50 F8 50 | Shree F7 50 F8 50
+100 CCொ | order :: ககொ [0B95 0B95 0BCA]: ours 50 50 F6 F5 | Shree 50 F6 50 F5
+100 CCோ | order :: ககோ [0B95 0B95 0BCB]: ours 50 50 40 F5 | Shree 50 F7 50 F5
+100 CCௌ | unmapped :: ககௌ [0B95 0B95 0BCC]: ours 50 50 U+0BCC | Shree 50 F6 50 CD
+100 CெCே | glyph-equal | 40 for F7 :: கெகே [0B95 0BC6 0B95 0BC7]: ours F6 50 40 50 | Shree F6 50 F7 50
+100 CேCெ | glyph-equal | 40 for F7 :: கேகெ [0B95 0BC7 0B95 0BC6]: ours 40 50 F6 50 | Shree F7 50 F6 50
+100 CேCே | glyph-equal | 40 for F7 :: கேகே [0B95 0BC7 0B95 0BC7]: ours 40 50 40 50 | Shree F7 50 F7 50
+100 CைCே | glyph-equal | 40 for F7 :: கைகே [0B95 0BC8 0B95 0BC7]: ours F8 50 40 50 | Shree F8 50 F7 50
+100 CௌC | unmapped :: கௌக [0B95 0BCC 0B95]: ours 50 U+0BCC 50 | Shree F6 50 CD 50
+97 CேC் | glyph-equal | 40 for F7 :: கேக் [0B95 0BC7 0B95 0BCD]: ours 40 50 55 | Shree F7 50 55
+92 CேCி | glyph-equal | 40 for F7 :: கேகி [0B95 0BC7 0B95 0BBF]: ours 40 50 51 | Shree F7 50 51
+90 CுCே | glyph-equal | 40 for F7 :: ருளே [0BB0 0BC1 0BB3 0BC7]: ours B8 40 CD | Shree B8 F7 CD
+90 CாCே | glyph-equal | 40 for F7 :: காகே [0B95 0BBE 0B95 0BC7]: ours 50 F5 40 50 | Shree 50 F5 F7 50
+90 CிCே | glyph-equal | 40 for F7 :: கிகே [0B95 0BBF 0B95 0BC7]: ours 51 40 50 | Shree 51 F7 50
+90 CீCே | glyph-equal | 40 for F7 :: கீகே [0B95 0BC0 0B95 0BC7]: ours 52 40 50 | Shree 52 F7 50
+90 CூCே | glyph-equal | 40 for F7 :: கூகே [0B95 0BC2 0B95 0BC7]: ours 54 40 50 | Shree 54 F7 50
+90 CேCா | glyph-equal | 40 for F7 :: கேகா [0B95 0BC7 0B95 0BBE]: ours 40 50 50 F5 | Shree F7 50 50 F5
+90 CேCீ | glyph-equal | 40 for F7 :: கேகீ [0B95 0BC7 0B95 0BC0]: ours 40 50 52 | Shree F7 50 52
+90 CேCூ | glyph-equal | 40 for F7 :: கேகூ [0B95 0BC7 0B95 0BC2]: ours 40 50 54 | Shree F7 50 54
+84 CேCு | glyph-equal | 40 for F7 :: கேஸு [0B95 0BC7 0BB8 0BC1]: ours 40 50 E9 FA | Shree F7 50 E9 FA
+72 CொCு | order :: கொகு [0B95 0BCA 0B95 0BC1]: ours 50 F6 F5 53 | Shree F6 50 F5 53
+72 CோCு | order :: கோகு [0B95 0BCB 0B95 0BC1]: ours 50 40 F5 53 | Shree F7 50 F5 53
+70 CுCொ | order :: குகொ [0B95 0BC1 0B95 0BCA]: ours 53 50 F6 F5 | Shree 53 F6 50 F5
+70 CுCோ | order :: குகோ [0B95 0BC1 0B95 0BCB]: ours 53 50 40 F5 | Shree 53 F7 50 F5
+70 CுCௌ | unmapped :: குகௌ [0B95 0BC1 0B95 0BCC]: ours 53 50 U+0BCC | Shree 53 F6 50 CD
+70 CௌCு | unmapped :: கௌகு [0B95 0BCC 0B95 0BC1]: ours 50 U+0BCC 53 | Shree F6 50 CD 53
+46 CJ | joiner-only :: க‌ [0B95 200C]: ours 50 U+200C | Shree 50
+46 CாJ | joiner-only :: கா‌ [0B95 0BBE 200C]: ours 50 F5 U+200C | Shree 50 F5
+46 CூJ | joiner-only :: கூ‌ [0B95 0BC2 200C]: ours 54 U+200C | Shree 54
+46 CJா | joiner-only :: க‌ா [0B95 200C 0BBE]: ours 50 U+200C F5 | Shree 50 F5
+46 CொJ | joiner+order :: கொ‌ [0B95 0BCA 200C]: ours 50 F6 F5 U+200C | Shree F6 50 F5
+46 CோJ | joiner+order :: கோ‌ [0B95 0BCB 200C]: ours 50 40 F5 U+200C | Shree F7 50 F5
+46 C்JC | joiner+glyph-equal | 23 for B4 :: ய்‌க [0BAF 0BCD 200C 0B95]: ours 23 U+200C 50 | Shree B4 50
+46 KSS்JC | joiner-only :: க்ஷ்‌க [0B95 0BCD 0BB7 0BCD 200C 0B95]: ours F4 U+200C 50 | Shree F4 50
+45 C்C் | glyph-equal | 23 for B4 :: க்ய் [0B95 0BCD 0BAF 0BCD]: ours 55 23 | Shree 55 B4
+44 CிJ | joiner-only :: கி‌ [0B95 0BBF 200C]: ours 51 U+200C | Shree 51
+44 CீJ | joiner-only :: கீ‌ [0B95 0BC0 200C]: ours 52 U+200C | Shree 52
+44 CுJ | joiner-only :: கு‌ [0B95 0BC1 200C]: ours 53 U+200C | Shree 53
+44 C்J | joiner-only :: க்‌ [0B95 0BCD 200C]: ours 55 U+200C | Shree 55
+44 C்JKSS | joiner-only :: க்‌க்ஷ [0B95 0BCD 200C 0B95 0BCD 0BB7]: ours 55 U+200C F1 | Shree 55 F1
+23 Cோ | order :: கோ [0B95 0BCB]: ours 50 40 F5 | Shree F7 50 F5
+23 Cொ | order :: கொ [0B95 0BCA]: ours 50 F6 F5 | Shree F6 50 F5
+23 Cௌ | unmapped :: கௌ [0B95 0BCC]: ours 50 U+0BCC | Shree F6 50 CD
+23 Cொஃ | order :: கொஃ [0B95 0BCA 0B83]: ours 50 F6 F5 4C | Shree F6 50 F5 4C
+23 Cே | glyph-equal | 40 for F7 :: கே [0B95 0BC7]: ours 40 50 | Shree F7 50
+23 Cோஃ | order :: கோஃ [0B95 0BCB 0B83]: ours 50 40 F5 4C | Shree F7 50 F5 4C
+23 KSSCே | glyph-equal | 40 for F7 :: க்ஷளே [0B95 0BCD 0BB7 0BB3 0BC7]: ours F1 40 CD | Shree F1 F7 CD
+23 C்Cி | other | ours has B5 91 / Shree has 9B :: க்ரி [0B95 0BCD 0BB0 0BBF]: ours 55 B5 91 | Shree 55 9B
+23 C்KSSு | other | ours has FA / Shree has FB :: க்க்ஷு [0B95 0BCD 0B95 0BCD 0BB7 0BC1]: ours 55 F1 FA | Shree 55 F1 FB
+23 C்KSSெ | order :: க்க்ஷெ [0B95 0BCD 0B95 0BCD 0BB7 0BC6]: ours F6 55 F1 | Shree 55 F6 F1
+23 C்KSSே | order :: க்க்ஷே [0B95 0BCD 0B95 0BCD 0BB7 0BC7]: ours 40 55 F1 | Shree 55 F7 F1
+23 C்KSSை | order :: க்க்ஷை [0B95 0BCD 0B95 0BCD 0BB7 0BC8]: ours F8 55 F1 | Shree 55 F8 F1
+23 C்C | glyph-equal | 23 for B4 :: ய்க [0BAF 0BCD 0B95]: ours 23 50 | Shree B4 50
+23 C்Cஃ | glyph-equal | 23 for B4 :: ய்கஃ [0BAF 0BCD 0B95 0B83]: ours 23 50 4C | Shree B4 50 4C
+23 KSS்Cெ | order :: க்ஷ்கெ [0B95 0BCD 0BB7 0BCD 0B95 0BC6]: ours F6 F4 50 | Shree F4 F6 50
+23 KSS்Cே | order :: க்ஷ்கே [0B95 0BCD 0BB7 0BCD 0B95 0BC7]: ours 40 F4 50 | Shree F4 F7 50
+23 KSS்Cை | order :: க்ஷ்கை [0B95 0BCD 0BB7 0BCD 0B95 0BC8]: ours F8 F4 50 | Shree F4 F8 50
+23 CKSSே | glyph-equal | 40 for F7 :: கக்ஷே [0B95 0B95 0BCD 0BB7 0BC7]: ours 50 40 F1 | Shree 50 F7 F1
+23 CிCி | other | ours has B5 91 / Shree has 9B :: கிரி [0B95 0BBF 0BB0 0BBF]: ours 51 B5 91 | Shree 51 9B
+23 CொKSS | order :: கொக்ஷ [0B95 0BCA 0B95 0BCD 0BB7]: ours 50 F6 F5 F1 | Shree F6 50 F5 F1
+23 CோKSS | order :: கோக்ஷ [0B95 0BCB 0B95 0BCD 0BB7]: ours 50 40 F5 F1 | Shree F7 50 F5 F1
+23 CுC | other | ours has FA / Shree has FB :: ஷுக [0BB7 0BC1 0B95]: ours E5 FA 50 | Shree E5 FB 50

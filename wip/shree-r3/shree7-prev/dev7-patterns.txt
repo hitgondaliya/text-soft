@@ -1,0 +1,295 @@
+DEVANAGARI: HOW SHREE'S 7 COMPOSER (S8Dev764.dll) WRITES UNICODE TEXT IN SHREE-LIPI 7 BYTES
+=========================================================================================
+Ground truth: dev7-groundtruth.json, built from what S8DevU64.dll (TutorGetMappedCodeW, Unicode) and
+S8Dev764.dll (TutorGetMappedCode, raw bytes) answer for the same key:
+  - every key of the 39 shipped .DEV keyboards (layer 0, Ctrl+Space, Ctrl+Shift+1): 6262 rows
+  - 31035 probe sequences in Shree's typing order (i-sign struck first, reph struck after base+sign),
+    47 per probe keyboard file, 661 files (copies of ITR.DEV with the 48 conjunct slots rewritten)
+  -> 37239 pairs, 28546 Unicode strings, 27175 with an accepted answer (truth), 1305 quirk rows.
+Bytes are hex, one per glyph code. "C" below = any consonant. Each rule is followed by examples
+straight from the truth table (Unicode=bytes). The computed tables behind every rule are appended
+at the end (APPENDIX).
+
+Which fonts this is true for
+----------------------------
+- SHREE-DEV7-0700 / -4914 (S0700892.TTF, S4914892.TTF) and Shree-Dev7-001/002 (WDEV7001/2): yes - every byte
+  the composer writes has a glyph there except 3C (see "cannot draw").
+- SHREE-DEV-0700 / -4914 (4/5/6, S<dddd>0F2.TTF): yes as well. Of the four family-differing codes
+  (91 92 B3 B6) the composer never writes 91, 92 or B6, and writes B3 only for the quote ” (a quirk in
+  both families). It also never uses the 4/5/6-only ligatures at U+0200-U+0218.
+- SHREE-SAN7-0960/0962/0964: NO. The Sanskrit composers S8SanU64/S8San764 give the same Unicode for the
+  same keys but different bytes for 30903 of 30939 probes (क = 40 A1 there, 48 24 here; ध = 52 22 vs
+  59). Rendered check: DEV7 bytes in a SAN7 font draw garbage, the Sanskrit composer's bytes draw the
+  right text. Sanskrit typed in a DEV7 font uses this file; SAN7 fonts need san7-groundtruth.json
+  (same capture, same format, built from the Sanskrit composers; its rules were not analysed here).
+  NOTE: the TextSoft config lists the SHREE-SAN7 fonts with enc=shree-dev456 - that is wrong.
+
+1. Letters, spacers, half forms
+-------------------------------
+- Most letters are one byte: ख=49 ग=4A घ=4B च=4D ज=4F झ=50 ण=55 त=56 थ=57 द=58 ध=59 न=5A प=6E ब=7E
+  भ=5E म=5F य=60 र=61 ल=62 व=64 श=65 ष=66 स=67 ह=68 ळ=69.
+- Two letters carry the spacer 24 after them: क=48 24, फ=5C 24 (also ऊ=44 24, ऋ=46 24, ॠ=47 24,
+  रू=EA 24, क्क=B8 24, क्व=B9 24, क्त=BA 24). Six carry the spacer 3E: ङ=4C 3E छ=4E 3E ट=51 3E
+  ठ=52 3E ड=53 3E ढ=54 3E (and their ligatures ट्ट=C5 3E ठ्ठ=C7 3E ड्ड=C8 3E ढ्ढ=C9 3E ष्ट=EF 3E).
+  ञ=C4 6D and त्त=CE 6D use the aa-bar 6D as their stem.
+- Half forms are one byte: क्=8A ख्=BB ग्=BD घ्=BF च्=C0 ज्=C1 झ्=C2 ञ्=C4 ण्=CA त्=CB थ्=CF ध्=DC
+  न्=DD प्=DF फ्=E2 ब्=E3 भ्=E4 म्=E5 य्=E6 ल्=EB व्=EC श्=ED ष्=EE स्=F1 ह्=F4 ळ्=F9, क्ष्=FA
+  श्र्=FB त्र्=CD त्त्=CE ख़्=99.
+- Letters with no half form get the halant B2 instead, placed before their spacer:
+  ङ्=4C B2 3E छ्=4E B2 3E ट्=51 B2 3E ठ्=52 B2 3E ड्=53 B2 3E ढ्=54 B2 3E द्=58 B2.
+- A sequence ending in a Link (code 64) is answered with the half form the composer is waiting with
+  (क् = 8A, kind canonical:pending-link). A visible final virama is the halant key (code 44, Unicode
+  ्+ZWNJ): क्‌ = 48 B2 24, ख्‌ = 49 B2. The explicit half (code D7, ्+ZWJ) = the half form: क्‍ = 8A.
+
+2. Vowel signs and the spacer order
+-----------------------------------
+Signs: ा 6D, ी 72, ु 77, ू 79, ृ A5, ॄ A6, े 6F, ै A1, ो 6D 6F, ौ 6D A1, ॅ B0, ॉ 6D B0, ं A7,
+ँ B1, ः 85. Sign ligatures: ि+ं 71, ी+ं 74, े+ं 7C, ै+ं A2, ो+ं 6D 7C.
+- After a 24-letter (क फ ...): signs below (ु ू ृ ॄ) and above (े ै ं ँ ॅ, े+ं, ै+ं) go BEFORE the 24;
+  ा ी ो ौ ॉ ः go after it. After a 24 the ी is 73 (not 72) and ीं is 73 A8 (not 74).
+  कु=48 77 24  के=48 6F 24  कं=48 A7 24  कैं=48 A2 24  का=48 24 6D  की=48 24 73  कीं=48 24 73 A8
+  कः=48 24 85  को=48 24 6D 6F
+- After a 3E-letter (ङ छ ट ठ ड ढ): only the signs below go before the 3E; everything else after.
+  टु=51 77 3E  टृ=51 A5 3E  टे=51 3E 6F  टं=51 3E A7  टी=51 3E 72  टीं=51 3E 74
+- Other letters: letter, then sign. खु=49 77  खी=49 72  खीं=49 74  खें=49 7C
+- u/uu forms: after द and ह (and ligatures ending in द) ु=FE ू=FF: दु=58 FE हू=68 FF द्धु=D5 FE
+  न्दु=DD 58 FE; under stacked ligatures ु=78: ङ्गु=93 78 ट्टु=C5 78 3E; र has its own: रु=E9
+  रू=EA 24. ृ ligatures: दृ=D1 हृ=F6 (others: कृ=48 A5 24).
+
+3. The i-sign glyph (code 67, struck FIRST, written first)
+----------------------------------------------------------
+Chosen by the width of what follows (counts over all canonical "i ..." probes):
+  7B (342)  one letter or one ligature glyph: कि=7B 48 24  खि=7B 49  टि=7B 51 3E  क्ति=7B BA 24
+            क्षि=7B 6A  द्धि=7B D5  ट्टि=7B C5 3E  स्त्रि=7B F3  प्रि=7B E0  क्रि=7B 48 AB 24
+  70 (1369) a two-glyph cluster (half + letter, or letter + halant + letter): स्ति=70 F1 56
+            क्खि=70 8A 49  न्दि=70 DD 58  ङ्कि=70 4C B2 3E 48 24  त्त्रि=70 CB CC  क्त्रि=70 8A CC
+  71 (145)  i-sign + anusvara in one glyph (single letter): किं=71 48 24  टिं=71 51 3E  खिं=71 49
+  5B (7)    only before र (and alone): रि=5B 61  रिं=5B 61 A8  र्रि=5B 61 A9
+With reph: र्कि=7B 48 A9 24  र्किं=71 48 A9 24  र्त्रि=7B CC A9.
+
+4. The ra-sign (code D1, Unicode C्र)
+-------------------------------------
+- AB after the letter, before its 24: क्र=48 AB 24  फ्र=5C AB 24  ग्र=4A AB  ब्र=7E AB  ञ्र=C4 6D AB
+- B4 under the round-bottomed ङ छ ट ठ ड ढ (before the 3E) and ळ: ट्र=51 B4 3E  ड्र=53 B4 3E
+  ङ्र=4C B4 3E  ळ्र=69 B4
+- one-glyph ligatures: ख्र=BC  झ्र=C3  त्र=CC  द्र=D0  प्र=E0  श्र=6C  स्र=F2  ह्र=F5
+  (श्र and त्र also have codes of their own: 45 -> 6C, 47 -> CC; code EA -> FB 6D; श typed with the
+  ra-sign gives 65 AB - all accepted, truth prefers the ligature code)
+- with ु/ू: AB 77 / AB 79 (क्रु=48 AB 77 24, क्रू=48 AB 79 24), ligature + 77/79 (प्रु=E0 77,
+  त्रू=CC 79), and AE / AF for the B4 group (ट्रु=51 AE 3E, ड्रू=53 AF 3E).
+- र + ra-sign gives 61 AB, but Unicode र्र is a reph on र: truth र्र = 61 A9, 61 AB kept as alt.
+- C + Link + र gives half C + full र (क्र = 8A 61, क्रु = 8A E9): a visibly different form, kept as
+  alt:C+link+ra; truth क्र = 48 AB 24.
+- ई is इ + the reph glyph: ई=42 A9 (typed इ + reph), ईं=42 AA.
+
+5. The ya-sign (code D5) and य after a Link
+-------------------------------------------
+- D5 writes E7 after the letter and its spacer: क्य=48 24 E7  ट्य=51 3E E7  ख्य=49 E7.
+- Through the Link: half + य (क्य=8A 60, ख्य=BB 60), E7 for letters with no half form (ट्य=51 3E E7),
+  or a ligature (द्य=DA, ह्य=F8). Both orders are accepted (kinds ya-sign code D5 / link+ya); truth
+  prefers a vendor key, then the shorter answer (क्य -> 8A 60, द्य -> DA).
+
+6. The reph (code 40, struck AFTER the letter and its signs)
+-----------------------------------------------------------
+- A9 goes after the syllable's glyphs, but BEFORE a trailing 24 and AFTER a trailing 3E or 6D:
+  र्क=48 A9 24  र्कु=48 77 A9 24  र्कृ=48 A5 A9 24  र्का=48 24 6D A9  र्की=48 24 73 A9
+  र्ट=51 3E A9  र्टु=51 77 3E A9  र्प=6E A9  र्पु=6E 77 A9  र्स्त=F1 56 A9  र्ङ्ग=93 A9
+- sign + reph ligatures: े+reph 7D (र्के=48 7D 24, र्टे=51 3E 7D), ै+reph A3, ें+reph 5D,
+  ैं+reph A4, ं+reph AA (र्कं=48 AA 24), ी+reph 75 and ीं+reph 76 where the ी is not after a 24
+  (र्पी=6E 75, र्पीं=6E 76; but र्की=48 24 73 A9, र्कीं=48 24 73 AA).
+- reph struck before ं gives the AA ligature, ं struck before the reph gives A7 A9 (र्कं: 48 AA 24 /
+  48 A7 A9 24); both accepted, truth prefers the shorter AA.
+- other orders (kept as alt): reph struck first writes A9 before the letter (र्क=A9 48 24); reph struck
+  before the vowel sign writes it before the sign (र्का=48 A9 24 6D); र + Link before a letter gives
+  the eyelash ra E8 (र्क=E8 48 24; र्‍=E8 on its own is canonical, Unicode र्+ZWJ).
+
+7. Conjunct ligatures (C1्C2 typed through the Link)
+----------------------------------------------------
+Everything not listed here is half(C1) + full(C2), or C1 + B2 + C2 when C1 has no half form
+(ङ्क=4C B2 3E 48 24  ड्न=53 B2 3E 5A  द्ढ=58 B2 54 3E  ट्च=51 B2 3E 4D).
+One glyph (or glyph + spacer):
+  क्क=B8 24 क्त=BA 24 क्व=B9 24 क्ष=6A ग्न=BE ङ्ग=93 ङ्घ=94 ङ्क्ष=AC च्च=83 ज्ज=82 6D ज्ञ=6B
+  ञ्च=23 6D ट्ट=C5 3E ट्ठ=C6 3E ठ्ठ=C7 3E ड्ड=C8 3E ड्ढ=96 ढ्ढ=C9 3E त्त=CE 6D त्र=CC द्ग=D2
+  द्घ=D3 द्द=D4 द्ध=D5 द्न=D6 द्ब=D7 द्भ=D8 द्म=D9 द्य=DA द्र=D0 द्व=DB न्न=DE प्त=E1 प्र=E0
+  ल्ल=84 श्र=6C ष्ट=EF 3E ष्ठ=F0 3E स्र=F2 ह्ण=86 ह्न=95 ह्म=F7 ह्य=F8 ह्र=F5 ह्ल=87 ह्व=88
+  ख्र=BC झ्र=C3 स्त्र=F3
+- the va-sign 89 under ङ छ ट ठ ड ढ: ट्व=51 89 3E  छ्व=4E 89 3E
+- क्ष and ज्ञ typed through the Link instead of their own codes (48 / 41) give 8A 66 and C1 C4 6D:
+  accepted, but truth prefers the ligature code (6A / 6B).
+- three consonants: स्त्र=F3 न्द्र=DD D0 न्त्र=DD CC क्ष्म=FA 5F त्त्व=CE 64 स्त्य=F1 56 E7
+  ष्ट्र=EF B4 3E द्ध्र=D5 AB क्त्र=8A CC.
+
+8. Nukta
+--------
+- Only letters with a code of their own get a nukta, written BEFORE the letter (B5, or 8B for the
+  round-bottomed ड ढ ळ), or as a ligature: क़=B5 48 24 ख़=98 ग़=B5 4A ज़=B5 4F ड़=8B 53 3E
+  ढ़=8B 54 3E फ़=B5 5C 24 य़=B5 60 ऩ=B5 5A ऱ=B5 61 ऴ=8B 69; क़ि=7B B5 48 24 ज़्य=B5 4F E7
+  ख़्=99 ज़्=B5 C1. The Unicode composer writes these precomposed (U+0958-U+095F, U+0929, U+0931,
+  U+0934), so those are the truth keys.
+- The stand-alone nukta key (code EE, Ctrl+Space 3 on most keyboards): the Unicode composer writes
+  U+093C (C + EE comes back decomposed, C + U+093C), but the 7 composer writes 9D - a short piece of
+  headline with an advance, NOT a nukta dot - and 8F (the ÷ glyph) when a Link follows. Nukta code D9
+  is dropped entirely. All of these are quirk:*; a decomposed C + U+093C has NO truth: normalise to the
+  precomposed letter (NFC does not do that - U+0958-095F are composition exclusions).
+
+9. Independent vowels, digits, signs
+------------------------------------
+अ=41 आ=41 6D इ=42 ई=42 A9 उ=43 ऊ=44 24 ऋ=46 24 ॠ=47 24 ए=45 ऐ=45 6F ओ=41 6D 6F औ=41 6D A1
+ऍ=45 B0 ऑ=41 6D B0 ॲ=41 B0 ॐ=9B ऽ=40 ।=26 ०..९=30..39 ‘=22 ’=27 –=8D —=8D 8D ×=81 ÷=8F ॒=9A
+(ऐ typed with code 3E instead of ए+े gets no 7 answer.)
+
+10. What DEV7 cannot draw (quirk:*, no truth)
+---------------------------------------------
+- ॢ ॣ ॡ, ॑ ᳚ ॰ ॺ, ॥, “ : the 7 composer writes nothing for them (a sign is dropped, the rest kept).
+  "। ।" comes back 26 26 while the Unicode composer joins it to ॥.
+- ऌ -> 2A (the * glyph).  ॆ -> 90, an empty glyph (ऎ=45 90, ऒ=41 6D 90, ऄ=41 90, कॆ=48 24 90 all
+  lose the mark).  ₹ -> 3C: no glyph at 3C in any installed DEV7 or DEV 4/5/6 font.
+- ” -> B3: B3 draws क् in a 7 font and a zero-width ्न in a 4/5/6 font - neither is a quote.
+- a Link after the ra-sign (क्र् typed C, ra-sign, Link) is dropped: 48 AB 24, same as क्र.
+
+11. The family-differing codes (91 92 B3 B6)
+--------------------------------------------
+Measured over all 37239 pairs: 91, 92 and B6 never occur; B3 occurs once, for ” (quirk above).
+The ligatures 4/5/6 keeps at those codes come back built from pieces: ङ्क=4C B2 3E 48 24
+ङ्ख=4C B2 3E 49 ङ्म=4C B2 3E 5F. The codes next to them that look like 4/5/6 ligatures are the same
+glyph in both families and are used: 93 ङ्ग, 94 ङ्घ, 95 ह्न, 96 ड्ढ, AC ङ्क्ष.
+The 4/5/6-only ligatures at U+0200-0218 are never produced; the 7 composer writes instead:
+क्क=B8 24 क्ल=8A 62 क्व=B9 24 ङ्क=4C B2 3E 48 24 ङ्ख=4C B2 3E 49 ङ्ग=93 ङ्घ=94 ङ्म=4C B2 3E 5F
+ङ्क्ष=AC छ्व=4E 89 3E ञ्च=23 6D ञ्ज=C4 4F प्ल=DF 62 फ्ल=E2 62 ल्ल=84 ट्व=51 89 3E ट्ट=C5 3E
+ट्ठ=C6 3E ठ्ठ=C7 3E ड्ड=C8 3E ड्ढ=96 द्ढ=58 B2 54 3E क्त=BA 24 न्न=DE प्त=E1
+(ल has two glyphs: 62 from code 6D, most keyboards, and the one after a half letter; 63 from codes DF/E7.)
+
+12. Where the Unicode composer is wrong (quirk:U-composer-wrote-*, 199 rows, not used)
+-------------------------------------------------------------------------------------
+- C + ya-sign + reph -> "Cर्" (42+8 rows; 7: क्य + A9)      - C + ः + reph -> "Cर्ः" (42+8)
+- i + C + ya-sign -> "Cि्य" (40+8; 7: 7B 48 24 E7)          - i + C + nukta -> "Cि़" (34)
+- अ + sign + candrabindu -> "अअँ"; इ + ं + reph -> "इई"; doubled ं/ँ collapsed; "। ।" -> "॥".
+
+13. Typing orders kept as alt:* (not truth)
+-------------------------------------------
+reph struck first (र्क=A9 48 24), reph before the vowel sign (र्का=48 A9 24 6D), ra + Link + C
+(eyelash: र्क=E8 48 24), C + Link + र (क्र=8A 61), र + ra/ya-sign (र्र=61 AB, र्य=61 E7).
+
+Truth selection (same as Gujarati): per Unicode string, answers from vendor keys and canonical-order
+probes are accepted; preferred = an answer typed with a ligature code, then the one most vendor keys
+give, then a canonical one, then the shortest.
+
+APPENDIX - tables computed from dev7-groundtruth.json (preferred answers; '-' = no truth)
+======================================================================================
+== A. base, half, pending-link, explicit half (्‍), visible halant (्‌)
+क full 48 24 | क् 8A | क्‍ 8A | क्‌ 48 B2 24
+ख full 49 | ख् BB | ख्‍ BB | ख्‌ 49 B2
+ग full 4A | ग् BD | ग्‍ BD | ग्‌ 4A B2
+घ full 4B | घ् BF | घ्‍ BF | घ्‌ 4B B2
+ङ full 4C 3E | ङ् 4C B2 3E | ङ्‍ 4C B2 3E | ङ्‌ 4C B2 3E
+च full 4D | च् C0 | च्‍ C0 | च्‌ 4D B2
+छ full 4E 3E | छ् 4E B2 3E | छ्‍ 4E B2 3E | छ्‌ 4E B2 3E
+ज full 4F | ज् C1 | ज्‍ C1 | ज्‌ 4F B2
+झ full 50 | झ् C2 | झ्‍ C2 | झ्‌ 50 B2
+ञ full C4 6D | ञ् C4 | ञ्‍ C4 | ञ्‌ C4 6D B2
+ट full 51 3E | ट् 51 B2 3E | ट्‍ 51 B2 3E | ट्‌ 51 B2 3E
+ठ full 52 3E | ठ् 52 B2 3E | ठ्‍ 52 B2 3E | ठ्‌ 52 B2 3E
+ड full 53 3E | ड् 53 B2 3E | ड्‍ 53 B2 3E | ड्‌ 53 B2 3E
+ढ full 54 3E | ढ् 54 B2 3E | ढ्‍ 54 B2 3E | ढ्‌ 54 B2 3E
+ण full 55 | ण् CA | ण्‍ CA | ण्‌ 55 B2
+त full 56 | त् CB | त्‍ CB | त्‌ 56 B2
+थ full 57 | थ् CF | थ्‍ CF | थ्‌ 57 B2
+द full 58 | द् 58 B2 | द्‍ 58 B2 | द्‌ 58 B2
+ध full 59 | ध् DC | ध्‍ DC | ध्‌ 59 B2
+न full 5A | न् DD | न्‍ DD | न्‌ 5A B2
+प full 6E | प् DF | प्‍ DF | प्‌ 6E B2
+फ full 5C 24 | फ् E2 | फ्‍ E2 | फ्‌ 5C B2 24
+ब full 7E | ब् E3 | ब्‍ E3 | ब्‌ 7E B2
+भ full 5E | भ् E4 | भ्‍ E4 | भ्‌ 5E B2
+म full 5F | म् E5 | म्‍ E5 | म्‌ 5F B2
+य full 60 | य् E6 | य्‍ E6 | य्‌ 60 B2
+र full 61 | र् A9 | र्‍ E8 | र्‌ 61 B2
+ल full 62 | ल् EB | ल्‍ EB | ल्‌ 62 B2
+व full 64 | व् EC | व्‍ EC | व्‌ 64 B2
+श full 65 | श् ED | श्‍ ED | श्‌ 65 B2
+ष full 66 | ष् EE | ष्‍ EE | ष्‌ 66 B2
+स full 67 | स् F1 | स्‍ F1 | स्‌ 67 B2
+ह full 68 | ह् F4 | ह्‍ F4 | ह्‌ 68 B2
+ळ full 69 | ळ् F9 | ळ्‍ F9 | ळ्‌ 69 B2
+
+== B. vowel signs on क (spacer 24), ट (spacer 3E), ख (no spacer), द, ह, र
+क: क=48 24  का=48 24 6D  कि=7B 48 24  की=48 24 73  कु=48 77 24  कू=48 79 24  कृ=48 A5 24  कॄ=48 A6 24  के=48 6F 24  कै=48 A1 24  को=48 24 6D 6F  कौ=48 24 6D A1  कॅ=48 B0 24  कॉ=48 24 6D B0  कं=48 A7 24  कँ=48 B1 24  कः=48 24 85  कीं=48 24 73 A8  कें=48 7C 24  कैं=48 A2 24  कों=48 24 6D 7C  किं=71 48 24
+ट: ट=51 3E  टा=51 3E 6D  टि=7B 51 3E  टी=51 3E 72  टु=51 77 3E  टू=51 79 3E  टृ=51 A5 3E  टॄ=51 A6 3E  टे=51 3E 6F  टै=51 3E A1  टो=51 3E 6D 6F  टौ=51 3E 6D A1  टॅ=51 3E B0  टॉ=51 3E 6D B0  टं=51 3E A7  टँ=51 3E B1  टः=51 3E 85  टीं=51 3E 74  टें=51 3E 7C  टैं=51 3E A2  टों=51 3E 6D 7C  टिं=71 51 3E
+ख: ख=49  खा=49 6D  खि=7B 49  खी=49 72  खु=49 77  खू=49 79  खृ=49 A5  खॄ=49 A6  खे=49 6F  खै=49 A1  खो=49 6D 6F  खौ=49 6D A1  खॅ=49 B0  खॉ=49 6D B0  खं=49 A7  खँ=49 B1  खः=49 85  खीं=49 74  खें=49 7C  खैं=49 A2  खों=49 6D 7C  खिं=71 49
+द: द=58  दा=58 6D  दि=7B 58  दी=58 72  दु=58 FE  दू=58 FF  दृ=D1  दॄ=58 A6  दे=58 6F  दै=58 A1  दो=58 6D 6F  दौ=58 6D A1  दॅ=58 B0  दॉ=58 6D B0  दं=58 A7  दँ=58 B1  दः=58 85  दीं=58 74  दें=58 7C  दैं=58 A2  दों=58 6D 7C  दिं=71 58
+ह: ह=68  हा=68 6D  हि=7B 68  ही=68 72  हु=68 FE  हू=68 FF  हृ=F6  हॄ=68 A6  हे=68 6F  है=68 A1  हो=68 6D 6F  हौ=68 6D A1  हॅ=68 B0  हॉ=68 6D B0  हं=68 A7  हँ=68 B1  हः=68 85  हीं=68 74  हें=68 7C  हैं=68 A2  हों=68 6D 7C  हिं=71 68
+र: र=61  रा=61 6D  रि=5B 61  री=61 72  रु=E9  रू=EA 24  रृ=61 A5  रॄ=61 A6  रे=61 6F  रै=61 A1  रो=61 6D 6F  रौ=61 6D A1  रॅ=61 B0  रॉ=61 6D B0  रं=61 A7  रँ=61 B1  रः=61 85  रीं=61 74  रें=61 7C  रैं=61 A2  रों=61 6D 7C  रिं=5B 61 A8
+फ: फ=5C 24  फा=5C 24 6D  फि=7B 5C 24  फी=5C 24 73  फु=5C 77 24  फू=5C 79 24  फृ=5C A5 24  फॄ=5C A6 24  फे=5C 6F 24  फै=5C A1 24  फो=5C 24 6D 6F  फौ=5C 24 6D A1  फॅ=5C B0 24  फॉ=5C 24 6D B0  फं=5C A7 24  फँ=5C B1 24  फः=5C 24 85  फीं=5C 24 73 A8  फें=5C 7C 24  फैं=5C A2 24  फों=5C 24 6D 7C  फिं=71 5C 24
+
+== C. i-sign glyph (first byte of every canonical "i ..." probe)
+70: 1369 | क्खि=70 8A 49  क्गि=70 8A 4A  क्घि=70 8A 4B  क्ङि=70 8A 4C 3E  क्चि=70 8A 4D  क्छि=70 8A 4E 3E  क्जि=70 8A 4F  क्झि=70 8A 50  क्ञि=70 8A C4 6D  क्टि=70 8A 51 3E  क्ठि=70 8A 52 3E  क्डि=70 8A 53 3E  क्ढि=70 8A 54 3E  क्णि=70 8A 55
+7B: 342 | कि=7B 48 24  किँ=7B 48 3E 3E B1 24  किः=7B 48 24 85  खि=7B 49  खिँ=7B 49 3E 3E B1  खिः=7B 49 85  गि=7B 4A  गिँ=7B 4A 3E 3E B1  गिः=7B 4A 85  घि=7B 4B  घिँ=7B 4B 3E 3E B1  घिः=7B 4B 85  ङि=7B 4C 3E  ङिँ=7B 4C 3E 3E 3E B1
+71: 145 | किं=71 48 24  खिं=71 49  गिं=71 4A  घिं=71 4B  ङिं=71 4C 3E  चिं=71 4D  छिं=71 4E 3E  जिं=71 4F  झिं=71 50  ञिं=71 C4 6D  टिं=71 51 3E  ठिं=71 52 3E  डिं=71 53 3E  ढिं=71 54 3E
+5B: 7 | रि=5B 61  रिं=5B 61 A8  रिँ=5B 61 3E 3E B1  रिः=5B 61 85  र्रि=5B 61 A9  र्रिं=5B 61 A8 A9  र्रिं=5B 61 AA
+
+== D. ra-sign C्र for every consonant
+क्र=48 AB 24  ख्र=BC  ग्र=4A AB  घ्र=4B AB  ङ्र=4C B4 3E  च्र=4D AB  छ्र=4E B4 3E  ज्र=4F AB  झ्र=C3  ञ्र=C4 6D AB  ट्र=51 B4 3E  ठ्र=52 B4 3E  ड्र=53 B4 3E  ढ्र=54 B4 3E  ण्र=55 AB  त्र=CC  थ्र=57 AB  द्र=D0  ध्र=59 AB  न्र=5A AB  प्र=E0  फ्र=5C AB 24  ब्र=7E AB  भ्र=5E AB  म्र=5F AB  य्र=60 AB  र्र=61 A9  ल्र=62 AB  व्र=64 AB  श्र=6C  ष्र=66 AB  स्र=F2  ह्र=F5  ळ्र=69 B4
+ra-sign + vowel: क्रु=48 AB 77 24  क्रू=48 AB 79 24  क्रृ=48 AB A5 24  प्रु=E0 77  प्रू=E0 79  ट्रु=51 AE 3E  ड्रू=53 AF 3E  द्रु=D0 FE  ह्रु=F5 FE  श्रु=6C 77  स्रु=F2 77  क्रि=7B 48 AB 24  प्रि=7B E0  द्रि=7B D0  ट्रि=7B 51 B4 3E  क्रं=48 AB A7 24  प्रें=E0 7C
+
+== E. ya-sign (code D5) vs half + य (link)
+क्य: 48 24 E7 (D5) / 8A 60 (link)
+ख्य: 49 E7 (D5) / BB 60 (link)
+ग्य: 4A E7 (D5) / BD 60 (link)
+घ्य: 4B E7 (D5) / BF 60 (link)
+ङ्य: 4C 3E E7 (D5) / 4C B2 3E 60 (link)
+च्य: 4D E7 (D5) / C0 60 (link)
+छ्य: 4E 3E E7 (D5) / 4E B2 3E 60 (link)
+ज्य: 4F E7 (D5) / C1 60 (link)
+झ्य: 50 E7 (D5) / C2 60 (link)
+ञ्य: C4 6D E7 (D5) / C4 60 (link)
+ट्य: 51 3E E7 (D5) / 51 3E E7 (link)
+ठ्य: 52 3E E7 (D5) / 52 3E E7 (link)
+ड्य: 53 3E E7 (D5) / 53 3E E7 (link)
+ढ्य: 54 3E E7 (D5) / 54 3E E7 (link)
+ण्य: 55 E7 (D5) / CA 60 (link)
+त्य: 56 E7 (D5) / CB 60 (link)
+थ्य: 57 E7 (D5) / CF 60 (link)
+द्य: DA (vendor-key) / 58 E7 (D5) / DA (link)
+ध्य: 59 E7 (D5) / DC 60 (link)
+न्य: 5A E7 (D5) / DD 60 (link)
+प्य: 6E E7 (D5) / DF 60 (link)
+फ्य: 5C 24 E7 (D5) / E2 60 (link)
+ब्य: 7E E7 (D5) / E3 60 (link)
+भ्य: 5E E7 (D5) / E4 60 (link)
+म्य: 5F E7 (D5) / E5 60 (link)
+य्य: 60 E7 (D5) / E6 60 (link)
+र्य: 61 E7 (alt:र+ra/ya-sign (sign under र; Unicode र्र/र्य renders as a reph)) / 60 A9 (canonical) / A9 60 (alt:reph-struck-first) / E8 60 (alt:ra+link+C (eyelash ra E8, not a reph))
+ल्य: 62 E7 (D5) / EB 60 (link)
+व्य: 64 E7 (D5) / EC 60 (link)
+श्य: 65 E7 (D5) / ED 60 (link)
+ष्य: 66 E7 (D5) / EE 60 (link)
+स्य: 67 E7 (D5) / F1 60 (link)
+ह्य: 68 E7 (D5) / F8 (link)
+ळ्य: 69 E7 (D5) / F9 60 (link)
+
+== F. reph on क / प / ट / द and with every sign
+क: र्क=48 A9 24  र्का=48 24 6D A9  र्कि=7B 48 A9 24  र्की=48 24 73 A9  र्कु=48 77 A9 24  र्कू=48 79 A9 24  र्कृ=48 A5 A9 24  र्के=48 7D 24  र्कै=48 A3 24  र्को=48 24 6D 7D  र्कौ=48 24 6D A3  र्कं=48 AA 24  र्कीं=48 24 73 AA  र्कें=48 5D 24  र्कैं=48 A4 24  र्कों=-  र्किं=71 48 A9 24  र्कः=-
+प: र्प=6E A9  र्पा=6E 6D A9  र्पि=7B 6E A9  र्पी=6E 75  र्पु=6E 77 A9  र्पू=6E 79 A9  र्पृ=6E A5 A9  र्पे=6E 7D  र्पै=6E A3  र्पो=6E 6D 7D  र्पौ=6E 6D A3  र्पं=6E AA  र्पीं=6E 76  र्पें=6E 5D  र्पैं=6E A4  र्पों=-  र्पिं=71 6E A9  र्पः=-
+ट: र्ट=51 3E A9  र्टा=51 3E 6D A9  र्टि=7B 51 3E A9  र्टी=51 3E 75  र्टु=51 77 3E A9  र्टू=51 79 3E A9  र्टृ=51 A5 3E A9  र्टे=51 3E 7D  र्टै=51 3E A3  र्टो=51 3E 6D 7D  र्टौ=51 3E 6D A3  र्टं=51 3E AA  र्टीं=51 3E 76  र्टें=51 3E 5D  र्टैं=51 3E A4  र्टों=-  र्टिं=71 51 3E A9  र्टः=-
+द: र्द=58 A9  र्दा=58 6D A9  र्दि=7B 58 A9  र्दी=58 75  र्दु=58 FE A9  र्दू=58 FF A9  र्दृ=D1 A9  र्दे=58 7D  र्दै=58 A3  र्दो=58 6D 7D  र्दौ=58 6D A3  र्दं=58 AA  र्दीं=58 76  र्दें=58 5D  र्दैं=58 A4  र्दों=-  र्दिं=71 58 A9  र्दः=-
+ह: र्ह=68 A9  र्हा=68 6D A9  र्हि=7B 68 A9  र्ही=68 75  र्हु=68 FE A9  र्हू=68 FF A9  र्हृ=F6 A9  र्हे=68 7D  र्है=68 A3  र्हो=68 6D 7D  र्हौ=68 6D A3  र्हं=68 AA  र्हीं=68 76  र्हें=68 5D  र्हैं=68 A4  र्हों=-  र्हिं=71 68 A9  र्हः=-
+क्ष: र्क्ष=6A A9  र्क्षा=6A 6D A9  र्क्षि=7B 6A A9  र्क्षी=6A 75  र्क्षु=6A 77 A9  र्क्षू=6A 79 A9  र्क्षृ=6A A5 A9  र्क्षे=6A 7D  र्क्षै=6A A3  र्क्षो=6A 6D 7D  र्क्षौ=6A 6D A3  र्क्षं=6A AA  र्क्षीं=6A 76  र्क्षें=6A 5D  र्क्षैं=6A A4  र्क्षों=-  र्क्षिं=71 6A A9  र्क्षः=-
+स्त: र्स्त=F1 56 A9  र्स्ता=-  र्स्ति=-  र्स्ती=-  र्स्तु=-  र्स्तू=-  र्स्तृ=-  र्स्ते=-  र्स्तै=-  र्स्तो=-  र्स्तौ=-  र्स्तं=-  र्स्तीं=-  र्स्तें=-  र्स्तैं=-  र्स्तों=-  र्स्तिं=-  र्स्तः=-
+
+== G. two-consonant conjuncts C1्C2 that are NOT half(C1) + full(C2)
+ligature or special form (106): क्क=B8 24  क्त=BA 24  क्र=48 AB 24  क्व=B9 24  क्ष=6A  ख्य=49 E7  ख्र=BC  ग्न=BE  ग्य=4A E7  ग्र=4A AB  घ्य=4B E7  घ्र=4B AB  ङ्ग=93  ङ्घ=94  ङ्य=4C 3E E7  ङ्र=4C B4 3E  ङ्व=4C 89 3E  च्च=83  च्य=4D E7  च्र=4D AB  छ्य=4E 3E E7  छ्र=4E B4 3E  छ्व=4E 89 3E  ज्ज=82 6D  ज्ञ=6B  ज्य=4F E7  ज्र=4F AB  झ्य=50 E7  झ्र=C3  ञ्च=23 6D  ञ्र=C4 6D AB  ट्ट=C5 3E  ट्ठ=C6 3E  ट्य=51 3E E7  ट्र=51 B4 3E  ट्व=51 89 3E  ठ्ठ=C7 3E  ठ्य=52 3E E7  ठ्र=52 B4 3E  ठ्व=52 89 3E  ड्ड=C8 3E  ड्ढ=96  ड्य=53 3E E7  ड्र=53 B4 3E  ड्व=53 89 3E  ढ्ढ=C9 3E  ढ्य=54 3E E7  ढ्र=54 B4 3E  ढ्व=54 89 3E  ण्य=55 E7  ण्र=55 AB  त्त=CE 6D  त्य=56 E7  त्र=CC  थ्य=57 E7  थ्र=57 AB  द्ग=D2  द्घ=D3  द्द=D4  द्ध=D5  द्न=D6  द्ब=D7  द्भ=D8  द्म=D9  द्य=DA  द्र=D0  द्व=DB  ध्य=59 E7  ध्र=59 AB  न्न=DE  न्य=5A E7  न्र=5A AB  प्त=E1  प्य=6E E7  प्र=E0  फ्र=5C AB 24  ब्य=7E E7  ब्र=7E AB  भ्य=5E E7  भ्र=5E AB  म्य=5F E7  म्र=5F AB  य्य=60 E7  य्र=60 AB  ल्य=62 E7  ल्र=62 AB  ल्ल=84  व्य=64 E7  व्र=64 AB  श्य=65 E7  श्र=6C  ष्ट=EF 3E  ष्ठ=F0 3E  ष्य=66 E7  ष्र=66 AB  स्य=67 E7  स्र=F2  ह्ण=86  ह्न=95  ह्म=F7  ह्य=F8  ह्र=F5  ह्ल=87  ह्व=88  ळ्य=69 E7  ळ्र=69 B4
+
+halant fallback B2 (0): 
+
+== H. family-differing codes 91 92 B3 B6 in any answer
+{"B3":["”=B3 [quirk:7-composer-writes-B3-for-” (B3 draws क् in a 7 font, ्न in a 4/5/6 font)]"]}
+the 4/5/6-only ligatures U+0200-0218, as the 7 composer writes them: क्क=B8 24  क्ल=8A 62  क्व=B9 24  ङ्क=4C B2 3E 48 24  ङ्ख=4C B2 3E 49  ङ्ग=93  ङ्घ=94  ङ्म=4C B2 3E 5F  ङ्क्ष=AC  छ्व=4E 89 3E  ञ्च=23 6D  ञ्ज=C4 4F  प्ल=DF 62  फ्ल=E2 62  ल्ल=84  ट्व=51 89 3E  ट्ट=C5 3E  ट्ठ=C6 3E  ठ्ठ=C7 3E  ड्ड=C8 3E  ड्ढ=96  द्ढ=58 B2 54 3E  क्त=BA 24  न्न=DE  प्त=E1
+
+== I. nukta letters
+क़=B5 48 24  ख़=98  ग़=B5 4A  ज़=B5 4F  ड़=8B 53 3E  ढ़=8B 54 3E  फ़=B5 5C 24  य़=B5 60  ऩ=B5 5A  ऱ=B5 61  ऴ=8B 69  क़ि=7B B5 48 24  क़ा=B5 48 24 6D  ज़्य=B5 4F E7  र्ज़=B5 4F A9  फ़्र=B5 5C AB 24  ड़ी=8B 53 3E 72  ज़ि=7B B5 4F  ख़्=99  ज़्=B5 C1  क़=-  ज़=-
+
+== J. three-consonant clusters (samples)
+स्त्र=F3  स्त्री=F3 72  न्द्र=DD D0  न्त्र=DD CC  क्ष्म=FA 5F  त्त्व=CE 64  स्त्य=F1 56 E7  न्त्य=DD 56 E7  ङ्क्ष=AC  क्त्र=8A CC  ष्ट्र=EF B4 3E  द्ध्र=D5 AB  ज्ज्व=-  त्स्न=-
+
+== K. independent vowels
+अ=41  आ=41 6D  इ=42  ई=42 A9  उ=43  ऊ=44 24  ऋ=46 24  ॠ=47 24  ऌ=-  ए=45  ऐ=45 6F  ओ=41 6D 6F  औ=41 6D A1  ऍ=45 B0  ऑ=41 6D B0  ॲ=41 B0  ऎ=-  ऒ=-  ॐ=9B  ऽ=40  ।=26  ॥=-  ₹=-  ०=30  ९=39

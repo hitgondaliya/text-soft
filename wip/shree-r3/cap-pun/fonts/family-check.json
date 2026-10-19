@@ -1,0 +1,120 @@
+{
+ "method": "ttf.js: (3,1) cmap format 4 of each TTF in C:/Windows/Fonts, code points folded back to bytes as Windows-1252 maps them; per code: glyph id, advance (hmtx), sha1 of the raw glyf bytes, and a geometry signature (outline points scaled to the advance box). Same design = same 4-digit number (0951: WPUN7001 vs S09510F2, 0952: WPUN7002 vs S09520F2).",
+ "faces": {
+  "WPUN7001.TTF": {
+   "name": "SHREE-PUN7-0951",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 123,
+   "codes": 119,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "WPUN7002.TTF": {
+   "name": "SHREE-PUN7-0952",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 123,
+   "codes": 119,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "S09500F2.TTF": {
+   "name": "SHREE-PUN-0950",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 122,
+   "codes": 118,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "S09510F2.TTF": {
+   "name": "SHREE-PUN-0951",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 122,
+   "codes": 118,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "S09520F2.TTF": {
+   "name": "SHREE-PUN-0952",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 122,
+   "codes": 118,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "S09550F2.TTF": {
+   "name": "SHREE-PUN-0955",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 122,
+   "codes": 118,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  },
+  "S09560F2.TTF": {
+   "name": "SHREE-PUN-0956",
+   "cmap": "3,1",
+   "upem": 1000,
+   "glyphs": 122,
+   "codes": 118,
+   "codeList": "20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 79 7A 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AD AE AF B0 B1 B2 B3 B4 B5 B7 B9 BA BE BF"
+  }
+ },
+ "pairs": {
+  "0951 WPUN7001 vs S09510F2": {
+   "identicalOutlineAndAdvance": 118,
+   "differ": {
+    "3C": "only in WPUN7001.TTF"
+   }
+  },
+  "0952 WPUN7002 vs S09520F2": {
+   "identicalOutlineAndAdvance": 118,
+   "differ": {
+    "3C": "only in WPUN7002.TTF"
+   }
+  },
+  "7: WPUN7001 vs WPUN7002 (two designs)": {
+   "sameCodeSet": true,
+   "sameGlyphIds": true
+  }
+ },
+ "codeSets": {
+  "S09500F2.TTF vs S09510F2": {
+   "codes": 118,
+   "codesNotInBoth": [],
+   "glyphIdDiffers": []
+  },
+  "S09510F2.TTF vs S09510F2": {
+   "codes": 118,
+   "codesNotInBoth": [],
+   "glyphIdDiffers": []
+  },
+  "S09520F2.TTF vs S09510F2": {
+   "codes": 118,
+   "codesNotInBoth": [],
+   "glyphIdDiffers": []
+  },
+  "S09550F2.TTF vs S09510F2": {
+   "codes": 118,
+   "codesNotInBoth": [],
+   "glyphIdDiffers": []
+  },
+  "S09560F2.TTF vs S09510F2": {
+   "codes": 118,
+   "codesNotInBoth": [],
+   "glyphIdDiffers": []
+  },
+  "WPUN7001.TTF vs WPUN7001": {
+   "codes": 119,
+   "codesNotInBoth": []
+  },
+  "WPUN7002.TTF vs WPUN7001": {
+   "codes": 119,
+   "codesNotInBoth": []
+  },
+  "7 (WPUN7001) vs 4/5/6 (S09510F2)": {
+   "only7": [
+    "3C"
+   ],
+   "only456": []
+  }
+ }
+}

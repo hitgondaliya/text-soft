@@ -1,0 +1,185 @@
+{
+ "about": "Probes the Unicode composer cannot vouch for although the 7 composer typed something: codes only S8Mal764 types (86 -> 2D, ED -> 9E), ശ്രീ E3 alone (E8 7D), and control codes echoed. unicodeByCodes = what the other codes mean - an inference, not a composer answer.",
+ "rows": [
+  {
+   "codes": "E3",
+   "tag": "ശ്രീ",
+   "uComposer": null,
+   "unicodeByCodes": "ശ്രീ",
+   "bytes": "E8 7D",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe PAFX key y"
+  },
+  {
+   "codes": "86",
+   "tag": "code 86",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe PBDQ key p"
+  },
+  {
+   "codes": "ED",
+   "tag": "code ED",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe PBDR key l"
+  },
+  {
+   "codes": "86",
+   "tag": "code 86",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAC key L"
+  },
+  {
+   "codes": "E3",
+   "tag": "code E3",
+   "uComposer": null,
+   "unicodeByCodes": "ശ്രീ",
+   "bytes": "E8 7D",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe EAAD key J"
+  },
+  {
+   "codes": "ED",
+   "tag": "code ED",
+   "uComposer": null,
+   "unicodeByCodes": "",
+   "bytes": "9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAD key T"
+  },
+  {
+   "codes": "66 07",
+   "tag": "ക + 07",
+   "uComposer": null,
+   "unicodeByCodes": "ക",
+   "bytes": "57 07",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe EAAE key w"
+  },
+  {
+   "codes": "66 86",
+   "tag": "ക + 86",
+   "uComposer": "ക",
+   "unicodeByCodes": "ക",
+   "bytes": "57 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAH key g"
+  },
+  {
+   "codes": "66 ED",
+   "tag": "ക + ED",
+   "uComposer": "ക",
+   "unicodeByCodes": "ക",
+   "bytes": "57 9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAI key o"
+  },
+  {
+   "codes": "86 66",
+   "tag": "86 + ക",
+   "uComposer": "ക",
+   "unicodeByCodes": "ക",
+   "bytes": "2D 57",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAL key v"
+  },
+  {
+   "codes": "ED 66",
+   "tag": "ED + ക",
+   "uComposer": "ക",
+   "unicodeByCodes": "ക",
+   "bytes": "9E 57",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAM key D"
+  },
+  {
+   "codes": "65 07",
+   "tag": "പ + 07",
+   "uComposer": null,
+   "unicodeByCodes": "പ",
+   "bytes": "6B 07",
+   "why": "the Unicode composer gives no answer",
+   "source": "probe EAAN key g"
+  },
+  {
+   "codes": "65 86",
+   "tag": "പ + 86",
+   "uComposer": "പ",
+   "unicodeByCodes": "പ",
+   "bytes": "6B 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAP key K"
+  },
+  {
+   "codes": "65 ED",
+   "tag": "പ + ED",
+   "uComposer": "പ",
+   "unicodeByCodes": "പ",
+   "bytes": "6B 9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAQ key S"
+  },
+  {
+   "codes": "66 64 86",
+   "tag": "ക link + 86",
+   "uComposer": "ക്",
+   "unicodeByCodes": "ക്",
+   "bytes": "57 56 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAU key f"
+  },
+  {
+   "codes": "66 64 ED",
+   "tag": "ക link + ED",
+   "uComposer": "ക്",
+   "unicodeByCodes": "ക്",
+   "bytes": "57 56 9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAV key n"
+  },
+  {
+   "codes": "86 64 66",
+   "tag": "86 + link ക",
+   "uComposer": "്ക",
+   "unicodeByCodes": "്ക",
+   "bytes": "2D 56 57",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EAAY key u"
+  },
+  {
+   "codes": "ED 64 66",
+   "tag": "ED + link ക",
+   "uComposer": "്ക",
+   "unicodeByCodes": "്ക",
+   "bytes": "9E 56 57",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EAAZ key C"
+  },
+  {
+   "codes": "67 64 86",
+   "tag": "ര link + 86",
+   "uComposer": "ര്",
+   "unicodeByCodes": "ര്",
+   "bytes": "71 56 2D",
+   "why": "quirk:7-only-code: 86 -> 2D (an empty zero-width glyph)",
+   "source": "probe EABC key J"
+  },
+  {
+   "codes": "67 64 ED",
+   "tag": "ര link + ED",
+   "uComposer": "ര്",
+   "unicodeByCodes": "ര്",
+   "bytes": "71 56 9E",
+   "why": "quirk:7-only-code: ED -> 9E (no glyph in any Malayalam 7 face)",
+   "source": "probe EABD key R"
+  }
+ ]
+}

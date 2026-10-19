@@ -1,0 +1,109 @@
+{
+ "failing": 10474,
+ "groups": {
+  "ra sign 4E read in visual order (്ര before the letter: 4E 57 -> ്രക, should be ക്ര)": {
+   "count": 5097,
+   "examples": [
+    "4E 57: Shree ക്ര | ours ്രക",
+    "4E 57 4C: Shree ക്രാ | ours ്രകാ",
+    "4E 57 5D: Shree ക്രി | ours ്രകി",
+    "4E 57 7D: Shree ക്രീ | ours ്രകീ",
+    "4E 57 4F: Shree ക്രു | ours ്രകു",
+    "4E 57 50: Shree ക്രൂ | ours ്രകൂ",
+    "4E 57 51: Shree ക്രൃ | ours ്രകൃ",
+    "4E 57 54: Shree ക്രൗ | ours ്രകൗ"
+   ]
+  },
+  "other": {
+   "count": 3106,
+   "examples": [
+    "56 71: Shree ്‌ര | ours ്ര",
+    "57 56 57: Shree ക്‌ക | ours ക്ക",
+    "82 56 57: Shree ങ്‌ക | ours ങ്ക",
+    "70 56 57: Shree യ്‌ക | ours യ്ക",
+    "73 56 57: Shree ല്‌ക | ours ല്ക",
+    "78 56 57: Shree ഷ്‌ക | ours ഷ്ക",
+    "79 56 57: Shree സ്‌ക | ours സ്ക",
+    "57 56 61: Shree ക്‌ട | ours ക്ട"
+   ]
+  },
+  "subjoined forms 9B (ട) / 9C (ധ) / FF (doubling stroke) unmapped: read as › œ ÿ": {
+   "count": 1129,
+   "examples": [
+    "76 FF: Shree വ്വ | ours വÿ",
+    "76 FF 4C: Shree വ്വാ | ours വÿാ",
+    "76 FF 5D: Shree വ്വി | ours വÿി",
+    "76 FF 7D: Shree വ്വീ | ours വÿീ",
+    "76 FF 4F: Shree വ്വു | ours വÿു",
+    "76 FF 50: Shree വ്വൂ | ours വÿൂ",
+    "76 FF 51: Shree വ്വൃ | ours വÿൃ",
+    "76 FF 54: Shree വ്വൗ | ours വÿൗ"
+   ]
+  },
+  "C + E6 (la sign) read as ല് / chillu": {
+   "count": 625,
+   "examples": [
+    "57 E6: Shree ക്ല | ours കല്",
+    "57 E6 4C: Shree ക്ലാ | ours കല്ാ",
+    "57 E6 5D: Shree ക്ലി | ours കല്ി",
+    "57 E6 7D: Shree ക്ലീ | ours കല്ീ",
+    "57 E6 4F: Shree ക്ലു | ours കല്ു",
+    "57 E6 50: Shree ക്ലൂ | ours കല്ൂ",
+    "57 E6 51: Shree ക്ലൃ | ours കല്ൃ",
+    "57 E6 54: Shree ക്ലൗ | ours കല്ൗ"
+   ]
+  },
+  "7C / 7E (ya / va sign) read wrongly": {
+   "count": 392,
+   "examples": [
+    "57 C9 7C: Shree ക്ദ്യ | ours കർ്യ",
+    "57 C9 7E: Shree ക്ദ്വ | ours കർ്വ",
+    "57 DC 7C: Shree ക്മ്യ | ours കങ്ങ്യ",
+    "57 DC 7E: Shree ക്മ്വ | ours കങ്ങ്വ",
+    "58 C9 7C: Shree ഖ്ദ്യ | ours ഖർ്യ",
+    "58 C9 7E: Shree ഖ്ദ്വ | ours ഖർ്വ",
+    "58 DC 7C: Shree ഖ്മ്യ | ours ഖങ്ങ്യ",
+    "58 DC 7E: Shree ഖ്മ്വ | ours ഖങ്ങ്വ"
+   ]
+  },
+  "ligature byte read as another conjunct (A8 ക്ക -> ന്പ ...)": {
+   "count": 88,
+   "examples": [
+    "A8: Shree ക്ക | ours ന്പ",
+    "A8 4C: Shree ക്കാ | ours ന്പാ",
+    "A8 5D: Shree ക്കി | ours ന്പി",
+    "A8 7D: Shree ക്കീ | ours ന്പീ",
+    "A8 4F: Shree ക്കു | ours ന്പു",
+    "A8 50: Shree ക്കൂ | ours ന്പൂ",
+    "A8 51: Shree ക്കൃ | ours ന്പൃ",
+    "A8 54: Shree ക്കൗ | ours ന്പൗ"
+   ]
+  },
+  "C + 56 read as a chillu or the chandrakkala lost": {
+   "count": 34,
+   "examples": [
+    "57 C9 56: Shree ക്ദ് | ours കർ്",
+    "58 C9 56: Shree ഖ്ദ് | ours ഖർ്",
+    "59 C9 56: Shree ഗ്ദ് | ours ഗർ്",
+    "5A C9 56: Shree ഘ്ദ് | ours ഘർ്",
+    "82 C9 56: Shree ങ്ദ് | ours ങർ്",
+    "5C C9 56: Shree ച്ദ് | ours ചർ്",
+    "4D C9 56: Shree ഛ്ദ് | ours ഛർ്",
+    "5E C9 56: Shree ജ്ദ് | ours ജർ്"
+   ]
+  },
+  "A2 72 (ൻ + റ) read as ന്റ or other": {
+   "count": 2,
+   "examples": [
+    "57 A2 72 56: Shree കൻറ്‌ | ours കൻറ്",
+    "6B A2 72 56: Shree പൻറ്‌ | ours പൻറ്"
+   ]
+  },
+  "3C (₹) read as <": {
+   "count": 1,
+   "examples": [
+    "3C: Shree ₹ | ours <"
+   ]
+  }
+ }
+}

@@ -1,0 +1,6 @@
+        R("(?<=" + K + "(?:ె(?:ౖ|" + AiWide + "))?)(?=్[కచఛనపఫబభయళవశస])", SpaceA0,
+          "After క్ష with no sign of its own (or with ై) a narrow vattu follows the spacer A0 (క్ష్క = 84 E6 FC A0 50, క్ష్కై = 84 F0 FC 95 A0 50; క్ష్కి = 84 EC FC 50)."),
+        R("(?<=" + K + "(?:[ా-ూెేౌ]|ె(?:ౖ|" + AiWide + "))?)(?=్[" + Wide + "ఱహ])", Space9B,
+          "After క్ష (with any sign but ొ ో) a wide vattu follows the wide spacer 9B (క్ష్ఖ = 84 E6 FC 9B 55, క్ష్ఖి = 84 EC FC 9B 55; క్ష్ఖొ = 84 F6 55)."),
+        R("(?<=్[" + Cons + "]|[" + SsaMa + TaRa + TtaRa + K + "])(?=[ృౄ])", SpaceA0,
+          "ృ after a vattu, or after క్ష: the spacer A0 before it (క్కృ = 4D E6 FC 50 A0 96, క్షృ = 84 E6 FC A0 96)."),

@@ -1,0 +1,679 @@
+{
+  "id": "shree-punx-to-unicode",
+  "name": "Shree-PunX (ShreeLipi-Ex) -\u003E Unicode",
+  "sourceFontId": "shree-punx",
+  "targetFontId": "raavi",
+  "sourceType": "legacy",
+  "targetType": "unicode",
+  "preRules": [],
+  "pairs": [
+    {
+      "from": "\u0022",
+      "to": "\u2018"
+    },
+    {
+      "from": "\u0027",
+      "to": "\u2019"
+    },
+    {
+      "from": "\u00D7",
+      "to": "\u00D7"
+    },
+    {
+      "from": "\u00F7",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u2013",
+      "to": "\u2013"
+    },
+    {
+      "from": "\u2014",
+      "to": "\u2014"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u0027"
+    },
+    {
+      "from": "\u2019",
+      "to": "\u0022"
+    },
+    {
+      "from": "\u201C",
+      "to": "\u201C"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u201D"
+    },
+    {
+      "from": "\u2026",
+      "to": "\u2026"
+    },
+    {
+      "from": "\u20B9",
+      "to": "\u20B9"
+    },
+    {
+      "from": "\uE480",
+      "to": "\u0A15"
+    },
+    {
+      "from": "\uE481",
+      "to": "\u0A16"
+    },
+    {
+      "from": "\uE482",
+      "to": "\u0A17"
+    },
+    {
+      "from": "\uE483",
+      "to": "\u0A18"
+    },
+    {
+      "from": "\uE484",
+      "to": "\u0A19"
+    },
+    {
+      "from": "\uE485",
+      "to": "\u0A1A"
+    },
+    {
+      "from": "\uE486",
+      "to": "\u0A1B"
+    },
+    {
+      "from": "\uE487",
+      "to": "\u0A1C"
+    },
+    {
+      "from": "\uE488",
+      "to": "\u0A1D"
+    },
+    {
+      "from": "\uE489",
+      "to": "\u0A1E"
+    },
+    {
+      "from": "\uE48A",
+      "to": "\u0A1F"
+    },
+    {
+      "from": "\uE48B",
+      "to": "\u0A20"
+    },
+    {
+      "from": "\uE48C",
+      "to": "\u0A21"
+    },
+    {
+      "from": "\uE48D",
+      "to": "\u0A22"
+    },
+    {
+      "from": "\uE48E",
+      "to": "\u0A23"
+    },
+    {
+      "from": "\uE48F",
+      "to": "\u0A24"
+    },
+    {
+      "from": "\uE490",
+      "to": "\u0A25"
+    },
+    {
+      "from": "\uE491",
+      "to": "\u0A26"
+    },
+    {
+      "from": "\uE492",
+      "to": "\u0A27"
+    },
+    {
+      "from": "\uE493",
+      "to": "\u0A28"
+    },
+    {
+      "from": "\uE494",
+      "to": "\u0A2A"
+    },
+    {
+      "from": "\uE495",
+      "to": "\u0A2B"
+    },
+    {
+      "from": "\uE496",
+      "to": "\u0A2C"
+    },
+    {
+      "from": "\uE497",
+      "to": "\u0A2D"
+    },
+    {
+      "from": "\uE498",
+      "to": "\u0A2E"
+    },
+    {
+      "from": "\uE499",
+      "to": "\u0A2F"
+    },
+    {
+      "from": "\uE49A",
+      "to": "\u0A30"
+    },
+    {
+      "from": "\uE49B",
+      "to": "\u0A32"
+    },
+    {
+      "from": "\uE49C",
+      "to": "\u0A35"
+    },
+    {
+      "from": "\uE49D",
+      "to": "\u0A38"
+    },
+    {
+      "from": "\uE49E",
+      "to": "\u0A39"
+    },
+    {
+      "from": "\uE49F",
+      "to": "\u0A15\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4A1",
+      "to": "\u0A73"
+    },
+    {
+      "from": "\uE4A2",
+      "to": "\u0A13"
+    },
+    {
+      "from": "\uE4A3",
+      "to": "\u0A05"
+    },
+    {
+      "from": "\uE4A4",
+      "to": "\u0A73"
+    },
+    {
+      "from": "\uE4A6",
+      "to": "\u0A09"
+    },
+    {
+      "from": "\uE4A7",
+      "to": "\u0A0A"
+    },
+    {
+      "from": "\uE4A8",
+      "to": "\u0A72"
+    },
+    {
+      "from": "\uE4AB",
+      "to": "\u0A74"
+    },
+    {
+      "from": "\uE4AC",
+      "to": "\u0A5C"
+    },
+    {
+      "from": "\uE4AD",
+      "to": "\u0A36"
+    },
+    {
+      "from": "\uE4AE",
+      "to": "\u0A5E"
+    },
+    {
+      "from": "\uE4AF",
+      "to": "\u0A5B"
+    },
+    {
+      "from": "\uE4B0",
+      "to": "\u0A5A"
+    },
+    {
+      "from": "\uE4B1",
+      "to": "\u0A59"
+    },
+    {
+      "from": "\uE4B2",
+      "to": "\u0A21\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4B3",
+      "to": "\u0A24\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4B4",
+      "to": "\u0A26\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4B5",
+      "to": "\u0A2D\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4B6",
+      "to": "\u0A33"
+    },
+    {
+      "from": "\uE4B7",
+      "to": "\u0A08\u0A02"
+    },
+    {
+      "from": "\uE4B8",
+      "to": "\u0A09\u0A02"
+    },
+    {
+      "from": "\uE4B9",
+      "to": "\u0A0A\u0A02"
+    },
+    {
+      "from": "\uE4BA",
+      "to": "\u0A13\u0A02"
+    },
+    {
+      "from": "\uE4BB",
+      "to": "\u0A14\u0A02"
+    },
+    {
+      "from": "\uE4BC",
+      "to": "\u0A0F\u0A02"
+    },
+    {
+      "from": "\uE4BD",
+      "to": "\u0A4D\u0A2F"
+    },
+    {
+      "from": "\uE4BE",
+      "to": "\u0A06"
+    },
+    {
+      "from": "\uE4BF",
+      "to": "\u0A07"
+    },
+    {
+      "from": "\uE4C0",
+      "to": "\u0A08"
+    },
+    {
+      "from": "\uE4C1",
+      "to": "\u0A0F"
+    },
+    {
+      "from": "\uE4C2",
+      "to": "\u0A10"
+    },
+    {
+      "from": "\uE4C3",
+      "to": "\u0A14"
+    },
+    {
+      "from": "\uE4C4",
+      "to": "\u0A03"
+    },
+    {
+      "from": "\uE4C5",
+      "to": "\u0964"
+    },
+    {
+      "from": "\uE4C7",
+      "to": "\u0965"
+    },
+    {
+      "from": "\uE4C8",
+      "to": "\u0A47\u0A02"
+    },
+    {
+      "from": "\uE4C9",
+      "to": "\u0A48\u0A02"
+    },
+    {
+      "from": "\uE4CA",
+      "to": "\u0A4B\u0A02"
+    },
+    {
+      "from": "\uE4CB",
+      "to": "\u0A4C\u0A02"
+    },
+    {
+      "from": "\uE4CC",
+      "to": "\u0A40\u0A02"
+    },
+    {
+      "from": "\uE4CE",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\uE4D1",
+      "to": "\u0A3E"
+    },
+    {
+      "from": "\uE4D2",
+      "to": "\u0A3F"
+    },
+    {
+      "from": "\uE4D3",
+      "to": "\u0A40"
+    },
+    {
+      "from": "\uE4D4",
+      "to": "\u0A41"
+    },
+    {
+      "from": "\uE4D5",
+      "to": "\u0A42"
+    },
+    {
+      "from": "\uE4D6",
+      "to": "\u0A47"
+    },
+    {
+      "from": "\uE4D7",
+      "to": "\u0A48"
+    },
+    {
+      "from": "\uE4D8",
+      "to": "\u0A4B"
+    },
+    {
+      "from": "\uE4D9",
+      "to": "\u0A4C"
+    },
+    {
+      "from": "\uE4DB",
+      "to": "\u0A4D\u0A39"
+    },
+    {
+      "from": "\uE4DC",
+      "to": "\u0A4D\u0A35"
+    },
+    {
+      "from": "\uE4DD",
+      "to": "\u0A4D\u0A30"
+    },
+    {
+      "from": "\uE4DE",
+      "to": "\u0A70"
+    },
+    {
+      "from": "\uE4DF",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\uE4E0",
+      "to": "\u0A01"
+    },
+    {
+      "from": "\uE4E1",
+      "to": "\u0A4D"
+    },
+    {
+      "from": "\uE4E2",
+      "to": "\u0A02"
+    },
+    {
+      "from": "\uE4EA",
+      "to": "\u0A4C\u0A02"
+    },
+    {
+      "from": "\uE4EB",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\uE4EC",
+      "to": "\u0A71"
+    },
+    {
+      "from": "\uE4F1",
+      "to": "\u0A66"
+    },
+    {
+      "from": "\uE4F2",
+      "to": "\u0A67"
+    },
+    {
+      "from": "\uE4F3",
+      "to": "\u0A68"
+    },
+    {
+      "from": "\uE4F4",
+      "to": "\u0A69"
+    },
+    {
+      "from": "\uE4F5",
+      "to": "\u0A6A"
+    },
+    {
+      "from": "\uE4F6",
+      "to": "\u0A6B"
+    },
+    {
+      "from": "\uE4F7",
+      "to": "\u0A6C"
+    },
+    {
+      "from": "\uE4F8",
+      "to": "\u0A6D"
+    },
+    {
+      "from": "\uE4F9",
+      "to": "\u0A6E"
+    },
+    {
+      "from": "\uE4FA",
+      "to": "\u0A6F"
+    },
+    {
+      "from": "\uE4D0",
+      "to": "\u0A3C"
+    },
+    {
+      "from": "\uE480\uE4D0",
+      "to": "\u0A15\u0A3C"
+    },
+    {
+      "from": "\uE483\uE4D0",
+      "to": "\u0A18\u0A3C"
+    },
+    {
+      "from": "\uE484\uE4D0",
+      "to": "\u0A19\u0A3C"
+    },
+    {
+      "from": "\uE485\uE4D0",
+      "to": "\u0A1A\u0A3C"
+    },
+    {
+      "from": "\uE486\uE4D0",
+      "to": "\u0A1B\u0A3C"
+    },
+    {
+      "from": "\uE488\uE4D0",
+      "to": "\u0A1D\u0A3C"
+    },
+    {
+      "from": "\uE489\uE4D0",
+      "to": "\u0A1E\u0A3C"
+    },
+    {
+      "from": "\uE48A\uE4D0",
+      "to": "\u0A1F\u0A3C"
+    },
+    {
+      "from": "\uE48B\uE4D0",
+      "to": "\u0A20\u0A3C"
+    },
+    {
+      "from": "\uE48C\uE4D0",
+      "to": "\u0A21\u0A3C"
+    },
+    {
+      "from": "\uE48D\uE4D0",
+      "to": "\u0A22\u0A3C"
+    },
+    {
+      "from": "\uE48E\uE4D0",
+      "to": "\u0A23\u0A3C"
+    },
+    {
+      "from": "\uE48F\uE4D0",
+      "to": "\u0A24\u0A3C"
+    },
+    {
+      "from": "\uE491\uE4D0",
+      "to": "\u0A26\u0A3C"
+    },
+    {
+      "from": "\uE492\uE4D0",
+      "to": "\u0A27\u0A3C"
+    },
+    {
+      "from": "\uE493\uE4D0",
+      "to": "\u0A28\u0A3C"
+    },
+    {
+      "from": "\uE494\uE4D0",
+      "to": "\u0A2A\u0A3C"
+    },
+    {
+      "from": "\uE496\uE4D0",
+      "to": "\u0A2C\u0A3C"
+    },
+    {
+      "from": "\uE498\uE4D0",
+      "to": "\u0A2E\u0A3C"
+    },
+    {
+      "from": "\uE499\uE4D0",
+      "to": "\u0A2F\u0A3C"
+    },
+    {
+      "from": "\uE49A\uE4D0",
+      "to": "\u0A30\u0A3C"
+    },
+    {
+      "from": "\uE4B6\uE4D0",
+      "to": "\u0A33\u0A3C"
+    },
+    {
+      "from": "\uE49C\uE4D0",
+      "to": "\u0A35\u0A3C"
+    },
+    {
+      "from": "\uE4AD\uE4D0",
+      "to": "\u0A36\u0A3C"
+    },
+    {
+      "from": "\uE49E\uE4D0",
+      "to": "\u0A39\u0A3C"
+    },
+    {
+      "from": "\uE4A0",
+      "to": "\u0A74"
+    },
+    {
+      "from": "\uE493\uE4EE\uE4AA",
+      "to": "\u0A28\u0A42\u0A70"
+    },
+    {
+      "from": "\uE4F2\uE4A4\uE4A5",
+      "to": "\u0A74"
+    },
+    {
+      "from": "\uE4A9",
+      "to": "\u0A41"
+    },
+    {
+      "from": "\uE4AA",
+      "to": "\u0A42"
+    },
+    {
+      "from": "\uE4E3",
+      "to": "\u0A47"
+    },
+    {
+      "from": "\uE4E4",
+      "to": "\u0A48"
+    },
+    {
+      "from": "\uE4E5",
+      "to": "\u0A4B"
+    },
+    {
+      "from": "\uE4E6",
+      "to": "\u0A4C"
+    },
+    {
+      "from": "\uE4E7",
+      "to": "\u0A47\u0A02"
+    },
+    {
+      "from": "\uE4E8",
+      "to": "\u0A48\u0A02"
+    },
+    {
+      "from": "\uE4E9",
+      "to": "\u0A4B\u0A02"
+    },
+    {
+      "from": "\uE4EE",
+      "to": "\u0A70"
+    }
+  ],
+  "postRules": [
+    {
+      "pattern": "\u0A05\u0A3E",
+      "replace": "\u0A06",
+      "note": "Recompose U\u002B0A06, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A3F",
+      "replace": "\u0A07",
+      "note": "Recompose U\u002B0A07, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A40",
+      "replace": "\u0A08",
+      "note": "Recompose U\u002B0A08, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A41",
+      "replace": "\u0A09",
+      "note": "Recompose U\u002B0A09, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A42",
+      "replace": "\u0A0A",
+      "note": "Recompose U\u002B0A0A, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A72\u0A47",
+      "replace": "\u0A0F",
+      "note": "Recompose U\u002B0A0F, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A05\u0A48",
+      "replace": "\u0A10",
+      "note": "Recompose U\u002B0A10, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A73\u0A4B",
+      "replace": "\u0A13",
+      "note": "Recompose U\u002B0A13, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A05\u0A4C",
+      "replace": "\u0A14",
+      "note": "Recompose U\u002B0A14, which the legacy font stores as two codes."
+    },
+    {
+      "pattern": "\u0A3F((?:[\u0A15-\u0A39]\u0A3C?\u0A4D)*[\u0A15-\u0A39]\u0A3C?)",
+      "replace": "$1\u0A3F",
+      "note": "Move pre-base matra U\u002B0A3F after the consonant cluster (legacy visual order -\u003E Unicode logical order)."
+    }
+  ]
+}

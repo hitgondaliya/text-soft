@@ -1,0 +1,255 @@
+{
+ "languages": [
+  {
+   "language": "gu Gujarati",
+   "layouts": "gu-fl-shree-lipi-7-0 'Shree-Lipi 7.0' fontId=shree-guj-0750 and gu-fl-shree-lipi-4-0-5-0-6-0 'Shree-Lipi 4.0/5.0/6.0' fontId=shree-guj-0750. Both rows point at the same font: SHREE-GUJ-0750 (S07500F2.TTF), which is a 4/5/6 face. Neither row has 'encodings'. All 16 non-Ex Shree fonts have encoding shree-guj7.",
+   "fontsBelongingTo7": [
+    "shree-guj7-0750 | SHREE-GUJ7-0750 | S0750892.TTF",
+    "shree-guj7-0751 | SHREE-GUJ7-0751 | S0751892.TTF",
+    "shree-guj7-0763 | SHREE-GUJ7-0763 | S0763892.TTF",
+    "shree-guj7-0768 | SHREE-GUJ7-0768 | S0768892.TTF",
+    "shree-guj7-0769 | SHREE-GUJ7-0769 | S0769892.TTF",
+    "shree-guj7-0781 | SHREE-GUJ7-0781 | S0781892.TTF",
+    "shree-guj7-3700 | SHREE-GUJ7-3700 | S3700892.TTF",
+    "shree-guj7-001 | Shree-Guj7-001 | WGUJ7001.TTF (a different design, same 217 code points)",
+    "shree-guj7-002 | Shree-Guj7-002 | WGUJ7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-guj-0750 | SHREE-GUJ-0750 | S07500F2.TTF",
+    "shree-guj-0751 | SHREE-GUJ-0751 | S07510F2.TTF",
+    "shree-guj-0763 | SHREE-GUJ-0763 | S07630F2.TTF",
+    "shree-guj-0768 | SHREE-GUJ-0768 | S07680F2.TTF",
+    "shree-guj-0769 | SHREE-GUJ-0769 | S07690F2.TTF",
+    "shree-guj-0781 | SHREE-GUJ-0781 | S07810F2.TTF",
+    "shree-guj-3700 | SHREE-GUJ-3700 | S37000F2.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 font (SHREE-GUJ-0750), so 7.0 and 4/5/6 are the same selection, and the font Word gets for '7.0' is a 4/5/6 face. (2) All 16 entries share encoding shree-guj7. The two families are NOT byte-identical: for every one of the 7 designs, 212 of 217 glyphs match and 5 differ: 0xB6 and cp1252 0x91-0x94 (U+2018/2019/201C/201D). Rendered (scratchpad/shree7/fontlist-audit-7-vs-456-glyphdiff.png): GUJ7 0xB6 is a small ra mark, 0x91=પ, 0x92=થ, 0x93=ન, 0x94=સ્ત્ર; GUJ-456 0xB6=ઙ્ક્ષ, 0x91=ઙ્ક, 0x92=ઙ્ખ, 0x93=ઙ્ગ, 0x94=ઙ્ઘ. (3) The shree-guj7 table mixes the two families. The bare-byte pairs use the 4/5/6 meanings ('¶'->ઙ્ક્ષ, '‘'->ઙ્ક, '’'->ઙ્ખ, '“'->ઙ્ગ), while 9 cluster pairs use the 7 meanings ('’œ'->થ઼, '“p¡'->નો, '‘p¡'->પો…). So some output is wrong in each family. (4) ગ્ર: the table has no 'ગ્ર' pair, and the greedy longest match takes 'ગ્'->C1 then 'ર'->66. Shree's 7 composer (S8Guj764 Rosetta, BPMK.GUJ, scratchpad/shree7/bpmk-guj7.json) answers ગ=4E and ્ર=B0. 22 of 34 consonants+્ર come out as half form + full ra (ગ ઘ ઙ ચ છ ઞ ઠ ડ ઢ ણ થ ધ ન બ ભ મ ય ર લ વ ષ ળ). Only ગ is confirmed against the composer; the other 21 are expected but not verified. (5) Every one of the 16 names carries the text '(Shree-Lipi 7.0 / 4-5-6)', even on the 4/5/6-only faces, so the list cannot tell the user which family a font is. (6) The Font box lists all 140 Gujarati fonts (60 Ex, 9 x 7.0, 7 x 4/5/6, Terafont/ISFOC/etc., installed Bhasha Bharati faces) whatever layout is chosen. All 16 Shree 7/456 fonts are installed. No installed GUJ7/GUJ face is missing from the config."
+  },
+  {
+   "language": "hi Hindi",
+   "layouts": "hi-fl-shree-lipi-7-0 and hi-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-dev-4914, which is SHREE-DEV-4914 (S49140F2.TTF), a 4/5/6 face. No 'encodings'. All 9 fonts use encoding shree-dev456.",
+   "fontsBelongingTo7": [
+    "shree-dev7-0700 | SHREE-DEV7-0700 | S0700892.TTF",
+    "shree-dev7-4914 | SHREE-DEV7-4914 | S4914892.TTF",
+    "shree-dev7-001 | Shree-Dev7-001 | WDEV7001.TTF",
+    "shree-dev7-002 | Shree-Dev7-002 | WDEV7002.TTF",
+    "shree-san7-0960 | SHREE-SAN7-0960 | S0960892.TTF",
+    "shree-san7-0962 | SHREE-SAN7-0962 | S0962892.TTF",
+    "shree-san7-0964 | SHREE-SAN7-0964 | S0964892.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-dev-4914 | SHREE-DEV-4914 | S49140F2.TTF",
+    "shree-dev-0700-dev456 | SHREE-DEV-0700 | S07000F2.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face. Commit 58d8d3e moved it from SHREE-DEVX-0700 to shree-dev-4914 = SHREE-DEV-4914. (2) There is one encoding, named 'dev456', for both families. DEV7 and DEV differ at 0xB3, 0xB6, 0x91 and 0x92 (DEV7: 0xB3 is a full क-shaped glyph, 0xB6 is य, 0x91 is म, 0x92 is फ; DEV-456: 0xB3 is a small mark, 0x91/0x92/0xB6 are ङ conjuncts). The DEV-456 faces also carry 45 extra code points (U+0120-012F, U+0200-021C) that the DEV7 faces lack. The dev456 table uses 0xB3 with its 4/5/6 meaning in 107 legacy->Unicode and 142 Unicode->legacy pairs (for example ट्न -> 'Q³>'), so those clusters draw a stray क in every 7.0 font. (3) Id collision: in Hindi 'shree-dev-0700' is SHREE-DEVX-0700 (Ex, bundled fonts/S0700810.TTF), while in Marathi and Sanskrit the same id is SHREE-DEV-0700 (4/5/6). A saved DefaultFontId, or ConverterViewModel.cs:573's cross-language lookup by id, can therefore resolve to another family. ConverterTests.cs:208 also skips the id 'shree-dev-0700', which removes a 4/5/6 font from the both-directions check in mr/sa. (4) The names are bare family names with no series label. All are installed."
+  },
+  {
+   "language": "mr Marathi",
+   "layouts": "mr-fl-shree-lipi-7-0 and mr-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-dev-0700, which is SHREE-DEV-0700 (S07000F2.TTF), a 4/5/6 face. No 'encodings'. Encoding is shree-dev456.",
+   "fontsBelongingTo7": [
+    "shree-dev7-0700 | SHREE-DEV7-0700 | S0700892.TTF",
+    "shree-dev7-4914 | SHREE-DEV7-4914 | S4914892.TTF",
+    "shree-dev7-001 | Shree-Dev7-001 | WDEV7001.TTF",
+    "shree-dev7-002 | Shree-Dev7-002 | WDEV7002.TTF",
+    "shree-san7-0960 | SHREE-SAN7-0960 | S0960892.TTF",
+    "shree-san7-0962 | SHREE-SAN7-0962 | S0962892.TTF",
+    "shree-san7-0964 | SHREE-SAN7-0964 | S0964892.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-dev-0700 | SHREE-DEV-0700 | S07000F2.TTF",
+    "shree-dev-4914 | SHREE-DEV-4914 | S49140F2.TTF"
+   ],
+   "problems": "Same as Hindi. The 7.0 row selects a 4/5/6 face; there is one shared dev456 table; and the 0xB3/0xB6/0x91/0x92 glyph differences apply. The id shree-dev-0700 means a different family here than in Hindi. All are installed."
+  },
+  {
+   "language": "sa Sanskrit",
+   "layouts": "Only sa-fl-shree-lipi-7-0 'Shree-Lipi 7.0' exists, with fontId=shree-dev-0700 = SHREE-DEV-0700 (S07000F2.TTF), a 4/5/6 face. There is no 4.0/5.0/6.0 row.",
+   "fontsBelongingTo7": [
+    "shree-dev7-0700 | SHREE-DEV7-0700 | S0700892.TTF",
+    "shree-dev7-4914 | SHREE-DEV7-4914 | S4914892.TTF",
+    "shree-dev7-001 | Shree-Dev7-001 | WDEV7001.TTF",
+    "shree-dev7-002 | Shree-Dev7-002 | WDEV7002.TTF",
+    "shree-san7-0960 | SHREE-SAN7-0960 | S0960892.TTF",
+    "shree-san7-0962 | SHREE-SAN7-0962 | S0962892.TTF",
+    "shree-san7-0964 | SHREE-SAN7-0964 | S0964892.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-dev-0700 | SHREE-DEV-0700 | S07000F2.TTF",
+    "shree-dev-4914 | SHREE-DEV-4914 | S49140F2.TTF"
+   ],
+   "problems": "(1) The only Shree 7.0 row selects a 4/5/6 face, even though 3 SHREE-SAN7 faces exist. (2) The two 4/5/6 fonts are listed but have no 4/5/6 layout. No SHREE-SAN 4/5/6 face (S09xx0F2) is installed. (3) The same shared dev456 table problem as Hindi applies."
+  },
+  {
+   "language": "pa Punjabi",
+   "layouts": "pa-fl-shree-lipi-7-0 and pa-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-pun-0950, which is SHREE-PUN-0950 (S09500F2.TTF), a 4/5/6 face. Encoding is shree-pun7.",
+   "fontsBelongingTo7": [
+    "shree-pun7-0951 | SHREE-PUN7-0951 | WPUN7001.TTF",
+    "shree-pun7-0952 | SHREE-PUN7-0952 | WPUN7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-pun-0950 | SHREE-PUN-0950 | S09500F2.TTF",
+    "shree-pun-0951 | SHREE-PUN-0951 | S09510F2.TTF",
+    "shree-pun-0952 | SHREE-PUN-0952 | S09520F2.TTF",
+    "shree-pun-0955 | SHREE-PUN-0955 | S09550F2.TTF",
+    "shree-pun-0956 | SHREE-PUN-0956 | S09560F2.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face, even though both PUN7 faces are installed. (2) The labels are inconsistent: the 4/5/6 fonts are named '(Shree-Lipi 4-5-6)', and the 7 fonts have no label. (3) Glyphs are identical between PUN7-0951/0952 and PUN-0951/0952, except that 0x3C exists only in PUN7, so one table can serve both. The real problem here is the mixed list and the wrong default. (4) Only two 7.0 faces exist, both W*-files. There is no S09xx892."
+  },
+  {
+   "language": "bn Bangla",
+   "layouts": "bn-fl-shree-lipi-7-0 and bn-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-ass-0550, which is SHREE-ASS-0550 (S05500F6.TTF), an Assamese 4/5/6 face. All 48 fonts use encoding shree-ban7.",
+   "fontsBelongingTo7": [
+    "shree-ban7-0550/0552/0553/0560/0562/0564/0592/0593/0594/0595/0597 | SHREE-BAN7-05xx | S05xx892.TTF (11 entries)",
+    "shree-ass7-0550/0552/0553/0560/0562/0564/0592/0593/0594/0595/0597 | SHREE-ASS7-05xx | S05xx896.TTF (11 entries)",
+    "shree-ban7-001 | Shree-Ban7-001 | WBAN7001.TTF",
+    "shree-ban7-002 | Shree-Ban7-002 | WBAN7002.TTF",
+    "shree-ass7-001 | Shree-Ass7-001 | WASS7001.TTF",
+    "shree-ass7-002 | Shree-Ass7-002 | WASS7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-ban-0550/0552/0553/0560/0562/0564/0592/0593/0594/0595/0597 | SHREE-BAN-05xx | S05xx0F2.TTF (11 entries)",
+    "shree-ass-0550/0552/0553/0560/0562/0564/0592/0593/0594/0595/0597 | SHREE-ASS-05xx | S05xx0F6.TTF (11 entries)"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face, and an Assamese one in the Bangla language. (2) One encoding covers 48 fonts, but BAN7 and BAN-456 differ at 0x25, 0x40, 0xA5, 0xA8, 0xFF, 0x8C(U+0152), 0x96 and 0x97 (ASS7 vs ASS: the same except 0x25), and BAN-456 has 16 extra codes at U+0120-012F. Rendered, 0x40 is a conjunct hook in BAN7 but visarga ঃ in BAN-456; 0xA5/0x96 and 0x40/0x96 swap. The ban7 table uses 0x40 in 191 legacy->Unicode and 234 Unicode->legacy pairs (ন্ট, ন্ঠ, ন্ম…), so those print ঃ in every 4/5/6 face. (3) The names are bare. Installed but not listed: Shree-Ban7-001A/002A (WBAN701T/702T). These are 12-glyph supplements, so leaving them out is fine."
+  },
+  {
+   "language": "as Assamese",
+   "layouts": "as-fl-shree-lipi-7-0 and as-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-ass-0550 = SHREE-ASS-0550 (S05500F6.TTF), a 4/5/6 face. Encoding is shree-ban7.",
+   "fontsBelongingTo7": [
+    "shree-ass7-0550..0597 | SHREE-ASS7-05xx | S05xx896.TTF (11)",
+    "shree-ban7-0550..0597 | SHREE-BAN7-05xx | S05xx892.TTF (11)",
+    "shree-ass7-001/002 | Shree-Ass7-00x | WASS700x.TTF",
+    "shree-ban7-001/002 | Shree-Ban7-00x | WBAN700x.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-ass-0550..0597 | SHREE-ASS-05xx | S05xx0F6.TTF (11)",
+    "shree-ban-0550..0597 | SHREE-BAN-05xx | S05xx0F2.TTF (11)"
+   ],
+   "problems": "Same as Bangla. The 7.0 row selects a 4/5/6 face, one shree-ban7 table serves both families, and the bytes 0x40/0xA5/0xA8/0xFF/0x8C/0x96/0x97 differ between them."
+  },
+  {
+   "language": "mni Manipuri",
+   "layouts": "mni-fl-shree-lipi-7-0 and mni-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-ass-0550 = SHREE-ASS-0550 (S05500F6.TTF), a 4/5/6 face. Encoding is shree-ban7.",
+   "fontsBelongingTo7": [
+    "same 26 Bengali-script entries as Bangla: SHREE-BAN7-05xx (S05xx892), SHREE-ASS7-05xx (S05xx896), Shree-Ban7-001/002, Shree-Ass7-001/002"
+   ],
+   "fontsBelongingTo456": [
+    "same 22 entries as Bangla: SHREE-BAN-05xx (S05xx0F2), SHREE-ASS-05xx (S05xx0F6)"
+   ],
+   "problems": "Same as Bangla and Assamese. Aside (Ex, outside the 7-vs-4/5/6 question): about 31 installed SHREE-MANX-* files (S05xx814) are not listed; Manipuri's Ex row uses shree-banx."
+  },
+  {
+   "language": "te Telugu",
+   "layouts": "te-fl-shree-lipi-7-0 and te-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-tel-apoorva-0900, which is SHREE-TEL-Apoorva-0900 (M09000F0.TTF/N09020F0.TTF), a 4/5/6 face. Encoding is shree-tel7.",
+   "fontsBelongingTo7": [
+    "shree-tel7-apoorva-0900 | SHREE-TEL7-Apoorva-0900 | M0900890.TTF + N0902890.TTF",
+    "shree-tel7-asmitha-1642 | SHREE-TEL7-Asmitha-1642 | M1642890.TTF + N1644890.TTF",
+    "shree-tel7-001 | Shree-Tel7-001 | WTEL7001.TTF",
+    "shree-tel7-002 | Shree-Tel7-002 | WTEL7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-tel-apoorva-0900 | SHREE-TEL-Apoorva-0900 | M09000F0.TTF + N09020F0.TTF",
+    "shree-tel-asmitha-1642 | SHREE-TEL-Asmitha-1642 | M16420F0.TTF + N16440F0.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face. (2) Glyphs are identical between the families (215 of 215 for Apoorva and for Asmitha), so one table is acceptable; the problem is the mixed list and the wrong default. (3) Each family name is carried by two different files (M* and N*, with different outlines). Not listed: Shree-Tel7-001A/002A, which are 6-glyph supplements."
+  },
+  {
+   "language": "kn Kannada",
+   "layouts": "kn-fl-shree-lipi-7-0 has fontId=shree-kan7-0850 = SHREE-KAN7-0850 (S0850890.TTF), which is correct. kn-fl-shree-lipi-4-0-5-0-6-0 has fontId=shree-kan-0850 = SHREE-KAN-0850 (S08500F0.TTF), which is correct. Both families use encoding shree-kan7.",
+   "fontsBelongingTo7": [
+    "shree-kan7-0850 | SHREE-KAN7-0850 | S0850890.TTF",
+    "shree-kan7-0851 | SHREE-KAN7-0851 | S0851890.TTF",
+    "shree-kan7-0852 | SHREE-KAN7-0852 | S0852890.TTF",
+    "shree-kan7-0853 | SHREE-KAN7-0853 | S0853890.TTF",
+    "shree-kan7-0854 | SHREE-KAN7-0854 | S0854890.TTF",
+    "shree-kan7-0855 | SHREE-KAN7-0855 | S0855890.TTF",
+    "shree-kan7-0899 | SHREE-KAN7-0899 | S0899890.TTF",
+    "shree-kan7-001 | Shree-Kan7-001 | WKAN7001.TTF",
+    "shree-kan7-002 | Shree-Kan7-002 | WKAN7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-kan-0850 | SHREE-KAN-0850 | S08500F0.TTF",
+    "shree-kan-0851 | SHREE-KAN-0851 | S08510F0.TTF",
+    "shree-kan-0852 | SHREE-KAN-0852 | S08520F0.TTF",
+    "shree-kan-0853 | SHREE-KAN-0853 | S08530F0.TTF",
+    "shree-kan-0854 | SHREE-KAN-0854 | S08540F0.TTF",
+    "shree-kan-0855 | SHREE-KAN-0855 | S08550F0.TTF",
+    "shree-kan-0899 | SHREE-KAN-0899 | S08990F0.TTF"
+   ],
+   "problems": "This is the only language whose two default fonts are correct. The Font box still lists both families plus Ex, because the list is never filtered. Glyphs are identical (214 of 214 for 0850 and 0853), so sharing shree-kan7 is acceptable. The label '(Shree-Lipi 7.0)' appears only on shree-kan7-0850; the others have no label. The converter page treats 7.0 -> 4/5/6 as 'Input and output layouts are the same'."
+  },
+  {
+   "language": "ml Malayalam",
+   "layouts": "ml-fl-shree-lipi-7-0 and ml-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-mal7-001 = Shree-Mal7-001 (WMAL7001.TTF), a 7.0 face. Encoding is shree-mal7.",
+   "fontsBelongingTo7": [
+    "shree-mal7-001 | Shree-Mal7-001 | WMAL7001.TTF",
+    "shree-mal7-002 | Shree-Mal7-002 | WMAL7002.TTF",
+    "shree-mal7-0501 | SHREE-MAL7-0501 | S0501890.TTF",
+    "shree-mal7-0502 | SHREE-MAL7-0502 | S0502890.TTF",
+    "shree-mal7-0507 | SHREE-MAL7-0507 | S0507890.TTF",
+    "shree-mal7-0508 | SHREE-MAL7-0508 | S0508890.TTF",
+    "shree-mal7-0520 | SHREE-MAL7-0520 | S0520890.TTF"
+   ],
+   "fontsBelongingTo456": [],
+   "problems": "The 4.0/5.0/6.0 row has no font of its own family. No SHREE-MAL 4/5/6 face is installed on this PC or in the config, yet the row silently types 7.0 output into a 7.0 font under a 4/5/6 label. It should be marked 'font not installed', or hidden. All 7 entries are labelled '(Shree-Lipi 7.0)'."
+  },
+  {
+   "language": "or Odia",
+   "layouts": "or-fl-shree-lipi-7-0 and or-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-ori-0600, which is SHREE-ORI-0600 (S06000F2.TTF), a 4/5/6 face. Encoding is shree-ori7.",
+   "fontsBelongingTo7": [
+    "shree-ori7-0600 | SHREE-ORI7-0600 | S0600892.TTF",
+    "shree-ori7-0601 | SHREE-ORI7-0601 | S0601892.TTF",
+    "shree-ori7-0602 | SHREE-ORI7-0602 | S0602892.TTF",
+    "shree-ori7-0603 | SHREE-ORI7-0603 | S0603892.TTF + WORI7001.TTF",
+    "shree-ori7-0604 | SHREE-ORI7-0604 | S0604892.TTF + WORI7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-ori-0600 | SHREE-ORI-0600 | S06000F2.TTF",
+    "shree-ori-0601 | SHREE-ORI-0601 | S06010F2.TTF",
+    "shree-ori-0602 | SHREE-ORI-0602 | S06020F2.TTF",
+    "shree-ori-0603 | SHREE-ORI-0603 | S06030F2.TTF",
+    "shree-ori-0604 | SHREE-ORI-0604 | S06040F2.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face. (2) All 10 names carry '(Shree-Lipi 7.0 / 4-5-6)'. (3) Glyphs are identical (215 of 215), so one table is acceptable. (4) WORI7001/WORI7002 use the same family names as S0603892/S0604892 but differ in 7 and 5 glyphs, so Windows resolves 'SHREE-ORI7-0603/0604' to one of two different files."
+  },
+  {
+   "language": "ta Tamil",
+   "layouts": "ta-fl-shree-lipi-7-0 and ta-fl-shree-lipi-4-0-5-0-6-0 both have fontId=shree-tam-0800, which is SHREE-TAM-0800 (S08000F0.TTF), a 4/5/6 face. Encoding is shree-tam7.",
+   "fontsBelongingTo7": [
+    "shree-tam7-0800 | SHREE-TAM7-0800 | S0800890.TTF",
+    "shree-tam7-0801 | SHREE-TAM7-0801 | S0801890.TTF",
+    "shree-tam7-0802 | SHREE-TAM7-0802 | S0802890.TTF",
+    "shree-tam7-0803 | SHREE-TAM7-0803 | S0803890.TTF",
+    "shree-tam7-1316 | SHREE-TAM7-1316 | S1316890.TTF",
+    "shree-tam7-3883 | SHREE-TAM7-3883 | S3883890.TTF",
+    "shree-tam7-001 | Shree-Tam7-001 | WTAM7001.TTF",
+    "shree-tam7-002 | Shree-Tam7-002 | WTAM7002.TTF"
+   ],
+   "fontsBelongingTo456": [
+    "shree-tam-0800 | SHREE-TAM-0800 | S08000F0.TTF",
+    "shree-tam-0801 | SHREE-TAM-0801 | S08010F0.TTF",
+    "shree-tam-0802 | SHREE-TAM-0802 | S08020F0.TTF",
+    "shree-tam-0803 | SHREE-TAM-0803 | S08030F0.TTF",
+    "shree-tam-1316 | SHREE-TAM-1316 | S13160F0.TTF",
+    "shree-tam-3883 | SHREE-TAM-3883 | S38830F0.TTF"
+   ],
+   "problems": "(1) The 7.0 row selects a 4/5/6 face. (2) Glyphs differ at 0xBA, 0x9F(U+0178) and 0x9B(U+203A). The tam7 table writes 0xBA for ர் (in TAM7, ர with a pulli), which draws a different glyph in the TAM-456 faces. (3) The 12 numbered faces are labelled '(Shree-Lipi 7.0 / 4-5-6)', and the W*-faces have no label."
+  }
+ ],
+ "howFontListIsBuilt": "There are two layers: the app code never filters the list, and the config puts the 7.0 and 4/5/6 families under one encoding.\n\nAPP CODE (main window):\n(a) src/FontSoftware.App/ViewModels/MainViewModel.cs:534-542 (OnLanguageChanged) adds EVERY entry of SelectedLanguage.Fonts to the Fonts collection. It skips only missing Optional faces and never looks at the font layout. Lines 548-556 then append every installed family when 'Show all installed fonts' is on. MainWindow.xaml:449 binds the Font ComboBox straight to this collection.\n(b) MainViewModel.cs:591-631 (OnFontLayoutChanged) only changes SelectedFont; it never clears or filters Fonts. So under Shree-Lipi 7.0 or 4.0/5.0/6.0, Gujarati shows all 140 fonts: 60 Ex, 9 SHREE-GUJ7, 7 SHREE-GUJ, Terafont, ISFOC and the rest.\n(c) PickLayoutFont (MainViewModel.cs:640-649) returns null at :642-643 for any layout without 'encodings', which covers every Shree 7.0 and 4/5/6 row. Control falls through to :612-623, which selects the font whose id equals fl.FontId. Both Gujarati rows have fontId shree-guj-0750 = SHREE-GUJ-0750 (S07500F2.TTF, a 4/5/6 face), so picking 'Shree-Lipi 7.0' selects a 4/5/6 font. Every language except Kannada has the same pattern: the 7.0 row points at a SHREE-XXX- face, and Malayalam's 4/5/6 row points at a 7 face.\n(d) FontLayout.Includes (src/FontSoftware.Core/Models/FontLayout.cs:57-60) matches by Encodings when present, else by id. It is used only by PickLayoutFont (:644), the combined-layout hint (:145) and :881, never to build the list. Even an encoding filter could not separate the families: every SHREE-GUJ and SHREE-GUJ7 entry has ConversionKey (FontAsset.cs:50) = 'shree-guj7', and AssetBundle.CreateConverterToLegacy (src/FontSoftware.Core/Config/AssetBundle.cs:101) picks the table by that key alone.\n(e) UpdateLegacyFontHint (MainViewModel.cs:133-141) collects the installed families of ALL languages with that ConversionKey, which includes both families. LegacyFontName prefers SelectedFont.Family, which becomes the font the engine stamps into Word (:677-678, SetLegacyConverter). The '7.0' row therefore writes into SHREE-GUJ-0750.\n\nAPP CODE (converter page): ConverterViewModel.cs:572-588 gives both rows Key Legacy('shree-guj7'). As a result :638 refuses 7.0 -> 4/5/6 as 'Input and output layouts are the same', and RebuildFonts (:595-626) lists the layout font followed by every installed family (:620-624).\n\nCONFIG GENERATION (why the data is shaped this way): tools/RegisterFonts/Program.cs:361-373 (--by-series) maps both GUJ7 and GUJ to 'shree-guj7'. It does the same for DEV7/DEV -> shree-dev456, BAN7/BAN/ASS7/ASS -> shree-ban7, KAN, MAL, ORI, PUN, TAM and TEL. Its cmap check at :434-437 cannot tell the families apart, because both map the same code points (217 for Gujarati). EncodingForLayout (:97-113) deliberately gives the '7.0' and '4.0' rows the same non-x encoding, with the comment 'Shree gives those two the same byte layout'. LegacyIdForLayout (:118-125) then takes the first font sorted by family name. 'SHREE-GUJ-0750' sorts before 'SHREE-GUJ7-0750' because '-' (0x2D) < '7' (0x37), so the 7.0 row lands on a 4/5/6 face in 11 of the 13 languages.\n\nEVIDENCE that the families really differ: per-design outline comparison of 7.0 vs 4/5/6 files (scratchpad/shree7/fontlist-audit-7-vs-456-glyphcompare.txt and fontlist-audit-7-vs-456-glyphdiff.png).\n- GUJ: 212/217 glyphs identical; 0xB6 and 0x91-0x94 differ.\n- DEV: 0xB3, 0xB6, 0x91 and 0x92 differ, and the 456 faces have 45 extra codes.\n- BAN/ASS: 0x25, 0x40, 0xA5, 0xA8, 0xFF, 0x8C, 0x96 and 0x97 differ.\n- TAM: 0xBA, 0x9F and 0x9B differ.\n- ORI, KAN and TEL: identical. PUN: identical except 0x3C.\nSo the claim that 7.0 and 4/5/6 share one byte layout is false for Gujarati, Devanagari, Bengali-script and Tamil.",
+ "whyTestsMissedIt": "Every check tests the table against itself or against the font's code-point list. None compares our bytes with what Shree's software writes, and none converts the multi-key syllable a typist actually produces.\n\n1. Round trips cannot see this bug. tools/ConvTest/Program.cs:78-95, ConverterTests.ShreeRoundTripNoUnmapped (ConverterTests.cs:65-100, which has shree-guj7 rows only for શેરી and ધીરજ) and ConversionPipelineTests.LegacyToLegacyGoesThroughUnicode (:16-30) all assert Unicode -> legacy -> Unicode == input with no unmapped characters. ગ્ર -> C1 66 -> 'ગ્' + 'ર' = ગ્ર passes. Shree's 4E B0 also decodes to ગ્ર (checked with the shree-guj7-to-unicode table), so the test passes whichever bytes are written: a wrong but reversible table is indistinguishable from the right one. ConversionPipelineTests:29 even asserts only Assert.NotEqual(x, seven).\n\n2. The word lists never contain a consonant + ્ર cluster in 7/456. ConvTest's discovered encodings use wordsByBlock[0x0A80] (:33): કમલ, નમસ્તે, વિદ્યા, ક્ષત્રિય, vowels and ક઼. Its explicit list (:10-21) covers only the X encodings. No test word contains ગ્ર, પ્ર, ક્ર or any other C+્ર in shree-guj7.\n\n3. tools/FullTest presses keys one at a time. :153-158 collects k.Base, k.Shift and k.AltGr per key and :171-177 converts each string alone. On BPMK, u -> 'ગ' (4E) and 1 -> '્ર' (B0) each convert correctly; the whole-word conversion the engine actually does (TypingEngine.cs:813 ConvertText(_uniWord)) never runs on 'ગ્ર'. --runs adds layout.Sequences, but BPMK has no sequence for ગ્ર. A per-key Rosetta check would also pass: our table agrees with Shree's S8Guj764 answer on 93 of 99 BPMK keys (the rest are cp1252 spelling, ।, િ width and –), see scratchpad/shree7/bpmk-guj7.json.\n\n4. FullTest's pass criterion is cmap membership (:189-207), a question of whether a code exists in the font, not whether it is the right glyph. SHREE-GUJ-0750 and SHREE-GUJ7-0750 map the same 217 code points, so C1 66 'exists' in both. The 0xB6 and 0x91-0x94 glyph differences between families are invisible, and so is the mixed table that uses 0x91 as ઙ્ક in one pair and as પ in another.\n\n5. FullTest tests the layout's ONE font, plus every font with the same ConversionKey (:133-135). Because both families share 'shree-guj7', a 7.0 row pointing at a 4/5/6 face looks correct, and putting both families in one list is treated as intended.\n\n6. The config checks only check that references resolve. tools/ConfigCheck/Program.cs:53-64 verifies that fontId exists, that the type matches and that a table exists. No test asserts that a 'Shree-Lipi 7.0' row's font is a *7 family or that the 4/5/6 row's is not, that two rows do not share one fontId, or that one id means the same family in every language. ConverterTests.EveryRegisteredLegacyFontHasBothDirections (:196-215) checks only that a table exists, and it skips the id 'shree-dev-0700'.\n\n7. The typing-engine and selection tests are self-referential or never touch these layouts. TypingEngineTests (:394-402, :798-804, :613-623) assert _injector.Text == toLegacy.ConvertText(...), our own converter, so a wrong table is the expected value. They use shree-gujx or gopika, never shree-guj7. SelectionMemoryTests uses only gu-fl-shreelipi-ex. No test opens MainViewModel on a Shree 7.0 or 4/5/6 row and inspects Fonts or SelectedFont.\n\n8. FontConverterTests (:9-62) test the greedy engine on a 4-pair toy table. They prove the longest match wins, which is exactly the behaviour that turns ગ્ર into 'ગ્' + 'ર' when the table lacks a 'ગ્ર' or C+'્ર' rule. 22 of 34 Gujarati consonants + ્ર come out as half form + full ra (0x66).\n\nThe ground truth exists but no test uses it. The S8Guj764 composer answers ગ = 4E and ્ર = B0 (BPMK capture). The S8GujG64 composer answered only 11 blank pairs, so there is no composer oracle for 4/5/6 yet. That oracle would have to come from Shree's Converter nxt (the GapFill path) or from rendering.",
+ "testGaps": [
+  "Ground-truth byte test (the one that catches ગ્ર). Add a checked-in fixture captured from Shree's own composers: kbdcapture --rosetta --legacy 7 for every .GUJ keyboard, plus each keyboard's conjunct slots and two-key consonant+sign sequences (u,1 on BPMK). Assert CreateConverterToLegacy(\"shree-guj7\").ConvertText(unicode) equals the exact bytes, for example ConvertText(\"ગ્ર\") == \"N°\" (4E B0), not the round trip. Repeat for dev456/ban7/tam7/ori7/kan7/pun7/tel7/mal7.",
+  "Consonant x sign matrix: for every consonant and every sign key the composer answers (્ર, reph, matras, halant), compare our whole-cluster conversion with Shree's sequence answer, or render both byte strings in SHREE-GUJ7-0750 and compare ink. This flags the 22 consonants that come out as half form + 0x66.",
+  "Typing-engine test with a hard-coded expected value: BPMK layout, shree-guj7 converter, keys u then 1, assert _injector.Text == \"N°\". Do not compare against our own toLegacy.ConvertText, which makes the current TypingEngineTests self-fulfilling.",
+  "Family-separation config test: for each language, a 'Shree-Lipi 7.0' row's font family must match ^SHREE-[A-Z]{3}7-|^Shree-[A-Za-z]{3}7- (files *890/*892/*896/W*7*), and a '4.0/5.0/6.0' row's must match ^SHREE-[A-Z]{3}-\\d (*0F0/*0F2/*0F6). The two rows must not share a fontId. Today this fails in 11 languages (Malayalam's 4/5/6 row is a 7 face).",
+  "Encoding-separation test: no single encoding id may contain both SHREE-XXX7 and SHREE-XXX fonts unless a glyph comparison proves the faces identical. For GUJ, DEV, BAN/ASS and TAM they are not identical: 5, 4, 8 and 3 differing bytes respectively.",
+  "Table-consistency test: within one table, a legacy byte must decode to one base glyph. shree-guj7 maps 0x91 to ઙ્ક alone and to પ inside '‘p¡'; the same holds for 0x92 and 0x93. Also render each table's single-byte pairs in a representative font of EACH family it claims and compare with the Unicode text (GlyphJoin-style).",
+  "MainViewModel font-list test: select gu-fl-shree-lipi-7-0 and assert that Fonts (the Font box) contains only SHREE-GUJ7/Shree-Guj7 faces, that SelectedFont is one of them, and that LegacyFontName is a 7 face. Then do the same for 4.0/5.0/6.0 with SHREE-GUJ faces. Today Fonts holds all 140 Gujarati fonts and SelectedFont is SHREE-GUJ-0750 for both rows.",
+  "Converter-page test: Shree-Lipi 7.0 -> Shree-Lipi 4.0/5.0/6.0 must be convertible, or at least not reported as 'Input and output layouts are the same' (ConverterViewModel.cs:638). RebuildFonts should list only the layout's family before the 'all installed' tail.",
+  "ID-uniqueness test: a font id must name the same family in every language. 'shree-dev-0700' is SHREE-DEVX-0700 in Hindi but SHREE-DEV-0700 in Marathi and Sanskrit, and ConverterTests.cs:208 skips it. Also check that no family name is carried by two different installed files used as one entry (SHREE-ORI7-0603 = S0603892 + WORI7001, which differ in 7 glyphs).",
+  "Label test: font names must not say '(Shree-Lipi 7.0 / 4-5-6)'. A name should state the one family the face belongs to: 16 Gujarati, 10 Odia and 12 Tamil entries carry the combined label today.",
+  "Missing-family test: a layout row whose family has no installed font, for example Malayalam 4.0/5.0/6.0 with no SHREE-MAL face, must show 'not installed' instead of quietly using another family's font.",
+  "Ex-row guard (already partly done in commit 58d8d3e): keep a test that the ShreeLipi-Ex row's font is a *X family and the 7.0/4-5-6 rows' fonts are never *X."
+ ]
+}

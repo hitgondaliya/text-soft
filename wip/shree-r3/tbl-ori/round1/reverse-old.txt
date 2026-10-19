@@ -1,0 +1,27 @@
+read back 41467: exact 19678, same text 7131, wrong 14658 (64.65%)
+  4C FF F3 5B FF	want କଂନ [0B15 0B02 0B28]	got କଂନÿ [0B15 0B02 0B28 00FF]
+  4C FF E6 5B FF	want କାନ [0B15 0B3E 0B28]	got କାନÿ [0B15 0B3E 0B28 00FF]
+  4C FF E7 5B FF	want କିନ [0B15 0B3F 0B28]	got କିନÿ [0B15 0B3F 0B28 00FF]
+other accepted spellings read back 800: exact 150, as text the table writes with those very bytes 534, wrong 116
+  4C FF FA CC FA	want କ୍ଷ୍‌	got କ୍ଷ୍ [0B15 0B4D 0B37 0B4D]
+  4C FF FA C0 FF F7	want କ୍‌ର୍ର	got କ୍ର୍ର [0B15 0B4D 0B30 0B4D 0B30]
+  4C FF FA C0 FF BF	want କ୍‌ର୍ୟ	got କ୍ର୍ୟ [0B15 0B4D 0B30 0B4D 0B5F]
+words read back 20000 (seed 7): right 10158, wrong 9842 (50.79%)
+words read back 20000 (seed 11): right 10196, wrong 9804 (50.98%)
+well-formed read back 76195: malformed 17476
+  4C FF F3 5B FF	read କଂନÿ [0B15 0B02 0B28 00FF] for କଂନ: Latin ÿ at 3
+  4C FF E6 5B FF	read କାନÿ [0B15 0B3E 0B28 00FF] for କାନ: Latin ÿ at 3
+  4C FF E7 5B FF	read କିନÿ [0B15 0B3F 0B28 00FF] for କିନ: Latin ÿ at 3
+composer spellings of the whole capture read back 54914: exact 21404, as text the table writes with those very bytes 15537, other text (the bytes are another text's: a quirk row, a sign struck out of order) 11028, Latin/control/noncharacter 2346, malformed 4599
+  LATIN: 2346
+    LATIN	5B FF	typed ନ	read ନÿ [0B28 00FF]	Latin ÿ at 1
+    LATIN	5B FF FA	typed ନ୍	read ନÿ୍ [0B28 00FF 0B4D]	Latin ÿ at 1; virama at 2 after 'ÿ'
+    LATIN	5B FF FA	typed ନ୍‌	read ନÿ୍ [0B28 00FF 0B4D]	Latin ÿ at 1; virama at 2 after 'ÿ'
+  OTHER: 11028
+    OTHER	3C	typed ₹	read < [003C]	written back 3C
+    OTHER	C0 FF FA 4C FF	typed ର୍‌କ	read ର୍କ [0B30 0B4D 0B15]	written back C0 50
+    OTHER	C0 FF FA 4C FF	typed ର୍‍କ	read ର୍କ [0B30 0B4D 0B15]	written back C0 50
+  MALFORMED: 4599
+    MALFORMED	4C FF F5 26 F7	typed କୃ	read କୃ&୍ର [0B15 0B43 0026 0B4D 0B30]	virama at 3 after '&'
+    MALFORMED	51 23 F3	typed ଖିଂ	read ଖ#ଂ [0B16 0023 0B02]	ଂ at 2 after '#'
+    MALFORMED	51 23 F4	typed ଖିଁ	read ଖ#ଁ [0B16 0023 0B01]	ଁ at 2 after '#'

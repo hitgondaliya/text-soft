@@ -1,0 +1,5 @@
+pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+runlist capp p exit 0 captured 794 
+runlist capp-b p exit 0 captured 794 
+restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-tel\shmdump\runP-pre.bin 
+after restore: 0 bytes differ from the pre-dump

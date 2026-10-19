@@ -1,0 +1,78 @@
+// Write tel7-patterns.txt: the rules of Shree's Telugu 7 spelling, each checked against the truth (counts + examples).
+const fs = require('fs');
+const g = require('./tel7-groundtruth.json');
+const T = g.truth;
+const probe = [...require('./capp/P-results.json'), ...require('./capr/R-results.json')];
+const out = [];
+const P = s => out.push(s);
+const pref = u => T[u] ? T[u].preferred : null;
+const V = '్';
+const CONS = [...'కఖగఘఙచఛజఝఞటఠడఢణతథదధనపఫబభమయరఱలళవశషసహ'];
+const SIGNS = ['ా', 'ి', 'ీ', 'ు', 'ూ', 'ృ', 'ె', 'ే', 'ై', 'ొ', 'ో', 'ౌ'];
+function rule(name, strings, fn) {
+  let n = 0, ok = 0; const miss = [];
+  for (const u of strings) { const want = fn(u); if (want == null || !T[u]) continue; n++; if (T[u].preferred === want || T[u].accepted.includes(want)) ok++; else if (miss.length < 10) miss.push(`${u} rule ${want} / truth ${T[u].preferred}`); }
+  P(`  check "${name}": ${ok}/${n} truth strings follow it${miss.length ? '; exceptions (first 10): ' + miss.join('; ') : ''}`);
+  return { ok, n };
+}
+P('Shree-Lipi 7 Telugu: how S8Tel764.dll spells Unicode, read from ' + Object.keys(T).length + ' truth strings (tel7-groundtruth.json). Bytes are hex, one per glyph; the 7 faces (SHREE-TEL7-Apoorva-0900, SHREE-TEL7-Asmitha-1642, Shree-Tel7-001/002) and the 4/5/6 faces (SHREE-TEL-Apoorva-0900, SHREE-TEL-Asmitha-1642) have the same 216 codes with the same glyphs. A "check" line counts the truth strings that follow the rule (preferred or accepted spelling).');
+P('');
+P('1. Internal codes (what each code of a .TEL keyboard means; single-code probes under a neutral keyboard name, both composers; "-" = no answer):');
+const single = probe.filter(r => !r.codes.includes(' ')).sort((a, b) => parseInt(a.codes, 16) - parseInt(b.codes, 16));
+const line = [];
+for (const r of single) if (r.u != null || r.bytes) line.push(`${r.codes}=${r.u == null ? '-' : JSON.stringify(r.u).slice(1, -1)}→${r.bytes || 'nothing'}`);
+for (let i = 0; i < line.length; i += 8) P('   ' + line.slice(i, i + 8).join('  '));
+P('   64 = link (virama; alone "Lk"; before a consonant the conjunct, C1 + the subjoined form of C2; at a word end the 7 composer writes NO virama), 44 = virama + ZWNJ (the visible virama form of the letter), D7/ED = ra-vattu ్ర struck BEFORE its letter (7B/5B), E1 = a third ra-vattu hook 93 (same outline as 7B; the Unicode composer writes nothing for it), F2/F3 = ZWJ/ZWNJ (no glyph). A lone vowel-sign code answers on a carrier (7: E6 61 E6 61) under a neutral name; on a vendor keyboard the same code alone types the independent vowel (61 = ఆ 42, 73 = ఇ 43 ...).');
+P('   The 7 composer types NOTHING for: D9 ఌ, DA ౡ, F1 ౣ, F4 ॥, DC ₹, DD ×, DE ÷, FB/FD (—/– duplicates; 7B = — 9B 9B, 7D = – 9B), 5B [, 5D ], and 5F ౄ on a letter. Codes only the 7 composer types: E1 → 93, 86 → 2D, DB → 94, E7 → 3D, E9 → 2B, EA → 3B, EB → 25, EE → AC.');
+P('   NOTE: ః = 40 and ఁ = B6 in the composer, but in every installed face 40 and B6 draw a talakattu tick (B6 is the very outline of the talakattu E6 in Apoorva); the visarga glyph is 5D and the candrabindu glyph 97 (fonts/gdi-marks.png, fonts/check-marks3.png). tel7-groundtruth-glyphfix.json has 40→5D, B6→97.');
+P('');
+P('2. Consonants: the body glyph + the talakattu (E6 / E8 by letter) + a blank spacer (FC / FD / FE / FF), or one glyph for letters without a talakattu:');
+P('   ' + CONS.map(c => `${c} ${pref(c)}`).join(', '));
+P('   క్ష = 84 E6 FC (code 5E; C + link + ష = 4D E6 FC DB, accepted); శ్రీ = 7D (code D8, or D7 + శ + ీ).');
+P('');
+P('3. Vowel signs (gunintham): the sign REPLACES the talakattu with a letter-specific top shape, or follows the letter (ు 24, ూ 2A, ృ 96 after the body + talakattu + spacer); ొ ో ౌ often fuse with the body (కొ 4D F6). Full table:');
+for (const c of CONS) P(`   ${c}: ` + SIGNS.map(s => `${s} ${pref(c + s) || '-'}`).join(' | '));
+rule('C + ు = C + 24 (letter bytes then 24)', CONS.map(c => c + 'ు'), u => pref(u[0]) + ' 24');
+rule('C + ూ = C + 2A', CONS.map(c => c + 'ూ'), u => pref(u[0]) + ' 2A');
+rule('C + ృ = C + 96', CONS.map(c => c + 'ృ'), u => pref(u[0]) + ' 96');
+rule('C + ై = (C + ె) + 4F', CONS.map(c => c + 'ై'), u => pref(u[0] + 'ె') ? pref(u[0] + 'ె') + ' 4F' : null);
+P('');
+P('4. ం ః ఁ after the letter/sign: + 85 / 40 / B6.');
+rule('C(+sign) + ం = (C + sign) + 85', CONS.flatMap(c => ['', ...SIGNS].map(s => c + s + 'ం')), u => pref(u.slice(0, -1)) ? pref(u.slice(0, -1)) + ' 85' : null);
+rule('C(+sign) + ః = (C + sign) + 40', CONS.flatMap(c => ['', ...SIGNS].map(s => c + s + 'ః')), u => pref(u.slice(0, -1)) ? pref(u.slice(0, -1)) + ' 40' : null);
+rule('C(+sign) + ఁ = (C + sign) + B6', CONS.flatMap(c => ['', ...SIGNS].map(s => c + s + 'ఁ')), u => pref(u.slice(0, -1)) ? pref(u.slice(0, -1)) + ' B6' : null);
+P('');
+P('5. Conjuncts C1 + ్ + C2 (link code 64): C1 as written alone, then the subjoined form (vattu) of C2. Vattu glyphs (read from క్C2 = 4D E6 FC + vattu):');
+const vattu = {};
+for (const c of CONS) { const b = pref('క' + V + c); if (b && b.startsWith('4D E6 FC ')) vattu[c] = b.slice(9); }
+P('   ' + Object.entries(vattu).map(([c, b]) => `్${c} ${b}`).join(', '));
+P('   ్ఝ: the 7 composer drops ఝ after the link (C + link + ఝ = C alone): no ్ఝ glyph. ్ర: C + link + ర types nothing in 7 - the ra-vattu is D7 (section 7). క్ష after the link: the Unicode composer writes nothing (7 writes 3C), so C్క్ష is not in the truth (tel7-only7-evidence.json).');
+const pairsCC = CONS.flatMap(a => CONS.map(b => a + V + b));
+rule('C1్C2 = C1 + vattu(C2)', pairsCC, u => pref(u[0]) && vattu[u[2]] ? pref(u[0]) + ' ' + vattu[u[2]] : null);
+P('   A sign on a cluster: the sign shapes C1 as it would alone and the vattu follows (also ు ూ: C1 + 24/2A + vattu); ృ comes after the vattu with the spacer A0 before it; ై = (C1 + ె) + 4F (or 95) + vattu:');
+const pre = ['ా', 'ి', 'ీ', 'ె', 'ే', 'ొ', 'ో', 'ౌ'];
+rule('C1్C2 + ా ి ీ ె ే ొ ో ౌ = (C1 + sign) + vattu(C2)', pairsCC.flatMap(u => pre.map(s => u + s)), u => pref(u[0] + u[3]) && vattu[u[2]] ? pref(u[0] + u[3]) + ' ' + vattu[u[2]] : null);
+rule('C1్C2 + ు = (C1 + ు) + vattu(C2)', pairsCC.map(u => u + 'ు'), u => pref(u[0] + 'ు') && vattu[u[2]] ? pref(u[0] + 'ు') + ' ' + vattu[u[2]] : null);
+rule('C1్C2 + ూ = (C1 + ూ) + vattu(C2)', pairsCC.map(u => u + 'ూ'), u => pref(u[0] + 'ూ') && vattu[u[2]] ? pref(u[0] + 'ూ') + ' ' + vattu[u[2]] : null);
+rule('C1్C2 + ృ = C1 + vattu(C2) + A0 96', pairsCC.map(u => u + 'ృ'), u => pref(u[0]) && vattu[u[2]] ? pref(u[0]) + ' ' + vattu[u[2]] + ' A0 96' : null);
+rule('C1్C2 + ై = (C1 + ె) + 4F + vattu(C2), or 95 in place of 4F', pairsCC.map(u => u + 'ై'), u => { if (!pref(u[0] + 'ె') || !vattu[u[2]] || !T[u]) return null; const a = pref(u[0] + 'ె') + ' 4F ' + vattu[u[2]], b = pref(u[0] + 'ె') + ' 95 ' + vattu[u[2]]; return T[u].accepted.includes(b) ? b : a; });
+{ const with95 = CONS.filter(c => pairsCC.some(u => u[2] === c && T[u + 'ై'] && T[u + 'ై'].preferred.includes(' 95 '))); P('   ై mark 95 (instead of 4F) before the vattu of: ' + with95.join(' ')); }
+rule('C1్C2 + ం = C1్C2 + 85', pairsCC.map(u => u + 'ం'), u => pref(u.slice(0, 3)) ? pref(u.slice(0, 3)) + ' 85' : null);
+P('');
+P('6. The halant (code 44 = virama + ZWNJ): the virama form of the letter (క్‌ = 4D 8A FC), then the next letter in full. A Unicode word-final C్ (no ZWNJ) has no direct composer spelling: the pending link writes the bare letter (tel7-composer-gaps.json derives C్ = the halant form).');
+P('   ' + CONS.map(c => `${c}్‌ ${pref(c + V + '‌') || '-'}`).join(', '));
+P('');
+P('7. Ra-vattu ్ర: typed D7 BEFORE the letter (the vendor order: TYPEWRIT K, ITR Ctrl+Space g, INDICA/APPLE slots D7 + C). The hook 7B goes BEFORE the letter, where the శ్రీ ligature 7D and Nirmala UI draw it; with ై the composer picks the deeper hook 5B; on త/ట after a link it uses the combined glyphs 88 (్త్ర) / 89 (్ట్ర) after స/ష. ED = always 5B (accepted). Struck AFTER a letter with nothing following, D7 stays pending (hook after the letter, a sign after it is dropped) - kept as alt.');
+rule('C్ర(+sign/+tail) = 7B + (C + sign + tail)', CONS.flatMap(c => ['', ...SIGNS.filter(s => s !== 'ై'), 'ం', 'ిం'].map(s => c + V + 'ర' + s)), u => { const rest = u[0] + u.slice(3); return pref(rest) ? '7B ' + pref(rest) : null; });
+rule('C్రై = 5B + (C + ై)', CONS.map(c => c + V + 'రై'), u => pref(u[0] + 'ై') ? '5B ' + pref(u[0] + 'ై') : null);
+rule('C1్C2్ర = 7B + C1్C2', pairsCC.map(u => u + V + 'ర'), u => pref(u.slice(0, 3)) ? '7B ' + pref(u.slice(0, 3)) : null);
+P('   శ్రీ = 7D; స్త్ర = E7 DC 88; ష్ట్ర = E7 D9 89; ర్ర = ' + pref('ర్ర') + '; క్ష్ర = ' + pref('క్ష్ర') + '.');
+P('');
+P('8. Independent vowels: ' + ['అ', 'ఆ', 'ఇ', 'ఈ', 'ఉ', 'ఊ', 'ఋ', 'ౠ', 'ఎ', 'ఏ', 'ఐ', 'ఒ', 'ఓ', 'ఔ'].map(v => `${v} ${pref(v) || '-'}`).join(', ') + '; ఌ ౡ: nothing in 7.');
+P('   Digits ౦-౯ = 30-39 (the font draws Telugu digits on the ASCII digit bytes). । = 91, — = 9B 9B, – = 9B, - = 26, * = 92, ‘ = 22, ’ = 27; ! % ( ) + , . / : ; = ? themselves.');
+P('');
+P('9. Syllables join by plain concatenation (no reordering across syllables): ' + (() => { let n = 0, ok = 0; for (const r of probe) { if (!/^(కి|కా|కె|కు|కం|క్క|కై|క rav|కా rav|క halant) \S+$/.test(r.tag) && !/^(rav first \S+ then క|క then rav first|కి then rav first)/.test(r.tag)) continue; n++; } return n; })() + ' two-syllable probes (కి C, కా C, కె C, కు C, కం C, క్క C, కై C, క + D7 + C = క + C్ర, D7 + C + క = C్ర + క) - see the truth for each.');
+P('');
+P('10. Not in the truth: 5-code syllables (C1్C2 + sign + tail, C1్C2్C3, C1్C2్ర + sign: స్త్రీ, బ్యాం, ష్ట్రం), word-final C్ (gap, derived), ౄ (no glyph), ఌ ౡ ౣ ॥ ₹ × ÷ (7 composer types nothing), C్ఝ, హ్C + ె/ే (the 7 composer drops the sign), C్క్ష.');
+fs.writeFileSync(__dirname + '/tel7-patterns.txt', out.join('\n') + '\n');
+console.log(out.filter(l => /check/.test(l)).join('\n'));

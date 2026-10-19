@@ -1,0 +1,356 @@
+{
+ "failing": 8986,
+ "renderIdenticalToAnAcceptedSpelling": 236,
+ "classes": [
+  {
+   "n": 1296,
+   "why": "passes through U+200C",
+   "examples": [
+    "క్‌ ours 4D 8A FC U+200C | Shree 4D 8A FC",
+    "క్‌క ours 4D 8A FC U+200C 4D E6 FC | Shree 4D 8A FC 4D E6 FC",
+    "ఖ్‌ ours 52 8C FD U+200C | Shree 52 8C FD",
+    "ఖ్‌క ours 52 8C FD U+200C 4D E6 FC | Shree 52 8C FD 4D E6 FC"
+   ]
+  },
+  {
+   "n": 1189,
+   "why": "ృ on a cluster: Shree A0 96 after the vattu",
+   "examples": [
+    "క్కృ ours 4D E6 FC 96 50 | Shree 4D E6 FC 50 A0 96",
+    "క్ఖృ ours 4D E6 FC 96 55 | Shree 4D E6 FC 55 A0 96",
+    "క్గృ ours 4D E6 FC 96 59 | Shree 4D E6 FC 59 A0 96",
+    "క్ఘృ ours 4D E6 FC 96 83 | Shree 4D E6 FC 83 A0 96"
+   ]
+  },
+  {
+   "n": 1187,
+   "why": "ra-vattu hook after the letter (Shree: before)",
+   "examples": [
+    "ష్త్ర ours E7 D9 A2 7B | Shree 7B E7 D9 A2",
+    "క్క్ర ours 4D E6 FC 50 7B | Shree 7B 4D E6 FC 50",
+    "క్ఖ్ర ours 4D E6 FC 55 7B | Shree 7B 4D E6 FC 55",
+    "క్గ్ర ours 4D E6 FC 59 7B | Shree 7B 4D E6 FC 59"
+   ]
+  },
+  {
+   "n": 1002,
+   "why": "other",
+   "examples": [
+    "ౠ ours BA CA | Shree BA 24 2A",
+    "శ్రీ ours 7B D6 | Shree 7D",
+    "ఋ ours BA AC | Shree BA 24 24",
+    "క్రై ours 5B 4F 4D F0 FC | Shree 5B 4D F0 FC 4F"
+   ]
+  },
+  {
+   "n": 702,
+   "why": "talakattu variant B6→E6",
+   "examples": [
+    "ళ ours E2 B6 FD | Shree E2 E6 FD",
+    "భ ours BF B6 FD | Shree BF E6 FD",
+    "య ours C4 B6 FD 24 | Shree C4 E6 FD 24",
+    "భ్ర ours 7B BF B6 FD | Shree 7B BF E6 FD"
+   ]
+  },
+  {
+   "n": 694,
+   "why": "talakattu variant 40→E8",
+   "examples": [
+    "మ ours D0 40 FE 24 | Shree D0 E8 FE 24",
+    "వ ours D0 40 FE | Shree D0 E8 FE",
+    "న ours AF 40 FE | Shree AF E8 FE",
+    "న్ర ours 7B AF 40 FE | Shree 7B AF E8 FE"
+   ]
+  },
+  {
+   "n": 665,
+   "why": "ై length mark 4F written BEFORE the letter (Shree: after the letter, after its spacer)",
+   "examples": [
+    "కై ours 4F 4D F0 FC | Shree 4D F0 FC 4F",
+    "కైం ours 4F 4D F0 FC 85 | Shree 4D F0 FC 4F 85",
+    "కైః ours 4F 4D F0 FC 5D | Shree 4D F0 FC 4F 5D",
+    "కైఁ ours 4F 4D F0 FC 97 | Shree 4D F0 FC 4F 97"
+   ]
+  },
+  {
+   "n": 484,
+   "why": "క్ష",
+   "examples": [
+    "క్ష్క ours 84 E6 FC 50 | Shree 84 E6 FC A0 50",
+    "క్ష్కా ours 84 E6 FC E9 50 | Shree 84 3E 50",
+    "క్ష్కి ours 84 E6 FC EC FC 50 | Shree 84 EC FC 50",
+    "క్ష్కీ ours 84 E6 FC EE 50 | Shree 84 EE FC 50"
+   ]
+  },
+  {
+   "n": 470,
+   "why": "substitution 94→5D",
+   "examples": [
+    "క్ఙ ours 4D E6 FC 94 | Shree 4D E6 FC 5D",
+    "క్ఙా ours 4D 3E 94 | Shree 4D 3E 5D",
+    "క్ఙి ours 4D EC FC 94 | Shree 4D EC FC 5D",
+    "క్ఙీ ours 4D EE FC 94 | Shree 4D EE FC 5D"
+   ]
+  },
+  {
+   "n": 435,
+   "why": "substitution 3C→CA",
+   "examples": [
+    "క్ఱ ours 4D E6 FC 3C | Shree 4D E6 FC CA",
+    "క్ఱా ours 4D 3E 3C | Shree 4D 3E CA",
+    "క్ఱి ours 4D EC FC 3C | Shree 4D EC FC CA",
+    "క్ఱీ ours 4D EE FC 3C | Shree 4D EE FC CA"
+   ]
+  },
+  {
+   "n": 215,
+   "why": "talakattu variant B6→E8",
+   "examples": [
+    "శ ours D4 B6 FD | Shree D4 E8 FD",
+    "శు ours D4 B6 FD 24 | Shree D4 E8 FD 24",
+    "శుం ours D4 B6 FD 24 85 | Shree D4 E8 FD 24 85",
+    "శుః ours D4 B6 FD 24 5D | Shree D4 E8 FD 24 5D"
+   ]
+  },
+  {
+   "n": 81,
+   "why": "ra-vattu hook after the letter (Shree: before) + క్ష",
+   "examples": [
+    "క్ష్ర ours 84 E6 FC 7B | Shree 7B 84 E6 FC",
+    "క్ష్రా ours 84 E6 FC 7B E9 | Shree 7B 84 3E",
+    "క్ష్రి ours 84 E6 FC 7B EC FC | Shree 7B 84 EC FC",
+    "క్ష్రీ ours 84 E6 FC 7B EE | Shree 7B 84 EE FC"
+   ]
+  },
+  {
+   "n": 72,
+   "why": "passes through U+200C + క్ష",
+   "examples": [
+    "క్ష్‌ ours 84 E6 FC 8A U+200C | Shree 84 8A FC",
+    "క్ష్‌క ours 84 E6 FC 8A U+200C 4D E6 FC | Shree 84 8A FC 4D E6 FC",
+    "క్‌క్ష ours 4D 8A FC U+200C 84 E6 FC | Shree 4D 8A FC 84 E6 FC",
+    "ఖ్‌క్ష ours 52 8C FD U+200C 84 E6 FC | Shree 52 8C FD 84 E6 FC"
+   ]
+  },
+  {
+   "n": 38,
+   "why": "ృ on a cluster: Shree A0 96 after the vattu + క్ష",
+   "examples": [
+    "క్షృ ours 84 E6 FC 96 | Shree 84 E6 FC A0 96",
+    "క్షృం ours 84 E6 FC 96 85 | Shree 84 E6 FC A0 96 85",
+    "క్షృః ours 84 E6 FC 96 5D | Shree 84 E6 FC A0 96 5D",
+    "క్షృఁ ours 84 E6 FC 96 97 | Shree 84 E6 FC A0 96 97"
+   ]
+  },
+  {
+   "n": 35,
+   "why": "substitution 95→4F 3C→CA",
+   "examples": [
+    "క్ఱై ours 4D F0 FC 95 3C | Shree 4D F0 FC 4F CA",
+    "ఖ్ఱై ours 52 F1 FD 95 3C | Shree 52 F1 FD 4F CA",
+    "గ్ఱై ours 56 F0 FC 95 3C | Shree 56 F0 FC 4F CA",
+    "ఘ్ఱై ours F2 9C 24 95 3C | Shree F2 9C 24 4F CA"
+   ]
+  },
+  {
+   "n": 35,
+   "why": "substitution 95→4F",
+   "examples": [
+    "క్హై ours 4D F0 FC 95 E1 | Shree 4D F0 FC 4F E1",
+    "ఖ్హై ours 52 F1 FD 95 E1 | Shree 52 F1 FD 4F E1",
+    "గ్హై ours 56 F0 FC 95 E1 | Shree 56 F0 FC 4F E1",
+    "ఘ్హై ours F2 9C 24 95 E1 | Shree F2 9C 24 4F E1"
+   ]
+  },
+  {
+   "n": 20,
+   "why": "substitution 93→7B B6→E8",
+   "examples": [
+    "శ్ర ours 93 D4 B6 FD | Shree 7B D4 E8 FD",
+    "శ్రు ours 93 D4 B6 FD 24 | Shree 7B D4 E8 FD 24",
+    "శ్రూ ours 93 D4 B6 FD 2A | Shree 7B D4 E8 FD 2A",
+    "శ్రృ ours 93 D4 B6 FD 96 | Shree 7B D4 E8 FD 96"
+   ]
+  },
+  {
+   "n": 18,
+   "why": "substitution 40→E8 94→5D",
+   "examples": [
+    "న్ఙ ours AF 40 FE 94 | Shree AF E8 FE 5D",
+    "న్ఙు ours AF 40 FE 24 94 | Shree AF E8 FE 24 5D",
+    "న్ఙూ ours AF 40 FE 2A 94 | Shree AF E8 FE 2A 5D",
+    "న్ఙం ours AF 40 FE 94 85 | Shree AF E8 FE 5D 85"
+   ]
+  },
+  {
+   "n": 18,
+   "why": "substitution 40→E8 3C→CA",
+   "examples": [
+    "న్ఱ ours AF 40 FE 3C | Shree AF E8 FE CA",
+    "న్ఱు ours AF 40 FE 24 3C | Shree AF E8 FE 24 CA",
+    "న్ఱూ ours AF 40 FE 2A 3C | Shree AF E8 FE 2A CA",
+    "న్ఱం ours AF 40 FE 3C 85 | Shree AF E8 FE CA 85"
+   ]
+  },
+  {
+   "n": 18,
+   "why": "substitution B6→E6 94→5D",
+   "examples": [
+    "భ్ఙ ours BF B6 FD 94 | Shree BF E6 FD 5D",
+    "భ్ఙు ours BF B6 FD 24 94 | Shree BF E6 FD 24 5D",
+    "భ్ఙూ ours BF B6 FD 2A 94 | Shree BF E6 FD 2A 5D",
+    "భ్ఙం ours BF B6 FD 94 85 | Shree BF E6 FD 5D 85"
+   ]
+  },
+  {
+   "n": 18,
+   "why": "substitution B6→E6 3C→CA",
+   "examples": [
+    "భ్ఱ ours BF B6 FD 3C | Shree BF E6 FD CA",
+    "భ్ఱు ours BF B6 FD 24 3C | Shree BF E6 FD 24 CA",
+    "భ్ఱూ ours BF B6 FD 2A 3C | Shree BF E6 FD 2A CA",
+    "భ్ఱం ours BF B6 FD 3C 85 | Shree BF E6 FD CA 85"
+   ]
+  },
+  {
+   "n": 12,
+   "why": "substitution 5B→7B",
+   "examples": [
+    "ఫ్రూం ours 5B E7 9C 4E 85 | Shree 7B E7 9C 4E 85",
+    "ఫ్రూః ours 5B E7 9C 4E 5D | Shree 7B E7 9C 4E 5D",
+    "ఫ్రూఁ ours 5B E7 9C 4E 97 | Shree 7B E7 9C 4E 97",
+    "ఫ్రుం ours 5B E7 9C 23 85 | Shree 7B E7 9C 23 85"
+   ]
+  },
+  {
+   "n": 8,
+   "why": "ra-vattu before ై: Shree uses 5B",
+   "examples": [
+    "య్రై ours 7B 4F C4 F1 FD 24 | Shree 5B C4 F1 FD 24 4F",
+    "ఱ్రై ours 7B 4F 82 F1 FD | Shree 5B 82 F1 FD 4F",
+    "ళ్రై ours 7B 4F E2 F1 FD | Shree 5B E2 F1 FD 4F",
+    "హ్రై ours 7B 4F F2 DF FD | Shree 5B F2 DF FD 4F"
+   ]
+  },
+  {
+   "n": 8,
+   "why": "substitution 5B→7B 40→E8",
+   "examples": [
+    "వ్రు ours 5B D0 40 FE 23 | Shree 7B D0 E8 FE 23",
+    "వ్రూ ours 5B D0 40 FE 4E | Shree 7B D0 E8 FE 4E",
+    "వ్రూం ours 5B D0 40 FE 4E 85 | Shree 7B D0 E8 FE 4E 85",
+    "వ్రూః ours 5B D0 40 FE 4E 5D | Shree 7B D0 E8 FE 4E 5D"
+   ]
+  },
+  {
+   "n": 6,
+   "why": "substitution B6→E8 94→5D",
+   "examples": [
+    "శ్ఙ ours D4 B6 FD 94 | Shree D4 E8 FD 5D",
+    "శ్ఙు ours D4 B6 FD 24 94 | Shree D4 E8 FD 24 5D",
+    "శ్ఙూ ours D4 B6 FD 2A 94 | Shree D4 E8 FD 2A 5D",
+    "శ్ఙం ours D4 B6 FD 94 85 | Shree D4 E8 FD 5D 85"
+   ]
+  },
+  {
+   "n": 6,
+   "why": "substitution B6→E8 3C→CA",
+   "examples": [
+    "శ్ఱ ours D4 B6 FD 3C | Shree D4 E8 FD CA",
+    "శ్ఱు ours D4 B6 FD 24 3C | Shree D4 E8 FD 24 CA",
+    "శ్ఱూ ours D4 B6 FD 2A 3C | Shree D4 E8 FD 2A CA",
+    "శ్ఱం ours D4 B6 FD 3C 85 | Shree D4 E8 FD CA 85"
+   ]
+  },
+  {
+   "n": 4,
+   "why": "ra-vattu hook after the letter (Shree: before) + ృ on a cluster: Shree A0 96 after the vattu + క్ష",
+   "examples": [
+    "క్ష్రృ ours 84 E6 FC 7B 96 | Shree 7B 84 E6 FC A0 96",
+    "క్ష్రృం ours 84 E6 FC 7B 96 85 | Shree 7B 84 E6 FC A0 96 85",
+    "క్ష్రృః ours 84 E6 FC 7B 96 5D | Shree 7B 84 E6 FC A0 96 5D",
+    "క్ష్రృఁ ours 84 E6 FC 7B 96 97 | Shree 7B 84 E6 FC A0 96 97"
+   ]
+  },
+  {
+   "n": 2,
+   "why": "passes through U+0964",
+   "examples": [
+    "। ours U+0964 | Shree 91",
+    "।। ours U+0964 U+0964 | Shree 91 91"
+   ]
+  },
+  {
+   "n": 2,
+   "why": "్త్ర/్ట్ర ligature 88/89 missing",
+   "examples": [
+    "స్త్ర ours E7 DC A2 7B | Shree E7 DC 88",
+    "ష్ట్ర ours E7 D9 74 7B | Shree E7 D9 89"
+   ]
+  },
+  {
+   "n": 2,
+   "why": "ra-vattu before ై: Shree uses 5B + క్ష",
+   "examples": [
+    "క్ష్రై ours 84 E6 FC 7B F0 4F | Shree 5B 84 F0 FC 95",
+    "క్ష్రైం ours 84 E6 FC 7B F0 4F 85 | Shree 5B 84 F0 FC 95 85"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 91→22",
+   "examples": [
+    "‘ ours 91 | Shree 22"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 92→27",
+   "examples": [
+    "’ ours 92 | Shree 27"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 2A→92",
+   "examples": [
+    "* ours 2A | Shree 92"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 96→9B",
+   "examples": [
+    "– ours 96 | Shree 9B"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "passes through U+0C62",
+   "examples": [
+    "ౢ ours U+0C62 | Shree AB A7 E6"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 91→22 91→22",
+   "examples": [
+    "‘‘ ours 91 91 | Shree 22 22"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "substitution 92→27 92→27",
+   "examples": [
+    "’’ ours 92 92 | Shree 27 27"
+   ]
+  },
+  {
+   "n": 1,
+   "why": "passes through U+200C + ra-vattu hook after the letter (Shree: before) + క్ష",
+   "examples": [
+    "క్ష్ర్‌ ours 84 E6 FC 7B 8A U+200C | Shree 7B 84 8A FC"
+   ]
+  }
+ ]
+}

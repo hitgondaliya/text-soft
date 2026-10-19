@@ -1,0 +1,707 @@
+B same Unicode, other bytes	or-inscript	L0	$	codes 6A 64	Shree u ର୍ b7 F6 (want F6)	TS uni ର୍ [0B30 0B4D]	TS leg C0 FF FA | after space C0 FF FA	handled True
+C other text	or-inscript	L0	a	codes E8	Shree u େ ା b7 7B 20 E6 (want 7B 20 E6)	TS uni ୋ [0B47 0B3E]	TS leg 7B E6 | after space 7B E6	handled True
+X Shree types nothing, TextSoft types something	or-inscript	L0	d	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+C other text	or-inscript	L0	q	codes E9	Shree u େ ୗ b7 7B 20 F2 (want 7B 20 F2)	TS uni ୌ [0B47 0B57]	TS leg 7B F2 | after space 7B F2	handled True
+C other text	or-inscript	L0	w	codes E7	Shree u େ ୖ b7 7B 20 F0 (want 7B 20 F0)	TS uni ୈ [0B47 0B56]	TS leg 7B F0 | after space 7B F0	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+Sp	t	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+Sp	y	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ଠ [0B20]	TS leg 76 FF | after space 76 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ୍ର [0B4D 0B30]	TS leg F7 | after space F7	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	%	codes 	Shree u  b7  (want )	TS uni ଜ୍ଞ [0B1C 0B4D 0B1E]	TS leg 6A | after space 6A	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	&	codes 	Shree u  b7  (want )	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	+	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	:	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	;	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	<	codes 	Shree u  b7  (want )	TS uni ଷ [0B37]	TS leg CC | after space CC	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	=	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	>	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ଯ [0B2F]	TS leg BE | after space BE	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B5D]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଆ [0B06]	TS leg 41 E6 | after space 41 E6	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	J	codes 	Shree u  b7  (want )	TS uni * [002A]	TS leg 2A | after space 2A	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଶ [0B36]	TS leg C9 | after space C9	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଳ [0B33]	TS leg C1 FF | after space C1 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଧ [0B27]	TS leg 99 | after space 99	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଙ [0B19]	TS leg 59 FF | after space 59 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	V	codes 	Shree u  b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ୠ [0B60]	TS leg 4B | after space 4B	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଽ [0B3D]	TS leg U+0B3D | after space U+0B3D	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	\	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	^	codes 	Shree u  b7  (want )	TS uni ତ୍ର [0B24 0B4D 0B30]	TS leg 86 FF F7 | after space 86 FF F7	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	e	codes 	Shree u  b7  (want )	TS uni ା [0B3E]	TS leg E6 | after space E6	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ୁ [0B41]	TS leg EB | after space EB	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ର [0B30]	TS leg C0 FF | after space C0 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ଲ [0B32]	TS leg E0 FF | after space E0 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	s	codes 	Shree u  b7  (want )	TS uni େ [0B47]	TS leg 7B | after space 7B	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ୂ [0B42]	TS leg ED | after space ED	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	x	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	z	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	{	codes 	Shree u  b7  (want )	TS uni ଢ [0B22]	TS leg 7C FF | after space 7C FF	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	or-inscript	C+S+1	}	codes 	Shree u  b7  (want )	TS uni ଞ [0B1E]	TS leg 6E FF | after space 6E FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	L0	'	codes 	Shree u  b7  (want )	TS uni ' [0027]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	L0	Z	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+Sp	-	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+Sp	=	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+A TextSoft types nothing, Shree types	ori-crtronic	C+Sp	a	codes 51	Shree u  b7 23 (want 23)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+Sp	d	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+A TextSoft types nothing, Shree types	ori-crtronic	C+Sp	k	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+C other text	ori-crtronic	C+Sp	l	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	%	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	&	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ' [0027]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	+	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	,	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ଙ [0B19]	TS leg 59 FF | after space 59 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ଖ [0B16]	TS leg 51 | after space 51	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ଧ [0B27]	TS leg 99 | after space 99	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ଥ [0B25]	TS leg 24 | after space 24	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ଠ [0B20]	TS leg 76 FF | after space 76 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ଢ [0B22]	TS leg 7C FF | after space 7C FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	:	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	;	codes 	Shree u  b7  (want )	TS uni ୂ [0B42]	TS leg ED | after space ED	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	=	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	>	codes 	Shree u  b7  (want )	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B5D]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଲ [0B32]	TS leg E0 FF | after space E0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	E	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	G	codes 	Shree u  b7  (want )	TS uni . [002E]	TS leg 2E | after space 2E	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ୟ [0B5F]	TS leg DF | after space DF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ୍‌ [0B4D 200C]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ର୍ [0B30 0B4D]	TS leg F6 | after space C0 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ୍ୟ [0B4D 0B5F]	TS leg BF | after space BF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ଌ [0B0C]	TS leg 68 | after space 68	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	\	codes 	Shree u  b7  (want )	TS uni ଶ [0B36]	TS leg C9 | after space C9	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	^	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	`	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ଡ [0B21]	TS leg 78 FF | after space 78 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଞ [0B1E]	TS leg 6E FF | after space 6E FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	e	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ୁ [0B41]	TS leg EB | after space EB	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	s	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ର [0B30]	TS leg C0 FF | after space C0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	x	codes 	Shree u  b7  (want )	TS uni ୖ [0B56]	TS leg F0 | after space F0	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	{	codes 	Shree u  b7  (want )	TS uni - [002D]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-crtronic	C+S+1	}	codes 	Shree u  b7  (want )	TS uni / [002F]	TS leg 2F | after space 2F	handled True
+A TextSoft types nothing, Shree types	ori-doe	L0	=	codes 51	Shree u  b7 23 (want 23)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-doe	L0	Z	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-doe	L0	d	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+Sp	-	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+Sp	=	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+C other text	ori-doe	C+Sp	i	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+A TextSoft types nothing, Shree types	ori-doe	C+Sp	u	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ଠ [0B20]	TS leg 76 FF | after space 76 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ୍ର [0B4D 0B30]	TS leg F7 | after space F7	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	%	codes 	Shree u  b7  (want )	TS uni ଜ୍ଞ [0B1C 0B4D 0B1E]	TS leg 6A | after space 6A	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	&	codes 	Shree u  b7  (want )	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	+	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	:	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	;	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	<	codes 	Shree u  b7  (want )	TS uni ଷ [0B37]	TS leg CC | after space CC	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	>	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ଯ [0B2F]	TS leg BE | after space BE	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B5D]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଆ [0B06]	TS leg 41 E6 | after space 41 E6	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଶ [0B36]	TS leg C9 | after space C9	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଳ [0B33]	TS leg C1 FF | after space C1 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଧ [0B27]	TS leg 99 | after space 99	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଙ [0B19]	TS leg 59 FF | after space 59 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	\	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	^	codes 	Shree u  b7  (want )	TS uni ତ୍ର [0B24 0B4D 0B30]	TS leg 86 FF F7 | after space 86 FF F7	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	e	codes 	Shree u  b7  (want )	TS uni ା [0B3E]	TS leg E6 | after space E6	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ୁ [0B41]	TS leg EB | after space EB	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ର [0B30]	TS leg C0 FF | after space C0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ଲ [0B32]	TS leg E0 FF | after space E0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	s	codes 	Shree u  b7  (want )	TS uni େ [0B47]	TS leg 7B | after space 7B	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ୂ [0B42]	TS leg ED | after space ED	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	x	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	{	codes 	Shree u  b7  (want )	TS uni ଢ [0B22]	TS leg 7C FF | after space 7C FF	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-doe	C+S+1	}	codes 	Shree u  b7  (want )	TS uni ଞ [0B1E]	TS leg 6E FF | after space 6E FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	L0	#	codes 7E	Shree u ” b7  (want )	TS uni ” [201D]	TS leg 27 27 | after space 27 27	handled True
+X Shree types nothing, TextSoft types something	ori-eng	L0	$	codes EA	Shree u ଵ b7  (want )	TS uni ଵ [0B35]	TS leg U+0B35 | after space U+0B35	handled True
+C other text	ori-eng	L0	@	codes E9	Shree u େ ୗ b7 7B 20 F2 (want 7B 20 F2)	TS uni ୌ [0B4C]	TS leg 7B F2 | after space 7B F2	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	D	codes 4F	Shree u ଡ୍ b7 78 FF FA (want 78 FF FA)	TS uni ଡ [0B21]	TS leg 78 FF | after space 78 FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	L0	F	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	J	codes 75	Shree u ଯ୍ b7 BE FA (want BE FA)	TS uni ଯ [0B2F]	TS leg BE | after space BE	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	L	codes 6D	Shree u ଳ୍ b7 C1 FF FA (want C1 FF FA)	TS uni ଳ [0B33]	TS leg C1 FF | after space C1 FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	N	codes 4A	Shree u ଣ୍ b7 7E FA (want 7E FA)	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	L0	Q	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+q quirk: composer carrier 07	ori-eng	L0	R	codes D0	Shree u ୃ b7 07 (want 07)	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	S	codes 4C	Shree u ଷ୍ b7 CC FA (want CC FA)	TS uni ଷ [0B37]	TS leg CC | after space CC	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	T	codes 55	Shree u ଟ୍ b7 73 FA (want 73 FA)	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	V	codes 54 64 71	Shree u ୱ୍ b7 48 B4 26 FA (want 48 B4 26 FA)	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	X	codes 41	Shree u ଢ଼୍ b7 DE FA (want DE FA)	TS uni ଢ଼ [0B22 0B3C]	TS leg DE | after space DE	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	b	codes 71	Shree u ବ୍ b7 AF FF FA (want AF FF FA)	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	c	codes 76	Shree u ଚ୍ b7 60 FF FA (want 60 FF FA)	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	d	codes 72	Shree u ଦ୍ b7 92 FF FA (want 92 FF FA)	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+q quirk: composer carrier 07	ori-eng	L0	e	codes 6C	Shree u େ b7 07 (want 07)	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	f	codes 57	Shree u ଫ୍ b7 FC FF FA (want FC FF FA)	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	g	codes 78	Shree u ଗ୍ b7 53 FA (want 53 FA)	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	h	codes 6F	Shree u ହ୍ b7 DC FF FA (want DC FF FA)	TS uni ହ [0B39]	TS leg DC FF | after space DC FF	handled True
+q quirk: composer carrier 07	ori-eng	L0	i	codes 67	Shree u ି b7 07 (want 07)	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	j	codes 63	Shree u ଜ୍ b7 66 FA (want 66 FA)	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	k	codes 73	Shree u କ୍ b7 4C FF FA (want 4C FF FA)	TS uni କ [0B15]	TS leg 4C FF | after space 4C FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	l	codes 4D	Shree u ଲ୍ b7 E0 FF FA (want E0 FF FA)	TS uni ଲ [0B32]	TS leg E0 FF | after space E0 FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	m	codes 61	Shree u ମ୍ b7 FE FA (want FE FA)	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	n	codes 65	Shree u ନ୍ b7 9C FF FA (want 5B FF FA)	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+q quirk: composer carrier 07	ori-eng	L0	o	codes 6B 6C	Shree u ୋ b7 07 (want 07)	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	p	codes 77	Shree u ପ୍ b7 A8 FA (want A8 FA)	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	r	codes 6A	Shree u ର୍ b7 C0 FF FA (want C0 FF FA)	TS uni ର [0B30]	TS leg C0 FF | after space C0 FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	s	codes 74	Shree u ସ୍ b7 D3 FA (want D3 FA)	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	t	codes 66	Shree u ତ୍ b7 86 FF FA (want 86 FF FA)	TS uni ତ [0B24]	TS leg 86 FF | after space 86 FF	handled True
+q quirk: composer carrier 07	ori-eng	L0	u	codes 62	Shree u ୁ b7 07 (want 07)	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	v	codes 71	Shree u ବ୍ b7 AF FF FA (want AF FF FA)	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	x	codes 5C	Shree u କ୍ଷ୍ b7 E4 FA (want E4 FA)	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	y	codes D7	Shree u ୟ୍ b7 DF FA (want DF FA)	TS uni ୟ [0B5F]	TS leg DF | after space DF	handled True
+q phonetic mode: Shree answers the virama form	ori-eng	L0	z	codes 43	Shree u ଝ୍ b7 6C FA (want 6C FA)	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+q quirk: composer carrier 07	ori-eng	L0	~	codes D0	Shree u ୃ b7 07 (want 07)	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+Sp	-	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+Sp	7	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+Sp	=	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+C other text	ori-eng	C+Sp	b	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+A TextSoft types nothing, Shree types	ori-eng	C+Sp	r	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+A TextSoft types nothing, Shree types	ori-eng	C+Sp	u	codes 51	Shree u  b7 23 (want 23)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ” [201D]	TS leg 27 27 | after space 27 27	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	%	codes 	Shree u  b7  (want )	TS uni % [0025]	TS leg 25 | after space 25	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	&	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	:	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	<	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	>	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ? [003F]	TS leg 3F | after space 3F	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ୌ [0B4C]	TS leg 7B F2 | after space 7B F2	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ୰ [0B70]	TS leg U+0B70 | after space U+0B70	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଡ [0B21]	TS leg 78 FF | after space 78 FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ୠ [0B60]	TS leg 4B | after space 4B	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ଯ [0B2F]	TS leg BE | after space BE	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଷ [0B37]	TS leg CC | after space CC	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	V	codes 	Shree u  b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଌ [0B0C]	TS leg 68 | after space 68	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B22 0B3C]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ୍ୟ [0B4D 0B5F]	TS leg BF | after space BF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	e	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ହ [0B39]	TS leg DC FF | after space DC FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	s	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ତ [0B24]	TS leg 86 FF | after space 86 FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	x	codes 	Shree u  b7  (want )	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	z	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-eng	C+S+1	~	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	L0	=	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	L0	E	codes 70	Shree u ୈ b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	L0	F	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+C other text	ori-newroma	L0	I	codes 68	Shree u ୀ b7 EA (want EA)	TS uni ଈ [0B08]	TS leg 43 | after space 43	handled True
+C other text	ori-newroma	L0	O	codes 6C 79	Shree u ୌ b7 7B F2 (want 7B F2)	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+C other text	ori-newroma	L0	U	codes 6E	Shree u ୂ b7 ED (want ED)	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+C other text	ori-newroma	L0	a	codes 6B	Shree u ଅ b7 41 (want 41)	TS uni ା [0B3E]	TS leg E6 | after space E6	handled True
+C other text	ori-newroma	L0	o	codes 6C 6B	Shree u ୋ b7 7B E6 (want 7B E6)	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+C other text	ori-newroma	L0	u	codes 62	Shree u ୁ b7 EB (want EB)	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+C other text	ori-newroma	C+Sp	b	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+A TextSoft types nothing, Shree types	ori-newroma	C+Sp	k	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	%	codes 	Shree u  b7  (want )	TS uni % [0025]	TS leg 25 | after space 25	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	:	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	=	codes 	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	>	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ? [003F]	TS leg 3F | after space 3F	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଡ [0B21]	TS leg 78 FF | after space 78 FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଈ [0B08]	TS leg 43 | after space 43	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ୰ [0B70]	TS leg U+0B70 | after space U+0B70	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଶ [0B36]	TS leg C9 | after space C9	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B5D]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ୍ୟ [0B4D 0B5F]	TS leg BF | after space BF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	e	codes 	Shree u  b7  (want )	TS uni େ [0B47]	TS leg 7B | after space 7B	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ହ [0B39]	TS leg DC FF | after space DC FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	s	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ତ [0B24]	TS leg 86 FF | after space 86 FF	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	x	codes 	Shree u  b7  (want )	TS uni କ୍ଷ [0B15 0B4D 0B37]	TS leg E4 | after space E4	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	z	codes 	Shree u  b7  (want )	TS uni ଌ [0B0C]	TS leg 68 | after space 68	handled True
+X Shree types nothing, TextSoft types something	ori-newroma	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	L0	#	codes 7E	Shree u ” b7  (want )	TS uni ” [201D]	TS leg 27 27 | after space 27 27	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	L0	$	codes EA	Shree u ଵ b7  (want )	TS uni ଵ [0B35]	TS leg U+0B35 | after space U+0B35	handled True
+C other text	ori-phonetic	L0	@	codes E9	Shree u େ ୗ b7 7B 20 F2 (want 7B 20 F2)	TS uni ୌ [0B47 0B57]	TS leg 7B F2 | after space 7B F2	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	L0	F	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	L0	Q	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	R	codes D0	Shree u ୃ b7 07 (want 07)	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	e	codes 6C	Shree u େ b7 07 (want 07)	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	i	codes 67	Shree u ି b7 07 (want 07)	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	o	codes 6B 6C	Shree u ୋ b7 07 (want 07)	TS uni ୋ [0B4B]	TS leg 7B E6 | after space 7B E6	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	u	codes 62	Shree u ୁ b7 07 (want 07)	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+q quirk: composer carrier 07	ori-phonetic	L0	~	codes D0	Shree u ୃ b7 07 (want 07)	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+Sp	-	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+Sp	7	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+Sp	=	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+C other text	ori-phonetic	C+Sp	b	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+A TextSoft types nothing, Shree types	ori-phonetic	C+Sp	r	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+A TextSoft types nothing, Shree types	ori-phonetic	C+Sp	u	codes 51	Shree u  b7 23 (want 23)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ” [201D]	TS leg 27 27 | after space 27 27	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	%	codes 	Shree u  b7  (want )	TS uni % [0025]	TS leg 25 | after space 25	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	&	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	:	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	<	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	>	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ? [003F]	TS leg 3F | after space 3F	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ୌ [0B47 0B57]	TS leg 7B F2 | after space 7B F2	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ୰ [0B70]	TS leg U+0B70 | after space U+0B70	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଡ୍ [0B21 0B4D]	TS leg 78 FF FA | after space 78 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ୠ [0B60]	TS leg 4B | after space 4B	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ଯ୍ [0B2F 0B4D]	TS leg BE FA | after space BE FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଣ୍ [0B23 0B4D]	TS leg 7E FA | after space 7E FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଷ୍ [0B37 0B4D]	TS leg CC FA | after space CC FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଟ୍ [0B1F 0B4D]	TS leg 73 FA | after space 73 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	V	codes 	Shree u  b7  (want )	TS uni ୱ୍ [0B71 0B4D]	TS leg 48 B4 26 FA | after space 48 B4 26 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଌ [0B0C]	TS leg 68 | after space 68	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଢ଼୍ [0B5D 0B4D]	TS leg DE FA | after space DE FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ୍ୟ [0B4D 0B5F]	TS leg BF | after space BF	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ବ୍ [0B2C 0B4D]	TS leg AF FF FA | after space AF FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଚ୍ [0B1A 0B4D]	TS leg 60 FF FA | after space 60 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ଦ୍ [0B26 0B4D]	TS leg 92 FF FA | after space 92 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	e	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ଫ୍ [0B2B 0B4D]	TS leg FC FF FA | after space FC FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ଗ୍ [0B17 0B4D]	TS leg 53 FA | after space 53 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ହ୍ [0B39 0B4D]	TS leg DC FF FA | after space DC FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ଜ୍ [0B1C 0B4D]	TS leg 66 FA | after space 66 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ମ୍ [0B2E 0B4D]	TS leg FE FA | after space FE FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ନ୍ [0B28 0B4D]	TS leg 5B FF FA | after space 5B FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ୋ [0B4B]	TS leg 7B E6 | after space 7B E6	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ପ୍ [0B2A 0B4D]	TS leg A8 FA | after space A8 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	s	codes 	Shree u  b7  (want )	TS uni ସ୍ [0B38 0B4D]	TS leg D3 FA | after space D3 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ତ୍ [0B24 0B4D]	TS leg 86 FF FA | after space 86 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ବ୍ [0B2C 0B4D]	TS leg AF FF FA | after space AF FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	x	codes 	Shree u  b7  (want )	TS uni କ୍ଷ୍ [0B15 0B4D 0B37 0B4D]	TS leg E4 FA | after space E4 FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	z	codes 	Shree u  b7  (want )	TS uni ଝ୍ [0B1D 0B4D]	TS leg 6C FA | after space 6C FA	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-phonetic	C+S+1	~	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-roma	L0	f	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+Sp	-	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+Sp	=	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+C other text	ori-roma	C+Sp	d	codes E1	Shree u  b7 FD (want FD)	TS uni ୍ବ [0B4D 0B2C]	TS leg B4 | after space B4	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+Sp	f	codes D5	Shree u  b7  (want )	TS uni ୍‍ [0B4D 200D]	TS leg FA | after space FA	handled True
+A TextSoft types nothing, Shree types	ori-roma	C+Sp	s	codes E0	Shree u  b7 E3 (want E3)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	!	codes 	Shree u  b7  (want )	TS uni ! [0021]	TS leg 21 | after space 21	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	%	codes 	Shree u  b7  (want )	TS uni % [0025]	TS leg 25 | after space 25	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	&	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	,	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	:	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	<	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	>	codes 	Shree u  b7  (want )	TS uni . [002E]	TS leg 2E | after space 2E	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ? [003F]	TS leg 3F | after space 3F	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଅ [0B05]	TS leg 41 | after space 41	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ଧ [0B27]	TS leg 99 | after space 99	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	E	codes 	Shree u  b7  (want )	TS uni େ [0B47]	TS leg 7B | after space 7B	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ୍‌ [0B4D 200C]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ୀ [0B40]	TS leg EA | after space EA	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	Q	codes 	Shree u  b7  (want )	TS uni ଠ [0B20]	TS leg 76 FF | after space 76 FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଶ [0B36]	TS leg C9 | after space C9	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଥ [0B25]	TS leg 24 | after space 24	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ୂ [0B42]	TS leg ED | after space ED	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଢ [0B22]	TS leg 7C FF | after space 7C FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଋ [0B0B]	TS leg 4A | after space 4A	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	\	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	`	codes 	Shree u  b7  (want )	TS uni ୖ [0B56]	TS leg F0 | after space F0	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ବ [0B2C]	TS leg AF FF | after space AF FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ଦ [0B26]	TS leg 92 FF | after space 92 FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	e	codes 	Shree u  b7  (want )	TS uni େ [0B47]	TS leg 7B | after space 7B	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ହ [0B39]	TS leg DC FF | after space DC FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ମ [0B2E]	TS leg FE | after space FE	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ପ [0B2A]	TS leg A8 | after space A8	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	s	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ତ [0B24]	TS leg 86 FF | after space 86 FF	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	x	codes 	Shree u  b7  (want )	TS uni ଷ [0B37]	TS leg CC | after space CC	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	z	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	{	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-roma	C+S+1	~	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+A TextSoft types nothing, Shree types	ori-typewrit	L0	Q	codes 51	Shree u  b7 23 (want 23)	TS uni  []	TS leg  | after space 	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	L0	d	codes 64	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	!	codes 	Shree u  b7  (want )	TS uni । [0964]	TS leg 3E | after space 3E	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	"	codes 	Shree u  b7  (want )	TS uni ଁ [0B01]	TS leg F4 | after space F4	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	#	codes 	Shree u  b7  (want )	TS uni ’ [2019]	TS leg 27 | after space 27	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	%	codes 	Shree u  b7  (want )	TS uni % [0025]	TS leg 25 | after space 25	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	&	codes 	Shree u  b7  (want )	TS uni ₹ [20B9]	TS leg U+20B9 | after space U+20B9	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	'	codes 	Shree u  b7  (want )	TS uni ର୍ [0B30 0B4D]	TS leg F6 | after space C0 FF FA	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	(	codes 	Shree u  b7  (want )	TS uni ( [0028]	TS leg 28 | after space 28	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	)	codes 	Shree u  b7  (want )	TS uni ) [0029]	TS leg 29 | after space 29	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	,	codes 	Shree u  b7  (want )	TS uni , [002C]	TS leg 2C | after space 2C	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	-	codes 7B	Shree u — b7  (want )	TS uni — [2014]	TS leg 2D 2D | after space 2D 2D	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	0	codes 	Shree u  b7  (want )	TS uni ୦ [0B66]	TS leg 30 | after space 30	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	1	codes 	Shree u  b7  (want )	TS uni ୧ [0B67]	TS leg 31 | after space 31	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	2	codes 	Shree u  b7  (want )	TS uni ୨ [0B68]	TS leg 32 | after space 32	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	3	codes 	Shree u  b7  (want )	TS uni ୩ [0B69]	TS leg 33 | after space 33	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	4	codes 	Shree u  b7  (want )	TS uni ୪ [0B6A]	TS leg 34 | after space 34	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	5	codes 	Shree u  b7  (want )	TS uni ୫ [0B6B]	TS leg 35 | after space 35	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	6	codes 	Shree u  b7  (want )	TS uni ୬ [0B6C]	TS leg 36 | after space 36	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	7	codes 	Shree u  b7  (want )	TS uni ୭ [0B6D]	TS leg 37 | after space 37	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	8	codes 	Shree u  b7  (want )	TS uni ୮ [0B6E]	TS leg 38 | after space 38	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	9	codes 	Shree u  b7  (want )	TS uni ୯ [0B6F]	TS leg 39 | after space 39	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	:	codes 	Shree u  b7  (want )	TS uni : [003A]	TS leg 3A | after space 3A	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	<	codes 	Shree u  b7  (want )	TS uni ଏ [0B0F]	TS leg 46 | after space 46	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	>	codes 	Shree u  b7  (want )	TS uni ଐ [0B10]	TS leg 47 | after space 47	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	?	codes 	Shree u  b7  (want )	TS uni ? [003F]	TS leg 3F | after space 3F	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	@	codes 	Shree u  b7  (want )	TS uni ‘ [2018]	TS leg 22 | after space 22	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	A	codes 	Shree u  b7  (want )	TS uni ଢ଼ [0B5D]	TS leg DE | after space DE	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	B	codes 	Shree u  b7  (want )	TS uni ଉ [0B09]	TS leg 44 | after space 44	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	C	codes 	Shree u  b7  (want )	TS uni ଝ [0B1D]	TS leg 6C | after space 6C	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	D	codes 	Shree u  b7  (want )	TS uni ୍‌ [0B4D 200C]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	E	codes 	Shree u  b7  (want )	TS uni ଡ଼ [0B5C]	TS leg DD | after space DD	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	F	codes 	Shree u  b7  (want )	TS uni ଥ [0B25]	TS leg 24 | after space 24	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	G	codes 	Shree u  b7  (want )	TS uni ଇ [0B07]	TS leg 42 | after space 42	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	H	codes 	Shree u  b7  (want )	TS uni ଈ [0B08]	TS leg 43 | after space 43	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	I	codes 	Shree u  b7  (want )	TS uni ଠ [0B20]	TS leg 76 FF | after space 76 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	J	codes 	Shree u  b7  (want )	TS uni ଣ [0B23]	TS leg 7E | after space 7E	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	K	codes E4	Shree u ୡ b7  (want )	TS uni ୡ [0B61]	TS leg U+0B61 | after space U+0B61	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	M	codes 	Shree u  b7  (want )	TS uni ଲ [0B32]	TS leg E0 FF | after space E0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	N	codes 	Shree u  b7  (want )	TS uni ଊ [0B0A]	TS leg 45 | after space 45	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	O	codes 	Shree u  b7  (want )	TS uni ଡ [0B21]	TS leg 78 FF | after space 78 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	P	codes 	Shree u  b7  (want )	TS uni ଢ [0B22]	TS leg 7C FF | after space 7C FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	S	codes 	Shree u  b7  (want )	TS uni ଖ [0B16]	TS leg 51 | after space 51	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	T	codes 	Shree u  b7  (want )	TS uni ଓ [0B13]	TS leg 48 | after space 48	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	U	codes 	Shree u  b7  (want )	TS uni ଟ [0B1F]	TS leg 73 | after space 73	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	V	codes 	Shree u  b7  (want )	TS uni ଛ [0B1B]	TS leg 64 | after space 64	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	W	codes 	Shree u  b7  (want )	TS uni ଫ [0B2B]	TS leg FC FF | after space FC FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	X	codes 	Shree u  b7  (want )	TS uni ଘ [0B18]	TS leg 57 | after space 57	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	Y	codes 	Shree u  b7  (want )	TS uni ଔ [0B14]	TS leg 49 | after space 49	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	Z	codes 	Shree u  b7  (want )	TS uni ଙ [0B19]	TS leg 59 FF | after space 59 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	\	codes 	Shree u  b7  (want )	TS uni ୟ [0B5F]	TS leg DF | after space DF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	^	codes 	Shree u  b7  (want )	TS uni ୠ [0B60]	TS leg 4B | after space 4B	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	_	codes 7D	Shree u – b7  (want )	TS uni – [2013]	TS leg 2D | after space 2D	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	`	codes 	Shree u  b7  (want )	TS uni ା [0B3E]	TS leg E6 | after space E6	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	a	codes E6	Shree u ଼ b7  (want )	TS uni ଼ [0B3C]	TS leg U+0B3C | after space U+0B3C	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	b	codes 	Shree u  b7  (want )	TS uni ୁ [0B41]	TS leg EB | after space EB	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	c	codes 	Shree u  b7  (want )	TS uni ଜ [0B1C]	TS leg 66 | after space 66	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	d	codes 	Shree u  b7  (want )	TS uni ୍ [0B4D]	TS leg FA | after space FA	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	e	codes 	Shree u  b7  (want )	TS uni ନ [0B28]	TS leg 5B FF | after space 5B FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	f	codes 	Shree u  b7  (want )	TS uni ତ [0B24]	TS leg 86 FF | after space 86 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	g	codes 	Shree u  b7  (want )	TS uni ି [0B3F]	TS leg E7 | after space E7	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	h	codes 	Shree u  b7  (want )	TS uni ୀ [0B40]	TS leg EA | after space EA	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	i	codes 	Shree u  b7  (want )	TS uni ଂ [0B02]	TS leg F3 | after space F3	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	j	codes 	Shree u  b7  (want )	TS uni ର [0B30]	TS leg C0 FF | after space C0 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	k	codes F7	Shree u ୣ b7  (want )	TS uni ୣ [0B63]	TS leg U+0B63 | after space U+0B63	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	l	codes F6	Shree u ୢ b7  (want )	TS uni ୢ [0B62]	TS leg U+0B62 | after space U+0B62	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	m	codes 	Shree u  b7  (want )	TS uni ଳ [0B33]	TS leg C1 FF | after space C1 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	n	codes 	Shree u  b7  (want )	TS uni ୂ [0B42]	TS leg ED | after space ED	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	o	codes 	Shree u  b7  (want )	TS uni ହ [0B39]	TS leg DC FF | after space DC FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	p	codes 	Shree u  b7  (want )	TS uni ୖ [0B56]	TS leg F0 | after space F0	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	r	codes F8	Shree u ୄ b7  (want )	TS uni ୄ [0B44]	TS leg U+0B44 | after space U+0B44	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	s	codes 	Shree u  b7  (want )	TS uni କ [0B15]	TS leg 4C FF | after space 4C FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	t	codes 	Shree u  b7  (want )	TS uni ସ [0B38]	TS leg D3 | after space D3	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	u	codes F4	Shree u ଓଁ b7  (want )	TS uni ଓଁ [0B13 0B01]	TS leg 48 F4 | after space 48 F4	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	v	codes 	Shree u  b7  (want )	TS uni ଚ [0B1A]	TS leg 60 FF | after space 60 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	w	codes E5	Shree u ୱ b7  (want )	TS uni ୱ [0B71]	TS leg 48 B4 | after space 48 B4	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	x	codes 	Shree u  b7  (want )	TS uni ଗ [0B17]	TS leg 53 | after space 53	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	z	codes 	Shree u  b7  (want )	TS uni ଭ [0B2D]	TS leg B5 FF | after space B5 FF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	{	codes 	Shree u  b7  (want )	TS uni ୃ [0B43]	TS leg F5 | after space F5	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	|	codes DD	Shree u ॥ b7  (want )	TS uni ॥ [0965]	TS leg 3E 3E | after space 3E 3E	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	}	codes 	Shree u  b7  (want )	TS uni ୍ୟ [0B4D 0B5F]	TS leg BF | after space BF	handled True
+X Shree types nothing, TextSoft types something	ori-typewrit	C+S+1	~	codes 	Shree u  b7  (want )	TS uni ଃ [0B03]	TS leg 85 | after space 85	handled True

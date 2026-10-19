@@ -1,0 +1,40 @@
+80	read € [20AC]		reported €
+4D E6 FC 80	read క€ [0C15 20AC]		reported €
+80 4D E6 FC	read €క [20AC 0C15]		reported €
+41 80 41	read అ€అ [0C05 20AC 0C05]		reported €
+8B	read  []		reported ‹
+4D E6 FC 8B	read క [0C15]		reported ‹
+8B 4D E6 FC	read క [0C15]		reported ‹
+41 8B 41	read అఅ [0C05 0C05]		reported ‹
+9A	read  []		reported š
+4D E6 FC 9A	read క [0C15]		reported š
+9A 4D E6 FC	read క [0C15]		reported š
+41 9A 41	read అఅ [0C05 0C05]		reported š
+AD	read  []		reported ­
+4D E6 FC AD	read క [0C15]		reported ­
+AD 4D E6 FC	read క [0C15]		reported ­
+41 AD 41	read అఅ [0C05 0C05]		reported ­
+E6	read  []		reported æ
+4D E6 FC E6	read క [0C15]		reported æ
+E6 4D E6 FC	read క [0C15]		reported æ
+41 E6 41	read అఅ [0C05 0C05]		reported æ
+E7	read  []		reported ç
+4D E6 FC E7	read క [0C15]		reported ç
+E7 4D E6 FC	read క [0C15]		reported ç
+41 E7 41	read అఅ [0C05 0C05]		reported ç
+E8	read  []		reported è
+4D E6 FC E8	read క [0C15]		reported è
+E8 4D E6 FC	read క [0C15]		reported è
+41 E8 41	read అఅ [0C05 0C05]		reported è
+FC	read  []		reported ü
+4D E6 FC FC	read క [0C15]		reported ü
+FC 4D E6 FC	read క [0C15]		reported ü
+41 FC 41	read అఅ [0C05 0C05]		reported ü
+FD	read  []		reported ý
+4D E6 FC FD	read క [0C15]		reported ý
+FD 4D E6 FC	read క [0C15]		reported ý
+41 FD 41	read అఅ [0C05 0C05]		reported ý
+FE	read  []		reported þ
+4D E6 FC FE	read క [0C15]		reported þ
+FE 4D E6 FC	read క [0C15]		reported þ
+41 FE 41	read అఅ [0C05 0C05]		reported þ

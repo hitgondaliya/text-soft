@@ -1,0 +1,35 @@
+2026-10-18T14:32:50.256Z run1 pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T14:32:50.994Z run1 runlist capvo C:/Shree-Lipi nxt exit 0 captured 15 
+2026-10-18T14:32:51.476Z run1 runlist capvo-b C:/Shree-Lipi nxt exit 0 captured 15 
+2026-10-18T14:32:51.658Z run1 restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\run1-pre.bin 
+2026-10-18T14:32:51.871Z run1 after restore: 0 bytes differ from the pre-dump
+2026-10-18T14:33:38.608Z layers pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T14:33:39.013Z layers runlist layers C:/Shree-Lipi nxt/DOE.MAL exit 0 captured 1 
+2026-10-18T14:33:39.185Z layers restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\layers-pre.bin 
+2026-10-18T14:33:39.373Z layers after restore: 0 bytes differ from the pre-dump
+2026-10-18T14:33:39.730Z runE pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T14:33:41.237Z runE runlist capx px exit 0 captured 49 
+2026-10-18T14:33:42.087Z runE runlist capx-b px exit 0 captured 49 
+2026-10-18T14:33:42.261Z runE restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\runE-pre.bin 
+2026-10-18T14:33:42.447Z runE after restore: 0 bytes differ from the pre-dump
+2026-10-18T14:38:43.841Z runP pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T14:39:02.680Z runP runlist capp p exit 0 captured 784 
+2026-10-18T14:39:10.806Z runP runlist capp-b p exit 0 captured 784 
+2026-10-18T14:39:11.006Z runP restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\runP-pre.bin 
+2026-10-18T14:39:11.216Z runP after restore: 0 bytes differ from the pre-dump
+2026-10-18T14:53:38.662Z runL pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 408; differs from start.bin in 1 bytes
+2026-10-18T14:53:38.927Z runL runlist capl ln exit 0 captured 1 
+2026-10-18T14:53:39.127Z runL runlist capl-b ln exit 0 captured 1 
+2026-10-18T14:53:39.230Z runL restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\runL-pre.bin 
+2026-10-18T14:53:39.332Z runL after restore: 0 bytes differ from the pre-dump
+2026-10-18T14:57:00.809Z runW pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T14:57:25.694Z runW runlist capw pw exit 0 captured 888 
+2026-10-18T14:57:34.364Z runW runlist capw-b pw exit 0 captured 888 
+2026-10-18T14:57:34.580Z runW restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\runW-pre.bin 
+2026-10-18T14:57:34.798Z runW after restore: 0 bytes differ from the pre-dump
+2026-10-18T15:00:25.656Z runX pre-dump header 00 00 01 00 00 80 00 00 00 00 00 nonzero bytes 407; differs from start.bin in 0 bytes
+2026-10-18T15:00:26.068Z runX runlist capxx pxx exit 0 captured 22 
+2026-10-18T15:00:26.328Z runX runlist capxx-b pxx exit 0 captured 22 
+2026-10-18T15:00:26.407Z runX restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\runX-pre.bin 
+2026-10-18T15:00:26.495Z runX after restore: 0 bytes differ from the pre-dump
+2026-10-18T20:42:04+05:30 final: SL8_DLL_DATA == start.bin before and after probe2 --put start.bin; SL8_DEFAULTS_DATA == DEFAULTS-start.bin (0/439)

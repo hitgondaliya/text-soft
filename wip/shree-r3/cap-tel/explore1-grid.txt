@@ -1,0 +1,174 @@
+21 "!" | alone:"!"=21 | క+c:"క!"=4D E6 FC 21 | c+క:"!క"=21 4D E6 FC | ప+c:"ప!"=E7 B3 21 | క్+c:"క్"=4D E6 FC | c+్క:"!్క"=21 50 | ర్+c:"ర్"=C6 E6 FF
+22 "‘" | alone:"‘"=22 | క+c:"క‘"=4D E6 FC 22 | c+క:"‘క"=22 4D E6 FC | ప+c:"ప‘"=E7 B3 22 | క్+c:"క్"=4D E6 FC | c+్క:"‘్క"=22 50 | ర్+c:"ర్"=C6 E6 FF
+23 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+24 "ఓ" | alone:"ో"=E6 61 E6 61 | క+c:"కో"=4D F8 | c+క:"ో"=E6 61 E6 61 4D E6 FC | ప+c:"పో"=B4 F9 | క్+c:"క్"=4D E6 FC | c+్క:"ో"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+25 "%" | alone:"%"=25 | క+c:"క%"=4D E6 FC 25 | c+క:"%క"=25 4D E6 FC | ప+c:"ప%"=E7 B3 25 | క్+c:"క్"=4D E6 FC | c+్క:"%్క"=25 50 | ర్+c:"ర్"=C6 E6 FF
+26 "ఊ" | alone:"ూ"=E6 61 E6 61 | క+c:"కూ"=4D E6 FC 2A | c+క:"ూ"=E6 61 E6 61 4D E6 FC | ప+c:"పూ"=E7 B3 4E | క్+c:"క్"=4D E6 FC | c+్క:"ూ"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+27 "’" | alone:"’"=27 | క+c:"క’"=4D E6 FC 27 | c+క:"’క"=27 4D E6 FC | ప+c:"ప’"=E7 B3 27 | క్+c:"క్"=4D E6 FC | c+్క:"’్క"=27 50 | ర్+c:"ర్"=C6 E6 FF
+28 "(" | alone:"("=28 | క+c:"క("=4D E6 FC 28 | c+క:"(క"=28 4D E6 FC | ప+c:"ప("=E7 B3 28 | క్+c:"క్"=4D E6 FC | c+్క:"(్క"=28 50 | ర్+c:"ర్"=C6 E6 FF
+29 ")" | alone:")"=29 | క+c:"క)"=4D E6 FC 29 | c+క:")క"=29 4D E6 FC | ప+c:"ప)"=E7 B3 29 | క్+c:"క్"=4D E6 FC | c+్క:")్క"=29 50 | ర్+c:"ర్"=C6 E6 FF
+2A "*" | alone:"*"=92 | క+c:"క*"=4D E6 FC 92 | c+క:"*క"=92 4D E6 FC | ప+c:"ప*"=E7 B3 92 | క్+c:"క్"=4D E6 FC | c+్క:"*్క"=92 50 | ర్+c:"ర్"=C6 E6 FF
+2B "+" | alone:"+"=2B | క+c:"క+"=4D E6 FC 2B | c+క:"+క"=2B 4D E6 FC | ప+c:"ప+"=E7 B3 2B | క్+c:"క్"=4D E6 FC | c+్క:"+్క"=2B 50 | ర్+c:"ర్"=C6 E6 FF
+2C "," | alone:","=2C | క+c:"క,"=4D E6 FC 2C | c+క:",క"=2C 4D E6 FC | ప+c:"ప,"=E7 B3 2C | క్+c:"క్"=4D E6 FC | c+్క:",్క"=2C 50 | ర్+c:"ర్"=C6 E6 FF
+2D "-" | alone:"-"=26 | క+c:"క-"=4D E6 FC 26 | c+క:"-క"=26 4D E6 FC | ప+c:"ప-"=E7 B3 26 | క్+c:"క్"=4D E6 FC | c+్క:"-్క"=26 50 | ర్+c:"ర్"=C6 E6 FF
+2E "." | alone:"."=2E | క+c:"క."=4D E6 FC 2E | c+క:".క"=2E 4D E6 FC | ప+c:"ప."=E7 B3 2E | క్+c:"క్"=4D E6 FC | c+్క:"్క"=2E 50 | ర్+c:"ర్"=C6 E6 FF
+2F "/" | alone:"/"=2F | క+c:"క/"=4D E6 FC 2F | c+క:"/క"=2F 4D E6 FC | ప+c:"ప/"=E7 B3 2F | క్+c:"క్"=4D E6 FC | c+్క:"/్క"=2F 50 | ర్+c:"ర్"=C6 E6 FF
+30 "౦" | alone:"౦"=30 | క+c:"క౦"=4D E6 FC 30 | c+క:"౦క"=30 4D E6 FC | ప+c:"ప౦"=E7 B3 30 | క్+c:"క్"=4D E6 FC | c+్క:"౦్క"=30 50 | ర్+c:"ర్"=C6 E6 FF
+31 "౧" | alone:"౧"=31 | క+c:"క౧"=4D E6 FC 31 | c+క:"౧క"=31 4D E6 FC | ప+c:"ప౧"=E7 B3 31 | క్+c:"క్"=4D E6 FC | c+్క:"౧్క"=31 50 | ర్+c:"ర్"=C6 E6 FF
+32 "౨" | alone:"౨"=32 | క+c:"క౨"=4D E6 FC 32 | c+క:"౨క"=32 4D E6 FC | ప+c:"ప౨"=E7 B3 32 | క్+c:"క్"=4D E6 FC | c+్క:"౨్క"=32 50 | ర్+c:"ర్"=C6 E6 FF
+33 "౩" | alone:"౩"=33 | క+c:"క౩"=4D E6 FC 33 | c+క:"౩క"=33 4D E6 FC | ప+c:"ప౩"=E7 B3 33 | క్+c:"క్"=4D E6 FC | c+్క:"౩్క"=33 50 | ర్+c:"ర్"=C6 E6 FF
+34 "౪" | alone:"౪"=34 | క+c:"క౪"=4D E6 FC 34 | c+క:"౪క"=34 4D E6 FC | ప+c:"ప౪"=E7 B3 34 | క్+c:"క్"=4D E6 FC | c+్క:"౪్క"=34 50 | ర్+c:"ర్"=C6 E6 FF
+35 "౫" | alone:"౫"=35 | క+c:"క౫"=4D E6 FC 35 | c+క:"౫క"=35 4D E6 FC | ప+c:"ప౫"=E7 B3 35 | క్+c:"క్"=4D E6 FC | c+్క:"౫్క"=35 50 | ర్+c:"ర్"=C6 E6 FF
+36 "౬" | alone:"౬"=36 | క+c:"క౬"=4D E6 FC 36 | c+క:"౬క"=36 4D E6 FC | ప+c:"ప౬"=E7 B3 36 | క్+c:"క్"=4D E6 FC | c+్క:"౬్క"=36 50 | ర్+c:"ర్"=C6 E6 FF
+37 "౭" | alone:"౭"=37 | క+c:"క౭"=4D E6 FC 37 | c+క:"౭క"=37 4D E6 FC | ప+c:"ప౭"=E7 B3 37 | క్+c:"క్"=4D E6 FC | c+్క:"౭్క"=37 50 | ర్+c:"ర్"=C6 E6 FF
+38 "౮" | alone:"౮"=38 | క+c:"క౮"=4D E6 FC 38 | c+క:"౮క"=38 4D E6 FC | ప+c:"ప౮"=E7 B3 38 | క్+c:"క్"=4D E6 FC | c+్క:"౮్క"=38 50 | ర్+c:"ర్"=C6 E6 FF
+39 "౯" | alone:"౯"=39 | క+c:"క౯"=4D E6 FC 39 | c+క:"౯క"=39 4D E6 FC | ప+c:"ప౯"=E7 B3 39 | క్+c:"క్"=4D E6 FC | c+్క:"౯్క"=39 50 | ర్+c:"ర్"=C6 E6 FF
+3A ":" | alone:":"=3A | క+c:"క:"=4D E6 FC 3A | c+క:":క"=3A 4D E6 FC | ప+c:"ప:"=E7 B3 3A | క్+c:"క్"=4D E6 FC | c+్క:":్క"=3A 50 | ర్+c:"ర్"=C6 E6 FF
+3B ";" | alone:";"=3B | క+c:"క;"=4D E6 FC 3B | c+క:";క"=3B 4D E6 FC | ప+c:"ప;"=E7 B3 3B | క్+c:"క్"=4D E6 FC | c+్క:";్క"=3B 50 | ర్+c:"ర్"=C6 E6 FF
+3C "ం" | alone:"ం"=85 | క+c:"కం"=4D E6 FC 85 | c+క:"ంక"=85 4D E6 FC | ప+c:"పం"=E7 B3 85 | క్+c:"క్"=4D E6 FC | c+్క:"ం్క"=85 50 | ర్+c:"ర్"=C6 E6 FF
+3D "=" | alone:"="=3D | క+c:"క="=4D E6 FC 3D | c+క:"=క"=3D 4D E6 FC | ప+c:"ప="=E7 B3 3D | క్+c:"క్"=4D E6 FC | c+్క:"=్క"=3D 50 | ర్+c:"ర్"=C6 E6 FF
+3E "ః" | alone:"ః"=40 | క+c:"కః"=4D E6 FC 40 | c+క:"ఃక"=40 4D E6 FC | ప+c:"పః"=E7 B3 40 | క్+c:"క్"=4D E6 FC | c+్క:"ః్క"=40 50 | ర్+c:"ర్"=C6 E6 FF
+3F "?" | alone:"?"=3F | క+c:"క?"=4D E6 FC 3F | c+క:"?క"=3F 4D E6 FC | ప+c:"ప?"=E7 B3 3F | క్+c:"క్"=4D E6 FC | c+్క:"?్క"=3F 50 | ర్+c:"ర్"=C6 E6 FF
+40 "ఔ" | alone:"ౌ"=E6 61 E6 61 | క+c:"కౌ"=4D FA | c+క:"ౌ"=E6 61 E6 61 4D E6 FC | ప+c:"పౌ"=B4 FB | క్+c:"క్"=4D E6 FC | c+్క:"ౌ"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+41 "ఆ" | alone:"ఆ"=42 | క+c:"కఆ"=4D E6 FC 42 | c+క:"ఆక"=42 4D E6 FC | ప+c:"పఆ"=E7 B3 42 | క్+c:"క్"=4D E6 FC | c+్క:"ఆ్క"=42 50 | ర్+c:"ర్"=C6 E6 FF
+42 "ఎ" | alone:"ఎ"=47 | క+c:"కఎ"=4D E6 FC 47 | c+క:"ఎక"=47 4D E6 FC | ప+c:"పఎ"=E7 B3 47 | క్+c:"క్"=4D E6 FC | c+్క:"ఎ్క"=47 50 | ర్+c:"ర్"=C6 E6 FF
+43 "ఛ" | alone:"ఛ"=62 E8 FE | క+c:"కఛ"=4D E6 FC 62 E8 FE | c+క:"ఛక"=62 E8 FE 4D E6 FC | ప+c:"పఛ"=E7 B3 62 E8 FE | క్+c:"క్ఛ"=4D E6 FC 65 | c+్క:"ఛ్క"=62 E8 FE 50 | ర్+c:"ర్ఛ"=C6 E6 FF 65
+44 "్" | alone:"్"=- | క+c:"క్‌"=- | c+క:"్"=- | ప+c:"ప్‌"=- | క్+c:"క్"=- | c+్క:"్"=- | ర్+c:"ర్"=-
+45 "ఖ" | alone:"ఖ"=51 | క+c:"కఖ"=4D E6 FC 51 | c+క:"ఖక"=51 4D E6 FC | ప+c:"పఖ"=E7 B3 51 | క్+c:"క్ఖ"=4D E6 FC 55 | c+్క:"ఖ్క"=51 50 | ర్+c:"ర్ఖ"=C6 E6 FF 55
+46 "ణ" | alone:"ణ"=D7 FD | క+c:"కణ"=4D E6 FC D7 FD | c+క:"ణక"=D7 FD 4D E6 FC | ప+c:"పణ"=E7 B3 D7 FD | క్+c:"క్ణ"=4D E6 FC 7E | c+్క:"ణ్క"=D7 FD 50 | ర్+c:"ర్ణ"=C6 E6 FF 7E
+47 "థ" | alone:"థ"=A3 E6 FE | క+c:"కథ"=4D E6 FC A3 E6 FE | c+క:"థక"=A3 E6 FE 4D E6 FC | ప+c:"పథ"=E7 B3 A3 E6 FE | క్+c:"క్థ"=4D E6 FC A6 | c+్క:"థ్క"=A3 E6 FE 50 | ర్+c:"ర్థ"=C6 E6 FF A6
+48 "ధ" | alone:"ధ"=AB A7 E6 FE | క+c:"కధ"=4D E6 FC AB A7 E6 FE | c+క:"ధక"=AB A7 E6 FE 4D E6 FC | ప+c:"పధ"=E7 B3 AB A7 E6 FE | క్+c:"క్ధ"=4D E6 FC AE | c+్క:"ధ్క"=AB A7 E6 FE 50 | ర్+c:"ర్ధ"=C6 E6 FF AE
+49 "ళ" | alone:"ళ"=E2 E6 FD | క+c:"కళ"=4D E6 FC E2 E6 FD | c+క:"ళక"=E2 E6 FD 4D E6 FC | ప+c:"పళ"=E7 B3 E2 E6 FD | క్+c:"క్ళ"=4D E6 FC E5 | c+్క:"ళ్క"=E2 E6 FD 50 | ర్+c:"ర్ళ"=C6 E6 FF E5
+4A "భ" | alone:"భ"=BF E6 FD | క+c:"కభ"=4D E6 FC BF E6 FD | c+క:"భక"=BF E6 FD 4D E6 FC | ప+c:"పభ"=E7 B3 BF E6 FD | క్+c:"క్భ"=4D E6 FC C2 | c+్క:"భ్క"=BF E6 FD 50 | ర్+c:"ర్భ"=C6 E6 FF C2
+4B "ఱ" | alone:"ఱ"=82 FD | క+c:"కఱ"=4D E6 FC 82 FD | c+క:"ఱక"=82 FD 4D E6 FC | ప+c:"పఱ"=E7 B3 82 FD | క్+c:"క్ఱ"=4D E6 FC CA | c+్క:"ఱ్క"=82 FD 50 | ర్+c:"ర్ఱ"=C6 E6 FF CA
+4C "హ" | alone:"హ"=E7 DF FD | క+c:"కహ"=4D E6 FC E7 DF FD | c+క:"హక"=E7 DF FD 4D E6 FC | ప+c:"పహ"=E7 B3 E7 DF FD | క్+c:"క్హ"=4D E6 FC E1 | c+్క:"హ్క"=E7 DF FD 50 | ర్+c:"ర్హ"=C6 E6 FF E1
+4D "ఐ" | alone:"ఐ"=49 | క+c:"కఐ"=4D E6 FC 49 | c+క:"ఐక"=49 4D E6 FC | ప+c:"పఐ"=E7 B3 49 | క్+c:"క్"=4D E6 FC | c+్క:"ఐ్క"=49 50 | ర్+c:"ర్"=C6 E6 FF
+4E "ఉ" | alone:"ఉ"=45 | క+c:"కఉ"=4D E6 FC 45 | c+క:"ఉక"=45 4D E6 FC | ప+c:"పఉ"=E7 B3 45 | క్+c:"క్"=4D E6 FC | c+్క:"ఉ్క"=45 50 | ర్+c:"ర్"=C6 E6 FF
+4F "శ" | alone:"శ"=D4 E8 FD | క+c:"కశ"=4D E6 FC D4 E8 FD | c+క:"శక"=D4 E8 FD 4D E6 FC | ప+c:"పశ"=E7 B3 D4 E8 FD | క్+c:"క్శ"=4D E6 FC D8 | c+్క:"శ్క"=D4 E8 FD 50 | ర్+c:"ర్శ"=C6 E6 FF D8
+50 "ఒ" | alone:"ఒ"=4A | క+c:"కఒ"=4D E6 FC 4A | c+క:"ఒక"=4A 4D E6 FC | ప+c:"పఒ"=E7 B3 4A | క్+c:"క్"=4D E6 FC | c+్క:"ఒ్క"=4A 50 | ర్+c:"ర్"=C6 E6 FF
+51 "అ" | alone:"అ"=41 | క+c:"కఅ"=4D E6 FC 41 | c+క:"అక"=41 4D E6 FC | ప+c:"పఅ"=E7 B3 41 | క్+c:"క్"=4D E6 FC | c+్క:"అ్క"=41 50 | ర్+c:"ర్"=C6 E6 FF
+52 "ఠ" | alone:"ఠ"=75 E6 FF | క+c:"కఠ"=4D E6 FC 75 E6 FF | c+క:"ఠక"=75 E6 FF 4D E6 FC | ప+c:"పఠ"=E7 B3 75 E6 FF | క్+c:"క్ఠ"=4D E6 FC 78 | c+్క:"ఠ్క"=75 E6 FF 50 | ర్+c:"ర్ఠ"=C6 E6 FF 78
+53 "ఇ" | alone:"ఇ"=43 | క+c:"కఇ"=4D E6 FC 43 | c+క:"ఇక"=43 4D E6 FC | ప+c:"పఇ"=E7 B3 43 | క్+c:"క్"=4D E6 FC | c+్క:"ఇ్క"=43 50 | ర్+c:"ర్"=C6 E6 FF
+54 "ఢ" | alone:"ఢ"=C9 E6 FE | క+c:"కఢ"=4D E6 FC C9 E6 FE | c+క:"ఢక"=C9 E6 FE 4D E6 FC | ప+c:"పఢ"=E7 B3 C9 E6 FE | క్+c:"క్ఢ"=4D E6 FC 7C | c+్క:"ఢ్క"=C9 E6 FE 50 | ర్+c:"ర్ఢ"=C6 E6 FF 7C
+55 "బ" | alone:"బ"=BA | క+c:"కబ"=4D E6 FC BA | c+క:"బక"=BA 4D E6 FC | ప+c:"పబ"=E7 B3 BA | క్+c:"క్బ"=4D E6 FC BE | c+్క:"బ్క"=BA 50 | ర్+c:"ర్బ"=C6 E6 FF BE
+56 "ఈ" | alone:"ఈ"=44 | క+c:"కఈ"=4D E6 FC 44 | c+క:"ఈక"=44 4D E6 FC | ప+c:"పఈ"=E7 B3 44 | క్+c:"క్"=4D E6 FC | c+్క:"ఈ్క"=44 50 | ర్+c:"ర్"=C6 E6 FF
+57 "ఘ" | alone:"ఘ"=E7 9C 24 | క+c:"కఘ"=4D E6 FC E7 9C 24 | c+క:"ఘక"=E7 9C 24 4D E6 FC | ప+c:"పఘ"=E7 B3 E7 9C 24 | క్+c:"క్ఘ"=4D E6 FC 83 | c+్క:"ఘ్క"=E7 9C 24 50 | ర్+c:"ర్ఘ"=C6 E6 FF 83
+58 "ఝ" | alone:"ఝ"=6D | క+c:"కఝ"=4D E6 FC 6D | c+క:"ఝక"=6D 4D E6 FC | ప+c:"పఝ"=E7 B3 6D | క్+c:"క్ఝ"=4D E6 FC | c+్క:"ఝ్క"=6D 50 | ర్+c:"ర్ఝ"=C6 E6 FF
+59 "ఫ" | alone:"ఫ"=E7 9C | క+c:"కఫ"=4D E6 FC E7 9C | c+క:"ఫక"=E7 9C 4D E6 FC | ప+c:"పఫ"=E7 B3 E7 9C | క్+c:"క్ఫ"=4D E6 FC B9 | c+్క:"ఫ్క"=E7 9C 50 | ర్+c:"ర్ఫ"=C6 E6 FF B9
+5A "ఋ" | alone:"ఋ"=BA 24 24 | క+c:"కఋ"=4D E6 FC BA 24 24 | c+క:"ఋక"=BA 24 24 4D E6 FC | ప+c:"పఋ"=E7 B3 BA 24 24 | క్+c:"క్"=4D E6 FC | c+్క:"ఋ్క"=BA 24 24 50 | ర్+c:"ర్"=C6 E6 FF
+5B "[" | alone:"["=- | క+c:"క["=4D E6 FC | c+క:"[క"=4D E6 FC | ప+c:"ప["=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"[్క"=50 | ర్+c:"ర్"=C6 E6 FF
+5C null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+5D "]" | alone:"]"=- | క+c:"క]"=4D E6 FC | c+క:"]క"=4D E6 FC | ప+c:"ప]"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"]్క"=50 | ర్+c:"ర్"=C6 E6 FF
+5E "క్ష" | alone:"క్ష"=84 E6 FC | క+c:"కక్ష"=4D E6 FC 84 E6 FC | c+క:"క్షక"=84 E6 FC 4D E6 FC | ప+c:"పక్ష"=E7 B3 84 E6 FC | క్+c:"క్"=4D E6 FC 3C | c+్క:"క్ష్క"=84 E6 FC A0 50 | ర్+c:"ర్"=C6 E6 FF 3C
+5F "ౠ" | alone:"ౄ"=E6 61 E6 61 97 | క+c:"కౄ"=4D E6 FC | c+క:"ౄక"=E6 61 E6 61 97 4D E6 FC | ప+c:"పౄ"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ౄ్క"=E6 61 E6 61 97 50 | ర్+c:"ర్"=C6 E6 FF
+60 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+61 "ఆ" | alone:"ా"=E6 61 E6 61 | క+c:"కా"=4D 3E | c+క:"ా"=E6 61 E6 61 4D E6 FC | ప+c:"పా"=B4 EB | క్+c:"క్"=4D E6 FC | c+్క:"ా"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+62 "ఎ" | alone:"ె"=E6 61 E6 61 | క+c:"కె"=4D F0 FC | c+క:"ె"=E6 61 E6 61 4D E6 FC | ప+c:"పె"=F2 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ె"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+63 "చ" | alone:"చ"=5E E8 FE | క+c:"కచ"=4D E6 FC 5E E8 FE | c+క:"చక"=5E E8 FE 4D E6 FC | ప+c:"పచ"=E7 B3 5E E8 FE | క్+c:"క్చ"=4D E6 FC 61 | c+్క:"చ్క"=5E E8 FE 50 | ర్+c:"ర్చ"=C6 E6 FF 61
+64 "్" | alone:null=- | క+c:"క్"=4D E6 FC | c+క:"్క"=50 | ప+c:"ప్"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్్క"=50 | ర్+c:"ర్"=C6 E6 FF
+65 "క" | alone:"క"=4D E6 FC | క+c:"కక"=4D E6 FC 4D E6 FC | c+క:"కక"=4D E6 FC 4D E6 FC | ప+c:"పక"=E7 B3 4D E6 FC | క్+c:"క్క"=4D E6 FC 50 | c+్క:"క్క"=4D E6 FC 50 | ర్+c:"ర్క"=C6 E6 FF 50
+66 "య" | alone:"య"=C4 E6 FD 24 | క+c:"కయ"=4D E6 FC C4 E6 FD 24 | c+క:"యక"=C4 E6 FD 24 4D E6 FC | ప+c:"పయ"=E7 B3 C4 E6 FD 24 | క్+c:"క్య"=4D E6 FC C5 | c+్క:"య్క"=C4 E6 FD 24 50 | ర్+c:"ర్య"=C6 E6 FF C5
+67 "త" | alone:"త"=99 E8 FE | క+c:"కత"=4D E6 FC 99 E8 FE | c+క:"తక"=99 E8 FE 4D E6 FC | ప+c:"పత"=E7 B3 99 E8 FE | క్+c:"క్త"=4D E6 FC A2 | c+్క:"త్క"=99 E8 FE 50 | ర్+c:"ర్త"=C6 E6 FF A2
+68 "ద" | alone:"ద"=A7 E6 FE | క+c:"కద"=4D E6 FC A7 E6 FE | c+క:"దక"=A7 E6 FE 4D E6 FC | ప+c:"పద"=E7 B3 A7 E6 FE | క్+c:"క్ద"=4D E6 FC AA | c+్క:"ద్క"=A7 E6 FE 50 | ర్+c:"ర్ద"=C6 E6 FF AA
+69 "ల" | alone:"ల"=CB | క+c:"కల"=4D E6 FC CB | c+క:"లక"=CB 4D E6 FC | ప+c:"పల"=E7 B3 CB | క్+c:"క్ల"=4D E6 FC CF | c+్క:"ల్క"=CB 50 | ర్+c:"ర్ల"=C6 E6 FF CF
+6A "న" | alone:"న"=AF E8 FE | క+c:"కన"=4D E6 FC AF E8 FE | c+క:"నక"=AF E8 FE 4D E6 FC | ప+c:"పన"=E7 B3 AF E8 FE | క్+c:"క్న"=4D E6 FC B2 | c+్క:"న్క"=AF E8 FE 50 | ర్+c:"ర్న"=C6 E6 FF B2
+6B "ర" | alone:"ర"=C6 E6 FF | క+c:"కర"=4D E6 FC C6 E6 FF | c+క:"రక"=C6 E6 FF 4D E6 FC | ప+c:"పర"=E7 B3 C6 E6 FF | క్+c:"క్ర"=4D E6 FC | c+్క:"ర్క"=C6 E6 FF 50 | ర్+c:"ర్ర"=C6 E6 FF
+6C "స" | alone:"స"=E7 DC | క+c:"కస"=4D E6 FC E7 DC | c+క:"సక"=E7 DC 4D E6 FC | ప+c:"పస"=E7 B3 E7 DC | క్+c:"క్స"=4D E6 FC DE | c+్క:"స్క"=E7 DC 50 | ర్+c:"ర్స"=C6 E6 FF DE
+6D "ఐ" | alone:"ై్"=4F F2 | క+c:"కై"=4F F2 | c+క:"ైక"=4F F2 | ప+c:"పై"=4F F2 | క్+c:"క్"=4F F2 | c+్క:"ై్"=4F F2 | ర్+c:"ర్"=4F F2
+6E "ఉ" | alone:"ు"=E6 61 E6 61 | క+c:"కు"=4D E6 FC 24 | c+క:"ు"=E6 61 E6 61 4D E6 FC | ప+c:"పు"=E7 B3 23 | క్+c:"క్"=4D E6 FC | c+్క:"ు"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+6F "వ" | alone:"వ"=D0 E8 FE | క+c:"కవ"=4D E6 FC D0 E8 FE | c+క:"వక"=D0 E8 FE 4D E6 FC | ప+c:"పవ"=E7 B3 D0 E8 FE | క్+c:"క్వ"=4D E6 FC D3 | c+్క:"వ్క"=D0 E8 FE 50 | ర్+c:"ర్వ"=C6 E6 FF D3
+70 "ఒ" | alone:"ొ"=E6 61 E6 61 | క+c:"కొ"=4D F6 | c+క:"ొ"=E6 61 E6 61 4D E6 FC | ప+c:"పొ"=B4 F7 | క్+c:"క్"=4D E6 FC | c+్క:"ొ"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+71 "ష" | alone:"ష"=E7 D9 | క+c:"కష"=4D E6 FC E7 D9 | c+క:"షక"=E7 D9 4D E6 FC | ప+c:"పష"=E7 B3 E7 D9 | క్+c:"క్ష"=4D E6 FC DB | c+్క:"ష్క"=E7 D9 50 | ర్+c:"ర్ష"=C6 E6 FF DB
+72 "ట" | alone:"ట"=72 | క+c:"కట"=4D E6 FC 72 | c+క:"టక"=72 4D E6 FC | ప+c:"పట"=E7 B3 72 | క్+c:"క్ట"=4D E6 FC 74 | c+్క:"ట్క"=72 50 | ర్+c:"ర్ట"=C6 E6 FF 74
+73 "ఇ" | alone:"ి"=E6 61 E6 61 | క+c:"కి"=4D EC FC | c+క:"ి"=E6 61 E6 61 4D E6 FC | ప+c:"పి"=ED B3 | క్+c:"క్"=4D E6 FC | c+్క:"ి"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+74 "డ" | alone:"డ"=79 E6 FE | క+c:"కడ"=4D E6 FC 79 E6 FE | c+క:"డక"=79 E6 FE 4D E6 FC | ప+c:"పడ"=E7 B3 79 E6 FE | క్+c:"క్డ"=4D E6 FC 7A | c+్క:"డ్క"=79 E6 FE 50 | ర్+c:"ర్డ"=C6 E6 FF 7A
+75 "మ" | alone:"మ"=D0 E8 FE 24 | క+c:"కమ"=4D E6 FC D0 E8 FE 24 | c+క:"మక"=D0 E8 FE 24 4D E6 FC | ప+c:"పమ"=E7 B3 D0 E8 FE 24 | క్+c:"క్మ"=4D E6 FC C3 | c+్క:"మ్క"=D0 E8 FE 24 50 | ర్+c:"ర్మ"=C6 E6 FF C3
+76 "ఈ" | alone:"ీ"=E6 61 E6 61 | క+c:"కీ"=4D EE FC | c+క:"ీ"=E6 61 E6 61 4D E6 FC | ప+c:"పీ"=EF B3 | క్+c:"క్"=4D E6 FC | c+్క:"ీ"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+77 "గ" | alone:"గ"=56 E6 FC | క+c:"కగ"=4D E6 FC 56 E6 FC | c+క:"గక"=56 E6 FC 4D E6 FC | ప+c:"పగ"=E7 B3 56 E6 FC | క్+c:"క్గ"=4D E6 FC 59 | c+్క:"గ్క"=56 E6 FC 50 | ర్+c:"ర్గ"=C6 E6 FF 59
+78 "జ" | alone:"జ"=66 | క+c:"కజ"=4D E6 FC 66 | c+క:"జక"=66 4D E6 FC | ప+c:"పజ"=E7 B3 66 | క్+c:"క్జ"=4D E6 FC 6A | c+్క:"జ్క"=66 50 | ర్+c:"ర్జ"=C6 E6 FF 6A
+79 "ప" | alone:"ప"=E7 B3 | క+c:"కప"=4D E6 FC E7 B3 | c+క:"పక"=E7 B3 4D E6 FC | ప+c:"పప"=E7 B3 E7 B3 | క్+c:"క్ప"=4D E6 FC B5 | c+్క:"ప్క"=E7 B3 50 | ర్+c:"ర్ప"=C6 E6 FF B5
+7A "ఋ" | alone:"ృ"=E6 61 E6 61 96 | క+c:"కృ"=4D E6 FC 96 | c+క:"ృక"=E6 61 E6 61 96 4D E6 FC | ప+c:"పృ"=E7 B3 96 | క్+c:"క్"=4D E6 FC | c+్క:"ృ్క"=E6 61 E6 61 96 50 | ర్+c:"ర్"=C6 E6 FF
+7B "—" | alone:"—"=9B 9B | క+c:"క—"=4D E6 FC 9B 9B | c+క:"—క"=9B 9B 4D E6 FC | ప+c:"ప—"=E7 B3 9B 9B | క్+c:"క్"=4D E6 FC | c+్క:"—్క"=9B 9B 50 | ర్+c:"ర్"=C6 E6 FF
+7C null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+7D "–" | alone:"–"=9B | క+c:"క–"=4D E6 FC 9B | c+క:"–క"=9B 4D E6 FC | ప+c:"ప–"=E7 B3 9B | క్+c:"క్"=4D E6 FC | c+్క:"–్క"=9B 50 | ర్+c:"ర్"=C6 E6 FF
+7E null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+7F null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+80 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+81 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+82 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+83 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+84 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+85 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+86 null | alone:null=2D | క+c:"క"=4D E6 FC 2D | c+క:"క"=2D 4D E6 FC | ప+c:"ప"=E7 B3 2D | క్+c:"క్"=4D E6 FC | c+్క:"్క"=2D 50 | ర్+c:"ర్"=C6 E6 FF
+87 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+88 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+89 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8A null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8B null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8C null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8D null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8E null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+8F null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A0 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A1 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A2 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A3 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A4 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A5 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A6 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A7 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A8 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+A9 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AA null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AB null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AC null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AD null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AE null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+AF null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+D0 "ఓ" | alone:"ఓ"=4B | క+c:"కఓ"=4D E6 FC 4B | c+క:"ఓక"=4B 4D E6 FC | ప+c:"పఓ"=E7 B3 4B | క్+c:"క్"=4D E6 FC | c+్క:"ఓ్క"=4B 50 | ర్+c:"ర్"=C6 E6 FF
+D1 "ఙ" | alone:"ఙ"=5C FD | క+c:"కఙ"=4D E6 FC 5C FD | c+క:"ఙక"=5C FD 4D E6 FC | ప+c:"పఙ"=E7 B3 5C FD | క్+c:"క్ఙ"=4D E6 FC 5D | c+్క:"ఙ్క"=5C FD 50 | ర్+c:"ర్ఙ"=C6 E6 FF 5D
+D2 "ఞ" | alone:"ఞ"=70 FD | క+c:"కఞ"=4D E6 FC 70 FD | c+క:"ఞక"=70 FD 4D E6 FC | ప+c:"పఞ"=E7 B3 70 FD | క్+c:"క్ఞ"=4D E6 FC 71 | c+్క:"ఞ్క"=70 FD 50 | ర్+c:"ర్ఞ"=C6 E6 FF 71
+D3 "ఏ" | alone:"ే"=E6 61 E6 61 | క+c:"కే"=4D F3 FC | c+క:"ే"=E6 61 E6 61 4D E6 FC | ప+c:"పే"=F5 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ే"=E6 61 E6 61 50 | ర్+c:"ర్"=C6 E6 FF
+D4 "ఏ" | alone:"ఏ"=48 | క+c:"కఏ"=4D E6 FC 48 | c+క:"ఏక"=48 4D E6 FC | ప+c:"పఏ"=E7 B3 48 | క్+c:"క్"=4D E6 FC | c+్క:"ఏ్క"=48 50 | ర్+c:"ర్"=C6 E6 FF
+D5 "ఊ" | alone:"ఊ"=46 | క+c:"కఊ"=4D E6 FC 46 | c+క:"ఊక"=46 4D E6 FC | ప+c:"పఊ"=E7 B3 46 | క్+c:"క్"=4D E6 FC | c+్క:"ఊ్క"=46 50 | ర్+c:"ర్"=C6 E6 FF
+D6 "ఔ" | alone:"ఔ"=4C | క+c:"కఔ"=4D E6 FC 4C | c+క:"ఔక"=4C 4D E6 FC | ప+c:"పఔ"=E7 B3 4C | క్+c:"క్"=4D E6 FC | c+్క:"ఔ్క"=4C 50 | ర్+c:"ర్"=C6 E6 FF
+D7 "్ర" | alone:"*్ర"=7B | క+c:"క*్ర"=4D E6 FC 7B | c+క:"*్రక"=7B 4D E6 FC | ప+c:"ప*్ర"=E7 B3 7B | క్+c:"క్"=4D E6 FC | c+్క:"*్ర్క"=7B 4D E6 FC | ర్+c:"ర్"=C6 E6 FF
+D8 "శ్రీ" | alone:"శ్రీ"=7D | క+c:"కశ్రీ"=4D E6 FC 7D | c+క:"శ్రీక"=7D 4D E6 FC | ప+c:"పశ్రీ"=E7 B3 7D | క్+c:"క్"=4D E6 FC | c+్క:"శ్క్రీ"=7D 50 | ర్+c:"ర్"=C6 E6 FF
+D9 "ఌ" | alone:"ఌ"=- | క+c:"కఌ"=4D E6 FC | c+క:"ఌక"=4D E6 FC | ప+c:"పఌ"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ఌ్క"=50 | ర్+c:"ర్"=C6 E6 FF
+DA "ౡ" | alone:"ౡ"=- | క+c:"కౡ"=4D E6 FC | c+క:"ౡక"=4D E6 FC | ప+c:"పౡ"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ౡ్క"=50 | ర్+c:"ర్"=C6 E6 FF
+DB null | alone:null=94 | క+c:"క"=4D E6 FC 94 | c+క:"క"=94 4D E6 FC | ప+c:"ప"=E7 B3 94 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=94 50 | ర్+c:"ర్"=C6 E6 FF
+DC "₹" | alone:"₹"=- | క+c:"క₹"=4D E6 FC | c+క:"₹క"=4D E6 FC | ప+c:"ప₹"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"₹్క"=50 | ర్+c:"ర్"=C6 E6 FF
+DD "×" | alone:"×"=- | క+c:"క×"=4D E6 FC | c+క:"×క"=4D E6 FC | ప+c:"ప×"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"×్క"=50 | ర్+c:"ర్"=C6 E6 FF
+DE "÷" | alone:"÷"=- | క+c:"క÷"=4D E6 FC | c+క:"÷క"=4D E6 FC | ప+c:"ప÷"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"÷్క"=50 | ర్+c:"ర్"=C6 E6 FF
+DF null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+E0 "ఁ" | alone:"ఁ"=B6 | క+c:"కఁ"=4D E6 FC B6 | c+క:"ఁక"=B6 4D E6 FC | ప+c:"పఁ"=E7 B3 B6 | క్+c:"క్"=4D E6 FC | c+్క:"ఁ్క"=B6 50 | ర్+c:"ర్"=C6 E6 FF
+E1 null | alone:null=93 | క+c:"క"=4D E6 FC 93 | c+క:"క"=93 4D E6 FC | ప+c:"ప"=E7 B3 93 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=93 50 | ర్+c:"ర్"=C6 E6 FF
+E2 "ౠ" | alone:"ౠ"=BA 24 2A | క+c:"కౠ"=4D E6 FC BA 24 2A | c+క:"ౠక"=BA 24 2A 4D E6 FC | ప+c:"పౠ"=E7 B3 BA 24 2A | క్+c:"క్"=4D E6 FC | c+్క:"ౠ్క"=BA 24 2A 50 | ర్+c:"ర్"=C6 E6 FF
+E3 "ఽ" | alone:"ఽ"=AC | క+c:"కఽ"=4D E6 FC AC | c+క:"ఽక"=AC 4D E6 FC | ప+c:"పఽ"=E7 B3 AC | క్+c:"క్"=4D E6 FC | c+్క:"ఽ్క"=AC 50 | ర్+c:"ర్"=C6 E6 FF
+E4 "।" | alone:"।"=91 | క+c:"క।"=4D E6 FC 91 | c+క:"।క"=91 4D E6 FC | ప+c:"ప।"=E7 B3 91 | క్+c:"క్"=4D E6 FC | c+్క:"।్క"=91 50 | ర్+c:"ర్"=C6 E6 FF
+E5 "ఫె" | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+E6 "బె" | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+E7 null | alone:null=3D | క+c:"క"=3D | c+క:"క"=3D | ప+c:"ప"=3D | క్+c:"క్"=3D | c+్క:"్క"=3D | ర్+c:"ర్"=3D
+E8 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+E9 null | alone:null=2B | క+c:"క"=2B | c+క:"క"=2B | ప+c:"ప"=2B | క్+c:"క్"=2B | c+్క:"్క"=2B | ర్+c:"ర్"=2B
+EA null | alone:null=3B | క+c:"క"=3B | c+క:"క"=3B | ప+c:"ప"=3B | క్+c:"క్"=3B | c+్క:"్క"=3B | ర్+c:"ర్"=3B
+EB null | alone:null=25 | క+c:"క"=25 | c+క:"క"=25 | ప+c:"ప"=25 | క్+c:"క్"=25 | c+్క:"్క"=25 | ర్+c:"ర్"=25
+EC "వె" | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+ED "్ర" | alone:"*్ర"=5B | క+c:"క*్ర"=4D E6 FC 5B | c+క:"*్రక"=5B 4D E6 FC | ప+c:"ప*్ర"=E7 B3 5B | క్+c:"క్"=4D E6 FC | c+్క:"*్ర్క"=5B 4D E6 FC | ర్+c:"ర్"=C6 E6 FF
+EE null | alone:null=AC | క+c:"క"=4D E6 FC AC | c+క:"క"=AC 4D E6 FC | ప+c:"ప"=E7 B3 AC | క్+c:"క్"=4D E6 FC | c+్క:"్క"=AC 4D E6 FC | ర్+c:"ర్"=C6 E6 FF
+EF null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F0 "ౢ" | alone:"ౢ"=AB A7 E6 | క+c:"కౢ"=4D E6 FC AB A7 E6 | c+క:"ౢక"=AB A7 E6 4D E6 FC | ప+c:"పౢ"=E7 B3 AB A7 E6 | క్+c:"క్"=4D E6 FC | c+్క:"ౢ్క"=AB A7 E6 50 | ర్+c:"ర్"=C6 E6 FF
+F1 "ౣ" | alone:"ౣ"=- | క+c:"కౣ"=4D E6 FC | c+క:"ౣక"=4D E6 FC | ప+c:"పౣ"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"ౣ్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F2 "‍" | alone:"‍"=- | క+c:"క‍"=4D E6 FC | c+క:"‍క"=4D E6 FC | ప+c:"ప‍"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"‍్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F3 "‌" | alone:"‌"=- | క+c:"క‌"=4D E6 FC | c+క:"‌క"=4D E6 FC | ప+c:"ప‌"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"‌్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F4 "॥" | alone:"॥"=- | క+c:"క॥"=4D E6 FC | c+క:"॥క"=4D E6 FC | ప+c:"ప॥"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"॥్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F5 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F6 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F7 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F8 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+F9 null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+FA null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+FB "—" | alone:"—"=- | క+c:"క—"=4D E6 FC | c+క:"—క"=4D E6 FC | ప+c:"ప—"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"—్క"=50 | ర్+c:"ర్"=C6 E6 FF
+FC null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF
+FD "–" | alone:"–"=- | క+c:"క–"=4D E6 FC | c+క:"–క"=4D E6 FC | ప+c:"ప–"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"–్క"=50 | ర్+c:"ర్"=C6 E6 FF
+FE null | alone:null=- | క+c:"క"=4D E6 FC | c+క:"క"=4D E6 FC | ప+c:"ప"=E7 B3 | క్+c:"క్"=4D E6 FC | c+్క:"్క"=50 | ర్+c:"ర్"=C6 E6 FF

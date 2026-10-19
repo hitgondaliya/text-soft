@@ -1,0 +1,437 @@
+{
+ "about": "Unicode strings with no direct Shree 7 composer spelling, with a spelling derived from the composer's own answers. NOT part of the truth.",
+ "gaps": [
+  {
+   "unicode": "క్",
+   "derived": "4D 8A FC",
+   "from": "క్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఖ్",
+   "derived": "52 8C FD",
+   "from": "ఖ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "గ్",
+   "derived": "56 8A FC",
+   "from": "గ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఘ్",
+   "derived": "8B 9C 24",
+   "from": "ఘ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఙ్",
+   "derived": "5C 8A FD",
+   "from": "ఙ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "చ్",
+   "derived": "5E 8C FE",
+   "from": "చ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఛ్",
+   "derived": "62 8C FE",
+   "from": "ఛ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "జ్",
+   "derived": "67 8C FD",
+   "from": "జ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఝ్",
+   "derived": "C6 8A FF 6E 24",
+   "from": "ఝ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఞ్",
+   "derived": "70 8A FF",
+   "from": "ఞ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ట్",
+   "derived": "73 8C FD",
+   "from": "ట్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఠ్",
+   "derived": "75 8A FF",
+   "from": "ఠ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "డ్",
+   "derived": "79 8A FE",
+   "from": "డ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఢ్",
+   "derived": "C9 8A FE",
+   "from": "ఢ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ణ్",
+   "derived": "D7 8A FD",
+   "from": "ణ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "త్",
+   "derived": "99 8C FE",
+   "from": "త్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "థ్",
+   "derived": "A3 8A FE",
+   "from": "థ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ద్",
+   "derived": "A7 8A FE",
+   "from": "ద్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ధ్",
+   "derived": "AB A7 8A FE",
+   "from": "ధ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "న్",
+   "derived": "AF 8C FE",
+   "from": "న్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ప్",
+   "derived": "8B B3",
+   "from": "ప్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఫ్",
+   "derived": "8B 9C",
+   "from": "ఫ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "బ్",
+   "derived": "BB 8C FD",
+   "from": "బ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "భ్",
+   "derived": "BF 8C FD",
+   "from": "భ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "మ్",
+   "derived": "D0 8C FE 24",
+   "from": "మ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "య్",
+   "derived": "C4 8C FD 24",
+   "from": "య్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ర్",
+   "derived": "C6 8A FF",
+   "from": "ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఱ్",
+   "derived": "82 8C FD",
+   "from": "ఱ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ల్",
+   "derived": "CC 8C FD",
+   "from": "ల్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ళ్",
+   "derived": "E2 8C FD",
+   "from": "ళ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "వ్",
+   "derived": "D0 8C FE",
+   "from": "వ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "శ్",
+   "derived": "D4 8C FD",
+   "from": "శ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ష్",
+   "derived": "8B D9",
+   "from": "ష్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "స్",
+   "derived": "8B DC",
+   "from": "స్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "హ్",
+   "derived": "8B DF FD",
+   "from": "హ్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "క్ష్",
+   "derived": "84 8A FC",
+   "from": "క్ష్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఛ్ర్",
+   "derived": "7B 62 8C FE",
+   "from": "ఛ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఖ్ర్",
+   "derived": "7B 52 8C FD",
+   "from": "ఖ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ణ్ర్",
+   "derived": "7B D7 8A FD",
+   "from": "ణ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "థ్ర్",
+   "derived": "7B A3 8A FE",
+   "from": "థ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ధ్ర్",
+   "derived": "7B AB A7 8A FE",
+   "from": "ధ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ళ్ర్",
+   "derived": "7B E2 8C FD",
+   "from": "ళ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "భ్ర్",
+   "derived": "7B BF 8C FD",
+   "from": "భ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఱ్ర్",
+   "derived": "7B 82 8C FD",
+   "from": "ఱ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "హ్ర్",
+   "derived": "7B 8B DF FD",
+   "from": "హ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "శ్ర్",
+   "derived": "7B D4 8C FD",
+   "from": "శ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఠ్ర్",
+   "derived": "7B 75 8A FF",
+   "from": "ఠ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఢ్ర్",
+   "derived": "7B C9 8A FE",
+   "from": "ఢ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "బ్ర్",
+   "derived": "7B BB 8C FD",
+   "from": "బ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఘ్ర్",
+   "derived": "7B 8B 9C 24",
+   "from": "ఘ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఝ్ర్",
+   "derived": "7B C6 8A FF 6E 24",
+   "from": "ఝ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఫ్ర్",
+   "derived": "7B 8B 9C",
+   "from": "ఫ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "క్ష్ర్",
+   "derived": "7B 84 8A FC",
+   "from": "క్ష్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "చ్ర్",
+   "derived": "7B 5E 8C FE",
+   "from": "చ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "క్ర్",
+   "derived": "7B 4D 8A FC",
+   "from": "క్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "య్ర్",
+   "derived": "7B C4 8C FD 24",
+   "from": "య్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "త్ర్",
+   "derived": "7B 99 8C FE",
+   "from": "త్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ద్ర్",
+   "derived": "7B A7 8A FE",
+   "from": "ద్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ల్ర్",
+   "derived": "7B CC 8C FD",
+   "from": "ల్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "న్ర్",
+   "derived": "7B AF 8C FE",
+   "from": "న్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ర్ర్",
+   "derived": "7B C6 8A FF",
+   "from": "ర్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "స్ర్",
+   "derived": "7B 8B DC",
+   "from": "స్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "వ్ర్",
+   "derived": "7B D0 8C FE",
+   "from": "వ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ష్ర్",
+   "derived": "7B 8B D9",
+   "from": "ష్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ట్ర్",
+   "derived": "7B 73 8C FD",
+   "from": "ట్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "డ్ర్",
+   "derived": "7B 79 8A FE",
+   "from": "డ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "మ్ర్",
+   "derived": "7B D0 8C FE 24",
+   "from": "మ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "గ్ర్",
+   "derived": "7B 56 8A FC",
+   "from": "గ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "జ్ర్",
+   "derived": "7B 67 8C FD",
+   "from": "జ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ప్ర్",
+   "derived": "7B 8B B3",
+   "from": "ప్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఙ్ర్",
+   "derived": "7B 5C 8A FD",
+   "from": "ఙ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  },
+  {
+   "unicode": "ఞ్ర్",
+   "derived": "7B 70 8A FF",
+   "from": "ఞ్ర్‌",
+   "why": "word-final virama: the pending link (C + 64 + space / end) makes the 7 composer write the letter with NO virama; the only visible-virama spelling is the halant code 44, whose Unicode answer is C + ్ + ZWNJ. A Unicode C్ at a word end looks exactly like that."
+  }
+ ]
+}

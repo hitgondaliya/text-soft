@@ -1,0 +1,163 @@
+[
+ {
+  "file": "QAAA.PUN",
+  "key": "a",
+  "slot": 0,
+  "raw": "67 73",
+  "tag": "ਕਿ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "b",
+  "slot": 1,
+  "raw": "B0 D6",
+  "tag": "ref first: [ਕਿ] ੰ = ਕਿੰ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "c",
+  "slot": 2,
+  "raw": "73 64 66",
+  "tag": "ਕ link ਤ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "d",
+  "slot": 3,
+  "raw": "67 B2 D6",
+  "tag": "ref middle: ਿ [ਕ link ਤ] ੰ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "e",
+  "slot": 4,
+  "raw": "73 44 66",
+  "tag": "ਕ halant ਤ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "f",
+  "slot": 5,
+  "raw": "67 B4 D6",
+  "tag": "ਿ [ਕ halant ਤ] ੰ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "g",
+  "slot": 6,
+  "raw": "26 64 66 D1",
+  "tag": "ਸ link ਤ ੍ਰ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "h",
+  "slot": 7,
+  "raw": "B6 68",
+  "tag": "[ਸ link ਤ ੍ਰ] ੀ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "i",
+  "slot": 8,
+  "raw": "65 D2 6B",
+  "tag": "ਨ ੍ਹ ਾ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "j",
+  "slot": 9,
+  "raw": "B8 69",
+  "tag": "[ਨ ੍ਹ ਾ] ਂ (direct 4 codes known)"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "k",
+  "slot": 10,
+  "raw": "B0",
+  "tag": "[ਕਿ] alone"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "l",
+  "slot": 11,
+  "raw": "B0 B0",
+  "tag": "[ਕਿ][ਕਿ]"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "m",
+  "slot": 12,
+  "raw": "B1 B1 B1 B1",
+  "tag": "4 x [[ਕਿ] ੰ]"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "n",
+  "slot": 13,
+  "raw": "BB",
+  "tag": "2 levels: [[ਕਿ][ਕਿ]]"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "o",
+  "slot": 14,
+  "raw": "73 B0",
+  "tag": "ref last: ਕ [ਕਿ]"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "p",
+  "slot": 15,
+  "raw": "42 62 65 C0",
+  "tag": "ੳ ੁ ਨ [੍ਹ ਾ ਂ] = ਉਨ੍ਹਾਂ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "q",
+  "slot": 16,
+  "raw": "D2 6B 69",
+  "tag": "੍ਹ ਾ ਂ (helper)"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "r",
+  "slot": 17,
+  "raw": "67 63 65 C0",
+  "tag": "ਿ ਜ ਨ [੍ਹ ਾ ਂ] = ਜਿਨ੍ਹਾਂ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "s",
+  "slot": 18,
+  "raw": "77 D6 63 C3",
+  "tag": "ਪ ੰ ਜ [ਾ ਬ] = ਪੰਜਾਬ"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "t",
+  "slot": 19,
+  "raw": "6B 71",
+  "tag": "ਾ ਬ (helper)"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "u",
+  "slot": 20,
+  "raw": "77 D6 63 6B",
+  "tag": "ਪ ੰ ਜ ਾ direct"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "v",
+  "slot": 21,
+  "raw": "67 73 D6",
+  "tag": "ਿ ਕ ੰ direct (= ref first?)"
+ },
+ {
+  "file": "QAAA.PUN",
+  "key": "w",
+  "slot": 22,
+  "raw": "67 73 64 66",
+  "tag": "ਿ ਕ link ਤ direct 4"
+ }
+]

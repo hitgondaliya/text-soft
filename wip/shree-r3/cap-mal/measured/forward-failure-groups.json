@@ -1,0 +1,238 @@
+{
+ "source": "measured/forward-failures.tsv",
+ "truthStrings": 67745,
+ "syllableStrings": 26561,
+ "joinedOnlyStrings": 41184,
+ "failing": 23770,
+ "failingSyllableStrings": 12650,
+ "failingJoinedOnlyStrings": 11120,
+ "forwardExactSyllableStrings": "13911/26561 = 52.37%",
+ "forwardExactJoinedOnly": "30064/41184 = 73.00%",
+ "groups": {
+  "C് written as a chillu or a sign glyph (A2 ൻ A5 ൾ A6 ൺ E6 la-sign 4E ra-sign 7E va-sign) where Shree writes C + the chandrakkala 56: the table treats a plain virama as the Unicode 5.0 chillu": {
+   "count": 5696,
+   "syllableStrings": 3298,
+   "joinedStrings": 2398,
+   "examples": [
+    "ള് [0D33 0D4D]: ours A5 | Shree 74 56",
+    "ണ് [0D23 0D4D]: ours A6 | Shree 65 56",
+    "ല് [0D32 0D4D]: ours E6 | Shree 73 56",
+    "ന് [0D28 0D4D]: ours A2 | Shree 6A 56",
+    "ര് [0D30 0D4D]: ours 4E | Shree 71 56",
+    "വ് [0D35 0D4D]: ours 7E | Shree 76 56",
+    "ണ്  [0D23 0D4D 0020]: ours A6 20 | Shree 65 56 20",
+    "ണ്ം [0D23 0D4D 0D02]: ours A6 55 | Shree 65 56 55",
+    "ണ്ക [0D23 0D4D 0D15]: ours A6 57 | Shree 65 56 57",
+    "ണ്ര [0D23 0D4D 0D30]: ours A6 71 | Shree 4E 65",
+    "ണ്വ [0D23 0D4D 0D35]: ours A6 76 | Shree 65 7E",
+    "ണ്വാ [0D23 0D4D 0D35 0D3E]: ours A6 76 4C | Shree 65 7E 4C"
+   ]
+  },
+  "ra sign ്ര not written as 4E BEFORE the letter/cluster (the table writes C 56 71, or puts 4E after; ശ്ര should be E8)": {
+   "count": 5429,
+   "syllableStrings": 1758,
+   "joinedStrings": 3671,
+   "examples": [
+    "ശ്ര [0D36 0D4D 0D30]: ours 77 56 71 | Shree E8",
+    "ക്ര [0D15 0D4D 0D30]: ours 57 56 71 | Shree 4E 57",
+    "ക്രാ [0D15 0D4D 0D30 0D3E]: ours 57 56 71 4C | Shree 4E 57 4C",
+    "ക്രി [0D15 0D4D 0D30 0D3F]: ours 57 56 71 5D | Shree 4E 57 5D",
+    "ക്രീ [0D15 0D4D 0D30 0D40]: ours 57 56 71 7D | Shree 4E 57 7D",
+    "ക്രു [0D15 0D4D 0D30 0D41]: ours 57 56 71 4F | Shree 4E 57 4F",
+    "ക്രൂ [0D15 0D4D 0D30 0D42]: ours 57 56 71 50 | Shree 4E 57 50",
+    "ക്രൃ [0D15 0D4D 0D30 0D43]: ours 57 56 71 51 | Shree 4E 57 51",
+    "ക്രൗ [0D15 0D4D 0D30 0D57]: ours 57 56 71 54 | Shree 4E 57 54",
+    "ക്രം [0D15 0D4D 0D30 0D02]: ours 57 56 71 55 | Shree 4E 57 55",
+    "ക്രഃ [0D15 0D4D 0D30 0D03]: ours 57 56 71 40 | Shree 4E 57 40",
+    "ക്രാം [0D15 0D4D 0D30 0D3E 0D02]: ours 57 56 71 4C 55 | Shree 4E 57 4C 55"
+   ]
+  },
+  "ya/va sign: the table writes C 56 70 / C 56 76 (chandrakkala + full letter) where Shree writes the sign 7C / 7E": {
+   "count": 3913,
+   "syllableStrings": 1678,
+   "joinedStrings": 2235,
+   "examples": [
+    "ദ്വ [0D26 0D4D 0D35]: ours 68 56 76 | Shree 68 7E",
+    "ക്വ [0D15 0D4D 0D35]: ours 57 56 76 | Shree 57 7E",
+    "ക്വാ [0D15 0D4D 0D35 0D3E]: ours 57 56 76 4C | Shree 57 7E 4C",
+    "ക്വി [0D15 0D4D 0D35 0D3F]: ours 57 56 76 5D | Shree 57 7E 5D",
+    "ക്വീ [0D15 0D4D 0D35 0D40]: ours 57 56 76 7D | Shree 57 7E 7D",
+    "ക്വു [0D15 0D4D 0D35 0D41]: ours 57 56 76 4F | Shree 57 7E 4F",
+    "ക്വൂ [0D15 0D4D 0D35 0D42]: ours 57 56 76 50 | Shree 57 7E 50",
+    "ക്വൃ [0D15 0D4D 0D35 0D43]: ours 57 56 76 51 | Shree 57 7E 51",
+    "ക്വൗ [0D15 0D4D 0D35 0D57]: ours 57 56 76 54 | Shree 57 7E 54",
+    "ക്വം [0D15 0D4D 0D35 0D02]: ours 57 56 76 55 | Shree 57 7E 55",
+    "ക്വഃ [0D15 0D4D 0D35 0D03]: ours 57 56 76 40 | Shree 57 7E 40",
+    "ക്വാം [0D15 0D4D 0D35 0D3E 0D02]: ours 57 56 76 4C 55 | Shree 57 7E 4C 55"
+   ]
+  },
+  "conjunct missing: the table writes C1 56 C2 where Shree writes a ligature or a subjoined form": {
+   "count": 3605,
+   "syllableStrings": 3439,
+   "joinedStrings": 166,
+   "examples": [
+    "ക്ക [0D15 0D4D 0D15]: ours 57 56 57 | Shree A8",
+    "ക്കാ [0D15 0D4D 0D15 0D3E]: ours 57 56 57 4C | Shree A8 4C",
+    "ക്കി [0D15 0D4D 0D15 0D3F]: ours 57 56 57 5D | Shree A8 5D",
+    "ക്കീ [0D15 0D4D 0D15 0D40]: ours 57 56 57 7D | Shree A8 7D",
+    "ക്കു [0D15 0D4D 0D15 0D41]: ours 57 56 57 4F | Shree A8 4F",
+    "ക്കൂ [0D15 0D4D 0D15 0D42]: ours 57 56 57 50 | Shree A8 50",
+    "ക്കൃ [0D15 0D4D 0D15 0D43]: ours 57 56 57 51 | Shree A8 51",
+    "ക്കൗ [0D15 0D4D 0D15 0D57]: ours 57 56 57 54 | Shree A8 54",
+    "ക്കം [0D15 0D4D 0D15 0D02]: ours 57 56 57 55 | Shree A8 55",
+    "ക്കഃ [0D15 0D4D 0D15 0D03]: ours 57 56 57 40 | Shree A8 40",
+    "ക്കെ [0D15 0D4D 0D15 0D46]: ours 52 57 56 57 | Shree 52 A8",
+    "ക്കേ [0D15 0D4D 0D15 0D47]: ours 53 57 56 57 | Shree 53 A8"
+   ]
+  },
+  "ZWNJ (U+200C) passed into the legacy text: Shree writes nothing for it (the halant 44 / C + link + ZWNJ = the chandrakkala 56 alone)": {
+   "count": 1599,
+   "syllableStrings": 1599,
+   "joinedStrings": 0,
+   "examples": [
+    "ൻറ്‌ [0D7B 0D31 0D4D 200C]: ours A3 56 U+200C | Shree A2 72 56",
+    "്‌ര [0D4D 200C 0D30]: ours 56 U+200C 71 | Shree 56 71",
+    "ര്‌ [0D30 0D4D 200C]: ours 4E U+200C | Shree 71 56",
+    "ക്‌ [0D15 0D4D 200C]: ours 57 56 U+200C | Shree 57 56",
+    "ക്‌ക [0D15 0D4D 200C 0D15]: ours 57 56 U+200C 57 | Shree 57 56 57",
+    "ഖ്‌ [0D16 0D4D 200C]: ours 58 56 U+200C | Shree 58 56",
+    "ഖ്‌ക [0D16 0D4D 200C 0D15]: ours 58 56 U+200C 57 | Shree 58 56 57",
+    "ഗ്‌ [0D17 0D4D 200C]: ours 59 56 U+200C | Shree 59 56",
+    "ഗ്‌ക [0D17 0D4D 200C 0D15]: ours 59 56 U+200C 57 | Shree 59 56 57",
+    "ഘ്‌ [0D18 0D4D 200C]: ours 5A 56 U+200C | Shree 5A 56",
+    "ഘ്‌ക [0D18 0D4D 200C 0D15]: ours 5A 56 U+200C 57 | Shree 5A 56 57",
+    "ങ്‌ [0D19 0D4D 200C]: ours 82 56 U+200C | Shree 82 56"
+   ]
+  },
+  "split vowel ൊ ോ ൌ: the table writes C 52 4C (sign after the letter), Shree 52 C 4C": {
+   "count": 1596,
+   "syllableStrings": 441,
+   "joinedStrings": 1155,
+   "examples": [
+    "ക്യൊ [0D15 0D4D 0D2F 0D4A]: ours 57 7C 52 4C | Shree 52 57 7C 4C",
+    "ക്യോ [0D15 0D4D 0D2F 0D4B]: ours 57 7C 53 4C | Shree 53 57 7C 4C",
+    "ക്യൌ [0D15 0D4D 0D2F 0D4C]: ours 57 7C 52 54 | Shree 52 57 7C 54",
+    "കൊ [0D15 0D4A]: ours 57 52 4C | Shree 52 57 4C",
+    "കൊം [0D15 0D4A 0D02]: ours 57 52 4C 55 | Shree 52 57 4C 55",
+    "കൊഃ [0D15 0D4A 0D03]: ours 57 52 4C 40 | Shree 52 57 4C 40",
+    "കോ [0D15 0D4B]: ours 57 53 4C | Shree 53 57 4C",
+    "കോം [0D15 0D4B 0D02]: ours 57 53 4C 55 | Shree 53 57 4C 55",
+    "കോഃ [0D15 0D4B 0D03]: ours 57 53 4C 40 | Shree 53 57 4C 40",
+    "കൌ [0D15 0D4C]: ours 57 52 54 | Shree 52 57 54",
+    "കൌം [0D15 0D4C 0D02]: ours 57 52 54 55 | Shree 52 57 54 55",
+    "കൌഃ [0D15 0D4C 0D03]: ours 57 52 54 40 | Shree 52 57 54 40"
+   ]
+  },
+  "other": {
+   "count": 1407,
+   "syllableStrings": 145,
+   "joinedStrings": 1262,
+   "examples": [
+    "യ്യാം [0D2F 0D4D 0D2F 0D3E 0D02]: ours E1 4C 55 | Shree 70 7C 4C 55",
+    "യ്യിം [0D2F 0D4D 0D2F 0D3F 0D02]: ours E1 5D 55 | Shree 70 7C 5D 55",
+    "യ്യീം [0D2F 0D4D 0D2F 0D40 0D02]: ours E1 7D 55 | Shree 70 7C 7D 55",
+    "യ്യും [0D2F 0D4D 0D2F 0D41 0D02]: ours E1 4F 55 | Shree 70 7C 4F 55",
+    "യ്യൂം [0D2F 0D4D 0D2F 0D42 0D02]: ours E1 50 55 | Shree 70 7C 50 55",
+    "യ്യൃം [0D2F 0D4D 0D2F 0D43 0D02]: ours E1 51 55 | Shree 70 7C 51 55",
+    "യ്യൈ [0D2F 0D4D 0D2F 0D48]: ours 52 52 E1 | Shree 52 52 70 7C",
+    "യ്യൊ [0D2F 0D4D 0D2F 0D4A]: ours E1 52 4C | Shree 52 70 7C 4C",
+    "യ്യോ [0D2F 0D4D 0D2F 0D4B]: ours E1 53 4C | Shree 53 70 7C 4C",
+    "യ്യൌ [0D2F 0D4D 0D2F 0D4C]: ours E1 52 54 | Shree 52 70 7C 54",
+    "ര്വ [0D30 0D4D 0D35]: ours 4E 76 | Shree 71 7E",
+    "ര്വാ [0D30 0D4D 0D35 0D3E]: ours 4E 76 4C | Shree 71 7E 4C"
+   ]
+  },
+  "precomposed ligature glyph where Shree writes C + a subjoined mark or C + the doubling stroke FF (similar picture, other bytes: 84/8A/88/89/8B/FB/FC/FD/98/FE/86/87/85/FA/E0/E5; fonts/ligature-vs-composer.png)": {
+   "count": 330,
+   "syllableStrings": 182,
+   "joinedStrings": 148,
+   "examples": [
+    "വ്വ [0D35 0D4D 0D35]: ours 8B | Shree 76 FF",
+    "വ്വാ [0D35 0D4D 0D35 0D3E]: ours 8B 4C | Shree 76 FF 4C",
+    "വ്വി [0D35 0D4D 0D35 0D3F]: ours 8B 5D | Shree 76 FF 5D",
+    "വ്വീ [0D35 0D4D 0D35 0D40]: ours 8B 7D | Shree 76 FF 7D",
+    "വ്വു [0D35 0D4D 0D35 0D41]: ours 8B 4F | Shree 76 FF 4F",
+    "വ്വൂ [0D35 0D4D 0D35 0D42]: ours 8B 50 | Shree 76 FF 50",
+    "വ്വൃ [0D35 0D4D 0D35 0D43]: ours 8B 51 | Shree 76 FF 51",
+    "വ്വൗ [0D35 0D4D 0D35 0D57]: ours 8B 54 | Shree 76 FF 54",
+    "വ്വം [0D35 0D4D 0D35 0D02]: ours 8B 55 | Shree 76 FF 55",
+    "വ്വഃ [0D35 0D4D 0D35 0D03]: ours 8B 40 | Shree 76 FF 40",
+    "വ്വെ [0D35 0D4D 0D35 0D46]: ours 52 8B | Shree 52 76 FF",
+    "വ്വേ [0D35 0D4D 0D35 0D47]: ours 53 8B | Shree 53 76 FF"
+   ]
+  },
+  "ൻറ / ന്റ written as the ligature glyph A3, which no Shree key writes (Shree: ൻറ = A2 72, ന്റ = 6A 56 72)": {
+   "count": 101,
+   "syllableStrings": 17,
+   "joinedStrings": 84,
+   "examples": [
+    "ന്റ [0D28 0D4D 0D31]: ours A3 | Shree 6A 56 72",
+    "ന്റാ [0D28 0D4D 0D31 0D3E]: ours A3 4C | Shree 6A 56 72 4C",
+    "ന്റി [0D28 0D4D 0D31 0D3F]: ours A3 5D | Shree 6A 56 72 5D",
+    "ന്റീ [0D28 0D4D 0D31 0D40]: ours A3 7D | Shree 6A 56 72 7D",
+    "ന്റു [0D28 0D4D 0D31 0D41]: ours A3 4F | Shree 6A 56 72 4F",
+    "ന്റൂ [0D28 0D4D 0D31 0D42]: ours A3 50 | Shree 6A 56 72 50",
+    "ന്റൃ [0D28 0D4D 0D31 0D43]: ours A3 51 | Shree 6A 56 72 51",
+    "ന്റൗ [0D28 0D4D 0D31 0D57]: ours A3 54 | Shree 6A 56 72 54",
+    "ന്റം [0D28 0D4D 0D31 0D02]: ours A3 55 | Shree 6A 56 72 55",
+    "ന്റഃ [0D28 0D4D 0D31 0D03]: ours A3 40 | Shree 6A 56 72 40",
+    "ന്റെ [0D28 0D4D 0D31 0D46]: ours 52 A3 | Shree 52 6A 56 72",
+    "ന്റേ [0D28 0D4D 0D31 0D47]: ours 53 A3 | Shree 53 6A 56 72"
+   ]
+  },
+  "ൄ ൢ ൣ passed through: the 7 composer writes nothing for them": {
+   "count": 77,
+   "syllableStrings": 77,
+   "joinedStrings": 0,
+   "examples": [
+    "ക്യൄ [0D15 0D4D 0D2F 0D44]: ours 57 7C U+0D44 | Shree 57 7C",
+    "ക്വൄ [0D15 0D4D 0D35 0D44]: ours 57 56 76 U+0D44 | Shree 57 7E",
+    "ഖ്യൄ [0D16 0D4D 0D2F 0D44]: ours 58 7C U+0D44 | Shree 58 7C",
+    "ഖ്വൄ [0D16 0D4D 0D35 0D44]: ours 58 56 76 U+0D44 | Shree 58 7E",
+    "ഗ്യൄ [0D17 0D4D 0D2F 0D44]: ours 59 7C U+0D44 | Shree 59 7C",
+    "ഗ്വൄ [0D17 0D4D 0D35 0D44]: ours 59 56 76 U+0D44 | Shree 59 7E",
+    "ഘ്യൄ [0D18 0D4D 0D2F 0D44]: ours 5A 7C U+0D44 | Shree 5A 7C",
+    "ഘ്വൄ [0D18 0D4D 0D35 0D44]: ours 5A 56 76 U+0D44 | Shree 5A 7E",
+    "ങ്യൄ [0D19 0D4D 0D2F 0D44]: ours 82 7C U+0D44 | Shree 82 7C",
+    "ങ്വൄ [0D19 0D4D 0D35 0D44]: ours 82 56 76 U+0D44 | Shree 82 7E",
+    "ച്യൄ [0D1A 0D4D 0D2F 0D44]: ours 5C 7C U+0D44 | Shree 5C 7C",
+    "ച്വൄ [0D1A 0D4D 0D35 0D44]: ours 5C 56 76 U+0D44 | Shree 5C 7E"
+   ]
+  },
+  "conjunct where Shree writes the chandrakkala: the table writes a ligature/subjoined form for a pair Shree draws C1 56 C2": {
+   "count": 15,
+   "syllableStrings": 14,
+   "joinedStrings": 1,
+   "examples": [
+    "ശ്റ [0D36 0D4D 0D31]: ours E8 | Shree 77 56 72",
+    "ശ്റാ [0D36 0D4D 0D31 0D3E]: ours E8 4C | Shree 77 56 72 4C",
+    "ശ്റി [0D36 0D4D 0D31 0D3F]: ours E8 5D | Shree 77 56 72 5D",
+    "ശ്റീ [0D36 0D4D 0D31 0D40]: ours E8 7D | Shree 77 56 72 7D",
+    "ശ്റു [0D36 0D4D 0D31 0D41]: ours E8 4F | Shree 77 56 72 4F",
+    "ശ്റൂ [0D36 0D4D 0D31 0D42]: ours E8 50 | Shree 77 56 72 50",
+    "ശ്റൃ [0D36 0D4D 0D31 0D43]: ours E8 51 | Shree 77 56 72 51",
+    "ശ്റൗ [0D36 0D4D 0D31 0D57]: ours E8 54 | Shree 77 56 72 54",
+    "ശ്റം [0D36 0D4D 0D31 0D02]: ours E8 55 | Shree 77 56 72 55",
+    "ശ്റഃ [0D36 0D4D 0D31 0D03]: ours E8 40 | Shree 77 56 72 40",
+    "ശ്റെ [0D36 0D4D 0D31 0D46]: ours 52 E8 | Shree 52 77 56 72",
+    "ശ്റേ [0D36 0D4D 0D31 0D47]: ours 53 E8 | Shree 53 77 56 72"
+   ]
+  },
+  "hyphen: the table keeps 2D, Shree writes 26 for - (code 2D)": {
+   "count": 1,
+   "syllableStrings": 1,
+   "joinedStrings": 0,
+   "examples": [
+    "- [002D]: ours 2D | Shree 26"
+   ]
+  },
+  "other Unicode passed through (₹ U+20B9 = 3C, which no Malayalam 7 face draws)": {
+   "count": 1,
+   "syllableStrings": 1,
+   "joinedStrings": 0,
+   "examples": [
+    "₹ [20B9]: ours U+20B9 | Shree 3C"
+   ]
+  }
+ }
+}

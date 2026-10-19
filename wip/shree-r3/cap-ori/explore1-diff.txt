@@ -1,0 +1,185 @@
+73 40      କ + 40         U "ର୍କ" 0B30 0B4D 0B15 | 7 4C FF F6 | concat 4C FF F6
+73 51      କ + 51         U "ତ୍କ" 0B24 0B4D 0B15 | 7 4C FF 23 | concat 4C FF 23
+73 64      କ + 64         U "କ୍" 0B15 0B4D | 7 4C FF FA | concat 4C FF
+73 6C      କ + 6C         U "କ.େ" 0B15 002E 0B47 | 7 4C FF 7B | concat 4C FF 7B
+73 D5      କ + D5         U "କ୍‍" 0B15 0B4D 200D | 7 4C FF FA | concat 4C FF
+6C 73      6C + କ         U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+77 40      ପ + 40         U "ର୍ପ" 0B30 0B4D 0B2A | 7 A8 F6 | concat A8 F6
+77 51      ପ + 51         U "ତ୍ପ" 0B24 0B4D 0B2A | 7 A8 23 | concat A8 23
+77 64      ପ + 64         U "ପ୍" 0B2A 0B4D | 7 A8 FA | concat A8
+77 6C      ପ + 6C         U "ପ.େ" 0B2A 002E 0B47 | 7 A8 7B | concat A8 7B
+77 D5      ପ + D5         U "ପ୍‍" 0B2A 0B4D 200D | 7 A8 FA | concat A8
+6C 73 21   େ କ + 21       U "କେ!" 0B15 0B47 0021 | 7 7B 4C FF 21 | concat 7B 4C FF 21
+6C 73 22   େ କ + 22       U "କେ‘" 0B15 0B47 2018 | 7 7B 4C FF 22 | concat 7B 4C FF 22
+6C 73 23   େ କ + 23       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 24   େ କ + 24       U "କେଅ" 0B15 0B47 0B05 | 7 7B 4C FF 41 | concat 7B 4C FF 41
+6C 73 25   େ କ + 25       U "କେ%" 0B15 0B47 0025 | 7 7B 4C FF 25 | concat 7B 4C FF 25
+6C 73 26   େ କ + 26       U "କେ୰" 0B15 0B47 0B70 | 7 7B 4C FF 8F | concat 7B 4C FF 8F
+6C 73 27   େ କ + 27       U "କେ’" 0B15 0B47 2019 | 7 7B 4C FF 27 | concat 7B 4C FF 27
+6C 73 28   େ କ + 28       U "କେ(" 0B15 0B47 0028 | 7 7B 4C FF 28 | concat 7B 4C FF 28
+6C 73 29   େ କ + 29       U "କେ)" 0B15 0B47 0029 | 7 7B 4C FF 29 | concat 7B 4C FF 29
+6C 73 2A   େ କ + 2A       U "କେ*" 0B15 0B47 002A | 7 7B 4C FF 2A | concat 7B 4C FF 2A
+6C 73 2B   େ କ + 2B       U "କେ+" 0B15 0B47 002B | 7 7B 4C FF | concat 7B 4C FF
+6C 73 2C   େ କ + 2C       U "କେ," 0B15 0B47 002C | 7 7B 4C FF 2C | concat 7B 4C FF 2C
+6C 73 2D   େ କ + 2D       U "କେ-" 0B15 0B47 002D | 7 7B 4C FF 2D | concat 7B 4C FF 2D
+6C 73 2E   େ କ + 2E       U "କେ." 0B15 0B47 002E | 7 7B 4C FF 2E | concat 7B 4C FF 2E
+6C 73 2F   େ କ + 2F       U "କେ/" 0B15 0B47 002F | 7 7B 4C FF 2F | concat 7B 4C FF 2F
+6C 73 30   େ କ + 30       U "କେ୦" 0B15 0B47 0B66 | 7 7B 4C FF 30 | concat 7B 4C FF 30
+6C 73 31   େ କ + 31       U "କେ୧" 0B15 0B47 0B67 | 7 7B 4C FF 31 | concat 7B 4C FF 31
+6C 73 32   େ କ + 32       U "କେ୨" 0B15 0B47 0B68 | 7 7B 4C FF 32 | concat 7B 4C FF 32
+6C 73 33   େ କ + 33       U "କେ୩" 0B15 0B47 0B69 | 7 7B 4C FF 33 | concat 7B 4C FF 33
+6C 73 34   େ କ + 34       U "କେ୪" 0B15 0B47 0B6A | 7 7B 4C FF 34 | concat 7B 4C FF 34
+6C 73 35   େ କ + 35       U "କେ୫" 0B15 0B47 0B6B | 7 7B 4C FF 35 | concat 7B 4C FF 35
+6C 73 36   େ କ + 36       U "କେ୬" 0B15 0B47 0B6C | 7 7B 4C FF 36 | concat 7B 4C FF 36
+6C 73 37   େ କ + 37       U "କେ୭" 0B15 0B47 0B6D | 7 7B 4C FF 37 | concat 7B 4C FF 37
+6C 73 38   େ କ + 38       U "କେ୮" 0B15 0B47 0B6E | 7 7B 4C FF 38 | concat 7B 4C FF 38
+6C 73 39   େ କ + 39       U "କେ୯" 0B15 0B47 0B6F | 7 7B 4C FF 39 | concat 7B 4C FF 39
+6C 73 3A   େ କ + 3A       U "କେ:" 0B15 0B47 003A | 7 7B 4C FF 3A | concat 7B 4C FF 3A
+6C 73 3B   େ କ + 3B       U "କେ;" 0B15 0B47 003B | 7 7B 4C FF | concat 7B 4C FF
+6C 73 3C   େ କ + 3C       U "କେଏ" 0B15 0B47 0B0F | 7 7B 4C FF 46 | concat 7B 4C FF 46
+6C 73 3D   େ କ + 3D       U "କେ=" 0B15 0B47 003D | 7 7B 4C FF | concat 7B 4C FF
+6C 73 3E   େ କ + 3E       U "କେଐ" 0B15 0B47 0B10 | 7 7B 4C FF 47 | concat 7B 4C FF 47
+6C 73 3F   େ କ + 3F       U "କେ?" 0B15 0B47 003F | 7 7B 4C FF 3F | concat 7B 4C FF 3F
+6C 73 40   େ କ + 40       U "ର୍କେ" 0B30 0B4D 0B15 0B47 | 7 7B 4C FF F6 | concat 7B 4C FF F6
+6C 73 41   େ କ + 41       U "କେଢ଼" 0B15 0B47 0B5D | 7 7B 4C FF DE | concat 7B 4C FF DE
+6C 73 42   େ କ + 42       U "କେଉ" 0B15 0B47 0B09 | 7 7B 4C FF 44 | concat 7B 4C FF 44
+6C 73 43   େ କ + 43       U "କେଝ" 0B15 0B47 0B1D | 7 7B 4C FF 6C | concat 7B 4C FF 6C
+6C 73 44   େ କ + 44       U "କେ୍‌" 0B15 0B47 0B4D 200C | 7 7B 4C FF FA | concat 7B 4C FF FA
+6C 73 45   େ କ + 45       U "କେଡ଼" 0B15 0B47 0B5C | 7 7B 4C FF DD | concat 7B 4C FF DD
+6C 73 46   େ କ + 46       U "କେଥ" 0B15 0B47 0B25 | 7 7B 4C FF 24 | concat 7B 4C FF 24
+6C 73 47   େ କ + 47       U "କେଇ" 0B15 0B47 0B07 | 7 7B 4C FF 42 | concat 7B 4C FF 42
+6C 73 48   େ କ + 48       U "କେଈ" 0B15 0B47 0B08 | 7 7B 4C FF 43 | concat 7B 4C FF 43
+6C 73 49   େ କ + 49       U "କେଠ" 0B15 0B47 0B20 | 7 7B 4C FF 76 FF | concat 7B 4C FF 76 FF
+6C 73 4A   େ କ + 4A       U "କେଣ" 0B15 0B47 0B23 | 7 7B 4C FF 7E | concat 7B 4C FF 7E
+6C 73 4B   େ କ + 4B       U "କେଶ" 0B15 0B47 0B36 | 7 7B 4C FF C9 | concat 7B 4C FF C9
+6C 73 4C   େ କ + 4C       U "କେଷ" 0B15 0B47 0B37 | 7 7B 4C FF CC | concat 7B 4C FF CC
+6C 73 4D   େ କ + 4D       U "କେଲ" 0B15 0B47 0B32 | 7 7B 4C FF E0 FF | concat 7B 4C FF E0 FF
+6C 73 4E   େ କ + 4E       U "କେଊ" 0B15 0B47 0B0A | 7 7B 4C FF 45 | concat 7B 4C FF 45
+6C 73 4F   େ କ + 4F       U "କେଡ" 0B15 0B47 0B21 | 7 7B 4C FF 78 FF | concat 7B 4C FF 78 FF
+6C 73 50   େ କ + 50       U "କେଢ" 0B15 0B47 0B22 | 7 7B 4C FF 7C FF | concat 7B 4C FF 7C FF
+6C 73 51   େ କ + 51       U "ତ୍କେ" 0B24 0B4D 0B15 0B47 | 7 7B 4C FF 23 | concat 7B 4C FF 23
+6C 73 52   େ କ + 52       U "କେଧ" 0B15 0B47 0B27 | 7 7B 4C FF 99 | concat 7B 4C FF 99
+6C 73 53   େ କ + 53       U "କେଖ" 0B15 0B47 0B16 | 7 7B 4C FF 51 | concat 7B 4C FF 51
+6C 73 54   େ କ + 54       U "କେଓ" 0B15 0B47 0B13 | 7 7B 4C FF 48 | concat 7B 4C FF 48
+6C 73 55   େ କ + 55       U "କେଟ" 0B15 0B47 0B1F | 7 7B 4C FF 73 | concat 7B 4C FF 73
+6C 73 56   େ କ + 56       U "କେଛ" 0B15 0B47 0B1B | 7 7B 4C FF 64 | concat 7B 4C FF 64
+6C 73 57   େ କ + 57       U "କେଫ" 0B15 0B47 0B2B | 7 7B 4C FF FC FF | concat 7B 4C FF FC FF
+6C 73 58   େ କ + 58       U "କେଘ" 0B15 0B47 0B18 | 7 7B 4C FF 57 | concat 7B 4C FF 57
+6C 73 59   େ କ + 59       U "କେଔ" 0B15 0B47 0B14 | 7 7B 4C FF 49 | concat 7B 4C FF 49
+6C 73 5A   େ କ + 5A       U "କେଙ" 0B15 0B47 0B19 | 7 7B 4C FF 59 FF | concat 7B 4C FF 59 FF
+6C 73 5B   େ କ + 5B       U "କେ[" 0B15 0B47 005B | 7 7B 4C FF | concat 7B 4C FF
+6C 73 5C   େ କ + 5C       U "କେକ୍ଷ" 0B15 0B47 0B15 0B4D 0B37 | 7 7B 4C FF E4 | concat 7B 4C FF E4
+6C 73 5D   େ କ + 5D       U "କେ]" 0B15 0B47 005D | 7 7B 4C FF | concat 7B 4C FF
+6C 73 5E   େ କ + 5E       U "କେଋ" 0B15 0B47 0B0B | 7 7B 4C FF 4A | concat 7B 4C FF 4A
+6C 73 5F   େ କ + 5F       U "କେଽ" 0B15 0B47 0B3D | 7 7B 4C FF 90 | concat 7B 4C FF 90
+6C 73 60   େ କ + 60       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 61   େ କ + 61       U "କେମ" 0B15 0B47 0B2E | 7 7B 4C FF FE | concat 7B 4C FF FE
+6C 73 62   େ କ + 62       U "କେ" 0B15 0B47 | 7 7B 4C FF EB | concat 7B 4C FF EB
+6C 73 63   େ କ + 63       U "କେଜ" 0B15 0B47 0B1C | 7 7B 4C FF 66 | concat 7B 4C FF 66
+6C 73 64   େ କ + 64       U "କ୍େ" 0B15 0B4D 0B47 | 7 7B 4C FF FA | concat 7B 4C FF
+6C 73 65   େ କ + 65       U "କେନ" 0B15 0B47 0B28 | 7 7B 4C FF 9C FF | concat 7B 4C FF 9C FF
+6C 73 66   େ କ + 66       U "କେତ" 0B15 0B47 0B24 | 7 7B 4C FF 86 FF | concat 7B 4C FF 86 FF
+6C 73 67   େ କ + 67       U "କେି" 0B15 0B47 0B3F | 7 7B 4C FF E7 | concat 7B 4C FF E7
+6C 73 68   େ କ + 68       U "କେ" 0B15 0B47 | 7 7B 4C FF EA | concat 7B 4C FF EA
+6C 73 69   େ କ + 69       U "କେଂ" 0B15 0B47 0B02 | 7 7B 4C FF F3 | concat 7B 4C FF F3
+6C 73 6A   େ କ + 6A       U "କେର" 0B15 0B47 0B30 | 7 7B 4C FF C0 FF | concat 7B 4C FF C0 FF
+6C 73 6B   େ କ + 6B       U "କୋ" 0B15 0B4B | 7 7B 4C FF E6 | concat 7B 4C FF E6
+6C 73 6C   େ କ + 6C       U "କେ.େ" 0B15 0B47 002E 0B47 | 7 7B 4C FF 7B | concat 7B 4C FF 7B
+6C 73 6D   େ କ + 6D       U "କେଳ" 0B15 0B47 0B33 | 7 7B 4C FF C1 FF | concat 7B 4C FF C1 FF
+6C 73 6E   େ କ + 6E       U "କେ" 0B15 0B47 | 7 7B 4C FF ED | concat 7B 4C FF ED
+6C 73 6F   େ କ + 6F       U "କେହ" 0B15 0B47 0B39 | 7 7B 4C FF DC FF | concat 7B 4C FF DC FF
+6C 73 70   େ କ + 70       U "କୈ" 0B15 0B48 | 7 7B 4C FF F0 | concat 7B 4C FF F0
+6C 73 71   େ କ + 71       U "କେବ" 0B15 0B47 0B2C | 7 7B 4C FF AF FF | concat 7B 4C FF AF FF
+6C 73 72   େ କ + 72       U "କେଦ" 0B15 0B47 0B26 | 7 7B 4C FF 92 FF | concat 7B 4C FF 92 FF
+6C 73 73   େ କ + 73       U "କେକ" 0B15 0B47 0B15 | 7 7B 4C FF 4C FF | concat 7B 4C FF 4C FF
+6C 73 74   େ କ + 74       U "କେସ" 0B15 0B47 0B38 | 7 7B 4C FF D3 | concat 7B 4C FF D3
+6C 73 75   େ କ + 75       U "କେଯ" 0B15 0B47 0B2F | 7 7B 4C FF BE | concat 7B 4C FF BE
+6C 73 76   େ କ + 76       U "କେଚ" 0B15 0B47 0B1A | 7 7B 4C FF 60 FF | concat 7B 4C FF 60 FF
+6C 73 77   େ କ + 77       U "କେପ" 0B15 0B47 0B2A | 7 7B 4C FF A8 | concat 7B 4C FF A8
+6C 73 78   େ କ + 78       U "କେଗ" 0B15 0B47 0B17 | 7 7B 4C FF 53 | concat 7B 4C FF 53
+6C 73 79   େ କ + 79       U "କୌ" 0B15 0B4C | 7 7B 4C FF F2 | concat 7B 4C FF F2
+6C 73 7A   େ କ + 7A       U "କେଭ" 0B15 0B47 0B2D | 7 7B 4C FF B5 FF | concat 7B 4C FF B5 FF
+6C 73 7B   େ କ + 7B       U "କେ—" 0B15 0B47 2014 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 7C   େ କ + 7C       U "କେ“" 0B15 0B47 201C | 7 7B 4C FF | concat 7B 4C FF
+6C 73 7D   େ କ + 7D       U "କେ–" 0B15 0B47 2013 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 7E   େ କ + 7E       U "କେ”" 0B15 0B47 201D | 7 7B 4C FF | concat 7B 4C FF
+6C 73 7F   େ କ + 7F       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 80   େ କ + 80       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 81   େ କ + 81       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 82   େ କ + 82       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 83   େ କ + 83       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 84   େ କ + 84       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 85   େ କ + 85       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 86   େ କ + 86       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 87   େ କ + 87       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 88   େ କ + 88       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 89   େ କ + 89       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8A   େ କ + 8A       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8B   େ କ + 8B       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8C   େ କ + 8C       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8D   େ କ + 8D       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8E   େ କ + 8E       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 8F   େ କ + 8F       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A0   େ କ + A0       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A1   େ କ + A1       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A2   େ କ + A2       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A3   େ କ + A3       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A4   େ କ + A4       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A5   େ କ + A5       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A6   େ କ + A6       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A7   େ କ + A7       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A8   େ କ + A8       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 A9   େ କ + A9       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AA   େ କ + AA       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AB   େ କ + AB       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AC   େ କ + AC       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AD   େ କ + AD       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AE   େ କ + AE       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 AF   େ କ + AF       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 D0   େ କ + D0       U "କେୃ" 0B15 0B47 0B43 | 7 7B 4C FF F5 | concat 7B 4C FF F5
+6C 73 D1   େ କ + D1       U "କ୍ରେ" 0B15 0B4D 0B30 0B47 | 7 7B 4C FF F7 | concat 7B 4C FF F7
+6C 73 D2   େ କ + D2       U "କ୍ୟେ" 0B15 0B4D 0B5F 0B47 | 7 7B 4C FF BF | concat 7B 4C FF BF
+6C 73 D3   େ କ + D3       U "କେ।" 0B15 0B47 0964 | 7 7B 4C FF 3E | concat 7B 4C FF 3E
+6C 73 D4   େ କ + D4       U "କେଃ" 0B15 0B47 0B03 | 7 7B 4C FF 85 | concat 7B 4C FF 85
+6C 73 D5   େ କ + D5       U "କ୍‍େ" 0B15 0B4D 200D 0B47 | 7 7B 4C FF FA | concat 7B 4C FF
+6C 73 D6   େ କ + D6       U "କେଁ" 0B15 0B47 0B01 | 7 7B 4C FF F4 | concat 7B 4C FF F4
+6C 73 D7   େ କ + D7       U "କେୟ" 0B15 0B47 0B5F | 7 7B 4C FF DF | concat 7B 4C FF DF
+6C 73 D8   େ କ + D8       U "କେଞ" 0B15 0B47 0B1E | 7 7B 4C FF 6E FF | concat 7B 4C FF 6E FF
+6C 73 D9   େ କ + D9       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DA   େ କ + DA       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DB   େ କ + DB       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DC   େ କ + DC       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DD   େ କ + DD       U "କେ॥" 0B15 0B47 0965 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DE   େ କ + DE       U "କେ×" 0B15 0B47 00D7 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 DF   େ କ + DF       U "କେ÷" 0B15 0B47 00F7 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E0   େ କ + E0       U "କେ" 0B15 0B47 | 7 7B 4C FF E3 | concat 7B 4C FF E3
+6C 73 E1   େ କ + E1       U "କେ" 0B15 0B47 | 7 7B 4C FF FD | concat 7B 4C FF FD
+6C 73 E2   େ କ + E2       U "କେୠ" 0B15 0B47 0B60 | 7 7B 4C FF 4B | concat 7B 4C FF 4B
+6C 73 E3   େ କ + E3       U "କେଌ" 0B15 0B47 0B0C | 7 7B 4C FF 68 | concat 7B 4C FF 68
+6C 73 E4   େ କ + E4       U "କେୡ" 0B15 0B47 0B61 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E5   େ କ + E5       U "କେୱ" 0B15 0B47 0B71 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E6   େ କ + E6       U "କେ଼" 0B15 0B47 0B3C | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E7   େ କ + E7       U "କେୈ" 0B15 0B47 0B48 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E8   େ କ + E8       U "କେୋ" 0B15 0B47 0B4B | 7 7B 4C FF | concat 7B 4C FF
+6C 73 E9   େ କ + E9       U "କେୌ" 0B15 0B47 0B4C | 7 7B 4C FF | concat 7B 4C FF
+6C 73 EA   େ କ + EA       U "କେଵ" 0B15 0B47 0B35 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 EB   େ କ + EB       U "କେ॑" 0B15 0B47 0951 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 EC   େ କ + EC       U "କେ॓" 0B15 0B47 0953 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 ED   େ କ + ED       U "କେ॒" 0B15 0B47 0952 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 EE   େ କ + EE       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 EF   େ କ + EF       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F0   େ କ + F0       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F1   େ କ + F1       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F2   େ କ + F2       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F3   େ କ + F3       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F4   େ କ + F4       U "କେଓଁ" 0B15 0B47 0B13 0B01 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F5   େ କ + F5       U "କେ₹" 0B15 0B47 20B9 | 7 7B 4C FF 3C | concat 7B 4C FF 3C
+6C 73 F6   େ କ + F6       U "କେୢ" 0B15 0B47 0B62 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F7   େ କ + F7       U "କେୣ" 0B15 0B47 0B63 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F8   େ କ + F8       U "କେୄ" 0B15 0B47 0B44 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 F9   େ କ + F9       U "କେ‍" 0B15 0B47 200D | 7 7B 4C FF | concat 7B 4C FF
+6C 73 FA   େ କ + FA       U "କେ‌" 0B15 0B47 200C | 7 7B 4C FF | concat 7B 4C FF
+6C 73 FB   େ କ + FB       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 FC   େ କ + FC       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 FD   େ କ + FD       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF
+6C 73 FE   େ କ + FE       U "କେ" 0B15 0B47 | 7 7B 4C FF | concat 7B 4C FF

@@ -1,0 +1,101 @@
+Shree-Lipi 7 Telugu: how S8Tel764.dll spells Unicode, read from 26551 truth strings (tel7-groundtruth.json). Bytes are hex, one per glyph; the 7 faces (SHREE-TEL7-Apoorva-0900, SHREE-TEL7-Asmitha-1642, Shree-Tel7-001/002) and the 4/5/6 faces (SHREE-TEL-Apoorva-0900, SHREE-TEL-Asmitha-1642) have the same 216 codes with the same glyphs. A "check" line counts the truth strings that follow the rule (preferred or accepted spelling).
+
+1. Internal codes (what each code of a .TEL keyboard means; single-code probes under a neutral keyboard name, both composers; "-" = no answer):
+   20= →20  21=!→21  22=‘→22  24=ో→E6 61 E6 61  25=%→25  26=ూ→E6 61 E6 61  27=’→27  28=(→28
+   29=)→29  2A=*→92  2B=+→2B  2C=,→2C  2D=-→26  2E=.→2E  2F=/→2F  30=౦→30
+   31=౧→31  32=౨→32  33=౩→33  34=౪→34  35=౫→35  36=౬→36  37=౭→37  38=౮→38
+   39=౯→39  3A=:→3A  3B=;→3B  3C=ం→85  3D==→3D  3E=ః→40  3F=?→3F  40=ౌ→E6 61 E6 61
+   41=ఆ→42  42=ఎ→47  43=ఛ→62 E8 FE  45=ఖ→51  46=ణ→D7 FD  47=థ→A3 E6 FE  48=ధ→AB A7 E6 FE  49=ళ→E2 E6 FD
+   4A=భ→BF E6 FD  4B=ఱ→82 FD  4C=హ→E7 DF FD  4D=ఐ→49  4E=ఉ→45  4F=శ→D4 E8 FD  50=ఒ→4A  51=అ→41
+   52=ఠ→75 E6 FF  53=ఇ→43  54=ఢ→C9 E6 FE  55=బ→BA  56=ఈ→44  57=ఘ→E7 9C 24  58=ఝ→6D  59=ఫ→E7 9C
+   5A=ఋ→BA 24 24  5B=[→nothing  5D=]→nothing  5E=క్ష→84 E6 FC  5F=ౄ→E6 61 E6 61 97  61=ా→E6 61 E6 61  62=ె→E6 61 E6 61  63=చ→5E E8 FE
+   65=క→4D E6 FC  66=య→C4 E6 FD 24  67=త→99 E8 FE  68=ద→A7 E6 FE  69=ల→CB  6A=న→AF E8 FE  6B=ర→C6 E6 FF  6C=స→E7 DC
+   6E=ు→E6 61 E6 61  6F=వ→D0 E8 FE  70=ొ→E6 61 E6 61  71=ష→E7 D9  72=ట→72  73=ి→E6 61 E6 61  74=డ→79 E6 FE  75=మ→D0 E8 FE 24
+   76=ీ→E6 61 E6 61  77=గ→56 E6 FC  78=జ→66  79=ప→E7 B3  7A=ృ→E6 61 E6 61 96  7B=—→9B 9B  7D=–→9B  86=-→2D
+   D0=ఓ→4B  D1=ఙ→5C FD  D2=ఞ→70 FD  D3=ే→E6 61 E6 61  D4=ఏ→48  D5=ఊ→46  D6=ఔ→4C  D7=*్ర→7B
+   D8=శ్రీ→7D  D9=ఌ→nothing  DA=ౡ→nothing  DB=-→94  DC=₹→nothing  DD=×→nothing  DE=÷→nothing  E0=ఁ→B6
+   E1=-→93  E2=ౠ→BA 24 2A  E3=ఽ→AC  E4=।→91  E7=-→3D  E9=-→2B  EA=-→3B  EB=-→25
+   ED=*్ర→5B  EE=-→AC  F0=ౢ→AB A7 E6  F1=ౣ→nothing  F2=‍→nothing  F3=‌→nothing  F4=॥→nothing  FB=—→nothing
+   FD=–→nothing
+   64 = link (virama; alone "Lk"; before a consonant the conjunct, C1 + the subjoined form of C2; at a word end the 7 composer writes NO virama), 44 = virama + ZWNJ (the visible virama form of the letter), D7/ED = ra-vattu ్ర struck BEFORE its letter (7B/5B), E1 = a third ra-vattu hook 93 (same outline as 7B; the Unicode composer writes nothing for it), F2/F3 = ZWJ/ZWNJ (no glyph). A lone vowel-sign code answers on a carrier (7: E6 61 E6 61) under a neutral name; on a vendor keyboard the same code alone types the independent vowel (61 = ఆ 42, 73 = ఇ 43 ...).
+   The 7 composer types NOTHING for: D9 ఌ, DA ౡ, F1 ౣ, F4 ॥, DC ₹, DD ×, DE ÷, FB/FD (—/– duplicates; 7B = — 9B 9B, 7D = – 9B), 5B [, 5D ], and 5F ౄ on a letter. Codes only the 7 composer types: E1 → 93, 86 → 2D, DB → 94, E7 → 3D, E9 → 2B, EA → 3B, EB → 25, EE → AC.
+   NOTE: ః = 40 and ఁ = B6 in the composer, but in every installed face 40 and B6 draw a talakattu tick (B6 is the very outline of the talakattu E6 in Apoorva); the visarga glyph is 5D and the candrabindu glyph 97 (fonts/gdi-marks.png, fonts/check-marks3.png). tel7-groundtruth-glyphfix.json has 40→5D, B6→97.
+
+2. Consonants: the body glyph + the talakattu (E6 / E8 by letter) + a blank spacer (FC / FD / FE / FF), or one glyph for letters without a talakattu:
+   క 4D E6 FC, ఖ 51, గ 56 E6 FC, ఘ E7 9C 24, ఙ 5C FD, చ 5E E8 FE, ఛ 62 E8 FE, జ 66, ఝ 6D, ఞ 70 FD, ట 72, ఠ 75 E6 FF, డ 79 E6 FE, ఢ C9 E6 FE, ణ D7 FD, త 99 E8 FE, థ A3 E6 FE, ద A7 E6 FE, ధ AB A7 E6 FE, న AF E8 FE, ప E7 B3, ఫ E7 9C, బ BA, భ BF E6 FD, మ D0 E8 FE 24, య C4 E6 FD 24, ర C6 E6 FF, ఱ 82 FD, ల CB, ళ E2 E6 FD, వ D0 E8 FE, శ D4 E8 FD, ష E7 D9, స E7 DC, హ E7 DF FD
+   క్ష = 84 E6 FC (code 5E; C + link + ష = 4D E6 FC DB, accepted); శ్రీ = 7D (code D8, or D7 + శ + ీ).
+
+3. Vowel signs (gunintham): the sign REPLACES the talakattu with a letter-specific top shape, or follows the letter (ు 24, ూ 2A, ృ 96 after the body + talakattu + spacer); ొ ో ౌ often fuse with the body (కొ 4D F6). Full table:
+   క: ా 4D 3E | ి 4D EC FC | ీ 4D EE FC | ు 4D E6 FC 24 | ూ 4D E6 FC 2A | ృ 4D E6 FC 96 | ె 4D F0 FC | ే 4D F3 FC | ై 4D F0 FC 4F | ొ 4D F6 | ో 4D F8 | ౌ 4D FA
+   ఖ: ా 52 EA | ి 53 | ీ 54 | ు 51 24 | ూ 51 2A | ృ 51 96 | ె 52 F1 FD | ే 52 F4 FD | ై 52 F1 FD 4F | ొ 52 9F | ో 52 5A | ౌ 52 6F
+   గ: ా 56 3E | ి 57 | ీ 58 | ు 56 E6 FC 24 | ూ 56 E6 FC 2A | ృ 56 E6 FC 96 | ె 56 F0 FC | ే 56 F3 FC | ై 56 F0 FC 4F | ొ 56 F6 | ో 56 F8 | ౌ 56 FA
+   ఘ: ా E7 9C 2A | ి ED 9C 24 | ీ EF 9C 24 | ు E7 9C 24 24 | ూ E7 9C 24 2A | ృ E7 9C 24 96 | ె F2 9C 24 | ే F5 9C 24 | ై F2 9C 24 4F | ొ F2 9C 24 24 | ో F2 9C 2A | ౌ E7 9C 98
+   ఙ: ా 5C EA | ి 5C EC FD | ీ 5C EE FD | ు 5C FD 24 | ూ 5C FD 2A | ృ 5C FD 96 | ె 5C F0 FD | ే 5C F3 FD | ై 5C F0 FD 4F | ొ 5C F6 | ో 5C F8 | ౌ 5C FA
+   చ: ా 5E E9 | ి 5F | ీ 60 | ు 5E E8 FE 24 | ూ 5E E8 FE 2A | ృ 5E E8 FE 96 | ె 5E F0 FE | ే 5E F3 FE | ై 5E F0 FE 4F | ొ 5E F6 | ో 5E F8 | ౌ 5E FA
+   ఛ: ా 62 E9 | ి 63 | ీ 64 | ు 62 E8 FE 24 | ూ 62 E8 FE 2A | ృ 62 E8 FE 96 | ె 62 F0 FE | ే 62 F3 FE | ై 62 F0 FE 4F | ొ 62 F6 | ో 62 F8 | ౌ 62 FA
+   జ: ా 67 EA | ి 68 | ీ 69 | ు 6B | ూ 6C | ృ 66 96 | ె 67 F1 FD | ే 67 F4 FD | ై 67 F1 FD 4F | ొ 67 9F | ో 67 5A | ౌ 67 6F
+   ఝ: ా C6 E6 FF 6E 2A | ి C7 6E 24 | ీ C8 6E 24 | ు 6D 24 | ూ 6D 2A | ృ 6D 96 | ె C6 F0 FF 6E 24 | ే C6 F3 FF 6E 24 | ై C6 F0 FF 6E 24 4F | ొ C6 F0 FF 6E 24 24 | ో C6 F0 FF 6E 2A | ౌ C6 E6 FF 6E 98
+   ఞ: ా 70 EA | ి 70 EC FF | ీ 70 EE FF | ు 70 FD 24 | ూ 70 FD 2A | ృ 70 FD 96 | ె 70 F0 FF | ే 70 F3 FF | ై 70 F0 FF 4F | ొ 70 F6 | ో 70 F8 | ౌ 70 FA
+   ట: ా 73 EA | ి 73 EC FD | ీ 73 EE FD | ు 72 24 | ూ 72 2A | ృ 72 96 | ె 73 F1 FD | ే 73 F4 FD | ై 73 F1 FD 4F | ొ 73 9F | ో 73 5A | ౌ 73 6F
+   ఠ: ా 75 3E | ి 76 | ీ 77 | ు 75 E6 FF 24 | ూ 75 E6 FF 2A | ృ 75 E6 FF 96 | ె 75 F0 FF | ే 75 F3 FF | ై 75 F0 FF 4F | ొ 75 F6 | ో 75 F8 | ౌ 75 FA
+   డ: ా 79 E9 | ి 79 EC FE | ీ 79 EE FE | ు 79 E6 FE 24 | ూ 79 E6 FE 2A | ృ 79 E6 FE 96 | ె 79 F0 FE | ే 79 F3 FE | ై 79 F0 FE 4F | ొ 79 F6 | ో 79 F8 | ౌ 79 FA
+   ఢ: ా C9 E9 | ి C9 EC FE | ీ C9 EE FE | ు C9 E6 FE 24 | ూ C9 E6 FE 2A | ృ C9 E6 FE 96 | ె C9 F0 FE | ే C9 F3 FE | ై C9 F0 FE 4F | ొ C9 F6 | ో C9 F8 | ౌ C9 FA
+   ణ: ా D7 EA | ి D7 EC FD | ీ D7 EE FD | ు D7 FD 24 | ూ D7 FD 2A | ృ D7 FD 96 | ె D7 F1 FD | ే D7 F4 FD | ై D7 F1 FD 4F | ొ D7 9F | ో D7 5A | ౌ D7 6F
+   త: ా 99 E9 | ి 86 | ీ A1 | ు 99 E8 FE 24 | ూ 99 E8 FE 2A | ృ 99 E8 FE 96 | ె 99 F0 FE | ే 99 F3 FE | ై 99 F0 FE 4F | ొ 99 F6 | ో 99 F8 | ౌ 99 FA
+   థ: ా A3 E9 | ి A4 | ీ A5 | ు A3 E6 FE 24 | ూ A3 E6 FE 2A | ృ A3 E6 FE 96 | ె A3 F0 FE | ే A3 F3 FE | ై A3 F0 FE 4F | ొ A3 F6 | ో A3 F8 | ౌ A3 FA
+   ద: ా A7 E9 | ి A8 | ీ A9 | ు A7 E6 FE 24 | ూ A7 E6 FE 2A | ృ A7 E6 FE 96 | ె A7 F0 FE | ే A7 F3 FE | ై A7 F0 FE 4F | ొ A7 F6 | ో A7 F8 | ౌ A7 FA
+   ధ: ా AB A7 E9 | ి AB A8 | ీ AB A9 | ు AB A7 E6 FE 24 | ూ AB A7 E6 FE 2A | ృ AB A7 E6 FE 96 | ె AB A7 F0 FE | ే AB A7 F3 FE | ై AB A7 F0 FE 4F | ొ AB A7 F6 | ో AB A7 F8 | ౌ AB A7 FA
+   న: ా AF E9 | ి B0 | ీ B1 | ు AF E8 FE 24 | ూ AF E8 FE 2A | ృ AF E8 FE 96 | ె AF F0 FE | ే AF F3 FE | ై AF F0 FE 4F | ొ AF F6 | ో AF F8 | ౌ AF FA
+   ప: ా B4 EB | ి ED B3 | ీ EF B3 | ు E7 B3 23 | ూ E7 B3 4E | ృ E7 B3 96 | ె F2 B3 | ే F5 B3 | ై F2 B3 4F | ొ B4 F7 | ో B4 F9 | ౌ B4 FB
+   ఫ: ా B8 EB | ి ED 9C | ీ EF 9C | ు E7 9C 23 | ూ E7 9C 4E | ృ E7 9C 96 | ె F2 9C | ే F5 9C | ై F2 9C 4F | ొ B8 F7 | ో B8 F9 | ౌ B8 FB
+   బ: ా BB EA | ి BC | ీ BD | ు BA 24 | ూ BA 2A | ృ BA 96 | ె BB F1 FD | ే BB F4 FD | ై BB F1 FD 4F | ొ BB 9F | ో BB 5A | ౌ BB 6F
+   భ: ా BF EA | ి C0 | ీ C1 | ు BF E6 FD 24 | ూ BF E6 FD 2A | ృ BF E6 FD 96 | ె BF F1 FD | ే BF F4 FD | ై BF F1 FD 4F | ొ BF 9F | ో BF 5A | ౌ BF 6F
+   మ: ా D0 E8 FE 2A | ి D1 24 | ీ D2 24 | ు D0 E8 FE 24 24 | ూ D0 E8 FE 24 2A | ృ D0 E8 FE 24 96 | ె D0 F0 FE 24 | ే D0 F3 FE 24 | ై D0 F0 FE 24 4F | ొ D0 F0 FE 24 24 | ో D0 F0 FE 2A | ౌ D0 E8 FE 98
+   య: ా C4 E6 FD 2A | ి C6 FF 24 24 | ీ C6 FF 24 2A | ు C4 E6 FD 24 24 | ూ C4 E6 FD 24 2A | ృ C4 E6 FD 24 96 | ె C4 F1 FD 24 | ే C4 F4 FD 24 | ై C4 F1 FD 24 4F | ొ C4 F1 FD 24 24 | ో C4 F1 FD 2A | ౌ C4 E6 FD 98
+   ర: ా C6 3E | ి C7 | ీ C8 | ు C6 E6 FF 24 | ూ C6 E6 FF 2A | ృ C6 E6 FF 96 | ె C6 F0 FF | ే C6 F3 FF | ై C6 F0 FF 4F | ొ C6 F6 | ో C6 F8 | ౌ C6 FA
+   ఱ: ా 82 EA | ి 82 EC FD | ీ 82 EE FD | ు 82 FD 24 | ూ 82 FD 2A | ృ 82 FD 96 | ె 82 F1 FD | ే 82 F4 FD | ై 82 F1 FD 4F | ొ 82 9F | ో 82 5A | ౌ 82 6F
+   ల: ా CC EA | ి CD | ీ CE | ు CB 24 | ూ CB 2A | ృ CB 96 | ె CC F1 FD | ే CC F4 FD | ై CC F1 FD 4F | ొ CC 9F | ో CC 5A | ౌ CC 6F
+   ళ: ా E2 EA | ి E3 | ీ E4 | ు E2 E6 FD 24 | ూ E2 E6 FD 2A | ృ E2 E6 FD 96 | ె E2 F1 FD | ే E2 F4 FD | ై E2 F1 FD 4F | ొ E2 9F | ో E2 5A | ౌ E2 6F
+   వ: ా D0 E9 | ి D1 | ీ D2 | ు D0 E8 FE 23 | ూ D0 E8 FE 4E | ృ D0 E8 FE 96 | ె D0 F0 FE | ే D0 F3 FE | ై D0 F0 FE 4F | ొ D0 F6 | ో D0 F8 | ౌ D0 FA
+   శ: ా D4 3E | ి D5 | ీ D6 | ు D4 E8 FD 24 | ూ D4 E8 FD 2A | ృ D4 E8 FD 96 | ె D4 F0 FD | ే D4 F3 FD | ై D4 F0 FD 4F | ొ D4 9F | ో D4 5A | ౌ D4 6F
+   ష: ా DA EB | ి ED D9 | ీ EF D9 | ు E7 D9 24 | ూ E7 D9 2A | ృ E7 D9 96 | ె F2 D9 | ే F5 D9 | ై F2 D9 4F | ొ DA F7 | ో DA F9 | ౌ DA FB
+   స: ా DD EB | ి ED DC | ీ EF DC | ు E7 DC 24 | ూ E7 DC 2A | ృ E7 DC 96 | ె F2 DC | ే F5 DC | ై F2 DC 4F | ొ DD F7 | ో DD F9 | ౌ DD FB
+   హ: ా E0 | ి ED DF FD | ీ EF DF FD | ు E7 DF FD 24 | ూ E7 DF FD 2A | ృ E7 DF FD 96 | ె F2 DF FD | ే F5 DF FD | ై F2 DF FD 4F | ొ E7 DF 9F | ో E7 DF 5A | ౌ E7 DF 6F
+  check "C + ు = C + 24 (letter bytes then 24)": 31/35 truth strings follow it; exceptions (first 10): జు rule 66 24 / truth 6B; పు rule E7 B3 24 / truth E7 B3 23; ఫు rule E7 9C 24 / truth E7 9C 23; వు rule D0 E8 FE 24 / truth D0 E8 FE 23
+  check "C + ూ = C + 2A": 31/35 truth strings follow it; exceptions (first 10): జూ rule 66 2A / truth 6C; పూ rule E7 B3 2A / truth E7 B3 4E; ఫూ rule E7 9C 2A / truth E7 9C 4E; వూ rule D0 E8 FE 2A / truth D0 E8 FE 4E
+  check "C + ృ = C + 96": 35/35 truth strings follow it
+  check "C + ై = (C + ె) + 4F": 35/35 truth strings follow it
+
+4. ం ః ఁ after the letter/sign: + 85 / 40 / B6.
+  check "C(+sign) + ం = (C + sign) + 85": 455/455 truth strings follow it
+  check "C(+sign) + ః = (C + sign) + 40": 455/455 truth strings follow it
+  check "C(+sign) + ఁ = (C + sign) + B6": 455/455 truth strings follow it
+
+5. Conjuncts C1 + ్ + C2 (link code 64): C1 as written alone, then the subjoined form (vattu) of C2. Vattu glyphs (read from క్C2 = 4D E6 FC + vattu):
+   ్క 50, ్ఖ 55, ్గ 59, ్ఘ 83, ్ఙ 5D, ్చ 61, ్ఛ 65, ్జ 6A, ్ఞ 71, ్ట 74, ్ఠ 78, ్డ 7A, ్ఢ 7C, ్ణ 7E, ్త A2, ్థ A6, ్ద AA, ్ధ AE, ్న B2, ్ప B5, ్ఫ B9, ్బ BE, ్భ C2, ్మ C3, ్య C5, ్ఱ CA, ్ల CF, ్ళ E5, ్వ D3, ్శ D8, ్స DE, ్హ E1
+   ్ఝ: the 7 composer drops ఝ after the link (C + link + ఝ = C alone): no ్ఝ glyph. ్ర: C + link + ర types nothing in 7 - the ra-vattu is D7 (section 7). క్ష after the link: the Unicode composer writes nothing (7 writes 3C), so C్క్ష is not in the truth (tel7-only7-evidence.json).
+  check "C1్C2 = C1 + vattu(C2)": 1120/1120 truth strings follow it
+   A sign on a cluster: the sign shapes C1 as it would alone and the vattu follows (also ు ూ: C1 + 24/2A + vattu); ృ comes after the vattu with the spacer A0 before it; ై = (C1 + ె) + 4F (or 95) + vattu:
+  check "C1్C2 + ా ి ీ ె ే ొ ో ౌ = (C1 + sign) + vattu(C2)": 8896/8896 truth strings follow it
+  check "C1్C2 + ు = (C1 + ు) + vattu(C2)": 1119/1120 truth strings follow it; exceptions (first 10): ప్పు rule E7 B3 23 B5 / truth E7 B3 9A
+  check "C1్C2 + ూ = (C1 + ూ) + vattu(C2)": 1120/1120 truth strings follow it
+  check "C1్C2 + ృ = C1 + vattu(C2) + A0 96": 1120/1120 truth strings follow it
+  check "C1్C2 + ై = (C1 + ె) + 4F + vattu(C2), or 95 in place of 4F": 1120/1120 truth strings follow it
+   ై mark 95 (instead of 4F) before the vattu of: ఖ గ ఘ ఙ జ ఞ ట ఠ డ ఢ ణ త థ ద ధ ల ష
+  check "C1్C2 + ం = C1్C2 + 85": 1190/1190 truth strings follow it
+
+6. The halant (code 44 = virama + ZWNJ): the virama form of the letter (క్‌ = 4D 8A FC), then the next letter in full. A Unicode word-final C్ (no ZWNJ) has no direct composer spelling: the pending link writes the bare letter (tel7-composer-gaps.json derives C్ = the halant form).
+   క్‌ 4D 8A FC, ఖ్‌ 52 8C FD, గ్‌ 56 8A FC, ఘ్‌ 8B 9C 24, ఙ్‌ 5C 8A FD, చ్‌ 5E 8C FE, ఛ్‌ 62 8C FE, జ్‌ 67 8C FD, ఝ్‌ C6 8A FF 6E 24, ఞ్‌ 70 8A FF, ట్‌ 73 8C FD, ఠ్‌ 75 8A FF, డ్‌ 79 8A FE, ఢ్‌ C9 8A FE, ణ్‌ D7 8A FD, త్‌ 99 8C FE, థ్‌ A3 8A FE, ద్‌ A7 8A FE, ధ్‌ AB A7 8A FE, న్‌ AF 8C FE, ప్‌ 8B B3, ఫ్‌ 8B 9C, బ్‌ BB 8C FD, భ్‌ BF 8C FD, మ్‌ D0 8C FE 24, య్‌ C4 8C FD 24, ర్‌ C6 8A FF, ఱ్‌ 82 8C FD, ల్‌ CC 8C FD, ళ్‌ E2 8C FD, వ్‌ D0 8C FE, శ్‌ D4 8C FD, ష్‌ 8B D9, స్‌ 8B DC, హ్‌ 8B DF FD
+
+7. Ra-vattu ్ర: typed D7 BEFORE the letter (the vendor order: TYPEWRIT K, ITR Ctrl+Space g, INDICA/APPLE slots D7 + C). The hook 7B goes BEFORE the letter, where the శ్రీ ligature 7D and Nirmala UI draw it; with ై the composer picks the deeper hook 5B; on త/ట after a link it uses the combined glyphs 88 (్త్ర) / 89 (్ట్ర) after స/ష. ED = always 5B (accepted). Struck AFTER a letter with nothing following, D7 stays pending (hook after the letter, a sign after it is dropped) - kept as alt.
+  check "C్ర(+sign/+tail) = 7B + (C + sign + tail)": 489/490 truth strings follow it; exceptions (first 10): శ్రీ rule 7B D6 / truth 7D
+  check "C్రై = 5B + (C + ై)": 35/35 truth strings follow it
+  check "C1్C2్ర = 7B + C1్C2": 1153/1155 truth strings follow it; exceptions (first 10): ష్ట్ర rule 7B E7 D9 74 / truth E7 D9 89; స్త్ర rule 7B E7 DC A2 / truth E7 DC 88
+   శ్రీ = 7D; స్త్ర = E7 DC 88; ష్ట్ర = E7 D9 89; ర్ర = 7B C6 E6 FF; క్ష్ర = 7B 84 E6 FC.
+
+8. Independent vowels: అ 41, ఆ 42, ఇ 43, ఈ 44, ఉ 45, ఊ 46, ఋ BA 24 24, ౠ BA 24 2A, ఎ 47, ఏ 48, ఐ 49, ఒ 4A, ఓ 4B, ఔ 4C; ఌ ౡ: nothing in 7.
+   Digits ౦-౯ = 30-39 (the font draws Telugu digits on the ASCII digit bytes). । = 91, — = 9B 9B, – = 9B, - = 26, * = 92, ‘ = 22, ’ = 27; ! % ( ) + , . / : ; = ? themselves.
+
+9. Syllables join by plain concatenation (no reordering across syllables): 463 two-syllable probes (కి C, కా C, కె C, కు C, కం C, క్క C, కై C, క + D7 + C = క + C్ర, D7 + C + క = C్ర + క) - see the truth for each.
+
+10. Not in the truth: 5-code syllables (C1్C2 + sign + tail, C1్C2్C3, C1్C2్ర + sign: స్త్రీ, బ్యాం, ష్ట్రం), word-final C్ (gap, derived), ౄ (no glyph), ఌ ౡ ౣ ॥ ₹ × ÷ (7 composer types nothing), C్ఝ, హ్C + ె/ే (the 7 composer drops the sign), C్క్ష.

@@ -1,0 +1,58 @@
+{
+ "failures": 19264,
+ "byCause": {
+  "E. letter glyph choice: ಙ 9A (Shree 5F), ಫ B6 (Shree B4), ಱ 93 (Shree ": 2113,
+  "G. nukta order (82 placed after the sign, or the head DC kept)": 188,
+  "J. punctuation / symbols (‘ ’ 91 92 | Shree 22 27; — – 97 96 | Shree A": 13,
+  "C. vowel sign on a conjunct written AFTER the subjoined form (Shree pu": 12199,
+  "I. subjoined form differs (ಕ್ಫ ours 50 DC 23 | Shree 50 DC 96; ಕ್ಮ our": 3650,
+  "A. ZWNJ/ZWJ written into the legacy text (halant C್‌ : Shree writes th": 2780,
+  "B. reph (arkavattu): EC written right after the letter + head, before ": 2648,
+  "D. ೀ ೇ ೋ after a conjunct: no pair, passed through as Kannada": 138,
+  "F. ಕ್ಷ / ಜ್ಞ + sign: head kept or a different base": 731,
+  "H. reph on an independent vowel or a halant/ZW form": 15
+ },
+ "firstCause": {
+  "E. ": 412,
+  "G. ": 78,
+  "J. ": 12,
+  "C. ": 12199,
+  "I. ": 620,
+  "A. ": 2780,
+  "B. ": 2610,
+  "D. ": 27,
+  "F. ": 478,
+  "H. ": 15
+ },
+ "other": 33
+}
+ಙೀ: ours 5F EF E0 | Shree 5F DF E0
+ಙೀಂ: ours 5F EF E0 ED | Shree 5F DF E0 ED
+ಙೀಃ: ours 5F EF E0 40 | Shree 5F DF E0 40
+ಧಿ: ours 98 | Shree 97
+ಧಿಂ: ours 98 ED | Shree 97 ED
+ಧಿಃ: ours 98 40 | Shree 97 40
+ಧೀ: ours 98 E0 | Shree 97 E0
+ಧೀಂ: ours 98 E0 ED | Shree 97 E0 ED
+ಧೀಃ: ours 98 E0 40 | Shree 97 E0 40
+ೞಾ: ours 91 DD | Shree 92 DD
+ೞಾಂ: ours 91 DD ED | Shree 92 DD ED
+ೞಾಃ: ours 91 DD 40 | Shree 92 DD 40
+ೞೆ: ours 91 E6 | Shree 91 EF
+ೞೆಂ: ours 91 E6 ED | Shree 91 EF ED
+ೞೆಃ: ours 91 E6 40 | Shree 91 EF 40
+ೞೈ: ours 91 E6 E7 | Shree 91 EF E7
+ೞೈಂ: ours 91 E6 E7 ED | Shree 91 EF E7 ED
+ೞೈಃ: ours 91 E6 E7 40 | Shree 91 EF E7 40
+ೞೊ: ours 91 E6 E3 | Shree 91 EF E3
+ೞೊಂ: ours 91 E6 E3 ED | Shree 91 EF E3 ED
+ೞೊಃ: ours 91 E6 E3 40 | Shree 91 EF E3 40
+ೞೌ: ours 91 E8 | Shree 92 E8
+ೞೌಂ: ours 91 E8 ED | Shree 92 E8 ED
+ೞೌಃ: ours 91 E8 40 | Shree 92 E8 40
+ೡ: ours U+0CE1 | Shree 99
+ೡಂ: ours U+0CE1 ED | Shree 99 ED
+ೡಃ: ours U+0CE1 40 | Shree 99 40
+ೡಂಃ: ours U+0CE1 ED 40 | Shree 99 ED 40
+ೡಃಂ: ours U+0CE1 40 ED | Shree 99 40 ED
+ಕೆೃ: ours 50 E6 EA | Shree 50

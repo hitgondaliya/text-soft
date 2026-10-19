@@ -1,0 +1,27 @@
+Test run for C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-pun\repo\tests\FontSoftware.Tests\bin\Release\net8.0-windows\FontSoftware.Tests.dll (.NETCoreApp,Version=v8.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:06.64]     FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(unicodeFont: "raavi", encoding: "shree-pun456", family: "^SHREE-PUN-", fixture: "shree-pun7-truth.json") [FAIL]
+  Failed FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(unicodeFont: "raavi", encoding: "shree-pun456", family: "^SHREE-PUN-", fixture: "shree-pun7-truth.json") [789 ms]
+  Error Message:
+   shree-pun456: 5 missing:
+S09500F2.TTF (SHREE-PUN-0950) maps U+00B7, which the table passes through as itself
+S09510F2.TTF (SHREE-PUN-0951) maps U+00B7, which the table passes through as itself
+S09520F2.TTF (SHREE-PUN-0952) maps U+00B7, which the table passes through as itself
+S09550F2.TTF (SHREE-PUN-0955) maps U+00B7, which the table passes through as itself
+S09560F2.TTF (SHREE-PUN-0956) maps U+00B7, which the table passes through as itself
+  Stack Trace:
+     at FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(String unicodeFont, String encoding, String family, String fixture) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-pun\repo\tests\FontSoftware.Tests\ShreeFontCmapTests.cs:line 53
+   at InvokeStub_ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+[xUnit.net 00:00:12.60]     FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(unicodeFont: "raavi", encoding: "shree-pun7", family: "^SHREE-PUN7-", fixture: "shree-pun7-truth.json") [FAIL]
+  Failed FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(unicodeFont: "raavi", encoding: "shree-pun7", family: "^SHREE-PUN7-", fixture: "shree-pun7-truth.json") [1 s]
+  Error Message:
+   shree-pun7: 2 missing:
+WPUN7001.TTF (SHREE-PUN7-0951) maps U+00B7, which the table passes through as itself
+WPUN7002.TTF (SHREE-PUN7-0952) maps U+00B7, which the table passes through as itself
+  Stack Trace:
+     at FontSoftware.Tests.ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(String unicodeFont, String encoding, String family, String fixture) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-pun\repo\tests\FontSoftware.Tests\ShreeFontCmapTests.cs:line 53
+   at InvokeStub_ShreeFontCmapTests.EveryCodeATableWritesIsInEveryFontOfItsFamily(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+
+Failed!  - Failed:     2, Passed:   671, Skipped:     0, Total:   673, Duration: 52 s - FontSoftware.Tests.dll (net8.0)

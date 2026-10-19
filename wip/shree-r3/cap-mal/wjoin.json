@@ -1,0 +1,205 @@
+{
+ "probes": 41708,
+ "withAllUnitsAnswered": 41708,
+ "unitMissing": 0,
+ "sevenComposerWritesTheUnitsJoined": 41451,
+ "sevenDiffers": 257,
+ "sevenDiffExamples": [
+  "66 64 73 66 | W1 pair 66 64 | 73 66 | joined 57 56 52 57 | got 57 A8",
+  "66 64 53 66 | W1 pair 66 64 | 53 66 | joined 57 56 53 57 | got 57 A8",
+  "66 64 59 66 | W1 pair 66 64 | 59 66 | joined 57 56 4E 57 | got 57 A8",
+  "66 64 73 D7 | W1 pair 66 64 | 73 D7 | joined 57 56 52 66 | got 57 A9",
+  "66 64 53 D7 | W1 pair 66 64 | 53 D7 | joined 57 56 53 66 | got 57 A9",
+  "66 64 59 D7 | W1 pair 66 64 | 59 D7 | joined 57 56 4E 66 | got 57 A9",
+  "66 64 73 72 | W1 pair 66 64 | 73 72 | joined 57 56 52 6A | got 57 56 D4",
+  "66 64 53 72 | W1 pair 66 64 | 53 72 | joined 57 56 53 6A | got 57 56 D4",
+  "66 64 59 72 | W1 pair 66 64 | 59 72 | joined 57 56 4E 6A | got 57 56 D4",
+  "66 64 73 61 | W1 pair 66 64 | 73 61 | joined 57 56 52 6F | got 57 56 DC",
+  "66 64 53 61 | W1 pair 66 64 | 53 61 | joined 57 56 53 6F | got 57 56 DC",
+  "66 64 59 61 | W1 pair 66 64 | 59 61 | joined 57 56 4E 6F | got 57 56 DC",
+  "66 64 73 68 | W1 pair 66 64 | 73 68 | joined 57 56 52 73 | got 57 57 E6",
+  "66 64 53 68 | W1 pair 66 64 | 53 68 | joined 57 56 53 73 | got 57 57 E6",
+  "66 64 59 68 | W1 pair 66 64 | 59 68 | joined 57 56 4E 73 | got 57 57 E6",
+  "66 64 73 63 | W1 pair 66 64 | 73 63 | joined 57 56 52 79 | got 57 56 F5",
+  "66 64 53 63 | W1 pair 66 64 | 53 63 | joined 57 56 53 79 | got 57 56 F5",
+  "66 64 59 63 | W1 pair 66 64 | 59 63 | joined 57 56 4E 79 | got 57 56 F5",
+  "D7 64 73 D7 | W1 pair D7 64 | 73 D7 | joined 66 56 52 66 | got 66 BE",
+  "D7 64 53 D7 | W1 pair D7 64 | 53 D7 | joined 66 56 53 66 | got 66 BE",
+  "D7 64 59 D7 | W1 pair D7 64 | 59 D7 | joined 66 56 4E 66 | got 66 BE",
+  "D7 64 73 72 | W1 pair D7 64 | 73 72 | joined 66 56 52 6A | got 66 C1",
+  "D7 64 53 72 | W1 pair D7 64 | 53 72 | joined 66 56 53 6A | got 66 C1",
+  "D7 64 59 72 | W1 pair D7 64 | 59 72 | joined 66 56 4E 6A | got 66 C1",
+  "D7 64 73 61 | W1 pair D7 64 | 73 61 | joined 66 56 52 6F | got 66 C4",
+  "D7 64 53 61 | W1 pair D7 64 | 53 61 | joined 66 56 53 6F | got 66 C4",
+  "D7 64 59 61 | W1 pair D7 64 | 59 61 | joined 66 56 4E 6F | got 66 C4",
+  "D7 64 73 68 | W1 pair D7 64 | 73 68 | joined 66 56 52 73 | got 66 56 E6",
+  "D7 64 53 68 | W1 pair D7 64 | 53 68 | joined 66 56 53 73 | got 66 56 E6",
+  "D7 64 59 68 | W1 pair D7 64 | 59 68 | joined 66 56 4E 73 | got 66 56 E6",
+  "D7 64 73 63 | W1 pair D7 64 | 73 63 | joined 66 56 52 79 | got 66 C3",
+  "D7 64 53 63 | W1 pair D7 64 | 53 63 | joined 66 56 53 79 | got 66 C3",
+  "D7 64 59 63 | W1 pair D7 64 | 59 63 | joined 66 56 4E 79 | got 66 C3",
+  "72 64 73 D7 | W1 pair 72 64 | 73 D7 | joined 6A 56 52 66 | got 6A CD",
+  "72 64 53 D7 | W1 pair 72 64 | 53 D7 | joined 6A 56 53 66 | got 6A CD",
+  "72 64 59 D7 | W1 pair 72 64 | 59 D7 | joined 6A 56 4E 66 | got 6A CD",
+  "72 64 73 72 | W1 pair 72 64 | 73 72 | joined 6A 56 52 6A | got 6A D0",
+  "72 64 53 72 | W1 pair 72 64 | 53 72 | joined 6A 56 53 6A | got 6A D0",
+  "72 64 59 72 | W1 pair 72 64 | 59 72 | joined 6A 56 4E 6A | got 6A D0",
+  "72 64 73 61 | W1 pair 72 64 | 73 61 | joined 6A 56 52 6F | got 6A D3",
+  "72 64 53 61 | W1 pair 72 64 | 53 61 | joined 6A 56 53 6F | got 6A D3",
+  "72 64 59 61 | W1 pair 72 64 | 59 61 | joined 6A 56 4E 6F | got 6A D3",
+  "72 64 73 68 | W1 pair 72 64 | 73 68 | joined 6A 56 52 73 | got 6A 56 E6",
+  "72 64 53 68 | W1 pair 72 64 | 53 68 | joined 6A 56 53 73 | got 6A 56 E6",
+  "72 64 59 68 | W1 pair 72 64 | 59 68 | joined 6A 56 4E 73 | got 6A 56 E6",
+  "72 64 73 63 | W1 pair 72 64 | 73 63 | joined 6A 56 52 79 | got 6A 56 F5",
+  "72 64 53 63 | W1 pair 72 64 | 53 63 | joined 6A 56 53 79 | got 6A 56 F5",
+  "72 64 59 63 | W1 pair 72 64 | 59 63 | joined 6A 56 4E 79 | got 6A 56 F5",
+  "67 64 73 D7 | W1 pair 67 64 | 73 D7 | joined 71 56 52 66 | got 71 56 C5",
+  "67 64 53 D7 | W1 pair 67 64 | 53 D7 | joined 71 56 53 66 | got 71 56 C5",
+  "67 64 59 D7 | W1 pair 67 64 | 59 D7 | joined 71 56 4E 66 | got 71 56 C5",
+  "67 64 73 72 | W1 pair 67 64 | 73 72 | joined 71 56 52 6A | got 71 56 D4",
+  "67 64 53 72 | W1 pair 67 64 | 53 72 | joined 71 56 53 6A | got 71 56 D4",
+  "67 64 59 72 | W1 pair 67 64 | 59 72 | joined 71 56 4E 6A | got 71 56 D4",
+  "67 64 73 61 | W1 pair 67 64 | 73 61 | joined 71 56 52 6F | got 71 56 DC",
+  "67 64 53 61 | W1 pair 67 64 | 53 61 | joined 71 56 53 6F | got 71 56 DC",
+  "67 64 59 61 | W1 pair 67 64 | 59 61 | joined 71 56 4E 6F | got 71 56 DC",
+  "67 64 73 68 | W1 pair 67 64 | 73 68 | joined 71 56 52 73 | got 71 56 E6",
+  "67 64 53 68 | W1 pair 67 64 | 53 68 | joined 71 56 53 73 | got 71 56 E6",
+  "67 64 59 68 | W1 pair 67 64 | 59 68 | joined 71 56 4E 73 | got 71 56 E6"
+ ],
+ "unicodeComposerWritesTheUnitsJoined": 39644,
+ "unicodeAnswerEqualsWhatTheCodesMean": 39271,
+ "unicodeDiffByShape": {
+  "W1 pair 66": {
+   "count": 172,
+   "examples": [
+    "66 55 66 6C | W1 pair 66 55 | 66 6C | joined \"ക്യകാ\" | got \"ക്യക\" | by codes \"ക്യകാ\" | 7 57 7C 57 4C",
+    "66 55 66 6A | W1 pair 66 55 | 66 6A | joined \"ക്യകി\" | got \"ക്യക\" | by codes \"ക്യകി\" | 7 57 7C 57 5D",
+    "66 55 66 4A | W1 pair 66 55 | 66 4A | joined \"ക്യകീ\" | got \"ക്യക\" | by codes \"ക്യകീ\" | 7 57 7C 57 7D",
+    "66 55 66 6B | W1 pair 66 55 | 66 6B | joined \"ക്യകു\" | got \"ക്യക\" | by codes \"ക്യകു\" | 7 57 7C 57 4F",
+    "66 55 66 6F | W1 pair 66 55 | 66 6F | joined \"ക്യകൂ\" | got \"ക്യക\" | by codes \"ക്യകൂ\" | 7 57 7C 57 50",
+    "66 55 66 4F | W1 pair 66 55 | 66 4F | joined \"ക്യകൗ\" | got \"ക്യക\" | by codes \"ക്യകൗ\" | 7 57 7C 57 54"
+   ]
+  },
+  "W1 pair D7": {
+   "count": 172,
+   "examples": [
+    "D7 55 66 6C | W1 pair D7 55 | 66 6C | joined \"ത്യകാ\" | got \"ത്യക\" | by codes \"ത്യകാ\" | 7 66 7C 57 4C",
+    "D7 55 66 6A | W1 pair D7 55 | 66 6A | joined \"ത്യകി\" | got \"ത്യക\" | by codes \"ത്യകി\" | 7 66 7C 57 5D",
+    "D7 55 66 4A | W1 pair D7 55 | 66 4A | joined \"ത്യകീ\" | got \"ത്യക\" | by codes \"ത്യകീ\" | 7 66 7C 57 7D",
+    "D7 55 66 6B | W1 pair D7 55 | 66 6B | joined \"ത്യകു\" | got \"ത്യക\" | by codes \"ത്യകു\" | 7 66 7C 57 4F",
+    "D7 55 66 6F | W1 pair D7 55 | 66 6F | joined \"ത്യകൂ\" | got \"ത്യക\" | by codes \"ത്യകൂ\" | 7 66 7C 57 50",
+    "D7 55 66 4F | W1 pair D7 55 | 66 4F | joined \"ത്യകൗ\" | got \"ത്യക\" | by codes \"ത്യകൗ\" | 7 66 7C 57 54"
+   ]
+  },
+  "W1 pair 72": {
+   "count": 172,
+   "examples": [
+    "72 55 66 6C | W1 pair 72 55 | 66 6C | joined \"ന്യകാ\" | got \"ന്യക\" | by codes \"ന്യകാ\" | 7 6A 7C 57 4C",
+    "72 55 66 6A | W1 pair 72 55 | 66 6A | joined \"ന്യകി\" | got \"ന്യക\" | by codes \"ന്യകി\" | 7 6A 7C 57 5D",
+    "72 55 66 4A | W1 pair 72 55 | 66 4A | joined \"ന്യകീ\" | got \"ന്യക\" | by codes \"ന്യകീ\" | 7 6A 7C 57 7D",
+    "72 55 66 6B | W1 pair 72 55 | 66 6B | joined \"ന്യകു\" | got \"ന്യക\" | by codes \"ന്യകു\" | 7 6A 7C 57 4F",
+    "72 55 66 6F | W1 pair 72 55 | 66 6F | joined \"ന്യകൂ\" | got \"ന്യക\" | by codes \"ന്യകൂ\" | 7 6A 7C 57 50",
+    "72 55 66 4F | W1 pair 72 55 | 66 4F | joined \"ന്യകൗ\" | got \"ന്യക\" | by codes \"ന്യകൗ\" | 7 6A 7C 57 54"
+   ]
+  },
+  "W1 pair 67": {
+   "count": 172,
+   "examples": [
+    "67 55 66 6C | W1 pair 67 55 | 66 6C | joined \"ര്യകാ\" | got \"ര്യക\" | by codes \"ര്യകാ\" | 7 71 7C 57 4C",
+    "67 55 66 6A | W1 pair 67 55 | 66 6A | joined \"ര്യകി\" | got \"ര്യക\" | by codes \"ര്യകി\" | 7 71 7C 57 5D",
+    "67 55 66 4A | W1 pair 67 55 | 66 4A | joined \"ര്യകീ\" | got \"ര്യക\" | by codes \"ര്യകീ\" | 7 71 7C 57 7D",
+    "67 55 66 6B | W1 pair 67 55 | 66 6B | joined \"ര്യകു\" | got \"ര്യക\" | by codes \"ര്യകു\" | 7 71 7C 57 4F",
+    "67 55 66 6F | W1 pair 67 55 | 66 6F | joined \"ര്യകൂ\" | got \"ര്യക\" | by codes \"ര്യകൂ\" | 7 71 7C 57 50",
+    "67 55 66 4F | W1 pair 67 55 | 66 4F | joined \"ര്യകൗ\" | got \"ര്യക\" | by codes \"ര്യകൗ\" | 7 71 7C 57 54"
+   ]
+  },
+  "W1 pair 61": {
+   "count": 172,
+   "examples": [
+    "61 55 66 6C | W1 pair 61 55 | 66 6C | joined \"മ്യകാ\" | got \"മ്യക\" | by codes \"മ്യകാ\" | 7 6F 7C 57 4C",
+    "61 55 66 6A | W1 pair 61 55 | 66 6A | joined \"മ്യകി\" | got \"മ്യക\" | by codes \"മ്യകി\" | 7 6F 7C 57 5D",
+    "61 55 66 4A | W1 pair 61 55 | 66 4A | joined \"മ്യകീ\" | got \"മ്യക\" | by codes \"മ്യകീ\" | 7 6F 7C 57 7D",
+    "61 55 66 6B | W1 pair 61 55 | 66 6B | joined \"മ്യകു\" | got \"മ്യക\" | by codes \"മ്യകു\" | 7 6F 7C 57 4F",
+    "61 55 66 6F | W1 pair 61 55 | 66 6F | joined \"മ്യകൂ\" | got \"മ്യക\" | by codes \"മ്യകൂ\" | 7 6F 7C 57 50",
+    "61 55 66 4F | W1 pair 61 55 | 66 4F | joined \"മ്യകൗ\" | got \"മ്യക\" | by codes \"മ്യകൗ\" | 7 6F 7C 57 54"
+   ]
+  },
+  "W1 pair 75": {
+   "count": 172,
+   "examples": [
+    "75 55 66 6C | W1 pair 75 55 | 66 6C | joined \"യ്യകാ\" | got \"യ്യക\" | by codes \"യ്യകാ\" | 7 70 7C 57 4C",
+    "75 55 66 6A | W1 pair 75 55 | 66 6A | joined \"യ്യകി\" | got \"യ്യക\" | by codes \"യ്യകി\" | 7 70 7C 57 5D",
+    "75 55 66 4A | W1 pair 75 55 | 66 4A | joined \"യ്യകീ\" | got \"യ്യക\" | by codes \"യ്യകീ\" | 7 70 7C 57 7D",
+    "75 55 66 6B | W1 pair 75 55 | 66 6B | joined \"യ്യകു\" | got \"യ്യക\" | by codes \"യ്യകു\" | 7 70 7C 57 4F",
+    "75 55 66 6F | W1 pair 75 55 | 66 6F | joined \"യ്യകൂ\" | got \"യ്യക\" | by codes \"യ്യകൂ\" | 7 70 7C 57 50",
+    "75 55 66 4F | W1 pair 75 55 | 66 4F | joined \"യ്യകൗ\" | got \"യ്യക\" | by codes \"യ്യകൗ\" | 7 70 7C 57 54"
+   ]
+  },
+  "W1 pair 68": {
+   "count": 172,
+   "examples": [
+    "68 55 66 6C | W1 pair 68 55 | 66 6C | joined \"ല്യകാ\" | got \"ല്യക\" | by codes \"ല്യകാ\" | 7 73 7C 57 4C",
+    "68 55 66 6A | W1 pair 68 55 | 66 6A | joined \"ല്യകി\" | got \"ല്യക\" | by codes \"ല്യകി\" | 7 73 7C 57 5D",
+    "68 55 66 4A | W1 pair 68 55 | 66 4A | joined \"ല്യകീ\" | got \"ല്യക\" | by codes \"ല്യകീ\" | 7 73 7C 57 7D",
+    "68 55 66 6B | W1 pair 68 55 | 66 6B | joined \"ല്യകു\" | got \"ല്യക\" | by codes \"ല്യകു\" | 7 73 7C 57 4F",
+    "68 55 66 6F | W1 pair 68 55 | 66 6F | joined \"ല്യകൂ\" | got \"ല്യക\" | by codes \"ല്യകൂ\" | 7 73 7C 57 50",
+    "68 55 66 4F | W1 pair 68 55 | 66 4F | joined \"ല്യകൗ\" | got \"ല്യക\" | by codes \"ല്യകൗ\" | 7 73 7C 57 54"
+   ]
+  },
+  "W1 pair 69": {
+   "count": 172,
+   "examples": [
+    "69 55 66 6C | W1 pair 69 55 | 66 6C | joined \"വ്യകാ\" | got \"വ്യക\" | by codes \"വ്യകാ\" | 7 76 7C 57 4C",
+    "69 55 66 6A | W1 pair 69 55 | 66 6A | joined \"വ്യകി\" | got \"വ്യക\" | by codes \"വ്യകി\" | 7 76 7C 57 5D",
+    "69 55 66 4A | W1 pair 69 55 | 66 4A | joined \"വ്യകീ\" | got \"വ്യക\" | by codes \"വ്യകീ\" | 7 76 7C 57 7D",
+    "69 55 66 6B | W1 pair 69 55 | 66 6B | joined \"വ്യകു\" | got \"വ്യക\" | by codes \"വ്യകു\" | 7 76 7C 57 4F",
+    "69 55 66 6F | W1 pair 69 55 | 66 6F | joined \"വ്യകൂ\" | got \"വ്യക\" | by codes \"വ്യകൂ\" | 7 76 7C 57 50",
+    "69 55 66 4F | W1 pair 69 55 | 66 4F | joined \"വ്യകൗ\" | got \"വ്യക\" | by codes \"വ്യകൗ\" | 7 76 7C 57 54"
+   ]
+  },
+  "W1 pair 63": {
+   "count": 172,
+   "examples": [
+    "63 55 66 6C | W1 pair 63 55 | 66 6C | joined \"സ്യകാ\" | got \"സ്യക\" | by codes \"സ്യകാ\" | 7 79 7C 57 4C",
+    "63 55 66 6A | W1 pair 63 55 | 66 6A | joined \"സ്യകി\" | got \"സ്യക\" | by codes \"സ്യകി\" | 7 79 7C 57 5D",
+    "63 55 66 4A | W1 pair 63 55 | 66 4A | joined \"സ്യകീ\" | got \"സ്യക\" | by codes \"സ്യകീ\" | 7 79 7C 57 7D",
+    "63 55 66 6B | W1 pair 63 55 | 66 6B | joined \"സ്യകു\" | got \"സ്യക\" | by codes \"സ്യകു\" | 7 79 7C 57 4F",
+    "63 55 66 6F | W1 pair 63 55 | 66 6F | joined \"സ്യകൂ\" | got \"സ്യക\" | by codes \"സ്യകൂ\" | 7 79 7C 57 50",
+    "63 55 66 4F | W1 pair 63 55 | 66 4F | joined \"സ്യകൗ\" | got \"സ്യക\" | by codes \"സ്യകൗ\" | 7 79 7C 57 54"
+   ]
+  },
+  "W1 pair 79": {
+   "count": 172,
+   "examples": [
+    "79 55 66 6C | W1 pair 79 55 | 66 6C | joined \"റ്യകാ\" | got \"റ്യക\" | by codes \"റ്യകാ\" | 7 72 7C 57 4C",
+    "79 55 66 6A | W1 pair 79 55 | 66 6A | joined \"റ്യകി\" | got \"റ്യക\" | by codes \"റ്യകി\" | 7 72 7C 57 5D",
+    "79 55 66 4A | W1 pair 79 55 | 66 4A | joined \"റ്യകീ\" | got \"റ്യക\" | by codes \"റ്യകീ\" | 7 72 7C 57 7D",
+    "79 55 66 6B | W1 pair 79 55 | 66 6B | joined \"റ്യകു\" | got \"റ്യക\" | by codes \"റ്യകു\" | 7 72 7C 57 4F",
+    "79 55 66 6F | W1 pair 79 55 | 66 6F | joined \"റ്യകൂ\" | got \"റ്യക\" | by codes \"റ്യകൂ\" | 7 72 7C 57 50",
+    "79 55 66 4F | W1 pair 79 55 | 66 4F | joined \"റ്യകൗ\" | got \"റ്യക\" | by codes \"റ്യകൗ\" | 7 72 7C 57 54"
+   ]
+  },
+  "W1 pair 6E": {
+   "count": 172,
+   "examples": [
+    "6E 55 66 6C | W1 pair 6E 55 | 66 6C | joined \"ണ്യകാ\" | got \"ണ്യക\" | by codes \"ണ്യകാ\" | 7 65 7C 57 4C",
+    "6E 55 66 6A | W1 pair 6E 55 | 66 6A | joined \"ണ്യകി\" | got \"ണ്യക\" | by codes \"ണ്യകി\" | 7 65 7C 57 5D",
+    "6E 55 66 4A | W1 pair 6E 55 | 66 4A | joined \"ണ്യകീ\" | got \"ണ്യക\" | by codes \"ണ്യകീ\" | 7 65 7C 57 7D",
+    "6E 55 66 6B | W1 pair 6E 55 | 66 6B | joined \"ണ്യകു\" | got \"ണ്യക\" | by codes \"ണ്യകു\" | 7 65 7C 57 4F",
+    "6E 55 66 6F | W1 pair 6E 55 | 66 6F | joined \"ണ്യകൂ\" | got \"ണ്യക\" | by codes \"ണ്യകൂ\" | 7 65 7C 57 50",
+    "6E 55 66 4F | W1 pair 6E 55 | 66 4F | joined \"ണ്യകൗ\" | got \"ണ്യക\" | by codes \"ണ്യകൗ\" | 7 65 7C 57 54"
+   ]
+  },
+  "W1 pair D5": {
+   "count": 172,
+   "examples": [
+    "D5 55 66 6C | W1 pair D5 55 | 66 6C | joined \"ക്ഷ്യകാ\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകാ\" | 7 83 7C 57 4C",
+    "D5 55 66 6A | W1 pair D5 55 | 66 6A | joined \"ക്ഷ്യകി\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകി\" | 7 83 7C 57 5D",
+    "D5 55 66 4A | W1 pair D5 55 | 66 4A | joined \"ക്ഷ്യകീ\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകീ\" | 7 83 7C 57 7D",
+    "D5 55 66 6B | W1 pair D5 55 | 66 6B | joined \"ക്ഷ്യകു\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകു\" | 7 83 7C 57 4F",
+    "D5 55 66 6F | W1 pair D5 55 | 66 6F | joined \"ക്ഷ്യകൂ\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകൂ\" | 7 83 7C 57 50",
+    "D5 55 66 4F | W1 pair D5 55 | 66 4F | joined \"ക്ഷ്യകൗ\" | got \"ക്ഷ്യക\" | by codes \"ക്ഷ്യകൗ\" | 7 83 7C 57 54"
+   ]
+  }
+ }
+}

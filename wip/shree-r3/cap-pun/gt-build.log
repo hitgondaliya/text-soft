@@ -1,0 +1,54 @@
+{
+ "pairs": 59839,
+ "unicodeStrings": 31436,
+ "withTruth": 27752,
+ "quirks": 1272,
+ "vendorKeyboards": 12,
+ "probeKeyboards": 1242,
+ "probeSequences": 58349,
+ "byKind": {
+  "vendor-key": 1401,
+  "alt:ੴ typed as code 51 alone = B0, the onkar arc WITHOUT the ੧ (every SHREE-PUN7 / SHREE-PUN font draws B0 so; the complete ੴ is 31 B0)": 24,
+  "quirk:vendor-key-types-other-than-its-codes (phonetic/inscript mode)": 134,
+  "quirk:7-composer-carrier-07 (a phonetic keyboard answers a lone sign on byte 07, which no SHREE-PUN font has)": 18,
+  "canonical": 9178,
+  "canonical:pending-link (virama typed with the link code 64, last: the 7 composer writes no glyph for it)": 1086,
+  "canonical:halant (virama typed with the halant code 44: the visible halant B5)": 17741,
+  "canonical:link+ZWJ/ZWNJ (no glyph for the virama or the joiner)": 76,
+  "quirk:7-font-has-no-nukta-for-this-letter (only ਸ਼ ਖ਼ ਗ਼ ਜ਼ ਫ਼ ਲ਼ have a glyph: 66 69 6A 6B 6C B4; the composer writes the plain letter)": 36,
+  "canonical:addak+bindi-written-as-adak-bindi (the Unicode composer writes ੱ + ਂ as U+0A01 ਁ)": 49,
+  "canonical:tippi-typed-written-as-bindi (after ਾ ੀ ੇ ੈ ੋ ੌ ਉ ਊ ੳ both composers write bindi ਂ for a tippi ੰ)": 984,
+  "quirk:U-composer-wrote-*": 954,
+  "alt:mark struck before the vowel sign": 912,
+  "alt:ਿ struck after the letter (the 7 composer writes the i-sign glyph 71 AFTER the letter, and loses a subjoined code or bindi/tippi struck after it)": 267,
+  "canonical:nukta-letter": 738,
+  "alt:vowel sign struck before the subjoined code": 1216,
+  "quirk:7-composer-loses-the-subjoined-੍ਹ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)": 17,
+  "quirk:7-composer-loses-the-subjoined-੍ਵ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)": 17,
+  "quirk:7-composer-loses-the-vowel-sign-ਾ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)": 18,
+  "quirk:7-composer-loses-the-vowel-sign-ੁ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)": 18,
+  "quirk:7-composer-loses-the-vowel-sign-ੂ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)": 18,
+  "quirk:7-composer-loses-the-subjoined-੍ਰ (two subjoined codes in a row: ਕ੍ਹ੍ਰ = 48 6E = ਕ + ਕ੍ਰ; or ਠ/ਨ + subjoined + a top sign + bindi: ਠ੍ਰੇਂ = 53 79 BE 7A, the sign written twice)": 16,
+  "canonical:link (virama typed with the link code 64: no glyph for it, the letters stand side by side)": 18280,
+  "alt:C+link+ਰ/ਹ/ਵ/ਯ (two full letters, the virama has no glyph; Unicode C੍ਰ C੍ਹ C੍ਵ C੍ਯ is the subjoined form, codes D1 D2 D0 4C)": 2584,
+  "alt:C+halant+ਰ/ਹ/ਵ/ਯ (visible halant B5 + full letter, not the subjoined form)": 2584,
+  "quirk:7-composer-loses-the-addak ੱ (ੱ then ਂ after a sign that has a bindi ligature: the sign is written twice, no addak)": 6,
+  "quirk:7-composer-drops-ਇ (code E4; ਇ is typed ਿ + ੲ = 71 42)": 16,
+  "quirk:7-composer-dropped-code-69 (ਂ)": 1,
+  "quirk:7-composer-dropped-code-D6 (ੰ)": 1,
+  "canonical:ੴ = ੧ + onkar arc (vendor slot 31 51; the Unicode composer writes U+0A74, the 7 composer 31 B0)": 1,
+  "canonical:vendor-slot": 6,
+  "quirk:7-composer-drops-” (code 7E)": 1,
+  "quirk:7-composer-loses-the-vowel-sign-ੌ (ਠ/ਨ + subjoined + ਾ/ੁ/ੂ + ਂ/ੰ/ੱ: ਠ੍ਹਾਂ = 53 BE A3 BE AA, no 70 and BE twice)": 1,
+  "alt:another typing order of ਠ/ਨ/ਕ + subjoined + sign + tail (probe set S, evidence for the composer gap: ਨ ੍ਹ ਂ ਾ = B2 A3 BE AA 70, bindi on the letter)": 1440
+ },
+ "notProbed": "Sequences longer than 4 codes cannot be typed with one key (a conjunct slot holds at most 4 codes), so: a two-consonant cluster with the i-sign AND a tail (ਿ C੍C ੰ), C੍C + subjoined + a vowel sign, a nukta letter (2 codes) in a cluster with a vowel sign, and three-consonant clusters other than C੍C + ੍ਰ/੍ਹ/੍ਵ/੍ਯ are not in the truth. Udaat ੑ (U+0A51), yakash ੵ (U+0A75), ੶ and the Gurmukhi abbreviation sign have no code: no key of any Shree keyboard and no code 21-FE gives them."
+}
+{
+ "method": "fonts/family-check.json (fontcmp.js): (3,1) cmap of WPUN7001.TTF (SHREE-PUN7-0951), WPUN7002.TTF (SHREE-PUN7-0952), S09500F2/S09510F2/S09520F2/S09550F2/S09560F2.TTF (SHREE-PUN-0950/0951/0952/0955/0956); per code glyph id, advance, sha1 of the glyf bytes; same-design pairs 0951 and 0952 compared outline by outline; every code of every face drawn by glyph index in fonts/codes-*.png.",
+ "result": "Same design (0951: WPUN7001 vs S09510F2; 0952: WPUN7002 vs S09520F2): 118 of 119 codes identical in outline bytes and advance; the only difference is 3C (₹), present in the two 7 faces only. All five 4/5/6 faces map the same 118 codes to the same glyph ids, and both 7 faces the same 119 codes. ONE table serves both families; for a 4/5/6 face ₹ (3C) has no glyph.",
+ "bytesInTruthNotInAnyFont": [],
+ "bytesInTruthNotIn456": [
+  "3C (₹)"
+ ]
+}

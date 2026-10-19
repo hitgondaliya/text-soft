@@ -1,0 +1,3 @@
+        R("ె\u0C56", "ై", "ె + \u0C56 is ై (కై = 4D F0 FC 4F)."),
+        R("\u0C56(" + Cluster + ")ె", "$1ై",
+          "The length mark \u0C56 before a letter with ె is the earlier TextSoft table's ై (4F 4D F0 FC = కై; the composer and this table write it after the letter): ై on that letter."),

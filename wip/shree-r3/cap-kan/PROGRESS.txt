@@ -1,0 +1,35 @@
+Kannada (S8KanU64 / S8Kan764) Shree-Lipi 7 capture - 2026-10-18 11:24-12:40 IST. ALL STEPS DONE; SLNXT restored
+(shmdump/final.bin == shmdump/start.bin; SL8_DEFAULTS_DATA: shmdump/DEFAULTS-final.bin == DEFAULTS-start.bin, 0 of 439 bytes).
+Pipeline adapted from ../cap-tel (Telugu, this round, itself from ../cap-ori). Every capture step is resumable: runlist.js skips a .tsv
+that already has "#stable 1 / #loaded 1" (FORCE=1 to redo). Re-run in this order:
+
+ 0. shmdump/start.bin = SLNXT's SL8_DLL_DATA before the first composer load (header 00 00 01, tables zero = cap-tel final.bin).
+    shmdump/DEFAULTS-start.bin = SL8_DEFAULTS_DATA (defchk.ps1). Every composer run goes through
+    safe-run.js <label> <capdir> <probedir> [...]: shmlab dump -> shmdump/<label>-pre.bin, runlist (probe2.exe: U + 7 composer, keys
+    '!'..'~', layers 0..2, two passes -> #stable, table-0 check -> #loaded), then probe2 --put <label>-pre.bin and a fresh dump compared
+    (safe-run.log: all 5 runs "0 bytes differ"). Manual restore: probe2\bin\probe2.exe --put <8.3 path>\shmdump\start.bin
+ 1. probe2/ + shmlab/ copied (built exes) from cap-tel. k/BASEA.KAN = copy of DOE.KAN (slots blanked by build.js) = probe base;
+    probe files are <prefix>AAA.KAN etc. (neutral names; untouched check keys W Y Z 0 5 _ < [ { } and empty V verified in every file).
+    kbdscan.js -> kbdscan.txt (the 21 .KAN files: layer 0, Ctrl+Space, slots, code usage).
+ 2. Vendor keyboards: safe-run run1 capvo "C:/Shree-Lipi nxt" + run1b capvo-b (21 .KAN each, byte-identical).
+    LAYERS=12 safe-run layers layers "C:/Shree-Lipi nxt/DOE.KAN" -> layers/DOE.tsv: tutor layers 3..12 == layer 2 (89/89 keys).
+    collectv.js -> vendor-rows.json (3,115 rows), kan-vendor-keys.json (21 keyboards x layers 0/1/2, both composers, + the 13
+    Ctrl+Shift+1 chart keys with their codes' answers).
+ 3. Explore: explore1.js -> seq-explore1.json (1,765) -> build.js ... px E (38 files) -> safe-run runE capx px capx-b px;
+    probeparse.js px capx E --show -> explore1-show.txt; explore1-compact.txt.
+ 4. Main probes: gen.js -> seq-all.json (42,048) -> build.js seq-all.json p P (895 files) -> safe-run runP capp p capp-b p (13 s);
+    probeparse.js p capp P (and capp-b) -> capp/P-results.json; capp-compact.txt.
+    verify-stability.js capp capp-b capvo capvo-b capx capx-b -> verify-stability.json: all RAW byte-identical.
+ 5. expected.js (code sequence -> Unicode), analyse1.js (expected vs Unicode composer), groundtruth.js -> kan7-groundtruth.json
+    (+ kan7-groundtruth-glyphfix.json, kan7-composer-gaps.json, kan7-only7-evidence.json); patterns.js -> kan7-patterns.txt.
+ 6. fontcmp.js (ttf.js) -> fonts/family-check.json + fonts/codes-*.png; render.js -> fonts/only7.png, order-check.png,
+    punct-check.png, dhi-*.png, all-codes-3faces.png, gunitakshara.png.
+ 7. measure/ (C#, references repo/src/FontSoftware.Core = copy of snap-base; FontConverter.cs differs from the main checkout by md5,
+    MappingTable.cs and ConfigLoader.cs and both kan7 tables are md5-identical): dotnet build -c Release -o bin -m:1
+    -nodeReuse:false -p:UseSharedCompilation=false ; measure\bin\measure.exe kan7-groundtruth.json repo/assets/config measured
+    (measured-r2 byte-identical; measured-glyphfix against the glyphfix truth); WORDS=common-words.txt -> measured/common-words.tsv;
+    failclass.js -> measured/forward-failure-classes.json.
+
+Results: truth 24,825 Unicode strings (45,044 pairs). Shipped tables: forward exact = accepted 22.40% (25.23% of the 22,045 strings
+without ZWJ/ZWNJ); reverse exact 24.71%, same text 24.89%; the tables' own round trip 99.97%. Common words 221/299 exact (13 not
+coverable). Glyph check: the composer swaps 97/98 (ಧಿ -> 97 draws ಽ, ಽ -> 98 draws ಧಿ); — – ÷ ₹ [ ] have no right glyph in any face.

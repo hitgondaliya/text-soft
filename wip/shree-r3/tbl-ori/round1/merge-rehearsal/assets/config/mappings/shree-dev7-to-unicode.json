@@ -1,0 +1,1496 @@
+{
+  "id": "shree-dev7-to-unicode",
+  "name": "Shree-Lipi 7.0 Devanagari -\u003E Unicode",
+  "sourceFontId": "shree-dev7",
+  "targetFontId": "mangal",
+  "sourceType": "legacy",
+  "targetType": "unicode",
+  "preRules": [
+    {
+      "pattern": "\\}",
+      "replace": "o\u00A9",
+      "note": "7D: the sign 6F with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A3",
+      "replace": "\u00A1\u00A9",
+      "note": "A3: the sign A1 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\\]",
+      "replace": "|\u00A9",
+      "note": "5D: the sign 7C with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A4",
+      "replace": "\u00A2\u00A9",
+      "note": "A4: the sign A2 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00AA",
+      "replace": "\u00A7\u00A9",
+      "note": "AA: the sign A7 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "u",
+      "replace": "r\u00A9",
+      "note": "75: the sign 72 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "v",
+      "replace": "t\u00A9",
+      "note": "76: the sign 74 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "([\u00C4\u00CE])([wy\u00A5\u00A6]\u002B)\\\u003E",
+      "replace": "$1m$2",
+      "note": "\u091E \u0924\u094D\u0924 with a sign below after a halant letter: the composer writes the 3E spacer for the 6D stem."
+    },
+    {
+      "pattern": "(?\u003C=[@ABCDEFGHIJKMOPUVWYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD\u2018\u2019\u00B6m])\u00B2(?!\\\u003E)",
+      "replace": "\uFDD4",
+      "note": "The halant B2 after a letter that has a half form is a visible virama (\u094D\u002BZWNJ); U\u002BFDD4 marks it for the pairs."
+    },
+    {
+      "pattern": "[\\$\\\u003E]",
+      "replace": "",
+      "note": "The spacers 24 and 3E draw nothing; they only follow a letter (or shift a candrabindu)."
+    },
+    {
+      "pattern": "([\u0160\u2122\u00BB\u00BD\u00BF\u00C0\u00C1\u00C2\u00C4\u00CA\u00CB\u00CD\u00CE\u00CF\u00DC\u00DD\u00DF\u00E2\u00E3\u00E4\u00E5\u00E6\u00E8\u00EB\u00EC\u00ED\u00EE\u00F1\u00F4\u00F9\u00FA\u00FB\u00B3](?\u003C!\u00E8)|\u00B2)(?=[a\u00E9\u00EA])",
+      "replace": "$1\u200D",
+      "note": "A half letter before the full \u0930: \u094D\u002BZWJ\u002B\u0930 (\u094D\u0930 alone would be the ra-sign)."
+    },
+    {
+      "pattern": "((?:(?:[\u00B5\u2039]?(?:[\u0160\u2122\u00BB\u00BD\u00BF\u00C0\u00C1\u00C2\u00C4\u00CA\u00CB\u00CD\u00CE\u00CF\u00DC\u00DD\u00DF\u00E2\u00E3\u00E4\u00E5\u00E6\u00E8\u00EB\u00EC\u00ED\u00EE\u00F1\u00F4\u00F9\u00FA\u00FB\u00B3]|[@ACDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD\u2018\u2019\u00B6]\u00B2))*[\u00B5\u2039]?[@ACDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD\u2018\u2019\u00B6])?[morstwxyz\\|\u00A1\u00A2\u00A5\u00A6\u00A7\u00A8\u00AB\u00AE\u00AF\u00B0\u00B1\u00B4\u2030\u00E7\u00FE\u00FF]*)(?\u003C!B)\u00A9",
+      "replace": "\uFDD0$1",
+      "note": "Reph is written after its syllable (or after a sign with no letter); Unicode has \u0930\u094D first - U\u002BFDD0 marks it there for the pairs. (42 A9 is \u0908, not a reph on \u0907.)"
+    }
+  ],
+  "pairs": [
+    {
+      "from": "!",
+      "to": "!"
+    },
+    {
+      "from": "\u0022",
+      "to": "\u2018"
+    },
+    {
+      "from": "#",
+      "to": "\u091E\u094D\u091A\u094D"
+    },
+    {
+      "from": "%",
+      "to": "%"
+    },
+    {
+      "from": "\u0026",
+      "to": "\u0964"
+    },
+    {
+      "from": "\u0027",
+      "to": "\u2019"
+    },
+    {
+      "from": "(",
+      "to": "("
+    },
+    {
+      "from": ")",
+      "to": ")"
+    },
+    {
+      "from": "*",
+      "to": "*"
+    },
+    {
+      "from": "\u002B",
+      "to": "\u002B"
+    },
+    {
+      "from": ",",
+      "to": ","
+    },
+    {
+      "from": "-",
+      "to": "-"
+    },
+    {
+      "from": ".",
+      "to": "."
+    },
+    {
+      "from": "/",
+      "to": "/"
+    },
+    {
+      "from": "0",
+      "to": "\u0966"
+    },
+    {
+      "from": "1",
+      "to": "\u0967"
+    },
+    {
+      "from": "2",
+      "to": "\u0968"
+    },
+    {
+      "from": "3",
+      "to": "\u0969"
+    },
+    {
+      "from": "4",
+      "to": "\u096A"
+    },
+    {
+      "from": "5",
+      "to": "\u096B"
+    },
+    {
+      "from": "6",
+      "to": "\u096C"
+    },
+    {
+      "from": "7",
+      "to": "\u096D"
+    },
+    {
+      "from": "8",
+      "to": "\u096E"
+    },
+    {
+      "from": "9",
+      "to": "\u096F"
+    },
+    {
+      "from": ":",
+      "to": ":"
+    },
+    {
+      "from": ";",
+      "to": ";"
+    },
+    {
+      "from": "\u003C",
+      "to": "\u20B9"
+    },
+    {
+      "from": "=",
+      "to": "="
+    },
+    {
+      "from": "?",
+      "to": "?"
+    },
+    {
+      "from": "@",
+      "to": "\u093D"
+    },
+    {
+      "from": "A",
+      "to": "\u0905"
+    },
+    {
+      "from": "B",
+      "to": "\u0907"
+    },
+    {
+      "from": "C",
+      "to": "\u0909"
+    },
+    {
+      "from": "D",
+      "to": "\u090A"
+    },
+    {
+      "from": "E",
+      "to": "\u090F"
+    },
+    {
+      "from": "F",
+      "to": "\u090B"
+    },
+    {
+      "from": "G",
+      "to": "\u0960"
+    },
+    {
+      "from": "H",
+      "to": "\u0915"
+    },
+    {
+      "from": "I",
+      "to": "\u0916"
+    },
+    {
+      "from": "J",
+      "to": "\u0917"
+    },
+    {
+      "from": "K",
+      "to": "\u0918"
+    },
+    {
+      "from": "L",
+      "to": "\u0919"
+    },
+    {
+      "from": "M",
+      "to": "\u091A"
+    },
+    {
+      "from": "N",
+      "to": "\u091B"
+    },
+    {
+      "from": "O",
+      "to": "\u091C"
+    },
+    {
+      "from": "P",
+      "to": "\u091D"
+    },
+    {
+      "from": "Q",
+      "to": "\u091F"
+    },
+    {
+      "from": "R",
+      "to": "\u0920"
+    },
+    {
+      "from": "S",
+      "to": "\u0921"
+    },
+    {
+      "from": "T",
+      "to": "\u0922"
+    },
+    {
+      "from": "U",
+      "to": "\u0923"
+    },
+    {
+      "from": "V",
+      "to": "\u0924"
+    },
+    {
+      "from": "W",
+      "to": "\u0925"
+    },
+    {
+      "from": "X",
+      "to": "\u0926"
+    },
+    {
+      "from": "Y",
+      "to": "\u0927"
+    },
+    {
+      "from": "Z",
+      "to": "\u0928"
+    },
+    {
+      "from": "[",
+      "to": "\u093F"
+    },
+    {
+      "from": "\\",
+      "to": "\u092B"
+    },
+    {
+      "from": "^",
+      "to": "\u092D"
+    },
+    {
+      "from": "_",
+      "to": "\u092E"
+    },
+    {
+      "from": "\u0060",
+      "to": "\u092F"
+    },
+    {
+      "from": "a",
+      "to": "\u0930"
+    },
+    {
+      "from": "b",
+      "to": "\u0932"
+    },
+    {
+      "from": "c",
+      "to": "\u0932"
+    },
+    {
+      "from": "d",
+      "to": "\u0935"
+    },
+    {
+      "from": "e",
+      "to": "\u0936"
+    },
+    {
+      "from": "f",
+      "to": "\u0937"
+    },
+    {
+      "from": "g",
+      "to": "\u0938"
+    },
+    {
+      "from": "h",
+      "to": "\u0939"
+    },
+    {
+      "from": "i",
+      "to": "\u0933"
+    },
+    {
+      "from": "j",
+      "to": "\u0915\u094D\u0937"
+    },
+    {
+      "from": "k",
+      "to": "\u091C\u094D\u091E"
+    },
+    {
+      "from": "l",
+      "to": "\u0936\u094D\u0930"
+    },
+    {
+      "from": "m",
+      "to": "\u093E"
+    },
+    {
+      "from": "n",
+      "to": "\u092A"
+    },
+    {
+      "from": "o",
+      "to": "\u0947"
+    },
+    {
+      "from": "p",
+      "to": "\u093F"
+    },
+    {
+      "from": "q",
+      "to": "\u093F\u0902"
+    },
+    {
+      "from": "r",
+      "to": "\u0940"
+    },
+    {
+      "from": "s",
+      "to": "\u0940"
+    },
+    {
+      "from": "t",
+      "to": "\u0940\u0902"
+    },
+    {
+      "from": "w",
+      "to": "\u0941"
+    },
+    {
+      "from": "x",
+      "to": "\u0941"
+    },
+    {
+      "from": "y",
+      "to": "\u0942"
+    },
+    {
+      "from": "z",
+      "to": "\u0942"
+    },
+    {
+      "from": "{",
+      "to": "\u093F"
+    },
+    {
+      "from": "|",
+      "to": "\u0947\u0902"
+    },
+    {
+      "from": "~",
+      "to": "\u092C"
+    },
+    {
+      "from": "\u0081",
+      "to": "\u00D7"
+    },
+    {
+      "from": "\u008D",
+      "to": "\u2013"
+    },
+    {
+      "from": "\u008F",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u0090",
+      "to": "\u0946"
+    },
+    {
+      "from": "\u00A1",
+      "to": "\u0948"
+    },
+    {
+      "from": "\u00A2",
+      "to": "\u0948\u0902"
+    },
+    {
+      "from": "\u00A5",
+      "to": "\u0943"
+    },
+    {
+      "from": "\u00A6",
+      "to": "\u0944"
+    },
+    {
+      "from": "\u00A7",
+      "to": "\u0902"
+    },
+    {
+      "from": "\u00A8",
+      "to": "\u0902"
+    },
+    {
+      "from": "\u00AB",
+      "to": "\u094D\u0930"
+    },
+    {
+      "from": "\u00AC",
+      "to": "\u0919\u094D\u0915\u094D\u0937"
+    },
+    {
+      "from": "\u00AE",
+      "to": "\u094D\u0930\u0941"
+    },
+    {
+      "from": "\u00AF",
+      "to": "\u094D\u0930\u0942"
+    },
+    {
+      "from": "\u00B0",
+      "to": "\u0945"
+    },
+    {
+      "from": "\u00B1",
+      "to": "\u0901"
+    },
+    {
+      "from": "\u00B2",
+      "to": "\u094D"
+    },
+    {
+      "from": "\u00B3",
+      "to": "\u0915\u094D"
+    },
+    {
+      "from": "\u00B4",
+      "to": "\u094D\u0930"
+    },
+    {
+      "from": "\u00B5",
+      "to": "\u093C"
+    },
+    {
+      "from": "\u00B6",
+      "to": "\u092F"
+    },
+    {
+      "from": "\u00B7",
+      "to": "\u2022"
+    },
+    {
+      "from": "\u00B8",
+      "to": "\u0915\u094D\u0915"
+    },
+    {
+      "from": "\u00B9",
+      "to": "\u0915\u094D\u0935"
+    },
+    {
+      "from": "\u00BA",
+      "to": "\u0915\u094D\u0924"
+    },
+    {
+      "from": "\u00BB",
+      "to": "\u0916\u094D"
+    },
+    {
+      "from": "\u00BC",
+      "to": "\u0916\u094D\u0930"
+    },
+    {
+      "from": "\u00BD",
+      "to": "\u0917\u094D"
+    },
+    {
+      "from": "\u00BE",
+      "to": "\u0917\u094D\u0928"
+    },
+    {
+      "from": "\u00BF",
+      "to": "\u0918\u094D"
+    },
+    {
+      "from": "\u00C0",
+      "to": "\u091A\u094D"
+    },
+    {
+      "from": "\u00C1",
+      "to": "\u091C\u094D"
+    },
+    {
+      "from": "\u00C2",
+      "to": "\u091D\u094D"
+    },
+    {
+      "from": "\u00C3",
+      "to": "\u091D\u094D\u0930"
+    },
+    {
+      "from": "\u00C4",
+      "to": "\u091E\u094D"
+    },
+    {
+      "from": "\u00C5",
+      "to": "\u091F\u094D\u091F"
+    },
+    {
+      "from": "\u00C6",
+      "to": "\u091F\u094D\u0920"
+    },
+    {
+      "from": "\u00C7",
+      "to": "\u0920\u094D\u0920"
+    },
+    {
+      "from": "\u00C8",
+      "to": "\u0921\u094D\u0921"
+    },
+    {
+      "from": "\u00C9",
+      "to": "\u0922\u094D\u0922"
+    },
+    {
+      "from": "\u00CA",
+      "to": "\u0923\u094D"
+    },
+    {
+      "from": "\u00CB",
+      "to": "\u0924\u094D"
+    },
+    {
+      "from": "\u00CC",
+      "to": "\u0924\u094D\u0930"
+    },
+    {
+      "from": "\u00CD",
+      "to": "\u0924\u094D\u0930\u094D"
+    },
+    {
+      "from": "\u00CE",
+      "to": "\u0924\u094D\u0924\u094D"
+    },
+    {
+      "from": "\u00CF",
+      "to": "\u0925\u094D"
+    },
+    {
+      "from": "\u00D0",
+      "to": "\u0926\u094D\u0930"
+    },
+    {
+      "from": "\u00D1",
+      "to": "\u0926\u0943"
+    },
+    {
+      "from": "\u00D2",
+      "to": "\u0926\u094D\u0917"
+    },
+    {
+      "from": "\u00D3",
+      "to": "\u0926\u094D\u0918"
+    },
+    {
+      "from": "\u00D4",
+      "to": "\u0926\u094D\u0926"
+    },
+    {
+      "from": "\u00D5",
+      "to": "\u0926\u094D\u0927"
+    },
+    {
+      "from": "\u00D6",
+      "to": "\u0926\u094D\u0928"
+    },
+    {
+      "from": "\u00D7",
+      "to": "\u0926\u094D\u092C"
+    },
+    {
+      "from": "\u00D8",
+      "to": "\u0926\u094D\u092D"
+    },
+    {
+      "from": "\u00D9",
+      "to": "\u0926\u094D\u092E"
+    },
+    {
+      "from": "\u00DA",
+      "to": "\u0926\u094D\u092F"
+    },
+    {
+      "from": "\u00DB",
+      "to": "\u0926\u094D\u0935"
+    },
+    {
+      "from": "\u00DC",
+      "to": "\u0927\u094D"
+    },
+    {
+      "from": "\u00DD",
+      "to": "\u0928\u094D"
+    },
+    {
+      "from": "\u00DE",
+      "to": "\u0928\u094D\u0928"
+    },
+    {
+      "from": "\u00DF",
+      "to": "\u092A\u094D"
+    },
+    {
+      "from": "\u00E0",
+      "to": "\u092A\u094D\u0930"
+    },
+    {
+      "from": "\u00E1",
+      "to": "\u092A\u094D\u0924"
+    },
+    {
+      "from": "\u00E2",
+      "to": "\u092B\u094D"
+    },
+    {
+      "from": "\u00E3",
+      "to": "\u092C\u094D"
+    },
+    {
+      "from": "\u00E4",
+      "to": "\u092D\u094D"
+    },
+    {
+      "from": "\u00E5",
+      "to": "\u092E\u094D"
+    },
+    {
+      "from": "\u00E6",
+      "to": "\u092F\u094D"
+    },
+    {
+      "from": "\u00E7",
+      "to": "\u094D\u092F"
+    },
+    {
+      "from": "\u00E8",
+      "to": "\u0930\u094D\u200D"
+    },
+    {
+      "from": "\u00E9",
+      "to": "\u0930\u0941"
+    },
+    {
+      "from": "\u00EA",
+      "to": "\u0930\u0942"
+    },
+    {
+      "from": "\u00EB",
+      "to": "\u0932\u094D"
+    },
+    {
+      "from": "\u00EC",
+      "to": "\u0935\u094D"
+    },
+    {
+      "from": "\u00ED",
+      "to": "\u0936\u094D"
+    },
+    {
+      "from": "\u00EE",
+      "to": "\u0937\u094D"
+    },
+    {
+      "from": "\u00EF",
+      "to": "\u0937\u094D\u091F"
+    },
+    {
+      "from": "\u00F0",
+      "to": "\u0937\u094D\u0920"
+    },
+    {
+      "from": "\u00F1",
+      "to": "\u0938\u094D"
+    },
+    {
+      "from": "\u00F2",
+      "to": "\u0938\u094D\u0930"
+    },
+    {
+      "from": "\u00F3",
+      "to": "\u0938\u094D\u0924\u094D\u0930"
+    },
+    {
+      "from": "\u00F4",
+      "to": "\u0939\u094D"
+    },
+    {
+      "from": "\u00F5",
+      "to": "\u0939\u094D\u0930"
+    },
+    {
+      "from": "\u00F6",
+      "to": "\u0939\u0943"
+    },
+    {
+      "from": "\u00F7",
+      "to": "\u0939\u094D\u092E"
+    },
+    {
+      "from": "\u00F8",
+      "to": "\u0939\u094D\u092F"
+    },
+    {
+      "from": "\u00F9",
+      "to": "\u0933\u094D"
+    },
+    {
+      "from": "\u00FA",
+      "to": "\u0915\u094D\u0937\u094D"
+    },
+    {
+      "from": "\u00FB",
+      "to": "\u0936\u094D\u0930\u094D"
+    },
+    {
+      "from": "\u00FC",
+      "to": "\u0936\u094D\u0930\u094D\u091A"
+    },
+    {
+      "from": "\u00FD",
+      "to": "\u0936\u094D\u0930\u094D\u0928"
+    },
+    {
+      "from": "\u00FE",
+      "to": "\u0941"
+    },
+    {
+      "from": "\u00FF",
+      "to": "\u0942"
+    },
+    {
+      "from": "\u0153",
+      "to": "\u0936\u094D\u0930\u094D\u0935"
+    },
+    {
+      "from": "\u0160",
+      "to": "\u0915\u094D"
+    },
+    {
+      "from": "\u0161",
+      "to": "\u0952"
+    },
+    {
+      "from": "\u0192",
+      "to": "\u091A\u094D\u091A"
+    },
+    {
+      "from": "\u02C6",
+      "to": "\u0939\u094D\u0935"
+    },
+    {
+      "from": "\u02DC",
+      "to": "\u0959"
+    },
+    {
+      "from": "\u0900",
+      "to": "\u0900"
+    },
+    {
+      "from": "\u0904",
+      "to": "\u0904"
+    },
+    {
+      "from": "\u090C",
+      "to": "\u090C"
+    },
+    {
+      "from": "\u090E",
+      "to": "\u090E"
+    },
+    {
+      "from": "\u0912",
+      "to": "\u0912"
+    },
+    {
+      "from": "\u093A",
+      "to": "\u093A"
+    },
+    {
+      "from": "\u093B",
+      "to": "\u093B"
+    },
+    {
+      "from": "\u0946",
+      "to": "\u0946"
+    },
+    {
+      "from": "\u094A",
+      "to": "\u094A"
+    },
+    {
+      "from": "\u094E",
+      "to": "\u094E"
+    },
+    {
+      "from": "\u094F",
+      "to": "\u094F"
+    },
+    {
+      "from": "\u0951",
+      "to": "\u0951"
+    },
+    {
+      "from": "\u0953",
+      "to": "\u0953"
+    },
+    {
+      "from": "\u0954",
+      "to": "\u0954"
+    },
+    {
+      "from": "\u0955",
+      "to": "\u0955"
+    },
+    {
+      "from": "\u0956",
+      "to": "\u0956"
+    },
+    {
+      "from": "\u0957",
+      "to": "\u0957"
+    },
+    {
+      "from": "\u0961",
+      "to": "\u0961"
+    },
+    {
+      "from": "\u0962",
+      "to": "\u0962"
+    },
+    {
+      "from": "\u0963",
+      "to": "\u0963"
+    },
+    {
+      "from": "\u0970",
+      "to": "\u0970"
+    },
+    {
+      "from": "\u0971",
+      "to": "\u0971"
+    },
+    {
+      "from": "\u0973",
+      "to": "\u0973"
+    },
+    {
+      "from": "\u0974",
+      "to": "\u0974"
+    },
+    {
+      "from": "\u0975",
+      "to": "\u0975"
+    },
+    {
+      "from": "\u0976",
+      "to": "\u0976"
+    },
+    {
+      "from": "\u0977",
+      "to": "\u0977"
+    },
+    {
+      "from": "\u0978",
+      "to": "\u0978"
+    },
+    {
+      "from": "\u0979",
+      "to": "\u0979"
+    },
+    {
+      "from": "\u097A",
+      "to": "\u097A"
+    },
+    {
+      "from": "\u097B",
+      "to": "\u097B"
+    },
+    {
+      "from": "\u097C",
+      "to": "\u097C"
+    },
+    {
+      "from": "\u097D",
+      "to": "\u097D"
+    },
+    {
+      "from": "\u097E",
+      "to": "\u097E"
+    },
+    {
+      "from": "\u097F",
+      "to": "\u097F"
+    },
+    {
+      "from": "\u200D",
+      "to": "\u200D"
+    },
+    {
+      "from": "\u2013",
+      "to": "\u0921\u094D\u0922"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u092E"
+    },
+    {
+      "from": "\u2019",
+      "to": "\u092B"
+    },
+    {
+      "from": "\u201A",
+      "to": "\u091C\u094D\u091C\u094D"
+    },
+    {
+      "from": "\u201C",
+      "to": "\u0919\u094D\u0917"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u0919\u094D\u0918"
+    },
+    {
+      "from": "\u201E",
+      "to": "\u0932\u094D\u0932"
+    },
+    {
+      "from": "\u2020",
+      "to": "\u0939\u094D\u0923"
+    },
+    {
+      "from": "\u2021",
+      "to": "\u0939\u094D\u0932"
+    },
+    {
+      "from": "\u2022",
+      "to": "\u0939\u094D\u0928"
+    },
+    {
+      "from": "\u2026",
+      "to": "\u0903"
+    },
+    {
+      "from": "\u2030",
+      "to": "\u094D\u0935"
+    },
+    {
+      "from": "\u2039",
+      "to": "\u093C"
+    },
+    {
+      "from": "\u203A",
+      "to": "\u0950"
+    },
+    {
+      "from": "\u20B9",
+      "to": "\u20B9"
+    },
+    {
+      "from": "\u2122",
+      "to": "\u093C\u0916\u094D"
+    },
+    {
+      "from": "\uFDD0",
+      "to": "\u0930\u094D"
+    },
+    {
+      "from": "\uFDD4",
+      "to": "\u094D\u200C"
+    },
+    {
+      "from": "\u0022\u0022",
+      "to": "\u201C"
+    },
+    {
+      "from": "#m",
+      "to": "\u091E\u094D\u091A"
+    },
+    {
+      "from": "\u0026\u0026",
+      "to": "\u0965"
+    },
+    {
+      "from": "\u0027\u0027",
+      "to": "\u201D"
+    },
+    {
+      "from": "Am",
+      "to": "\u0906"
+    },
+    {
+      "from": "A\u0090",
+      "to": "\u0904"
+    },
+    {
+      "from": "A\u00B0",
+      "to": "\u0972"
+    },
+    {
+      "from": "B\u00A9",
+      "to": "\u0908"
+    },
+    {
+      "from": "Eo",
+      "to": "\u0910"
+    },
+    {
+      "from": "E\u0090",
+      "to": "\u090E"
+    },
+    {
+      "from": "E\u00B0",
+      "to": "\u090D"
+    },
+    {
+      "from": "mo",
+      "to": "\u094B"
+    },
+    {
+      "from": "m\u0090",
+      "to": "\u094A"
+    },
+    {
+      "from": "m\u00A1",
+      "to": "\u094C"
+    },
+    {
+      "from": "m\u00B0",
+      "to": "\u0949"
+    },
+    {
+      "from": "\u008D\u008D",
+      "to": "\u2014"
+    },
+    {
+      "from": "\u00B5H",
+      "to": "\u0958"
+    },
+    {
+      "from": "\u00B5J",
+      "to": "\u095A"
+    },
+    {
+      "from": "\u00B5O",
+      "to": "\u095B"
+    },
+    {
+      "from": "\u00B5Z",
+      "to": "\u0929"
+    },
+    {
+      "from": "\u00B5\\",
+      "to": "\u095E"
+    },
+    {
+      "from": "\u00B5\u0060",
+      "to": "\u095F"
+    },
+    {
+      "from": "\u00B5a",
+      "to": "\u0931"
+    },
+    {
+      "from": "\u00BDZ",
+      "to": "\u0917\u094D\u200D\u0928"
+    },
+    {
+      "from": "\u00C0M",
+      "to": "\u091A\u094D\u200D\u091A"
+    },
+    {
+      "from": "\u00C1O",
+      "to": "\u091C\u094D\u200D\u091C"
+    },
+    {
+      "from": "\u00C4M",
+      "to": "\u091E\u094D\u200D\u091A"
+    },
+    {
+      "from": "\u00C4m",
+      "to": "\u091E"
+    },
+    {
+      "from": "\u00CBV",
+      "to": "\u0924\u094D\u200D\u0924"
+    },
+    {
+      "from": "\u00CEm",
+      "to": "\u0924\u094D\u0924"
+    },
+    {
+      "from": "\u00DDZ",
+      "to": "\u0928\u094D\u200D\u0928"
+    },
+    {
+      "from": "\u00DFV",
+      "to": "\u092A\u094D\u200D\u0924"
+    },
+    {
+      "from": "\u00EBb",
+      "to": "\u0932\u094D\u200D\u0932"
+    },
+    {
+      "from": "\u00EEQ",
+      "to": "\u0937\u094D\u200D\u091F"
+    },
+    {
+      "from": "\u00EER",
+      "to": "\u0937\u094D\u200D\u0920"
+    },
+    {
+      "from": "\u00F4U",
+      "to": "\u0939\u094D\u200D\u0923"
+    },
+    {
+      "from": "\u00F4Z",
+      "to": "\u0939\u094D\u200D\u0928"
+    },
+    {
+      "from": "\u00F4_",
+      "to": "\u0939\u094D\u200D\u092E"
+    },
+    {
+      "from": "\u00F4\u0060",
+      "to": "\u0939\u094D\u200D\u092F"
+    },
+    {
+      "from": "\u00F4b",
+      "to": "\u0939\u094D\u200D\u0932"
+    },
+    {
+      "from": "\u00F4d",
+      "to": "\u0939\u094D\u200D\u0935"
+    },
+    {
+      "from": "\u0160H",
+      "to": "\u0915\u094D\u200D\u0915"
+    },
+    {
+      "from": "\u0160V",
+      "to": "\u0915\u094D\u200D\u0924"
+    },
+    {
+      "from": "\u0160d",
+      "to": "\u0915\u094D\u200D\u0935"
+    },
+    {
+      "from": "\u201Am",
+      "to": "\u091C\u094D\u091C"
+    },
+    {
+      "from": "\u2039S",
+      "to": "\u095C"
+    },
+    {
+      "from": "\u2039T",
+      "to": "\u095D"
+    },
+    {
+      "from": "\u2039i",
+      "to": "\u0934"
+    },
+    {
+      "from": "Amo",
+      "to": "\u0913"
+    },
+    {
+      "from": "Am\u0090",
+      "to": "\u0912"
+    },
+    {
+      "from": "Am\u00A1",
+      "to": "\u0914"
+    },
+    {
+      "from": "Am\u00B0",
+      "to": "\u0911"
+    },
+    {
+      "from": "B\uFDD0\u00A7",
+      "to": "\u0908\u0902"
+    },
+    {
+      "from": "L\u00B2J",
+      "to": "\u0919\u094D\u200D\u0917"
+    },
+    {
+      "from": "L\u00B2K",
+      "to": "\u0919\u094D\u200D\u0918"
+    },
+    {
+      "from": "L\u00B2d",
+      "to": "\u0919\u094D\u200D\u0935"
+    },
+    {
+      "from": "N\u00B2d",
+      "to": "\u091B\u094D\u200D\u0935"
+    },
+    {
+      "from": "Q\u00B2Q",
+      "to": "\u091F\u094D\u200D\u091F"
+    },
+    {
+      "from": "Q\u00B2R",
+      "to": "\u091F\u094D\u200D\u0920"
+    },
+    {
+      "from": "Q\u00B2\u0060",
+      "to": "\u091F\u094D\u200D\u092F"
+    },
+    {
+      "from": "Q\u00B2d",
+      "to": "\u091F\u094D\u200D\u0935"
+    },
+    {
+      "from": "R\u00B2R",
+      "to": "\u0920\u094D\u200D\u0920"
+    },
+    {
+      "from": "R\u00B2\u0060",
+      "to": "\u0920\u094D\u200D\u092F"
+    },
+    {
+      "from": "R\u00B2d",
+      "to": "\u0920\u094D\u200D\u0935"
+    },
+    {
+      "from": "S\u00B2S",
+      "to": "\u0921\u094D\u200D\u0921"
+    },
+    {
+      "from": "S\u00B2T",
+      "to": "\u0921\u094D\u200D\u0922"
+    },
+    {
+      "from": "S\u00B2\u0060",
+      "to": "\u0921\u094D\u200D\u092F"
+    },
+    {
+      "from": "S\u00B2d",
+      "to": "\u0921\u094D\u200D\u0935"
+    },
+    {
+      "from": "T\u00B2T",
+      "to": "\u0922\u094D\u200D\u0922"
+    },
+    {
+      "from": "T\u00B2\u0060",
+      "to": "\u0922\u094D\u200D\u092F"
+    },
+    {
+      "from": "T\u00B2d",
+      "to": "\u0922\u094D\u200D\u0935"
+    },
+    {
+      "from": "X\u00B2J",
+      "to": "\u0926\u094D\u200D\u0917"
+    },
+    {
+      "from": "X\u00B2K",
+      "to": "\u0926\u094D\u200D\u0918"
+    },
+    {
+      "from": "X\u00B2X",
+      "to": "\u0926\u094D\u200D\u0926"
+    },
+    {
+      "from": "X\u00B2Y",
+      "to": "\u0926\u094D\u200D\u0927"
+    },
+    {
+      "from": "X\u00B2Z",
+      "to": "\u0926\u094D\u200D\u0928"
+    },
+    {
+      "from": "X\u00B2^",
+      "to": "\u0926\u094D\u200D\u092D"
+    },
+    {
+      "from": "X\u00B2_",
+      "to": "\u0926\u094D\u200D\u092E"
+    },
+    {
+      "from": "X\u00B2\u0060",
+      "to": "\u0926\u094D\u200D\u092F"
+    },
+    {
+      "from": "X\u00B2d",
+      "to": "\u0926\u094D\u200D\u0935"
+    },
+    {
+      "from": "X\u00B2~",
+      "to": "\u0926\u094D\u200D\u092C"
+    }
+  ],
+  "postRules": [
+    {
+      "pattern": "\u093C([\u0915-\u0939\u0958-\u095F])",
+      "replace": "$1\u093C",
+      "note": "The nukta is drawn before its letter; Unicode has it after."
+    },
+    {
+      "pattern": "\u0906\u0947",
+      "replace": "\u0913",
+      "note": "\u0906 \u002B \u0947 is written \u0913."
+    },
+    {
+      "pattern": "\u0906\u0948",
+      "replace": "\u0914",
+      "note": "\u0906 \u002B \u0948 is written \u0914."
+    },
+    {
+      "pattern": "\u0906\u0945",
+      "replace": "\u0911",
+      "note": "\u0906 \u002B \u0945 is written \u0911."
+    },
+    {
+      "pattern": "\u0906\u0946",
+      "replace": "\u0912",
+      "note": "\u0906 \u002B \u0946 is written \u0912."
+    },
+    {
+      "pattern": "\u0905\u0946",
+      "replace": "\u0904",
+      "note": "\u0905 \u002B \u0946 is written \u0904."
+    },
+    {
+      "pattern": "\u090F\u0947",
+      "replace": "\u0910",
+      "note": "\u090F \u002B \u0947 is written \u0910."
+    },
+    {
+      "pattern": "\u090F\u0945",
+      "replace": "\u090D",
+      "note": "\u090F \u002B \u0945 is written \u090D."
+    },
+    {
+      "pattern": "\u090F\u0946",
+      "replace": "\u090E",
+      "note": "\u090F \u002B \u0946 is written \u090E."
+    },
+    {
+      "pattern": "\u093E\u0947",
+      "replace": "\u094B",
+      "note": "\u093E \u002B \u0947 is written \u094B."
+    },
+    {
+      "pattern": "\u093E\u0948",
+      "replace": "\u094C",
+      "note": "\u093E \u002B \u0948 is written \u094C."
+    },
+    {
+      "pattern": "\u093E\u0945",
+      "replace": "\u0949",
+      "note": "\u093E \u002B \u0945 is written \u0949."
+    },
+    {
+      "pattern": "\u093E\u0946",
+      "replace": "\u094A",
+      "note": "\u093E \u002B \u0946 is written \u094A."
+    },
+    {
+      "pattern": "\u0915\u093C",
+      "replace": "\u0958",
+      "note": "\u0915 \u002B nukta is written \u0958, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0916\u093C",
+      "replace": "\u0959",
+      "note": "\u0916 \u002B nukta is written \u0959, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0917\u093C",
+      "replace": "\u095A",
+      "note": "\u0917 \u002B nukta is written \u095A, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u091C\u093C",
+      "replace": "\u095B",
+      "note": "\u091C \u002B nukta is written \u095B, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0921\u093C",
+      "replace": "\u095C",
+      "note": "\u0921 \u002B nukta is written \u095C, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0922\u093C",
+      "replace": "\u095D",
+      "note": "\u0922 \u002B nukta is written \u095D, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u092B\u093C",
+      "replace": "\u095E",
+      "note": "\u092B \u002B nukta is written \u095E, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u092F\u093C",
+      "replace": "\u095F",
+      "note": "\u092F \u002B nukta is written \u095F, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0928\u093C",
+      "replace": "\u0929",
+      "note": "\u0928 \u002B nukta is written \u0929, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0930\u093C",
+      "replace": "\u0931",
+      "note": "\u0930 \u002B nukta is written \u0931, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u0933\u093C",
+      "replace": "\u0934",
+      "note": "\u0933 \u002B nukta is written \u0934, as Shree\u0027s Unicode composer writes it."
+    },
+    {
+      "pattern": "\u093F(\u0902?)((?:[\u0915-\u0939\u0958-\u095F]\u093C?\u094D\u200D?)*[\u0915-\u0939\u0958-\u095F]\u093C?)",
+      "replace": "$2\u093F$1",
+      "note": "The i-sign (and the anusvara of 71) is drawn before its letter or conjunct; Unicode has it after (visual order -\u003E logical order)."
+    },
+    {
+      "pattern": "\u094D\u200C(?![\u0900-\u0963\u0971-\u097F\u200D\u200C])",
+      "replace": "\u094D",
+      "note": "The halant at the end of a word - before a space, punctuation, a danda, a digit or the end of the text - is a plain virama, as Unicode text writes a word-final one (\u0905\u0930\u094D\u0925\u093E\u0924\u094D, not \u0905\u0930\u094D\u0925\u093E\u0924\u094D\u002BZWNJ; the Gujarati tables read it so too). Before a letter it stays \u094D\u002BZWNJ, the visible halant."
+    }
+  ]
+}

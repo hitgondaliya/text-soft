@@ -1,0 +1,188 @@
+{
+ "failures": 28057,
+ "truthStrings": 41470,
+ "classes": {
+  "A. ZWNJ/ZWJ written into the legacy text (U+200C/U+200D passed through; Shree writes no glyph for them)": {
+   "count": 14194,
+   "examples": [
+    "୍‌ [0B4D 200C]: ours FA U+200C | Shree FA",
+    "କ୍‌ [0B15 0B4D 200C]: ours 4C FF FA U+200C | Shree 4C FF FA",
+    "କ୍‍ [0B15 0B4D 200D]: ours 4C FF FA U+200D | Shree 4C FF FA",
+    "ର୍‌କ [0B30 0B4D 200C 0B15]: ours F6 U+200C 4C FF | Shree C0 FF FA 4C FF",
+    "ର୍‍କ [0B30 0B4D 200D 0B15]: ours F6 U+200D 4C FF | Shree C0 FF FA 4C FF",
+    "ଖ୍‌ [0B16 0B4D 200C]: ours 51 FA U+200C | Shree 51 FA"
+   ]
+  },
+  "B. reph ର୍C written as ର + subjoined C (C0 + subjoined) or F6 before the letter; Shree writes the letter, its signs, then F6": {
+   "count": 3839,
+   "examples": [
+    "ର୍କ [0B30 0B4D 0B15]: ours C0 50 | Shree 4C FF F6",
+    "ର୍କଂ [0B30 0B4D 0B15 0B02]: ours C0 50 F3 | Shree 4C FF F6 F3",
+    "ର୍କଁ [0B30 0B4D 0B15 0B01]: ours C0 50 F4 | Shree 4C FF F6 F4",
+    "ର୍କଃ [0B30 0B4D 0B15 0B03]: ours C0 50 85 | Shree 4C FF F6 85",
+    "ର୍କା [0B30 0B4D 0B15 0B3E]: ours C0 50 E6 | Shree 4C FF E6 F6",
+    "ର୍କି [0B30 0B4D 0B15 0B3F]: ours C0 50 E7 | Shree 4C FF 7D"
+   ]
+  },
+  "C. ୈ / ୌ passed through as Odia text (no pair for U+0B48 / U+0B4C)": {
+   "count": 524,
+   "examples": [
+    "ୌ [0B4C]: ours U+0B4C | Shree 7B F2",
+    "କୈ [0B15 0B48]: ours U+0B48 4C FF | Shree 7B 4C FF F0",
+    "କୈଂ [0B15 0B48 0B02]: ours U+0B48 4C FF F3 | Shree 7B 4C FF F0 F3",
+    "କୈଁ [0B15 0B48 0B01]: ours U+0B48 4C FF F4 | Shree 7B 4C FF F0 F4",
+    "କୈଃ [0B15 0B48 0B03]: ours U+0B48 4C FF 85 | Shree 7B 4C FF F0 85",
+    "ର୍କୈ [0B30 0B4D 0B15 0B48]: ours U+0B48 C0 50 | Shree 7B 4C FF F1"
+   ]
+  },
+  "D. ୋ: the e-glyph 7B written AFTER the letter (the preRule moves only େ/ୈ); Shree writes 7B first": {
+   "count": 257,
+   "examples": [
+    "କୋ [0B15 0B4B]: ours 4C FF 7B E6 | Shree 7B 4C FF E6",
+    "କୋଂ [0B15 0B4B 0B02]: ours 4C FF 7B E6 F3 | Shree 7B 4C FF E6 F3",
+    "କୋଁ [0B15 0B4B 0B01]: ours 4C FF 7B E6 F4 | Shree 7B 4C FF E6 F4",
+    "କୋଃ [0B15 0B4B 0B03]: ours 4C FF 7B E6 85 | Shree 7B 4C FF E6 85",
+    "ର୍କୋ [0B30 0B4D 0B15 0B4B]: ours C0 50 7B E6 | Shree 7B 4C FF E6 F6",
+    "ଖୋ [0B16 0B4B]: ours 51 7B E6 | Shree 7B 51 E6"
+   ]
+  },
+  "E. େ after a ra/ya-phala cluster written after the cluster (the preRule cluster pattern stops at ୟ / does not take ୍ର)": {
+   "count": 118,
+   "examples": [
+    "ର୍ୟେ [0B30 0B4D 0B5F 0B47]: ours F6 DF 7B | Shree 7B DF F6",
+    "ର୍ୟେଂ [0B30 0B4D 0B5F 0B47 0B02]: ours F6 DF 7B F3 | Shree 7B DF F6 F3",
+    "ର୍ୟେଁ [0B30 0B4D 0B5F 0B47 0B01]: ours F6 DF 7B F4 | Shree 7B DF F6 F4",
+    "କ୍ୟେ [0B15 0B4D 0B5F 0B47]: ours 4C FF BF 7B | Shree 7B 4C FF BF",
+    "କ୍ୟେଂ [0B15 0B4D 0B5F 0B47 0B02]: ours 4C FF BF 7B F3 | Shree 7B 4C FF BF F3",
+    "ର୍କ୍ୟେ [0B30 0B4D 0B15 0B4D 0B5F 0B47]: ours C0 50 BF 7B | Shree 7B 4C FF BF F6"
+   ]
+  },
+  "F. the spacer FF of the first letter dropped before a subjoined form (ours 4C 52 / Shree 4C FF 52 for କ୍ଖ)": {
+   "count": 7292,
+   "examples": [
+    "କ୍ଖ [0B15 0B4D 0B16]: ours 4C 52 | Shree 4C FF 52",
+    "କ୍ଖା [0B15 0B4D 0B16 0B3E]: ours 4C 52 E6 | Shree 4C FF 52 E6",
+    "କ୍ଖି [0B15 0B4D 0B16 0B3F]: ours 4C 52 E7 | Shree 4C FF 52 E7",
+    "କ୍ଖୀ [0B15 0B4D 0B16 0B40]: ours 4C 52 EA | Shree 4C FF 52 EA",
+    "କ୍ଖୁ [0B15 0B4D 0B16 0B41]: ours 4C 52 EB | Shree 4C FF 52 EC",
+    "କ୍ଖୂ [0B15 0B4D 0B16 0B42]: ours 4C 52 ED | Shree 4C FF 52 EE"
+   ]
+  },
+  "G. the lowering spacer 26 missing before ୃ / ୍ର / ୍ under a subjoined form": {
+   "count": 3253,
+   "examples": [
+    "ୱୃ [0B71 0B43]: ours 48 B4 F5 | Shree 48 B4 26 F5",
+    "କ୍ଖୃ [0B15 0B4D 0B16 0B43]: ours 4C 52 F5 | Shree 4C FF 52 26 F5",
+    "କ୍ଖ୍ର [0B15 0B4D 0B16 0B4D 0B30]: ours 4C 52 F7 | Shree 4C FF 52 26 F7",
+    "କ୍ଖ୍ [0B15 0B4D 0B16 0B4D]: ours 4C 52 FA | Shree 4C FF 52 26 FA",
+    "କ୍ଖ୍‌ [0B15 0B4D 0B16 0B4D 200C]: ours 4C 52 FA U+200C | Shree 4C FF 52 26 FA",
+    "କ୍ଗୃ [0B15 0B4D 0B17 0B43]: ours 4C 56 F5 | Shree 4C FF 56 26 F5"
+   ]
+  },
+  "H. ୁ / ୂ after a subjoined form written high (EB/ED) where Shree uses the low forms EC/EE": {
+   "count": 1728,
+   "examples": [
+    "ୱୁ [0B71 0B41]: ours 48 B4 EB | Shree 48 B4 EC",
+    "ୱୂ [0B71 0B42]: ours 48 B4 ED | Shree 48 B4 EE",
+    "କ୍ଖୁ [0B15 0B4D 0B16 0B41]: ours 4C 52 EB | Shree 4C FF 52 EC",
+    "କ୍ଖୂ [0B15 0B4D 0B16 0B42]: ours 4C 52 ED | Shree 4C FF 52 EE",
+    "କ୍ଗୁ [0B15 0B4D 0B17 0B41]: ours 4C 56 EB | Shree 4C FF 56 EC",
+    "କ୍ଗୂ [0B15 0B4D 0B17 0B42]: ours 4C 56 ED | Shree 4C FF 56 EE"
+   ]
+  },
+  "I. ନ written 5B (Shree: 9C FF)": {
+   "count": 678,
+   "examples": [
+    "ନ [0B28]: ours 5B | Shree 9C FF",
+    "ର୍‌ନ [0B30 0B4D 200C 0B28]: ours F6 U+200C 5B | Shree C0 FF FA 9C FF",
+    "ର୍‍ନ [0B30 0B4D 200D 0B28]: ours F6 U+200D 5B | Shree C0 FF FA 9C FF",
+    "ନଂ [0B28 0B02]: ours 5B F3 | Shree 9C FF F3",
+    "ନଁ [0B28 0B01]: ours 5B F4 | Shree 9C FF F4",
+    "ନଃ [0B28 0B03]: ours 5B 85 | Shree 9C FF 85"
+   ]
+  },
+  "J. ya-phala ୍ୟ written visible halant + ୟ (FA DF) where Shree writes BF": {
+   "count": 333,
+   "examples": [
+    "ନ୍ୟ [0B28 0B4D 0B5F]: ours 9C FF FA DF | Shree 9C FF BF",
+    "ନ୍ୟ୍ର [0B28 0B4D 0B5F 0B4D 0B30]: ours 9C FF FA DF F7 | Shree 9C FF BF F7",
+    "ଡ଼୍ୟ [0B5C 0B4D 0B5F]: ours DD FA DF | Shree DD BF",
+    "ଡ଼୍ୟ୍ର [0B5C 0B4D 0B5F 0B4D 0B30]: ours DD FA DF F7 | Shree DD BF F7",
+    "ଢ଼୍ୟ [0B5D 0B4D 0B5F]: ours DE FA DF | Shree DE BF",
+    "ଢ଼୍ୟ୍ର [0B5D 0B4D 0B5F 0B4D 0B30]: ours DE FA DF F7 | Shree DE BF F7"
+   ]
+  },
+  "K. ra-phala ୍ର written visible halant + ର (FA C0 FF) where Shree writes F7": {
+   "count": 290,
+   "examples": [
+    "ନ୍ର [0B28 0B4D 0B30]: ours 9C FF FA C0 FF | Shree 9C FF F7",
+    "ଡ଼୍ର [0B5C 0B4D 0B30]: ours DD FA C0 FF | Shree DD F7",
+    "ଢ଼୍ର [0B5D 0B4D 0B30]: ours DE FA C0 FF | Shree DE F7",
+    "ନ୍ରା [0B28 0B4D 0B30 0B3E]: ours 9C FF FA C0 FF E6 | Shree 9C FF F7 E6",
+    "ନ୍ରି [0B28 0B4D 0B30 0B3F]: ours 9C FF FA C0 FF E7 | Shree 9C FF F7 E7",
+    "ନ୍ରୀ [0B28 0B4D 0B30 0B40]: ours 9C FF FA C0 FF EA | Shree 9C FF F7 EA"
+   ]
+  },
+  "L. ba-phala ୍ବ written FD where Shree writes B4": {
+   "count": 568,
+   "examples": [
+    "କ୍ବ [0B15 0B4D 0B2C]: ours 4C FD | Shree 4C FF B4",
+    "କ୍ବା [0B15 0B4D 0B2C 0B3E]: ours 4C FD E6 | Shree 4C FF B4 E6",
+    "କ୍ବି [0B15 0B4D 0B2C 0B3F]: ours 4C FD E7 | Shree 4C FF B4 E7",
+    "କ୍ବୀ [0B15 0B4D 0B2C 0B40]: ours 4C FD EA | Shree 4C FF B4 EA",
+    "କ୍ବୁ [0B15 0B4D 0B2C 0B41]: ours 4C FD EB | Shree 4C FF B4 EC",
+    "କ୍ବୂ [0B15 0B4D 0B2C 0B42]: ours 4C FD ED | Shree 4C FF B4 EE"
+   ]
+  },
+  "M. ି on ଖ ଥ ଧ written E7/5D where Shree writes the hook 23": {
+   "count": 129,
+   "examples": [
+    "ଖି [0B16 0B3F]: ours 51 E7 | Shree 51 23",
+    "ଖିଂ [0B16 0B3F 0B02]: ours 51 E7 F3 | Shree 51 23 F3",
+    "ଖିଁ [0B16 0B3F 0B01]: ours 51 5D | Shree 51 23 F4",
+    "ଖିଃ [0B16 0B3F 0B03]: ours 51 E7 85 | Shree 51 23 85",
+    "ର୍ଖି [0B30 0B4D 0B16 0B3F]: ours C0 52 E7 | Shree 51 23 F6",
+    "ର୍ଖିଂ [0B30 0B4D 0B16 0B3F 0B02]: ours C0 52 E7 F3 | Shree 51 23 F6 F3"
+   ]
+  },
+  "N. କ୍ଷ inside a cluster split (50 FA CC) where Shree writes E4": {
+   "count": 484,
+   "examples": [
+    "ର୍କ୍ଷ [0B30 0B4D 0B15 0B4D 0B37]: ours C0 50 FA CC | Shree E4 F6",
+    "ର୍କ୍ଷଂ [0B30 0B4D 0B15 0B4D 0B37 0B02]: ours C0 50 FA CC F3 | Shree E4 F6 F3",
+    "ର୍କ୍ଷଁ [0B30 0B4D 0B15 0B4D 0B37 0B01]: ours C0 50 FA CC F4 | Shree E4 F6 F4",
+    "ର୍କ୍ଷଃ [0B30 0B4D 0B15 0B4D 0B37 0B03]: ours C0 50 FA CC 85 | Shree E4 F6 85",
+    "ର୍କ୍ଷା [0B30 0B4D 0B15 0B4D 0B37 0B3E]: ours C0 50 FA CC E6 | Shree E4 E6 F6",
+    "ର୍କ୍ଷି [0B30 0B4D 0B15 0B4D 0B37 0B3F]: ours C0 50 FA CC E7 | Shree E4 7D"
+   ]
+  },
+  "O. ₹ passed through (Shree 3C)": {
+   "count": 1,
+   "examples": [
+    "₹ [20B9]: ours U+20B9 | Shree 3C"
+   ]
+  },
+  "P. େ on ଡ଼ ଢ଼ (U+0B5C/0B5D) written after the letter (the preRule letter class [କ-ହ] leaves them out)": {
+   "count": 168,
+   "examples": [
+    "ଡ଼େ [0B5C 0B47]: ours DD 7B | Shree 7B DD",
+    "ଡ଼େଂ [0B5C 0B47 0B02]: ours DD 7B F3 | Shree 7B DD F3",
+    "ଡ଼େଁ [0B5C 0B47 0B01]: ours DD 7B F4 | Shree 7B DD F4",
+    "ଡ଼େଃ [0B5C 0B47 0B03]: ours DD 7B 85 | Shree 7B DD 85",
+    "ର୍ଡ଼େ [0B30 0B4D 0B5C 0B47]: ours F6 DD 7B | Shree 7B DD F6",
+    "ଡ଼ୋ [0B5C 0B4B]: ours DD 7B E6 | Shree 7B DD E6"
+   ]
+  },
+  "Z. other": {
+   "count": 760,
+   "examples": [
+    "ର୍ [0B30 0B4D]: ours F6 | Shree C0 FF FA",
+    "ନ୍ର୍ୟ [0B28 0B4D 0B30 0B4D 0B5F]: ours 9C FF FA F6 DF | Shree 9C FF F7 BF",
+    "ଡ଼୍ର୍ୟ [0B5C 0B4D 0B30 0B4D 0B5F]: ours DD FA F6 DF | Shree DD F7 BF",
+    "ଢ଼୍ର୍ୟ [0B5D 0B4D 0B30 0B4D 0B5F]: ours DE FA F6 DF | Shree DE F7 BF",
+    "ୟେ [0B5F 0B47]: ours DF 7B | Shree 7B DF",
+    "ୟେଂ [0B5F 0B47 0B02]: ours DF 7B F3 | Shree 7B DF F3"
+   ]
+  }
+ }
+}

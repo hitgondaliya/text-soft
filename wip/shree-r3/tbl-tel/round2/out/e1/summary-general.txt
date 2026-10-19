@@ -1,0 +1,26 @@
+config C:/Users/harde/AppData/Local/Temp/claude/C--Users-harde-Desktop-Windows-Font-Software/7673923b-96b4-4287-87dd-a8e7c6533eca/scratchpad/r3/tbl-tel/repo/assets/config; variant e1; capture truth 26551, pairs 43504, gaps 72
+   general te-inscript: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+   general tel-apple: 432 probes (chart runs on క moved to 28 other consonants), Unicode right 431, SHREE-TEL7 right 431
+   general tel-applen: 405 probes (chart runs on క moved to 28 other consonants), Unicode right 405, SHREE-TEL7 right 405
+   general tel-crtronic: 288 probes (chart runs on క moved to 19 other consonants), Unicode right 288, SHREE-TEL7 right 288
+   general tel-doe: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 384, SHREE-TEL7 right 384
+   general tel-eng: 192 probes (chart runs on క moved to 33 other consonants), Unicode right 192, SHREE-TEL7 right 192
+   general tel-godrej: 272 probes (chart runs on క moved to 18 other consonants), Unicode right 272, SHREE-TEL7 right 272
+   general tel-indica: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 384, SHREE-TEL7 right 384
+   general tel-itr: 165 probes (chart runs on క moved to 12 other consonants), Unicode right 165, SHREE-TEL7 right 165
+   general tel-micro: 432 probes (chart runs on క moved to 28 other consonants), Unicode right 432, SHREE-TEL7 right 432
+   general tel-modular: 496 probes (chart runs on క moved to 32 other consonants), Unicode right 465, SHREE-TEL7 right 465
+   general tel-mono: 405 probes (chart runs on క moved to 28 other consonants), Unicode right 405, SHREE-TEL7 right 405
+   general tel-newroma: 450 probes (chart runs on క moved to 31 other consonants), Unicode right 450, SHREE-TEL7 right 450
+   general tel-phonetic: 64 probes (chart runs on క moved to 33 other consonants), Unicode right 0, SHREE-TEL7 right 0
+   general tel-prakash: 360 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+   general tel-roma: 420 probes (chart runs on క moved to 31 other consonants), Unicode right 420, SHREE-TEL7 right 420
+   general tel-typewrit: 345 probes (chart runs on క moved to 24 other consonants), Unicode right 345, SHREE-TEL7 right 345
+   general tel-vision: 360 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+[general] chart runs on క moved to every other consonant (not ర), all 18 layouts: 6238 probes; Unicode right 6118; SHREE-TEL7 = converter 6118
+   te-inscript: 24 wrong, e.g. bdd	(chart kdd=క్‌)	want వ్‌	got వ [0C35]
+   tel-apple: 1 wrong, e.g. Li	(chart ji=కు)	want ణు	got ణఉ [0C23 0C09]
+   tel-modular: 31 wrong, e.g. cØx	(chart eØx=కఁ)	want చఁ	got చ [0C1A]
+   tel-phonetic: 64 wrong, e.g. Dai	(chart kai=కై)	want డై	got డఇ [0C21 0C07]
+   half-form keys tel-eng: 28 consonant keys type C్; runs on క moved to the others: 390 probes, right 390; e.g. 
+   half-form keys tel-phonetic: 27 consonant keys type C్; runs on క moved to the others: 325 probes, right 0; e.g. bE=బ్ఏ (want బే), BE=భ్ఏ (want భే), cE=చ్ఏ (want చే), CE=ఛ్ఏ (want ఛే), dE=ద్ఏ (want దే), DE=డ్ఏ (want డే)

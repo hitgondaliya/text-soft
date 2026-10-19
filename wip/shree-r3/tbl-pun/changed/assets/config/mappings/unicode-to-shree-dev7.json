@@ -1,0 +1,2855 @@
+{
+  "id": "unicode-to-shree-dev7",
+  "name": "Unicode -\u003E Shree-Lipi 7.0 Devanagari",
+  "sourceFontId": "mangal",
+  "targetFontId": "shree-dev7",
+  "sourceType": "unicode",
+  "targetType": "legacy",
+  "preRules": [
+    {
+      "pattern": "\u0958",
+      "replace": "\u0915\u093C",
+      "note": "\u0958 is \u0915 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u0959",
+      "replace": "\u0916\u093C",
+      "note": "\u0959 is \u0916 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095A",
+      "replace": "\u0917\u093C",
+      "note": "\u095A is \u0917 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095B",
+      "replace": "\u091C\u093C",
+      "note": "\u095B is \u091C \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095C",
+      "replace": "\u0921\u093C",
+      "note": "\u095C is \u0921 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095D",
+      "replace": "\u0922\u093C",
+      "note": "\u095D is \u0922 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095E",
+      "replace": "\u092B\u093C",
+      "note": "\u095E is \u092B \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u095F",
+      "replace": "\u092F\u093C",
+      "note": "\u095F is \u092F \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u0929",
+      "replace": "\u0928\u093C",
+      "note": "\u0929 is \u0928 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u0931",
+      "replace": "\u0930\u093C",
+      "note": "\u0931 is \u0930 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "\u0934",
+      "replace": "\u0933\u093C",
+      "note": "\u0934 is \u0933 \u002B nukta: the nukta is drawn as a sign of its own."
+    },
+    {
+      "pattern": "([\u0915-\u0939\u0958-\u095F])\u093C",
+      "replace": "\u093C$1",
+      "note": "Nukta: written before its letter."
+    },
+    {
+      "pattern": "\u094D(?:\u200C|(?![\u0900-\u0963\u0971-\u097F\u200D\u200C]))",
+      "replace": "\uFDD4",
+      "note": "A visible virama is the halant B2 (U\u002BFDD4 marks it for the pairs): \u094D\u002BZWNJ, and a virama that ends a word - before a space, punctuation, a danda, a digit, anything but a letter or sign of the script or a joiner, or at the end of the text. Every Unicode font draws a word-final virama as a visible halant; the half form the composer answers for a bare virama is only what it shows while it waits for the next letter."
+    },
+    {
+      "pattern": "(?\u003C![\u094D\u200D\u093C])\u0930\u094D(?![\u200D\u094D])(?:((?:\u093C?[\u0915-\u0939\u0958-\u095F]\u094D\u200D?)*\u093C?[\u0915-\u0939\u0958-\u095F](?!\u094D)|[\u0904-\u0914\u0960\u0961\u0972-\u0977\u0950])|(?![\u0915-\u0939\u0958-\u095F\u093C]))([\u0900-\u0902\u093A\u093B\u093E-\u094C\u094E\u094F\u0951-\u0957\u0962\u0963]*)",
+      "replace": "$1$2\uFDD0",
+      "note": "Reph: \u0930\u094D before a letter is written after the letter and its signs (before a visarga); U\u002BFDD0 marks it for the pairs. \u0930\u094D\u002BZWJ is the eyelash ra, \u0931\u094D the half ra."
+    },
+    {
+      "pattern": "([\u0936\u0924]\u094D\u0930\u094D)(?=\u092F[\u093E\u0940-\u094C\u0962\u0963])",
+      "replace": "$1\u200D",
+      "note": "\u0936\u094D\u0930\u094D\u092F \u0924\u094D\u0930\u094D\u092F with a vowel sign: the half \u0936\u094D\u0930\u094D \u0924\u094D\u0930\u094D and \u092F, as with a ZWJ."
+    },
+    {
+      "pattern": "(?\u003C=[\u0915-\u0939\u0958-\u095F]\u094D\u200D?\u093C?[\u0915-\u0939\u0958-\u095F]\u094D\u200D?\u093C?[\u0915-\u0939\u0958-\u095F])\u094D\u092F(?![\u093F\u0900-\u0903\u094D\u200D\uFDD0\uFDD2\uFDD6\uFDD8\uFDD7\uFDDA])",
+      "replace": "\uFDD8",
+      "note": "Ya-sign after a conjunct of three letters or more, with no sign: E7 (U\u002BFDD8 marks it)."
+    },
+    {
+      "pattern": "(?\u003C=[\u0915-\u0939\u0958-\u095F]\u094D\u200D?\u093C?[\u0915-\u0939\u0958-\u095F])\u094D\u092F(?![\u093F\u0900-\u0903\u094D\u200D\uFDD0\uFDD2\uFDD6\uFDD8\uFDD7\uFDDA])",
+      "replace": "\uFDD6",
+      "note": "Ya-sign after a conjunct of two letters, with no sign or a vowel sign: E7 (U\u002BFDD6 marks it; \u0924\u094D\u0924\u094D\u092F is written with the half \u0924\u094D\u0924 there)."
+    },
+    {
+      "pattern": "\u094D\u092F(?=[\u093E\u0940-\u094C\u0962\u0963])",
+      "replace": "\uFDD7",
+      "note": "Ya-sign with a vowel sign (not the i-sign): E7 (U\u002BFDD7 marks it)."
+    },
+    {
+      "pattern": "(?\u003C=[\u091F\u0920\u0921\u0922])\u094D\u092F(?![\u200D\uFDD7]|\u094D(?!\u0930))",
+      "replace": "\uFDD2",
+      "note": "Ya-sign: after \u091F \u0920 \u0921 \u0922 \u094D\u092F is always the ya-sign E7."
+    },
+    {
+      "pattern": "\u094D\u092F(?![\u093F\u0900-\u0903\u094D\u200D\uFDD0\uFDD2\uFDD6\uFDD8\uFDD7\uFDDA])",
+      "replace": "\uFDD2",
+      "note": "Ya-sign: \u094D\u092F alone is the ya-sign E7 (U\u002BFDD2 marks it) - but before \u093F \u0902 \u0901 \u0903, a reph or the ra-sign the composer writes the half letter and \u092F."
+    },
+    {
+      "pattern": "\u094D\u0930(?!\u200D|\u094D)",
+      "replace": "\uFDD3",
+      "note": "Ra-sign: \u094D\u0930 after a letter (U\u002BFDD3 marks it for the pairs)."
+    },
+    {
+      "pattern": "((?:\u093C?[\u0915-\u0939\u0958-\u095F]\u094D\u200D?)*\u093C?[\u0915-\u0939\u0958-\u095F](?:[\uFDD3\uFDD2\uFDD6\uFDD7\uFDD8\uFDD9\uFDDA])*)\u093F",
+      "replace": "\u093F$1",
+      "note": "The i-sign is written before its letter or conjunct (Unicode logical order -\u003E visual order)."
+    },
+    {
+      "pattern": "\u094D(?![\u0915-\u0939\u0958-\u095F\u093C\u200D])",
+      "replace": "\u094D\uFDD5",
+      "note": "A virama before a vowel letter or a sign (a word-final one is the halant, above): the composer writes the half form it is waiting with (U\u002BFDD5 marks it for the pairs)."
+    },
+    {
+      "pattern": "([\u0915-\u0939\u0958-\u095F])\u094D(?!\u0930)(?=(?:\u093C?[\u0915-\u0939\u0958-\u095F]\u094D)\u002B(?:\uFDD5|\u093C?[\u0915-\u0939\u0958-\u095F]))",
+      "replace": "$1\u094D\u200D",
+      "note": "A conjunct with a virama after it (waiting for its next letter, or with one more) is written as half letters, not as a ligature - the composer breaks \u0915\u094D\u0915 into \u0915\u094D \u0915\u094D when a link follows: as if each virama but the last had a ZWJ."
+    }
+  ],
+  "pairs": [
+    {
+      "from": "\u0000",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0001",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0002",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0003",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0004",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0005",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0006",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0007",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\b",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u000E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u000F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0010",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0011",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0012",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0013",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0014",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0015",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0016",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0017",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0018",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0019",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001A",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001B",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001C",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001D",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u001F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "!",
+      "to": "!"
+    },
+    {
+      "from": "\u0022",
+      "to": "\u0022\u0022"
+    },
+    {
+      "from": "#",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "$",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "%",
+      "to": "%"
+    },
+    {
+      "from": "\u0026",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0027",
+      "to": "\u0027"
+    },
+    {
+      "from": "(",
+      "to": "("
+    },
+    {
+      "from": ")",
+      "to": ")"
+    },
+    {
+      "from": "*",
+      "to": "*"
+    },
+    {
+      "from": "\u002B",
+      "to": "\u002B"
+    },
+    {
+      "from": ",",
+      "to": ","
+    },
+    {
+      "from": "-",
+      "to": "-"
+    },
+    {
+      "from": ".",
+      "to": "."
+    },
+    {
+      "from": "/",
+      "to": "/"
+    },
+    {
+      "from": "0",
+      "to": "0"
+    },
+    {
+      "from": "1",
+      "to": "1"
+    },
+    {
+      "from": "2",
+      "to": "2"
+    },
+    {
+      "from": "3",
+      "to": "3"
+    },
+    {
+      "from": "4",
+      "to": "4"
+    },
+    {
+      "from": "5",
+      "to": "5"
+    },
+    {
+      "from": "6",
+      "to": "6"
+    },
+    {
+      "from": "7",
+      "to": "7"
+    },
+    {
+      "from": "8",
+      "to": "8"
+    },
+    {
+      "from": "9",
+      "to": "9"
+    },
+    {
+      "from": ":",
+      "to": ":"
+    },
+    {
+      "from": ";",
+      "to": ";"
+    },
+    {
+      "from": "\u003C",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "=",
+      "to": "="
+    },
+    {
+      "from": "\u003E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "?",
+      "to": "?"
+    },
+    {
+      "from": "@",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "A",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "B",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "C",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "D",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "G",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "H",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "I",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "J",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "K",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "L",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "M",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "N",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "O",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "P",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "Q",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "R",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "S",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "T",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "U",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "V",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "W",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "X",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "Y",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "Z",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "[",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\\",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "]",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "^",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "_",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0060",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "a",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "b",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "c",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "d",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "e",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "f",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "g",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "h",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "i",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "j",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "k",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "l",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "m",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "n",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "o",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "p",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "q",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "r",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "s",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "t",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "u",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "v",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "w",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "x",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "y",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "z",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "{",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "|",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "}",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "~",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u007F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0080",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0081",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0082",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0083",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0084",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0085",
+      "to": " ",
+      "unmapped": true
+    },
+    {
+      "from": "\u0086",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0087",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0088",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0089",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008A",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008B",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008C",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008D",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u008F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0090",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0091",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0092",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0093",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0094",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0095",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0096",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0097",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0098",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0099",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009A",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009B",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009C",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009D",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009E",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u009F",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A7",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00A9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00AA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00AB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00AC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00AE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00AF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B0",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00B9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BD",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00BF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C0",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C7",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00C9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CD",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00CF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D0",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D7",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00D9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DD",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00DF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E0",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E7",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00E9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00EA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00EB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00EC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00ED",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00EE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00EF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F0",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F1",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F2",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F3",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F4",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F5",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F7",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F8",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00F9",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FA",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FB",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FD",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FE",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u00FF",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0152",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0153",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0160",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0161",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0178",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0192",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u02C6",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u02DC",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u0901",
+      "to": "\u00B1"
+    },
+    {
+      "from": "\u0902",
+      "to": "\u00A7"
+    },
+    {
+      "from": "\u0903",
+      "to": "\u2026"
+    },
+    {
+      "from": "\u0904",
+      "to": "A",
+      "unmapped": true
+    },
+    {
+      "from": "\u0905",
+      "to": "A"
+    },
+    {
+      "from": "\u0906",
+      "to": "Am"
+    },
+    {
+      "from": "\u0907",
+      "to": "B"
+    },
+    {
+      "from": "\u0908",
+      "to": "B\u00A9"
+    },
+    {
+      "from": "\u0909",
+      "to": "C"
+    },
+    {
+      "from": "\u090A",
+      "to": "D$"
+    },
+    {
+      "from": "\u090B",
+      "to": "F$"
+    },
+    {
+      "from": "\u090C",
+      "to": "\uFDD1\u090C",
+      "unmapped": true
+    },
+    {
+      "from": "\u090D",
+      "to": "E\u00B0"
+    },
+    {
+      "from": "\u090E",
+      "to": "E",
+      "unmapped": true
+    },
+    {
+      "from": "\u090F",
+      "to": "E"
+    },
+    {
+      "from": "\u0910",
+      "to": "Eo"
+    },
+    {
+      "from": "\u0911",
+      "to": "Am\u00B0"
+    },
+    {
+      "from": "\u0912",
+      "to": "Am",
+      "unmapped": true
+    },
+    {
+      "from": "\u0913",
+      "to": "Amo"
+    },
+    {
+      "from": "\u0914",
+      "to": "Am\u00A1"
+    },
+    {
+      "from": "\u0915",
+      "to": "H$"
+    },
+    {
+      "from": "\u0916",
+      "to": "I"
+    },
+    {
+      "from": "\u0917",
+      "to": "J"
+    },
+    {
+      "from": "\u0918",
+      "to": "K"
+    },
+    {
+      "from": "\u0919",
+      "to": "L\u003E"
+    },
+    {
+      "from": "\u091A",
+      "to": "M"
+    },
+    {
+      "from": "\u091B",
+      "to": "N\u003E"
+    },
+    {
+      "from": "\u091C",
+      "to": "O"
+    },
+    {
+      "from": "\u091D",
+      "to": "P"
+    },
+    {
+      "from": "\u091E",
+      "to": "\u00C4m"
+    },
+    {
+      "from": "\u091F",
+      "to": "Q\u003E"
+    },
+    {
+      "from": "\u0920",
+      "to": "R\u003E"
+    },
+    {
+      "from": "\u0921",
+      "to": "S\u003E"
+    },
+    {
+      "from": "\u0922",
+      "to": "T\u003E"
+    },
+    {
+      "from": "\u0923",
+      "to": "U"
+    },
+    {
+      "from": "\u0924",
+      "to": "V"
+    },
+    {
+      "from": "\u0925",
+      "to": "W"
+    },
+    {
+      "from": "\u0926",
+      "to": "X"
+    },
+    {
+      "from": "\u0927",
+      "to": "Y"
+    },
+    {
+      "from": "\u0928",
+      "to": "Z"
+    },
+    {
+      "from": "\u0929",
+      "to": "\u00B5Z"
+    },
+    {
+      "from": "\u092A",
+      "to": "n"
+    },
+    {
+      "from": "\u092B",
+      "to": "\\$"
+    },
+    {
+      "from": "\u092C",
+      "to": "~"
+    },
+    {
+      "from": "\u092D",
+      "to": "^"
+    },
+    {
+      "from": "\u092E",
+      "to": "_"
+    },
+    {
+      "from": "\u092F",
+      "to": "\u0060"
+    },
+    {
+      "from": "\u0930",
+      "to": "a"
+    },
+    {
+      "from": "\u0931",
+      "to": "\u00B5a"
+    },
+    {
+      "from": "\u0932",
+      "to": "b"
+    },
+    {
+      "from": "\u0933",
+      "to": "i"
+    },
+    {
+      "from": "\u0934",
+      "to": "\u2039i"
+    },
+    {
+      "from": "\u0935",
+      "to": "d"
+    },
+    {
+      "from": "\u0936",
+      "to": "e"
+    },
+    {
+      "from": "\u0937",
+      "to": "f"
+    },
+    {
+      "from": "\u0938",
+      "to": "g"
+    },
+    {
+      "from": "\u0939",
+      "to": "h"
+    },
+    {
+      "from": "\u093C",
+      "to": "\u00B5"
+    },
+    {
+      "from": "\u093D",
+      "to": "@"
+    },
+    {
+      "from": "\u093E",
+      "to": "m"
+    },
+    {
+      "from": "\u093F",
+      "to": "["
+    },
+    {
+      "from": "\u0940",
+      "to": "r"
+    },
+    {
+      "from": "\u0941",
+      "to": "w"
+    },
+    {
+      "from": "\u0942",
+      "to": "y"
+    },
+    {
+      "from": "\u0943",
+      "to": "\u00A5"
+    },
+    {
+      "from": "\u0944",
+      "to": "\u00A6"
+    },
+    {
+      "from": "\u0945",
+      "to": "\u00B0"
+    },
+    {
+      "from": "\u0946",
+      "to": "\u0946",
+      "unmapped": true
+    },
+    {
+      "from": "\u0947",
+      "to": "o"
+    },
+    {
+      "from": "\u0948",
+      "to": "\u00A1"
+    },
+    {
+      "from": "\u0949",
+      "to": "m\u00B0"
+    },
+    {
+      "from": "\u094A",
+      "to": "m",
+      "unmapped": true
+    },
+    {
+      "from": "\u094B",
+      "to": "mo"
+    },
+    {
+      "from": "\u094C",
+      "to": "m\u00A1"
+    },
+    {
+      "from": "\u094D",
+      "to": "\u00B2"
+    },
+    {
+      "from": "\u0950",
+      "to": "\u203A"
+    },
+    {
+      "from": "\u0951",
+      "to": "\uFDD1\u0951",
+      "unmapped": true
+    },
+    {
+      "from": "\u0952",
+      "to": "\u0161"
+    },
+    {
+      "from": "\u0958",
+      "to": "\u00B5H$"
+    },
+    {
+      "from": "\u0959",
+      "to": "\u02DC"
+    },
+    {
+      "from": "\u095A",
+      "to": "\u00B5J"
+    },
+    {
+      "from": "\u095B",
+      "to": "\u00B5O"
+    },
+    {
+      "from": "\u095C",
+      "to": "\u2039S\u003E"
+    },
+    {
+      "from": "\u095D",
+      "to": "\u2039T\u003E"
+    },
+    {
+      "from": "\u095E",
+      "to": "\u00B5\\$"
+    },
+    {
+      "from": "\u095F",
+      "to": "\u00B5\u0060"
+    },
+    {
+      "from": "\u0960",
+      "to": "G$"
+    },
+    {
+      "from": "\u0961",
+      "to": "\uFDD1\u0961",
+      "unmapped": true
+    },
+    {
+      "from": "\u0962",
+      "to": "\uFDD1\u0962",
+      "unmapped": true
+    },
+    {
+      "from": "\u0963",
+      "to": "\uFDD1\u0963",
+      "unmapped": true
+    },
+    {
+      "from": "\u0964",
+      "to": "\u0026"
+    },
+    {
+      "from": "\u0965",
+      "to": "\u0026\u0026"
+    },
+    {
+      "from": "\u0966",
+      "to": "0"
+    },
+    {
+      "from": "\u0967",
+      "to": "1"
+    },
+    {
+      "from": "\u0968",
+      "to": "2"
+    },
+    {
+      "from": "\u0969",
+      "to": "3"
+    },
+    {
+      "from": "\u096A",
+      "to": "4"
+    },
+    {
+      "from": "\u096B",
+      "to": "5"
+    },
+    {
+      "from": "\u096C",
+      "to": "6"
+    },
+    {
+      "from": "\u096D",
+      "to": "7"
+    },
+    {
+      "from": "\u096E",
+      "to": "8"
+    },
+    {
+      "from": "\u096F",
+      "to": "9"
+    },
+    {
+      "from": "\u0972",
+      "to": "A\u00B0"
+    },
+    {
+      "from": "\u1680",
+      "to": " "
+    },
+    {
+      "from": "\u2000",
+      "to": " "
+    },
+    {
+      "from": "\u2001",
+      "to": " "
+    },
+    {
+      "from": "\u2002",
+      "to": " "
+    },
+    {
+      "from": "\u2003",
+      "to": " "
+    },
+    {
+      "from": "\u2004",
+      "to": " "
+    },
+    {
+      "from": "\u2005",
+      "to": " "
+    },
+    {
+      "from": "\u2006",
+      "to": " "
+    },
+    {
+      "from": "\u2007",
+      "to": " "
+    },
+    {
+      "from": "\u2008",
+      "to": " "
+    },
+    {
+      "from": "\u2009",
+      "to": " "
+    },
+    {
+      "from": "\u200A",
+      "to": " "
+    },
+    {
+      "from": "\u200C",
+      "to": "\uFDDD"
+    },
+    {
+      "from": "\u200D",
+      "to": "\uFDDD"
+    },
+    {
+      "from": "\u2013",
+      "to": "-"
+    },
+    {
+      "from": "\u2014",
+      "to": "--"
+    },
+    {
+      "from": "\u2018",
+      "to": "\u0022"
+    },
+    {
+      "from": "\u2019",
+      "to": "\u0027"
+    },
+    {
+      "from": "\u201A",
+      "to": ","
+    },
+    {
+      "from": "\u201C",
+      "to": "\u0022\u0022"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u0027\u0027"
+    },
+    {
+      "from": "\u201E",
+      "to": ",,"
+    },
+    {
+      "from": "\u2020",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u2021",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u2022",
+      "to": "\u00B7"
+    },
+    {
+      "from": "\u2026",
+      "to": "..."
+    },
+    {
+      "from": "\u2028",
+      "to": " ",
+      "unmapped": true
+    },
+    {
+      "from": "\u2029",
+      "to": " ",
+      "unmapped": true
+    },
+    {
+      "from": "\u202F",
+      "to": " "
+    },
+    {
+      "from": "\u2030",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u2039",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u203A",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u205F",
+      "to": " "
+    },
+    {
+      "from": "\u2122",
+      "to": "",
+      "unmapped": true
+    },
+    {
+      "from": "\u3000",
+      "to": " "
+    },
+    {
+      "from": "\uFDD0",
+      "to": "\u00A9"
+    },
+    {
+      "from": "\uFDD2",
+      "to": "\u00E7"
+    },
+    {
+      "from": "\uFDD3",
+      "to": "\u00AB"
+    },
+    {
+      "from": "\uFDD4",
+      "to": "\u00B2"
+    },
+    {
+      "from": "\uFDD5",
+      "to": "\uFDD1"
+    },
+    {
+      "from": "\uFDD6",
+      "to": "\u00E7"
+    },
+    {
+      "from": "\uFDD7",
+      "to": "\u00E7"
+    },
+    {
+      "from": "\uFDD8",
+      "to": "\u00E7"
+    },
+    {
+      "from": "\u0908\u0902",
+      "to": "B\u00AA"
+    },
+    {
+      "from": "\u0915\u094D",
+      "to": "\u0160"
+    },
+    {
+      "from": "\u0915\uFDD2",
+      "to": "\u0160\u0060"
+    },
+    {
+      "from": "\u0915\uFDD7",
+      "to": "\u0160\u0060"
+    },
+    {
+      "from": "\u0916\u094D",
+      "to": "\u00BB"
+    },
+    {
+      "from": "\u0916\uFDD3",
+      "to": "\u00BC"
+    },
+    {
+      "from": "\u0917\u094D",
+      "to": "\u00BD"
+    },
+    {
+      "from": "\u0918\u094D",
+      "to": "\u00BF"
+    },
+    {
+      "from": "\u091A\u094D",
+      "to": "\u00C0"
+    },
+    {
+      "from": "\u091C\u094D",
+      "to": "\u00C1"
+    },
+    {
+      "from": "\u091D\u094D",
+      "to": "\u00C2"
+    },
+    {
+      "from": "\u091D\uFDD3",
+      "to": "\u00C3"
+    },
+    {
+      "from": "\u091E\u094D",
+      "to": "\u00C4"
+    },
+    {
+      "from": "\u091E\uFDD2",
+      "to": "\u00C4\u0060"
+    },
+    {
+      "from": "\u091E\uFDD7",
+      "to": "\u00C4\u0060"
+    },
+    {
+      "from": "\u0923\u094D",
+      "to": "\u00CA"
+    },
+    {
+      "from": "\u0924\u094D",
+      "to": "\u00CB"
+    },
+    {
+      "from": "\u0924\uFDD3",
+      "to": "\u00CC"
+    },
+    {
+      "from": "\u0925\u094D",
+      "to": "\u00CF"
+    },
+    {
+      "from": "\u0926\u0943",
+      "to": "\u00D1"
+    },
+    {
+      "from": "\u0926\uFDD2",
+      "to": "\u00DA"
+    },
+    {
+      "from": "\u0926\uFDD3",
+      "to": "\u00D0"
+    },
+    {
+      "from": "\u0926\uFDD7",
+      "to": "\u00DA"
+    },
+    {
+      "from": "\u0927\u094D",
+      "to": "\u00DC"
+    },
+    {
+      "from": "\u0928\u094D",
+      "to": "\u00DD"
+    },
+    {
+      "from": "\u092A\u094D",
+      "to": "\u00DF"
+    },
+    {
+      "from": "\u092A\uFDD3",
+      "to": "\u00E0"
+    },
+    {
+      "from": "\u092B\u094D",
+      "to": "\u00E2"
+    },
+    {
+      "from": "\u092B\uFDD2",
+      "to": "\u00E2\u0060"
+    },
+    {
+      "from": "\u092B\uFDD7",
+      "to": "\u00E2\u0060"
+    },
+    {
+      "from": "\u092C\u094D",
+      "to": "\u00E3"
+    },
+    {
+      "from": "\u092D\u094D",
+      "to": "\u00E4"
+    },
+    {
+      "from": "\u092E\u094D",
+      "to": "\u00E5"
+    },
+    {
+      "from": "\u092F\u094D",
+      "to": "\u00E6"
+    },
+    {
+      "from": "\u0930\u0941",
+      "to": "\u00E9"
+    },
+    {
+      "from": "\u0930\u0942",
+      "to": "\u00EA$"
+    },
+    {
+      "from": "\u0932\u094D",
+      "to": "\u00EB"
+    },
+    {
+      "from": "\u0933\u094D",
+      "to": "\u00F9"
+    },
+    {
+      "from": "\u0935\u094D",
+      "to": "\u00EC"
+    },
+    {
+      "from": "\u0936\u094D",
+      "to": "\u00ED"
+    },
+    {
+      "from": "\u0936\uFDD3",
+      "to": "l"
+    },
+    {
+      "from": "\u0937\u094D",
+      "to": "\u00EE"
+    },
+    {
+      "from": "\u0938\u094D",
+      "to": "\u00F1"
+    },
+    {
+      "from": "\u0938\uFDD3",
+      "to": "\u00F2"
+    },
+    {
+      "from": "\u0939\u0943",
+      "to": "\u00F6"
+    },
+    {
+      "from": "\u0939\u094D",
+      "to": "\u00F4"
+    },
+    {
+      "from": "\u0939\uFDD2",
+      "to": "\u00F8"
+    },
+    {
+      "from": "\u0939\uFDD3",
+      "to": "\u00F5"
+    },
+    {
+      "from": "\u0939\uFDD7",
+      "to": "\u00F8"
+    },
+    {
+      "from": "\u093C\u0916",
+      "to": "\u02DC"
+    },
+    {
+      "from": "\u093C\u0930",
+      "to": "\u00B5a"
+    },
+    {
+      "from": "\u0915\u094D\u0915",
+      "to": "\u00B8$"
+    },
+    {
+      "from": "\u0915\u094D\u0924",
+      "to": "\u00BA$"
+    },
+    {
+      "from": "\u0915\u094D\u0935",
+      "to": "\u00B9$"
+    },
+    {
+      "from": "\u0915\u094D\u0937",
+      "to": "j"
+    },
+    {
+      "from": "\u0917\u094D\u0928",
+      "to": "\u00BE"
+    },
+    {
+      "from": "\u0919\u094D\u0917",
+      "to": "\u201C"
+    },
+    {
+      "from": "\u0919\u094D\u0918",
+      "to": "\u201D"
+    },
+    {
+      "from": "\u0919\u094D\u0935",
+      "to": "L\u2030\u003E"
+    },
+    {
+      "from": "\u091A\u094D\u091A",
+      "to": "\u0192"
+    },
+    {
+      "from": "\u091B\u094D\u0935",
+      "to": "N\u2030\u003E"
+    },
+    {
+      "from": "\u091C\u094D\u091C",
+      "to": "\u201Am"
+    },
+    {
+      "from": "\u091C\u094D\u091E",
+      "to": "k"
+    },
+    {
+      "from": "\u091E\u094D\u091A",
+      "to": "#m"
+    },
+    {
+      "from": "\u091F\u094D\u091F",
+      "to": "\u00C5\u003E"
+    },
+    {
+      "from": "\u091F\u094D\u0920",
+      "to": "\u00C6\u003E"
+    },
+    {
+      "from": "\u091F\u094D\u0935",
+      "to": "Q\u2030\u003E"
+    },
+    {
+      "from": "\u0920\u094D\u0920",
+      "to": "\u00C7\u003E"
+    },
+    {
+      "from": "\u0920\u094D\u0935",
+      "to": "R\u2030\u003E"
+    },
+    {
+      "from": "\u0921\u094D\u0921",
+      "to": "\u00C8\u003E"
+    },
+    {
+      "from": "\u0921\u094D\u0922",
+      "to": "\u2013"
+    },
+    {
+      "from": "\u0921\u094D\u0935",
+      "to": "S\u2030\u003E"
+    },
+    {
+      "from": "\u0922\u094D\u0922",
+      "to": "\u00C9\u003E"
+    },
+    {
+      "from": "\u0922\u094D\u0935",
+      "to": "T\u2030\u003E"
+    },
+    {
+      "from": "\u0924\u094D\u0924",
+      "to": "\u00CEm"
+    },
+    {
+      "from": "\u0926\u094D\u0917",
+      "to": "\u00D2"
+    },
+    {
+      "from": "\u0926\u094D\u0918",
+      "to": "\u00D3"
+    },
+    {
+      "from": "\u0926\u094D\u0926",
+      "to": "\u00D4"
+    },
+    {
+      "from": "\u0926\u094D\u0927",
+      "to": "\u00D5"
+    },
+    {
+      "from": "\u0926\u094D\u0928",
+      "to": "\u00D6"
+    },
+    {
+      "from": "\u0926\u094D\u092C",
+      "to": "\u00D7"
+    },
+    {
+      "from": "\u0926\u094D\u092D",
+      "to": "\u00D8"
+    },
+    {
+      "from": "\u0926\u094D\u092E",
+      "to": "\u00D9"
+    },
+    {
+      "from": "\u0926\u094D\u092F",
+      "to": "\u00DA"
+    },
+    {
+      "from": "\u0926\u094D\u0935",
+      "to": "\u00DB"
+    },
+    {
+      "from": "\u0928\u094D\u0928",
+      "to": "\u00DE"
+    },
+    {
+      "from": "\u092A\u094D\u0924",
+      "to": "\u00E1"
+    },
+    {
+      "from": "\u0930\u094D\u200D",
+      "to": "\u00E8"
+    },
+    {
+      "from": "\u0932\u094D\u0932",
+      "to": "\u201E"
+    },
+    {
+      "from": "\u0937\u094D\u091F",
+      "to": "\u00EF\u003E"
+    },
+    {
+      "from": "\u0937\u094D\u0920",
+      "to": "\u00F0\u003E"
+    },
+    {
+      "from": "\u0939\u094D\u0923",
+      "to": "\u2020"
+    },
+    {
+      "from": "\u0939\u094D\u0928",
+      "to": "\u2022"
+    },
+    {
+      "from": "\u0939\u094D\u092E",
+      "to": "\u00F7"
+    },
+    {
+      "from": "\u0939\u094D\u092F",
+      "to": "\u00F8"
+    },
+    {
+      "from": "\u0939\u094D\u0932",
+      "to": "\u2021"
+    },
+    {
+      "from": "\u0939\u094D\u0935",
+      "to": "\u02C6"
+    },
+    {
+      "from": "\u093C\u0915\u094D",
+      "to": "\u00B5\u0160"
+    },
+    {
+      "from": "\u093C\u0915\uFDD7",
+      "to": "\u00B5H$\u00E7"
+    },
+    {
+      "from": "\u093C\u0916\u094D",
+      "to": "\u2122"
+    },
+    {
+      "from": "\u093C\u0917\u094D",
+      "to": "\u00B5\u00BD"
+    },
+    {
+      "from": "\u093C\u091C\u094D",
+      "to": "\u00B5\u00C1"
+    },
+    {
+      "from": "\u093C\u0921\u094D",
+      "to": "S\u00B2"
+    },
+    {
+      "from": "\u093C\u0921\uFDD2",
+      "to": "S\u00B2\u0060"
+    },
+    {
+      "from": "\u093C\u0921\uFDD3",
+      "to": "\u2039S\u003E\uFDD1\u00AB"
+    },
+    {
+      "from": "\u093C\u0922\u094D",
+      "to": "T\u00B2"
+    },
+    {
+      "from": "\u093C\u0922\uFDD2",
+      "to": "T\u00B2\u0060"
+    },
+    {
+      "from": "\u093C\u0922\uFDD3",
+      "to": "\u2039T\u003E\uFDD1\u00AB"
+    },
+    {
+      "from": "\u093C\u092B\uFDD7",
+      "to": "\u00B5\\$\u00E7"
+    },
+    {
+      "from": "\u093C\u0930\u094D",
+      "to": "\u00E8"
+    },
+    {
+      "from": "\u093C\u0930\uFDD2",
+      "to": "\u00E8\u0060"
+    },
+    {
+      "from": "\u093C\u0933\u094D",
+      "to": "\u2039\u00F9"
+    },
+    {
+      "from": "\u093C\u0933\uFDD3",
+      "to": "\u2039i\uFDD1\u00AB"
+    },
+    {
+      "from": "\u0915\u094D\u0924\uFDD3",
+      "to": "\u0160\u00CC"
+    },
+    {
+      "from": "\u091B\u094D\u0935\u0941",
+      "to": "N\u2030x\u003E"
+    },
+    {
+      "from": "\u091B\u094D\u0935\u0942",
+      "to": "N\u2030z\u003E"
+    },
+    {
+      "from": "\u091F\u094D\u0935\u0941",
+      "to": "Q\u2030x\u003E"
+    },
+    {
+      "from": "\u091F\u094D\u0935\u0942",
+      "to": "Q\u2030z\u003E"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3",
+      "to": "\u00CB\u00CC"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD6",
+      "to": "\u00CE\u0060"
+    },
+    {
+      "from": "\u0924\u094D\u0930\u094D",
+      "to": "\u00CD"
+    },
+    {
+      "from": "\u092A\u094D\u0924\uFDD3",
+      "to": "\u00DF\u00CC"
+    },
+    {
+      "from": "\u0936\u094D\u0930\u094D",
+      "to": "\u00FB"
+    },
+    {
+      "from": "\u0938\u094D\u0924\uFDD3",
+      "to": "\u00F3"
+    },
+    {
+      "from": "\u093C\u0921\u094D\u0935",
+      "to": "S\u2030"
+    },
+    {
+      "from": "\u093C\u0921\uFDD3\u0941",
+      "to": "\u2039S\u003E\uFDD1\u00ABx"
+    },
+    {
+      "from": "\u093C\u0921\uFDD3\u0942",
+      "to": "\u2039S\u003E\uFDD1\u00ABz"
+    },
+    {
+      "from": "\u093C\u0922\u094D\u0935",
+      "to": "T\u2030"
+    },
+    {
+      "from": "\u093C\u0922\uFDD3\u0941",
+      "to": "\u2039T\u003E\uFDD1\u00ABx"
+    },
+    {
+      "from": "\u093C\u0922\uFDD3\u0942",
+      "to": "\u2039T\u003E\uFDD1\u00ABz"
+    },
+    {
+      "from": "\u093F\u091B\u094D\u0935",
+      "to": "{N\uFDD1\u2030\u003E"
+    },
+    {
+      "from": "\u093F\u091E\u094D\u091C",
+      "to": "{\uFDD1\u00C4O"
+    },
+    {
+      "from": "\u093F\u091F\u094D\u0935",
+      "to": "{Q\uFDD1\u2030\u003E"
+    },
+    {
+      "from": "\u0915\u094D\u0937\u094D\u200D",
+      "to": "\u00FA"
+    },
+    {
+      "from": "\u0915\u094D\u200D\u0937\u094D",
+      "to": "\u00FA"
+    },
+    {
+      "from": "\u0919\u094D\u200D\u091E\u094D",
+      "to": "L\u00B2\u00C4"
+    },
+    {
+      "from": "\u0919\u094D\u200D\u0935\u094D",
+      "to": "L\u00EC"
+    },
+    {
+      "from": "\u091B\u094D\u200D\u091E\u094D",
+      "to": "N\u00B2\u00C4"
+    },
+    {
+      "from": "\u091C\u094D\u091E\u094D\u200D",
+      "to": "k\u00B2\u003E"
+    },
+    {
+      "from": "\u091C\u094D\u200D\u091E\u094D",
+      "to": "k\u00B2\u003E"
+    },
+    {
+      "from": "\u091E\u094D\u200D\u091A\u094D",
+      "to": "#"
+    },
+    {
+      "from": "\u091F\u094D\u200D\u091E\u094D",
+      "to": "Q\u00B2\u00C4"
+    },
+    {
+      "from": "\u0920\u094D\u200D\u091E\u094D",
+      "to": "R\u00B2\u00C4"
+    },
+    {
+      "from": "\u0920\u094D\u200D\u0935\u094D",
+      "to": "R\u00EC"
+    },
+    {
+      "from": "\u0921\u094D\u200D\u091E\u094D",
+      "to": "S\u00B2\u00C4"
+    },
+    {
+      "from": "\u0921\u094D\u200D\u0935\u094D",
+      "to": "S\u00EC"
+    },
+    {
+      "from": "\u0922\u094D\u200D\u091E\u094D",
+      "to": "T\u00B2\u00C4"
+    },
+    {
+      "from": "\u0922\u094D\u200D\u0935\u094D",
+      "to": "T\u00EC"
+    },
+    {
+      "from": "\u0924\u094D\u0924\u094D\u200D",
+      "to": "\u00CE"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0901",
+      "to": "\u00CEm\u00AB\u00B1"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0903",
+      "to": "\u00CEm\u00AB\u2026"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0944",
+      "to": "\u00CEm\u00AB\u00A6"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0945",
+      "to": "\u00CEm\u00AB\u00B0"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0949",
+      "to": "\u00CEm\u00ABm\u00B0"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u094B",
+      "to": "\u00CEm\u00ABmo"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u094C",
+      "to": "\u00CEm\u00ABm\u00A1"
+    },
+    {
+      "from": "\u0924\u094D\u200D\u0924\u094D",
+      "to": "\u00CE"
+    },
+    {
+      "from": "\u0936\u094D\u0930\u094D\u091A",
+      "to": "\u00FC"
+    },
+    {
+      "from": "\u0936\u094D\u0930\u094D\u0928",
+      "to": "\u00FD"
+    },
+    {
+      "from": "\u0936\u094D\u0930\u094D\u0932",
+      "to": "\u00FBc"
+    },
+    {
+      "from": "\u0936\u094D\u0930\u094D\u0935",
+      "to": "\u0153"
+    },
+    {
+      "from": "\u093F\u093C\u0921\uFDD3\u0902",
+      "to": "q\u2039S\u003E\uFDD1\u00AB"
+    },
+    {
+      "from": "\u093F\u093C\u0922\uFDD3\u0902",
+      "to": "q\u2039T\u003E\uFDD1\u00AB"
+    },
+    {
+      "from": "\u093F\u093C\u0933\uFDD3\u0902",
+      "to": "q\u2039i\uFDD1\u00AB"
+    },
+    {
+      "from": "\u0919\u094D\u200D\u0915\u094D\u0937",
+      "to": "\u00AC"
+    },
+    {
+      "from": "\u091C\u094D\u200D\u091E\u094D\u0935",
+      "to": "k\u2030\u003E"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u093E\u0902",
+      "to": "\u00CEm\u00ABm\u00A7"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0940\u0902",
+      "to": "\u00CEm\u00ABt"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0941\u0902",
+      "to": "\u00CEm\u00ABw\u00A7"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0942\u0902",
+      "to": "\u00CEm\u00ABy\u00A7"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0943\u0902",
+      "to": "\u00CEm\u00AB\u00A5\u00A7"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0947\u0902",
+      "to": "\u00CEm\u00AB|"
+    },
+    {
+      "from": "\u0924\u094D\u0924\uFDD3\u0948\u0902",
+      "to": "\u00CEm\u00AB\u00A2"
+    },
+    {
+      "from": "\u093F\u0924\u094D\u0924\uFDD3\u0902",
+      "to": "q\u00CEm\u00AB"
+    },
+    {
+      "from": "\u093F\u0936\u094D\u0930\u094D\u0932",
+      "to": "{\uFDD1\u00FBc"
+    }
+  ],
+  "postRules": [
+    {
+      "pattern": "\uFDDD",
+      "replace": "",
+      "note": "U\u002BFDDD stands for a joiner: no glyph, and nothing for the rules below to stop at."
+    },
+    {
+      "pattern": "\u00B5([STi])",
+      "replace": "\u2039$1",
+      "note": "Nukta under \u0921 \u0922 \u0933: 8B."
+    },
+    {
+      "pattern": "([LNQRST])\u00B2\\\u003Ed",
+      "replace": "$1\u2030\u003E",
+      "note": "Va after \u0919 \u091B \u091F \u0920 \u0921 \u0922: the va-sign 89 under the letter."
+    },
+    {
+      "pattern": "\\$((?:[wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]|[o\u00A1\u00A7\u00B1\u00B0]|\u00A9)\u002B)",
+      "replace": "$1$$",
+      "note": "Signs below and above a letter, and the reph, go before its spacer 24."
+    },
+    {
+      "pattern": "\\\u003E([wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]\u002B)",
+      "replace": "$1\u003E",
+      "note": "Signs below a letter go before its spacer 3E."
+    },
+    {
+      "pattern": "(\u00B2\\\u003E[\u00C4\u00CE])m([wy\u00A5\u00A6]\u002B)",
+      "replace": "$1$2\u003E",
+      "note": "\u091E \u0924\u094D\u0924 after a letter with the halant: a sign below takes the 3E spacer in place of the 6D stem."
+    },
+    {
+      "pattern": "([\u2030\u00C5\u00C6\u00C7\u00C8\u00C9])\u00AB(\\\u003E)",
+      "replace": "$1$2\u00AB",
+      "note": "Ra-sign after the va-sign or a ligature of \u091F \u0920 \u0921 \u0922: after the spacer."
+    },
+    {
+      "pattern": "([Xh\u2020\u2021\u02C6\u2022\u00D0\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00DB\u00F5])w",
+      "replace": "$1\u00FE",
+      "note": "u after \u0926 \u0939 and their ligatures: FE."
+    },
+    {
+      "pattern": "([Xh\u2020\u2021\u02C6\u2022\u00D0\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00DB\u00F5])y",
+      "replace": "$1\u00FF",
+      "note": "uu after \u0926 \u0939 and their ligatures: FF."
+    },
+    {
+      "pattern": "([\u201E\u201C\u201D\u2013\u00AC\u00C5\u00C6\u00C7\u00C8\u00C9]|\u2039[ST])w",
+      "replace": "$1x",
+      "note": "u under a stacked ligature or a nukta: the short 78."
+    },
+    {
+      "pattern": "([\u201E\u201C\u201D\u2013\u00AC\u00C5\u00C6\u00C7\u00C8\u00C9]|\u2039[ST])y",
+      "replace": "$1z",
+      "note": "uu there: the short 7A."
+    },
+    {
+      "pattern": "([LNQRSTi\u00EF\u00F0])\u00AB",
+      "replace": "$1\u00B4",
+      "note": "Ra-sign under the round-bottomed letters and \u0933: B4."
+    },
+    {
+      "pattern": "\u00B4w",
+      "replace": "\u00AE",
+      "note": "Ra-sign B4 \u002B u: one glyph."
+    },
+    {
+      "pattern": "\u00B4y",
+      "replace": "\u00AF",
+      "note": "Ra-sign B4 \u002B uu: one glyph."
+    },
+    {
+      "pattern": "(\u00B4)([\u00A5\u00A6])(\\\u003E)",
+      "replace": "$1$3$2",
+      "note": "Ra-sign B4 \u002B vocalic r: the sign after the spacer."
+    },
+    {
+      "pattern": "\\$r",
+      "replace": "$$s",
+      "note": "ii after a spacer 24: 73."
+    },
+    {
+      "pattern": "\\[(?=[\u00B5\u2039]?(?:[@ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD]|[\u0160\u2122\u00BB\u00BD\u00BF\u00C0\u00C1\u00C2\u00C4\u00CA\u00CB\u00CD\u00CE\u00CF\u00DC\u00DD\u00DF\u00E2\u00E3\u00E4\u00E5\u00E6\u00E8\u00EB\u00EC\u00ED\u00EE\u00F1\u00F4\u00F9\u00FA\u00FB]))(?!a)",
+      "replace": "{",
+      "note": "i-sign over one letter or ligature: 7B (5B only over \u0930 and alone)."
+    },
+    {
+      "pattern": "\\{(?=[\u00B5\u2039]?(?:[\u0160\u2122\u00BB\u00BD\u00BF\u00C0\u00C1\u00C2\u00C4\u00CA\u00CB\u00CD\u00CE\u00CF\u00DC\u00DD\u00DF\u00E2\u00E3\u00E4\u00E5\u00E6\u00E8\u00EB\u00EC\u00ED\u00EE\u00F1\u00F4\u00F9\u00FA\u00FB](?!m)|.[\u00B2\u2030]))",
+      "replace": "p",
+      "note": "i-sign over a conjunct of two glyphs: the long 70."
+    },
+    {
+      "pattern": "\\{([\u00B5\u2039]?[@ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD][wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]*[\\\u003Em]?[wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]*)\u00A7",
+      "replace": "q$1",
+      "note": "i-sign \u002B anusvara over one letter: 71."
+    },
+    {
+      "pattern": "(\\[a)\u00A7",
+      "replace": "$1\u00A8",
+      "note": "i-sign \u002B anusvara over \u0930: A8."
+    },
+    {
+      "pattern": "r\u00A7",
+      "replace": "t",
+      "note": "ii \u002B anusvara: one glyph."
+    },
+    {
+      "pattern": "o\u00A7",
+      "replace": "|",
+      "note": "e \u002B anusvara: one glyph."
+    },
+    {
+      "pattern": "\u00A1\u00A7",
+      "replace": "\u00A2",
+      "note": "ai \u002B anusvara: one glyph."
+    },
+    {
+      "pattern": "s\u00A7",
+      "replace": "s\u00A8",
+      "note": "ii (after a spacer) \u002B anusvara: A8."
+    },
+    {
+      "pattern": "([\\{\\[][\u00B5\u2039]?[@ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijkln~\u203A\\#\u201A\u0192\u201E\u2020\u2021\u02C6\u201C\u201D\u2022\u2013\u02DC\u0153\u00AC\u00B8\u00B9\u00BA\u00BC\u00BE\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CC\u00CE\u00D0\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DE\u00E0\u00E1\u00E9\u00EA\u00EF\u00F0\u00F2\u00F3\u00F5\u00F6\u00F7\u00F8\u00FC\u00FD][wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]*[\\\u003Em]?[wxyz\u00A5\u00A6\u00AB\u00AE\u00AF\u00B2\u00B4\u2030\u00FE\u00FF]*|[rso\u00A1])\u00B1",
+      "replace": "$1\u003E\u003E\u00B1",
+      "note": "Candrabindu after a tall sign (i, ii, e, ai): moved right by two 3E."
+    },
+    {
+      "pattern": "o\u00A9",
+      "replace": "}",
+      "note": "e \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\u00A1\u00A9",
+      "replace": "\u00A3",
+      "note": "ai \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\\|\u00A9",
+      "replace": "]",
+      "note": "e \u002B anusvara \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\u00A2\u00A9",
+      "replace": "\u00A4",
+      "note": "ai \u002B anusvara \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\u00A7\u00A9",
+      "replace": "\u00AA",
+      "note": "anusvara \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\u00A8\u00A9",
+      "replace": "\u00AA",
+      "note": "anusvara (after ii) \u002B reph: one glyph."
+    },
+    {
+      "pattern": "r\u00A9",
+      "replace": "u",
+      "note": "ii \u002B reph: one glyph."
+    },
+    {
+      "pattern": "t\u00A9",
+      "replace": "v",
+      "note": "ii \u002B anusvara \u002B reph: one glyph."
+    },
+    {
+      "pattern": "\uFDD1",
+      "replace": "",
+      "note": "U\u002BFDD1 in a pair keeps the rules above off a spelling the composer writes its own way; it is not text."
+    }
+  ]
+}

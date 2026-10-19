@@ -1,0 +1,35 @@
+Odia (Oriya) Shree-Lipi 7 capture - 2026-10-18 09:53-10:40. ALL STEPS DONE; SLNXT restored (shmdump/final.bin == shmdump/start.bin).
+Pipeline adapted from ../cap-pun (Punjabi, this round). Every capture step is resumable: runlist.js skips a .tsv that already
+has "#stable 1 / #loaded 1" (FORCE=1 to redo). Re-run in this order:
+
+ 0. shmdump/start.bin = SLNXT's SL8_DLL_DATA before the first composer load (header 00 00 01, tables all zero = the same as
+    cap-pun final-r2.bin). Every composer run goes through safe-run.js <label> <capdir> <probedir> [...]: shmlab dump ->
+    shmdump/<label>-pre.bin, runlist (probe2.exe: U + 7 composer, keys '!'..'~', layers 0..2, two passes -> #stable, table-0
+    check -> #loaded), then probe2 --put <label>-pre.bin and a fresh dump compared (safe-run.log: every run "0 bytes differ").
+    Manual restore: probe2\bin\probe2.exe --put <8.3 path>\shmdump\start.bin
+ 1. probe2/ + shmlab/ copied (built exes) from cap-pun. k/BASEA.ORI = copy of TYPEWRIT.ORI (no conjunct slots) = probe base;
+    probe files are <prefix>AAA.ORI etc. (neutral names; untouched check keys V X Z 0 5 _ < verified in every file).
+ 2. Vendor keyboards: safe-run run1 capvo "C:/Shree-Lipi nxt" (+ capvo-b in runPb). collectv.js -> vendor-rows.json (1,155 rows),
+    ori-vendor-keys.json (8 keyboards x layers 0/1/2, both composers, + the 20 Ctrl+Shift+1 chart keys with their codes' answers).
+    layers/TYPEWRIT.tsv (LAYERS=12): tutor layers 3..12 answer exactly as layer 2 (raw code layer); no Ctrl+Shift+1 layer.
+    layercheck.js: L1 U/7 == code 100/110 (the 10 = ENG/PHONETIC half forms, both composers agree).
+ 3. Explore: explore1.js -> seq-explore1.json -> px (E, 19 files, 868 seqs) -> capx / capx-b; probeparse.js px capx E --show
+    -> explore1-show.txt, explore1-diff.txt.
+ 4. Main probes: gen.js -> seq-all.json (42,433) -> build.js seq-all.json p P (903 files) -> capp / capp-b ; probeparse.js p capp P
+    gen-halant.js -> seq-halant.json (12,888) -> ph (H, 275 files) -> caph / caph-b ; probeparse.js ph caph H
+    gen-wide.js -> seq-wide.json (1,156) -> pw (W, 25 files) -> capw / capw-b ; probeparse.js pw capw W
+    verify-stability.js capp capp-b capvo capvo-b capx capx-b caph caph-b capw capw-b -> verify-stability.json:
+    all identical A vs B after normalising the random unit count the 7 composer returns for "no answer".
+ 5. expected.js (code sequence -> Unicode), groundtruth.js -> ori7-groundtruth.json (+ ori7-only7-evidence.json),
+    patterns.js -> ori7-patterns.txt.
+ 6. fontcmp.js (ttf.js) -> fonts/family-check.json, fonts/codes-*.png, wori7001-all.png, diff-wori-vs-456.png, f4.png;
+    render.js <png> <ttf> "label=hex" ... (check-ba.png, check-reph.png, ours-vs-shree.png).
+ 7. measure/ (C#, references repo/src/FontSoftware.Core = copy of snap-base, md5-identical to the main checkout for
+    FontConverter.cs, MappingTable.cs, ConfigLoader.cs and both ori7 tables): dotnet build -c Release -o bin -m:1
+    -nodeReuse:false -p:UseSharedCompilation=false ; measure\bin\measure.exe ori7-groundtruth.json repo/assets/config measured
+    -> measured/measure.json, forward-failures.tsv, reverse-failures.tsv (re-run measured-r2, measured-r3: byte-identical);
+    faildiff.js, failclass.js -> measured/forward-failure-groups.json, forward-failure-classes.json; revdiff.js ->
+    measured/reverse-failure-groups.json; WORDS=common-words.txt measure.exe ... -> measured/common-words.tsv.
+
+Results: truth 41,470 Unicode strings (57,500 pairs, 10,349 quirk rows). Shipped tables: forward exact 32.33%, accepted 32.34%
+(49.18% of the 27,276 strings without ZWJ/ZWNJ); reverse exact 48.67%, same text 56.76%; the tables' own round trip 100%.

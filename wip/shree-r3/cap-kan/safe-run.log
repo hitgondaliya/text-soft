@@ -1,0 +1,22 @@
+2026-10-18T05:56:56.685Z run1 pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+2026-10-18T05:56:56.960Z run1 runlist capvo C:/Shree-Lipi nxt exit 0 captured 21 
+2026-10-18T05:56:57.041Z run1 restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-kan\shmdump\run1-pre.bin 
+2026-10-18T05:56:57.128Z run1 after restore: 0 bytes differ from the pre-dump
+2026-10-18T05:56:57.296Z run1b pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+2026-10-18T05:56:57.531Z run1b runlist capvo-b C:/Shree-Lipi nxt exit 0 captured 21 
+2026-10-18T05:56:57.610Z run1b restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-kan\shmdump\run1b-pre.bin 
+2026-10-18T05:56:57.698Z run1b after restore: 0 bytes differ from the pre-dump
+2026-10-18T05:56:57.868Z layers pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+2026-10-18T05:56:58.052Z layers runlist layers C:/Shree-Lipi nxt/DOE.KAN exit 0 captured 1 
+2026-10-18T05:56:58.130Z layers restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-kan\shmdump\layers-pre.bin 
+2026-10-18T05:56:58.218Z layers after restore: 0 bytes differ from the pre-dump
+2026-10-18T05:57:39.646Z runE pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+2026-10-18T05:57:40.241Z runE runlist capx px exit 0 captured 38 
+2026-10-18T05:57:40.583Z runE runlist capx-b px exit 0 captured 38 
+2026-10-18T05:57:40.659Z runE restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-kan\shmdump\runE-pre.bin 
+2026-10-18T05:57:40.745Z runE after restore: 0 bytes differ from the pre-dump
+2026-10-18T06:01:42.273Z runP pre-dump header 00 00 01 00 00 00 00 00 00 00 00 nonzero bytes 1; differs from start.bin in 0 bytes
+2026-10-18T06:01:51.794Z runP runlist capp p exit 0 captured 895 
+2026-10-18T06:01:55.521Z runP runlist capp-b p exit 0 captured 895 
+2026-10-18T06:01:55.599Z runP restore: PUT OK: SL8_DLL_DATA identical to C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-kan\shmdump\runP-pre.bin 
+2026-10-18T06:01:55.687Z runP after restore: 0 bytes differ from the pre-dump

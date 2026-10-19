@@ -1,0 +1,283 @@
+config C:/Users/harde/AppData/Local/Temp/claude/C--Users-harde-Desktop-Windows-Font-Software/7673923b-96b4-4287-87dd-a8e7c6533eca/scratchpad/r3/tbl-tel/round2/before/config; variant before; capture truth 26551, pairs 43504, gaps 72
+wiring: font shree-tel-apoorva-0900 family 'SHREE-TEL-Apoorva-0900' encoding shree-tel7 -> forward table unicode-to-shree-tel7; listed under: Shree-Lipi 4.0/5.0/6.0
+wiring: font shree-tel7-apoorva-0900 family 'SHREE-TEL7-Apoorva-0900' encoding shree-tel7 -> forward table unicode-to-shree-tel7; listed under: Shree-Lipi 7.0
+wiring: font shree-tel-asmitha-1642 family 'SHREE-TEL-Asmitha-1642' encoding shree-tel7 -> forward table unicode-to-shree-tel7; listed under: Shree-Lipi 4.0/5.0/6.0
+wiring: font shree-tel7-asmitha-1642 family 'SHREE-TEL7-Asmitha-1642' encoding shree-tel7 -> forward table unicode-to-shree-tel7; listed under: Shree-Lipi 7.0
+wiring: font shree-tel7-001 family 'Shree-Tel7-001' encoding shree-tel7w -> forward table unicode-to-shree-tel7w; listed under: Shree-Lipi 7.0
+wiring: font shree-tel7-002 family 'Shree-Tel7-002' encoding shree-tel7w -> forward table unicode-to-shree-tel7w; listed under: Shree-Lipi 7.0
+[truth shree-tel7] 26551 composer strings: 1 composer-preferred 20383, 3 glyph-fix 5586, 4 jha-dropped 577, 5 policy 4, 9 WRONG 1
+[truth shree-tel7] glyph-fix detail: 3 glyph-fix visarga40>5D 2132; 3 glyph-fix candrabinduB6>97 2132; 3 glyph-fix visarga40>5D+candrabinduB6>97 102; 3 glyph-fix nga5D>94 538; 3 glyph-fix nga5D>94+visarga40>5D 36; 3 glyph-fix nga5D>94+candrabinduB6>97 36; 3 glyph-fix rraCA>3C 538; 3 glyph-fix rraCA>3C+visarga40>5D 36; 3 glyph-fix rraCA>3C+candrabinduB6>97 36
+[truth shree-tel7] policy row * U+002A: shree 92, ours '' reported [*]
+[truth shree-tel7] policy row — U+2014: shree 9B 9B, ours '26 26' reported []
+[truth shree-tel7] policy row – U+2013: shree 9B, ours '26' reported []
+[truth shree-tel7] policy row ౢ U+0C62: shree AB A7 E6, ours 'U+0C62' reported [ౢ]
+   BAD శ్రీ్‌క	0C36 0C4D 0C30 0C40 0C4D 200C 0C15	CHCsHJC	9 WRONG	ours 7D 8A 4D E6 FC	shree 7D 4D E6 FC
+[truth shree-tel7w] 26551 composer strings: 1 composer-preferred 20384, 3 glyph-fix 5586, 4 jha-dropped 577, 5 policy 3, 9 WRONG 1
+[truth shree-tel7w] glyph-fix detail: 3 glyph-fix visarga40>5D 2132; 3 glyph-fix candrabinduB6>97 2132; 3 glyph-fix visarga40>5D+candrabinduB6>97 102; 3 glyph-fix nga5D>94 538; 3 glyph-fix nga5D>94+visarga40>5D 36; 3 glyph-fix nga5D>94+candrabinduB6>97 36; 3 glyph-fix rraCA>3C 538; 3 glyph-fix rraCA>3C+visarga40>5D 36; 3 glyph-fix rraCA>3C+candrabinduB6>97 36
+[truth shree-tel7w] policy row — U+2014: shree 9B 9B, ours '26 26' reported []
+[truth shree-tel7w] policy row – U+2013: shree 9B, ours '26' reported []
+[truth shree-tel7w] policy row ౢ U+0C62: shree AB A7 E6, ours 'U+0C62' reported [ౢ]
+   BAD శ్రీ్‌క	0C36 0C4D 0C30 0C40 0C4D 200C 0C15	CHCsHJC	9 WRONG	ours 7D 8A 4D E6 FC	shree 7D 4D E6 FC
+[concat] composer strings that split into two composer syllables: 393; whole = the two joined: 393; differ 0
+[words shree-tel7 seed 424242] 20000 words of 2-5 composer syllables (pool 26423): exact 20000, wrong 0; read back same text 20000, malformed 0, forbidden chars 0
+[words shree-tel7 seed 90017] 20000 words of 2-5 composer syllables (pool 26423): exact 20000, wrong 0; read back same text 20000, malformed 0, forbidden chars 0
+[words shree-tel7w seed 424242] 20000 words of 2-5 composer syllables (pool 26423): exact 20000, wrong 0; read back same text 20000, malformed 0, forbidden chars 0
+[words shree-tel7w seed 90017] 20000 words of 2-5 composer syllables (pool 26423): exact 20000, wrong 0; read back same text 20000, malformed 0, forbidden chars 0
+[final shree-tel7] C+virama at a word end in 11 contexts x 3 prefixes: 1155 cases, as the composer's halant (C్‌) 1155, wrong 0, consonants without a halant row 0; composer gaps 72: = derived 72
+   word ఫోన్: B8 F9 AF 8C FE -> back ఫోన్
+   word కంప్యూటర్: 4D E6 FC 85 E7 B3 4E C5 72 C6 8A FF -> back కంప్యూటర్
+   word ఇంటర్నెట్: 43 85 72 C6 F0 FF B2 73 8C FD -> back ఇంటర్నెట్
+   word హైదరాబాద్: F2 DF FD 4F A7 E6 FE C6 3E BB EA A7 8A FE -> back హైదరాబాద్
+   word ఆంధ్రప్రదేశ్: 42 85 7B AB A7 E6 FE 7B E7 B3 A7 F3 FE D4 8C FD -> back ఆంధ్రప్రదేశ్
+   word క్రికెట్: 7B 4D EC FC 4D F0 FC 73 8C FD -> back క్రికెట్
+   word ఫోన్ కాల్: B8 F9 AF 8C FE 20 4D 3E CC 8C FD -> back ఫోన్ కాల్
+   word కర్ర్: 4D E6 FC 7B C6 8A FF -> back కర్ర్
+[final shree-tel7w] C+virama at a word end in 11 contexts x 3 prefixes: 1155 cases, as the composer's halant (C్‌) 1155, wrong 0, consonants without a halant row 0; composer gaps 72: = derived 72
+   word ఫోన్: B8 F9 AF 8C FE -> back ఫోన్
+   word కంప్యూటర్: 4D E6 FC 85 E7 B3 4E C5 72 C6 8A FF -> back కంప్యూటర్
+   word ఇంటర్నెట్: 43 85 72 C6 F0 FF B2 73 8C FD -> back ఇంటర్నెట్
+   word హైదరాబాద్: F2 DF FD 4F A7 E6 FE C6 3E BB EA A7 8A FE -> back హైదరాబాద్
+   word ఆంధ్రప్రదేశ్: 42 85 7B AB A7 E6 FE 7B E7 B3 A7 F3 FE D4 8C FD -> back ఆంధ్రప్రదేశ్
+   word క్రికెట్: 7B 4D EC FC 4D F0 FC 73 8C FD -> back క్రికెట్
+   word ఫోన్ కాల్: B8 F9 AF 8C FE 20 4D 3E CC 8C FD -> back ఫోన్ కాల్
+   word కర్ర్: 4D E6 FC 7B C6 8A FF -> back కర్ర్
+[reverse shree-tel7] every composer spelling in the capture (37339 distinct text+bytes): exact 27542, MALFORMED 2, other text 5320, other text +reported 49, same text (we write both alike) 82, the text those bytes are (we write it so) 4344
+   OTHER alt:pending: 3564  e.g. 4D 3E 7B 85	typed కా్రం [0C15 0C3E 0C4D 0C30 0C02]	read క్రాం [0C15 0C4D 0C30 0C3E 0C02]	we write 7B 4D 3E 85
+   OTHER quirk:7-only-code:: 554  e.g. 4D E6 FC 93	typed క [0C15]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-has-no-ౄ: 365  e.g. 4D E6 FC 7B 85	typed కౄ్రం [0C15 0C44 0C4D 0C30 0C02]	read క్రం [0C15 0C4D 0C30 0C02]	we write 7B 4D E6 FC 85
+   OTHER quirk:శ్రీ-ligature-code-D8-with-a-second-sign-or-ra-vattu: 125  e.g. 7D 7B	typed శ్రీ్ర [0C36 0C4D 0C30 0C40 0C4D 0C30]	read శ్ర్రీ [0C36 0C4D 0C30 0C4D 0C30 0C40]	we write 7B 7D
+   OTHER truth-preferred: 86  e.g. 4D E6 FC A0 96	typed క్ఝృ [0C15 0C4D 0C1D 0C43]	read కృ [0C15 0C43]	we write 4D E6 FC 96
+   OTHER truth-alternative: 71  e.g. 4D E6 FC 5D 7B	typed క్ఙ్ర [0C15 0C4D 0C19 0C4D 0C30]	read క్రః [0C15 0C4D 0C30 0C03]	we write 7B 4D E6 FC 5D
+   OTHER quirk:lone-vowel-sign: 50  e.g. E6 61 E6 61	typed ో [0C4B]	read ్చ్చ [0C4D 0C1A 0C4D 0C1A]	we write 61 61
+   REPORTED quirk:lone-vowel-sign: 46  e.g. E6 61 E6 61	typed ో	read ్చ్చ	reported [00E6]
+   OTHER quirk:7-composer-dropped-code-61: 36  e.g. 4D E6 FC 7B	typed క్రా [0C15 0C4D 0C30 0C3E]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-73: 36  e.g. 4D E6 FC 7B	typed క్రి [0C15 0C4D 0C30 0C3F]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-76: 36  e.g. 4D E6 FC 7B	typed క్రీ [0C15 0C4D 0C30 0C40]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-6E: 36  e.g. 4D E6 FC 7B	typed క్రు [0C15 0C4D 0C30 0C41]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-26: 36  e.g. 4D E6 FC 7B	typed క్రూ [0C15 0C4D 0C30 0C42]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-7A: 36  e.g. 4D E6 FC 7B	typed క్రృ [0C15 0C4D 0C30 0C43]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+[reverse shree-tel7] every code 20-FF the faces map, alone and next to letters: 868 probes, Latin/control/reported 40
+   80	read € [20AC]		reported €
+   4D E6 FC 80	read క€ [0C15 20AC]		reported €
+   80 4D E6 FC	read €క [20AC 0C15]		reported €
+   41 80 41	read అ€అ [0C05 20AC 0C05]		reported €
+   8B	read  []		reported ‹
+   4D E6 FC 8B	read క [0C15]		reported ‹
+   8B 4D E6 FC	read క [0C15]		reported ‹
+   41 8B 41	read అఅ [0C05 0C05]		reported ‹
+   9A	read  []		reported š
+   4D E6 FC 9A	read క [0C15]		reported š
+   9A 4D E6 FC	read క [0C15]		reported š
+   41 9A 41	read అఅ [0C05 0C05]		reported š
+[reverse shree-tel7w] every composer spelling in the capture (37339 distinct text+bytes): exact 27543, MALFORMED 2, other text 5320, other text +reported 49, same text (we write both alike) 82, the text those bytes are (we write it so) 4343
+   OTHER alt:pending: 3564  e.g. 4D 3E 7B 85	typed కా్రం [0C15 0C3E 0C4D 0C30 0C02]	read క్రాం [0C15 0C4D 0C30 0C3E 0C02]	we write 7B 4D 3E 85
+   OTHER quirk:7-only-code:: 554  e.g. 4D E6 FC 93	typed క [0C15]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-has-no-ౄ: 365  e.g. 4D E6 FC 7B 85	typed కౄ్రం [0C15 0C44 0C4D 0C30 0C02]	read క్రం [0C15 0C4D 0C30 0C02]	we write 7B 4D E6 FC 85
+   OTHER quirk:శ్రీ-ligature-code-D8-with-a-second-sign-or-ra-vattu: 125  e.g. 7D 7B	typed శ్రీ్ర [0C36 0C4D 0C30 0C40 0C4D 0C30]	read శ్ర్రీ [0C36 0C4D 0C30 0C4D 0C30 0C40]	we write 7B 7D
+   OTHER truth-preferred: 86  e.g. 4D E6 FC A0 96	typed క్ఝృ [0C15 0C4D 0C1D 0C43]	read కృ [0C15 0C43]	we write 4D E6 FC 96
+   OTHER truth-alternative: 71  e.g. 4D E6 FC 5D 7B	typed క్ఙ్ర [0C15 0C4D 0C19 0C4D 0C30]	read క్రః [0C15 0C4D 0C30 0C03]	we write 7B 4D E6 FC 5D
+   OTHER quirk:lone-vowel-sign: 50  e.g. E6 61 E6 61	typed ో [0C4B]	read ్చ్చ [0C4D 0C1A 0C4D 0C1A]	we write 61 61
+   REPORTED quirk:lone-vowel-sign: 46  e.g. E6 61 E6 61	typed ో	read ్చ్చ	reported [00E6]
+   OTHER quirk:7-composer-dropped-code-61: 36  e.g. 4D E6 FC 7B	typed క్రా [0C15 0C4D 0C30 0C3E]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-73: 36  e.g. 4D E6 FC 7B	typed క్రి [0C15 0C4D 0C30 0C3F]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-76: 36  e.g. 4D E6 FC 7B	typed క్రీ [0C15 0C4D 0C30 0C40]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-6E: 36  e.g. 4D E6 FC 7B	typed క్రు [0C15 0C4D 0C30 0C41]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-26: 36  e.g. 4D E6 FC 7B	typed క్రూ [0C15 0C4D 0C30 0C42]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+   OTHER quirk:7-composer-dropped-code-7A: 36  e.g. 4D E6 FC 7B	typed క్రృ [0C15 0C4D 0C30 0C43]	read క్ర [0C15 0C4D 0C30]	we write 7B 4D E6 FC
+[reverse shree-tel7w] every code 20-FF the faces map, alone and next to letters: 868 probes, Latin/control/reported 44
+   80	read € [20AC]		reported €
+   4D E6 FC 80	read క€ [0C15 20AC]		reported €
+   80 4D E6 FC	read €క [20AC 0C15]		reported €
+   41 80 41	read అ€అ [0C05 20AC 0C05]		reported €
+   8B	read  []		reported ‹
+   4D E6 FC 8B	read క [0C15]		reported ‹
+   8B 4D E6 FC	read క [0C15]		reported ‹
+   41 8B 41	read అఅ [0C05 0C05]		reported ‹
+   92	read * [002A]	ASCII glyph-code	reported 
+   4D E6 FC 92	read క* [0C15 002A]	ASCII glyph-code	reported 
+   92 4D E6 FC	read *క [002A 0C15]	ASCII glyph-code	reported 
+   41 92 41	read అ*అ [0C05 002A 0C05]	ASCII glyph-code	reported 
+[sweep shree-tel7] BMP outside U+0C00-0C7F (63360 chars): as itself (the fonts' code) [drawn as itself] 22, dropped silently (joiner / variation selector) 18, left out, reported 237, look-alike 31, PASSED THROUGH BUT THE FONTS MAP THIS CODE 1, passed through, reported (no face maps it) 63025, stand-in, reported 1, whitespace as itself 9, WRITES A CODE NO FACE MAPS 16
+[sweep shree-tel7] look-alikes/stand-ins: 20 <- U+1680 U+2000 U+2001 U+2002 U+2003 U+2004 (+9); 22 <- U+0027 U+2018; 22 22 <- U+0022 U+201C; 26 <- U+002D U+2013; 26 26 <- U+2014; 27 <- U+2019; 27 27 <- U+201D; 2C <- U+201A; 2C 2C <- U+201E; 2E 2E 2E <- U+2026; 91 <- U+0964; 91 91 <- U+0965; 92 <- U+20B9; B7 <- U+2022; R B7 <- U+2219; U+FFFD <- U+FDD0 U+FDD1 U+FDD2 U+FDD3 U+FDD4 U+FDD5 (+10)
+[sweep shree-tel7] violations: 19
+   U+0022	between letters 4D E6 FC 27 27 4D E6 FC	alone 22 22
+   U+0027	between letters 4D E6 FC 27 4D E6 FC	alone 22
+   U+00B7 ·	PASSED THROUGH BUT THE FONTS MAP THIS CODE	B7
+   U+FDD0 ﷐	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD1 ﷑	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD2 ﷒	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD3 ﷓	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD4 ﷔	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD5 ﷕	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD6 ﷖	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD7 ﷗	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD8 ﷘	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD9 ﷙	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDA ﷚	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDB ﷛	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDC ﷜	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDD ﷝	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDE ﷞	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDF ﷟	WRITES A CODE NO FACE MAPS	U+FFFD
+[sweep shree-tel7] Telugu block chars reported: ఀ(U+0C00)=kept ఄ(U+0C04)=kept ఌ(U+0C0C)=kept ఴ(U+0C34)=kept ఼(U+0C3C)=kept ౄ(U+0C44)=kept ౕ(U+0C55)=kept ౘ(U+0C58)=kept ౙ(U+0C59)=kept ౚ(U+0C5A)=kept ౝ(U+0C5D)=kept ౡ(U+0C61)=kept ౢ(U+0C62)=kept ౣ(U+0C63)=kept ౷(U+0C77)=kept ౸(U+0C78)=kept ౹(U+0C79)=kept ౺(U+0C7A)=kept ౻(U+0C7B)=kept ౼(U+0C7C)=kept ౽(U+0C7D)=kept ౾(U+0C7E)=kept ౿(U+0C7F)=kept
+[sweep shree-tel7w] BMP outside U+0C00-0C7F (63360 chars): as itself (the fonts' code) [drawn as itself] 22, dropped silently (joiner / variation selector) 18, left out, reported 236, look-alike 31, PASSED THROUGH BUT THE FONTS MAP THIS CODE 1, passed through, reported (no face maps it) 63026, stand-in, reported 1, whitespace as itself 9, WRITES A CODE NO FACE MAPS 16
+[sweep shree-tel7w] look-alikes/stand-ins: 20 <- U+1680 U+2000 U+2001 U+2002 U+2003 U+2004 (+9); 22 <- U+0027 U+2018; 22 22 <- U+0022 U+201C; 26 <- U+002D U+2013; 26 26 <- U+2014; 27 <- U+2019; 27 27 <- U+201D; 2C <- U+201A; 2C 2C <- U+201E; 2E 2E 2E <- U+2026; 91 <- U+0964; 91 91 <- U+0965; 92 <- U+002A; B7 <- U+2022; R B7 <- U+2219; U+FFFD <- U+FDD0 U+FDD1 U+FDD2 U+FDD3 U+FDD4 U+FDD5 (+10)
+[sweep shree-tel7w] violations: 19
+   U+0022	between letters 4D E6 FC 27 27 4D E6 FC	alone 22 22
+   U+0027	between letters 4D E6 FC 27 4D E6 FC	alone 22
+   U+00B7 ·	PASSED THROUGH BUT THE FONTS MAP THIS CODE	B7
+   U+FDD0 ﷐	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD1 ﷑	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD2 ﷒	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD3 ﷓	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD4 ﷔	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD5 ﷕	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD6 ﷖	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD7 ﷗	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD8 ﷘	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDD9 ﷙	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDA ﷚	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDB ﷛	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDC ﷜	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDD ﷝	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDE ﷞	WRITES A CODE NO FACE MAPS	U+FFFD
+   U+FDDF ﷟	WRITES A CODE NO FACE MAPS	U+FFFD
+[sweep shree-tel7w] Telugu block chars reported: ఀ(U+0C00)=kept ఄ(U+0C04)=kept ఌ(U+0C0C)=kept ఴ(U+0C34)=kept ఼(U+0C3C)=kept ౄ(U+0C44)=kept ౕ(U+0C55)=kept ౘ(U+0C58)=kept ౙ(U+0C59)=kept ౚ(U+0C5A)=kept ౝ(U+0C5D)=kept ౡ(U+0C61)=kept ౢ(U+0C62)=kept ౣ(U+0C63)=kept ౷(U+0C77)=kept ౸(U+0C78)=kept ౹(U+0C79)=kept ౺(U+0C7A)=kept ౻(U+0C7B)=kept ౼(U+0C7C)=kept ౽(U+0C7D)=kept ౾(U+0C7E)=kept ౿(U+0C7F)=kept
+[written shree-tel7] 217 distinct code points written (truth, words, sweep): 0009 000A 000B 000C 000D 0020 0021 0022 0023 0024 0025 0026 0027 0028 0029 002A 002B 002C 002E 002F 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 003A 003B 003C 003D 003E 003F 0041 0042 0043 0044 0045 0046 0047 0048 0049 004A 004B 004C 004D 004E 004F 0050 0051 0052 0053 0054 0055 0056 0057 0058 0059 005A 005B 005C 005D 005E 005F 0060 0061 0062 0063 0064 0065 0066 0067 0068 0069 006A 006B 006C 006D 006E 006F 0070 0071 0072 0073 0074 0075 0076 0077 0078 0079 007A 007B 007C 007D 007E 00A0 00A1 00A2 00A3 00A4 00A5 00A6 00A7 00A8 00A9 00AA 00AB 00AC 00AE 00AF 00B0 00B1 00B2 00B3 00B4 00B5 00B7 00B8 00B9 00BA 00BB 00BC 00BD 00BE 00BF 00C0 00C1 00C2 00C3 00C4 00C5 00C6 00C7 00C8 00C9 00CB 00CC 00CD 00CE 00CF 00D0 00D1 00D2 00D3 00D4 00D5 00D6 00D7 00D8 00D9 00DA 00DB 00DC 00DD 00DE 00DF 00E0 00E1 00E2 00E3 00E4 00E5 00E6 00E7 00E8 00E9 00EA 00EB 00EC 00ED 00EE 00EF 00F0 00F1 00F2 00F3 00F4 00F5 00F6 00F7 00F8 00F9 00FA 00FB 00FC 00FD 00FE 00FF 0152 0153 0160 0161 0178 0192 02C6 02DC 2013 2014 2018 2019 201A 201D 201E 2020 2021 2022 2026 2028 2029 2030 2039 203A 2122 FFFD
+   face M09000F0.TTF (SHREE-TEL-Apoorva-0900): missing 1 U+FFFD
+   face M0900890.TTF (SHREE-TEL7-Apoorva-0900): missing 1 U+FFFD
+   face M16420F0.TTF (SHREE-TEL-Asmitha-1642): missing 1 U+FFFD
+   face M1642890.TTF (SHREE-TEL7-Asmitha-1642): missing 1 U+FFFD
+   face N09020F0.TTF (SHREE-TEL-Apoorva-0900): missing 1 U+FFFD
+   face N0902890.TTF (SHREE-TEL7-Apoorva-0900): missing 1 U+FFFD
+   face N16440F0.TTF (SHREE-TEL-Asmitha-1642): missing 1 U+FFFD
+   face N1644890.TTF (SHREE-TEL7-Asmitha-1642): missing 1 U+FFFD
+   Word/RichEdit draw nothing (C1 81 8D 8F 90 9D 9E, soft hyphen AD): written 
+   RichEdit charset-238 Latin letters (8C 9C 8A 9A 9F 83; Word draws the font's glyph): written U+0152=8C U+0153=9C U+0160=8A U+0161=9A U+0178=9F U+0192=83
+[written shree-tel7w] 217 distinct code points written (truth, words, sweep): 0009 000A 000B 000C 000D 0020 0021 0022 0023 0024 0025 0026 0027 0028 0029 002A 002B 002C 002E 002F 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 003A 003B 003C 003D 003E 003F 0041 0042 0043 0044 0045 0046 0047 0048 0049 004A 004B 004C 004D 004E 004F 0050 0051 0052 0053 0054 0055 0056 0057 0058 0059 005A 005B 005C 005D 005E 005F 0060 0061 0062 0063 0064 0065 0066 0067 0068 0069 006A 006B 006C 006D 006E 006F 0070 0071 0072 0073 0074 0075 0076 0077 0078 0079 007A 007B 007C 007D 007E 00A0 00A1 00A2 00A3 00A4 00A5 00A6 00A7 00A8 00A9 00AA 00AB 00AC 00AE 00AF 00B0 00B1 00B2 00B3 00B4 00B5 00B7 00B8 00B9 00BA 00BB 00BC 00BD 00BE 00BF 00C0 00C1 00C2 00C3 00C4 00C5 00C6 00C7 00C8 00C9 00CB 00CC 00CD 00CE 00CF 00D0 00D1 00D2 00D3 00D4 00D5 00D6 00D7 00D8 00D9 00DA 00DB 00DC 00DD 00DE 00DF 00E0 00E1 00E2 00E3 00E4 00E5 00E6 00E7 00E8 00E9 00EA 00EB 00EC 00ED 00EE 00EF 00F0 00F1 00F2 00F3 00F4 00F5 00F6 00F7 00F8 00F9 00FA 00FB 00FC 00FD 00FE 00FF 0152 0153 0160 0161 0178 0192 02C6 02DC 2013 2014 2018 2019 201A 201D 201E 2020 2021 2022 2026 2028 2029 2030 2039 203A 2122 FFFD
+   face WTEL7001.TTF (Shree-Tel7-001): missing 1 U+FFFD
+   face WTEL7002.TTF (Shree-Tel7-002): missing 1 U+FFFD
+   Word/RichEdit draw nothing (C1 81 8D 8F 90 9D 9E, soft hyphen AD): written 
+   RichEdit charset-238 Latin letters (8C 9C 8A 9A 9F 83; Word draws the font's glyph): written U+0152=8C U+0153=9C U+0160=8A U+0161=9A U+0178=9F U+0192=83
+[keys] real TypingEngine, 16 vendor keyboards, layer 0 + Ctrl+Space, every printable key: 3008 positions; Ctrl+Shift+1 256 positions (Unicode = chart 256)
+   7-only code: TextSoft nothing: 37
+   both type nothing: 1316
+   CS1: our policy bytes (Shree 9B 9B): 16
+   CS1: our policy bytes (Shree 9B): 16
+   CS1: our policy bytes (Shree AB A7 E6): 16
+   CS1: our policy bytes (Shree nothing): 144
+   CS1: same bytes as Shree: 64
+   DIFFERENT UNICODE: 37
+   lone-sign key: Unicode differs: 2
+   same after glyph fix (candrabinduB6>97): 17
+   same after glyph fix (visarga40>5D): 17
+   same bytes: 1480
+   same Unicode, other bytes: 87
+   SHREE NOTHING, TEXTSOFT TYPES: 15
+[keys] typing in SHREE-TEL7 != converter(what the keys type in Unicode): 0; in Shree-Tel7-001: 0
+   -- same Unicode, other bytes: 87
+      same Unicode, other bytes	APPLE	!	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+      same Unicode, other bytes	APPLE	$	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+      same Unicode, other bytes	APPLE	%	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+      same Unicode, other bytes	APPLE	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+      same Unicode, other bytes	APPLE	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+      same Unicode, other bytes	CRTRONIC	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+      same Unicode, other bytes	CRTRONIC	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+      same Unicode, other bytes	CRTRONIC	Ctrl+Space c	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+   -- DIFFERENT UNICODE: 37
+      DIFFERENT UNICODE	APPLE	H	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+      DIFFERENT UNICODE	APPLE	[	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+      DIFFERENT UNICODE	CRTRONIC	X	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+      DIFFERENT UNICODE	CRTRONIC	x	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+      DIFFERENT UNICODE	CRTRONIC	Ctrl+Space o	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+      DIFFERENT UNICODE	DOE	w	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+      DIFFERENT UNICODE	DOE	z	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+      DIFFERENT UNICODE	ENG	`	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+   -- SHREE NOTHING, TEXTSOFT TYPES: 15
+      SHREE NOTHING, TEXTSOFT TYPES	APPLE	h	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	CRTRONIC	Ctrl+Space d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	ENG	&	shree U '' [] b7 	ours U '౭' [0C6D] t7 37 t7w 37
+      SHREE NOTHING, TEXTSOFT TYPES	ITR	t	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	ITR	Ctrl+Space 7	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	MICRO	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	MONO	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+      SHREE NOTHING, TEXTSOFT TYPES	NEWROMA	&	shree U '' [] b7 	ours U '౭' [0C6D] t7 37 t7w 37
+   -- lone-sign key: Unicode differs: 2
+      lone-sign key: Unicode differs	NEWROMA	U	shree U 'ూ' [0C42] b7 E6 61 E6 61	ours U 'ఊ' [0C0A] t7 46 t7w 46
+      lone-sign key: Unicode differs	NEWROMA	u	shree U 'ు' [0C41] b7 E6 61 E6 61	ours U 'ఉ' [0C09] t7 45 t7w 45
+[seq] every chart run of the 18 Telugu layouts typed through the real engine: 1710; Unicode = chart 1708; SHREE-TEL7 bytes = converter(chart) 1707; Shree-Tel7-001 1707
+   UNI tel-eng: 2  e.g. UNI	tel-eng	aH	want అః [0C05 0C03]	got ః [0C03]
+   T7 tel-eng: 3  e.g. T7	tel-eng	aH	అః	want 41 5D	got 5D
+   T7W tel-eng: 3  e.g. T7W	tel-eng	aH	అః	want 41 5D	got 5D
+   probe tel-roma 'Rk': Unicode క్ర [0C15 0C4D 0C30] = క్ర; SHREE-TEL7 7B 4D E6 FC; converter(క్ర) 7B 4D E6 FC; malformed: 
+   probe tel-roma 'Rp': Unicode ్రప [0C4D 0C30 0C2A] WANT ప్ర; SHREE-TEL7 7B E7 B3; converter(ప్ర) 7B E7 B3; malformed: virama@0
+   probe tel-roma 'RpcM': Unicode ్రపచం [0C4D 0C30 0C2A 0C1A 0C02] WANT ప్రచం; SHREE-TEL7 7B E7 B3 5E E8 FE 85; converter(ప్రచం) 7B E7 B3 5E E8 FE 85; malformed: virama@0
+   probe tel-typewrit 'mKjk': Unicode చ్రకం [0C1A 0C4D 0C30 0C15 0C02] WANT చక్రం; SHREE-TEL7 7B 5E E8 FE 4D E6 FC 85; converter(చక్రం) 5E E8 FE 7B 4D E6 FC 85; malformed: 
+   probe tel-typewrit 'Kj': Unicode ్రక [0C4D 0C30 0C15] WANT క్ర; SHREE-TEL7 7B 4D E6 FC; converter(క్ర) 7B 4D E6 FC; malformed: virama@0
+   probe tel-doe 'ke<BS>': Unicode క [0C15] = క; SHREE-TEL7 4D E6 FC; converter(క) 4D E6 FC; malformed: 
+   probe tel-doe 'kdj<BS>': Unicode క [0C15] = క; SHREE-TEL7 4D E6 FC; converter(క) 4D E6 FC; malformed: 
+   probe tel-roma 'Rk<BS>': Unicode ్ర [0C4D 0C30] WANT ; SHREE-TEL7 7B; converter() ; malformed: virama@0
+   probe te-inscript 'ks<BS>': Unicode క [0C15] = క; SHREE-TEL7 4D E6 FC; converter(క) 4D E6 FC; malformed: 
+   probe tel-doe 'kdj': Unicode క్ర [0C15 0C4D 0C30] = క్ర; SHREE-TEL7 7B 4D E6 FC; converter(క్ర) 7B 4D E6 FC; malformed: 
+   probe tel-crtronic 'Tw': Unicode క్ర [0C15 0C4D 0C30] = క్ర; SHREE-TEL7 7B 4D E6 FC; converter(క్ర) 7B 4D E6 FC; malformed: 
+   probe tel-micro 'Qe': Unicode క్ర [0C15 0C4D 0C30] = క్ర; SHREE-TEL7 7B 4D E6 FC; converter(క్ర) 7B 4D E6 FC; malformed: 
+   ra-first tel-crtronic (ra key 'T', 19 consonant keys): 38 probes, Unicode right 2, SHREE-TEL7 bytes right 20
+   ra-first tel-godrej (ra key 'Øf', 18 consonant keys): 36 probes, Unicode right 2, SHREE-TEL7 bytes right 19
+   ra-first tel-itr (ra key 'Øg', 12 consonant keys): 24 probes, Unicode right 2, SHREE-TEL7 bytes right 13
+   ra-first tel-micro (ra key 'Q', 28 consonant keys): 56 probes, Unicode right 2, SHREE-TEL7 bytes right 29
+   ra-first tel-modular (ra key '\', 32 consonant keys): 64 probes, Unicode right 2, SHREE-TEL7 bytes right 2
+   ra-first tel-mono (ra key '&', 28 consonant keys): 56 probes, Unicode right 2, SHREE-TEL7 bytes right 29
+   ra-first tel-roma (ra key 'R', 31 consonant keys): 62 probes, Unicode right 2, SHREE-TEL7 bytes right 32
+   ra-first tel-typewrit (ra key 'K', 17 consonant keys): 34 probes, Unicode right 0, SHREE-TEL7 bytes right 17
+[ra-first] ra-vattu struck before its consonant on the 8 layouts whose charts teach it so: 370 probes (each consonant, word-initial and after క); Unicode right 14, malformed Unicode 147; SHREE-TEL7 bytes right 161
+   tel-crtronic	Tj	want గ్ర [0C17 0C4D 0C30] 7B 56 E6 FC	got ్రగ [0C4D 0C30 0C17] 7B 56 E6 FC
+   tel-crtronic	wTj	want కగ్ర [0C15 0C17 0C4D 0C30] 4D E6 FC 7B 56 E6 FC	got క్రగ [0C15 0C4D 0C30 0C17] 7B 4D E6 FC 56 E6 FC
+   tel-crtronic	Tv	want చ్ర [0C1A 0C4D 0C30] 7B 5E E8 FE	got ్రచ [0C4D 0C30 0C1A] 7B 5E E8 FE
+   tel-crtronic	wTv	want కచ్ర [0C15 0C1A 0C4D 0C30] 4D E6 FC 7B 5E E8 FE	got క్రచ [0C15 0C4D 0C30 0C1A] 7B 4D E6 FC 5E E8 FE
+   tel-crtronic	TC	want ఞ్ర [0C1E 0C4D 0C30] 7B 70 FD	got ్రఞ [0C4D 0C30 0C1E] 7B 70 FD
+   tel-crtronic	wTC	want కఞ్ర [0C15 0C1E 0C4D 0C30] 4D E6 FC 7B 70 FD	got క్రఞ [0C15 0C4D 0C30 0C1E] 7B 4D E6 FC 70 FD
+   tel-crtronic	Tg	want ణ్ర [0C23 0C4D 0C30] 7B D7 FD	got ్రణ [0C4D 0C30 0C23] 7B D7 FD
+   tel-crtronic	wTg	want కణ్ర [0C15 0C23 0C4D 0C30] 4D E6 FC 7B D7 FD	got క్రణ [0C15 0C4D 0C30 0C23] 7B 4D E6 FC D7 FD
+   general te-inscript: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+   general tel-apple: 432 probes (chart runs on క moved to 28 other consonants), Unicode right 431, SHREE-TEL7 right 431
+   general tel-applen: 405 probes (chart runs on క moved to 28 other consonants), Unicode right 405, SHREE-TEL7 right 405
+   general tel-crtronic: 288 probes (chart runs on క moved to 19 other consonants), Unicode right 270, SHREE-TEL7 right 270
+   general tel-doe: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 384, SHREE-TEL7 right 384
+   general tel-eng: 192 probes (chart runs on క moved to 33 other consonants), Unicode right 192, SHREE-TEL7 right 192
+   general tel-godrej: 272 probes (chart runs on క moved to 18 other consonants), Unicode right 255, SHREE-TEL7 right 255
+   general tel-indica: 384 probes (chart runs on క moved to 25 other consonants), Unicode right 384, SHREE-TEL7 right 384
+   general tel-itr: 165 probes (chart runs on క moved to 12 other consonants), Unicode right 121, SHREE-TEL7 right 121
+   general tel-micro: 432 probes (chart runs on క moved to 28 other consonants), Unicode right 432, SHREE-TEL7 right 432
+   general tel-modular: 496 probes (chart runs on క moved to 32 other consonants), Unicode right 465, SHREE-TEL7 right 465
+   general tel-mono: 405 probes (chart runs on క moved to 28 other consonants), Unicode right 405, SHREE-TEL7 right 405
+   general tel-newroma: 450 probes (chart runs on క moved to 31 other consonants), Unicode right 360, SHREE-TEL7 right 360
+   general tel-phonetic: 64 probes (chart runs on క moved to 33 other consonants), Unicode right 0, SHREE-TEL7 right 0
+   general tel-prakash: 360 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+   general tel-roma: 420 probes (chart runs on క moved to 31 other consonants), Unicode right 420, SHREE-TEL7 right 420
+   general tel-typewrit: 345 probes (chart runs on క moved to 24 other consonants), Unicode right 322, SHREE-TEL7 right 322
+   general tel-vision: 360 probes (chart runs on క moved to 25 other consonants), Unicode right 360, SHREE-TEL7 right 360
+[general] chart runs on క moved to every other consonant (not ర), all 18 layouts: 6238 probes; Unicode right 5926; SHREE-TEL7 = converter 5926
+   te-inscript: 24 wrong, e.g. bdd	(chart kdd=క్‌)	want వ్‌	got వ [0C35]
+   tel-apple: 1 wrong, e.g. Li	(chart ji=కు)	want ణు	got ణఉ [0C23 0C09]
+   tel-crtronic: 18 wrong, e.g. bØa	(chart wØa=కె)	want బె	got బఎ [0C2C 0C0E]
+   tel-godrej: 17 wrong, e.g. AØe	(chart jØe=కృ)	want ణృ	got ణఋ [0C23 0C0B]
+   tel-itr: 44 wrong, e.g. AØ1	(chart fØ1=కా)	want ఙా	got ఙఆ [0C19 0C06]
+   tel-modular: 31 wrong, e.g. cØx	(chart eØx=కఁ)	want చఁ	got చ [0C1A]
+   tel-newroma: 90 wrong, e.g. bØe	(chart kØe=కై)	want బై	got బఐ [0C2C 0C10]
+   tel-phonetic: 64 wrong, e.g. Dai	(chart kai=కై)	want డై	got డఇ [0C21 0C07]
+   tel-typewrit: 23 wrong, e.g. bØs	(chart jØs=కూ)	want టూ	got టఊ [0C1F 0C0A]
+   half-form keys tel-eng: 28 consonant keys type C్; runs on క moved to the others: 390 probes, right 390; e.g. 
+   half-form keys tel-phonetic: 27 consonant keys type C్; runs on క moved to the others: 325 probes, right 0; e.g. bE=బ్ఏ (want బే), BE=భ్ఏ (want భే), cE=చ్ఏ (want చే), CE=ఛ్ఏ (want ఛే), dE=ద్ఏ (want దే), DE=డ్ఏ (want డే)
+[mix shree-tel7 seed 515] 20000 running texts (syllables + ఽ । ॥ digits punctuation spaces ₹ *): read back exact 10545, same text 19963, wrong 37 (with avagraha 37); malformed added 34; forbidden chars 0
+[mix shree-tel7 seed 8080] 20000 running texts (syllables + ఽ । ॥ digits punctuation spaces ₹ *): read back exact 10692, same text 19967, wrong 33 (with avagraha 33); malformed added 26; forbidden chars 0
+[mix shree-tel7w seed 515] 20000 running texts (syllables + ఽ । ॥ digits punctuation spaces ₹ *): read back exact 11503, same text 19963, wrong 37 (with avagraha 37); malformed added 34; forbidden chars 0
+[mix shree-tel7w seed 8080] 20000 running texts (syllables + ఽ । ॥ digits punctuation spaces ₹ *): read back exact 11574, same text 19968, wrong 32 (with avagraha 32); malformed added 25; forbidden chars 0
+Unhandled exception. System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\round2\tests\FontSoftware.Tests\Data\shree-tel-keys.json'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at Program.KeyClasses() in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\round2\measure\src\Mine.cs:line 17
+   at Program.Main(String[] args) in C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\round2\measure\src\Program.cs:line 66

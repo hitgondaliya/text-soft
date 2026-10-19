@@ -1,0 +1,59 @@
+[
+  {
+    "cp": "U+0081",
+    "kind": "mapped",
+    "gid": 98,
+    "label": "U+017E",
+    "labelOk": false,
+    "emf": "fallback:Cambria",
+    "outs": [
+      {
+        "face": "Cambria",
+        "height": -200,
+        "charset": 0,
+        "glyphIndex": false,
+        "codes": "017E"
+      }
+    ],
+    "advanceUnits": 454,
+    "fontAdvance": 420
+  },
+  {
+    "cp": "U+017E",
+    "kind": "unmapped-punct",
+    "gid": -1,
+    "label": "U+20AC",
+    "labelOk": false,
+    "emf": "fallback:Times New Roman",
+    "outs": [
+      {
+        "face": "Times New Roman",
+        "height": -200,
+        "charset": 0,
+        "glyphIndex": false,
+        "codes": "20AC"
+      }
+    ],
+    "advanceUnits": 494,
+    "fontAdvance": null
+  },
+  {
+    "cp": "U+20AC",
+    "kind": "unmapped-punct",
+    "gid": -1,
+    "label": "U+0081",
+    "labelOk": false,
+    "emf": "shree-font, codes U+0081",
+    "outs": [
+      {
+        "face": "SHREE-GUJ7-0750",
+        "height": -200,
+        "charset": 0,
+        "glyphIndex": false,
+        "codes": "0081"
+      }
+    ],
+    "advanceUnits": 414,
+    "fontAdvance": null
+  }
+]

@@ -1,0 +1,868 @@
+21           code 21                  naive "!"          U "!"            0021 | 7 21 1
+22           code 22                  naive "‘"          U "‘"            2018 | 7 22 1
+23           code 23                  naive "?"          U null           - | 7 null 0
+24           code 24                  naive "ଅ"          U "ଅ"            0B05 | 7 41 1
+25           code 25                  naive "%"          U "%"            0025 | 7 25 1
+26           code 26                  naive "୰"          U "୰"            0B70 | 7 8F 1
+27           code 27                  naive "’"          U "’"            2019 | 7 27 1
+28           code 28                  naive "("          U "("            0028 | 7 28 1
+29           code 29                  naive ")"          U ")"            0029 | 7 29 1
+2A           code 2A                  naive "*"          U "*"            002A | 7 2A 1
+2B           code 2B                  naive "+"          U "+"            002B | 7 null 0
+2C           code 2C                  naive ","          U ","            002C | 7 2C 1
+2D           code 2D                  naive "-"          U "-"            002D | 7 2D 1
+2E           code 2E                  naive "."          U "."            002E | 7 2E 1
+2F           code 2F                  naive "/"          U "/"            002F | 7 2F 1
+30           code 30                  naive "୦"          U "୦"            0B66 | 7 30 1
+31           code 31                  naive "୧"          U "୧"            0B67 | 7 31 1
+32           code 32                  naive "୨"          U "୨"            0B68 | 7 32 1
+33           code 33                  naive "୩"          U "୩"            0B69 | 7 33 1
+34           code 34                  naive "୪"          U "୪"            0B6A | 7 34 1
+35           code 35                  naive "୫"          U "୫"            0B6B | 7 35 1
+36           code 36                  naive "୬"          U "୬"            0B6C | 7 36 1
+37           code 37                  naive "୭"          U "୭"            0B6D | 7 37 1
+38           code 38                  naive "୮"          U "୮"            0B6E | 7 38 1
+39           code 39                  naive "୯"          U "୯"            0B6F | 7 39 1
+3A           code 3A                  naive ":"          U ":"            003A | 7 3A 1
+3B           code 3B                  naive ";"          U ";"            003B | 7 null 0
+3C           code 3C                  naive "ଏ"          U "ଏ"            0B0F | 7 46 1
+3D           code 3D                  naive "="          U "="            003D | 7 null 0
+3E           code 3E                  naive "ଐ"          U "ଐ"            0B10 | 7 47 1
+3F           code 3F                  naive "?"          U "?"            003F | 7 3F 1
+40           code 40                  naive "ର୍"         U " ର୍"          0020 0B30 0B4D | 7 F6 1
+41           code 41                  naive "ଢ଼"          U "ଢ଼"            0B5D | 7 DE 1
+42           code 42                  naive "ଉ"          U "ଉ"            0B09 | 7 44 1
+43           code 43                  naive "ଝ"          U "ଝ"            0B1D | 7 6C 1
+44           code 44                  naive "୍‌"         U " ୍‌"          0020 0B4D 200C | 7 FA 1
+45           code 45                  naive "ଡ଼"          U "ଡ଼"            0B5C | 7 DD 1
+46           code 46                  naive "ଥ"          U "ଥ"            0B25 | 7 24 1
+47           code 47                  naive "ଇ"          U "ଇ"            0B07 | 7 42 1
+48           code 48                  naive "ଈ"          U "ଈ"            0B08 | 7 43 1
+49           code 49                  naive "ଠ"          U "ଠ"            0B20 | 7 76 FF 2
+4A           code 4A                  naive "ଣ"          U "ଣ"            0B23 | 7 7E 1
+4B           code 4B                  naive "ଶ"          U "ଶ"            0B36 | 7 C9 1
+4C           code 4C                  naive "ଷ"          U "ଷ"            0B37 | 7 CC 1
+4D           code 4D                  naive "ଲ"          U "ଲ"            0B32 | 7 E0 FF 2
+4E           code 4E                  naive "ଊ"          U "ଊ"            0B0A | 7 45 1
+4F           code 4F                  naive "ଡ"          U "ଡ"            0B21 | 7 78 FF 2
+50           code 50                  naive "ଢ"          U "ଢ"            0B22 | 7 7C FF 2
+51           code 51                  naive "?"          U null           - | 7 23 1
+52           code 52                  naive "ଧ"          U "ଧ"            0B27 | 7 99 1
+53           code 53                  naive "ଖ"          U "ଖ"            0B16 | 7 51 1
+54           code 54                  naive "ଓ"          U "ଓ"            0B13 | 7 48 1
+55           code 55                  naive "ଟ"          U "ଟ"            0B1F | 7 73 1
+56           code 56                  naive "ଛ"          U "ଛ"            0B1B | 7 64 1
+57           code 57                  naive "ଫ"          U "ଫ"            0B2B | 7 FC FF 2
+58           code 58                  naive "ଘ"          U "ଘ"            0B18 | 7 57 1
+59           code 59                  naive "ଔ"          U "ଔ"            0B14 | 7 49 1
+5A           code 5A                  naive "ଙ"          U "ଙ"            0B19 | 7 59 FF 2
+5B           code 5B                  naive "["          U "["            005B | 7 null 0
+5C           code 5C                  naive "କ୍ଷ"        U "କ୍ଷ"          0B15 0B4D 0B37 | 7 E4 1
+5D           code 5D                  naive "]"          U "]"            005D | 7 null 0
+5E           code 5E                  naive "ଋ"          U "ଋ"            0B0B | 7 4A 1
+5F           code 5F                  naive "ଽ"          U "ଽ"            0B3D | 7 90 1
+60           code 60                  naive "?"          U null           - | 7 null 0
+61           code 61                  naive "ମ"          U "ମ"            0B2E | 7 FE 1
+62           code 62                  naive "ୁ"          U " ୁ"           0020 0B41 | 7 EB 1
+63           code 63                  naive "ଜ"          U "ଜ"            0B1C | 7 66 1
+64           code 64                  naive "୍"          U null           - | 7 null 0
+65           code 65                  naive "ନ"          U "ନ"            0B28 | 7 9C FF 2
+66           code 66                  naive "ତ"          U "ତ"            0B24 | 7 86 FF 2
+67           code 67                  naive "ି"          U " ି"           0020 0B3F | 7 E7 1
+68           code 68                  naive "ୀ"          U "ୀ"            0B40 | 7 EA 1
+69           code 69                  naive "ଂ"          U " ଂ"           0020 0B02 | 7 F3 1
+6A           code 6A                  naive "ର"          U "ର"            0B30 | 7 C0 FF 2
+6B           code 6B                  naive "ା"          U "ା"            0B3E | 7 E6 1
+6C           code 6C                  naive "େ"          U ".େ"           002E 0B47 | 7 7B 1
+6D           code 6D                  naive "ଳ"          U "ଳ"            0B33 | 7 C1 FF 2
+6E           code 6E                  naive "ୂ"          U " ୂ"           0020 0B42 | 7 ED 1
+6F           code 6F                  naive "ହ"          U "ହ"            0B39 | 7 DC FF 2
+70           code 70                  naive "ୖ"          U " ୖ"           0020 0B56 | 7 F0 1
+71           code 71                  naive "ବ"          U "ବ"            0B2C | 7 AF FF 2
+72           code 72                  naive "ଦ"          U "ଦ"            0B26 | 7 92 FF 2
+73           code 73                  naive "କ"          U "କ"            0B15 | 7 4C FF 2
+74           code 74                  naive "ସ"          U "ସ"            0B38 | 7 D3 1
+75           code 75                  naive "ଯ"          U "ଯ"            0B2F | 7 BE 1
+76           code 76                  naive "ଚ"          U "ଚ"            0B1A | 7 60 FF 2
+77           code 77                  naive "ପ"          U "ପ"            0B2A | 7 A8 1
+78           code 78                  naive "ଗ"          U "ଗ"            0B17 | 7 53 1
+79           code 79                  naive "ୗ"          U "ୗ"            0B57 | 7 F2 1
+7A           code 7A                  naive "ଭ"          U "ଭ"            0B2D | 7 B5 FF 2
+7B           code 7B                  naive "—"          U "—"            2014 | 7 null 0
+7C           code 7C                  naive "“"          U "“"            201C | 7 null 0
+7D           code 7D                  naive "–"          U "–"            2013 | 7 null 0
+7E           code 7E                  naive "”"          U "”"            201D | 7 null 0
+7F           code 7F                  naive "?"          U null           - | 7 null 0
+80           code 80                  naive "?"          U null           - | 7 null 0
+81           code 81                  naive "?"          U null           - | 7 null 0
+82           code 82                  naive "?"          U null           - | 7 null 0
+83           code 83                  naive "?"          U null           - | 7 null 0
+84           code 84                  naive "?"          U null           - | 7 null 0
+85           code 85                  naive "?"          U null           - | 7 null 0
+86           code 86                  naive "?"          U null           - | 7 null 0
+87           code 87                  naive "?"          U null           - | 7 null 0
+88           code 88                  naive "?"          U null           - | 7 null 0
+89           code 89                  naive "?"          U null           - | 7 null 0
+8A           code 8A                  naive "?"          U null           - | 7 null 0
+8B           code 8B                  naive "?"          U null           - | 7 null 0
+8C           code 8C                  naive "?"          U null           - | 7 null 0
+8D           code 8D                  naive "?"          U null           - | 7 null 0
+8E           code 8E                  naive "?"          U null           - | 7 null 0
+8F           code 8F                  naive "?"          U null           - | 7 null 0
+A0           code A0                  naive "?"          U null           - | 7 null 0
+A1           code A1                  naive "?"          U null           - | 7 null 0
+A2           code A2                  naive "?"          U null           - | 7 null 0
+A3           code A3                  naive "?"          U null           - | 7 null 0
+A4           code A4                  naive "?"          U null           - | 7 null 0
+A5           code A5                  naive "?"          U null           - | 7 null 0
+A6           code A6                  naive "?"          U null           - | 7 null 0
+A7           code A7                  naive "?"          U null           - | 7 null 0
+A8           code A8                  naive "?"          U null           - | 7 null 0
+A9           code A9                  naive "?"          U null           - | 7 null 0
+AA           code AA                  naive "?"          U null           - | 7 null 0
+AB           code AB                  naive "?"          U null           - | 7 null 0
+AC           code AC                  naive "?"          U null           - | 7 null 0
+AD           code AD                  naive "?"          U null           - | 7 null 0
+AE           code AE                  naive "?"          U null           - | 7 null 0
+AF           code AF                  naive "?"          U null           - | 7 null 0
+D0           code D0                  naive "ୃ"          U " ୃ"           0020 0B43 | 7 F5 1
+D1           code D1                  naive "୍ର"         U " ୍ର"          0020 0B4D 0B30 | 7 F7 1
+D2           code D2                  naive "୍ୟ"         U "୍ୟ"           0B4D 0B5F | 7 BF 1
+D3           code D3                  naive "।"          U "।"            0964 | 7 3E 1
+D4           code D4                  naive "ଃ"          U " ଃ"           0020 0B03 | 7 85 1
+D5           code D5                  naive "୍‍"         U null           - | 7 null 0
+D6           code D6                  naive "ଁ"          U " ଁ"           0020 0B01 | 7 F4 1
+D7           code D7                  naive "ୟ"          U "ୟ"            0B5F | 7 DF 1
+D8           code D8                  naive "ଞ"          U "ଞ"            0B1E | 7 6E FF 2
+D9           code D9                  naive "?"          U null           - | 7 null 0
+DA           code DA                  naive "?"          U null           - | 7 null 0
+DB           code DB                  naive "?"          U null           - | 7 null 0
+DC           code DC                  naive "?"          U null           - | 7 null 0
+DD           code DD                  naive "॥"          U "॥"            0965 | 7 null 0
+DE           code DE                  naive "×"          U "×"            00D7 | 7 null 0
+DF           code DF                  naive "÷"          U "÷"            00F7 | 7 null 0
+E0           code E0                  naive "ଚ଼"         U null           - | 7 E3 1
+E1           code E1                  naive "୍ବ"         U null           - | 7 FD 1
+E2           code E2                  naive "ୠ"          U "ୠ"            0B60 | 7 4B 1
+E3           code E3                  naive "ଌ"          U "ଌ"            0B0C | 7 68 1
+E4           code E4                  naive "ୡ"          U "ୡ"            0B61 | 7 null 0
+E5           code E5                  naive "ୱ"          U "ୱ"            0B71 | 7 null 0
+E6           code E6                  naive "଼"          U " ଼"           0020 0B3C | 7 null 0
+E7           code E7                  naive "ୈ"         U "ୈ"            0B48 | 7 null 0
+E8           code E8                  naive "ୋ"         U "ୋ"            0B4B | 7 null 0
+E9           code E9                  naive "ୌ"         U "ୌ"            0B4C | 7 null 0
+EA           code EA                  naive "ଵ"          U "ଵ"            0B35 | 7 null 0
+EB           code EB                  naive "॑"          U "॑"            0951 | 7 null 0
+EC           code EC                  naive "॓"          U "॓"            0953 | 7 null 0
+ED           code ED                  naive "॒"          U "॒"            0952 | 7 null 0
+EE           code EE                  naive "?"          U null           - | 7 null 0
+EF           code EF                  naive "?"          U null           - | 7 null 0
+F0           code F0                  naive "?"          U null           - | 7 null 0
+F1           code F1                  naive "?"          U null           - | 7 null 0
+F2           code F2                  naive "?"          U null           - | 7 null 0
+F3           code F3                  naive "?"          U null           - | 7 null 0
+F4           code F4                  naive "ଓଁ"         U "ଓଁ"           0B13 0B01 | 7 null 0
+F5           code F5                  naive "₹"          U "₹"            20B9 | 7 3C 1
+F6           code F6                  naive "ୢ"          U "ୢ"            0B62 | 7 null 0
+F7           code F7                  naive "ୣ"          U "ୣ"            0B63 | 7 null 0
+F8           code F8                  naive "ୄ"          U "ୄ"            0B44 | 7 null 0
+F9           code F9                  naive "‍"          U "‍"            200D | 7 null 0
+FA           code FA                  naive "‌"          U "‌"            200C | 7 null 0
+FB           code FB                  naive "?"          U null           - | 7 null 0
+FC           code FC                  naive "?"          U null           - | 7 null 0
+FD           code FD                  naive "?"          U null           - | 7 null 0
+FE           code FE                  naive "?"          U null           - | 7 null 0
+73 21        କ + 21                   naive "କ!"         U "କ!"           0B15 0021 | 7 4C FF 21 3
+73 22        କ + 22                   naive "କ‘"         U "କ‘"           0B15 2018 | 7 4C FF 22 3
+73 23        କ + 23                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 24        କ + 24                   naive "କଅ"         U "କଅ"           0B15 0B05 | 7 4C FF 41 3
+73 25        କ + 25                   naive "କ%"         U "କ%"           0B15 0025 | 7 4C FF 25 3
+73 26        କ + 26                   naive "କ୰"         U "କ୰"           0B15 0B70 | 7 4C FF 8F 3
+73 27        କ + 27                   naive "କ’"         U "କ’"           0B15 2019 | 7 4C FF 27 3
+73 28        କ + 28                   naive "କ("         U "କ("           0B15 0028 | 7 4C FF 28 3
+73 29        କ + 29                   naive "କ)"         U "କ)"           0B15 0029 | 7 4C FF 29 3
+73 2A        କ + 2A                   naive "କ*"         U "କ*"           0B15 002A | 7 4C FF 2A 3
+73 2B        କ + 2B                   naive "କ+"         U "କ+"           0B15 002B | 7 4C FF 2
+73 2C        କ + 2C                   naive "କ,"         U "କ,"           0B15 002C | 7 4C FF 2C 3
+73 2D        କ + 2D                   naive "କ-"         U "କ-"           0B15 002D | 7 4C FF 2D 3
+73 2E        କ + 2E                   naive "କ."         U "କ."           0B15 002E | 7 4C FF 2E 3
+73 2F        କ + 2F                   naive "କ/"         U "କ/"           0B15 002F | 7 4C FF 2F 3
+73 30        କ + 30                   naive "କ୦"         U "କ୦"           0B15 0B66 | 7 4C FF 30 3
+73 31        କ + 31                   naive "କ୧"         U "କ୧"           0B15 0B67 | 7 4C FF 31 3
+73 32        କ + 32                   naive "କ୨"         U "କ୨"           0B15 0B68 | 7 4C FF 32 3
+73 33        କ + 33                   naive "କ୩"         U "କ୩"           0B15 0B69 | 7 4C FF 33 3
+73 34        କ + 34                   naive "କ୪"         U "କ୪"           0B15 0B6A | 7 4C FF 34 3
+73 35        କ + 35                   naive "କ୫"         U "କ୫"           0B15 0B6B | 7 4C FF 35 3
+73 36        କ + 36                   naive "କ୬"         U "କ୬"           0B15 0B6C | 7 4C FF 36 3
+73 37        କ + 37                   naive "କ୭"         U "କ୭"           0B15 0B6D | 7 4C FF 37 3
+73 38        କ + 38                   naive "କ୮"         U "କ୮"           0B15 0B6E | 7 4C FF 38 3
+73 39        କ + 39                   naive "କ୯"         U "କ୯"           0B15 0B6F | 7 4C FF 39 3
+73 3A        କ + 3A                   naive "କ:"         U "କ:"           0B15 003A | 7 4C FF 3A 3
+73 3B        କ + 3B                   naive "କ;"         U "କ;"           0B15 003B | 7 4C FF 2
+73 3C        କ + 3C                   naive "କଏ"         U "କଏ"           0B15 0B0F | 7 4C FF 46 3
+73 3D        କ + 3D                   naive "କ="         U "କ="           0B15 003D | 7 4C FF 2
+73 3E        କ + 3E                   naive "କଐ"         U "କଐ"           0B15 0B10 | 7 4C FF 47 3
+73 3F        କ + 3F                   naive "କ?"         U "କ?"           0B15 003F | 7 4C FF 3F 3
+73 40        କ + 40                   naive "କର୍"        U "ର୍କ"          0B30 0B4D 0B15 | 7 4C FF F6 3
+73 41        କ + 41                   naive "କଢ଼"         U "କଢ଼"           0B15 0B5D | 7 4C FF DE 3
+73 42        କ + 42                   naive "କଉ"         U "କଉ"           0B15 0B09 | 7 4C FF 44 3
+73 43        କ + 43                   naive "କଝ"         U "କଝ"           0B15 0B1D | 7 4C FF 6C 3
+73 44        କ + 44                   naive "କ୍‌"        U "କ୍‌"          0B15 0B4D 200C | 7 4C FF FA 3
+73 45        କ + 45                   naive "କଡ଼"         U "କଡ଼"           0B15 0B5C | 7 4C FF DD 3
+73 46        କ + 46                   naive "କଥ"         U "କଥ"           0B15 0B25 | 7 4C FF 24 3
+73 47        କ + 47                   naive "କଇ"         U "କଇ"           0B15 0B07 | 7 4C FF 42 3
+73 48        କ + 48                   naive "କଈ"         U "କଈ"           0B15 0B08 | 7 4C FF 43 3
+73 49        କ + 49                   naive "କଠ"         U "କଠ"           0B15 0B20 | 7 4C FF 76 FF 4
+73 4A        କ + 4A                   naive "କଣ"         U "କଣ"           0B15 0B23 | 7 4C FF 7E 3
+73 4B        କ + 4B                   naive "କଶ"         U "କଶ"           0B15 0B36 | 7 4C FF C9 3
+73 4C        କ + 4C                   naive "କଷ"         U "କଷ"           0B15 0B37 | 7 4C FF CC 3
+73 4D        କ + 4D                   naive "କଲ"         U "କଲ"           0B15 0B32 | 7 4C FF E0 FF 4
+73 4E        କ + 4E                   naive "କଊ"         U "କଊ"           0B15 0B0A | 7 4C FF 45 3
+73 4F        କ + 4F                   naive "କଡ"         U "କଡ"           0B15 0B21 | 7 4C FF 78 FF 4
+73 50        କ + 50                   naive "କଢ"         U "କଢ"           0B15 0B22 | 7 4C FF 7C FF 4
+73 51        କ + 51                   naive "କ?"         U "ତ୍କ"          0B24 0B4D 0B15 | 7 4C FF 23 3
+73 52        କ + 52                   naive "କଧ"         U "କଧ"           0B15 0B27 | 7 4C FF 99 3
+73 53        କ + 53                   naive "କଖ"         U "କଖ"           0B15 0B16 | 7 4C FF 51 3
+73 54        କ + 54                   naive "କଓ"         U "କଓ"           0B15 0B13 | 7 4C FF 48 3
+73 55        କ + 55                   naive "କଟ"         U "କଟ"           0B15 0B1F | 7 4C FF 73 3
+73 56        କ + 56                   naive "କଛ"         U "କଛ"           0B15 0B1B | 7 4C FF 64 3
+73 57        କ + 57                   naive "କଫ"         U "କଫ"           0B15 0B2B | 7 4C FF FC FF 4
+73 58        କ + 58                   naive "କଘ"         U "କଘ"           0B15 0B18 | 7 4C FF 57 3
+73 59        କ + 59                   naive "କଔ"         U "କଔ"           0B15 0B14 | 7 4C FF 49 3
+73 5A        କ + 5A                   naive "କଙ"         U "କଙ"           0B15 0B19 | 7 4C FF 59 FF 4
+73 5B        କ + 5B                   naive "କ["         U "କ["           0B15 005B | 7 4C FF 2
+73 5C        କ + 5C                   naive "କକ୍ଷ"       U "କକ୍ଷ"         0B15 0B15 0B4D 0B37 | 7 4C FF E4 3
+73 5D        କ + 5D                   naive "କ]"         U "କ]"           0B15 005D | 7 4C FF 2
+73 5E        କ + 5E                   naive "କଋ"         U "କଋ"           0B15 0B0B | 7 4C FF 4A 3
+73 5F        କ + 5F                   naive "କଽ"         U "କଽ"           0B15 0B3D | 7 4C FF 90 3
+73 60        କ + 60                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 61        କ + 61                   naive "କମ"         U "କମ"           0B15 0B2E | 7 4C FF FE 3
+73 62        କ + 62                   naive "କୁ"         U "କୁ"           0B15 0B41 | 7 4C FF EB 3
+73 63        କ + 63                   naive "କଜ"         U "କଜ"           0B15 0B1C | 7 4C FF 66 3
+73 64        କ + 64                   naive "କ୍"         U "କ୍"           0B15 0B4D | 7 4C FF FA 3
+73 65        କ + 65                   naive "କନ"         U "କନ"           0B15 0B28 | 7 4C FF 9C FF 4
+73 66        କ + 66                   naive "କତ"         U "କତ"           0B15 0B24 | 7 4C FF 86 FF 4
+73 67        କ + 67                   naive "କି"         U "କି"           0B15 0B3F | 7 4C FF E7 3
+73 68        କ + 68                   naive "କୀ"         U "କୀ"           0B15 0B40 | 7 4C FF EA 3
+73 69        କ + 69                   naive "କଂ"         U "କଂ"           0B15 0B02 | 7 4C FF F3 3
+73 6A        କ + 6A                   naive "କର"         U "କର"           0B15 0B30 | 7 4C FF C0 FF 4
+73 6B        କ + 6B                   naive "କା"         U "କା"           0B15 0B3E | 7 4C FF E6 3
+73 6C        କ + 6C                   naive "କେ"         U "କ.େ"          0B15 002E 0B47 | 7 4C FF 7B 3
+73 6D        କ + 6D                   naive "କଳ"         U "କଳ"           0B15 0B33 | 7 4C FF C1 FF 4
+73 6E        କ + 6E                   naive "କୂ"         U "କୂ"           0B15 0B42 | 7 4C FF ED 3
+73 6F        କ + 6F                   naive "କହ"         U "କହ"           0B15 0B39 | 7 4C FF DC FF 4
+73 70        କ + 70                   naive "କୖ"         U "କୖ"           0B15 0B56 | 7 4C FF F0 3
+73 71        କ + 71                   naive "କବ"         U "କବ"           0B15 0B2C | 7 4C FF AF FF 4
+73 72        କ + 72                   naive "କଦ"         U "କଦ"           0B15 0B26 | 7 4C FF 92 FF 4
+73 73        କ + 73                   naive "କକ"         U "କକ"           0B15 0B15 | 7 4C FF 4C FF 4
+73 74        କ + 74                   naive "କସ"         U "କସ"           0B15 0B38 | 7 4C FF D3 3
+73 75        କ + 75                   naive "କଯ"         U "କଯ"           0B15 0B2F | 7 4C FF BE 3
+73 76        କ + 76                   naive "କଚ"         U "କଚ"           0B15 0B1A | 7 4C FF 60 FF 4
+73 77        କ + 77                   naive "କପ"         U "କପ"           0B15 0B2A | 7 4C FF A8 3
+73 78        କ + 78                   naive "କଗ"         U "କଗ"           0B15 0B17 | 7 4C FF 53 3
+73 79        କ + 79                   naive "କୗ"         U "କୗ"           0B15 0B57 | 7 4C FF F2 3
+73 7A        କ + 7A                   naive "କଭ"         U "କଭ"           0B15 0B2D | 7 4C FF B5 FF 4
+73 7B        କ + 7B                   naive "କ—"         U "କ—"           0B15 2014 | 7 4C FF 2
+73 7C        କ + 7C                   naive "କ“"         U "କ“"           0B15 201C | 7 4C FF 2
+73 7D        କ + 7D                   naive "କ–"         U "କ–"           0B15 2013 | 7 4C FF 2
+73 7E        କ + 7E                   naive "କ”"         U "କ”"           0B15 201D | 7 4C FF 2
+73 7F        କ + 7F                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 80        କ + 80                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 81        କ + 81                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 82        କ + 82                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 83        କ + 83                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 84        କ + 84                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 85        କ + 85                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 86        କ + 86                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 87        କ + 87                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 88        କ + 88                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 89        କ + 89                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8A        କ + 8A                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8B        କ + 8B                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8C        କ + 8C                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8D        କ + 8D                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8E        କ + 8E                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 8F        କ + 8F                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A0        କ + A0                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A1        କ + A1                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A2        କ + A2                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A3        କ + A3                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A4        କ + A4                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A5        କ + A5                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A6        କ + A6                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A7        କ + A7                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A8        କ + A8                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 A9        କ + A9                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AA        କ + AA                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AB        କ + AB                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AC        କ + AC                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AD        କ + AD                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AE        କ + AE                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 AF        କ + AF                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 D0        କ + D0                   naive "କୃ"         U "କୃ"           0B15 0B43 | 7 4C FF F5 3
+73 D1        କ + D1                   naive "କ୍ର"        U "କ୍ର"          0B15 0B4D 0B30 | 7 4C FF F7 3
+73 D2        କ + D2                   naive "କ୍ୟ"        U "କ୍ୟ"          0B15 0B4D 0B5F | 7 4C FF BF 3
+73 D3        କ + D3                   naive "କ।"         U "କ।"           0B15 0964 | 7 4C FF 3E 3
+73 D4        କ + D4                   naive "କଃ"         U "କଃ"           0B15 0B03 | 7 4C FF 85 3
+73 D5        କ + D5                   naive "କ୍‍"        U "କ୍‍"          0B15 0B4D 200D | 7 4C FF FA 3
+73 D6        କ + D6                   naive "କଁ"         U "କଁ"           0B15 0B01 | 7 4C FF F4 3
+73 D7        କ + D7                   naive "କୟ"         U "କୟ"           0B15 0B5F | 7 4C FF DF 3
+73 D8        କ + D8                   naive "କଞ"         U "କଞ"           0B15 0B1E | 7 4C FF 6E FF 4
+73 D9        କ + D9                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 DA        କ + DA                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 DB        କ + DB                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 DC        କ + DC                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 DD        କ + DD                   naive "କ॥"         U "କ॥"           0B15 0965 | 7 4C FF 2
+73 DE        କ + DE                   naive "କ×"         U "କ×"           0B15 00D7 | 7 4C FF 2
+73 DF        କ + DF                   naive "କ÷"         U "କ÷"           0B15 00F7 | 7 4C FF 2
+73 E0        କ + E0                   naive "କଚ଼"        U "କ"            0B15 | 7 4C FF E3 3
+73 E1        କ + E1                   naive "କ୍ବ"        U "କ"            0B15 | 7 4C FF FD 3
+73 E2        କ + E2                   naive "କୠ"         U "କୠ"           0B15 0B60 | 7 4C FF 4B 3
+73 E3        କ + E3                   naive "କଌ"         U "କଌ"           0B15 0B0C | 7 4C FF 68 3
+73 E4        କ + E4                   naive "କୡ"         U "କୡ"           0B15 0B61 | 7 4C FF 2
+73 E5        କ + E5                   naive "କୱ"         U "କୱ"           0B15 0B71 | 7 4C FF 2
+73 E6        କ + E6                   naive "କ଼"         U "କ଼"           0B15 0B3C | 7 4C FF 2
+73 E7        କ + E7                   naive "କୈ"        U "କୈ"           0B15 0B48 | 7 4C FF 2
+73 E8        କ + E8                   naive "କୋ"        U "କୋ"           0B15 0B4B | 7 4C FF 2
+73 E9        କ + E9                   naive "କୌ"        U "କୌ"           0B15 0B4C | 7 4C FF 2
+73 EA        କ + EA                   naive "କଵ"         U "କଵ"           0B15 0B35 | 7 4C FF 2
+73 EB        କ + EB                   naive "କ॑"         U "କ॑"           0B15 0951 | 7 4C FF 2
+73 EC        କ + EC                   naive "କ॓"         U "କ॓"           0B15 0953 | 7 4C FF 2
+73 ED        କ + ED                   naive "କ॒"         U "କ॒"           0B15 0952 | 7 4C FF 2
+73 EE        କ + EE                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 EF        କ + EF                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 F0        କ + F0                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 F1        କ + F1                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 F2        କ + F2                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 F3        କ + F3                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 F4        କ + F4                   naive "କଓଁ"        U "କଓଁ"          0B15 0B13 0B01 | 7 4C FF 2
+73 F5        କ + F5                   naive "କ₹"         U "କ₹"           0B15 20B9 | 7 4C FF 3C 3
+73 F6        କ + F6                   naive "କୢ"         U "କୢ"           0B15 0B62 | 7 4C FF 2
+73 F7        କ + F7                   naive "କୣ"         U "କୣ"           0B15 0B63 | 7 4C FF 2
+73 F8        କ + F8                   naive "କୄ"         U "କୄ"           0B15 0B44 | 7 4C FF 2
+73 F9        କ + F9                   naive "କ‍"         U "କ‍"           0B15 200D | 7 4C FF 2
+73 FA        କ + FA                   naive "କ‌"         U "କ‌"           0B15 200C | 7 4C FF 2
+73 FB        କ + FB                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 FC        କ + FC                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 FD        କ + FD                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+73 FE        କ + FE                   naive "କ?"         U "କ"            0B15 | 7 4C FF 2
+21 73        21 + କ                   naive "!କ"         U "!କ"           0021 0B15 | 7 21 4C FF 3
+22 73        22 + କ                   naive "‘କ"         U "‘କ"           2018 0B15 | 7 22 4C FF 3
+23 73        23 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+24 73        24 + କ                   naive "ଅକ"         U "ଅକ"           0B05 0B15 | 7 41 4C FF 3
+25 73        25 + କ                   naive "%କ"         U "%କ"           0025 0B15 | 7 25 4C FF 3
+26 73        26 + କ                   naive "୰କ"         U "୰କ"           0B70 0B15 | 7 8F 4C FF 3
+27 73        27 + କ                   naive "’କ"         U "’କ"           2019 0B15 | 7 27 4C FF 3
+28 73        28 + କ                   naive "(କ"         U "(କ"           0028 0B15 | 7 28 4C FF 3
+29 73        29 + କ                   naive ")କ"         U ")କ"           0029 0B15 | 7 29 4C FF 3
+2A 73        2A + କ                   naive "*କ"         U "*କ"           002A 0B15 | 7 2A 4C FF 3
+2B 73        2B + କ                   naive "+କ"         U "+କ"           002B 0B15 | 7 4C FF 2
+2C 73        2C + କ                   naive ",କ"         U ",କ"           002C 0B15 | 7 2C 4C FF 3
+2D 73        2D + କ                   naive "-କ"         U "-କ"           002D 0B15 | 7 2D 4C FF 3
+2E 73        2E + କ                   naive ".କ"         U ".କ"           002E 0B15 | 7 2E 4C FF 3
+2F 73        2F + କ                   naive "/କ"         U "/କ"           002F 0B15 | 7 2F 4C FF 3
+30 73        30 + କ                   naive "୦କ"         U "୦କ"           0B66 0B15 | 7 30 4C FF 3
+31 73        31 + କ                   naive "୧କ"         U "୧କ"           0B67 0B15 | 7 31 4C FF 3
+32 73        32 + କ                   naive "୨କ"         U "୨କ"           0B68 0B15 | 7 32 4C FF 3
+33 73        33 + କ                   naive "୩କ"         U "୩କ"           0B69 0B15 | 7 33 4C FF 3
+34 73        34 + କ                   naive "୪କ"         U "୪କ"           0B6A 0B15 | 7 34 4C FF 3
+35 73        35 + କ                   naive "୫କ"         U "୫କ"           0B6B 0B15 | 7 35 4C FF 3
+36 73        36 + କ                   naive "୬କ"         U "୬କ"           0B6C 0B15 | 7 36 4C FF 3
+37 73        37 + କ                   naive "୭କ"         U "୭କ"           0B6D 0B15 | 7 37 4C FF 3
+38 73        38 + କ                   naive "୮କ"         U "୮କ"           0B6E 0B15 | 7 38 4C FF 3
+39 73        39 + କ                   naive "୯କ"         U "୯କ"           0B6F 0B15 | 7 39 4C FF 3
+3A 73        3A + କ                   naive ":କ"         U ":କ"           003A 0B15 | 7 3A 4C FF 3
+3B 73        3B + କ                   naive ";କ"         U ";କ"           003B 0B15 | 7 4C FF 2
+3C 73        3C + କ                   naive "ଏକ"         U "ଏକ"           0B0F 0B15 | 7 46 4C FF 3
+3D 73        3D + କ                   naive "=କ"         U "=କ"           003D 0B15 | 7 4C FF 2
+3E 73        3E + କ                   naive "ଐକ"         U "ଐକ"           0B10 0B15 | 7 47 4C FF 3
+3F 73        3F + କ                   naive "?କ"         U "?କ"           003F 0B15 | 7 3F 4C FF 3
+40 73        40 + କ                   naive "ର୍କ"        U " ର୍କ"         0020 0B30 0B4D 0B15 | 7 F6 4C FF 3
+41 73        41 + କ                   naive "ଢ଼କ"         U "ଢ଼କ"           0B5D 0B15 | 7 DE 4C FF 3
+42 73        42 + କ                   naive "ଉକ"         U "ଉକ"           0B09 0B15 | 7 44 4C FF 3
+43 73        43 + କ                   naive "ଝକ"         U "ଝକ"           0B1D 0B15 | 7 6C 4C FF 3
+44 73        44 + କ                   naive "୍‌କ"        U " ୍‌କ"         0020 0B4D 200C 0B15 | 7 FA 4C FF 3
+45 73        45 + କ                   naive "ଡ଼କ"         U "ଡ଼କ"           0B5C 0B15 | 7 DD 4C FF 3
+46 73        46 + କ                   naive "ଥକ"         U "ଥକ"           0B25 0B15 | 7 24 4C FF 3
+47 73        47 + କ                   naive "ଇକ"         U "ଇକ"           0B07 0B15 | 7 42 4C FF 3
+48 73        48 + କ                   naive "ଈକ"         U "ଈକ"           0B08 0B15 | 7 43 4C FF 3
+49 73        49 + କ                   naive "ଠକ"         U "ଠକ"           0B20 0B15 | 7 76 FF 4C FF 4
+4A 73        4A + କ                   naive "ଣକ"         U "ଣକ"           0B23 0B15 | 7 7E 4C FF 3
+4B 73        4B + କ                   naive "ଶକ"         U "ଶକ"           0B36 0B15 | 7 C9 4C FF 3
+4C 73        4C + କ                   naive "ଷକ"         U "ଷକ"           0B37 0B15 | 7 CC 4C FF 3
+4D 73        4D + କ                   naive "ଲକ"         U "ଲକ"           0B32 0B15 | 7 E0 FF 4C FF 4
+4E 73        4E + କ                   naive "ଊକ"         U "ଊକ"           0B0A 0B15 | 7 45 4C FF 3
+4F 73        4F + କ                   naive "ଡକ"         U "ଡକ"           0B21 0B15 | 7 78 FF 4C FF 4
+50 73        50 + କ                   naive "ଢକ"         U "ଢକ"           0B22 0B15 | 7 7C FF 4C FF 4
+51 73        51 + କ                   naive "?କ"         U " କ"           0020 0B15 | 7 23 4C FF 3
+52 73        52 + କ                   naive "ଧକ"         U "ଧକ"           0B27 0B15 | 7 99 4C FF 3
+53 73        53 + କ                   naive "ଖକ"         U "ଖକ"           0B16 0B15 | 7 51 4C FF 3
+54 73        54 + କ                   naive "ଓକ"         U "ଓକ"           0B13 0B15 | 7 48 4C FF 3
+55 73        55 + କ                   naive "ଟକ"         U "ଟକ"           0B1F 0B15 | 7 73 4C FF 3
+56 73        56 + କ                   naive "ଛକ"         U "ଛକ"           0B1B 0B15 | 7 64 4C FF 3
+57 73        57 + କ                   naive "ଫକ"         U "ଫକ"           0B2B 0B15 | 7 FC FF 4C FF 4
+58 73        58 + କ                   naive "ଘକ"         U "ଘକ"           0B18 0B15 | 7 57 4C FF 3
+59 73        59 + କ                   naive "ଔକ"         U "ଔକ"           0B14 0B15 | 7 49 4C FF 3
+5A 73        5A + କ                   naive "ଙକ"         U "ଙକ"           0B19 0B15 | 7 59 FF 4C FF 4
+5B 73        5B + କ                   naive "[କ"         U "[କ"           005B 0B15 | 7 4C FF 2
+5C 73        5C + କ                   naive "କ୍ଷକ"       U "କ୍ଷକ"         0B15 0B4D 0B37 0B15 | 7 E4 4C FF 3
+5D 73        5D + କ                   naive "]କ"         U "]କ"           005D 0B15 | 7 4C FF 2
+5E 73        5E + କ                   naive "ଋକ"         U "ଋକ"           0B0B 0B15 | 7 4A 4C FF 3
+5F 73        5F + କ                   naive "ଽକ"         U "ଽକ"           0B3D 0B15 | 7 90 4C FF 3
+60 73        60 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+61 73        61 + କ                   naive "ମକ"         U "ମକ"           0B2E 0B15 | 7 FE 4C FF 3
+62 73        62 + କ                   naive "ୁକ"         U " ୁକ"          0020 0B41 0B15 | 7 EB 4C FF 3
+63 73        63 + କ                   naive "ଜକ"         U "ଜକ"           0B1C 0B15 | 7 66 4C FF 3
+64 73        64 + କ                   naive "୍କ"         U "କ"            0B15 | 7 4C FF 2
+65 73        65 + କ                   naive "ନକ"         U "ନକ"           0B28 0B15 | 7 9C FF 4C FF 4
+66 73        66 + କ                   naive "ତକ"         U "ତକ"           0B24 0B15 | 7 86 FF 4C FF 4
+67 73        67 + କ                   naive "ିକ"         U " ିକ"          0020 0B3F 0B15 | 7 E7 4C FF 3
+68 73        68 + କ                   naive "ୀକ"         U "ୀକ"           0B40 0B15 | 7 EA 4C FF 3
+69 73        69 + କ                   naive "ଂକ"         U " ଂକ"          0020 0B02 0B15 | 7 F3 4C FF 3
+6A 73        6A + କ                   naive "ରକ"         U "ରକ"           0B30 0B15 | 7 C0 FF 4C FF 4
+6B 73        6B + କ                   naive "ାକ"         U "ାକ"           0B3E 0B15 | 7 E6 4C FF 3
+6C 73        6C + କ                   naive "େକ"         U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6D 73        6D + କ                   naive "ଳକ"         U "ଳକ"           0B33 0B15 | 7 C1 FF 4C FF 4
+6E 73        6E + କ                   naive "ୂକ"         U " ୂକ"          0020 0B42 0B15 | 7 ED 4C FF 3
+6F 73        6F + କ                   naive "ହକ"         U "ହକ"           0B39 0B15 | 7 DC FF 4C FF 4
+70 73        70 + କ                   naive "ୖକ"         U " ୖକ"          0020 0B56 0B15 | 7 F0 4C FF 3
+71 73        71 + କ                   naive "ବକ"         U "ବକ"           0B2C 0B15 | 7 AF FF 4C FF 4
+72 73        72 + କ                   naive "ଦକ"         U "ଦକ"           0B26 0B15 | 7 92 FF 4C FF 4
+74 73        74 + କ                   naive "ସକ"         U "ସକ"           0B38 0B15 | 7 D3 4C FF 3
+75 73        75 + କ                   naive "ଯକ"         U "ଯକ"           0B2F 0B15 | 7 BE 4C FF 3
+76 73        76 + କ                   naive "ଚକ"         U "ଚକ"           0B1A 0B15 | 7 60 FF 4C FF 4
+77 73        77 + କ                   naive "ପକ"         U "ପକ"           0B2A 0B15 | 7 A8 4C FF 3
+78 73        78 + କ                   naive "ଗକ"         U "ଗକ"           0B17 0B15 | 7 53 4C FF 3
+79 73        79 + କ                   naive "ୗକ"         U "ୗକ"           0B57 0B15 | 7 F2 4C FF 3
+7A 73        7A + କ                   naive "ଭକ"         U "ଭକ"           0B2D 0B15 | 7 B5 FF 4C FF 4
+7B 73        7B + କ                   naive "—କ"         U "—କ"           2014 0B15 | 7 4C FF 2
+7C 73        7C + କ                   naive "“କ"         U "“କ"           201C 0B15 | 7 4C FF 2
+7D 73        7D + କ                   naive "–କ"         U "–କ"           2013 0B15 | 7 4C FF 2
+7E 73        7E + କ                   naive "”କ"         U "”କ"           201D 0B15 | 7 4C FF 2
+7F 73        7F + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+80 73        80 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+81 73        81 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+82 73        82 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+83 73        83 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+84 73        84 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+85 73        85 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+86 73        86 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+87 73        87 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+88 73        88 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+89 73        89 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8A 73        8A + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8B 73        8B + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8C 73        8C + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8D 73        8D + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8E 73        8E + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+8F 73        8F + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A0 73        A0 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A1 73        A1 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A2 73        A2 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A3 73        A3 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A4 73        A4 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A5 73        A5 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A6 73        A6 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A7 73        A7 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A8 73        A8 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+A9 73        A9 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AA 73        AA + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AB 73        AB + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AC 73        AC + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AD 73        AD + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AE 73        AE + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+AF 73        AF + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+D0 73        D0 + କ                   naive "ୃକ"         U " ୃକ"          0020 0B43 0B15 | 7 F5 4C FF 3
+D1 73        D1 + କ                   naive "୍ରକ"        U " ୍ରକ"         0020 0B4D 0B30 0B15 | 7 F7 4C FF 3
+D2 73        D2 + କ                   naive "୍ୟକ"        U "୍ୟକ"          0B4D 0B5F 0B15 | 7 BF 4C FF 3
+D3 73        D3 + କ                   naive "।କ"         U "।କ"           0964 0B15 | 7 3E 4C FF 3
+D4 73        D4 + କ                   naive "ଃକ"         U " ଃକ"          0020 0B03 0B15 | 7 85 4C FF 3
+D5 73        D5 + କ                   naive "୍‍କ"        U "କ"            0B15 | 7 4C FF 2
+D6 73        D6 + କ                   naive "ଁକ"         U " ଁକ"          0020 0B01 0B15 | 7 F4 4C FF 3
+D7 73        D7 + କ                   naive "ୟକ"         U "ୟକ"           0B5F 0B15 | 7 DF 4C FF 3
+D8 73        D8 + କ                   naive "ଞକ"         U "ଞକ"           0B1E 0B15 | 7 6E FF 4C FF 4
+D9 73        D9 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+DA 73        DA + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+DB 73        DB + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+DC 73        DC + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+DD 73        DD + କ                   naive "॥କ"         U "॥କ"           0965 0B15 | 7 4C FF 2
+DE 73        DE + କ                   naive "×କ"         U "×କ"           00D7 0B15 | 7 4C FF 2
+DF 73        DF + କ                   naive "÷କ"         U "÷କ"           00F7 0B15 | 7 4C FF 2
+E0 73        E0 + କ                   naive "ଚ଼କ"        U "କ"            0B15 | 7 E3 4C FF 3
+E1 73        E1 + କ                   naive "୍ବକ"        U " କ"           0020 0B15 | 7 FD 4C FF 3
+E2 73        E2 + କ                   naive "ୠକ"         U "ୠକ"           0B60 0B15 | 7 4B 4C FF 3
+E3 73        E3 + କ                   naive "ଌକ"         U "ଌକ"           0B0C 0B15 | 7 68 4C FF 3
+E4 73        E4 + କ                   naive "ୡକ"         U "ୡକ"           0B61 0B15 | 7 4C FF 2
+E5 73        E5 + କ                   naive "ୱକ"         U "ୱକ"           0B71 0B15 | 7 4C FF 2
+E6 73        E6 + କ                   naive "଼କ"         U " ଼କ"          0020 0B3C 0B15 | 7 4C FF 2
+E7 73        E7 + କ                   naive "ୈକ"        U "ୈକ"           0B48 0B15 | 7 4C FF 2
+E8 73        E8 + କ                   naive "ୋକ"        U "ୋକ"           0B4B 0B15 | 7 4C FF 2
+E9 73        E9 + କ                   naive "ୌକ"        U "ୌକ"           0B4C 0B15 | 7 4C FF 2
+EA 73        EA + କ                   naive "ଵକ"         U "ଵକ"           0B35 0B15 | 7 4C FF 2
+EB 73        EB + କ                   naive "॑କ"         U "॑କ"           0951 0B15 | 7 4C FF 2
+EC 73        EC + କ                   naive "॓କ"         U "॓କ"           0953 0B15 | 7 4C FF 2
+ED 73        ED + କ                   naive "॒କ"         U "॒କ"           0952 0B15 | 7 4C FF 2
+EE 73        EE + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+EF 73        EF + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+F0 73        F0 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+F1 73        F1 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+F2 73        F2 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+F3 73        F3 + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+F4 73        F4 + କ                   naive "ଓଁକ"        U "ଓଁକ"          0B13 0B01 0B15 | 7 4C FF 2
+F5 73        F5 + କ                   naive "₹କ"         U "₹କ"           20B9 0B15 | 7 3C 4C FF 3
+F6 73        F6 + କ                   naive "ୢକ"         U "ୢକ"           0B62 0B15 | 7 4C FF 2
+F7 73        F7 + କ                   naive "ୣକ"         U "ୣକ"           0B63 0B15 | 7 4C FF 2
+F8 73        F8 + କ                   naive "ୄକ"         U "ୄକ"           0B44 0B15 | 7 4C FF 2
+F9 73        F9 + କ                   naive "‍କ"         U "‍କ"           200D 0B15 | 7 4C FF 2
+FA 73        FA + କ                   naive "‌କ"         U "‌କ"           200C 0B15 | 7 4C FF 2
+FB 73        FB + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+FC 73        FC + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+FD 73        FD + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+FE 73        FE + କ                   naive "?କ"         U "କ"            0B15 | 7 4C FF 2
+77 21        ପ + 21                   naive "ପ!"         U "ପ!"           0B2A 0021 | 7 A8 21 2
+77 22        ପ + 22                   naive "ପ‘"         U "ପ‘"           0B2A 2018 | 7 A8 22 2
+77 23        ପ + 23                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 24        ପ + 24                   naive "ପଅ"         U "ପଅ"           0B2A 0B05 | 7 A8 41 2
+77 25        ପ + 25                   naive "ପ%"         U "ପ%"           0B2A 0025 | 7 A8 25 2
+77 26        ପ + 26                   naive "ପ୰"         U "ପ୰"           0B2A 0B70 | 7 A8 8F 2
+77 27        ପ + 27                   naive "ପ’"         U "ପ’"           0B2A 2019 | 7 A8 27 2
+77 28        ପ + 28                   naive "ପ("         U "ପ("           0B2A 0028 | 7 A8 28 2
+77 29        ପ + 29                   naive "ପ)"         U "ପ)"           0B2A 0029 | 7 A8 29 2
+77 2A        ପ + 2A                   naive "ପ*"         U "ପ*"           0B2A 002A | 7 A8 2A 2
+77 2B        ପ + 2B                   naive "ପ+"         U "ପ+"           0B2A 002B | 7 A8 1
+77 2C        ପ + 2C                   naive "ପ,"         U "ପ,"           0B2A 002C | 7 A8 2C 2
+77 2D        ପ + 2D                   naive "ପ-"         U "ପ-"           0B2A 002D | 7 A8 2D 2
+77 2E        ପ + 2E                   naive "ପ."         U "ପ."           0B2A 002E | 7 A8 2E 2
+77 2F        ପ + 2F                   naive "ପ/"         U "ପ/"           0B2A 002F | 7 A8 2F 2
+77 30        ପ + 30                   naive "ପ୦"         U "ପ୦"           0B2A 0B66 | 7 A8 30 2
+77 31        ପ + 31                   naive "ପ୧"         U "ପ୧"           0B2A 0B67 | 7 A8 31 2
+77 32        ପ + 32                   naive "ପ୨"         U "ପ୨"           0B2A 0B68 | 7 A8 32 2
+77 33        ପ + 33                   naive "ପ୩"         U "ପ୩"           0B2A 0B69 | 7 A8 33 2
+77 34        ପ + 34                   naive "ପ୪"         U "ପ୪"           0B2A 0B6A | 7 A8 34 2
+77 35        ପ + 35                   naive "ପ୫"         U "ପ୫"           0B2A 0B6B | 7 A8 35 2
+77 36        ପ + 36                   naive "ପ୬"         U "ପ୬"           0B2A 0B6C | 7 A8 36 2
+77 37        ପ + 37                   naive "ପ୭"         U "ପ୭"           0B2A 0B6D | 7 A8 37 2
+77 38        ପ + 38                   naive "ପ୮"         U "ପ୮"           0B2A 0B6E | 7 A8 38 2
+77 39        ପ + 39                   naive "ପ୯"         U "ପ୯"           0B2A 0B6F | 7 A8 39 2
+77 3A        ପ + 3A                   naive "ପ:"         U "ପ:"           0B2A 003A | 7 A8 3A 2
+77 3B        ପ + 3B                   naive "ପ;"         U "ପ;"           0B2A 003B | 7 A8 1
+77 3C        ପ + 3C                   naive "ପଏ"         U "ପଏ"           0B2A 0B0F | 7 A8 46 2
+77 3D        ପ + 3D                   naive "ପ="         U "ପ="           0B2A 003D | 7 A8 1
+77 3E        ପ + 3E                   naive "ପଐ"         U "ପଐ"           0B2A 0B10 | 7 A8 47 2
+77 3F        ପ + 3F                   naive "ପ?"         U "ପ?"           0B2A 003F | 7 A8 3F 2
+77 40        ପ + 40                   naive "ପର୍"        U "ର୍ପ"          0B30 0B4D 0B2A | 7 A8 F6 2
+77 41        ପ + 41                   naive "ପଢ଼"         U "ପଢ଼"           0B2A 0B5D | 7 A8 DE 2
+77 42        ପ + 42                   naive "ପଉ"         U "ପଉ"           0B2A 0B09 | 7 A8 44 2
+77 43        ପ + 43                   naive "ପଝ"         U "ପଝ"           0B2A 0B1D | 7 A8 6C 2
+77 44        ପ + 44                   naive "ପ୍‌"        U "ପ୍‌"          0B2A 0B4D 200C | 7 A8 FA 2
+77 45        ପ + 45                   naive "ପଡ଼"         U "ପଡ଼"           0B2A 0B5C | 7 A8 DD 2
+77 46        ପ + 46                   naive "ପଥ"         U "ପଥ"           0B2A 0B25 | 7 A8 24 2
+77 47        ପ + 47                   naive "ପଇ"         U "ପଇ"           0B2A 0B07 | 7 A8 42 2
+77 48        ପ + 48                   naive "ପଈ"         U "ପଈ"           0B2A 0B08 | 7 A8 43 2
+77 49        ପ + 49                   naive "ପଠ"         U "ପଠ"           0B2A 0B20 | 7 A8 76 FF 3
+77 4A        ପ + 4A                   naive "ପଣ"         U "ପଣ"           0B2A 0B23 | 7 A8 7E 2
+77 4B        ପ + 4B                   naive "ପଶ"         U "ପଶ"           0B2A 0B36 | 7 A8 C9 2
+77 4C        ପ + 4C                   naive "ପଷ"         U "ପଷ"           0B2A 0B37 | 7 A8 CC 2
+77 4D        ପ + 4D                   naive "ପଲ"         U "ପଲ"           0B2A 0B32 | 7 A8 E0 FF 3
+77 4E        ପ + 4E                   naive "ପଊ"         U "ପଊ"           0B2A 0B0A | 7 A8 45 2
+77 4F        ପ + 4F                   naive "ପଡ"         U "ପଡ"           0B2A 0B21 | 7 A8 78 FF 3
+77 50        ପ + 50                   naive "ପଢ"         U "ପଢ"           0B2A 0B22 | 7 A8 7C FF 3
+77 51        ପ + 51                   naive "ପ?"         U "ତ୍ପ"          0B24 0B4D 0B2A | 7 A8 23 2
+77 52        ପ + 52                   naive "ପଧ"         U "ପଧ"           0B2A 0B27 | 7 A8 99 2
+77 53        ପ + 53                   naive "ପଖ"         U "ପଖ"           0B2A 0B16 | 7 A8 51 2
+77 54        ପ + 54                   naive "ପଓ"         U "ପଓ"           0B2A 0B13 | 7 A8 48 2
+77 55        ପ + 55                   naive "ପଟ"         U "ପଟ"           0B2A 0B1F | 7 A8 73 2
+77 56        ପ + 56                   naive "ପଛ"         U "ପଛ"           0B2A 0B1B | 7 A8 64 2
+77 57        ପ + 57                   naive "ପଫ"         U "ପଫ"           0B2A 0B2B | 7 A8 FC FF 3
+77 58        ପ + 58                   naive "ପଘ"         U "ପଘ"           0B2A 0B18 | 7 A8 57 2
+77 59        ପ + 59                   naive "ପଔ"         U "ପଔ"           0B2A 0B14 | 7 A8 49 2
+77 5A        ପ + 5A                   naive "ପଙ"         U "ପଙ"           0B2A 0B19 | 7 A8 59 FF 3
+77 5B        ପ + 5B                   naive "ପ["         U "ପ["           0B2A 005B | 7 A8 1
+77 5C        ପ + 5C                   naive "ପକ୍ଷ"       U "ପକ୍ଷ"         0B2A 0B15 0B4D 0B37 | 7 A8 E4 2
+77 5D        ପ + 5D                   naive "ପ]"         U "ପ]"           0B2A 005D | 7 A8 1
+77 5E        ପ + 5E                   naive "ପଋ"         U "ପଋ"           0B2A 0B0B | 7 A8 4A 2
+77 5F        ପ + 5F                   naive "ପଽ"         U "ପଽ"           0B2A 0B3D | 7 A8 90 2
+77 60        ପ + 60                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 61        ପ + 61                   naive "ପମ"         U "ପମ"           0B2A 0B2E | 7 A8 FE 2
+77 62        ପ + 62                   naive "ପୁ"         U "ପୁ"           0B2A 0B41 | 7 A8 EB 2
+77 63        ପ + 63                   naive "ପଜ"         U "ପଜ"           0B2A 0B1C | 7 A8 66 2
+77 64        ପ + 64                   naive "ପ୍"         U "ପ୍"           0B2A 0B4D | 7 A8 FA 2
+77 65        ପ + 65                   naive "ପନ"         U "ପନ"           0B2A 0B28 | 7 A8 9C FF 3
+77 66        ପ + 66                   naive "ପତ"         U "ପତ"           0B2A 0B24 | 7 A8 86 FF 3
+77 67        ପ + 67                   naive "ପି"         U "ପି"           0B2A 0B3F | 7 A8 E7 2
+77 68        ପ + 68                   naive "ପୀ"         U "ପୀ"           0B2A 0B40 | 7 A8 EA 2
+77 69        ପ + 69                   naive "ପଂ"         U "ପଂ"           0B2A 0B02 | 7 A8 F3 2
+77 6A        ପ + 6A                   naive "ପର"         U "ପର"           0B2A 0B30 | 7 A8 C0 FF 3
+77 6B        ପ + 6B                   naive "ପା"         U "ପା"           0B2A 0B3E | 7 A8 E6 2
+77 6C        ପ + 6C                   naive "ପେ"         U "ପ.େ"          0B2A 002E 0B47 | 7 A8 7B 2
+77 6D        ପ + 6D                   naive "ପଳ"         U "ପଳ"           0B2A 0B33 | 7 A8 C1 FF 3
+77 6E        ପ + 6E                   naive "ପୂ"         U "ପୂ"           0B2A 0B42 | 7 A8 ED 2
+77 6F        ପ + 6F                   naive "ପହ"         U "ପହ"           0B2A 0B39 | 7 A8 DC FF 3
+77 70        ପ + 70                   naive "ପୖ"         U "ପୖ"           0B2A 0B56 | 7 A8 F0 2
+77 71        ପ + 71                   naive "ପବ"         U "ପବ"           0B2A 0B2C | 7 A8 AF FF 3
+77 72        ପ + 72                   naive "ପଦ"         U "ପଦ"           0B2A 0B26 | 7 A8 92 FF 3
+77 74        ପ + 74                   naive "ପସ"         U "ପସ"           0B2A 0B38 | 7 A8 D3 2
+77 75        ପ + 75                   naive "ପଯ"         U "ପଯ"           0B2A 0B2F | 7 A8 BE 2
+77 76        ପ + 76                   naive "ପଚ"         U "ପଚ"           0B2A 0B1A | 7 A8 60 FF 3
+77 77        ପ + 77                   naive "ପପ"         U "ପପ"           0B2A 0B2A | 7 A8 A8 2
+77 78        ପ + 78                   naive "ପଗ"         U "ପଗ"           0B2A 0B17 | 7 A8 53 2
+77 79        ପ + 79                   naive "ପୗ"         U "ପୗ"           0B2A 0B57 | 7 A8 F2 2
+77 7A        ପ + 7A                   naive "ପଭ"         U "ପଭ"           0B2A 0B2D | 7 A8 B5 FF 3
+77 7B        ପ + 7B                   naive "ପ—"         U "ପ—"           0B2A 2014 | 7 A8 1
+77 7C        ପ + 7C                   naive "ପ“"         U "ପ“"           0B2A 201C | 7 A8 1
+77 7D        ପ + 7D                   naive "ପ–"         U "ପ–"           0B2A 2013 | 7 A8 1
+77 7E        ପ + 7E                   naive "ପ”"         U "ପ”"           0B2A 201D | 7 A8 1
+77 7F        ପ + 7F                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 80        ପ + 80                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 81        ପ + 81                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 82        ପ + 82                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 83        ପ + 83                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 84        ପ + 84                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 85        ପ + 85                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 86        ପ + 86                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 87        ପ + 87                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 88        ପ + 88                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 89        ପ + 89                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8A        ପ + 8A                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8B        ପ + 8B                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8C        ପ + 8C                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8D        ପ + 8D                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8E        ପ + 8E                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 8F        ପ + 8F                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A0        ପ + A0                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A1        ପ + A1                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A2        ପ + A2                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A3        ପ + A3                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A4        ପ + A4                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A5        ପ + A5                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A6        ପ + A6                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A7        ପ + A7                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A8        ପ + A8                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 A9        ପ + A9                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AA        ପ + AA                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AB        ପ + AB                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AC        ପ + AC                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AD        ପ + AD                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AE        ପ + AE                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 AF        ପ + AF                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 D0        ପ + D0                   naive "ପୃ"         U "ପୃ"           0B2A 0B43 | 7 A8 F5 2
+77 D1        ପ + D1                   naive "ପ୍ର"        U "ପ୍ର"          0B2A 0B4D 0B30 | 7 A8 F7 2
+77 D2        ପ + D2                   naive "ପ୍ୟ"        U "ପ୍ୟ"          0B2A 0B4D 0B5F | 7 A8 BF 2
+77 D3        ପ + D3                   naive "ପ।"         U "ପ।"           0B2A 0964 | 7 A8 3E 2
+77 D4        ପ + D4                   naive "ପଃ"         U "ପଃ"           0B2A 0B03 | 7 A8 85 2
+77 D5        ପ + D5                   naive "ପ୍‍"        U "ପ୍‍"          0B2A 0B4D 200D | 7 A8 FA 2
+77 D6        ପ + D6                   naive "ପଁ"         U "ପଁ"           0B2A 0B01 | 7 A8 F4 2
+77 D7        ପ + D7                   naive "ପୟ"         U "ପୟ"           0B2A 0B5F | 7 A8 DF 2
+77 D8        ପ + D8                   naive "ପଞ"         U "ପଞ"           0B2A 0B1E | 7 A8 6E FF 3
+77 D9        ପ + D9                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 DA        ପ + DA                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 DB        ପ + DB                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 DC        ପ + DC                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 DD        ପ + DD                   naive "ପ॥"         U "ପ॥"           0B2A 0965 | 7 A8 1
+77 DE        ପ + DE                   naive "ପ×"         U "ପ×"           0B2A 00D7 | 7 A8 1
+77 DF        ପ + DF                   naive "ପ÷"         U "ପ÷"           0B2A 00F7 | 7 A8 1
+77 E0        ପ + E0                   naive "ପଚ଼"        U "ପ"            0B2A | 7 A8 E3 2
+77 E1        ପ + E1                   naive "ପ୍ବ"        U "ପ"            0B2A | 7 A8 FD 2
+77 E2        ପ + E2                   naive "ପୠ"         U "ପୠ"           0B2A 0B60 | 7 A8 4B 2
+77 E3        ପ + E3                   naive "ପଌ"         U "ପଌ"           0B2A 0B0C | 7 A8 68 2
+77 E4        ପ + E4                   naive "ପୡ"         U "ପୡ"           0B2A 0B61 | 7 A8 1
+77 E5        ପ + E5                   naive "ପୱ"         U "ପୱ"           0B2A 0B71 | 7 A8 1
+77 E6        ପ + E6                   naive "ପ଼"         U "ପ଼"           0B2A 0B3C | 7 A8 1
+77 E7        ପ + E7                   naive "ପୈ"        U "ପୈ"           0B2A 0B48 | 7 A8 1
+77 E8        ପ + E8                   naive "ପୋ"        U "ପୋ"           0B2A 0B4B | 7 A8 1
+77 E9        ପ + E9                   naive "ପୌ"        U "ପୌ"           0B2A 0B4C | 7 A8 1
+77 EA        ପ + EA                   naive "ପଵ"         U "ପଵ"           0B2A 0B35 | 7 A8 1
+77 EB        ପ + EB                   naive "ପ॑"         U "ପ॑"           0B2A 0951 | 7 A8 1
+77 EC        ପ + EC                   naive "ପ॓"         U "ପ॓"           0B2A 0953 | 7 A8 1
+77 ED        ପ + ED                   naive "ପ॒"         U "ପ॒"           0B2A 0952 | 7 A8 1
+77 EE        ପ + EE                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 EF        ପ + EF                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 F0        ପ + F0                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 F1        ପ + F1                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 F2        ପ + F2                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 F3        ପ + F3                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 F4        ପ + F4                   naive "ପଓଁ"        U "ପଓଁ"          0B2A 0B13 0B01 | 7 A8 1
+77 F5        ପ + F5                   naive "ପ₹"         U "ପ₹"           0B2A 20B9 | 7 A8 3C 2
+77 F6        ପ + F6                   naive "ପୢ"         U "ପୢ"           0B2A 0B62 | 7 A8 1
+77 F7        ପ + F7                   naive "ପୣ"         U "ପୣ"           0B2A 0B63 | 7 A8 1
+77 F8        ପ + F8                   naive "ପୄ"         U "ପୄ"           0B2A 0B44 | 7 A8 1
+77 F9        ପ + F9                   naive "ପ‍"         U "ପ‍"           0B2A 200D | 7 A8 1
+77 FA        ପ + FA                   naive "ପ‌"         U "ପ‌"           0B2A 200C | 7 A8 1
+77 FB        ପ + FB                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 FC        ପ + FC                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 FD        ପ + FD                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+77 FE        ପ + FE                   naive "ପ?"         U "ପ"            0B2A | 7 A8 1
+6C 73 21     େ କ + 21                 naive "େକ!"        U "କେ!"          0B15 0B47 0021 | 7 7B 4C FF 21 4
+6C 73 22     େ କ + 22                 naive "େକ‘"        U "କେ‘"          0B15 0B47 2018 | 7 7B 4C FF 22 4
+6C 73 23     େ କ + 23                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 24     େ କ + 24                 naive "େକଅ"        U "କେଅ"          0B15 0B47 0B05 | 7 7B 4C FF 41 4
+6C 73 25     େ କ + 25                 naive "େକ%"        U "କେ%"          0B15 0B47 0025 | 7 7B 4C FF 25 4
+6C 73 26     େ କ + 26                 naive "େକ୰"        U "କେ୰"          0B15 0B47 0B70 | 7 7B 4C FF 8F 4
+6C 73 27     େ କ + 27                 naive "େକ’"        U "କେ’"          0B15 0B47 2019 | 7 7B 4C FF 27 4
+6C 73 28     େ କ + 28                 naive "େକ("        U "କେ("          0B15 0B47 0028 | 7 7B 4C FF 28 4
+6C 73 29     େ କ + 29                 naive "େକ)"        U "କେ)"          0B15 0B47 0029 | 7 7B 4C FF 29 4
+6C 73 2A     େ କ + 2A                 naive "େକ*"        U "କେ*"          0B15 0B47 002A | 7 7B 4C FF 2A 4
+6C 73 2B     େ କ + 2B                 naive "େକ+"        U "କେ+"          0B15 0B47 002B | 7 7B 4C FF 3
+6C 73 2C     େ କ + 2C                 naive "େକ,"        U "କେ,"          0B15 0B47 002C | 7 7B 4C FF 2C 4
+6C 73 2D     େ କ + 2D                 naive "େକ-"        U "କେ-"          0B15 0B47 002D | 7 7B 4C FF 2D 4
+6C 73 2E     େ କ + 2E                 naive "େକ."        U "କେ."          0B15 0B47 002E | 7 7B 4C FF 2E 4
+6C 73 2F     େ କ + 2F                 naive "େକ/"        U "କେ/"          0B15 0B47 002F | 7 7B 4C FF 2F 4
+6C 73 30     େ କ + 30                 naive "େକ୦"        U "କେ୦"          0B15 0B47 0B66 | 7 7B 4C FF 30 4
+6C 73 31     େ କ + 31                 naive "େକ୧"        U "କେ୧"          0B15 0B47 0B67 | 7 7B 4C FF 31 4
+6C 73 32     େ କ + 32                 naive "େକ୨"        U "କେ୨"          0B15 0B47 0B68 | 7 7B 4C FF 32 4
+6C 73 33     େ କ + 33                 naive "େକ୩"        U "କେ୩"          0B15 0B47 0B69 | 7 7B 4C FF 33 4
+6C 73 34     େ କ + 34                 naive "େକ୪"        U "କେ୪"          0B15 0B47 0B6A | 7 7B 4C FF 34 4
+6C 73 35     େ କ + 35                 naive "େକ୫"        U "କେ୫"          0B15 0B47 0B6B | 7 7B 4C FF 35 4
+6C 73 36     େ କ + 36                 naive "େକ୬"        U "କେ୬"          0B15 0B47 0B6C | 7 7B 4C FF 36 4
+6C 73 37     େ କ + 37                 naive "େକ୭"        U "କେ୭"          0B15 0B47 0B6D | 7 7B 4C FF 37 4
+6C 73 38     େ କ + 38                 naive "େକ୮"        U "କେ୮"          0B15 0B47 0B6E | 7 7B 4C FF 38 4
+6C 73 39     େ କ + 39                 naive "େକ୯"        U "କେ୯"          0B15 0B47 0B6F | 7 7B 4C FF 39 4
+6C 73 3A     େ କ + 3A                 naive "େକ:"        U "କେ:"          0B15 0B47 003A | 7 7B 4C FF 3A 4
+6C 73 3B     େ କ + 3B                 naive "େକ;"        U "କେ;"          0B15 0B47 003B | 7 7B 4C FF 3
+6C 73 3C     େ କ + 3C                 naive "େକଏ"        U "କେଏ"          0B15 0B47 0B0F | 7 7B 4C FF 46 4
+6C 73 3D     େ କ + 3D                 naive "େକ="        U "କେ="          0B15 0B47 003D | 7 7B 4C FF 3
+6C 73 3E     େ କ + 3E                 naive "େକଐ"        U "କେଐ"          0B15 0B47 0B10 | 7 7B 4C FF 47 4
+6C 73 3F     େ କ + 3F                 naive "େକ?"        U "କେ?"          0B15 0B47 003F | 7 7B 4C FF 3F 4
+6C 73 40     େ କ + 40                 naive "େକର୍"       U "ର୍କେ"         0B30 0B4D 0B15 0B47 | 7 7B 4C FF F6 4
+6C 73 41     େ କ + 41                 naive "େକଢ଼"        U "କେଢ଼"          0B15 0B47 0B5D | 7 7B 4C FF DE 4
+6C 73 42     େ କ + 42                 naive "େକଉ"        U "କେଉ"          0B15 0B47 0B09 | 7 7B 4C FF 44 4
+6C 73 43     େ କ + 43                 naive "େକଝ"        U "କେଝ"          0B15 0B47 0B1D | 7 7B 4C FF 6C 4
+6C 73 44     େ କ + 44                 naive "େକ୍‌"       U "କେ୍‌"         0B15 0B47 0B4D 200C | 7 7B 4C FF FA 4
+6C 73 45     େ କ + 45                 naive "େକଡ଼"        U "କେଡ଼"          0B15 0B47 0B5C | 7 7B 4C FF DD 4
+6C 73 46     େ କ + 46                 naive "େକଥ"        U "କେଥ"          0B15 0B47 0B25 | 7 7B 4C FF 24 4
+6C 73 47     େ କ + 47                 naive "େକଇ"        U "କେଇ"          0B15 0B47 0B07 | 7 7B 4C FF 42 4
+6C 73 48     େ କ + 48                 naive "େକଈ"        U "କେଈ"          0B15 0B47 0B08 | 7 7B 4C FF 43 4
+6C 73 49     େ କ + 49                 naive "େକଠ"        U "କେଠ"          0B15 0B47 0B20 | 7 7B 4C FF 76 FF 5
+6C 73 4A     େ କ + 4A                 naive "େକଣ"        U "କେଣ"          0B15 0B47 0B23 | 7 7B 4C FF 7E 4
+6C 73 4B     େ କ + 4B                 naive "େକଶ"        U "କେଶ"          0B15 0B47 0B36 | 7 7B 4C FF C9 4
+6C 73 4C     େ କ + 4C                 naive "େକଷ"        U "କେଷ"          0B15 0B47 0B37 | 7 7B 4C FF CC 4
+6C 73 4D     େ କ + 4D                 naive "େକଲ"        U "କେଲ"          0B15 0B47 0B32 | 7 7B 4C FF E0 FF 5
+6C 73 4E     େ କ + 4E                 naive "େକଊ"        U "କେଊ"          0B15 0B47 0B0A | 7 7B 4C FF 45 4
+6C 73 4F     େ କ + 4F                 naive "େକଡ"        U "କେଡ"          0B15 0B47 0B21 | 7 7B 4C FF 78 FF 5
+6C 73 50     େ କ + 50                 naive "େକଢ"        U "କେଢ"          0B15 0B47 0B22 | 7 7B 4C FF 7C FF 5
+6C 73 51     େ କ + 51                 naive "େକ?"        U "ତ୍କେ"         0B24 0B4D 0B15 0B47 | 7 7B 4C FF 23 4
+6C 73 52     େ କ + 52                 naive "େକଧ"        U "କେଧ"          0B15 0B47 0B27 | 7 7B 4C FF 99 4
+6C 73 53     େ କ + 53                 naive "େକଖ"        U "କେଖ"          0B15 0B47 0B16 | 7 7B 4C FF 51 4
+6C 73 54     େ କ + 54                 naive "େକଓ"        U "କେଓ"          0B15 0B47 0B13 | 7 7B 4C FF 48 4
+6C 73 55     େ କ + 55                 naive "େକଟ"        U "କେଟ"          0B15 0B47 0B1F | 7 7B 4C FF 73 4
+6C 73 56     େ କ + 56                 naive "େକଛ"        U "କେଛ"          0B15 0B47 0B1B | 7 7B 4C FF 64 4
+6C 73 57     େ କ + 57                 naive "େକଫ"        U "କେଫ"          0B15 0B47 0B2B | 7 7B 4C FF FC FF 5
+6C 73 58     େ କ + 58                 naive "େକଘ"        U "କେଘ"          0B15 0B47 0B18 | 7 7B 4C FF 57 4
+6C 73 59     େ କ + 59                 naive "େକଔ"        U "କେଔ"          0B15 0B47 0B14 | 7 7B 4C FF 49 4
+6C 73 5A     େ କ + 5A                 naive "େକଙ"        U "କେଙ"          0B15 0B47 0B19 | 7 7B 4C FF 59 FF 5
+6C 73 5B     େ କ + 5B                 naive "େକ["        U "କେ["          0B15 0B47 005B | 7 7B 4C FF 3
+6C 73 5C     େ କ + 5C                 naive "େକକ୍ଷ"      U "କେକ୍ଷ"        0B15 0B47 0B15 0B4D 0B37 | 7 7B 4C FF E4 4
+6C 73 5D     େ କ + 5D                 naive "େକ]"        U "କେ]"          0B15 0B47 005D | 7 7B 4C FF 3
+6C 73 5E     େ କ + 5E                 naive "େକଋ"        U "କେଋ"          0B15 0B47 0B0B | 7 7B 4C FF 4A 4
+6C 73 5F     େ କ + 5F                 naive "େକଽ"        U "କେଽ"          0B15 0B47 0B3D | 7 7B 4C FF 90 4
+6C 73 60     େ କ + 60                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 61     େ କ + 61                 naive "େକମ"        U "କେମ"          0B15 0B47 0B2E | 7 7B 4C FF FE 4
+6C 73 62     େ କ + 62                 naive "େକୁ"        U "କେ"           0B15 0B47 | 7 7B 4C FF EB 4
+6C 73 63     େ କ + 63                 naive "େକଜ"        U "କେଜ"          0B15 0B47 0B1C | 7 7B 4C FF 66 4
+6C 73 64     େ କ + 64                 naive "େକ୍"        U "କ୍େ"          0B15 0B4D 0B47 | 7 7B 4C FF FA 4
+6C 73 65     େ କ + 65                 naive "େକନ"        U "କେନ"          0B15 0B47 0B28 | 7 7B 4C FF 9C FF 5
+6C 73 66     େ କ + 66                 naive "େକତ"        U "କେତ"          0B15 0B47 0B24 | 7 7B 4C FF 86 FF 5
+6C 73 67     େ କ + 67                 naive "େକି"        U "କେି"          0B15 0B47 0B3F | 7 7B 4C FF E7 4
+6C 73 68     େ କ + 68                 naive "େକୀ"        U "କେ"           0B15 0B47 | 7 7B 4C FF EA 4
+6C 73 69     େ କ + 69                 naive "େକଂ"        U "କେଂ"          0B15 0B47 0B02 | 7 7B 4C FF F3 4
+6C 73 6A     େ କ + 6A                 naive "େକର"        U "କେର"          0B15 0B47 0B30 | 7 7B 4C FF C0 FF 5
+6C 73 6B     େ କ + 6B                 naive "େକା"        U "କୋ"           0B15 0B4B | 7 7B 4C FF E6 4
+6C 73 6C     େ କ + 6C                 naive "େକେ"        U "କେ.େ"         0B15 0B47 002E 0B47 | 7 7B 4C FF 7B 4
+6C 73 6D     େ କ + 6D                 naive "େକଳ"        U "କେଳ"          0B15 0B47 0B33 | 7 7B 4C FF C1 FF 5
+6C 73 6E     େ କ + 6E                 naive "େକୂ"        U "କେ"           0B15 0B47 | 7 7B 4C FF ED 4
+6C 73 6F     େ କ + 6F                 naive "େକହ"        U "କେହ"          0B15 0B47 0B39 | 7 7B 4C FF DC FF 5
+6C 73 70     େ କ + 70                 naive "େକୖ"        U "କୈ"           0B15 0B48 | 7 7B 4C FF F0 4
+6C 73 71     େ କ + 71                 naive "େକବ"        U "କେବ"          0B15 0B47 0B2C | 7 7B 4C FF AF FF 5
+6C 73 72     େ କ + 72                 naive "େକଦ"        U "କେଦ"          0B15 0B47 0B26 | 7 7B 4C FF 92 FF 5
+6C 73 73     େ କ + 73                 naive "େକକ"        U "କେକ"          0B15 0B47 0B15 | 7 7B 4C FF 4C FF 5
+6C 73 74     େ କ + 74                 naive "େକସ"        U "କେସ"          0B15 0B47 0B38 | 7 7B 4C FF D3 4
+6C 73 75     େ କ + 75                 naive "େକଯ"        U "କେଯ"          0B15 0B47 0B2F | 7 7B 4C FF BE 4
+6C 73 76     େ କ + 76                 naive "େକଚ"        U "କେଚ"          0B15 0B47 0B1A | 7 7B 4C FF 60 FF 5
+6C 73 77     େ କ + 77                 naive "େକପ"        U "କେପ"          0B15 0B47 0B2A | 7 7B 4C FF A8 4
+6C 73 78     େ କ + 78                 naive "େକଗ"        U "କେଗ"          0B15 0B47 0B17 | 7 7B 4C FF 53 4
+6C 73 79     େ କ + 79                 naive "େକୗ"        U "କୌ"           0B15 0B4C | 7 7B 4C FF F2 4
+6C 73 7A     େ କ + 7A                 naive "େକଭ"        U "କେଭ"          0B15 0B47 0B2D | 7 7B 4C FF B5 FF 5
+6C 73 7B     େ କ + 7B                 naive "େକ—"        U "କେ—"          0B15 0B47 2014 | 7 7B 4C FF 3
+6C 73 7C     େ କ + 7C                 naive "େକ“"        U "କେ“"          0B15 0B47 201C | 7 7B 4C FF 3
+6C 73 7D     େ କ + 7D                 naive "େକ–"        U "କେ–"          0B15 0B47 2013 | 7 7B 4C FF 3
+6C 73 7E     େ କ + 7E                 naive "େକ”"        U "କେ”"          0B15 0B47 201D | 7 7B 4C FF 3
+6C 73 7F     େ କ + 7F                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 80     େ କ + 80                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 81     େ କ + 81                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 82     େ କ + 82                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 83     େ କ + 83                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 84     େ କ + 84                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 85     େ କ + 85                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 86     େ କ + 86                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 87     େ କ + 87                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 88     େ କ + 88                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 89     େ କ + 89                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8A     େ କ + 8A                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8B     େ କ + 8B                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8C     େ କ + 8C                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8D     େ କ + 8D                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8E     େ କ + 8E                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 8F     େ କ + 8F                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A0     େ କ + A0                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A1     େ କ + A1                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A2     େ କ + A2                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A3     େ କ + A3                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A4     େ କ + A4                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A5     େ କ + A5                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A6     େ କ + A6                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A7     େ କ + A7                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A8     େ କ + A8                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 A9     େ କ + A9                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AA     େ କ + AA                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AB     େ କ + AB                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AC     େ କ + AC                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AD     େ କ + AD                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AE     େ କ + AE                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 AF     େ କ + AF                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 D0     େ କ + D0                 naive "େକୃ"        U "କେୃ"          0B15 0B47 0B43 | 7 7B 4C FF F5 4
+6C 73 D1     େ କ + D1                 naive "େକ୍ର"       U "କ୍ରେ"         0B15 0B4D 0B30 0B47 | 7 7B 4C FF F7 4
+6C 73 D2     େ କ + D2                 naive "େକ୍ୟ"       U "କ୍ୟେ"         0B15 0B4D 0B5F 0B47 | 7 7B 4C FF BF 4
+6C 73 D3     େ କ + D3                 naive "େକ।"        U "କେ।"          0B15 0B47 0964 | 7 7B 4C FF 3E 4
+6C 73 D4     େ କ + D4                 naive "େକଃ"        U "କେଃ"          0B15 0B47 0B03 | 7 7B 4C FF 85 4
+6C 73 D5     େ କ + D5                 naive "େକ୍‍"       U "କ୍‍େ"         0B15 0B4D 200D 0B47 | 7 7B 4C FF FA 4
+6C 73 D6     େ କ + D6                 naive "େକଁ"        U "କେଁ"          0B15 0B47 0B01 | 7 7B 4C FF F4 4
+6C 73 D7     େ କ + D7                 naive "େକୟ"        U "କେୟ"          0B15 0B47 0B5F | 7 7B 4C FF DF 4
+6C 73 D8     େ କ + D8                 naive "େକଞ"        U "କେଞ"          0B15 0B47 0B1E | 7 7B 4C FF 6E FF 5
+6C 73 D9     େ କ + D9                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 DA     େ କ + DA                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 DB     େ କ + DB                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 DC     େ କ + DC                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 DD     େ କ + DD                 naive "େକ॥"        U "କେ॥"          0B15 0B47 0965 | 7 7B 4C FF 3
+6C 73 DE     େ କ + DE                 naive "େକ×"        U "କେ×"          0B15 0B47 00D7 | 7 7B 4C FF 3
+6C 73 DF     େ କ + DF                 naive "େକ÷"        U "କେ÷"          0B15 0B47 00F7 | 7 7B 4C FF 3
+6C 73 E0     େ କ + E0                 naive "େକଚ଼"       U "କେ"           0B15 0B47 | 7 7B 4C FF E3 4
+6C 73 E1     େ କ + E1                 naive "େକ୍ବ"       U "କେ"           0B15 0B47 | 7 7B 4C FF FD 4
+6C 73 E2     େ କ + E2                 naive "େକୠ"        U "କେୠ"          0B15 0B47 0B60 | 7 7B 4C FF 4B 4
+6C 73 E3     େ କ + E3                 naive "େକଌ"        U "କେଌ"          0B15 0B47 0B0C | 7 7B 4C FF 68 4
+6C 73 E4     େ କ + E4                 naive "େକୡ"        U "କେୡ"          0B15 0B47 0B61 | 7 7B 4C FF 3
+6C 73 E5     େ କ + E5                 naive "େକୱ"        U "କେୱ"          0B15 0B47 0B71 | 7 7B 4C FF 3
+6C 73 E6     େ କ + E6                 naive "େକ଼"        U "କେ଼"          0B15 0B47 0B3C | 7 7B 4C FF 3
+6C 73 E7     େ କ + E7                 naive "େକୈ"       U "କେୈ"          0B15 0B47 0B48 | 7 7B 4C FF 3
+6C 73 E8     େ କ + E8                 naive "େକୋ"       U "କେୋ"          0B15 0B47 0B4B | 7 7B 4C FF 3
+6C 73 E9     େ କ + E9                 naive "େକୌ"       U "କେୌ"          0B15 0B47 0B4C | 7 7B 4C FF 3
+6C 73 EA     େ କ + EA                 naive "େକଵ"        U "କେଵ"          0B15 0B47 0B35 | 7 7B 4C FF 3
+6C 73 EB     େ କ + EB                 naive "େକ॑"        U "କେ॑"          0B15 0B47 0951 | 7 7B 4C FF 3
+6C 73 EC     େ କ + EC                 naive "େକ॓"        U "କେ॓"          0B15 0B47 0953 | 7 7B 4C FF 3
+6C 73 ED     େ କ + ED                 naive "େକ॒"        U "କେ॒"          0B15 0B47 0952 | 7 7B 4C FF 3
+6C 73 EE     େ କ + EE                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 EF     େ କ + EF                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 F0     େ କ + F0                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 F1     େ କ + F1                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 F2     େ କ + F2                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 F3     େ କ + F3                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 F4     େ କ + F4                 naive "େକଓଁ"       U "କେଓଁ"         0B15 0B47 0B13 0B01 | 7 7B 4C FF 3
+6C 73 F5     େ କ + F5                 naive "େକ₹"        U "କେ₹"          0B15 0B47 20B9 | 7 7B 4C FF 3C 4
+6C 73 F6     େ କ + F6                 naive "େକୢ"        U "କେୢ"          0B15 0B47 0B62 | 7 7B 4C FF 3
+6C 73 F7     େ କ + F7                 naive "େକୣ"        U "କେୣ"          0B15 0B47 0B63 | 7 7B 4C FF 3
+6C 73 F8     େ କ + F8                 naive "େକୄ"        U "କେୄ"          0B15 0B47 0B44 | 7 7B 4C FF 3
+6C 73 F9     େ କ + F9                 naive "େକ‍"        U "କେ‍"          0B15 0B47 200D | 7 7B 4C FF 3
+6C 73 FA     େ କ + FA                 naive "େକ‌"        U "କେ‌"          0B15 0B47 200C | 7 7B 4C FF 3
+6C 73 FB     େ କ + FB                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 FC     େ କ + FC                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 FD     େ କ + FD                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3
+6C 73 FE     େ କ + FE                 naive "େକ?"        U "କେ"           0B15 0B47 | 7 7B 4C FF 3

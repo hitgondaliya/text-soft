@@ -1,0 +1,82 @@
+{
+ "otherSpellings": 24581,
+ "readBackSameText": 3874,
+ "failing": 20707,
+ "byKind": {
+  "alternative alt:ੴ typed as code 51 alone = B0, the onkar arc WITHOUT the ੧": {
+   "spellings": 1,
+   "readBackSameText": 1,
+   "examples": []
+  },
+  "accepted quirk:vendor-key-types-other-than-its-codes+canonical:pending-link": {
+   "spellings": 32,
+   "readBackSameText": 32,
+   "examples": []
+  },
+  "accepted vendor-key+canonical:pending-link": {
+   "spellings": 5,
+   "readBackSameText": 5,
+   "examples": []
+  },
+  "accepted canonical:link+ZWJ/ZWNJ": {
+   "spellings": 38,
+   "readBackSameText": 38,
+   "examples": []
+  },
+  "alternative alt:C+link+ਰ/ਹ/ਵ/ਯ": {
+   "spellings": 2454,
+   "readBackSameText": 4,
+   "examples": [
+    "48 63: Shree ਕ੍ਰ | ours ਕਰ",
+    "48 68: Shree ਕ੍ਹ | ours ਕਹ",
+    "48 65: Shree ਕ੍ਵ | ours ਕਵ",
+    "48 61: Shree ਕ੍ਯ | ours ਕਯ",
+    "49 63: Shree ਖ੍ਰ | ours ਖਰ",
+    "49 68: Shree ਖ੍ਹ | ours ਖਹ",
+    "49 65: Shree ਖ੍ਵ | ours ਖਵ",
+    "49 61: Shree ਖ੍ਯ | ours ਖਯ"
+   ]
+  },
+  "alternative alt:ਿ struck after the letter": {
+   "spellings": 267,
+   "readBackSameText": 267,
+   "examples": []
+  },
+  "accepted canonical:pending-link": {
+   "spellings": 1049,
+   "readBackSameText": 1049,
+   "examples": []
+  },
+  "accepted canonical:link": {
+   "spellings": 18280,
+   "readBackSameText": 28,
+   "examples": [
+    "48 48: Shree ਕ੍ਕ | ours ਕਕ",
+    "48 48 70: Shree ਕ੍ਕਾ | ours ਕਕਾ",
+    "48 48 72: Shree ਕ੍ਕੀ | ours ਕਕੀ",
+    "48 48 74: Shree ਕ੍ਕੁ | ours ਕਕੁ",
+    "48 48 76: Shree ਕ੍ਕੂ | ours ਕਕੂ",
+    "48 48 79: Shree ਕ੍ਕੇ | ours ਕਕੇ",
+    "48 48 B1: Shree ਕ੍ਕੈ | ours ਕਕੈ",
+    "48 48 7D: Shree ਕ੍ਕੋ | ours ਕਕੋ"
+   ]
+  },
+  "accepted canonical:tippi-typed-written-as-bindi": {
+   "spellings": 1,
+   "readBackSameText": 0,
+   "examples": [
+    "44 A3: Shree ੳਂਂ | ours ੳਂ"
+   ]
+  },
+  "alternative alt:C+halant+ਰ/ਹ/ਵ/ਯ": {
+   "spellings": 2454,
+   "readBackSameText": 2450,
+   "examples": [
+    "71 6D B5 63: Shree ੜ੍ਰਿ | ours ਿੜ੍ਰ",
+    "71 6D B5 68: Shree ੜ੍ਹਿ | ours ਿੜ੍ਹ",
+    "71 6D B5 65: Shree ੜ੍ਵਿ | ours ਿੜ੍ਵ",
+    "71 6D B5 61: Shree ੜ੍ਯਿ | ours ਿੜ੍ਯ"
+   ]
+  }
+ }
+}

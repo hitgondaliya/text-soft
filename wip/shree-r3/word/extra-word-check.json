@@ -1,0 +1,15 @@
+{
+  "about": "Word check of code points no table writes, re-analysed this session from the first session's documents fam/extra-ban.docx (SHREE-BAN-0550) and fam/extra-guj7.docx (SHREE-GUJ7-0750), their Word PDFs and per-paragraph EMFs (paragraph order in both: U+017E, U+009E, U+017D, U+20AC, U+0081 / U+017E, U+20AC, U+0081).",
+  "SHREE-BAN-0550": {
+    "U+017E": "PDF: Cambria code 101; EMF: Cambria U+017E, GDI playback ink 4338 px -> Word falls back to Cambria and draws the real z-caron",
+    "U+017D": "PDF: Cambria; EMF: Cambria U+017D, ink 6103 px -> Cambria",
+    "U+20AC": "PDF: TimesNewRomanPSMT code BC; EMF: Times New Roman U+20AC, ink 4551 px -> Times New Roman draws the euro",
+    "U+009E": "PDF: SHREE-BAN-0550 code 9E (F1 vs the font's glyph 0.28: PDF viewers draw .notdef, WinAnsi 9E = zcaron); EMF: SHREE-BAN-0550 U+009E, GDI playback ink 0 -> advance, nothing drawn",
+    "U+0081": "PDF: SHREE-BAN-0550 code 81 (bullet glyph in viewers); EMF: SHREE-BAN-0550 U+0081, ink 0 -> nothing drawn"
+  },
+  "SHREE-GUJ7-0750": {
+    "U+017E": "Cambria (PDF and EMF)",
+    "U+20AC": "Times New Roman (PDF and EMF)",
+    "U+0081": "EMF: SHREE-GUJ7-0750 U+0081, ink 0 -> nothing drawn"
+  }
+}

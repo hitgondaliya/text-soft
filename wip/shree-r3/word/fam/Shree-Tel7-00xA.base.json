@@ -1,0 +1,100 @@
+{
+  "family": "Shree-Tel7-00xA",
+  "repFace": "Shree-Tel7-001A",
+  "repFile": "C:\\Windows\\Fonts\\WTEL701T.TTF",
+  "upem": 1024,
+  "numGlyphs": 11,
+  "winAscent": 750,
+  "winDescent": 317,
+  "faces": [
+    {
+      "face": "Shree-Tel7-001A",
+      "file": "C:\\Windows\\Fonts\\WTEL701T.TTF",
+      "sameCmap": true
+    },
+    {
+      "face": "Shree-Tel7-002A",
+      "file": "C:\\Windows\\Fonts\\WTEL702T.TTF",
+      "sameCmap": true
+    }
+  ],
+  "cps": [
+    {
+      "cp": "U+0020",
+      "gid": 3,
+      "adv": 240,
+      "contours": 0,
+      "empty": true,
+      "bbox": "0,0,0,0",
+      "sig": "empty",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0061",
+      "gid": 4,
+      "adv": 593,
+      "contours": 1,
+      "empty": false,
+      "bbox": "20,-130,545,345",
+      "sig": "A63334460DB4E1A4",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0062",
+      "gid": 5,
+      "adv": 821,
+      "contours": 2,
+      "empty": false,
+      "bbox": "20,-130,800,345",
+      "sig": "51D950F2F4DE2D31",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0063",
+      "gid": 7,
+      "adv": 741,
+      "contours": 2,
+      "empty": false,
+      "bbox": "31,0,736,380",
+      "sig": "70F2D09F18D025B0",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0064",
+      "gid": 8,
+      "adv": 408,
+      "contours": 1,
+      "empty": false,
+      "bbox": "44,0,404,351",
+      "sig": "901015F1DB993E16",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0065",
+      "gid": 9,
+      "adv": 410,
+      "contours": 1,
+      "empty": false,
+      "bbox": "46,0,406,351",
+      "sig": "CC15F057F62DA71E",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    },
+    {
+      "cp": "U+0066",
+      "gid": 10,
+      "adv": 434,
+      "contours": 3,
+      "empty": false,
+      "bbox": "-92,-267,413,338",
+      "sig": "83803E84D209FDC9",
+      "sameGlyphAs": [],
+      "sameOutlineAs": []
+    }
+  ]
+}

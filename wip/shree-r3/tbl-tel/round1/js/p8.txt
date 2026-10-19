@@ -1,0 +1,9 @@
+    /// <summary>The reverse table; a piece of a glyph that reads as nothing alone (a talakattu, a spacer) is reported, never silently dropped.</summary>
+    public MappingTable Build(Dictionary<string, string> pairs)
+    {
+        var t = Table(F.Id + "-to-unicode", F.Name + " -> Unicode", F.Id, "gautami", FontType.Legacy, FontType.Unicode, PreRules,
+            pairs.OrderBy(p => p.Key.Length).ThenBy(p => p.Key, StringComparer.Ordinal).Select(p => (p.Key, p.Value)),
+            PostRules);
+        foreach (var p in t.Pairs.Where(p => p.To.Length == 0)) p.Unmapped = true;
+        return t;
+    }

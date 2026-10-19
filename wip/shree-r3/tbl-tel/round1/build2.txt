@@ -1,0 +1,172 @@
+capture: 37339 distinct composer spellings
+  vattus 33: read off క్C 32, wrong 1
+    ్ష: క్ష = 84 E6 FC, not 4D E6 FC DB
+==== shree-tel7 (SHREE-TEL7-Apoorva-0900/Asmitha-1642, SHREE-TEL-Apoorva-0900/Asmitha-1642)
+shree-tel7: atoms 141, learned 371, conflicts 0, total 476
+  59 control characters (C0 but TAB LF VT FF CR, DEL, C1) -> left out, reported: Word draws them as nothing, and a .txt would write U+0080-U+009F as bytes the fonts draw as letters
+  font code points (every face): 217; ASCII written as itself: !%()+,./:;=? and 0-9; pairs marked unmapped: #$&*<>@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿŒœŠšŸƒˆ˜ఀఄఌఴ఼ౄౕౘౙౚౝౡౢౣ౷౸౹౺౻౼౽౾౿†‡‰‹›™∙
+  truth 26618: preferred 26618 (20383 of them the composer's own bytes, 6235 a documented exception), other accepted 0, wrong 0 (100.00% preferred)
+  the composer's own preferred bytes, byte for byte: 20383/26546 (76.78%); the rest are the documented exceptions
+    exception candrabindu: 2132 rows, written as documented 2132
+    exception candrabindu,jha-dropped: 36 rows, written as documented 36
+    exception jha-dropped: 505 rows, written as documented 505
+    exception nga-vattu: 538 rows, written as documented 538
+    exception nga-vattu,candrabindu: 36 rows, written as documented 36
+    exception nga-vattu,visarga: 36 rows, written as documented 36
+    exception rra-vattu: 538 rows, written as documented 538
+    exception rra-vattu,candrabindu: 36 rows, written as documented 36
+    exception rra-vattu,visarga: 36 rows, written as documented 36
+    exception visarga: 2132 rows, written as documented 2132
+    exception visarga,candrabindu: 102 rows, written as documented 102
+    exception visarga,jha-dropped: 36 rows, written as documented 36
+    exception word-final: 72 rows, written as documented 72
+  words 20000 (seed 7): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 11): exact 20000, wrong 0 (100.00%)
+  words 20000 (seed 2026): exact 20000, wrong 0 (100.00%)
+  word-final virama: forms 72 (C + ్ + ZWNJ in the truth), alone wrong 0; in running text 20000 (seed 7): exact 20000, wrong 0
+  word-final virama: forms 72 (C + ్ + ZWNJ in the truth), alone wrong 0; in running text 20000 (seed 11): exact 20000, wrong 0
+  codes written that SHREE-TEL7-Apoorva-0900/Asmitha-1642, SHREE-TEL-Apoorva-0900/Asmitha-1642 draw as something else or not at all (2D 40 B6 90 AD): 0
+  code points written: 211 (20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 73 74 75 76 77 78 79 7A 7B 7C 7D 7E A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 AA AB AC AE AF B0 B1 B2 B3 B4 B5 B7 B8 B9 BA BB BC BD BE BF C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 CB CC CD CE CF D0 D1 D2 D3 D4 D5 D6 D7 D8 D9 DA DB DC DD DE DF E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 EA EB EC ED EE EF F0 F1 F2 F3 F4 F5 F6 F7 F8 F9 FA FB FC FD FE FF 8C 9C 8A 9A 9F 83 88 98 96 97 91 92 82 94 84 86 87 95 85 U+2028 U+2029 89 8B 9B 99); faces 8; missing from a face's cmap: 0
+  code points written that Word or RichEdit draw as nothing: 0
+shree-tel7 reverse: atoms 133, learned 399, unkeyable 0, total 532
+  read back as themselves (the forward table passes them through): ఀ ఄ ఌ ఴ ఼ ౄ ౕ ౘ ౙ ౚ ౝ ౡ ౢ ౣ ౷ ౸ ౹ ౺ ౻ ౼ ౽ ౾ ౿
+  read back 26618: exact 25959, same text 659, wrong 0 (100.00%)
+  words read back 20000 (seed 7): right 20000, wrong 0 (100.00%)
+  words read back 20000 (seed 11): right 20000, wrong 0 (100.00%)
+  other accepted spellings read back 6722: exact 5570, as text the table writes with those very bytes 983, wrong 169
+    4D E6 FC B6	want క్ఝఁ	got కఁ [0C15 0C01]
+    4D E6 FC 40	want క్ఝః	got కః [0C15 0C03]
+    4D E6 FC A0 96	want క్ఝృ	got కృ [0C15 0C43]
+    4D F0 FC 95	want క్ఝై	got కై [0C15 0C48]
+    84 E6 FC 9B 5D	want క్ష్ఙ	got క్షః [0C15 0C4D 0C37 0C03]
+  well-formed read back 66589: malformed 0
+  composer spellings of the whole capture read back 37339: exact 27793, as text the table writes with those very bytes 4301, other text (the bytes are another text's) 5080, Latin/control/noncharacter 57, malformed 108
+    MALFORMED	4D E6 FC 96 CA	typed క్ఱృ	read కృ్ఱ [0C15 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	56 E6 FC 96 CA	typed గ్ఱృ	read గృ్ఱ [0C17 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	99 E8 FE 96 CA	typed త్ఱృ	read తృ్ఱ [0C24 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	A7 E6 FE 96 CA	typed ద్ఱృ	read దృ్ఱ [0C26 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	AF E8 FE 96 CA	typed న్ఱృ	read నృ్ఱ [0C28 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	E7 B3 96 CA	typed ప్ఱృ	read పృ్ఱ [0C2A 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	D0 E8 FE 24 96 CA	typed మ్ఱృ	read మృ్ఱ [0C2E 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	C6 E6 FF 96 CA	typed ర్ఱృ	read రృ్ఱ [0C30 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	D4 E8 FD 96 CA	typed శ్ఱృ	read శృ్ఱ [0C36 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	E7 DC 96 CA	typed స్ఱృ	read సృ్ఱ [0C38 0C43 0C4D 0C31]	virama at 2 after 'ృ'
+    MALFORMED	84 E6 FC 9B A0 96	typed క్ష్ఝృ	read క్ష–ృ [0C15 0C4D 0C37 2013 0C43]	vowel sign ృ at 4 after '–'
+    MALFORMED	84 E6 FC 9B 85	typed క్ష్ఝం	read క్ష–ం [0C15 0C4D 0C37 2013 0C02]	ం at 4 after '–'
+    OTHER	4D E6 FC 5D 7B	typed క్ఙ్ర	read క్రః [0C15 0C4D 0C30 0C03]	written back 7B 4D E6 FC 5D
+    OTHER	4D E6 FC A0 96	typed క్ఝృ	read కృ [0C15 0C43]	written back 4D E6 FC 96
+    OTHER	4D E6 FC 40	typed క్ఝః	read కః [0C15 0C03]	written back 4D E6 FC 5D
+    OTHER	4D E6 FC B6	typed క్ఝఁ	read కఁ [0C15 0C01]	written back 4D E6 FC 97
+    OTHER	4D E6 FC 7B	typed క్ఝ్ర	read క్ర [0C15 0C4D 0C30]	written back 7B 4D E6 FC
+    OTHER	4D F0 FC 95	typed క్ఝై	read కై [0C15 0C48]	written back 4D F0 FC 4F
+    OTHER	51 5D 7B	typed ఖ్ఙ్ర	read ఖ్రః [0C16 0C4D 0C30 0C03]	written back 7B 51 5D
+    OTHER	51 A0 96	typed ఖ్ఝృ	read ఖృ [0C16 0C43]	written back 51 96
+    OTHER	51 40	typed ఖ్ఝః	read ఖః [0C16 0C03]	written back 51 5D
+    OTHER	51 B6	typed ఖ్ఝఁ	read ఖఁ [0C16 0C01]	written back 51 97
+    OTHER	51 7B	typed ఖ్ఝ్ర	read ఖ్ర [0C16 0C4D 0C30]	written back 7B 51
+    OTHER	52 F1 FD 95	typed ఖ్ఝై	read ఖై [0C16 0C48]	written back 52 F1 FD 4F
+  composer gaps 72 (tel7-composer-gaps.json): ours = the derived spelling 72, other 0
+  quote "తెలుగు"	22 22 99 F0 FE CB 24 56 E6 FC 24 27 27	back ‘‘తెలుగు’’
+  quote 'తెలుగు'	22 99 F0 FE CB 24 56 E6 FC 24 27	back ‘తెలుగు’
+  quote అతను అన్నాడు, "సరే."	41 99 E8 FE AF E8 FE 24 20 41 AF E9 B2 79 E6 FE 24 2C 20 22 22 E7 DC C6 F3 FF 2E 27 27	back అతను అన్నాడు, ‘‘సరే.’’
+  quote రాము's	C6 3E D0 E8 FE 24 24 27	back రాము’	UNMAPPED s
+  non-Indic characters 62046: written as a look-alike or the font's own code 44, left out and reported 140, passed through and reported 61859; wrong 0
+  between క్ష: non-Indic characters 62046: written as a look-alike or the font's own code 44, left out and reported 140, passed through and reported 61859; wrong 0
+  ASCII: written as itself 22, as a look-alike 3, left out and reported 69 (letters 52); beyond ASCII with a decision 16 (Unicode spaces as the space 15); input noncharacters U+FDD0-U+FDDF written U+FFFD and reported 16/16; wrong 0
+  between క్ష: ASCII: written as itself 22, as a look-alike 3, left out and reported 69 (letters 52); beyond ASCII with a decision 16 (Unicode spaces as the space 15); input noncharacters U+FDD0-U+FDDF written U+FFFD and reported 16/16; wrong 0
+  characters passed through (reported) that a .txt output cannot hold - no Windows-1252 byte; FileConversion.LegacyBytes leaves them out, never '?': ఀ(U+0C00) ఄ(U+0C04) ఌ(U+0C0C) ఴ(U+0C34) ఼(U+0C3C) ౄ(U+0C44) ౕ(U+0C55) ౘ(U+0C58) ౙ(U+0C59) ౚ(U+0C5A) ౝ(U+0C5D) ౡ(U+0C61) ౢ(U+0C62) ౣ(U+0C63) ౷(U+0C77) ౸(U+0C78) ౹(U+0C79) ౺(U+0C7A) ౻(U+0C7B) ౼(U+0C7C) ౽(U+0C7D) ౾(U+0C7E) ౿(U+0C7F)
+  real words:
+    తెలుగు	99 F0 FE CB 24 56 E6 FC 24	=
+    భాష	BF EA E7 D9	=
+    ఆంధ్రప్రదేశ్	42 85 7B AB A7 E6 FE 7B E7 B3 A7 F3 FE D4 8C FD	=
+    హైదరాబాద్	F2 DF FD 4F A7 E6 FE C6 3E BB EA A7 8A FE	=
+    రాష్ట్రం	C6 3E E7 D9 89 85	=
+    కంప్యూటర్	4D E6 FC 85 E7 B3 4E C5 72 C6 8A FF	=
+    ఇంటర్నెట్	43 85 72 C6 F0 FF B2 73 8C FD	=
+    శ్రీ	7D	=
+    స్త్రీ	EF DC 88	=
+    లక్ష్మి	CB 4D EC FC 87	=
+    విద్యార్థి	D1 A7 E9 C5 C7 A6	=
+    ప్రభుత్వం	7B E7 B3 BF E6 FD 24 99 E8 FE D3 85	=
+    క్రికెట్	7B 4D EC FC 4D F0 FC 73 8C FD	=
+    నమస్కారం	AF E8 FE D0 E8 FE 24 DD EB 50 C6 E6 FF 85	=
+    ధన్యవాదాలు	AB A7 E6 FE AF E8 FE C5 D0 E9 A7 E9 CB 24	=
+    కృష్ణ	4D E6 FC 96 E7 D9 7E	=
+    బ్యాంకు	BB EA C5 85 4D E6 FC 24	=
+    స్వాతంత్ర్యం	DD EB D3 99 E8 FE 85 7B 99 E8 FE C5 85	-> స్వాతంత్య్రం
+    శాస్త్రం	D4 3E E7 DC 88 85	=
+    ఫోన్	B8 F9 AF 8C FE	=
+    అమ్మ	41 D0 E8 FE 24 C3	=
+    నాన్న	AF E9 AF E8 FE B2	=
+    పుస్తకం	E7 B3 23 E7 DC A2 4D E6 FC 85	=
+    రైలు	C6 F0 FF 4F CB 24	=
+    కైలాసం	4D F0 FC 4F CC EA E7 DC 85	=
+    మైసూరు	D0 F0 FE 24 4F E7 DC 2A C6 E6 FF 24	=
+    ప్రపంచం	7B E7 B3 E7 B3 85 5E E8 FE 85	=
+    సంస్కృతం	E7 DC 85 E7 DC 50 A0 96 99 E8 FE 85	=
+    క్షమించండి	84 E6 FC D1 24 85 5E E8 FE 85 79 EC FE	=
+    అక్షరం	41 84 E6 FC C6 E6 FF 85	=
+    రక్షణ	C6 E6 FF 84 E6 FC D7 FD	=
+    జ్ఞానం	67 EA 71 AF E8 FE 85	=
+    ఉద్యోగం	45 A7 F8 C5 56 E6 FC 85	=
+    ముఖ్యమంత్రి	D0 E8 FE 24 24 51 C5 D0 E8 FE 24 85 7B 86	=
+    దేశం	A7 F3 FE D4 E8 FD 85	=
+    భారతదేశం	BF EA C6 E6 FF 99 E8 FE A7 F3 FE D4 E8 FD 85	=
+    తిరుపతి	86 C6 E6 FF 24 E7 B3 86	=
+    విజయవాడ	D1 66 C4 E6 FD 24 D0 E9 79 E6 FE	=
+    విశాఖపట్నం	D1 D4 3E 51 E7 B3 72 B2 85	=
+    ఎన్నికలు	47 B0 B2 4D E6 FC CB 24	=
+    సమాచారం	E7 DC D0 E8 FE 2A 5E E9 C6 E6 FF 85	=
+    ఉత్తరం	45 99 E8 FE A2 C6 E6 FF 85	=
+    దక్షిణం	A7 E6 FE 84 EC FC D7 FD 85	=
+    పశ్చిమ	E7 B3 D5 61 D0 E8 FE 24	=
+    తూర్పు	99 E8 FE 2A C6 E6 FF 24 B5	=
+    గౌరవం	56 FA C6 E6 FF D0 E8 FE 85	=
+    ఔషధం	4C E7 D9 AB A7 E6 FE 85	=
+    ఋషి	BA 24 24 ED D9	=
+    ఐదు	49 A7 E6 FE 24	=
+    ఒకటి	4A 4D E6 FC 73 EC FD	=
+    ఓటు	4B 72 24	=
+    ఏమిటి	48 D1 24 73 EC FD	=
+    ఈరోజు	44 C6 F8 6B	=
+    ఊరు	46 C6 E6 FF 24	=
+    సూర్యుడు	E7 DC 2A C6 E6 FF 24 C5 79 E6 FE 24	=
+    చంద్రుడు	5E E8 FE 85 7B A7 E6 FE 24 79 E6 FE 24	=
+    నక్షత్రం	AF E8 FE 84 E6 FC 7B 99 E8 FE 85	=
+    వృక్షం	D0 E8 FE 96 84 E6 FC 85	=
+    శ్రమ	7B D4 E8 FD D0 E8 FE 24	=
+    ద్రాక్ష	7B A7 E9 84 E6 FC	=
+    కుక్క	4D E6 FC 24 4D E6 FC 50	=
+    పిల్లి	ED B3 CD CF	=
+    ఆవు	42 D0 E8 FE 23	=
+    గుర్రం	56 E6 FC 24 7B C6 E6 FF 85	=
+    ఏనుగు	48 AF E8 FE 24 56 E6 FC 24	=
+    సింహం	ED DC 85 E7 DF FD 85	=
+    దుఃఖం	A7 E6 FE 24 5D 51 85	=
+    అంతఃపురం	41 85 99 E8 FE 5D E7 B3 23 C6 E6 FF 85	=
+    హంసలు	E7 DF FD 85 E7 DC CB 24	=
+    ఆఁ	42 97	=
+    కర్ర్	4D E6 FC 7B C6 8A FF	=
+    ఫిల్మ్	ED 9C CC 8C FD C3	=
+    ఫోన్ కాల్	B8 F9 AF 8C FE 20 4D 3E CC 8C FD	=
+    క్‌ష	4D 8A FC E7 D9	=
+    క్‍ష	4D 8A FC E7 D9	-> క్‌ష
+    ₹౧౦౦	92 31 30 30	-> ₹100
+    ₹100	92 31 30 30	=
+    ౧౨/౦౮/౨౦౨౪	31 32 2F 30 38 2F 32 30 32 34	-> 12/08/2024
+    12:30	31 32 3A 33 30	=
+    తెలుగు, భాష।	99 F0 FE CB 24 56 E6 FC 24 2C 20 BF EA E7 D9 91	=
+    “తెలుగు”	22 22 99 F0 FE CB 24 56 E6 FC 24 27 27	-> ‘‘తెలుగు’’
+    "తెలుగు"	22 22 99 F0 FE CB 24 56 E6 FC 24 27 27	-> ‘‘తెలుగు’’
+    'తెలుగు'	22 99 F0 FE CB 24 56 E6 FC 24 27	-> ‘తెలుగు’
+    రాము's	C6 3E D0 E8 FE 24 24 27	-> రాము’	UNMAPPED s
+    అ–ఆ	41 26 42	-> అ-ఆ
+    అ—ఆ	41 26 26 42	-> అ--ఆ
+    2*3	32 33	-> 23	UNMAPPED *
+    క॥	4D E6 FC 91 91	-> క।।
+    కౄ	4D E6 FC U+0C44	=	UNMAPPED ౄ
+    ౘ	U+0C58	=	UNMAPPED ౘ
+    ఌ	U+0C0C	=	UNMAPPED ఌ
+  wrote unicode-to-shree-tel7.json (769 pairs) and shree-tel7-to-unicode.json (555 pairs)
+limits shree-tel7: 0023 0024 0026 002A 003C 003E 0040 005B 005C 005D 005E 005F 0060 007B 007C 007D 007E 00B0 00D7 00F7 0C00 0C04 0C0C 0C34 0C3C 0C44 0C55 0C58 0C59 0C5A 0C5D 0C61 0C62 0C63 0C77 0C78 0C79 0C7A 0C7B 0C7C 0C7D 0C7E 0C7F
+wrote shree-tel7 into C:/Users/harde/AppData/Local/Temp/claude/C--Users-harde-Desktop-Windows-Font-Software/7673923b-96b4-4287-87dd-a8e7c6533eca/scratchpad/r3/tbl-tel/round1/out1\encoding-limits.json

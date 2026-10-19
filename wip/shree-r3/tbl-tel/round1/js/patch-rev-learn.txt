@@ -1,0 +1,58 @@
+    public Dictionary<string, string> Learn(IReadOnlyList<Truth> truth, FontConverter forward, IEnumerable<char> fontCodes, out string stats, List<string>? log = null)
+    {
+        var canon = Canonical(truth);
+        var pairs = new Dictionary<string, string>(StringComparer.Ordinal);
+        foreach (var (hex, u) in FontCodes) pairs[Staged(FromHex(hex))] = u;
+        foreach (var t in truth.Where(t => t.U.Length == 1 && t.Pref.Length > 0 && Reported(t.Pref).Count == 0))
+            if (canon[t.Pref] == t.U) pairs.TryAdd(Staged(FromHex(t.Pref)), Visual(t.U));
+        int atoms = pairs.Count, added = 0, unkeyable = 0;
+
+        foreach (var level in canon.GroupBy(kv => Staged(FromHex(kv.Key)).Length).OrderBy(g => g.Key))
+        {
+            var conv = new FontConverter(Build(pairs));
+            foreach (var (hex, u) in level.OrderBy(kv => kv.Key, StringComparer.Ordinal))
+            {
+                string got = conv.ConvertText(FromHex(hex));
+                if (Same(got, u, hex, forward)) continue;
+                string key = Staged(FromHex(hex));
+                if (key.Length == 0) { unkeyable++; continue; }
+                log?.Add($"{u}\t{hex}\t{Hex(key)}\tread {got}");
+                pairs[key] = Visual(u);
+                added++;
+            }
+        }
+        int pieces = 0;
+        foreach (var (code, u) in Pieces(truth, fontCodes))
+            if (pairs.TryAdd(Staged(code.ToString()), u)) pieces++;
+        stats = $"{F.Id} reverse: atoms {atoms}, learned {added}, unkeyable {unkeyable}, pieces read alone {pieces}, total {pairs.Count}";
+        return pairs;
+    }
+
+    /// <summary>
+    /// Every code of the fonts read alone, so no code ever passes through as the Latin letter of its code point (a piece
+    /// of a glyph the composer wrote on its own: its carrier E6 61 E6 61 for a lone sign, the e-shape F2 of its lone ై key,
+    /// the pieces of ధ it writes for ౢ). Read off the truth: a code that begins the spelling of a letter alone (ధ = AB A7 E6 FE)
+    /// reads as that letter; a code a sign adds to a letter's spelling (కా = 4D 3E: 3E) reads as that sign; any other code
+    /// of a letter's spelling (the talakattu E6, the spacers FC-FF) as nothing. The most frequent reading wins.
+    /// </summary>
+    public static List<(char Code, string Unicode)> Pieces(IReadOnlyList<Truth> truth, IEnumerable<char> fontCodes)
+    {
+        var byU = truth.ToDictionary(t => t.U, StringComparer.Ordinal);
+        var votes = new Dictionary<char, Dictionary<string, int>>();
+        void Vote(char c, string u) { if (!votes.TryGetValue(c, out var d)) votes[c] = d = new(); d[u] = d.GetValueOrDefault(u) + 1; }
+        foreach (var t in truth.Where(t => t.Composer is null && t.Pref.Length > 0 && Reported(t.Pref).Count == 0))
+        {
+            var codes = FromHex(t.Pref);
+            if (t.U.Length == 1 && (IsCons(t.U[0]) || IsVowel(t.U[0])))
+                for (int i = 0; i < codes.Length; i++) Vote(codes[i], i == 0 ? t.U : "");
+            else if (t.U.Length == 2 && IsCons(t.U[0]) && IsVowelSign(t.U[1]) && byU.TryGetValue(t.U[..1], out var letter))
+            {
+                var own = FromHex(letter.Pref);
+                foreach (char c in codes.Where(c => !own.Contains(c))) Vote(c, t.U[1..]);
+            }
+        }
+        var list = new List<(char, string)>();
+        foreach (char c in fontCodes.Where(c => c > ' '))
+            list.Add((c, votes.TryGetValue(c, out var d) ? d.OrderByDescending(kv => kv.Value).ThenBy(kv => kv.Key, StringComparer.Ordinal).First().Key : ""));
+        return list;
+    }

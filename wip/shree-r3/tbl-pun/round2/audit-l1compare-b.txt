@@ -1,0 +1,93 @@
+{
+ "positions": 2256,
+ "same": 1061,
+ "both-nothing": 1064,
+ "c-different-unicode: other 7 bytes": 2,
+ "d-shree-nothing-textsoft-types: Shift fallback (types the unshifted character)": 10,
+ "b-same-unicode-other-bytes": 32,
+ "c-shree-bytes-only (the Unicode composer answers nothing): same 7 bytes": 12,
+ "e-phonetic-mode-differs: same 7 bytes": 53,
+ "a-textsoft-nothing": 5,
+ "e-phonetic-mode-differs: other 7 bytes": 17,
+ "ctrlShift1-positions": 39,
+ "ctrlShift1-same": 39
+}
+
+== c-different-unicode: other 7 bytes: 2
+  CRTRONIC pun-crtronic L0 "P" codes 2E 6D: shree .ਲ [2E 64]  textsoft "ਲ" [64] [456 64]
+  RAMING pun-raming L0 ">" codes 42 69 62: shree ੳਉ [44 74]  textsoft "ਉਂ" [45 A4] [456 45 A4]
+
+== d-shree-nothing-textsoft-types: Shift fallback (types the unshifted character): 10
+  CRTRONIC pun-crtronic L0 "Q" codes : shree - [-]  textsoft "ਸ਼" [66] [456 66]
+  ENG pun-eng L0 "$" codes : shree - [-]  textsoft "੪" [34] [456 34]
+  ENG pun-eng L0 "@" codes : shree - [-]  textsoft "੨" [32] [456 32]
+  ENG pun-eng L0 "_" codes : shree - [-]  textsoft "-" [2D] [456 2D]
+  GODREJ pun-godrej L0 "G" codes : shree - [-]  textsoft "ਹ" [68] [456 68]
+  GODREJ pun-godrej L0 "J" codes : shree - [-]  textsoft "ਰ" [63] [456 63]
+  NEWROMA pun-newroma L0 "X" codes : shree - [-]  textsoft "਼" [] [456 ]
+  PHONETIC pun-phonetic L0 "$" codes : shree - [-]  textsoft "੪" [34] [456 34]
+  PHONETIC pun-phonetic L0 "@" codes : shree - [-]  textsoft "੨" [32] [456 32]
+  ROMA pun-roma L0 "X" codes : shree - [-]  textsoft "਼" [] [456 ]
+
+== b-same-unicode-other-bytes: 32
+  CRTRONIC pun-crtronic L1 "q" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+  DOE pun-doe L1 "q" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+  ENG pun-eng L0 "#" codes 7E: shree ” [-]  textsoft "”" [27 27] [456 27 27]
+  ENG pun-eng L0 "o" codes 74: shree ੋ [07 7D]  textsoft "ੋ" [7D] [456 7D]
+  ENG pun-eng L0 "u" codes 62: shree ੁ [07 74]  textsoft "ੁ" [74] [456 74]
+  ENG pun-eng L1 "b" codes 7E: shree ” [-]  textsoft "”" [27 27] [456 27 27]
+  ENG pun-eng L1 "d" codes E4: shree ਇ [-]  textsoft "ਇ" [71 42] [456 71 42]
+  ENG pun-eng L1 "u" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+  GODREJ pun-godrej L0 "Q" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+  GODREJ pun-godrej L1 "q" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+  INSCRIPT pa-inscript L0 "F" codes 67 47: shree ਇ [-]  textsoft "ਇ" [71 42] [456 71 42]
+  INSCRIPT pa-inscript L0 "J" codes 51: shree ੴ [B0]  textsoft "ੴ" [31 B0] [456 31 B0]
+
+== c-shree-bytes-only (the Unicode composer answers nothing): same 7 bytes: 12
+  CRTRONIC pun-crtronic L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  DOE pun-doe L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  GODREJ pun-godrej L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  INSCRIPT pa-inscript L0 "V" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  ITR pun-itr L0 "B" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  ITR pun-itr L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  NEWROMA pun-newroma L0 "V" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  NEWROMA pun-newroma L0 "W" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  RAMING pun-raming L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  ROMA pun-roma L1 "w" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  TYPEWRIT pun-typewrit L1 "6" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+  VARITYPE pun-varitype L0 "<" codes 41: shree - [40]  textsoft "ऽ" [40] [456 40]
+
+== e-phonetic-mode-differs: same 7 bytes: 53
+  ENG pun-eng L0 "D" codes 4F: shree ਡ੍ [54]  textsoft "ਡ" [54] [456 54]
+  ENG pun-eng L0 "F" codes 57 D7 64: shree ਫ਼੍ [6C]  textsoft "ਫ਼" [6C] [456 6C]
+  ENG pun-eng L0 "G" codes 78 D7 64: shree ਗ਼੍ [6A]  textsoft "ਗ਼" [6A] [456 6A]
+  ENG pun-eng L0 "J" codes 63 D7 64: shree ਜ਼੍ [6B]  textsoft "ਜ਼" [6B] [456 6B]
+  ENG pun-eng L0 "K" codes 53 D7 64: shree ਖ਼੍ [69]  textsoft "ਖ਼" [69] [456 69]
+  ENG pun-eng L0 "N" codes 4A: shree ਣ੍ [56]  textsoft "ਣ" [56] [456 56]
+  ENG pun-eng L0 "R" codes 59: shree ੜ੍ [6D]  textsoft "ੜ" [6D] [456 6D]
+  ENG pun-eng L0 "S" codes 26 D7 64: shree ਸ਼੍ [66]  textsoft "ਸ਼" [66] [456 66]
+  ENG pun-eng L0 "T" codes 55: shree ਟ੍ [52]  textsoft "ਟ" [52] [456 52]
+  ENG pun-eng L0 "Y" codes 4C: shree ੍ਯ੍ [62]  textsoft "੍ਯ" [62] [456 62]
+  ENG pun-eng L0 "b" codes 71: shree ਬ੍ [5E]  textsoft "ਬ" [5E] [456 5E]
+  ENG pun-eng L0 "c" codes 76: shree ਚ੍ [4D]  textsoft "ਚ" [4D] [456 4D]
+
+== a-textsoft-nothing: 5
+  ENG pun-eng L0 "E" codes 24 6C: shree ਅੇ [41 79]  textsoft "" [] [456 ]
+  ENG pun-eng L0 "I" codes 67 47: shree ਇ [-]  textsoft "" [] [456 ]
+  ENG pun-eng L0 "L" codes 4D: shree ੍ [-]  textsoft "" [] [456 ]
+  ENG pun-eng L0 "q" codes 41: shree ੍ [40]  textsoft "" [] [456 ]
+  ENG pun-eng L0 "x" codes 48: shree ੍ [-]  textsoft "" [] [456 ]
+
+== e-phonetic-mode-differs: other 7 bytes: 17
+  ENG pun-eng L0 "H" codes D2: shree ੍ਹ [AA]  textsoft "ਹ" [68] [456 68]
+  ENG pun-eng L0 "O" codes 42: shree ੳ [43]  textsoft "ਓ" [47] [456 47]
+  ENG pun-eng L0 "V" codes D0: shree ੍ਵ [AB]  textsoft "ਵ" [65] [456 65]
+  ENG pun-eng L0 "W" codes D0: shree ੍ਵ [AB]  textsoft "ਵ" [65] [456 65]
+  ENG pun-eng L0 "e" codes 6C: shree ੇ [07 79]  textsoft "ਏ" [42 79] [456 42 79]
+  ENG pun-eng L0 "i" codes 67: shree ਿ [07 71]  textsoft "ਇ" [71 42] [456 71 42]
+  ENG pun-eng L0 "~" codes D0: shree ੍ਵ [AB]  textsoft "ਵ" [65] [456 65]
+  NEWROMA pun-newroma L0 "E" codes 70: shree ੈ [B1]  textsoft "ਐ" [41 B1] [456 41 B1]
+  NEWROMA pun-newroma L0 "I" codes 68: shree ੀ [72]  textsoft "ਈ" [42 72] [456 42 72]
+  NEWROMA pun-newroma L0 "O" codes 54: shree ੌ [A1]  textsoft "ਔ" [41 A1] [456 41 A1]
+  NEWROMA pun-newroma L0 "U" codes 6E: shree ੂ [76]  textsoft "ਊ" [46] [456 46]
+  NEWROMA pun-newroma L0 "a" codes 6B: shree ਅ [41]  textsoft "ਾ" [70] [456 70]

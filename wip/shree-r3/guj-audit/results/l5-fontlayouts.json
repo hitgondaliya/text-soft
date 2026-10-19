@@ -1,0 +1,1046 @@
+[
+  {
+    "Id": "gu-fl-unicode",
+    "Name": "Unicode",
+    "FontId": "nirmala-gu",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "shruti",
+        "Name": "Shruti (Unicode)",
+        "Family": "Shruti",
+        "enc": "shruti",
+        "table": null
+      },
+      {
+        "Id": "cf-aakar",
+        "Name": "Aakar (Unicode)",
+        "Family": "aakar",
+        "enc": "cf-aakar",
+        "table": null
+      },
+      {
+        "Id": "cf-shruti",
+        "Name": "Shruti (Unicode)",
+        "Family": "Shruti",
+        "enc": "cf-shruti",
+        "table": null
+      },
+      {
+        "Id": "nirmala-gu",
+        "Name": "Nirmala UI (Unicode)",
+        "Family": "Nirmala UI",
+        "enc": "shruti",
+        "table": null
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-shreelipi-ex",
+    "Name": "ShreeLipi-Ex",
+    "FontId": "shree-gujx",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "shree-gujx",
+        "Name": "Shree-GujX (Legacy)",
+        "Family": "SHREE-GUJX-0001",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-guj-1120",
+        "Name": "Shree-Guj 1120 (Legacy)",
+        "Family": "SHREE-GUJX-1120",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "cf-sgujx-0756",
+        "Name": "SHREE-GUJX-0756 (Legacy)",
+        "Family": "SHREE-GUJX-0756",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "cf-sgujx-0757",
+        "Name": "SHREE-GUJX-0757 (Legacy)",
+        "Family": "SHREE-GUJX-0757",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "cf-sgujx-0793",
+        "Name": "SHREE-GUJX-0793 (Legacy)",
+        "Family": "SHREE-GUJX-0793",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0750",
+        "Name": "SHREE-GUJX-0750 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0750",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0751",
+        "Name": "SHREE-GUJX-0751 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0751",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0763",
+        "Name": "SHREE-GUJX-0763 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0763",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0768",
+        "Name": "SHREE-GUJX-0768 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0768",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0769",
+        "Name": "SHREE-GUJX-0769 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0769",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0781",
+        "Name": "SHREE-GUJX-0781 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-0781",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-3700",
+        "Name": "SHREE-GUJX-3700 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-3700",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-5231",
+        "Name": "SHREE-GUJX-5231 (ShreeLipi-Ex)",
+        "Family": "SHREE-GUJX-5231",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0752",
+        "Name": "SHREE-GUJX-0752",
+        "Family": "SHREE-GUJX-0752",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0754",
+        "Name": "SHREE-GUJX-0754",
+        "Family": "SHREE-GUJX-0754",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0755",
+        "Name": "SHREE-GUJX-0755",
+        "Family": "SHREE-GUJX-0755",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0760",
+        "Name": "SHREE-GUJX-0760",
+        "Family": "SHREE-GUJX-0760",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0792",
+        "Name": "SHREE-GUJX-0792",
+        "Family": "SHREE-GUJX-0792",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0765",
+        "Name": "SHREE-GUJX-0765",
+        "Family": "SHREE-GUJX-0765",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0770",
+        "Name": "SHREE-GUJX-0770",
+        "Family": "SHREE-GUJX-0770",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0773",
+        "Name": "SHREE-GUJX-0773",
+        "Family": "SHREE-GUJX-0773",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0775",
+        "Name": "SHREE-GUJX-0775",
+        "Family": "SHREE-GUJX-0775",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0777",
+        "Name": "SHREE-GUJX-0777",
+        "Family": "SHREE-GUJX-0777",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0782",
+        "Name": "SHREE-GUJX-0782",
+        "Family": "SHREE-GUJX-0782",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0784",
+        "Name": "SHREE-GUJX-0784",
+        "Family": "SHREE-GUJX-0784",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0785",
+        "Name": "SHREE-GUJX-0785",
+        "Family": "SHREE-GUJX-0785",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0786",
+        "Name": "SHREE-GUJX-0786",
+        "Family": "SHREE-GUJX-0786",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0788",
+        "Name": "SHREE-GUJX-0788",
+        "Family": "SHREE-GUJX-0788",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0789",
+        "Name": "SHREE-GUJX-0789",
+        "Family": "SHREE-GUJX-0789",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0790",
+        "Name": "SHREE-GUJX-0790",
+        "Family": "SHREE-GUJX-0790",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0791",
+        "Name": "SHREE-GUJX-0791",
+        "Family": "SHREE-GUJX-0791",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0794",
+        "Name": "SHREE-GUJX-0794",
+        "Family": "SHREE-GUJX-0794",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0795",
+        "Name": "SHREE-GUJX-0795",
+        "Family": "SHREE-GUJX-0795",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0796",
+        "Name": "SHREE-GUJX-0796",
+        "Family": "SHREE-GUJX-0796",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0797",
+        "Name": "SHREE-GUJX-0797",
+        "Family": "SHREE-GUJX-0797",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0798",
+        "Name": "SHREE-GUJX-0798",
+        "Family": "SHREE-GUJX-0798",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-0799",
+        "Name": "SHREE-GUJX-0799",
+        "Family": "SHREE-GUJX-0799",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1100",
+        "Name": "SHREE-GUJX-1100",
+        "Family": "SHREE-GUJX-1100",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1103",
+        "Name": "SHREE-GUJX-1103",
+        "Family": "SHREE-GUJX-1103",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1105",
+        "Name": "SHREE-GUJX-1105",
+        "Family": "SHREE-GUJX-1105",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1108",
+        "Name": "SHREE-GUJX-1108",
+        "Family": "SHREE-GUJX-1108",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1109",
+        "Name": "SHREE-GUJX-1109",
+        "Family": "SHREE-GUJX-1109",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1110",
+        "Name": "SHREE-GUJX-1110",
+        "Family": "SHREE-GUJX-1110",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1111",
+        "Name": "SHREE-GUJX-1111",
+        "Family": "SHREE-GUJX-1111",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1112",
+        "Name": "SHREE-GUJX-1112",
+        "Family": "SHREE-GUJX-1112",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1113",
+        "Name": "SHREE-GUJX-1113",
+        "Family": "SHREE-GUJX-1113",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1114",
+        "Name": "SHREE-GUJX-1114",
+        "Family": "SHREE-GUJX-1114",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1116",
+        "Name": "SHREE-GUJX-1116",
+        "Family": "SHREE-GUJX-1116",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1117",
+        "Name": "SHREE-GUJX-1117",
+        "Family": "SHREE-GUJX-1117",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1118",
+        "Name": "SHREE-GUJX-1118",
+        "Family": "SHREE-GUJX-1118",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1119",
+        "Name": "SHREE-GUJX-1119",
+        "Family": "SHREE-GUJX-1119",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1121",
+        "Name": "SHREE-GUJX-1121",
+        "Family": "SHREE-GUJX-1121",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1123",
+        "Name": "SHREE-GUJX-1123",
+        "Family": "SHREE-GUJX-1123",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1124",
+        "Name": "SHREE-GUJX-1124",
+        "Family": "SHREE-GUJX-1124",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1125",
+        "Name": "SHREE-GUJX-1125",
+        "Family": "SHREE-GUJX-1125",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1127",
+        "Name": "SHREE-GUJX-1127",
+        "Family": "SHREE-GUJX-1127",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1128",
+        "Name": "SHREE-GUJX-1128",
+        "Family": "SHREE-GUJX-1128",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1129",
+        "Name": "SHREE-GUJX-1129",
+        "Family": "SHREE-GUJX-1129",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1131",
+        "Name": "SHREE-GUJX-1131",
+        "Family": "SHREE-GUJX-1131",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      },
+      {
+        "Id": "shree-gujx-1134",
+        "Name": "SHREE-GUJX-1134",
+        "Family": "SHREE-GUJX-1134",
+        "enc": "shree-gujx",
+        "table": "unicode-to-shree-gujx"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-shree-lipi-7-0",
+    "Name": "Shree-Lipi 7.0",
+    "FontId": "shree-guj7-0750",
+    "Families": "^SHREE-GUJ7-",
+    "listed": [
+      {
+        "Id": "shree-guj7-001",
+        "Name": "Shree-Guj7-001 (Shree-Lipi 7.0)",
+        "Family": "Shree-Guj7-001",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-002",
+        "Name": "Shree-Guj7-002 (Shree-Lipi 7.0)",
+        "Family": "Shree-Guj7-002",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0750",
+        "Name": "SHREE-GUJ7-0750 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0750",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0751",
+        "Name": "SHREE-GUJ7-0751 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0751",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0763",
+        "Name": "SHREE-GUJ7-0763 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0763",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0768",
+        "Name": "SHREE-GUJ7-0768 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0768",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0769",
+        "Name": "SHREE-GUJ7-0769 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0769",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-0781",
+        "Name": "SHREE-GUJ7-0781 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-0781",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      },
+      {
+        "Id": "shree-guj7-3700",
+        "Name": "SHREE-GUJ7-3700 (Shree-Lipi 7.0)",
+        "Family": "SHREE-GUJ7-3700",
+        "enc": "shree-guj7",
+        "table": "unicode-to-shree-guj7"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-shree-lipi-4-0-5-0-6-0",
+    "Name": "Shree-Lipi 4.0/5.0/6.0",
+    "FontId": "shree-guj-0750",
+    "Families": "^SHREE-GUJ-",
+    "listed": [
+      {
+        "Id": "shree-guj-0750",
+        "Name": "SHREE-GUJ-0750 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0750",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-0751",
+        "Name": "SHREE-GUJ-0751 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0751",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-0763",
+        "Name": "SHREE-GUJ-0763 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0763",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-0768",
+        "Name": "SHREE-GUJ-0768 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0768",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-0769",
+        "Name": "SHREE-GUJ-0769 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0769",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-0781",
+        "Name": "SHREE-GUJ-0781 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-0781",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      },
+      {
+        "Id": "shree-guj-3700",
+        "Name": "SHREE-GUJ-3700 (Shree-Lipi 4.0/5.0/6.0)",
+        "Family": "SHREE-GUJ-3700",
+        "enc": "shree-guj456",
+        "table": "unicode-to-shree-guj456"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-terafont",
+    "Name": "Terafont",
+    "FontId": "terafont-chandan",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "terafont-chandan",
+        "Name": "TERAFONT-CHANDAN",
+        "Family": "TERAFONT-CHANDAN",
+        "enc": "terafont-guj",
+        "table": "unicode-to-terafont-guj"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-isfoc-monolingual",
+    "Name": "ISFOC Monolingual",
+    "FontId": "isfoc-gj-ttchitra",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "isfoc-gj-ttchitra",
+        "Name": "GJ-TTChitra (ISFOC)",
+        "Family": "GJ-TTChitra",
+        "enc": "isfoc-guj",
+        "table": "unicode-to-isfoc-guj"
+      },
+      {
+        "Id": "isfoc-gj-ttdwarika",
+        "Name": "GJ-TTDwarika (ISFOC)",
+        "Family": "GJ-TTDwarika",
+        "enc": "isfoc-guj",
+        "table": "unicode-to-isfoc-guj"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-bhasha-bharati",
+    "Name": "Bhasha Bharati",
+    "FontId": "gopika",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "gopika",
+        "Name": "Gopika (Bhasha Bharati)",
+        "Family": "Gopika",
+        "enc": "gopika-guj",
+        "table": "unicode-to-gopika-guj"
+      },
+      {
+        "Id": "bb-abmar-two",
+        "Name": "B Bharati AbmarTwo (Bhasha Bharati)",
+        "Family": "B Bharati AbmarTwo",
+        "enc": "bhasha-bharti-2-guj",
+        "table": "unicode-to-bhasha-bharti-2-guj"
+      },
+      {
+        "Id": "bb-aswad",
+        "Name": "B Bharati Aswad (Bhasha Bharati)",
+        "Family": "B Bharati Aswad",
+        "enc": "bhasha-bharti-2-guj",
+        "table": "unicode-to-bhasha-bharti-2-guj"
+      },
+      {
+        "Id": "bb1-aabadtwo",
+        "Name": "AabadTwo (Bhasha Bharati)",
+        "Family": "AabadTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aakartwo",
+        "Name": "AakarTwo (Bhasha Bharati)",
+        "Family": "AakarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aanaltwo",
+        "Name": "AanalTwo (Bhasha Bharati)",
+        "Family": "AanalTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-abhaytwo",
+        "Name": "AbhayTwo (Bhasha Bharati)",
+        "Family": "AbhayTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-abhijit",
+        "Name": "Abhijit (Bhasha Bharati)",
+        "Family": "Abhijit",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-abmartwo",
+        "Name": "AbmarTwo (Bhasha Bharati)",
+        "Family": "AbmarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-adarshtwo",
+        "Name": "AdarshTwo (Bhasha Bharati)",
+        "Family": "AdarshTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ajantatwo",
+        "Name": "AjantaTwo (Bhasha Bharati)",
+        "Family": "AjantaTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ajittwo",
+        "Name": "AjitTwo (Bhasha Bharati)",
+        "Family": "AjitTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ajubatwo",
+        "Name": "AjubaTwo (Bhasha Bharati)",
+        "Family": "AjubaTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-akabartwo",
+        "Name": "AkabarTwo (Bhasha Bharati)",
+        "Family": "AkabarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-akshar",
+        "Name": "Akshar (Bhasha Bharati)",
+        "Family": "Akshar",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-alankar",
+        "Name": "Alankar (Bhasha Bharati)",
+        "Family": "Alankar",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-alaptwo",
+        "Name": "AlapTwo (Bhasha Bharati)",
+        "Family": "AlapTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aloktwo",
+        "Name": "AlokTwo (Bhasha Bharati)",
+        "Family": "AlokTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-amaltwo",
+        "Name": "AmalTwo (Bhasha Bharati)",
+        "Family": "AmalTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-amartwo",
+        "Name": "AmarTwo (Bhasha Bharati)",
+        "Family": "AmarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ambartwo",
+        "Name": "AmbarTwo (Bhasha Bharati)",
+        "Family": "AmbarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ambartwolight",
+        "Name": "AmbarTwoLight (Bhasha Bharati)",
+        "Family": "AmbarTwoLight",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-amittwo",
+        "Name": "AmitTwo (Bhasha Bharati)",
+        "Family": "AmitTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-amrut",
+        "Name": "Amrut (Bhasha Bharati)",
+        "Family": "Amrut",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-amrutatwo",
+        "Name": "AmrutaTwo (Bhasha Bharati)",
+        "Family": "AmrutaTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anandtwo",
+        "Name": "AnandTwo (Bhasha Bharati)",
+        "Family": "AnandTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anartwo",
+        "Name": "AnarTwo (Bhasha Bharati)",
+        "Family": "AnarTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aniket",
+        "Name": "Aniket (Bhasha Bharati)",
+        "Family": "Aniket",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anjlitwo",
+        "Name": "AnjliTwo (Bhasha Bharati)",
+        "Family": "AnjliTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-ankantwo",
+        "Name": "AnkanTwo (Bhasha Bharati)",
+        "Family": "AnkanTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anthonitwo",
+        "Name": "AnthoniTwo (Bhasha Bharati)",
+        "Family": "AnthoniTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anurag",
+        "Name": "Anurag (Bhasha Bharati)",
+        "Family": "Anurag",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-anuraglight",
+        "Name": "AnuragLight (Bhasha Bharati)",
+        "Family": "AnuragLight",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aratitwo",
+        "Name": "AratiTwo (Bhasha Bharati)",
+        "Family": "AratiTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-armantwo",
+        "Name": "ArmanTwo (Bhasha Bharati)",
+        "Family": "ArmanTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aruntwo",
+        "Name": "ArunTwo (Bhasha Bharati)",
+        "Family": "ArunTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-aswad",
+        "Name": "Aswad (Bhasha Bharati)",
+        "Family": "Aswad",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-atultwo",
+        "Name": "AtulTwo (Bhasha Bharati)",
+        "Family": "AtulTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-avanitwo",
+        "Name": "AvaniTwo (Bhasha Bharati)",
+        "Family": "AvaniTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-avinashtwo",
+        "Name": "AvinashTwo (Bhasha Bharati)",
+        "Family": "AvinashTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-azhartwo",
+        "Name": "AzharTwo (Bhasha Bharati)",
+        "Family": "AzharTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-bakul",
+        "Name": "Bakul (Bhasha Bharati)",
+        "Family": "Bakul",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-bhushan",
+        "Name": "Bhushan (Bhasha Bharati)",
+        "Family": "Bhushan",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-bimal",
+        "Name": "Bimal (Bhasha Bharati)",
+        "Family": "Bimal",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-gopikafantwo-stripe",
+        "Name": "GopikaFanTwo Stripe (Bhasha Bharati)",
+        "Family": "GopikaFanTwo Stripe",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-gopikalighttwo",
+        "Name": "GopikalightTwo (Bhasha Bharati)",
+        "Family": "GopikalightTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-gopikatwo",
+        "Name": "GopikaTwo (Bhasha Bharati)",
+        "Family": "GopikaTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-gopikatwooutline",
+        "Name": "GopikaTwooutline (Bhasha Bharati)",
+        "Family": "GopikaTwooutline",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-maruti",
+        "Name": "Maruti (Bhasha Bharati)",
+        "Family": "Maruti",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-marutioutline",
+        "Name": "MarutiOutline (Bhasha Bharati)",
+        "Family": "MarutiOutline",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-marutistrip",
+        "Name": "MarutiStrip (Bhasha Bharati)",
+        "Family": "MarutiStrip ",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-rachnatwo",
+        "Name": "RachnaTwo (Bhasha Bharati)",
+        "Family": "RachnaTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-swastiktwo",
+        "Name": "SwastikTwo (Bhasha Bharati)",
+        "Family": "SwastikTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-titlelighttwo",
+        "Name": "TitleLightTwo (Bhasha Bharati)",
+        "Family": "TitleLightTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-titletwo",
+        "Name": "TitleTwo (Bhasha Bharati)",
+        "Family": "TitleTwo",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      },
+      {
+        "Id": "bb1-titletwooutline",
+        "Name": "TitleTwoOutline (Bhasha Bharati)",
+        "Family": "TitleTwoOutline",
+        "enc": "bhasha-bharati-1-guj",
+        "table": "unicode-to-bhasha-bharati-1-guj"
+      }
+    ]
+  },
+  {
+    "Id": "gu-fl-akruti-monolingual",
+    "Name": "Akruti Monolingual",
+    "FontId": "akruti-guj-archana",
+    "Families": null,
+    "listed": [
+      {
+        "Id": "akruti-guj-archana",
+        "Name": "Akruti Guj Archana",
+        "Family": "AkrutiGujArchana",
+        "enc": "akruti-guj",
+        "table": "unicode-to-akruti-guj"
+      }
+    ]
+  }
+]

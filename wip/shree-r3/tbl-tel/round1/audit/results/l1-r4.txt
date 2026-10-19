@@ -1,0 +1,67 @@
+{
+ "positions": 3008,
+ "b-same-unicode-other-bytes": 85,
+ "same": 1460,
+ "same (after the documented glyph exceptions)": 33,
+ "c-different-unicode: other 7 bytes": 35,
+ "c-shree-bytes-only (the Unicode composer answers nothing): other 7 bytes": 34,
+ "both-nothing": 119,
+ "d-shree-nothing-textsoft-types: other": 14,
+ "d-shree-nothing-textsoft-types: Ctrl+Space fallback (types the key's own character)": 1171,
+ "x-typing-differs-from-converter": 39,
+ "e-phonetic-mode-differs: same 7 bytes": 46,
+ "e-phonetic-mode-differs: other 7 bytes": 3,
+ "a-textsoft-nothing": 2,
+ "ctrlShift1-positions": 288,
+ "ctrlShift1-differs": 144,
+ "ctrlShift1-same": 144
+}
+
+== b-same-unicode-other-bytes: 85
+  APPLE tel-apple L0 "!" codes 2A: shree * [92]  textsoft "*" [] [7w 92]
+  APPLE tel-apple L0 "$" codes 7B: shree — [9B 9B]  textsoft "—" [26 26] [7w 26 26]
+  APPLE tel-apple L0 "%" codes 7D: shree – [9B]  textsoft "–" [26] [7w 26]
+
+== c-different-unicode: other 7 bytes: 35
+  APPLE tel-apple L0 "H" codes 44: shree ్ [-]  textsoft "్‌" [8A] [7w 8A]
+  APPLE tel-apple L0 "[" codes 6D: shree ఐ్ [4F F2]  textsoft "ఐ" [49] [7w 49]
+  CRTRONIC tel-crtronic L0 "X" codes 6D: shree ఐ్ [4F F2]  textsoft "ఐ" [49] [7w 49]
+
+== c-shree-bytes-only (the Unicode composer answers nothing): other 7 bytes: 34
+  APPLE tel-apple L0 "Q" codes E1: shree - [93]  textsoft "అ" [41] [7w 41]
+  APPLE tel-apple L1 "a" codes EA: shree - [3B]  textsoft "ల" [CB] [7w CB]
+  APPLE tel-apple L1 "f" codes E9: shree - [2B]  textsoft "వ" [D0 E8 FE] [7w D0 E8 FE]
+
+== d-shree-nothing-textsoft-types: other: 14
+  APPLE tel-apple L0 "h" codes 64: shree - [-]  textsoft "్" [8A] [7w 8A]
+  CRTRONIC tel-crtronic L1 "d" codes 64: shree - [-]  textsoft "్" [8A] [7w 8A]
+  ITR tel-itr L0 "t" codes 64: shree - [-]  textsoft "్" [8A] [7w 8A]
+
+== d-shree-nothing-textsoft-types: Ctrl+Space fallback (types the key's own character): 1171
+  APPLE tel-apple L1 "!" codes : shree - [-]  textsoft "*" [] [7w 92]
+  APPLE tel-apple L1 "\"" codes : shree - [-]  textsoft "ష" [E7 D9] [7w E7 D9]
+  APPLE tel-apple L1 "#" codes : shree - [-]  textsoft "%" [25] [7w 25]
+
+== x-typing-differs-from-converter: 39
+  ENG tel-eng L0 "\"" codes 22: shree ‘ [22]  textsoft "\"" [22] [7w 22]
+  ENG tel-eng L0 "#" codes E3: shree ఽ [AC]  textsoft "#" [23] [7w 23]
+  ENG tel-eng L0 "$" codes E0: shree ఁ [97]  textsoft "$" [24] [7w 24]
+
+== e-phonetic-mode-differs: same 7 bytes: 46
+  ENG tel-eng L0 "0" codes 30: shree ౦ [30]  textsoft "0" [30] [7w 30]
+  ENG tel-eng L0 "1" codes 31: shree ౧ [31]  textsoft "1" [31] [7w 31]
+  ENG tel-eng L0 "2" codes 32: shree ౨ [32]  textsoft "2" [32] [7w 32]
+
+== e-phonetic-mode-differs: other 7 bytes: 3
+  ENG tel-eng L1 "a" codes 44: shree ్ [-]  textsoft "్‌" [8A] [7w 8A]
+  PHONETIC tel-phonetic L0 "`" codes 6D: shree ఐ్ [4F F2]  textsoft "ఐ" [49] [7w 49]
+  PHONETIC tel-phonetic L1 "a" codes 44: shree ్ [-]  textsoft "్‌" [8A] [7w 8A]
+
+== a-textsoft-nothing: 2
+  ITR tel-itr L1 "k" codes E1: shree - [93]  textsoft "" [] [7w ]
+  VISION tel-vision L1 "d" codes E9: shree - [2B]  textsoft "" [] [7w ]
+
+== ctrlShift1: 144
+   te-inscript L2 "$" codes : shree ₹ [-]  textsoft "₹" [92] [7w U+20B9]
+   te-inscript L2 "-" codes : shree — [9B 9B]  textsoft "—" [26 26] [7w 26 26]
+   te-inscript L2 "K" codes : shree ౡ [-]  textsoft "ౡ" [U+0C61] [7w U+0C61]

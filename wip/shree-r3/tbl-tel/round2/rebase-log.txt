@@ -1,0 +1,153 @@
+tel-indica '^' (vk 54 shift): "్రత" -> "త్ర" (INDICA.TEL B2): త్ర typed as ్రత (the chart's visual order; not text): Shree's slot D7 67 is త్ర
+tel-indica '*' (vk 56 shift): "్రశ" -> "శ్ర" (INDICA.TEL B1): శ్ర typed as ్రశ: Shree's slot D7 4F is శ్ర
+telugu-inscript '^' (vk 54 shift): "్రత" -> "త్ర" (INSCRIPT.TEL B8): త్ర typed as ్రత (the chart's visual order; not text): Shree's slot D7 67 is త్ర
+telugu-inscript '*' (vk 56 shift): "్రశ" -> "శ్ర" (INSCRIPT.TEL B9): శ్ర typed as ్రశ: Shree's slot D7 4F is శ్ర
+tel-doe 'w' (vk 87 base): "ఐ్" -> "ఐ" (DOE.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-godrej 'q' (vk 81 base): "ఐ్" -> "ఐ" (GODREJ.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-indica 'w' (vk 87 base): "ఐ‌" -> "ఐ" (INDICA.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+telugu-inscript 'w' (vk 87 base): "ఐ్" -> "ఐ" (INSCRIPT.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-prakash 'w' (vk 87 base): "ఐ్" -> "ఐ" (PRAKASH.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-typewrit 'q' (vk 81 base): "ఐ్" -> "ఐ" (TYPEWRIT.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-crtronic 'X' (vk 88 shift): "ఐ్" -> "ఐ" (CRTRONIC.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-newroma '[' (vk 219 base): "ఐ్" -> "ఐ" (NEWROMA.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-roma '`' (vk 192 base): "ఐ్" -> "ఐ" (ROMA.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-eng '`' (vk 192 base): "ఐ్" -> "ఐ" (ENG.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-phonetic '`' (vk 192 base): "ఐ్" -> "ఐ" (PHONETIC.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-itr 'O' (vk 79 shift): "ఐొ" -> "ఐ" (ITR.TEL 6D): the ై key alone types ఐ (it typed a placeholder, and Cఐ్ after any letter but క)
+tel-newroma Ctrl+Space 'e': "ఐ్" -> "ఐ" (NEWROMA.TEL 6D) (and its run): the ై key on Ctrl+Space
+tel-doe 'S' (vk 83 shift): "ఎ‌" -> "ఎ" (DOE.TEL 42): ఎ, without the ZWNJ the chart's cell carried
+tel-godrej 'F' (vk 70 shift): "ఎ‌" -> "ఎ" (GODREJ.TEL 42): ఎ, without the ZWNJ the chart's cell carried
+tel-indica 'Z' (vk 90 shift): "ఎ‌" -> "ఎ" (INDICA.TEL 42): ఎ, without the ZWNJ the chart's cell carried
+telugu-inscript 'Z' (vk 90 shift): "ఎ‌" -> "ఎ" (INSCRIPT.TEL 42): ఎ, without the ZWNJ the chart's cell carried
+tel-itr ':' (vk 186 shift): "ఎ‌" -> "ఎ" (ITR.TEL 42): ఎ, without the ZWNJ the chart's cell carried
+tel-typewrit '@' (vk 50 shift): "ఞ" -> "్ఞ" (TYPEWRIT.TEL C6): the subjoined ఞ (Shree's slot 64 D2)
+tel-prakash 'D' (vk 68 shift): undefined -> "్" (PRAKASH.TEL 64): the link (virama), Shree's 64
+tel-itr 'a' (vk 65 base): "గ" -> "" (ITR.TEL FF): Shree's ITR has nothing on a; గ is Ctrl+Space a, where the chart prints it too
+tel-itr 'e' (vk 69 base): "ఝ" -> "" (ITR.TEL FF): Shree's ITR has nothing on e; ఝ is Ctrl+Space e, where the chart prints it too
+tel-itr 'i' (vk 73 base): "ల" -> "" (ITR.TEL FF): Shree's ITR has nothing on i; ల is Ctrl+Space i, where the chart prints it too
+tel-itr 'q' (vk 81 base): "బ" -> "" (ITR.TEL FF): Shree's ITR has nothing on q; బ is Ctrl+Space q, where the chart prints it too
+tel-itr 'r' (vk 82 base): "క్ష" -> "" (ITR.TEL FF): Shree's ITR has nothing on r; క్ష is Ctrl+Space r, where the chart prints it too
+tel-itr 'w' (vk 87 base): "ఘ" -> "" (ITR.TEL FF): Shree's ITR has nothing on w; ఘ is Ctrl+Space w, where the chart prints it too
+tel-apple 'H' (vk 72 shift): "్" -> "్‌" (APPLE.TEL 44): the halant key: the visible virama, no conjunct
+tel-crtronic Ctrl+Space 'o': "్" -> "్‌" (CRTRONIC.TEL 44) (and its run): the halant key on Ctrl+Space: the visible virama, no conjunct
+tel-doe 'z' (vk 90 base): "్" -> "్‌" (DOE.TEL 44): the halant key: the visible virama, no conjunct
+tel-eng Ctrl+Space 'a': "్" -> "్‌" (ENG.TEL 44) (and its run): the halant key on Ctrl+Space: the visible virama, no conjunct
+tel-godrej '@' (vk 50 shift): "్" -> "్‌" (GODREJ.TEL 44): the halant key: the visible virama, no conjunct
+tel-indica Ctrl+Space 'd': "్" -> "్‌" (INDICA.TEL 44) (and its run): the halant key on Ctrl+Space: the visible virama, no conjunct
+tel-itr 'S' (vk 83 shift): "్" -> "్‌" (ITR.TEL 44): the halant key: the visible virama, no conjunct
+tel-micro 'D' (vk 68 shift): "్" -> "్‌" (MICRO.TEL 44): the halant key: the visible virama, no conjunct
+tel-mono 'D' (vk 68 shift): "్" -> "్‌" (MONO.TEL 44): the halant key: the visible virama, no conjunct
+tel-newroma 'f' (vk 70 base): "్" -> "్‌" (NEWROMA.TEL 44): the halant key: the visible virama, no conjunct
+tel-phonetic Ctrl+Space 'a': "్" -> "్‌" (PHONETIC.TEL 44) (and its run): the halant key on Ctrl+Space: the visible virama, no conjunct
+tel-prakash 'X' (vk 88 shift): "్" -> "్‌" (PRAKASH.TEL 44): the halant key: the visible virama, no conjunct
+tel-roma 'F' (vk 70 shift): "్" -> "్‌" (ROMA.TEL 44): the halant key: the visible virama, no conjunct
+tel-typewrit '#' (vk 51 shift): "్" -> "్‌" (TYPEWRIT.TEL 44): the halant key: the visible virama, no conjunct
+tel-vision 'x' (vk 88 base): "్" -> "్‌" (VISION.TEL 44): the halant key: the visible virama, no conjunct
+tel-apple '_' (vk 189 shift): unset (typed "-") -> "" (APPLE.TEL 5F = FF)
+tel-apple '|' (vk 220 shift): unset (typed "ఽ") -> "" (APPLE.TEL 7C = FF)
+tel-crtronic 'A' (vk 65 shift): unset (typed "ఓ") -> "" (CRTRONIC.TEL 41 = FF)
+tel-crtronic 'G' (vk 71 shift): unset (typed "ణ") -> "" (CRTRONIC.TEL 47 = FF)
+tel-crtronic 'J' (vk 74 shift): unset (typed "గ") -> "" (CRTRONIC.TEL 4A = FF)
+tel-crtronic 'K' (vk 75 shift): unset (typed "ఏ") -> "" (CRTRONIC.TEL 4B = FF)
+tel-crtronic 'L' (vk 76 shift): unset (typed "ఈ") -> "" (CRTRONIC.TEL 4C = FF)
+tel-crtronic 'M' (vk 77 shift): unset (typed "ఋ") -> "" (CRTRONIC.TEL 4D = FF)
+tel-crtronic 'N' (vk 78 shift): unset (typed "ప") -> "" (CRTRONIC.TEL 4E = FF)
+tel-crtronic 'O' (vk 79 shift): unset (typed "ఇ") -> "" (CRTRONIC.TEL 4F = FF)
+tel-crtronic 'P' (vk 80 shift): unset (typed "ఉ") -> "" (CRTRONIC.TEL 50 = FF)
+tel-crtronic 'U' (vk 85 shift): unset (typed "య") -> "" (CRTRONIC.TEL 55 = FF)
+tel-crtronic 'V' (vk 86 shift): unset (typed "చ") -> "" (CRTRONIC.TEL 56 = FF)
+tel-crtronic 'W' (vk 87 shift): unset (typed "క") -> "" (CRTRONIC.TEL 57 = FF)
+tel-crtronic 'Y' (vk 89 shift): unset (typed "త") -> "" (CRTRONIC.TEL 59 = FF)
+tel-crtronic 'Z' (vk 90 shift): unset (typed "హ") -> "" (CRTRONIC.TEL 5A = FF)
+tel-crtronic '_' (vk 189 shift): unset (typed "ఫ") -> "" (CRTRONIC.TEL 5F = FF)
+tel-doe '^' (vk 54 shift): unset (typed "౬") -> "" (DOE.TEL 5E = FF)
+tel-doe '`' (vk 192 base): unset (typed the raw key) -> "" (DOE.TEL 60 = FF)
+tel-doe '|' (vk 220 shift): unset (typed "ౠ") -> "" (DOE.TEL 7C = FF)
+tel-doe '~' (vk 192 shift): unset (typed the raw key) -> "" (DOE.TEL 7E = FF)
+tel-eng '\' (vk 220 base): unset (typed the raw key) -> "" (ENG.TEL 5C = FF)
+tel-eng '^' (vk 54 shift): unset (typed "౬") -> "" (ENG.TEL 5E = FF)
+tel-eng '_' (vk 189 shift): unset (typed "-") -> "" (ENG.TEL 5F = FF)
+tel-eng '{' (vk 219 shift): unset (typed "ఉ") -> "" (ENG.TEL 7B = FF)
+tel-eng '|' (vk 220 shift): unset (typed the raw key) -> "" (ENG.TEL 7C = FF)
+tel-eng '}' (vk 221 shift): unset (typed "శ్రీ") -> "" (ENG.TEL 7D = FF)
+tel-eng '~' (vk 192 shift): unset (typed "ఐ") -> "" (ENG.TEL 7E = FF)
+telugu-inscript '|' (vk 220 shift): unset (typed "శ్రీ") -> "" (INSCRIPT.TEL 7C = FF)
+tel-itr 'k' (vk 75 base): unset (typed the raw key) -> "" (ITR.TEL 6B = FF)
+tel-itr 'm' (vk 77 base): unset (typed the raw key) -> "" (ITR.TEL 6D = FF)
+tel-itr 'v' (vk 86 base): unset (typed the raw key) -> "" (ITR.TEL 76 = FF)
+tel-itr 'z' (vk 90 base): unset (typed the raw key) -> "" (ITR.TEL 7A = FF)
+tel-itr '{' (vk 219 shift): unset (typed "ఛ") -> "" (ITR.TEL 7B = FF)
+tel-itr '~' (vk 192 shift): unset (typed "ళ") -> "" (ITR.TEL 7E = FF)
+tel-micro '$' (vk 52 shift): unset (typed "౪") -> "" (MICRO.TEL 24 = FF)
+tel-mono 'q' (vk 81 base): unset (typed the raw key) -> "" (MONO.TEL 71 = FF)
+tel-newroma '#' (vk 51 shift): unset (typed "౩") -> "" (NEWROMA.TEL 23 = FF)
+tel-newroma '$' (vk 52 shift): unset (typed "౪") -> "" (NEWROMA.TEL 24 = FF)
+tel-newroma '@' (vk 50 shift): unset (typed "౨") -> "" (NEWROMA.TEL 40 = FF)
+tel-newroma '\' (vk 220 base): unset (typed the raw key) -> "" (NEWROMA.TEL 5C = FF)
+tel-newroma '`' (vk 192 base): unset (typed the raw key) -> "" (NEWROMA.TEL 60 = FF)
+tel-newroma '|' (vk 220 shift): unset (typed the raw key) -> "" (NEWROMA.TEL 7C = FF)
+tel-newroma '}' (vk 221 shift): unset (typed "ఒ") -> "" (NEWROMA.TEL 7D = FF)
+tel-newroma '~' (vk 192 shift): unset (typed the raw key) -> "" (NEWROMA.TEL 7E = FF)
+tel-phonetic 'F' (vk 70 shift): unset (typed "ఫ్") -> "" (PHONETIC.TEL 46 = FF)
+tel-phonetic 'Q' (vk 81 shift): unset (typed "క్") -> "" (PHONETIC.TEL 51 = FF)
+tel-phonetic 'W' (vk 87 shift): unset (typed "వ్") -> "" (PHONETIC.TEL 57 = FF)
+tel-phonetic '\' (vk 220 base): unset (typed the raw key) -> "" (PHONETIC.TEL 5C = FF)
+tel-phonetic '^' (vk 54 shift): unset (typed "౬") -> "" (PHONETIC.TEL 5E = FF)
+tel-phonetic '_' (vk 189 shift): unset (typed "-") -> "" (PHONETIC.TEL 5F = FF)
+tel-phonetic '{' (vk 219 shift): unset (typed "ఉ") -> "" (PHONETIC.TEL 7B = FF)
+tel-phonetic '|' (vk 220 shift): unset (typed the raw key) -> "" (PHONETIC.TEL 7C = FF)
+tel-phonetic '}' (vk 221 shift): unset (typed "శ్రీ") -> "" (PHONETIC.TEL 7D = FF)
+tel-phonetic '~' (vk 192 shift): unset (typed "ఐ") -> "" (PHONETIC.TEL 7E = FF)
+tel-prakash ']' (vk 221 base): unset (typed the raw key) -> "" (PRAKASH.TEL 5D = FF)
+tel-roma '_' (vk 189 shift): unset (typed "-") -> "" (ROMA.TEL 5F = FF)
+tel-roma '}' (vk 221 shift): unset (typed "శ్రీ") -> "" (ROMA.TEL 7D = FF)
+tel-vision 'B' (vk 66 shift): unset (typed "వ") -> "" (VISION.TEL 42 = FF)
+tel-vision '\' (vk 220 base): unset (typed the raw key) -> "" (VISION.TEL 5C = FF)
+tel-vision '}' (vk 221 shift): unset (typed "ఞ") -> "" (VISION.TEL 7D = FF)
+tel-apple 'Q' (vk 81 shift): unset (typed "అ") -> "" (APPLE.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-doe 'X' (vk 88 shift): unset (typed "ం") -> "" (DOE.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-eng '@' (vk 50 shift): unset (typed "౨") -> "" (ENG.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+telugu-inscript 'B' (vk 66 shift): unset (typed "వ") -> "" (INSCRIPT.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-newroma 'W' (vk 87 shift): unset (typed "వ") -> "" (NEWROMA.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-phonetic '@' (vk 50 shift): unset (typed "౨") -> "" (PHONETIC.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-roma 'X' (vk 88 shift): unset (typed "ష") -> "" (ROMA.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+tel-vision '>' (vk 190 shift): unset (typed ".") -> "" (VISION.TEL E1: a code only the 7 composer types, the ra-vattu hook 93 after the syllable; the Unicode composer types nothing)
+114 edits (61 empty slots, 8 7-only slots), 16 files written
+layouts rc=0
+specials "e" (ె, also alone) removed
+vowels "e" = ["ఎ","ె"]: Shree's e (62): ఎ alone, ె after a letter
+vowels "A" = ["అ",""]: Shree's A (51) = అ
+vowels "I" = ["ఇ","ి"]: Shree's I (53) = ఇ
+vowels "U" = ["ఊ","ూ"]: Shree's U (26) = ఊ / ూ
+vowels "V" = ["ఔ","ౌ"]: Shree's V (40) = ఔ / ౌ
+vowels "Y" = ["ఎ","ె"]: Shree's Y (42) = ఎ
+vowels "`" = ["ఐ","ై"]: Shree's ` (6D) = ై after a letter, ఐ alone
+consonants "B" = "భ": Shree's B (4A) = భ
+consonants "C" = "ఛ": Shree's C (43) = ఛ
+consonants "F" = "హ": Shree's F (4C) = హ
+consonants "G" = "ఘ": Shree's G (57) = ఘ
+consonants "J" = "ఝ": Shree's J (58) = ఝ
+consonants "K" = "ఖ": Shree's K (45) = ఖ
+consonants "P" = "ఫ": Shree's P (59) = ఫ
+consonants "Q" = "న": Shree's Q (6A) = న
+consonants "W" = "ప": Shree's W (79) = ప
+consonants "X" = "ఙ": Shree's X (D1) = ఙ
+consonants "q" = "క": Shree's q (65) = క
+consonants "w" = "వ": Shree's w (6F) = వ
+specials "#" = "ఽ": Shree's # (E3) = ఽ
+specials ">" = "।": Shree's > (E4) = ।
+specials "]" = "శ్రీ": Shree's ] (D8) = శ్రీ
+specials "[" = "ఉ": Shree's [ (4E) = ఉ
+specials "<" = ",": Shree's < (2C) = ,
+specials "Z" = "్ర": Shree's Z (D7) = the ra-vattu ్ర
+eng rc=0
+fonts rewired: 2
+lang rc=0
+wrote shree-tel7
+wrote shree-tel7w
+limits rc=0
+edited ShreeNonIndicTests.cs
+edited ShreeFontCmapTests.cs
+tests rc=0
+edited C:/Users/harde/AppData/Local/Temp/claude/C--Users-harde-Desktop-Windows-Font-Software/7673923b-96b4-4287-87dd-a8e7c6533eca/scratchpad/r3/tbl-tel/repo/tools/RegisterFonts/Program.cs
+regfonts rc=0

@@ -1,0 +1,7458 @@
+[
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": " ",
+    "inHex": "0020",
+    "out": " ",
+    "outHex": "20",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક ક",
+    "inHex": "0A95 0020 0A95",
+    "out": "L$ L$",
+    "outHex": "4C 24 20 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": " ",
+    "inHex": "0020",
+    "out": " ",
+    "outHex": "20",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક ક",
+    "inHex": "0A95 0020 0A95",
+    "out": "L$ L$",
+    "outHex": "4C 24 20 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "!",
+    "inHex": "0021",
+    "out": "!",
+    "outHex": "21",
+    "unmapped": [
+      "!"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક!ક",
+    "inHex": "0A95 0021 0A95",
+    "out": "L$!L$",
+    "outHex": "4C 24 21 4C 24",
+    "unmapped": [
+      "!"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "!",
+    "inHex": "0021",
+    "out": "!",
+    "outHex": "21",
+    "unmapped": [
+      "!"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક!ક",
+    "inHex": "0A95 0021 0A95",
+    "out": "L$!L$",
+    "outHex": "4C 24 21 4C 24",
+    "unmapped": [
+      "!"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "\"",
+    "inHex": "0022",
+    "out": "\"",
+    "outHex": "22",
+    "unmapped": [
+      "\""
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક\"ક",
+    "inHex": "0A95 0022 0A95",
+    "out": "L$\"L$",
+    "outHex": "4C 24 22 4C 24",
+    "unmapped": [
+      "\""
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "\"",
+    "inHex": "0022",
+    "out": "\"",
+    "outHex": "22",
+    "unmapped": [
+      "\""
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક\"ક",
+    "inHex": "0A95 0022 0A95",
+    "out": "L$\"L$",
+    "outHex": "4C 24 22 4C 24",
+    "unmapped": [
+      "\""
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "#",
+    "inHex": "0023",
+    "out": "#",
+    "outHex": "23",
+    "unmapped": [
+      "#"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક#ક",
+    "inHex": "0A95 0023 0A95",
+    "out": "L$#L$",
+    "outHex": "4C 24 23 4C 24",
+    "unmapped": [
+      "#"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "#",
+    "inHex": "0023",
+    "out": "#",
+    "outHex": "23",
+    "unmapped": [
+      "#"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક#ક",
+    "inHex": "0A95 0023 0A95",
+    "out": "L$#L$",
+    "outHex": "4C 24 23 4C 24",
+    "unmapped": [
+      "#"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "$",
+    "inHex": "0024",
+    "out": "$",
+    "outHex": "24",
+    "unmapped": [
+      "$"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક$ક",
+    "inHex": "0A95 0024 0A95",
+    "out": "L$$L$",
+    "outHex": "4C 24 24 4C 24",
+    "unmapped": [
+      "$"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "$",
+    "inHex": "0024",
+    "out": "$",
+    "outHex": "24",
+    "unmapped": [
+      "$"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક$ક",
+    "inHex": "0A95 0024 0A95",
+    "out": "L$$L$",
+    "outHex": "4C 24 24 4C 24",
+    "unmapped": [
+      "$"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "%",
+    "inHex": "0025",
+    "out": "%",
+    "outHex": "25",
+    "unmapped": [
+      "%"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક%ક",
+    "inHex": "0A95 0025 0A95",
+    "out": "L$%L$",
+    "outHex": "4C 24 25 4C 24",
+    "unmapped": [
+      "%"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "%",
+    "inHex": "0025",
+    "out": "%",
+    "outHex": "25",
+    "unmapped": [
+      "%"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક%ક",
+    "inHex": "0A95 0025 0A95",
+    "out": "L$%L$",
+    "outHex": "4C 24 25 4C 24",
+    "unmapped": [
+      "%"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "&",
+    "inHex": "0026",
+    "out": "&",
+    "outHex": "26",
+    "unmapped": [
+      "&"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક&ક",
+    "inHex": "0A95 0026 0A95",
+    "out": "L$&L$",
+    "outHex": "4C 24 26 4C 24",
+    "unmapped": [
+      "&"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "&",
+    "inHex": "0026",
+    "out": "&",
+    "outHex": "26",
+    "unmapped": [
+      "&"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક&ક",
+    "inHex": "0A95 0026 0A95",
+    "out": "L$&L$",
+    "outHex": "4C 24 26 4C 24",
+    "unmapped": [
+      "&"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "'",
+    "inHex": "0027",
+    "out": "'",
+    "outHex": "27",
+    "unmapped": [
+      "'"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક'ક",
+    "inHex": "0A95 0027 0A95",
+    "out": "L$'L$",
+    "outHex": "4C 24 27 4C 24",
+    "unmapped": [
+      "'"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "'",
+    "inHex": "0027",
+    "out": "'",
+    "outHex": "27",
+    "unmapped": [
+      "'"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક'ક",
+    "inHex": "0A95 0027 0A95",
+    "out": "L$'L$",
+    "outHex": "4C 24 27 4C 24",
+    "unmapped": [
+      "'"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "(",
+    "inHex": "0028",
+    "out": "(",
+    "outHex": "28",
+    "unmapped": [
+      "("
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક(ક",
+    "inHex": "0A95 0028 0A95",
+    "out": "L$(L$",
+    "outHex": "4C 24 28 4C 24",
+    "unmapped": [
+      "("
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "(",
+    "inHex": "0028",
+    "out": "(",
+    "outHex": "28",
+    "unmapped": [
+      "("
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક(ક",
+    "inHex": "0A95 0028 0A95",
+    "out": "L$(L$",
+    "outHex": "4C 24 28 4C 24",
+    "unmapped": [
+      "("
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ")",
+    "inHex": "0029",
+    "out": ")",
+    "outHex": "29",
+    "unmapped": [
+      ")"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક)ક",
+    "inHex": "0A95 0029 0A95",
+    "out": "L$)L$",
+    "outHex": "4C 24 29 4C 24",
+    "unmapped": [
+      ")"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ")",
+    "inHex": "0029",
+    "out": ")",
+    "outHex": "29",
+    "unmapped": [
+      ")"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક)ક",
+    "inHex": "0A95 0029 0A95",
+    "out": "L$)L$",
+    "outHex": "4C 24 29 4C 24",
+    "unmapped": [
+      ")"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "*",
+    "inHex": "002A",
+    "out": "*",
+    "outHex": "2A",
+    "unmapped": [
+      "*"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક*ક",
+    "inHex": "0A95 002A 0A95",
+    "out": "L$*L$",
+    "outHex": "4C 24 2A 4C 24",
+    "unmapped": [
+      "*"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "*",
+    "inHex": "002A",
+    "out": "*",
+    "outHex": "2A",
+    "unmapped": [
+      "*"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક*ક",
+    "inHex": "0A95 002A 0A95",
+    "out": "L$*L$",
+    "outHex": "4C 24 2A 4C 24",
+    "unmapped": [
+      "*"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "+",
+    "inHex": "002B",
+    "out": "+",
+    "outHex": "2B",
+    "unmapped": [
+      "+"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક+ક",
+    "inHex": "0A95 002B 0A95",
+    "out": "L$+L$",
+    "outHex": "4C 24 2B 4C 24",
+    "unmapped": [
+      "+"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "+",
+    "inHex": "002B",
+    "out": "+",
+    "outHex": "2B",
+    "unmapped": [
+      "+"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક+ક",
+    "inHex": "0A95 002B 0A95",
+    "out": "L$+L$",
+    "outHex": "4C 24 2B 4C 24",
+    "unmapped": [
+      "+"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ",",
+    "inHex": "002C",
+    "out": ",",
+    "outHex": "2C",
+    "unmapped": [
+      ","
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક,ક",
+    "inHex": "0A95 002C 0A95",
+    "out": "L$,L$",
+    "outHex": "4C 24 2C 4C 24",
+    "unmapped": [
+      ","
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ",",
+    "inHex": "002C",
+    "out": ",",
+    "outHex": "2C",
+    "unmapped": [
+      ","
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક,ક",
+    "inHex": "0A95 002C 0A95",
+    "out": "L$,L$",
+    "outHex": "4C 24 2C 4C 24",
+    "unmapped": [
+      ","
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "-",
+    "inHex": "002D",
+    "out": "-",
+    "outHex": "2D",
+    "unmapped": [
+      "-"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક-ક",
+    "inHex": "0A95 002D 0A95",
+    "out": "L$-L$",
+    "outHex": "4C 24 2D 4C 24",
+    "unmapped": [
+      "-"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "-",
+    "inHex": "002D",
+    "out": "-",
+    "outHex": "2D",
+    "unmapped": [
+      "-"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક-ક",
+    "inHex": "0A95 002D 0A95",
+    "out": "L$-L$",
+    "outHex": "4C 24 2D 4C 24",
+    "unmapped": [
+      "-"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ".",
+    "inHex": "002E",
+    "out": ".",
+    "outHex": "2E",
+    "unmapped": [
+      "."
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક.ક",
+    "inHex": "0A95 002E 0A95",
+    "out": "L$.L$",
+    "outHex": "4C 24 2E 4C 24",
+    "unmapped": [
+      "."
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ".",
+    "inHex": "002E",
+    "out": ".",
+    "outHex": "2E",
+    "unmapped": [
+      "."
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક.ક",
+    "inHex": "0A95 002E 0A95",
+    "out": "L$.L$",
+    "outHex": "4C 24 2E 4C 24",
+    "unmapped": [
+      "."
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "/",
+    "inHex": "002F",
+    "out": "/",
+    "outHex": "2F",
+    "unmapped": [
+      "/"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક/ક",
+    "inHex": "0A95 002F 0A95",
+    "out": "L$/L$",
+    "outHex": "4C 24 2F 4C 24",
+    "unmapped": [
+      "/"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "/",
+    "inHex": "002F",
+    "out": "/",
+    "outHex": "2F",
+    "unmapped": [
+      "/"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક/ક",
+    "inHex": "0A95 002F 0A95",
+    "out": "L$/L$",
+    "outHex": "4C 24 2F 4C 24",
+    "unmapped": [
+      "/"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "0",
+    "inHex": "0030",
+    "out": "0",
+    "outHex": "30",
+    "unmapped": [
+      "0"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક0ક",
+    "inHex": "0A95 0030 0A95",
+    "out": "L$0L$",
+    "outHex": "4C 24 30 4C 24",
+    "unmapped": [
+      "0"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "0",
+    "inHex": "0030",
+    "out": "0",
+    "outHex": "30",
+    "unmapped": [
+      "0"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક0ક",
+    "inHex": "0A95 0030 0A95",
+    "out": "L$0L$",
+    "outHex": "4C 24 30 4C 24",
+    "unmapped": [
+      "0"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "1",
+    "inHex": "0031",
+    "out": "1",
+    "outHex": "31",
+    "unmapped": [
+      "1"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક1ક",
+    "inHex": "0A95 0031 0A95",
+    "out": "L$1L$",
+    "outHex": "4C 24 31 4C 24",
+    "unmapped": [
+      "1"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "1",
+    "inHex": "0031",
+    "out": "1",
+    "outHex": "31",
+    "unmapped": [
+      "1"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક1ક",
+    "inHex": "0A95 0031 0A95",
+    "out": "L$1L$",
+    "outHex": "4C 24 31 4C 24",
+    "unmapped": [
+      "1"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "2",
+    "inHex": "0032",
+    "out": "2",
+    "outHex": "32",
+    "unmapped": [
+      "2"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક2ક",
+    "inHex": "0A95 0032 0A95",
+    "out": "L$2L$",
+    "outHex": "4C 24 32 4C 24",
+    "unmapped": [
+      "2"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "2",
+    "inHex": "0032",
+    "out": "2",
+    "outHex": "32",
+    "unmapped": [
+      "2"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક2ક",
+    "inHex": "0A95 0032 0A95",
+    "out": "L$2L$",
+    "outHex": "4C 24 32 4C 24",
+    "unmapped": [
+      "2"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "3",
+    "inHex": "0033",
+    "out": "3",
+    "outHex": "33",
+    "unmapped": [
+      "3"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક3ક",
+    "inHex": "0A95 0033 0A95",
+    "out": "L$3L$",
+    "outHex": "4C 24 33 4C 24",
+    "unmapped": [
+      "3"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "3",
+    "inHex": "0033",
+    "out": "3",
+    "outHex": "33",
+    "unmapped": [
+      "3"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક3ક",
+    "inHex": "0A95 0033 0A95",
+    "out": "L$3L$",
+    "outHex": "4C 24 33 4C 24",
+    "unmapped": [
+      "3"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "4",
+    "inHex": "0034",
+    "out": "4",
+    "outHex": "34",
+    "unmapped": [
+      "4"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક4ક",
+    "inHex": "0A95 0034 0A95",
+    "out": "L$4L$",
+    "outHex": "4C 24 34 4C 24",
+    "unmapped": [
+      "4"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "4",
+    "inHex": "0034",
+    "out": "4",
+    "outHex": "34",
+    "unmapped": [
+      "4"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક4ક",
+    "inHex": "0A95 0034 0A95",
+    "out": "L$4L$",
+    "outHex": "4C 24 34 4C 24",
+    "unmapped": [
+      "4"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "5",
+    "inHex": "0035",
+    "out": "5",
+    "outHex": "35",
+    "unmapped": [
+      "5"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક5ક",
+    "inHex": "0A95 0035 0A95",
+    "out": "L$5L$",
+    "outHex": "4C 24 35 4C 24",
+    "unmapped": [
+      "5"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "5",
+    "inHex": "0035",
+    "out": "5",
+    "outHex": "35",
+    "unmapped": [
+      "5"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક5ક",
+    "inHex": "0A95 0035 0A95",
+    "out": "L$5L$",
+    "outHex": "4C 24 35 4C 24",
+    "unmapped": [
+      "5"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "6",
+    "inHex": "0036",
+    "out": "6",
+    "outHex": "36",
+    "unmapped": [
+      "6"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક6ક",
+    "inHex": "0A95 0036 0A95",
+    "out": "L$6L$",
+    "outHex": "4C 24 36 4C 24",
+    "unmapped": [
+      "6"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "6",
+    "inHex": "0036",
+    "out": "6",
+    "outHex": "36",
+    "unmapped": [
+      "6"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક6ક",
+    "inHex": "0A95 0036 0A95",
+    "out": "L$6L$",
+    "outHex": "4C 24 36 4C 24",
+    "unmapped": [
+      "6"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "7",
+    "inHex": "0037",
+    "out": "7",
+    "outHex": "37",
+    "unmapped": [
+      "7"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક7ક",
+    "inHex": "0A95 0037 0A95",
+    "out": "L$7L$",
+    "outHex": "4C 24 37 4C 24",
+    "unmapped": [
+      "7"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "7",
+    "inHex": "0037",
+    "out": "7",
+    "outHex": "37",
+    "unmapped": [
+      "7"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક7ક",
+    "inHex": "0A95 0037 0A95",
+    "out": "L$7L$",
+    "outHex": "4C 24 37 4C 24",
+    "unmapped": [
+      "7"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "8",
+    "inHex": "0038",
+    "out": "8",
+    "outHex": "38",
+    "unmapped": [
+      "8"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક8ક",
+    "inHex": "0A95 0038 0A95",
+    "out": "L$8L$",
+    "outHex": "4C 24 38 4C 24",
+    "unmapped": [
+      "8"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "8",
+    "inHex": "0038",
+    "out": "8",
+    "outHex": "38",
+    "unmapped": [
+      "8"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક8ક",
+    "inHex": "0A95 0038 0A95",
+    "out": "L$8L$",
+    "outHex": "4C 24 38 4C 24",
+    "unmapped": [
+      "8"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "9",
+    "inHex": "0039",
+    "out": "9",
+    "outHex": "39",
+    "unmapped": [
+      "9"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક9ક",
+    "inHex": "0A95 0039 0A95",
+    "out": "L$9L$",
+    "outHex": "4C 24 39 4C 24",
+    "unmapped": [
+      "9"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "9",
+    "inHex": "0039",
+    "out": "9",
+    "outHex": "39",
+    "unmapped": [
+      "9"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક9ક",
+    "inHex": "0A95 0039 0A95",
+    "out": "L$9L$",
+    "outHex": "4C 24 39 4C 24",
+    "unmapped": [
+      "9"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ":",
+    "inHex": "003A",
+    "out": ":",
+    "outHex": "3A",
+    "unmapped": [
+      ":"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક:ક",
+    "inHex": "0A95 003A 0A95",
+    "out": "L$:L$",
+    "outHex": "4C 24 3A 4C 24",
+    "unmapped": [
+      ":"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ":",
+    "inHex": "003A",
+    "out": ":",
+    "outHex": "3A",
+    "unmapped": [
+      ":"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક:ક",
+    "inHex": "0A95 003A 0A95",
+    "out": "L$:L$",
+    "outHex": "4C 24 3A 4C 24",
+    "unmapped": [
+      ":"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ";",
+    "inHex": "003B",
+    "out": ";",
+    "outHex": "3B",
+    "unmapped": [
+      ";"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક;ક",
+    "inHex": "0A95 003B 0A95",
+    "out": "L$;L$",
+    "outHex": "4C 24 3B 4C 24",
+    "unmapped": [
+      ";"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ";",
+    "inHex": "003B",
+    "out": ";",
+    "outHex": "3B",
+    "unmapped": [
+      ";"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક;ક",
+    "inHex": "0A95 003B 0A95",
+    "out": "L$;L$",
+    "outHex": "4C 24 3B 4C 24",
+    "unmapped": [
+      ";"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "<",
+    "inHex": "003C",
+    "out": "<",
+    "outHex": "3C",
+    "unmapped": [
+      "<"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક<ક",
+    "inHex": "0A95 003C 0A95",
+    "out": "L$<L$",
+    "outHex": "4C 24 3C 4C 24",
+    "unmapped": [
+      "<"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "<",
+    "inHex": "003C",
+    "out": "<",
+    "outHex": "3C",
+    "unmapped": [
+      "<"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક<ક",
+    "inHex": "0A95 003C 0A95",
+    "out": "L$<L$",
+    "outHex": "4C 24 3C 4C 24",
+    "unmapped": [
+      "<"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "=",
+    "inHex": "003D",
+    "out": "=",
+    "outHex": "3D",
+    "unmapped": [
+      "="
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક=ક",
+    "inHex": "0A95 003D 0A95",
+    "out": "L$=L$",
+    "outHex": "4C 24 3D 4C 24",
+    "unmapped": [
+      "="
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "=",
+    "inHex": "003D",
+    "out": "=",
+    "outHex": "3D",
+    "unmapped": [
+      "="
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક=ક",
+    "inHex": "0A95 003D 0A95",
+    "out": "L$=L$",
+    "outHex": "4C 24 3D 4C 24",
+    "unmapped": [
+      "="
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": ">",
+    "inHex": "003E",
+    "out": ">",
+    "outHex": "3E",
+    "unmapped": [
+      ">"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક>ક",
+    "inHex": "0A95 003E 0A95",
+    "out": "L$>L$",
+    "outHex": "4C 24 3E 4C 24",
+    "unmapped": [
+      ">"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": ">",
+    "inHex": "003E",
+    "out": ">",
+    "outHex": "3E",
+    "unmapped": [
+      ">"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક>ક",
+    "inHex": "0A95 003E 0A95",
+    "out": "L$>L$",
+    "outHex": "4C 24 3E 4C 24",
+    "unmapped": [
+      ">"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "?",
+    "inHex": "003F",
+    "out": "?",
+    "outHex": "3F",
+    "unmapped": [
+      "?"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક?ક",
+    "inHex": "0A95 003F 0A95",
+    "out": "L$?L$",
+    "outHex": "4C 24 3F 4C 24",
+    "unmapped": [
+      "?"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "?",
+    "inHex": "003F",
+    "out": "?",
+    "outHex": "3F",
+    "unmapped": [
+      "?"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક?ક",
+    "inHex": "0A95 003F 0A95",
+    "out": "L$?L$",
+    "outHex": "4C 24 3F 4C 24",
+    "unmapped": [
+      "?"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "@",
+    "inHex": "0040",
+    "out": "@",
+    "outHex": "40",
+    "unmapped": [
+      "@"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક@ક",
+    "inHex": "0A95 0040 0A95",
+    "out": "L$@L$",
+    "outHex": "4C 24 40 4C 24",
+    "unmapped": [
+      "@"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "@",
+    "inHex": "0040",
+    "out": "@",
+    "outHex": "40",
+    "unmapped": [
+      "@"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક@ક",
+    "inHex": "0A95 0040 0A95",
+    "out": "L$@L$",
+    "outHex": "4C 24 40 4C 24",
+    "unmapped": [
+      "@"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "A",
+    "inHex": "0041",
+    "out": "A",
+    "outHex": "41",
+    "unmapped": [
+      "A"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કAક",
+    "inHex": "0A95 0041 0A95",
+    "out": "L$AL$",
+    "outHex": "4C 24 41 4C 24",
+    "unmapped": [
+      "A"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "A",
+    "inHex": "0041",
+    "out": "A",
+    "outHex": "41",
+    "unmapped": [
+      "A"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કAક",
+    "inHex": "0A95 0041 0A95",
+    "out": "L$AL$",
+    "outHex": "4C 24 41 4C 24",
+    "unmapped": [
+      "A"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "B",
+    "inHex": "0042",
+    "out": "B",
+    "outHex": "42",
+    "unmapped": [
+      "B"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કBક",
+    "inHex": "0A95 0042 0A95",
+    "out": "L$BL$",
+    "outHex": "4C 24 42 4C 24",
+    "unmapped": [
+      "B"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "B",
+    "inHex": "0042",
+    "out": "B",
+    "outHex": "42",
+    "unmapped": [
+      "B"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કBક",
+    "inHex": "0A95 0042 0A95",
+    "out": "L$BL$",
+    "outHex": "4C 24 42 4C 24",
+    "unmapped": [
+      "B"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "C",
+    "inHex": "0043",
+    "out": "C",
+    "outHex": "43",
+    "unmapped": [
+      "C"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કCક",
+    "inHex": "0A95 0043 0A95",
+    "out": "L$CL$",
+    "outHex": "4C 24 43 4C 24",
+    "unmapped": [
+      "C"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "C",
+    "inHex": "0043",
+    "out": "C",
+    "outHex": "43",
+    "unmapped": [
+      "C"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કCક",
+    "inHex": "0A95 0043 0A95",
+    "out": "L$CL$",
+    "outHex": "4C 24 43 4C 24",
+    "unmapped": [
+      "C"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "D",
+    "inHex": "0044",
+    "out": "D",
+    "outHex": "44",
+    "unmapped": [
+      "D"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કDક",
+    "inHex": "0A95 0044 0A95",
+    "out": "L$DL$",
+    "outHex": "4C 24 44 4C 24",
+    "unmapped": [
+      "D"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "D",
+    "inHex": "0044",
+    "out": "D",
+    "outHex": "44",
+    "unmapped": [
+      "D"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કDક",
+    "inHex": "0A95 0044 0A95",
+    "out": "L$DL$",
+    "outHex": "4C 24 44 4C 24",
+    "unmapped": [
+      "D"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "E",
+    "inHex": "0045",
+    "out": "E",
+    "outHex": "45",
+    "unmapped": [
+      "E"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કEક",
+    "inHex": "0A95 0045 0A95",
+    "out": "L$EL$",
+    "outHex": "4C 24 45 4C 24",
+    "unmapped": [
+      "E"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "E",
+    "inHex": "0045",
+    "out": "E",
+    "outHex": "45",
+    "unmapped": [
+      "E"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કEક",
+    "inHex": "0A95 0045 0A95",
+    "out": "L$EL$",
+    "outHex": "4C 24 45 4C 24",
+    "unmapped": [
+      "E"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "F",
+    "inHex": "0046",
+    "out": "F",
+    "outHex": "46",
+    "unmapped": [
+      "F"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કFક",
+    "inHex": "0A95 0046 0A95",
+    "out": "L$FL$",
+    "outHex": "4C 24 46 4C 24",
+    "unmapped": [
+      "F"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "F",
+    "inHex": "0046",
+    "out": "F",
+    "outHex": "46",
+    "unmapped": [
+      "F"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કFક",
+    "inHex": "0A95 0046 0A95",
+    "out": "L$FL$",
+    "outHex": "4C 24 46 4C 24",
+    "unmapped": [
+      "F"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "G",
+    "inHex": "0047",
+    "out": "G",
+    "outHex": "47",
+    "unmapped": [
+      "G"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કGક",
+    "inHex": "0A95 0047 0A95",
+    "out": "L$GL$",
+    "outHex": "4C 24 47 4C 24",
+    "unmapped": [
+      "G"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "G",
+    "inHex": "0047",
+    "out": "G",
+    "outHex": "47",
+    "unmapped": [
+      "G"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કGક",
+    "inHex": "0A95 0047 0A95",
+    "out": "L$GL$",
+    "outHex": "4C 24 47 4C 24",
+    "unmapped": [
+      "G"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "H",
+    "inHex": "0048",
+    "out": "H",
+    "outHex": "48",
+    "unmapped": [
+      "H"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કHક",
+    "inHex": "0A95 0048 0A95",
+    "out": "L$HL$",
+    "outHex": "4C 24 48 4C 24",
+    "unmapped": [
+      "H"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "H",
+    "inHex": "0048",
+    "out": "H",
+    "outHex": "48",
+    "unmapped": [
+      "H"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કHક",
+    "inHex": "0A95 0048 0A95",
+    "out": "L$HL$",
+    "outHex": "4C 24 48 4C 24",
+    "unmapped": [
+      "H"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "I",
+    "inHex": "0049",
+    "out": "I",
+    "outHex": "49",
+    "unmapped": [
+      "I"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કIક",
+    "inHex": "0A95 0049 0A95",
+    "out": "L$IL$",
+    "outHex": "4C 24 49 4C 24",
+    "unmapped": [
+      "I"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "I",
+    "inHex": "0049",
+    "out": "I",
+    "outHex": "49",
+    "unmapped": [
+      "I"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કIક",
+    "inHex": "0A95 0049 0A95",
+    "out": "L$IL$",
+    "outHex": "4C 24 49 4C 24",
+    "unmapped": [
+      "I"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "J",
+    "inHex": "004A",
+    "out": "J",
+    "outHex": "4A",
+    "unmapped": [
+      "J"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કJક",
+    "inHex": "0A95 004A 0A95",
+    "out": "L$JL$",
+    "outHex": "4C 24 4A 4C 24",
+    "unmapped": [
+      "J"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "J",
+    "inHex": "004A",
+    "out": "J",
+    "outHex": "4A",
+    "unmapped": [
+      "J"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કJક",
+    "inHex": "0A95 004A 0A95",
+    "out": "L$JL$",
+    "outHex": "4C 24 4A 4C 24",
+    "unmapped": [
+      "J"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "K",
+    "inHex": "004B",
+    "out": "K",
+    "outHex": "4B",
+    "unmapped": [
+      "K"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કKક",
+    "inHex": "0A95 004B 0A95",
+    "out": "L$KL$",
+    "outHex": "4C 24 4B 4C 24",
+    "unmapped": [
+      "K"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "K",
+    "inHex": "004B",
+    "out": "K",
+    "outHex": "4B",
+    "unmapped": [
+      "K"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કKક",
+    "inHex": "0A95 004B 0A95",
+    "out": "L$KL$",
+    "outHex": "4C 24 4B 4C 24",
+    "unmapped": [
+      "K"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "L",
+    "inHex": "004C",
+    "out": "L",
+    "outHex": "4C",
+    "unmapped": [
+      "L"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કLક",
+    "inHex": "0A95 004C 0A95",
+    "out": "L$LL$",
+    "outHex": "4C 24 4C 4C 24",
+    "unmapped": [
+      "L"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "L",
+    "inHex": "004C",
+    "out": "L",
+    "outHex": "4C",
+    "unmapped": [
+      "L"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કLક",
+    "inHex": "0A95 004C 0A95",
+    "out": "L$LL$",
+    "outHex": "4C 24 4C 4C 24",
+    "unmapped": [
+      "L"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "M",
+    "inHex": "004D",
+    "out": "M",
+    "outHex": "4D",
+    "unmapped": [
+      "M"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કMક",
+    "inHex": "0A95 004D 0A95",
+    "out": "L$ML$",
+    "outHex": "4C 24 4D 4C 24",
+    "unmapped": [
+      "M"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "M",
+    "inHex": "004D",
+    "out": "M",
+    "outHex": "4D",
+    "unmapped": [
+      "M"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કMક",
+    "inHex": "0A95 004D 0A95",
+    "out": "L$ML$",
+    "outHex": "4C 24 4D 4C 24",
+    "unmapped": [
+      "M"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "N",
+    "inHex": "004E",
+    "out": "N",
+    "outHex": "4E",
+    "unmapped": [
+      "N"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કNક",
+    "inHex": "0A95 004E 0A95",
+    "out": "L$NL$",
+    "outHex": "4C 24 4E 4C 24",
+    "unmapped": [
+      "N"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "N",
+    "inHex": "004E",
+    "out": "N",
+    "outHex": "4E",
+    "unmapped": [
+      "N"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કNક",
+    "inHex": "0A95 004E 0A95",
+    "out": "L$NL$",
+    "outHex": "4C 24 4E 4C 24",
+    "unmapped": [
+      "N"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "O",
+    "inHex": "004F",
+    "out": "O",
+    "outHex": "4F",
+    "unmapped": [
+      "O"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કOક",
+    "inHex": "0A95 004F 0A95",
+    "out": "L$OL$",
+    "outHex": "4C 24 4F 4C 24",
+    "unmapped": [
+      "O"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "O",
+    "inHex": "004F",
+    "out": "O",
+    "outHex": "4F",
+    "unmapped": [
+      "O"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કOક",
+    "inHex": "0A95 004F 0A95",
+    "out": "L$OL$",
+    "outHex": "4C 24 4F 4C 24",
+    "unmapped": [
+      "O"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "P",
+    "inHex": "0050",
+    "out": "P",
+    "outHex": "50",
+    "unmapped": [
+      "P"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કPક",
+    "inHex": "0A95 0050 0A95",
+    "out": "L$PL$",
+    "outHex": "4C 24 50 4C 24",
+    "unmapped": [
+      "P"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "P",
+    "inHex": "0050",
+    "out": "P",
+    "outHex": "50",
+    "unmapped": [
+      "P"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કPક",
+    "inHex": "0A95 0050 0A95",
+    "out": "L$PL$",
+    "outHex": "4C 24 50 4C 24",
+    "unmapped": [
+      "P"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "Q",
+    "inHex": "0051",
+    "out": "Q",
+    "outHex": "51",
+    "unmapped": [
+      "Q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કQક",
+    "inHex": "0A95 0051 0A95",
+    "out": "L$QL$",
+    "outHex": "4C 24 51 4C 24",
+    "unmapped": [
+      "Q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "Q",
+    "inHex": "0051",
+    "out": "Q",
+    "outHex": "51",
+    "unmapped": [
+      "Q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કQક",
+    "inHex": "0A95 0051 0A95",
+    "out": "L$QL$",
+    "outHex": "4C 24 51 4C 24",
+    "unmapped": [
+      "Q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "R",
+    "inHex": "0052",
+    "out": "R",
+    "outHex": "52",
+    "unmapped": [
+      "R"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કRક",
+    "inHex": "0A95 0052 0A95",
+    "out": "L$RL$",
+    "outHex": "4C 24 52 4C 24",
+    "unmapped": [
+      "R"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "R",
+    "inHex": "0052",
+    "out": "R",
+    "outHex": "52",
+    "unmapped": [
+      "R"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કRક",
+    "inHex": "0A95 0052 0A95",
+    "out": "L$RL$",
+    "outHex": "4C 24 52 4C 24",
+    "unmapped": [
+      "R"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "S",
+    "inHex": "0053",
+    "out": "S",
+    "outHex": "53",
+    "unmapped": [
+      "S"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કSક",
+    "inHex": "0A95 0053 0A95",
+    "out": "L$SL$",
+    "outHex": "4C 24 53 4C 24",
+    "unmapped": [
+      "S"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "S",
+    "inHex": "0053",
+    "out": "S",
+    "outHex": "53",
+    "unmapped": [
+      "S"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કSક",
+    "inHex": "0A95 0053 0A95",
+    "out": "L$SL$",
+    "outHex": "4C 24 53 4C 24",
+    "unmapped": [
+      "S"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "T",
+    "inHex": "0054",
+    "out": "T",
+    "outHex": "54",
+    "unmapped": [
+      "T"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કTક",
+    "inHex": "0A95 0054 0A95",
+    "out": "L$TL$",
+    "outHex": "4C 24 54 4C 24",
+    "unmapped": [
+      "T"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "T",
+    "inHex": "0054",
+    "out": "T",
+    "outHex": "54",
+    "unmapped": [
+      "T"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કTક",
+    "inHex": "0A95 0054 0A95",
+    "out": "L$TL$",
+    "outHex": "4C 24 54 4C 24",
+    "unmapped": [
+      "T"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "U",
+    "inHex": "0055",
+    "out": "U",
+    "outHex": "55",
+    "unmapped": [
+      "U"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કUક",
+    "inHex": "0A95 0055 0A95",
+    "out": "L$UL$",
+    "outHex": "4C 24 55 4C 24",
+    "unmapped": [
+      "U"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "U",
+    "inHex": "0055",
+    "out": "U",
+    "outHex": "55",
+    "unmapped": [
+      "U"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કUક",
+    "inHex": "0A95 0055 0A95",
+    "out": "L$UL$",
+    "outHex": "4C 24 55 4C 24",
+    "unmapped": [
+      "U"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "V",
+    "inHex": "0056",
+    "out": "V",
+    "outHex": "56",
+    "unmapped": [
+      "V"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કVક",
+    "inHex": "0A95 0056 0A95",
+    "out": "L$VL$",
+    "outHex": "4C 24 56 4C 24",
+    "unmapped": [
+      "V"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "V",
+    "inHex": "0056",
+    "out": "V",
+    "outHex": "56",
+    "unmapped": [
+      "V"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કVક",
+    "inHex": "0A95 0056 0A95",
+    "out": "L$VL$",
+    "outHex": "4C 24 56 4C 24",
+    "unmapped": [
+      "V"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "W",
+    "inHex": "0057",
+    "out": "W",
+    "outHex": "57",
+    "unmapped": [
+      "W"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કWક",
+    "inHex": "0A95 0057 0A95",
+    "out": "L$WL$",
+    "outHex": "4C 24 57 4C 24",
+    "unmapped": [
+      "W"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "W",
+    "inHex": "0057",
+    "out": "W",
+    "outHex": "57",
+    "unmapped": [
+      "W"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કWક",
+    "inHex": "0A95 0057 0A95",
+    "out": "L$WL$",
+    "outHex": "4C 24 57 4C 24",
+    "unmapped": [
+      "W"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "X",
+    "inHex": "0058",
+    "out": "X",
+    "outHex": "58",
+    "unmapped": [
+      "X"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કXક",
+    "inHex": "0A95 0058 0A95",
+    "out": "L$XL$",
+    "outHex": "4C 24 58 4C 24",
+    "unmapped": [
+      "X"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "X",
+    "inHex": "0058",
+    "out": "X",
+    "outHex": "58",
+    "unmapped": [
+      "X"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કXક",
+    "inHex": "0A95 0058 0A95",
+    "out": "L$XL$",
+    "outHex": "4C 24 58 4C 24",
+    "unmapped": [
+      "X"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "Y",
+    "inHex": "0059",
+    "out": "Y",
+    "outHex": "59",
+    "unmapped": [
+      "Y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કYક",
+    "inHex": "0A95 0059 0A95",
+    "out": "L$YL$",
+    "outHex": "4C 24 59 4C 24",
+    "unmapped": [
+      "Y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "Y",
+    "inHex": "0059",
+    "out": "Y",
+    "outHex": "59",
+    "unmapped": [
+      "Y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કYક",
+    "inHex": "0A95 0059 0A95",
+    "out": "L$YL$",
+    "outHex": "4C 24 59 4C 24",
+    "unmapped": [
+      "Y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "Z",
+    "inHex": "005A",
+    "out": "Z",
+    "outHex": "5A",
+    "unmapped": [
+      "Z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કZક",
+    "inHex": "0A95 005A 0A95",
+    "out": "L$ZL$",
+    "outHex": "4C 24 5A 4C 24",
+    "unmapped": [
+      "Z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "Z",
+    "inHex": "005A",
+    "out": "Z",
+    "outHex": "5A",
+    "unmapped": [
+      "Z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કZક",
+    "inHex": "0A95 005A 0A95",
+    "out": "L$ZL$",
+    "outHex": "4C 24 5A 4C 24",
+    "unmapped": [
+      "Z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "[",
+    "inHex": "005B",
+    "out": "[",
+    "outHex": "5B",
+    "unmapped": [
+      "["
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક[ક",
+    "inHex": "0A95 005B 0A95",
+    "out": "L$[L$",
+    "outHex": "4C 24 5B 4C 24",
+    "unmapped": [
+      "["
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "[",
+    "inHex": "005B",
+    "out": "[",
+    "outHex": "5B",
+    "unmapped": [
+      "["
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક[ક",
+    "inHex": "0A95 005B 0A95",
+    "out": "L$[L$",
+    "outHex": "4C 24 5B 4C 24",
+    "unmapped": [
+      "["
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "\\",
+    "inHex": "005C",
+    "out": "\\",
+    "outHex": "5C",
+    "unmapped": [
+      "\\"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક\\ક",
+    "inHex": "0A95 005C 0A95",
+    "out": "L$\\L$",
+    "outHex": "4C 24 5C 4C 24",
+    "unmapped": [
+      "\\"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "\\",
+    "inHex": "005C",
+    "out": "\\",
+    "outHex": "5C",
+    "unmapped": [
+      "\\"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક\\ક",
+    "inHex": "0A95 005C 0A95",
+    "out": "L$\\L$",
+    "outHex": "4C 24 5C 4C 24",
+    "unmapped": [
+      "\\"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "]",
+    "inHex": "005D",
+    "out": "]",
+    "outHex": "5D",
+    "unmapped": [
+      "]"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક]ક",
+    "inHex": "0A95 005D 0A95",
+    "out": "L$]L$",
+    "outHex": "4C 24 5D 4C 24",
+    "unmapped": [
+      "]"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "]",
+    "inHex": "005D",
+    "out": "]",
+    "outHex": "5D",
+    "unmapped": [
+      "]"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક]ક",
+    "inHex": "0A95 005D 0A95",
+    "out": "L$]L$",
+    "outHex": "4C 24 5D 4C 24",
+    "unmapped": [
+      "]"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "^",
+    "inHex": "005E",
+    "out": "^",
+    "outHex": "5E",
+    "unmapped": [
+      "^"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક^ક",
+    "inHex": "0A95 005E 0A95",
+    "out": "L$^L$",
+    "outHex": "4C 24 5E 4C 24",
+    "unmapped": [
+      "^"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "^",
+    "inHex": "005E",
+    "out": "^",
+    "outHex": "5E",
+    "unmapped": [
+      "^"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક^ક",
+    "inHex": "0A95 005E 0A95",
+    "out": "L$^L$",
+    "outHex": "4C 24 5E 4C 24",
+    "unmapped": [
+      "^"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "_",
+    "inHex": "005F",
+    "out": "_",
+    "outHex": "5F",
+    "unmapped": [
+      "_"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક_ક",
+    "inHex": "0A95 005F 0A95",
+    "out": "L$_L$",
+    "outHex": "4C 24 5F 4C 24",
+    "unmapped": [
+      "_"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "_",
+    "inHex": "005F",
+    "out": "_",
+    "outHex": "5F",
+    "unmapped": [
+      "_"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક_ક",
+    "inHex": "0A95 005F 0A95",
+    "out": "L$_L$",
+    "outHex": "4C 24 5F 4C 24",
+    "unmapped": [
+      "_"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "`",
+    "inHex": "0060",
+    "out": "`",
+    "outHex": "60",
+    "unmapped": [
+      "`"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક`ક",
+    "inHex": "0A95 0060 0A95",
+    "out": "L$`L$",
+    "outHex": "4C 24 60 4C 24",
+    "unmapped": [
+      "`"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "`",
+    "inHex": "0060",
+    "out": "`",
+    "outHex": "60",
+    "unmapped": [
+      "`"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક`ક",
+    "inHex": "0A95 0060 0A95",
+    "out": "L$`L$",
+    "outHex": "4C 24 60 4C 24",
+    "unmapped": [
+      "`"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "a",
+    "inHex": "0061",
+    "out": "a",
+    "outHex": "61",
+    "unmapped": [
+      "a"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કaક",
+    "inHex": "0A95 0061 0A95",
+    "out": "L$aL$",
+    "outHex": "4C 24 61 4C 24",
+    "unmapped": [
+      "a"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "a",
+    "inHex": "0061",
+    "out": "a",
+    "outHex": "61",
+    "unmapped": [
+      "a"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કaક",
+    "inHex": "0A95 0061 0A95",
+    "out": "L$aL$",
+    "outHex": "4C 24 61 4C 24",
+    "unmapped": [
+      "a"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "b",
+    "inHex": "0062",
+    "out": "b",
+    "outHex": "62",
+    "unmapped": [
+      "b"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કbક",
+    "inHex": "0A95 0062 0A95",
+    "out": "L$bL$",
+    "outHex": "4C 24 62 4C 24",
+    "unmapped": [
+      "b"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "b",
+    "inHex": "0062",
+    "out": "b",
+    "outHex": "62",
+    "unmapped": [
+      "b"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કbક",
+    "inHex": "0A95 0062 0A95",
+    "out": "L$bL$",
+    "outHex": "4C 24 62 4C 24",
+    "unmapped": [
+      "b"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "c",
+    "inHex": "0063",
+    "out": "c",
+    "outHex": "63",
+    "unmapped": [
+      "c"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કcક",
+    "inHex": "0A95 0063 0A95",
+    "out": "L$cL$",
+    "outHex": "4C 24 63 4C 24",
+    "unmapped": [
+      "c"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "c",
+    "inHex": "0063",
+    "out": "c",
+    "outHex": "63",
+    "unmapped": [
+      "c"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કcક",
+    "inHex": "0A95 0063 0A95",
+    "out": "L$cL$",
+    "outHex": "4C 24 63 4C 24",
+    "unmapped": [
+      "c"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "d",
+    "inHex": "0064",
+    "out": "d",
+    "outHex": "64",
+    "unmapped": [
+      "d"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કdક",
+    "inHex": "0A95 0064 0A95",
+    "out": "L$dL$",
+    "outHex": "4C 24 64 4C 24",
+    "unmapped": [
+      "d"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "d",
+    "inHex": "0064",
+    "out": "d",
+    "outHex": "64",
+    "unmapped": [
+      "d"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કdક",
+    "inHex": "0A95 0064 0A95",
+    "out": "L$dL$",
+    "outHex": "4C 24 64 4C 24",
+    "unmapped": [
+      "d"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "e",
+    "inHex": "0065",
+    "out": "e",
+    "outHex": "65",
+    "unmapped": [
+      "e"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કeક",
+    "inHex": "0A95 0065 0A95",
+    "out": "L$eL$",
+    "outHex": "4C 24 65 4C 24",
+    "unmapped": [
+      "e"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "e",
+    "inHex": "0065",
+    "out": "e",
+    "outHex": "65",
+    "unmapped": [
+      "e"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કeક",
+    "inHex": "0A95 0065 0A95",
+    "out": "L$eL$",
+    "outHex": "4C 24 65 4C 24",
+    "unmapped": [
+      "e"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "f",
+    "inHex": "0066",
+    "out": "f",
+    "outHex": "66",
+    "unmapped": [
+      "f"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કfક",
+    "inHex": "0A95 0066 0A95",
+    "out": "L$fL$",
+    "outHex": "4C 24 66 4C 24",
+    "unmapped": [
+      "f"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "f",
+    "inHex": "0066",
+    "out": "f",
+    "outHex": "66",
+    "unmapped": [
+      "f"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કfક",
+    "inHex": "0A95 0066 0A95",
+    "out": "L$fL$",
+    "outHex": "4C 24 66 4C 24",
+    "unmapped": [
+      "f"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "g",
+    "inHex": "0067",
+    "out": "g",
+    "outHex": "67",
+    "unmapped": [
+      "g"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કgક",
+    "inHex": "0A95 0067 0A95",
+    "out": "L$gL$",
+    "outHex": "4C 24 67 4C 24",
+    "unmapped": [
+      "g"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "g",
+    "inHex": "0067",
+    "out": "g",
+    "outHex": "67",
+    "unmapped": [
+      "g"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કgક",
+    "inHex": "0A95 0067 0A95",
+    "out": "L$gL$",
+    "outHex": "4C 24 67 4C 24",
+    "unmapped": [
+      "g"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "h",
+    "inHex": "0068",
+    "out": "h",
+    "outHex": "68",
+    "unmapped": [
+      "h"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કhક",
+    "inHex": "0A95 0068 0A95",
+    "out": "L$hL$",
+    "outHex": "4C 24 68 4C 24",
+    "unmapped": [
+      "h"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "h",
+    "inHex": "0068",
+    "out": "h",
+    "outHex": "68",
+    "unmapped": [
+      "h"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કhક",
+    "inHex": "0A95 0068 0A95",
+    "out": "L$hL$",
+    "outHex": "4C 24 68 4C 24",
+    "unmapped": [
+      "h"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "i",
+    "inHex": "0069",
+    "out": "i",
+    "outHex": "69",
+    "unmapped": [
+      "i"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કiક",
+    "inHex": "0A95 0069 0A95",
+    "out": "L$iL$",
+    "outHex": "4C 24 69 4C 24",
+    "unmapped": [
+      "i"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "i",
+    "inHex": "0069",
+    "out": "i",
+    "outHex": "69",
+    "unmapped": [
+      "i"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કiક",
+    "inHex": "0A95 0069 0A95",
+    "out": "L$iL$",
+    "outHex": "4C 24 69 4C 24",
+    "unmapped": [
+      "i"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "j",
+    "inHex": "006A",
+    "out": "j",
+    "outHex": "6A",
+    "unmapped": [
+      "j"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કjક",
+    "inHex": "0A95 006A 0A95",
+    "out": "L$jL$",
+    "outHex": "4C 24 6A 4C 24",
+    "unmapped": [
+      "j"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "j",
+    "inHex": "006A",
+    "out": "j",
+    "outHex": "6A",
+    "unmapped": [
+      "j"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કjક",
+    "inHex": "0A95 006A 0A95",
+    "out": "L$jL$",
+    "outHex": "4C 24 6A 4C 24",
+    "unmapped": [
+      "j"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "k",
+    "inHex": "006B",
+    "out": "k",
+    "outHex": "6B",
+    "unmapped": [
+      "k"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કkક",
+    "inHex": "0A95 006B 0A95",
+    "out": "L$kL$",
+    "outHex": "4C 24 6B 4C 24",
+    "unmapped": [
+      "k"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "k",
+    "inHex": "006B",
+    "out": "k",
+    "outHex": "6B",
+    "unmapped": [
+      "k"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કkક",
+    "inHex": "0A95 006B 0A95",
+    "out": "L$kL$",
+    "outHex": "4C 24 6B 4C 24",
+    "unmapped": [
+      "k"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "l",
+    "inHex": "006C",
+    "out": "l",
+    "outHex": "6C",
+    "unmapped": [
+      "l"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કlક",
+    "inHex": "0A95 006C 0A95",
+    "out": "L$lL$",
+    "outHex": "4C 24 6C 4C 24",
+    "unmapped": [
+      "l"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "l",
+    "inHex": "006C",
+    "out": "l",
+    "outHex": "6C",
+    "unmapped": [
+      "l"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કlક",
+    "inHex": "0A95 006C 0A95",
+    "out": "L$lL$",
+    "outHex": "4C 24 6C 4C 24",
+    "unmapped": [
+      "l"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "m",
+    "inHex": "006D",
+    "out": "m",
+    "outHex": "6D",
+    "unmapped": [
+      "m"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કmક",
+    "inHex": "0A95 006D 0A95",
+    "out": "L$mL$",
+    "outHex": "4C 24 6D 4C 24",
+    "unmapped": [
+      "m"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "m",
+    "inHex": "006D",
+    "out": "m",
+    "outHex": "6D",
+    "unmapped": [
+      "m"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કmક",
+    "inHex": "0A95 006D 0A95",
+    "out": "L$mL$",
+    "outHex": "4C 24 6D 4C 24",
+    "unmapped": [
+      "m"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "n",
+    "inHex": "006E",
+    "out": "n",
+    "outHex": "6E",
+    "unmapped": [
+      "n"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કnક",
+    "inHex": "0A95 006E 0A95",
+    "out": "L$nL$",
+    "outHex": "4C 24 6E 4C 24",
+    "unmapped": [
+      "n"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "n",
+    "inHex": "006E",
+    "out": "n",
+    "outHex": "6E",
+    "unmapped": [
+      "n"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કnક",
+    "inHex": "0A95 006E 0A95",
+    "out": "L$nL$",
+    "outHex": "4C 24 6E 4C 24",
+    "unmapped": [
+      "n"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "o",
+    "inHex": "006F",
+    "out": "o",
+    "outHex": "6F",
+    "unmapped": [
+      "o"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કoક",
+    "inHex": "0A95 006F 0A95",
+    "out": "L$oL$",
+    "outHex": "4C 24 6F 4C 24",
+    "unmapped": [
+      "o"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "o",
+    "inHex": "006F",
+    "out": "o",
+    "outHex": "6F",
+    "unmapped": [
+      "o"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કoક",
+    "inHex": "0A95 006F 0A95",
+    "out": "L$oL$",
+    "outHex": "4C 24 6F 4C 24",
+    "unmapped": [
+      "o"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "p",
+    "inHex": "0070",
+    "out": "p",
+    "outHex": "70",
+    "unmapped": [
+      "p"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કpક",
+    "inHex": "0A95 0070 0A95",
+    "out": "L$pL$",
+    "outHex": "4C 24 70 4C 24",
+    "unmapped": [
+      "p"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "p",
+    "inHex": "0070",
+    "out": "p",
+    "outHex": "70",
+    "unmapped": [
+      "p"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કpક",
+    "inHex": "0A95 0070 0A95",
+    "out": "L$pL$",
+    "outHex": "4C 24 70 4C 24",
+    "unmapped": [
+      "p"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "q",
+    "inHex": "0071",
+    "out": "q",
+    "outHex": "71",
+    "unmapped": [
+      "q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કqક",
+    "inHex": "0A95 0071 0A95",
+    "out": "L$qL$",
+    "outHex": "4C 24 71 4C 24",
+    "unmapped": [
+      "q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "q",
+    "inHex": "0071",
+    "out": "q",
+    "outHex": "71",
+    "unmapped": [
+      "q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કqક",
+    "inHex": "0A95 0071 0A95",
+    "out": "L$qL$",
+    "outHex": "4C 24 71 4C 24",
+    "unmapped": [
+      "q"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "r",
+    "inHex": "0072",
+    "out": "r",
+    "outHex": "72",
+    "unmapped": [
+      "r"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કrક",
+    "inHex": "0A95 0072 0A95",
+    "out": "L$rL$",
+    "outHex": "4C 24 72 4C 24",
+    "unmapped": [
+      "r"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "r",
+    "inHex": "0072",
+    "out": "r",
+    "outHex": "72",
+    "unmapped": [
+      "r"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કrક",
+    "inHex": "0A95 0072 0A95",
+    "out": "L$rL$",
+    "outHex": "4C 24 72 4C 24",
+    "unmapped": [
+      "r"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "s",
+    "inHex": "0073",
+    "out": "s",
+    "outHex": "73",
+    "unmapped": [
+      "s"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કsક",
+    "inHex": "0A95 0073 0A95",
+    "out": "L$sL$",
+    "outHex": "4C 24 73 4C 24",
+    "unmapped": [
+      "s"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "s",
+    "inHex": "0073",
+    "out": "s",
+    "outHex": "73",
+    "unmapped": [
+      "s"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કsક",
+    "inHex": "0A95 0073 0A95",
+    "out": "L$sL$",
+    "outHex": "4C 24 73 4C 24",
+    "unmapped": [
+      "s"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "t",
+    "inHex": "0074",
+    "out": "t",
+    "outHex": "74",
+    "unmapped": [
+      "t"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કtક",
+    "inHex": "0A95 0074 0A95",
+    "out": "L$tL$",
+    "outHex": "4C 24 74 4C 24",
+    "unmapped": [
+      "t"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "t",
+    "inHex": "0074",
+    "out": "t",
+    "outHex": "74",
+    "unmapped": [
+      "t"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કtક",
+    "inHex": "0A95 0074 0A95",
+    "out": "L$tL$",
+    "outHex": "4C 24 74 4C 24",
+    "unmapped": [
+      "t"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "u",
+    "inHex": "0075",
+    "out": "u",
+    "outHex": "75",
+    "unmapped": [
+      "u"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કuક",
+    "inHex": "0A95 0075 0A95",
+    "out": "L$uL$",
+    "outHex": "4C 24 75 4C 24",
+    "unmapped": [
+      "u"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "u",
+    "inHex": "0075",
+    "out": "u",
+    "outHex": "75",
+    "unmapped": [
+      "u"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કuક",
+    "inHex": "0A95 0075 0A95",
+    "out": "L$uL$",
+    "outHex": "4C 24 75 4C 24",
+    "unmapped": [
+      "u"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "v",
+    "inHex": "0076",
+    "out": "v",
+    "outHex": "76",
+    "unmapped": [
+      "v"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કvક",
+    "inHex": "0A95 0076 0A95",
+    "out": "L$vL$",
+    "outHex": "4C 24 76 4C 24",
+    "unmapped": [
+      "v"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "v",
+    "inHex": "0076",
+    "out": "v",
+    "outHex": "76",
+    "unmapped": [
+      "v"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કvક",
+    "inHex": "0A95 0076 0A95",
+    "out": "L$vL$",
+    "outHex": "4C 24 76 4C 24",
+    "unmapped": [
+      "v"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "w",
+    "inHex": "0077",
+    "out": "w",
+    "outHex": "77",
+    "unmapped": [
+      "w"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કwક",
+    "inHex": "0A95 0077 0A95",
+    "out": "Lw$L$",
+    "outHex": "4C 77 24 4C 24",
+    "unmapped": [
+      "w"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "w",
+    "inHex": "0077",
+    "out": "w",
+    "outHex": "77",
+    "unmapped": [
+      "w"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કwક",
+    "inHex": "0A95 0077 0A95",
+    "out": "Lw$L$",
+    "outHex": "4C 77 24 4C 24",
+    "unmapped": [
+      "w"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "x",
+    "inHex": "0078",
+    "out": "x",
+    "outHex": "78",
+    "unmapped": [
+      "x"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કxક",
+    "inHex": "0A95 0078 0A95",
+    "out": "L$xL$",
+    "outHex": "4C 24 78 4C 24",
+    "unmapped": [
+      "x"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "x",
+    "inHex": "0078",
+    "out": "x",
+    "outHex": "78",
+    "unmapped": [
+      "x"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કxક",
+    "inHex": "0A95 0078 0A95",
+    "out": "L$xL$",
+    "outHex": "4C 24 78 4C 24",
+    "unmapped": [
+      "x"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "y",
+    "inHex": "0079",
+    "out": "y",
+    "outHex": "79",
+    "unmapped": [
+      "y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કyક",
+    "inHex": "0A95 0079 0A95",
+    "out": "Ly$L$",
+    "outHex": "4C 79 24 4C 24",
+    "unmapped": [
+      "y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "y",
+    "inHex": "0079",
+    "out": "y",
+    "outHex": "79",
+    "unmapped": [
+      "y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કyક",
+    "inHex": "0A95 0079 0A95",
+    "out": "Ly$L$",
+    "outHex": "4C 79 24 4C 24",
+    "unmapped": [
+      "y"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "z",
+    "inHex": "007A",
+    "out": "z",
+    "outHex": "7A",
+    "unmapped": [
+      "z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કzક",
+    "inHex": "0A95 007A 0A95",
+    "out": "Lz$L$",
+    "outHex": "4C 7A 24 4C 24",
+    "unmapped": [
+      "z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "z",
+    "inHex": "007A",
+    "out": "z",
+    "outHex": "7A",
+    "unmapped": [
+      "z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કzક",
+    "inHex": "0A95 007A 0A95",
+    "out": "Lz$L$",
+    "outHex": "4C 7A 24 4C 24",
+    "unmapped": [
+      "z"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "{",
+    "inHex": "007B",
+    "out": "{",
+    "outHex": "7B",
+    "unmapped": [
+      "{"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક{ક",
+    "inHex": "0A95 007B 0A95",
+    "out": "L${L$",
+    "outHex": "4C 24 7B 4C 24",
+    "unmapped": [
+      "{"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "{",
+    "inHex": "007B",
+    "out": "{",
+    "outHex": "7B",
+    "unmapped": [
+      "{"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક{ક",
+    "inHex": "0A95 007B 0A95",
+    "out": "L${L$",
+    "outHex": "4C 24 7B 4C 24",
+    "unmapped": [
+      "{"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "|",
+    "inHex": "007C",
+    "out": "|",
+    "outHex": "7C",
+    "unmapped": [
+      "|"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક|ક",
+    "inHex": "0A95 007C 0A95",
+    "out": "L|$L$",
+    "outHex": "4C 7C 24 4C 24",
+    "unmapped": [
+      "|"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "|",
+    "inHex": "007C",
+    "out": "|",
+    "outHex": "7C",
+    "unmapped": [
+      "|"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક|ક",
+    "inHex": "0A95 007C 0A95",
+    "out": "L|$L$",
+    "outHex": "4C 7C 24 4C 24",
+    "unmapped": [
+      "|"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "}",
+    "inHex": "007D",
+    "out": "}",
+    "outHex": "7D",
+    "unmapped": [
+      "}"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક}ક",
+    "inHex": "0A95 007D 0A95",
+    "out": "L$}L$",
+    "outHex": "4C 24 7D 4C 24",
+    "unmapped": [
+      "}"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "}",
+    "inHex": "007D",
+    "out": "}",
+    "outHex": "7D",
+    "unmapped": [
+      "}"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક}ક",
+    "inHex": "0A95 007D 0A95",
+    "out": "L$}L$",
+    "outHex": "4C 24 7D 4C 24",
+    "unmapped": [
+      "}"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "~",
+    "inHex": "007E",
+    "out": "~",
+    "outHex": "7E",
+    "unmapped": [
+      "~"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક~ક",
+    "inHex": "0A95 007E 0A95",
+    "out": "L$~L$",
+    "outHex": "4C 24 7E 4C 24",
+    "unmapped": [
+      "~"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "~",
+    "inHex": "007E",
+    "out": "~",
+    "outHex": "7E",
+    "unmapped": [
+      "~"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક~ક",
+    "inHex": "0A95 007E 0A95",
+    "out": "L$~L$",
+    "outHex": "4C 24 7E 4C 24",
+    "unmapped": [
+      "~"
+    ],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "–",
+    "inHex": "2013",
+    "out": "\u0081",
+    "outHex": "81",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક–ક",
+    "inHex": "0A95 2013 0A95",
+    "out": "L$\u0081L$",
+    "outHex": "4C 24 81 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "–",
+    "inHex": "2013",
+    "out": "\u0081",
+    "outHex": "81",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક–ક",
+    "inHex": "0A95 2013 0A95",
+    "out": "L$\u0081L$",
+    "outHex": "4C 24 81 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "—",
+    "inHex": "2014",
+    "out": "\u0081\u0081",
+    "outHex": "81 81",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક—ક",
+    "inHex": "0A95 2014 0A95",
+    "out": "L$\u0081\u0081L$",
+    "outHex": "4C 24 81 81 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "—",
+    "inHex": "2014",
+    "out": "\u0081\u0081",
+    "outHex": "81 81",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક—ક",
+    "inHex": "0A95 2014 0A95",
+    "out": "L$\u0081\u0081L$",
+    "outHex": "4C 24 81 81 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "…",
+    "inHex": "2026",
+    "out": "...",
+    "outHex": "2E 2E 2E",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક…ક",
+    "inHex": "0A95 2026 0A95",
+    "out": "L$...L$",
+    "outHex": "4C 24 2E 2E 2E 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "…",
+    "inHex": "2026",
+    "out": "...",
+    "outHex": "2E 2E 2E",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક…ક",
+    "inHex": "0A95 2026 0A95",
+    "out": "L$...L$",
+    "outHex": "4C 24 2E 2E 2E 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "“",
+    "inHex": "201C",
+    "out": "\"\"",
+    "outHex": "22 22",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક“ક",
+    "inHex": "0A95 201C 0A95",
+    "out": "L$\"\"L$",
+    "outHex": "4C 24 22 22 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "“",
+    "inHex": "201C",
+    "out": "\"\"",
+    "outHex": "22 22",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક“ક",
+    "inHex": "0A95 201C 0A95",
+    "out": "L$\"\"L$",
+    "outHex": "4C 24 22 22 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "”",
+    "inHex": "201D",
+    "out": "''",
+    "outHex": "27 27",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક”ક",
+    "inHex": "0A95 201D 0A95",
+    "out": "L$''L$",
+    "outHex": "4C 24 27 27 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "”",
+    "inHex": "201D",
+    "out": "''",
+    "outHex": "27 27",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક”ક",
+    "inHex": "0A95 201D 0A95",
+    "out": "L$''L$",
+    "outHex": "4C 24 27 27 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‘",
+    "inHex": "2018",
+    "out": "\"",
+    "outHex": "22",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‘ક",
+    "inHex": "0A95 2018 0A95",
+    "out": "L$\"L$",
+    "outHex": "4C 24 22 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‘",
+    "inHex": "2018",
+    "out": "\"",
+    "outHex": "22",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‘ક",
+    "inHex": "0A95 2018 0A95",
+    "out": "L$\"L$",
+    "outHex": "4C 24 22 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "’",
+    "inHex": "2019",
+    "out": "'",
+    "outHex": "27",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક’ક",
+    "inHex": "0A95 2019 0A95",
+    "out": "L$'L$",
+    "outHex": "4C 24 27 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "’",
+    "inHex": "2019",
+    "out": "'",
+    "outHex": "27",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક’ક",
+    "inHex": "0A95 2019 0A95",
+    "out": "L$'L$",
+    "outHex": "4C 24 27 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "•",
+    "inHex": "2022",
+    "out": "·",
+    "outHex": "B7",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક•ક",
+    "inHex": "0A95 2022 0A95",
+    "out": "L$·L$",
+    "outHex": "4C 24 B7 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "•",
+    "inHex": "2022",
+    "out": "·",
+    "outHex": "B7",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક•ક",
+    "inHex": "0A95 2022 0A95",
+    "out": "L$·L$",
+    "outHex": "4C 24 B7 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "₹",
+    "inHex": "20B9",
+    "out": "₹",
+    "outHex": "U+20B9",
+    "unmapped": [
+      "₹"
+    ],
+    "reported": [
+      "₹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક₹ક",
+    "inHex": "0A95 20B9 0A95",
+    "out": "L$₹L$",
+    "outHex": "4C 24 U+20B9 4C 24",
+    "unmapped": [
+      "₹"
+    ],
+    "reported": [
+      "₹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "₹",
+    "inHex": "20B9",
+    "out": "₹",
+    "outHex": "U+20B9",
+    "unmapped": [
+      "₹"
+    ],
+    "reported": [
+      "₹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક₹ક",
+    "inHex": "0A95 20B9 0A95",
+    "out": "L$₹L$",
+    "outHex": "4C 24 U+20B9 4C 24",
+    "unmapped": [
+      "₹"
+    ],
+    "reported": [
+      "₹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "°",
+    "inHex": "00B0",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "°"
+    ],
+    "reported": [
+      "°"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક°ક",
+    "inHex": "0A95 00B0 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "°"
+    ],
+    "reported": [
+      "°"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "°",
+    "inHex": "00B0",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "°"
+    ],
+    "reported": [
+      "°"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક°ક",
+    "inHex": "0A95 00B0 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "°"
+    ],
+    "reported": [
+      "°"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "×",
+    "inHex": "00D7",
+    "out": "#",
+    "outHex": "23",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક×ક",
+    "inHex": "0A95 00D7 0A95",
+    "out": "L$#L$",
+    "outHex": "4C 24 23 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "×",
+    "inHex": "00D7",
+    "out": "#",
+    "outHex": "23",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક×ક",
+    "inHex": "0A95 00D7 0A95",
+    "out": "L$#L$",
+    "outHex": "4C 24 23 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "÷",
+    "inHex": "00F7",
+    "out": "\u008D",
+    "outHex": "8D",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક÷ક",
+    "inHex": "0A95 00F7 0A95",
+    "out": "L$\u008DL$",
+    "outHex": "4C 24 8D 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "÷",
+    "inHex": "00F7",
+    "out": "\u008D",
+    "outHex": "8D",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક÷ક",
+    "inHex": "0A95 00F7 0A95",
+    "out": "L$\u008DL$",
+    "outHex": "4C 24 8D 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "।",
+    "inHex": "0964",
+    "out": "—&",
+    "outHex": "97 26",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક।ક",
+    "inHex": "0A95 0964 0A95",
+    "out": "L$—&L$",
+    "outHex": "4C 24 97 26 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "।",
+    "inHex": "0964",
+    "out": "—&",
+    "outHex": "97 26",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક।ક",
+    "inHex": "0A95 0964 0A95",
+    "out": "L$—&L$",
+    "outHex": "4C 24 97 26 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "॥",
+    "inHex": "0965",
+    "out": "॥",
+    "outHex": "U+0965",
+    "unmapped": [
+      "॥"
+    ],
+    "reported": [
+      "॥"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક॥ક",
+    "inHex": "0A95 0965 0A95",
+    "out": "L$॥L$",
+    "outHex": "4C 24 U+0965 4C 24",
+    "unmapped": [
+      "॥"
+    ],
+    "reported": [
+      "॥"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "॥",
+    "inHex": "0965",
+    "out": "॥",
+    "outHex": "U+0965",
+    "unmapped": [
+      "॥"
+    ],
+    "reported": [
+      "॥"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક॥ક",
+    "inHex": "0A95 0965 0A95",
+    "out": "L$॥L$",
+    "outHex": "4C 24 U+0965 4C 24",
+    "unmapped": [
+      "॥"
+    ],
+    "reported": [
+      "॥"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "ૐ",
+    "inHex": "0AD0",
+    "out": "±",
+    "outHex": "B1",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કૐક",
+    "inHex": "0A95 0AD0 0A95",
+    "out": "L$±L$",
+    "outHex": "4C 24 B1 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "ૐ",
+    "inHex": "0AD0",
+    "out": "±",
+    "outHex": "B1",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કૐક",
+    "inHex": "0A95 0AD0 0A95",
+    "out": "L$±L$",
+    "outHex": "4C 24 B1 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "ઽ",
+    "inHex": "0ABD",
+    "out": "@",
+    "outHex": "40",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કઽક",
+    "inHex": "0A95 0ABD 0A95",
+    "out": "L$@L$",
+    "outHex": "4C 24 40 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "ઽ",
+    "inHex": "0ABD",
+    "out": "@",
+    "outHex": "40",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કઽક",
+    "inHex": "0A95 0ABD 0A95",
+    "out": "L$@L$",
+    "outHex": "4C 24 40 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "૰",
+    "inHex": "0AF0",
+    "out": "\u008F",
+    "outHex": "8F",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક૰ક",
+    "inHex": "0A95 0AF0 0A95",
+    "out": "L$\u008FL$",
+    "outHex": "4C 24 8F 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "૰",
+    "inHex": "0AF0",
+    "out": "\u008F",
+    "outHex": "8F",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક૰ક",
+    "inHex": "0A95 0AF0 0A95",
+    "out": "L$\u008FL$",
+    "outHex": "4C 24 8F 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "૱",
+    "inHex": "0AF1",
+    "out": "૱",
+    "outHex": "U+0AF1",
+    "unmapped": [
+      "૱"
+    ],
+    "reported": [
+      "૱"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક૱ક",
+    "inHex": "0A95 0AF1 0A95",
+    "out": "L$૱L$",
+    "outHex": "4C 24 U+0AF1 4C 24",
+    "unmapped": [
+      "૱"
+    ],
+    "reported": [
+      "૱"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "૱",
+    "inHex": "0AF1",
+    "out": "૱",
+    "outHex": "U+0AF1",
+    "unmapped": [
+      "૱"
+    ],
+    "reported": [
+      "૱"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક૱ક",
+    "inHex": "0A95 0AF1 0A95",
+    "out": "L$૱L$",
+    "outHex": "4C 24 U+0AF1 4C 24",
+    "unmapped": [
+      "૱"
+    ],
+    "reported": [
+      "૱"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "\u00A0",
+    "inHex": "00A0",
+    "out": "\u00A0",
+    "outHex": "A0",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક\u00A0ક",
+    "inHex": "0A95 00A0 0A95",
+    "out": "L$\u00A0L$",
+    "outHex": "4C 24 A0 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "\u00A0",
+    "inHex": "00A0",
+    "out": "\u00A0",
+    "outHex": "A0",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક\u00A0ક",
+    "inHex": "0A95 00A0 0A95",
+    "out": "L$\u00A0L$",
+    "outHex": "4C 24 A0 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "­",
+    "inHex": "00AD",
+    "out": "­",
+    "outHex": "AD",
+    "unmapped": [
+      "­"
+    ],
+    "reported": [
+      "­"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક­ક",
+    "inHex": "0A95 00AD 0A95",
+    "out": "L$­L$",
+    "outHex": "4C 24 AD 4C 24",
+    "unmapped": [
+      "­"
+    ],
+    "reported": [
+      "­"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "­",
+    "inHex": "00AD",
+    "out": "­",
+    "outHex": "AD",
+    "unmapped": [
+      "­"
+    ],
+    "reported": [
+      "­"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક­ક",
+    "inHex": "0A95 00AD 0A95",
+    "out": "L$­L$",
+    "outHex": "4C 24 AD 4C 24",
+    "unmapped": [
+      "­"
+    ],
+    "reported": [
+      "­"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "·",
+    "inHex": "00B7",
+    "out": "·",
+    "outHex": "B7",
+    "unmapped": [
+      "·"
+    ],
+    "reported": [
+      "·"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક·ક",
+    "inHex": "0A95 00B7 0A95",
+    "out": "L$·L$",
+    "outHex": "4C 24 B7 4C 24",
+    "unmapped": [
+      "·"
+    ],
+    "reported": [
+      "·"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "·",
+    "inHex": "00B7",
+    "out": "·",
+    "outHex": "B7",
+    "unmapped": [
+      "·"
+    ],
+    "reported": [
+      "·"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક·ક",
+    "inHex": "0A95 00B7 0A95",
+    "out": "L$·L$",
+    "outHex": "4C 24 B7 4C 24",
+    "unmapped": [
+      "·"
+    ],
+    "reported": [
+      "·"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "©",
+    "inHex": "00A9",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "©"
+    ],
+    "reported": [
+      "©"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક©ક",
+    "inHex": "0A95 00A9 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "©"
+    ],
+    "reported": [
+      "©"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "©",
+    "inHex": "00A9",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "©"
+    ],
+    "reported": [
+      "©"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક©ક",
+    "inHex": "0A95 00A9 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "©"
+    ],
+    "reported": [
+      "©"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "®",
+    "inHex": "00AE",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "®"
+    ],
+    "reported": [
+      "®"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક®ક",
+    "inHex": "0A95 00AE 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "®"
+    ],
+    "reported": [
+      "®"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "®",
+    "inHex": "00AE",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "®"
+    ],
+    "reported": [
+      "®"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક®ક",
+    "inHex": "0A95 00AE 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "®"
+    ],
+    "reported": [
+      "®"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "™",
+    "inHex": "2122",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "™"
+    ],
+    "reported": [
+      "™"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક™ક",
+    "inHex": "0A95 2122 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "™"
+    ],
+    "reported": [
+      "™"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "™",
+    "inHex": "2122",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "™"
+    ],
+    "reported": [
+      "™"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક™ક",
+    "inHex": "0A95 2122 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "™"
+    ],
+    "reported": [
+      "™"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "€",
+    "inHex": "20AC",
+    "out": "€",
+    "outHex": "80",
+    "unmapped": [
+      "€"
+    ],
+    "reported": [
+      "€"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક€ક",
+    "inHex": "0A95 20AC 0A95",
+    "out": "L$€L$",
+    "outHex": "4C 24 80 4C 24",
+    "unmapped": [
+      "€"
+    ],
+    "reported": [
+      "€"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "€",
+    "inHex": "20AC",
+    "out": "€",
+    "outHex": "80",
+    "unmapped": [
+      "€"
+    ],
+    "reported": [
+      "€"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક€ક",
+    "inHex": "0A95 20AC 0A95",
+    "out": "L$€L$",
+    "outHex": "4C 24 80 4C 24",
+    "unmapped": [
+      "€"
+    ],
+    "reported": [
+      "€"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "½",
+    "inHex": "00BD",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "½"
+    ],
+    "reported": [
+      "½"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક½ક",
+    "inHex": "0A95 00BD 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "½"
+    ],
+    "reported": [
+      "½"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "½",
+    "inHex": "00BD",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "½"
+    ],
+    "reported": [
+      "½"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક½ક",
+    "inHex": "0A95 00BD 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "½"
+    ],
+    "reported": [
+      "½"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¼",
+    "inHex": "00BC",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¼"
+    ],
+    "reported": [
+      "¼"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¼ક",
+    "inHex": "0A95 00BC 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¼"
+    ],
+    "reported": [
+      "¼"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¼",
+    "inHex": "00BC",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¼"
+    ],
+    "reported": [
+      "¼"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¼ક",
+    "inHex": "0A95 00BC 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¼"
+    ],
+    "reported": [
+      "¼"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¾",
+    "inHex": "00BE",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¾"
+    ],
+    "reported": [
+      "¾"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¾ક",
+    "inHex": "0A95 00BE 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¾"
+    ],
+    "reported": [
+      "¾"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¾",
+    "inHex": "00BE",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¾"
+    ],
+    "reported": [
+      "¾"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¾ક",
+    "inHex": "0A95 00BE 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¾"
+    ],
+    "reported": [
+      "¾"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¹",
+    "inHex": "00B9",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¹"
+    ],
+    "reported": [
+      "¹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¹ક",
+    "inHex": "0A95 00B9 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¹"
+    ],
+    "reported": [
+      "¹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¹",
+    "inHex": "00B9",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¹"
+    ],
+    "reported": [
+      "¹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¹ક",
+    "inHex": "0A95 00B9 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¹"
+    ],
+    "reported": [
+      "¹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "²",
+    "inHex": "00B2",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "²"
+    ],
+    "reported": [
+      "²"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક²ક",
+    "inHex": "0A95 00B2 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "²"
+    ],
+    "reported": [
+      "²"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "²",
+    "inHex": "00B2",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "²"
+    ],
+    "reported": [
+      "²"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક²ક",
+    "inHex": "0A95 00B2 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "²"
+    ],
+    "reported": [
+      "²"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "³",
+    "inHex": "00B3",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "³"
+    ],
+    "reported": [
+      "³"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક³ક",
+    "inHex": "0A95 00B3 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "³"
+    ],
+    "reported": [
+      "³"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "³",
+    "inHex": "00B3",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "³"
+    ],
+    "reported": [
+      "³"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક³ક",
+    "inHex": "0A95 00B3 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "³"
+    ],
+    "reported": [
+      "³"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "µ",
+    "inHex": "00B5",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "µ"
+    ],
+    "reported": [
+      "µ"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "કµક",
+    "inHex": "0A95 00B5 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "µ"
+    ],
+    "reported": [
+      "µ"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "µ",
+    "inHex": "00B5",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "µ"
+    ],
+    "reported": [
+      "µ"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "કµક",
+    "inHex": "0A95 00B5 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "µ"
+    ],
+    "reported": [
+      "µ"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¶",
+    "inHex": "00B6",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¶"
+    ],
+    "reported": [
+      "¶"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¶ક",
+    "inHex": "0A95 00B6 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¶"
+    ],
+    "reported": [
+      "¶"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¶",
+    "inHex": "00B6",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¶"
+    ],
+    "reported": [
+      "¶"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¶ક",
+    "inHex": "0A95 00B6 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¶"
+    ],
+    "reported": [
+      "¶"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "§",
+    "inHex": "00A7",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "§"
+    ],
+    "reported": [
+      "§"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક§ક",
+    "inHex": "0A95 00A7 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "§"
+    ],
+    "reported": [
+      "§"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "§",
+    "inHex": "00A7",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "§"
+    ],
+    "reported": [
+      "§"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક§ક",
+    "inHex": "0A95 00A7 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "§"
+    ],
+    "reported": [
+      "§"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¢",
+    "inHex": "00A2",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¢"
+    ],
+    "reported": [
+      "¢"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¢ક",
+    "inHex": "0A95 00A2 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¢"
+    ],
+    "reported": [
+      "¢"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¢",
+    "inHex": "00A2",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¢"
+    ],
+    "reported": [
+      "¢"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¢ક",
+    "inHex": "0A95 00A2 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¢"
+    ],
+    "reported": [
+      "¢"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "£",
+    "inHex": "00A3",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "£"
+    ],
+    "reported": [
+      "£"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક£ક",
+    "inHex": "0A95 00A3 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "£"
+    ],
+    "reported": [
+      "£"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "£",
+    "inHex": "00A3",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "£"
+    ],
+    "reported": [
+      "£"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક£ક",
+    "inHex": "0A95 00A3 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "£"
+    ],
+    "reported": [
+      "£"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "¥",
+    "inHex": "00A5",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¥"
+    ],
+    "reported": [
+      "¥"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક¥ક",
+    "inHex": "0A95 00A5 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¥"
+    ],
+    "reported": [
+      "¥"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "¥",
+    "inHex": "00A5",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "¥"
+    ],
+    "reported": [
+      "¥"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક¥ક",
+    "inHex": "0A95 00A5 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "¥"
+    ],
+    "reported": [
+      "¥"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "«",
+    "inHex": "00AB",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "«"
+    ],
+    "reported": [
+      "«"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક«ક",
+    "inHex": "0A95 00AB 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "«"
+    ],
+    "reported": [
+      "«"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "«",
+    "inHex": "00AB",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "«"
+    ],
+    "reported": [
+      "«"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક«ક",
+    "inHex": "0A95 00AB 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "«"
+    ],
+    "reported": [
+      "«"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "»",
+    "inHex": "00BB",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "»"
+    ],
+    "reported": [
+      "»"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક»ક",
+    "inHex": "0A95 00BB 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "»"
+    ],
+    "reported": [
+      "»"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "»",
+    "inHex": "00BB",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "»"
+    ],
+    "reported": [
+      "»"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક»ક",
+    "inHex": "0A95 00BB 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "»"
+    ],
+    "reported": [
+      "»"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‚",
+    "inHex": "201A",
+    "out": ",",
+    "outHex": "2C",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‚ક",
+    "inHex": "0A95 201A 0A95",
+    "out": "L$,L$",
+    "outHex": "4C 24 2C 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‚",
+    "inHex": "201A",
+    "out": ",",
+    "outHex": "2C",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‚ક",
+    "inHex": "0A95 201A 0A95",
+    "out": "L$,L$",
+    "outHex": "4C 24 2C 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "„",
+    "inHex": "201E",
+    "out": ",,",
+    "outHex": "2C 2C",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક„ક",
+    "inHex": "0A95 201E 0A95",
+    "out": "L$,,L$",
+    "outHex": "4C 24 2C 2C 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "„",
+    "inHex": "201E",
+    "out": ",,",
+    "outHex": "2C 2C",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક„ક",
+    "inHex": "0A95 201E 0A95",
+    "out": "L$,,L$",
+    "outHex": "4C 24 2C 2C 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "†",
+    "inHex": "2020",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "†"
+    ],
+    "reported": [
+      "†"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક†ક",
+    "inHex": "0A95 2020 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "†"
+    ],
+    "reported": [
+      "†"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "†",
+    "inHex": "2020",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "†"
+    ],
+    "reported": [
+      "†"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક†ક",
+    "inHex": "0A95 2020 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "†"
+    ],
+    "reported": [
+      "†"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‡",
+    "inHex": "2021",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‡"
+    ],
+    "reported": [
+      "‡"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‡ક",
+    "inHex": "0A95 2021 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‡"
+    ],
+    "reported": [
+      "‡"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‡",
+    "inHex": "2021",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‡"
+    ],
+    "reported": [
+      "‡"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‡ક",
+    "inHex": "0A95 2021 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‡"
+    ],
+    "reported": [
+      "‡"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‰",
+    "inHex": "2030",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‰"
+    ],
+    "reported": [
+      "‰"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‰ક",
+    "inHex": "0A95 2030 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‰"
+    ],
+    "reported": [
+      "‰"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‰",
+    "inHex": "2030",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‰"
+    ],
+    "reported": [
+      "‰"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‰ક",
+    "inHex": "0A95 2030 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‰"
+    ],
+    "reported": [
+      "‰"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‹",
+    "inHex": "2039",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‹"
+    ],
+    "reported": [
+      "‹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‹ક",
+    "inHex": "0A95 2039 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‹"
+    ],
+    "reported": [
+      "‹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‹",
+    "inHex": "2039",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "‹"
+    ],
+    "reported": [
+      "‹"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‹ક",
+    "inHex": "0A95 2039 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "‹"
+    ],
+    "reported": [
+      "‹"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "›",
+    "inHex": "203A",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "›"
+    ],
+    "reported": [
+      "›"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક›ક",
+    "inHex": "0A95 203A 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "›"
+    ],
+    "reported": [
+      "›"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "›",
+    "inHex": "203A",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "›"
+    ],
+    "reported": [
+      "›"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક›ક",
+    "inHex": "0A95 203A 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "›"
+    ],
+    "reported": [
+      "›"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "−",
+    "inHex": "2212",
+    "out": "−",
+    "outHex": "U+2212",
+    "unmapped": [
+      "−"
+    ],
+    "reported": [
+      "−"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક−ક",
+    "inHex": "0A95 2212 0A95",
+    "out": "L$−L$",
+    "outHex": "4C 24 U+2212 4C 24",
+    "unmapped": [
+      "−"
+    ],
+    "reported": [
+      "−"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "−",
+    "inHex": "2212",
+    "out": "−",
+    "outHex": "U+2212",
+    "unmapped": [
+      "−"
+    ],
+    "reported": [
+      "−"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક−ક",
+    "inHex": "0A95 2212 0A95",
+    "out": "L$−L$",
+    "outHex": "4C 24 U+2212 4C 24",
+    "unmapped": [
+      "−"
+    ],
+    "reported": [
+      "−"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‐",
+    "inHex": "2010",
+    "out": "‐",
+    "outHex": "U+2010",
+    "unmapped": [
+      "‐"
+    ],
+    "reported": [
+      "‐"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‐ક",
+    "inHex": "0A95 2010 0A95",
+    "out": "L$‐L$",
+    "outHex": "4C 24 U+2010 4C 24",
+    "unmapped": [
+      "‐"
+    ],
+    "reported": [
+      "‐"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‐",
+    "inHex": "2010",
+    "out": "‐",
+    "outHex": "U+2010",
+    "unmapped": [
+      "‐"
+    ],
+    "reported": [
+      "‐"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‐ક",
+    "inHex": "0A95 2010 0A95",
+    "out": "L$‐L$",
+    "outHex": "4C 24 U+2010 4C 24",
+    "unmapped": [
+      "‐"
+    ],
+    "reported": [
+      "‐"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "‑",
+    "inHex": "2011",
+    "out": "‑",
+    "outHex": "U+2011",
+    "unmapped": [
+      "‑"
+    ],
+    "reported": [
+      "‑"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક‑ક",
+    "inHex": "0A95 2011 0A95",
+    "out": "L$‑L$",
+    "outHex": "4C 24 U+2011 4C 24",
+    "unmapped": [
+      "‑"
+    ],
+    "reported": [
+      "‑"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "‑",
+    "inHex": "2011",
+    "out": "‑",
+    "outHex": "U+2011",
+    "unmapped": [
+      "‑"
+    ],
+    "reported": [
+      "‑"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક‑ક",
+    "inHex": "0A95 2011 0A95",
+    "out": "L$‑L$",
+    "outHex": "4C 24 U+2011 4C 24",
+    "unmapped": [
+      "‑"
+    ],
+    "reported": [
+      "‑"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "―",
+    "inHex": "2015",
+    "out": "―",
+    "outHex": "U+2015",
+    "unmapped": [
+      "―"
+    ],
+    "reported": [
+      "―"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક―ક",
+    "inHex": "0A95 2015 0A95",
+    "out": "L$―L$",
+    "outHex": "4C 24 U+2015 4C 24",
+    "unmapped": [
+      "―"
+    ],
+    "reported": [
+      "―"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "―",
+    "inHex": "2015",
+    "out": "―",
+    "outHex": "U+2015",
+    "unmapped": [
+      "―"
+    ],
+    "reported": [
+      "―"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક―ક",
+    "inHex": "0A95 2015 0A95",
+    "out": "L$―L$",
+    "outHex": "4C 24 U+2015 4C 24",
+    "unmapped": [
+      "―"
+    ],
+    "reported": [
+      "―"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "′",
+    "inHex": "2032",
+    "out": "′",
+    "outHex": "U+2032",
+    "unmapped": [
+      "′"
+    ],
+    "reported": [
+      "′"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક′ક",
+    "inHex": "0A95 2032 0A95",
+    "out": "L$′L$",
+    "outHex": "4C 24 U+2032 4C 24",
+    "unmapped": [
+      "′"
+    ],
+    "reported": [
+      "′"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "′",
+    "inHex": "2032",
+    "out": "′",
+    "outHex": "U+2032",
+    "unmapped": [
+      "′"
+    ],
+    "reported": [
+      "′"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક′ક",
+    "inHex": "0A95 2032 0A95",
+    "out": "L$′L$",
+    "outHex": "4C 24 U+2032 4C 24",
+    "unmapped": [
+      "′"
+    ],
+    "reported": [
+      "′"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "″",
+    "inHex": "2033",
+    "out": "″",
+    "outHex": "U+2033",
+    "unmapped": [
+      "″"
+    ],
+    "reported": [
+      "″"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક″ક",
+    "inHex": "0A95 2033 0A95",
+    "out": "L$″L$",
+    "outHex": "4C 24 U+2033 4C 24",
+    "unmapped": [
+      "″"
+    ],
+    "reported": [
+      "″"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "″",
+    "inHex": "2033",
+    "out": "″",
+    "outHex": "U+2033",
+    "unmapped": [
+      "″"
+    ],
+    "reported": [
+      "″"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક″ક",
+    "inHex": "0A95 2033 0A95",
+    "out": "L$″L$",
+    "outHex": "4C 24 U+2033 4C 24",
+    "unmapped": [
+      "″"
+    ],
+    "reported": [
+      "″"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "→",
+    "inHex": "2192",
+    "out": "→",
+    "outHex": "U+2192",
+    "unmapped": [
+      "→"
+    ],
+    "reported": [
+      "→"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક→ક",
+    "inHex": "0A95 2192 0A95",
+    "out": "L$→L$",
+    "outHex": "4C 24 U+2192 4C 24",
+    "unmapped": [
+      "→"
+    ],
+    "reported": [
+      "→"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "→",
+    "inHex": "2192",
+    "out": "→",
+    "outHex": "U+2192",
+    "unmapped": [
+      "→"
+    ],
+    "reported": [
+      "→"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક→ક",
+    "inHex": "0A95 2192 0A95",
+    "out": "L$→L$",
+    "outHex": "4C 24 U+2192 4C 24",
+    "unmapped": [
+      "→"
+    ],
+    "reported": [
+      "→"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "।।",
+    "inHex": "0964 0964",
+    "out": "—&—&",
+    "outHex": "97 26 97 26",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક।।ક",
+    "inHex": "0A95 0964 0964 0A95",
+    "out": "L$—&—&L$",
+    "outHex": "4C 24 97 26 97 26 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "।।",
+    "inHex": "0964 0964",
+    "out": "—&—&",
+    "outHex": "97 26 97 26",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક।।ક",
+    "inHex": "0A95 0964 0964 0A95",
+    "out": "L$—&—&L$",
+    "outHex": "4C 24 97 26 97 26 4C 24",
+    "unmapped": [],
+    "reported": []
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "​",
+    "inHex": "200B",
+    "out": "​",
+    "outHex": "U+200B",
+    "unmapped": [
+      "​"
+    ],
+    "reported": [
+      "​"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક​ક",
+    "inHex": "0A95 200B 0A95",
+    "out": "L$​L$",
+    "outHex": "4C 24 U+200B 4C 24",
+    "unmapped": [
+      "​"
+    ],
+    "reported": [
+      "​"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "​",
+    "inHex": "200B",
+    "out": "​",
+    "outHex": "U+200B",
+    "unmapped": [
+      "​"
+    ],
+    "reported": [
+      "​"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક​ક",
+    "inHex": "0A95 200B 0A95",
+    "out": "L$​L$",
+    "outHex": "4C 24 U+200B 4C 24",
+    "unmapped": [
+      "​"
+    ],
+    "reported": [
+      "​"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "\uFEFF",
+    "inHex": "FEFF",
+    "out": "\uFEFF",
+    "outHex": "U+FEFF",
+    "unmapped": [
+      "\uFEFF"
+    ],
+    "reported": [
+      "\uFEFF"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક\uFEFFક",
+    "inHex": "0A95 FEFF 0A95",
+    "out": "L$\uFEFFL$",
+    "outHex": "4C 24 U+FEFF 4C 24",
+    "unmapped": [
+      "\uFEFF"
+    ],
+    "reported": [
+      "\uFEFF"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "\uFEFF",
+    "inHex": "FEFF",
+    "out": "\uFEFF",
+    "outHex": "U+FEFF",
+    "unmapped": [
+      "\uFEFF"
+    ],
+    "reported": [
+      "\uFEFF"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક\uFEFFક",
+    "inHex": "0A95 FEFF 0A95",
+    "out": "L$\uFEFFL$",
+    "outHex": "4C 24 U+FEFF 4C 24",
+    "unmapped": [
+      "\uFEFF"
+    ],
+    "reported": [
+      "\uFEFF"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "alone",
+    "Text": "´",
+    "inHex": "00B4",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "´"
+    ],
+    "reported": [
+      "´"
+    ]
+  },
+  {
+    "Dir": "fwd7",
+    "Tag": "between",
+    "Text": "ક´ક",
+    "inHex": "0A95 00B4 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "´"
+    ],
+    "reported": [
+      "´"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "alone",
+    "Text": "´",
+    "inHex": "00B4",
+    "out": "",
+    "outHex": "",
+    "unmapped": [
+      "´"
+    ],
+    "reported": [
+      "´"
+    ]
+  },
+  {
+    "Dir": "fwd456",
+    "Tag": "between",
+    "Text": "ક´ક",
+    "inHex": "0A95 00B4 0A95",
+    "out": "L$L$",
+    "outHex": "4C 24 4C 24",
+    "unmapped": [
+      "´"
+    ],
+    "reported": [
+      "´"
+    ]
+  }
+]

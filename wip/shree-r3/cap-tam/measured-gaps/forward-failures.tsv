@@ -1,0 +1,22 @@
+unicode	codepoints	category	ours	shree_preferred	shree_accepted	fail_type
+ஔ	0B94	independent vowel / aytham	U+0B94	4A CD	4A CD	Tamil passed through unmapped
+ௌ	0BCC	two-part o / oo / au	U+0BCC	F6 CD	F6 CD	Tamil passed through unmapped
+ோ	0BCB	two-part o / oo / au	40 F5	F7 F5	F7 F5	other bytes (ours has 40 / Shree has F7)
+-	002D	punctuation / symbol	2D	26	26	other bytes (ours has 2D / Shree has 26)
+#	0023	punctuation / symbol	23	12	12	other bytes (ours has 23 / Shree has 12)
+$	0024	punctuation / symbol	24	13	13	other bytes (ours has 24 / Shree has 13)
+<	003C	punctuation / symbol	3C	14	14	other bytes (ours has 3C / Shree has 14)
+>	003E	punctuation / symbol	3E	15	15	other bytes (ours has 3E / Shree has 15)
+@	0040	punctuation / symbol	40	16	16	other bytes (ours has 40 / Shree has 16)
+_	005F	punctuation / symbol	5F	18	18	other bytes (ours has 5F / Shree has 18)
+[	005B	punctuation / symbol	5B	0B	0B	other bytes (ours has 5B / Shree has 0B)
+]	005D	punctuation / symbol	5D	0C	0C	other bytes (ours has 5D / Shree has 0C)
+{	007B	punctuation / symbol	7B	1A	1A	other bytes (ours has 7B / Shree has 1A)
+}	007D	punctuation / symbol	7D	1B	1B	other bytes (ours has 7D / Shree has 1B)
+\	005C	punctuation / symbol	5C	17	17	other bytes (ours has 5C / Shree has 17)
+|	007C	punctuation / symbol	7C	1C	1C	other bytes (ours has 7C / Shree has 1C)
+`	0060	punctuation / symbol	60	19	19	other bytes (ours has 60 / Shree has 19)
+^	005E	punctuation / symbol	5E	0F	0F	other bytes (ours has 5E / Shree has 0F)
+&	0026	punctuation / symbol	26	06	06	other bytes (ours has 26 / Shree has 06)
+“	201C	punctuation / symbol	93	0D	0D	other bytes (ours has 93 / Shree has 0D)
+”	201D	punctuation / symbol	94	0E	0E	other bytes (ours has 94 / Shree has 0E)

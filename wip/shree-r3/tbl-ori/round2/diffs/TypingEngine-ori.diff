@@ -1,0 +1,62 @@
+--- src/FontSoftware.Engine/TypingEngine.cs	2026-10-19 02:28:57.665232800 +0530
++++ src/FontSoftware.Engine/TypingEngine.cs	2026-10-19 02:12:26.992990100 +0530
+@@ -933,8 +933,18 @@
+             if (typed != '\0' && _seqKeys.Length == 1 && _seqKeys[0] == EscapeLayer.Mark && !IsForegroundExcluded())
+             {
+                 _log.Info($"Escape: then '{typed}' -> nothing on that layer - types nothing.");
+-                _undo.Push(before);            // a keystroke all the same: Backspace takes it back, and nothing before it
++                // Nothing reached Shree's composer, so the word typed by sound before the escape goes on (the escape had
++                // finished it: on the Odia Eng keyboard l, Ctrl+Space <, @ wrote E0 FF 7B F2 for ଲୌ, where the converter and
++                // Shree write 7B E0 FF F2). It is taken up again as it stood before the escape - nothing on screen changes -
++                // and this keystroke and the escape are one Backspace each, as before.
++                if (_undo.Count > 0)
++                {
++                    var atEscape = _undo.Pop();
++                    RestoreState(atEscape);
++                    _undo.Push(atEscape);
++                }
+                 ResetSequence();
++                _undo.Push(CurrentState());
+                 e.Handled = true;
+                 return true;
+             }
+@@ -1009,6 +1019,7 @@
+     // characters, one unit each, so this is reliable in standard edit controls.
+     // The last report of characters the legacy table could not write as the font's own codes (logged once).
+     private string? _lastNotShown;
++    private static readonly string WaitingMarkText = FontConverter.WaitingMark.ToString();
+ 
+     private void RerenderLegacy(bool wordEnds = false)
+     {
+@@ -1032,9 +1043,12 @@
+             return;                        // the keystroke changed nothing on screen
+         // What the table reports is said, as the converter says it (round 2): left out - the font cannot show it -
+         // or typed as itself, which the font has no glyph for (₹ in a Shree font; Word draws it in another font).
+-        if (converted.HasUnmapped)
++        // The waiting mark is the engine's own, not the typist's: a table reports it when it stands alone (the Odia
++        // tables do - a noncharacter in a document is never dropped silently), but it is never said here.
++        var leftOut = converted.LeftOutCharacters.Where(c => c != WaitingMarkText).ToList();
++        if (leftOut.Count > 0 || converted.KeptCharacters.Count > 0)
+         {
+-            string said = $"left out: {string.Join(" ", converted.LeftOutCharacters)}; typed as itself: {string.Join(" ", converted.KeptCharacters)}";
++            string said = $"left out: {string.Join(" ", leftOut)}; typed as itself: {string.Join(" ", converted.KeptCharacters)}";
+             if (!string.Equals(said, _lastNotShown, StringComparison.Ordinal))
+                 _log.Info($"Typed into a legacy font - {said} (the font has no glyph for these).");
+             _lastNotShown = said;
+@@ -1223,6 +1237,16 @@
+         // word goes in through its automation object, slowly enough that a space
+         // let through at once could land between the last two letters.
+         if (!e.IsKeyDown) return;
++        // A key the keyboard leaves empty ("": the slot of Shree's own file is FF, so nothing reaches its composer) is
++        // swallowed, and the word typed by sound goes on - it used to end it, so the next sign stood on its own: on the
++        // Odia Eng keyboard k [ @ was କ then ୌ alone (4C FF 7B F2 in a Shree font), where Shree types କୌ. Backspace takes it back.
++        if (_layoutIsPhonetic && _layout?.Find(e.VirtualKey) is { } empty && KeyChar(e.VirtualKey) != '\0' && SelectOutput(empty) is ""
++            && !IsForegroundExcluded())
++        {
++            e.Handled = true;
++            _undo.Push(before);
++            return;
++        }
+         FinishLegacyWord();
+         // A key the keyboard itself types (Shree's Eng: the digits are the script's, '&' the
+         // danda) is typed as the keyboard says - or nothing, where the keyboard leaves it

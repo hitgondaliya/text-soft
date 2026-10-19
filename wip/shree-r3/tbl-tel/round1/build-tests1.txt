@@ -1,0 +1,21 @@
+  Determining projects to restore...
+  Restored C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.Licensing\FontSoftware.Licensing.csproj (in 1.67 sec).
+  Restored C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App.csproj (in 1.67 sec).
+  Restored C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\tests\FontSoftware.Tests\FontSoftware.Tests.csproj (in 1.69 sec).
+  2 of 5 projects are up-to-date for restore.
+  FontSoftware.Core -> C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.Core\bin\Release\net8.0\FontSoftware.Core.dll
+  FontSoftware.Licensing -> C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.Licensing\bin\Release\net8.0\FontSoftware.Licensing.dll
+  FontSoftware.Engine -> C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.Engine\bin\Release\net8.0-windows\FontSoftware.Engine.dll
+C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\Views\ConverterView.xaml.cs(175,41): warning CS8602: Dereference of a possibly null reference. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App_yin3vijq_wpftmp.csproj]
+C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\Services\FileConversion.cs(214,39): warning CS8602: Dereference of a possibly null reference. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App_yin3vijq_wpftmp.csproj]
+C:\Program Files\dotnet\sdk\10.0.400\Sdks\Microsoft.NET.Sdk.WindowsDesktop\targets\Microsoft.WinFX.targets(707,5): error BG1002: File '..\..\logo.png' cannot be found. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App.csproj]
+
+Build FAILED.
+
+C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\Views\ConverterView.xaml.cs(175,41): warning CS8602: Dereference of a possibly null reference. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App_yin3vijq_wpftmp.csproj]
+C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\Services\FileConversion.cs(214,39): warning CS8602: Dereference of a possibly null reference. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App_yin3vijq_wpftmp.csproj]
+C:\Program Files\dotnet\sdk\10.0.400\Sdks\Microsoft.NET.Sdk.WindowsDesktop\targets\Microsoft.WinFX.targets(707,5): error BG1002: File '..\..\logo.png' cannot be found. [C:\Users\harde\AppData\Local\Temp\claude\C--Users-harde-Desktop-Windows-Font-Software\7673923b-96b4-4287-87dd-a8e7c6533eca\scratchpad\r3\tbl-tel\repo\src\FontSoftware.App\FontSoftware.App.csproj]
+    2 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:09.40

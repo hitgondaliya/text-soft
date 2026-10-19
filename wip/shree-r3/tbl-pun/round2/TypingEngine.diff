@@ -1,0 +1,183 @@
+--- ../round2/main-base/src/FontSoftware.Engine/TypingEngine.cs	2026-10-18 16:46:06.444522200 +0530
++++ src/FontSoftware.Engine/TypingEngine.cs	2026-10-18 20:23:47.504394800 +0530
+@@ -267,6 +267,7 @@
+     /// </summary>
+     private void CommitWord()
+     {
++        if (_uniWord.Length > 0) _prevOut = _uniWord[^1];
+         _done = Shown();
+         _uniWord.Clear();
+         _legacyOut = string.Empty;
+@@ -532,6 +533,7 @@
+             // halant now would send a Backspace under the typist's Ctrl, Alt or Windows key -
+             // Ctrl+Backspace deletes the word before it, Alt+Backspace is undo.
+             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
++            _prevOut = '\0';
+             FlushBeforeKey();
+             return;
+         }
+@@ -553,11 +555,13 @@
+         bool escapedToNothing = false;
+         if (_layout.HasSequences)
+             output = ResolveSequence(typed, output, out replace, out escapedToNothing);
++        bool typedSilent = false;
+         if (silent.Length > 0 && replace == 0 && !_seqKeys.ToString().StartsWith(before.SeqKeys, StringComparison.Ordinal)
+             && !IsForegroundExcluded())
+         {
+             Emit(silent, 0);
+             _lastEmitted = null;
++            typedSilent = true;
+         }
+ 
+         // Ctrl+Space then a key its layer leaves empty types nothing, as on Shree (the
+@@ -591,12 +595,31 @@
+             _seqOut = sign;
+         }
+ 
++        // A key that types nothing - a letter the keyboard does not use, or a slot it leaves
++        // empty ("") - reaches nothing on Shree either (the keyboard file's slot is FF: no code
++        // gets to the composer). So it is swallowed and nothing else changes: the word goes on,
++        // and so does the run in progress. Ending the word there made the next sign start a word
++        // of its own - DOE V d w (ਨੈ) wrote B2 BE B1 in a Shree font, where the table and Shree
++        // write B2 B1 BE. It is a keystroke all the same: Backspace takes it back.
++        if (string.IsNullOrEmpty(output) && replace == 0 && !typedSilent
++            && (e.VirtualKey is >= 'A' and <= 'Z' || selected is "") && !IsForegroundExcluded())
++        {
++            e.Handled = true;
++            _seqKeys.Clear();
++            _seqKeys.Append(before.SeqKeys);
++            _seqOut = before.SeqOut;
++            _seqMatched = before.SeqMatched;
++            _undo.Push(before);
++            return;
++        }
++
+         if (string.IsNullOrEmpty(output) && replace == 0)
+         {
+             bool excluded = IsForegroundExcluded();
+             // A printable key in a legacy font goes through the font's table (P6): "" where the
+             // font cannot show it, null where it is written as itself and passes as it is.
+-            string? tableText = excluded ? null : TableText(typed);
++            string word = TextBefore();   // what this key follows: a table may spell the key by it
++            string? tableText = excluded ? null : TableText(typed, word);
+             // The word ends here: a virama it ends in is now the visible halant, not the
+             // half form shown while it waited for its next letter.
+             if (!excluded) FinishLegacyWord();
+@@ -621,12 +644,13 @@
+                 if (tableText is { Length: > 0 })
+                 {
+                     _log.Info($"Key '{typed}' in a legacy font: typed as the table writes it.");
+-                    TypeAlone(typed.ToString());
++                    TypeAlone(typed.ToString(), word);
+                 }
+                 else if (tableText is not null) _log.Info($"Key '{typed}' in a legacy font: the font cannot show it - not typed.");
+                 return;
+             }
+             ResetLegacy();        // the word is the application's now
++            _prevOut = e.VirtualKey == VK_SPACE ? ' ' : typed;
+             FlushBeforeKey();
+             return;
+         }
+@@ -1182,19 +1206,24 @@
+         // is a keystroke of ours, and the caret has not moved: the word ends, but Backspace
+         // takes this key back whole and then goes on into the word. Any other key passes through.
+         string? alone = null;   // what the key types (Unicode; in a legacy font TypeAlone converts it)
++        string after = string.Empty;   // the word it ends, when the table spells the key by it
+         if (_layoutIsPhonetic && _layout?.Find(e.VirtualKey) is { } m && ch != '\0' && SelectOutput(m) is { } fixedText && !IsForegroundExcluded())
+             alone = fixedText;
+-        else if (!IsForegroundExcluded() && TableText(ch) is { } written)
++        else if (!IsForegroundExcluded() && TableText(ch, TextBefore()) is { } written)
++        {
+             alone = written.Length > 0 ? ch.ToString() : string.Empty;
++            after = TextBefore();
++        }
+         if (alone is not null)
+         {
+             e.Handled = true;
+             _undo.Push(before);
+             CommitWord();
+-            if (alone.Length > 0) TypeAlone(alone);
++            if (alone.Length > 0) TypeAlone(alone, after);
+             return;
+         }
+         ResetPhonetic();
++        _prevOut = e.VirtualKey == VK_SPACE ? ' ' : ch;
+         FlushBeforeKey();
+     }
+ 
+@@ -1224,12 +1253,20 @@
+     /// <see cref="CommitWord"/>): in a legacy font, converted. It is finished too, and stays
+     /// ours for Backspace to take back whole - '"' is 22 22 in a Shree font, two characters.
+     /// </summary>
+-    private void TypeAlone(string text)
++    private void TypeAlone(string text, string context = "")
+     {
+         if (_legacyConv is not null)
+         {
+             _uniWord.Append(text);
+-            RerenderLegacy(wordEnds: true);
++            // Spelled after what it follows, where that changes it (an ASCII quote closes after a letter).
++            string spelled = context.Length > 0 ? ConvertAfter(context, text) : string.Empty;
++            if (context.Length > 0 && spelled != _legacyConv.ConvertText(text))
++            {
++                int remove = _legacyOut.Length;
++                _legacyOut = spelled;
++                InjectLegacy(remove, spelled, true);
++            }
++            else RerenderLegacy(wordEnds: true);
+             CommitWord();
+             return;
+         }
+@@ -1237,19 +1274,41 @@
+         _done = Shown() + text;
+     }
+ 
++    // The last character put in front of the caret since it last moved, as far as the engine knows: the end of a
++    // word it finished, a key it typed on its own, a key it let through (a space for the space bar); '\0' when
++    // unknown. A key typed on its own is spelled after it (see ConvertAfter): an ASCII quote after "3" closes.
++    private char _prevOut;
++
++    /// <summary>The text a key typed on its own follows: the word in progress, else the last character before the caret.</summary>
++    private string TextBefore() => _uniWord.Length > 0 ? _uniWord.ToString() : _prevOut != '\0' ? _prevOut.ToString() : string.Empty;
++
+     /// <summary>
+     /// A printable key the keyboard passes through, in a legacy font: it reaches the document as
+     /// its byte, which the font may draw as a letter of the script ('[' is an i-sign in a Shree font).
+     /// So it goes through the font's table as the converter's text does (P6): what the table writes
+-    /// for it, "" where the table leaves it out, null where it is written as itself and can pass as it is.
++    /// for it after <paramref name="context"/> (the word it ends), "" where the table leaves it out,
++    /// null where it is written as itself and can pass as it is.
+     /// </summary>
+-    private string? TableText(char typed)
++    private string? TableText(char typed, string context = "")
+     {
+         if (_legacyConv is null || typed is < '!' or > '~') return null;
+-        string written = _legacyConv.ConvertText(typed.ToString());
++        string written = ConvertAfter(context, typed.ToString());
+         return written == typed.ToString() ? null : written;
+     }
+ 
++    /// <summary>
++    /// What the legacy table writes for <paramref name="text"/> where it follows <paramref name="context"/>,
++    /// which is on screen already: a table can spell a mark by what comes before it - in the Shree tables an
++    /// ASCII quote opens after a space and closes after a letter (ਪ' is 5C 27, a ' alone 22). Converted alone,
++    /// the apostrophe of a word came out as the opening quote, where the converter writes the closing one.
++    /// </summary>
++    private string ConvertAfter(string context, string text)
++    {
++        if (context.Length == 0) return _legacyConv!.ConvertText(text);
++        string both = _legacyConv!.ConvertText(context + text), first = _legacyConv.ConvertText(context);
++        return both.StartsWith(first, StringComparison.Ordinal) ? both[first.Length..] : _legacyConv.ConvertText(text);
++    }
++
+     // Replace the previously shown script for this word with the transliteration of
+     // the current buffer. Backspaces are UTF-16 units — reliable in standard edit
+     // controls (Notepad, WordPad, browsers); a few apps delete whole clusters.
+@@ -1367,6 +1426,7 @@
+     /// <summary>The caret may be somewhere else: the word in progress is no longer ours to rewrite.</summary>
+     private void ForgetWord()
+     {
++        _prevOut = '\0';
+         _pendingDead = null;
+         _lastEmitted = null;
+         ResetPhonetic();

@@ -1,0 +1,19 @@
+BAD written as own code the fonts draw otherwise, unreported	U+0027	'	27	reported False
+CHECK whitespace in cmap, unreported	U+00A0	 	A0	reported False
+BAD passed through (reported) but the fonts map this code to another glyph	U+00B7	·	B7	reported True
+CHECK replacement not in every face (reported)	U+FDD0	﷐	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD1	﷑	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD2	﷒	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD3	﷓	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD4	﷔	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD5	﷕	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD6	﷖	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD7	﷗	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD8	﷘	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDD9	﷙	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDA	﷚	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDB	﷛	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDC	﷜	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDD	﷝	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDE	﷞	U+FFFD	reported True
+CHECK replacement not in every face (reported)	U+FDDF	﷟	U+FFFD	reported True

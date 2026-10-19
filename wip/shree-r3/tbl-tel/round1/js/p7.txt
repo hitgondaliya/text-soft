@@ -1,0 +1,4 @@
+        R("(" + Cluster + ")్ర", Ra + "$1", "Once more, for a second ra-vattu in one cluster (not well-formed text): a hook too, so no virama is left over."),
+        R("్ర(?=" + Cluster + Vattu + "*ై)", RaDeep,
+          "A ra-vattu with no letter before it - struck first, before its letter, the vendor keyboards' order (TYPEWRIT K, DOE #, CRTRONIC T then the letter) - is the hook alone, where Shree writes D7 alone: the deeper 5B before a letter with ై ..."),
+        R("్ర", Ra, "... else 7B. Followed by its letter these are Shree's own bytes (్రక = 7B 4D E6 FC, what the composer writes for క్ర)."),

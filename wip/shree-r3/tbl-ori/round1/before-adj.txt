@@ -1,0 +1,117 @@
+truth 41470: preferred 13288, other accepted 5, wrong 28177 (32.04% preferred)
+  without ZWJ/ZWNJ: 13300/27276 = 48.76%
+  CHCs: 6211
+      କ୍ଖା	[0B15 0B4D 0B16 0B3E]	want 4C FF 52 E6	got 4C 52 E6
+      କ୍ଖି	[0B15 0B4D 0B16 0B3F]	want 4C FF 52 E7	got 4C 52 E7
+  CHNCs: 3888
+      କ୍‌କା	[0B15 0B4D 200C 0B15 0B3E]	unmapped ‌	got 4C FF FA U+200C 4C FF E6
+      କ୍‌କି	[0B15 0B4D 200C 0B15 0B3F]	unmapped ‌	got 4C FF FA U+200C 4C FF E7
+  CHNCHC: 3817
+      କ୍‌କ୍ର	[0B15 0B4D 200C 0B15 0B4D 0B30]	unmapped ‌	got 4C FF FA U+200C 4C FF F7
+      କ୍‌କ୍ୟ	[0B15 0B4D 200C 0B15 0B4D 0B5F]	unmapped ‌	got 4C FF FA U+200C 4C FF BF
+  CHCHC: 2725
+      କ୍କ୍ଷ	[0B15 0B4D 0B15 0B4D 0B37]	want 4C FF FA E4	got 4D FA CC
+      କ୍ଖ୍ର	[0B15 0B4D 0B16 0B4D 0B30]	want 4C FF 52 26 F7	got 4C 52 F7
+  CHCt: 1536
+      କ୍ଖଁ	[0B15 0B4D 0B16 0B01]	want 4C FF 52 F4	got 4C 52 F4
+      କ୍ଖଂ	[0B15 0B4D 0B16 0B02]	want 4C FF 52 F3	got 4C 52 F3
+  CsHNC: 1296
+      କେ୍‌କ	[0B15 0B47 0B4D 200C 0B15]	unmapped ‌	got 7B 4C FF FA U+200C 4C FF
+      କେ୍‌ଖ	[0B15 0B47 0B4D 200C 0B16]	unmapped ‌	got 7B 4C FF FA U+200C 51
+  CHNC: 1296
+      କ୍‌କ	[0B15 0B4D 200C 0B15]	unmapped ‌	got 4C FF FA U+200C 4C FF
+      କ୍‌ଖ	[0B15 0B4D 200C 0B16]	unmapped ‌	got 4C FF FA U+200C 51
+  CHNCt: 1296
+      କ୍‌କଂ	[0B15 0B4D 200C 0B15 0B02]	unmapped ‌	got 4C FF FA U+200C 4C FF F3
+      କ୍‌ଖଂ	[0B15 0B4D 200C 0B16 0B02]	unmapped ‌	got 4C FF FA U+200C 51 F3
+  CHJC: 1296
+      କ୍‍କ	[0B15 0B4D 200D 0B15]	unmapped ‍	got 4C FF FA U+200D 4C FF
+      କ୍‍ଖ	[0B15 0B4D 200D 0B16]	unmapped ‍	got 4C FF FA U+200D 51
+  CHCHN: 1227
+      କ୍କ୍‌	[0B15 0B4D 0B15 0B4D 200C]	unmapped ‌	got 4D FA U+200C
+      କ୍ଖ୍‌	[0B15 0B4D 0B16 0B4D 200C]	unmapped ‌	got 4C 52 FA U+200C
+  CHCH: 854
+      କ୍ଖ୍	[0B15 0B4D 0B16 0B4D]	want 4C FF 52 26 FA	got 4C 52 FA
+      କ୍ଗ୍	[0B15 0B4D 0B17 0B4D]	want 4C FF 56 26 FA	got 4C 56 FA
+  CHCHCs: 687
+      କ୍କ୍ଷା	[0B15 0B4D 0B15 0B4D 0B37 0B3E]	want 4C FF FA E4 E6	got 4D FA CC E6
+      କ୍କ୍ଷି	[0B15 0B4D 0B15 0B4D 0B37 0B3F]	want 4C FF FA E4 E7	got 4D FA CC E7
+  CHCst: 679
+      କ୍ଷୈଁ	[0B15 0B4D 0B37 0B48 0B01]	unmapped ୈ	got U+0B48 E4 F4
+      କ୍ଷୈଂ	[0B15 0B4D 0B37 0B48 0B02]	unmapped ୈ	got U+0B48 E4 F3
+  CHC: 513
+      କ୍ଖ	[0B15 0B4D 0B16]	want 4C FF 52	got 4C 52
+      କ୍ଗ	[0B15 0B4D 0B17]	want 4C FF 56	got 4C 56
+  Cst: 369
+      କୈଁ	[0B15 0B48 0B01]	unmapped ୈ	got U+0B48 4C FF F4
+      କୈଂ	[0B15 0B48 0B02]	unmapped ୈ	got U+0B48 4C FF F3
+  Cs: 127
+      କୈ	[0B15 0B48]	unmapped ୈ	got U+0B48 4C FF
+      କୋ	[0B15 0B4B]	want 7B 4C FF E6	got 4C FF 7B E6
+  CHCHCHC: 103
+      କ୍କ୍ଷ୍ୟ	[0B15 0B4D 0B15 0B4D 0B37 0B4D 0B5F]	want 4C FF FA E4 BF	got 4D FA CC BF
+      ଖ୍କ୍ଷ୍ୟ	[0B16 0B4D 0B15 0B4D 0B37 0B4D 0B5F]	want 51 FA E4 BF	got 51 50 FA CC BF
+  CHVt: 39
+      ର୍ଅଁ	[0B30 0B4D 0B05 0B01]	want 41 F6 F4 (or 41 F4 F6)	got F6 41 F4
+      ର୍ଅଂ	[0B30 0B4D 0B05 0B02]	want 41 F6 F3 (or 41 F3 F6)	got F6 41 F3
+  CHCHCt: 36
+      କ୍କ୍ଷଂ	[0B15 0B4D 0B15 0B4D 0B37 0B02]	want 4C FF FA E4 F3	got 4D FA CC F3
+      ଖ୍କ୍ଷଂ	[0B16 0B4D 0B15 0B4D 0B37 0B02]	want 51 FA E4 F3	got 51 50 FA CC F3
+  CHN: 36
+      କ୍‌	[0B15 0B4D 200C]	unmapped ‌	got 4C FF FA U+200C
+      ଖ୍‌	[0B16 0B4D 200C]	unmapped ‌	got 51 FA U+200C
+  CHJ: 36
+      କ୍‍	[0B15 0B4D 200D]	unmapped ‍	got 4C FF FA U+200D
+      ଖ୍‍	[0B16 0B4D 200D]	unmapped ‍	got 51 FA U+200D
+  CHCC: 33
+      ର୍କକ	[0B30 0B4D 0B15 0B15]	want 4C FF F6 4C FF	got C0 50 4C FF
+      ର୍କଖ	[0B30 0B4D 0B15 0B16]	want 4C FF F6 51	got C0 50 51
+  o: 13
+      !	[0021]	unmapped !	got 21
+      %	[0025]	unmapped %	got 25
+  CHCHCst: 13
+      କ୍ଷ୍ୟେଂ	[0B15 0B4D 0B37 0B4D 0B5F 0B47 0B02]	want 7B E4 BF F3	got E4 BF 7B F3
+      ର୍କ୍ଷାଁ	[0B30 0B4D 0B15 0B4D 0B37 0B3E 0B01]	want E4 E6 F6 F4 (or E4 E6 F4 F6)	got C0 50 FA CC E6 F4
+  CHV: 13
+      ର୍ଅ	[0B30 0B4D 0B05]	want 41 F6	got F6 41
+      ର୍ଆ	[0B30 0B4D 0B06]	want 41 E6 F6	got F6 41 E6
+  CHCHCHCs: 8
+      ର୍କ୍ଷ୍ୟା	[0B30 0B4D 0B15 0B4D 0B37 0B4D 0B5F 0B3E]	want E4 BF E6 F6	got C0 50 FA CC BF E6
+      ର୍କ୍ଷ୍ୟି	[0B30 0B4D 0B15 0B4D 0B37 0B4D 0B5F 0B3F]	want E4 BF 7D	got C0 50 FA CC BF E7
+  st: 6
+      ୈଁ	[0B48 0B01]	unmapped ୈ	got U+0B48 F4
+      ୈଂ	[0B48 0B02]	unmapped ୈ	got U+0B48 F3
+  Vs: 4
+      ଅେ	[0B05 0B47]	want 7B 41	got 41 7B
+      ଅୈ	[0B05 0B48]	unmapped ୈ	got 41 U+0B48
+  CsC: 4
+      କାନ	[0B15 0B3E 0B28]	want 4C FF E6 5B FF	got 4C FF E6 5B
+      କିନ	[0B15 0B3F 0B28]	want 4C FF E7 5B FF	got 4C FF E7 5B
+  Ct: 3
+      ନଁ	[0B28 0B01]	want 5B FF F4	got 5B F4
+      ନଂ	[0B28 0B02]	want 5B FF F3	got 5B F3
+  CHCHCHN: 2
+      କ୍ଷ୍ର୍‌	[0B15 0B4D 0B37 0B4D 0B30 0B4D 200C]	unmapped ‌	got E4 F7 FA U+200C
+      କ୍ଷ୍ୟ୍‌	[0B15 0B4D 0B37 0B4D 0B5F 0B4D 200C]	unmapped ‌	got E4 BF FA U+200C
+  CH: 2
+      ନ୍	[0B28 0B4D]	want 5B FF FA	got 9C FF FA
+      ର୍	[0B30 0B4D]	want C0 FF FA	got F6
+  s: 2
+      ୈ	[0B48]	unmapped ୈ	got U+0B48
+      ୌ	[0B4C]	unmapped ୌ	got U+0B4C
+  ooo: 1
+      ...	[002E 002E 002E]	unmapped .	got 2E 2E 2E
+  CtC: 1
+      କଂନ	[0B15 0B02 0B28]	want 4C FF F3 5B FF	got 4C FF F3 5B
+  CHCHJ: 1
+      କ୍ଷ୍‍	[0B15 0B4D 0B37 0B4D 200D]	unmapped ‍	got E4 FA U+200D
+  CHNN: 1
+      ତ୍‌‌	[0B24 0B4D 200C 200C]	unmapped ‌	got 86 FF FA U+200C U+200C
+  C: 1
+      ନ	[0B28]	want 5B FF	got 5B
+  CHJCHC: 1
+      ର୍‍କ୍ଷ	[0B30 0B4D 200D 0B15 0B4D 0B37]	unmapped ‍	got F6 U+200D E4
+  HN: 1
+      ୍‌	[0B4D 200C]	unmapped ‌	got FA U+200C
+words 20000 (seed 7): exact 1043, wrong 18957 (5.21%)
+words 20000 (seed 11): exact 1039, wrong 18961 (5.20%)

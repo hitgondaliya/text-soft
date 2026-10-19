@@ -1,0 +1,57 @@
+{
+ "capvo vs capvo-b": {
+  "files": 15,
+  "rawIdentical": 15,
+  "identicalAfterNormalisingGarbageCounts": 15,
+  "differ": [],
+  "missingInB": [],
+  "unstable": [
+   "capvo/ENG.tsv",
+   "capvo-b/ENG.tsv",
+   "capvo/NEWROMA.tsv",
+   "capvo-b/NEWROMA.tsv"
+  ],
+  "notLoaded": [],
+  "keysWithGarbageCount": ""
+ },
+ "capx vs capx-b": {
+  "files": 49,
+  "rawIdentical": 49,
+  "identicalAfterNormalisingGarbageCounts": 49,
+  "differ": [],
+  "missingInB": [],
+  "unstable": [],
+  "notLoaded": [],
+  "keysWithGarbageCount": ""
+ },
+ "capp vs capp-b": {
+  "files": 784,
+  "rawIdentical": 784,
+  "identicalAfterNormalisingGarbageCounts": 784,
+  "differ": [],
+  "missingInB": [],
+  "unstable": [],
+  "notLoaded": [],
+  "keysWithGarbageCount": ""
+ },
+ "capw vs capw-b": {
+  "files": 888,
+  "rawIdentical": 888,
+  "identicalAfterNormalisingGarbageCounts": 888,
+  "differ": [],
+  "missingInB": [],
+  "unstable": [],
+  "notLoaded": [],
+  "keysWithGarbageCount": ""
+ },
+ "capxx vs capxx-b": {
+  "files": 22,
+  "rawIdentical": 22,
+  "identicalAfterNormalisingGarbageCounts": 22,
+  "differ": [],
+  "missingInB": [],
+  "unstable": [],
+  "notLoaded": [],
+  "keysWithGarbageCount": ""
+ }
+}

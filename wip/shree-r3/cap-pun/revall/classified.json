@@ -1,0 +1,61 @@
+{
+ "inherent: link spelling, no virama glyph (same letters read back)": {
+  "n": 18110,
+  "ex": [
+   "48 63: Shree ਕ੍ਰ | ours ਕਰ (alt:C+link+ਰ/ਹ/ਵ/ਯ)",
+   "48 68: Shree ਕ੍ਹ | ours ਕਹ (alt:C+link+ਰ/ਹ/ਵ/ਯ)",
+   "48 65: Shree ਕ੍ਵ | ours ਕਵ (alt:C+link+ਰ/ਹ/ਵ/ਯ)",
+   "48 61: Shree ਕ੍ਯ | ours ਕਯ (alt:C+link+ਰ/ਹ/ਵ/ਯ)",
+   "49 63: Shree ਖ੍ਰ | ours ਖਰ (alt:C+link+ਰ/ਹ/ਵ/ਯ)",
+   "49 68: Shree ਖ੍ਹ | ours ਖਹ (alt:C+link+ਰ/ਹ/ਵ/ਯ)"
+  ]
+ },
+ "table bug: BE/AE/AF read as ¾ ® ¯": {
+  "n": 576,
+  "ex": [
+   "48 53 BE AE: Shree ਕ੍ਠੁ | ours ਕਠ® (canonical:link)",
+   "48 53 BE AF: Shree ਕ੍ਠੂ | ours ਕਠ¯ (canonical:link)",
+   "48 53 79 BE: Shree ਕ੍ਠੇ | ours ਕਠੇ¾ (canonical:link)",
+   "48 53 B1 BE: Shree ਕ੍ਠੈ | ours ਕਠੈ¾ (canonical:link)",
+   "48 53 7D BE: Shree ਕ੍ਠੋ | ours ਕਠੋ¾ (canonical:link)",
+   "48 53 A1 BE: Shree ਕ੍ਠੌ | ours ਕਠੌ¾ (canonical:link)"
+  ]
+ },
+ "inherent: link spelling + i-sign (71 C1 C2 is also C1-i C2)": {
+  "n": 992,
+  "ex": [
+   "71 49 48: Shree ਖ੍ਕਿ | ours ਖਿਕ (canonical:link)",
+   "71 49 49: Shree ਖ੍ਖਿ | ours ਖਿਖ (canonical:link)",
+   "71 49 4A: Shree ਖ੍ਗਿ | ours ਖਿਗ (canonical:link)",
+   "71 49 4B: Shree ਖ੍ਘਿ | ours ਖਿਘ (canonical:link)",
+   "71 49 4C: Shree ਖ੍ਙਿ | ours ਖਿਙ (canonical:link)",
+   "71 49 4D: Shree ਖ੍ਚਿ | ours ਖਿਚ (canonical:link)"
+  ]
+ },
+ "other": {
+  "n": 1,
+  "ex": [
+   "44 A3: Shree ੳਂਂ | ours ੳਂ (canonical:tippi-typed-written-as-bindi)"
+  ]
+ },
+ "inherent: link + halant in one spelling (the link virama has no glyph; every B5 virama read back)": {
+  "n": 1024,
+  "ex": [
+   "48 48 B5: Shree ਕ੍ਕ੍ | ours ਕਕ੍ (canonical:link)",
+   "48 49 B5: Shree ਕ੍ਖ੍ | ours ਕਖ੍ (canonical:link)",
+   "48 4A B5: Shree ਕ੍ਗ੍ | ours ਕਗ੍ (canonical:link)",
+   "48 4B B5: Shree ਕ੍ਘ੍ | ours ਕਘ੍ (canonical:link)",
+   "48 4C B5: Shree ਕ੍ਙ੍ | ours ਕਙ੍ (canonical:link)",
+   "48 4D B5: Shree ਕ੍ਚ੍ | ours ਕਚ੍ (canonical:link)"
+  ]
+ },
+ "table bug: 71 before ੜ not reordered": {
+  "n": 4,
+  "ex": [
+   "71 6D B5 63: Shree ੜ੍ਰਿ | ours ਿੜ੍ਰ (alt:C+halant+ਰ/ਹ/ਵ/ਯ)",
+   "71 6D B5 68: Shree ੜ੍ਹਿ | ours ਿੜ੍ਹ (alt:C+halant+ਰ/ਹ/ਵ/ਯ)",
+   "71 6D B5 65: Shree ੜ੍ਵਿ | ours ਿੜ੍ਵ (alt:C+halant+ਰ/ਹ/ਵ/ਯ)",
+   "71 6D B5 61: Shree ੜ੍ਯਿ | ours ਿੜ੍ਯ (alt:C+halant+ਰ/ਹ/ਵ/ਯ)"
+  ]
+ }
+}

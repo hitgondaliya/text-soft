@@ -1,0 +1,165 @@
+{
+ "failures": 19264,
+ "byCause": {
+  "E. letter glyph choice: ಙ 9A (Shree 5F), ಫ B6 (Shree B4), ಱ 93 (Shree 94), ಘಿ 99 (Shree 5C), ಘೆ 4E (Shree 5B E6)": {
+   "count": 2113,
+   "examples": [
+    "ಙ: ours 9A | Shree 5F",
+    "ಫ: ours B6 DC | Shree B4 DC",
+    "ಫು: ours B6 DC E2 | Shree B4 DC E2",
+    "ಘಿ: ours 99 | Shree 5C",
+    "ಘಿಂ: ours 99 ED | Shree 5C ED",
+    "ಘಿಃ: ours 99 40 | Shree 5C 40"
+   ]
+  },
+  "G. nukta order (82 placed after the sign, or the head DC kept)": {
+   "count": 188,
+   "examples": [
+    "಼: ours 82 | Shree 98",
+    "ರ್ಕ಼: ours 50 DC EC 82 | Shree 50 DC 82 EC",
+    "ಕ಼್‌: ours 50 DC 82 85 U+200C | Shree 50 DC 85",
+    "ಕ಼ೆ: ours 50 DC 82 E6 | Shree 50 E6 82",
+    "ಕ಼ೈ: ours 50 DC 82 E6 E7 | Shree 50 E6 82 E7",
+    "ರ್ಖ಼: ours 53 EC 82 | Shree 53 82 EC"
+   ]
+  },
+  "J. punctuation / symbols (‘ ’ 91 92 | Shree 22 27; — – 97 96 | Shree AC B6; ಽ 97 | Shree 98; ÷; ₹)": {
+   "count": 13,
+   "examples": [
+    "಼: ours 82 | Shree 98",
+    "ಽ: ours 97 | Shree 98",
+    "‘: ours 91 | Shree 22",
+    "’: ours 92 | Shree 27",
+    "—: ours 97 | Shree AC",
+    "–: ours 96 | Shree B6"
+   ]
+  },
+  "C. vowel sign on a conjunct written AFTER the subjoined form (Shree puts the sign on C1 and the subjoined form last: ಕ್ಕಾ ours 50 DC 52 DD | Shree 50 DD 52; ಕ್ಕಿ ours 50 DC 52 DF | Shree 51 52)": {
+   "count": 12199,
+   "examples": [
+    "್ಚೈ: ours 63 E6 E7 | Shree 49 63",
+    "್ತೃ: ours A4 EA | Shree 4D E1 A4",
+    "ಕ್ಕಾ: ours 50 DC 52 DD | Shree 50 DD 52",
+    "ಕ್ಕಿ: ours 50 DC 52 DF | Shree 51 52",
+    "ಕ್ಕು: ours 50 DC 52 E1 | Shree 50 DC E1 52",
+    "ಕ್ಕೂ: ours 50 DC 52 E3 | Shree 50 DC E3 52"
+   ]
+  },
+  "I. subjoined form differs (ಕ್ಫ ours 50 DC 23 | Shree 50 DC 96; ಕ್ಮ ours 50 DC 24 BE | Shree 50 DC BE; lone ್C pieces)": {
+   "count": 3650,
+   "examples": [
+    "್ತ್ರ: ours A4 C5 | Shree F7",
+    "್ಘ: ours 85 5A | Shree 5E",
+    "್ಥ: ours 85 A5 DC | Shree A7",
+    "ರ್ಕ್‌: ours 50 DC EC 85 U+200C | Shree 50 85 EC",
+    "ರ್ಕೕ: ours 50 DC EC E0 | Shree 50 DC E0 EC",
+    "ರ್ಕ಼: ours 50 DC EC 82 | Shree 50 DC 82 EC"
+   ]
+  },
+  "A. ZWNJ/ZWJ written into the legacy text (halant C್‌ : Shree writes the virama glyph 85 and nothing for the joiner)": {
+   "count": 2780,
+   "examples": [
+    "ಕ್‌: ours 50 85 U+200C | Shree 50 85",
+    "ಕ್‌ : ours 50 85 U+200C 20 | Shree 50 85 20",
+    "ಕ್‌ಕ: ours 50 85 U+200C 50 DC | Shree 50 85 50 DC",
+    "ರ್ಕ್‌: ours 50 DC EC 85 U+200C | Shree 50 85 EC",
+    "ಕ಼್‌: ours 50 DC 82 85 U+200C | Shree 50 DC 85",
+    "ಖ್‌: ours 54 85 U+200C | Shree 54 85"
+   ]
+  },
+  "B. reph (arkavattu): EC written right after the letter + head, before the vowel sign (Shree: the syllable, then EC) (ರ್ಕಾ: ours 50 DC EC DD | Shree 50 DD EC)": {
+   "count": 2648,
+   "examples": [
+    "ರ್ಕ್‌: ours 50 DC EC 85 U+200C | Shree 50 85 EC",
+    "ರ್ಕೕ: ours 50 DC EC E0 | Shree 50 DC E0 EC",
+    "ರ್ಕ಼: ours 50 DC EC 82 | Shree 50 DC 82 EC",
+    "ರ್ಕಾ: ours 50 DC EC DD | Shree 50 DD EC",
+    "ರ್ಕಾಂ: ours 50 DC EC DD ED | Shree 50 DD EC ED",
+    "ರ್ಕಾಃ: ours 50 DC EC DD 40 | Shree 50 DD EC 40"
+   ]
+  },
+  "D. ೀ ೇ ೋ after a conjunct: no pair, passed through as Kannada": {
+   "count": 138,
+   "examples": [
+    "ರ್ಕೀ: ours 50 DC EC U+0CC0 | Shree 51 E0 EC",
+    "ರ್ಕೇ: ours 50 DC EC U+0CC7 | Shree 50 E6 E0 EC",
+    "ರ್ಕೋ: ours 50 DC EC U+0CCB | Shree 50 E6 E3 E0 EC",
+    "ರ್ಖೀ: ours 53 EC U+0CC0 | Shree 55 E0 EC",
+    "ರ್ಖೇ: ours 53 EC U+0CC7 | Shree 54 E6 E0 EC",
+    "ರ್ಖೋ: ours 53 EC U+0CCB | Shree 54 E6 E3 E0 EC"
+   ]
+  },
+  "F. ಕ್ಷ / ಜ್ಞ + sign: head kept or a different base": {
+   "count": 731,
+   "examples": [
+    "ಕ್ಷ್‌: ours FB DC 85 U+200C | Shree FB 85",
+    "ಕ್ಷ್‌ : ours FB DC 85 U+200C 20 | Shree FB 85 20",
+    "ಕ್ಷ್‌ಕ: ours FB DC 85 U+200C 50 DC | Shree FB 85 50 DC",
+    "ರ್ಕ್ಷ: ours 50 DC EC D2 | Shree FB DC EC",
+    "ರ್ಕ್ಷ್‌: ours 50 DC EC D2 85 U+200C | Shree FB 85 EC",
+    "ರ್ಕ್ಷೕ: ours 50 DC EC D2 E0 | Shree FB DC E0 EC"
+   ]
+  },
+  "H. reph on an independent vowel or a halant/ZW form": {
+   "count": 15,
+   "examples": [
+    "ರ್ಅ: ours C3 85 41 | Shree 41 EC",
+    "ರ್ಆ: ours C3 85 42 | Shree 42 EC",
+    "ರ್ಇ: ours C3 85 43 | Shree 43 EC",
+    "ರ್ಈ: ours C3 85 44 | Shree 44 EC",
+    "ರ್ಉ: ours C3 85 45 | Shree 45 EC",
+    "ರ್ಊ: ours C3 85 46 | Shree 46 EC"
+   ]
+  }
+ },
+ "firstCause": {
+  "E. letter glyph choice: ಙ 9A (Shree 5F), ಫ B6 (Shree B4), ಱ 93 (Shree 94), ಘಿ 99 (Shree 5C), ಘೆ 4E (Shree 5B E6)": 412,
+  "G. nukta order (82 placed after the sign, or the head DC kept)": 78,
+  "J. punctuation / symbols (‘ ’ 91 92 | Shree 22 27; — – 97 96 | Shree AC B6; ಽ 97 | Shree 98; ÷; ₹)": 12,
+  "C. vowel sign on a conjunct written AFTER the subjoined form (Shree puts the sign on C1 and the subjoined form last: ಕ್ಕಾ ours 50 DC 52 DD | Shree 50 DD 52; ಕ್ಕಿ ours 50 DC 52 DF | Shree 51 52)": 12199,
+  "I. subjoined form differs (ಕ್ಫ ours 50 DC 23 | Shree 50 DC 96; ಕ್ಮ ours 50 DC 24 BE | Shree 50 DC BE; lone ್C pieces)": 620,
+  "A. ZWNJ/ZWJ written into the legacy text (halant C್‌ : Shree writes the virama glyph 85 and nothing for the joiner)": 2780,
+  "B. reph (arkavattu): EC written right after the letter + head, before the vowel sign (Shree: the syllable, then EC) (ರ್ಕಾ: ours 50 DC EC DD | Shree 50 DD EC)": 2610,
+  "D. ೀ ೇ ೋ after a conjunct: no pair, passed through as Kannada": 27,
+  "F. ಕ್ಷ / ಜ್ಞ + sign: head kept or a different base": 478,
+  "H. reph on an independent vowel or a halant/ZW form": 15
+ },
+ "other": {
+  "count": 33,
+  "examples": [
+   "ಙೀ: ours 5F EF E0 | Shree 5F DF E0",
+   "ಙೀಂ: ours 5F EF E0 ED | Shree 5F DF E0 ED",
+   "ಙೀಃ: ours 5F EF E0 40 | Shree 5F DF E0 40",
+   "ಧಿ: ours 98 | Shree 97",
+   "ಧಿಂ: ours 98 ED | Shree 97 ED",
+   "ಧಿಃ: ours 98 40 | Shree 97 40",
+   "ಧೀ: ours 98 E0 | Shree 97 E0",
+   "ಧೀಂ: ours 98 E0 ED | Shree 97 E0 ED",
+   "ಧೀಃ: ours 98 E0 40 | Shree 97 E0 40",
+   "ೞಾ: ours 91 DD | Shree 92 DD",
+   "ೞಾಂ: ours 91 DD ED | Shree 92 DD ED",
+   "ೞಾಃ: ours 91 DD 40 | Shree 92 DD 40",
+   "ೞೆ: ours 91 E6 | Shree 91 EF",
+   "ೞೆಂ: ours 91 E6 ED | Shree 91 EF ED",
+   "ೞೆಃ: ours 91 E6 40 | Shree 91 EF 40",
+   "ೞೈ: ours 91 E6 E7 | Shree 91 EF E7",
+   "ೞೈಂ: ours 91 E6 E7 ED | Shree 91 EF E7 ED",
+   "ೞೈಃ: ours 91 E6 E7 40 | Shree 91 EF E7 40",
+   "ೞೊ: ours 91 E6 E3 | Shree 91 EF E3",
+   "ೞೊಂ: ours 91 E6 E3 ED | Shree 91 EF E3 ED",
+   "ೞೊಃ: ours 91 E6 E3 40 | Shree 91 EF E3 40",
+   "ೞೌ: ours 91 E8 | Shree 92 E8",
+   "ೞೌಂ: ours 91 E8 ED | Shree 92 E8 ED",
+   "ೞೌಃ: ours 91 E8 40 | Shree 92 E8 40",
+   "ೡ: ours U+0CE1 | Shree 99",
+   "ೡಂ: ours U+0CE1 ED | Shree 99 ED",
+   "ೡಃ: ours U+0CE1 40 | Shree 99 40",
+   "ೡಂಃ: ours U+0CE1 ED 40 | Shree 99 ED 40",
+   "ೡಃಂ: ours U+0CE1 40 ED | Shree 99 40 ED",
+   "ಕೆೃ: ours 50 E6 EA | Shree 50",
+   "ಪೆೃ: ours B1 E6 EA | Shree B1",
+   "ಪಿೂ: ours B2 E3 | Shree B2 E4",
+   "ೞಾಕ: ours 91 DD 50 DC | Shree 92 DD 50 DC"
+  ]
+ }
+}

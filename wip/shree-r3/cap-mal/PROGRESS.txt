@@ -1,0 +1,29 @@
+Malayalam (S8MalU64 / S8Mal764) Shree-Lipi 7 capture - started 2026-10-18 20:00 IST. Pipeline adapted from ../cap-kan (Kannada) + ../cap-tam (Tamil W set).
+ 0. shmdump/start.bin = SLNXT's SL8_DLL_DATA before the first composer load (header 00 00 01 00 00 80, table 0 = DOE.GUJ; == ../cap-tam/shmdump/final-r2.bin).
+    shmdump/DEFAULTS-start.bin = SL8_DEFAULTS_DATA (defchk.ps1; byte 0x92 = 00).
+    Manual restore: probe2\bin\probe2.exe --put C:\Users\harde\AppData\Local\Temp\claude\C--USE~1\767392~1\SCRATC~1\r3\cap-mal\shmdump\start.bin
+ 1. probe2/ + shmlab/ copied (built exes) from cap-kan. k/BASEA.MAL = copy of DOE.MAL (slots blanked by build.js) = probe base;
+    check keys V Y Z 0 5 _ < [ { } ~ (untouched by build.js). kbdscan.js -> kbdscan.txt (the 15 .MAL files).
+ 2. Vendor keyboards: safe-run run1 capvo "C:/Shree-Lipi nxt" + capvo-b (15 .MAL each, raw byte-identical; ENG and NEWROMA #stable 0 =
+    the two passes INSIDE one process differ (phonetic state), but run A == run B). LAYERS=12 safe-run layers -> layers/DOE.tsv.
+    collectv.js -> vendor-rows.json (2,167 rows), mal-vendor-keys.json (15 keyboards x layers 0/1/2, both composers, + Ctrl+Shift+1 from charts).
+ 3. Explore: explore1.js -> seq-explore1.json (2,262) -> build.js px E (49 files) -> safe-run runE capx px capx-b px (identical);
+    probeparse.js px capx E --show > explore1-show.txt.
+ 4. Main probes: gen.js -> seq-all.json (36,826) -> build.js seq-all.json p P (784 files) -> safe-run runP capp p capp-b p (28 s, 784/784 identical).
+    probeparse.js p capp P -> capp/P-results.json. analyse1.js = expected.js vs the Unicode composer.
+ 5. Slot-length experiment (gen-len.js -> ln/LAAA.MAL -> safe-run runL capl ln capl-b ln): the slot header byte (04) is IGNORED
+    (00 01 02 03 05 06 08 FF all give the same 4 codes): a key can never type more than 4 codes.
+    SLNXT itself changed SL8_DLL_DATA byte 0x1A2 00 -> 01 between 20:09 and 20:23 IST (not this agent); safe-run restores each run to its pre-dump.
+ 6. fontcmp.js -> fonts/family-check.json: 7 faces (WMAL7001/2, S0501/0502/0507/0508/0520890), 189 codes, same glyph ids; no 4/5/6 face.
+ 7. W set (joins): gen-w.js (malenc.js encoder, common-words-ml.txt 385 words) -> seq-w.json (41,708) -> build.js seq-w.json pw W (888 files)
+    -> LAYERS=0 safe-run runW capw pw capw-b pw (888/888 identical) -> probeparse.js pw capw W; wjoin.js -> wjoin.json
+    (7 composer: syllables joined in 41,451/41,708; 207 = C + link + next letter's pre-base sign (garbled 57 A8), 50 = ക്ഷ + link + C (one cluster)).
+ 8. X set (samvruthokaram, sign + virama): gen-x.js -> seq-x.json (999) -> build.js pxx X (22) -> safe-run runX capxx pxx capxx-b pxx (identical).
+ 9. groundtruth.js -> mal7-groundtruth.json (P + W + X + vendor; 67,745 strings with truth, 81,613 pairs), mal7-only7-evidence.json.
+    model.js (the syllable rule) + patterns.js -> mal7-patterns.txt (rule reproduces 22,617/22,617 piece-built truth syllables).
+    gaps.js -> mal7-composer-gaps.json (77,916 derived 5+-code syllables, 6 ZWJ chillus, 3-consonant clusters unknown).
+10. Measure: repo/ = snap-base src/FontSoftware.Core + assets/config (mal7 tables md5 = main checkout); measure/ built once (dotnet build -c Release
+    -o bin -m:1 -nodeReuse:false -p:UseSharedCompilation=false). measure.exe mal7-groundtruth.json repo/assets/config measured (measured-r2 byte-identical);
+    WORDS=common-words-ml.txt -> measured/common-words.tsv; truth-plus-derived.json -> measured-words-derived/; gaps-as-truth.json -> measured-gaps/;
+    failclass.js / revclass.js -> measured/forward-failure-groups.json, reverse-failure-groups.json. layercheck.json (tutor layers).
+11. 20:42 IST: final.bin == start.bin; probe2 --put start.bin -> identical; SL8_DEFAULTS_DATA == DEFAULTS-start.bin (0/439). ALL DONE.

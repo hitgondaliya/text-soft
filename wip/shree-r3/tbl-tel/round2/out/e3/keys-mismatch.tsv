@@ -1,0 +1,369 @@
+same Unicode, other bytes	APPLE	!	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same Unicode, other bytes	APPLE	$	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+same Unicode, other bytes	APPLE	%	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same after glyph fix (visarga40>5D)	APPLE	G	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	APPLE	H	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (candrabinduB6>97)	APPLE	N	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+7-only code: TextSoft nothing	APPLE	Q	shree U '' [] b7 93	ours U '' [] t7  t7w 
+DIFFERENT UNICODE	APPLE	[	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+SHREE NOTHING, TEXTSOFT TYPES	APPLE	h	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same Unicode, other bytes	APPLE	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	APPLE	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+7-only code: TextSoft nothing	APPLE	Ctrl+Space a	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	APPLE	Ctrl+Space f	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	APPLE	Ctrl+Space o	shree U '' [] b7 3D	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	APPLE	Ctrl+Space s	shree U '' [] b7 25	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	CRTRONIC	H	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+DIFFERENT UNICODE	CRTRONIC	X	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+DIFFERENT UNICODE	CRTRONIC	x	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	CRTRONIC	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	CRTRONIC	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+same Unicode, other bytes	CRTRONIC	Ctrl+Space c	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+SHREE NOTHING, TEXTSOFT TYPES	CRTRONIC	Ctrl+Space d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	CRTRONIC	Ctrl+Space f	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	CRTRONIC	Ctrl+Space o	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+7-only code: TextSoft nothing	CRTRONIC	Ctrl+Space s	shree U '' [] b7 93	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	DOE	X	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	DOE	Z	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same after glyph fix (visarga40>5D)	DOE	_	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	DOE	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	DOE	w	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+DIFFERENT UNICODE	DOE	z	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same Unicode, other bytes	DOE	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	DOE	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+same Unicode, other bytes	DOE	Ctrl+Space a	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+7-only code: TextSoft nothing	DOE	Ctrl+Space h	shree U '' [] b7 3D	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	DOE	Ctrl+Space k	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	DOE	Ctrl+Space l	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	ENG	$	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same Unicode, other bytes	ENG	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+7-only code: TextSoft nothing	ENG	@	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (visarga40>5D)	ENG	H	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	ENG	`	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	ENG	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	ENG	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+DIFFERENT UNICODE	ENG	Ctrl+Space a	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same Unicode, other bytes	ENG	Ctrl+Space m	shree U 'ఞ్' [0C1E 0C4D] b7 70 FD	ours U 'ఞ్' [0C1E 0C4D] t7 70 8A FF t7w 70 8A FF
+same Unicode, other bytes	ENG	Ctrl+Space n	shree U 'ఙ్' [0C19 0C4D] b7 5C FD	ours U 'ఙ్' [0C19 0C4D] t7 5C 8A FD t7w 5C 8A FD
+same Unicode, other bytes	ENG	Ctrl+Space r	shree U 'ఱ్' [0C31 0C4D] b7 82 FD	ours U 'ఱ్' [0C31 0C4D] t7 82 8C FD t7w 82 8C FD
+DIFFERENT UNICODE	GODREJ	@	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+SHREE NOTHING, TEXTSOFT TYPES	GODREJ	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	GODREJ	q	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	GODREJ	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same after glyph fix (visarga40>5D)	GODREJ	Ctrl+Space c	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+same after glyph fix (candrabinduB6>97)	GODREJ	Ctrl+Space h	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+7-only code: TextSoft nothing	GODREJ	Ctrl+Space j	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same Unicode, other bytes	GODREJ	Ctrl+Space w	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same Unicode, other bytes	INDICA	X	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same after glyph fix (visarga40>5D)	INDICA	_	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	INDICA	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	INDICA	w	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	INDICA	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	INDICA	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+DIFFERENT UNICODE	INDICA	Ctrl+Space d	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+7-only code: TextSoft nothing	INDICA	Ctrl+Space i	shree U '' [] b7 93	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	INDICA	Ctrl+Space j	shree U '' [] b7 3D	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	INDICA	Ctrl+Space l	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	INDICA	Ctrl+Space u	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+7-only code: TextSoft nothing	INDICA	Ctrl+Space x	shree U '' [] b7 25	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	INDICA	Ctrl+Space z	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	INSCRIPT	B	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	INSCRIPT	X	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same Unicode, other bytes	INSCRIPT	]	shree U '₹' [20B9] b7 	ours U '₹' [20B9] t7 92 t7w U+20B9
+same after glyph fix (visarga40>5D)	INSCRIPT	_	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	INSCRIPT	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	INSCRIPT	w	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	INSCRIPT	Ctrl+Space o	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same Unicode, other bytes	INSCRIPT	Ctrl+Space p	shree U '₹' [20B9] b7 	ours U '₹' [20B9] t7 92 t7w U+20B9
+same Unicode, other bytes	ITR	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+DIFFERENT UNICODE	ITR	O	shree U 'ఐొ' [0C10 0C4A] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+DIFFERENT UNICODE	ITR	S	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	ITR	\	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	ITR	t	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+SHREE NOTHING, TEXTSOFT TYPES	ITR	Ctrl+Space 7	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same after glyph fix (candrabinduB6>97)	ITR	Ctrl+Space j	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+7-only code: TextSoft nothing	ITR	Ctrl+Space k	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same Unicode, other bytes	MICRO	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same after glyph fix (visarga40>5D)	MICRO	>	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	MICRO	D	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	MICRO	\	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	MICRO	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	MICRO	m	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	MICRO	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	MICRO	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+7-only code: TextSoft nothing	MICRO	Ctrl+Space c	shree U '' [] b7 93	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MICRO	Ctrl+Space f	shree U '' [] b7 3D	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MICRO	Ctrl+Space h	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MICRO	Ctrl+Space j	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MICRO	Ctrl+Space k	shree U '' [] b7 25	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	MICRO	Ctrl+Space p	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same after glyph fix (candrabinduB6>97)	MICRO	Ctrl+Space x	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same Unicode, other bytes	MONO	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+DIFFERENT UNICODE	MONO	D	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	MONO	]	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	MONO	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	MONO	m	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	MONO	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	MONO	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+7-only code: TextSoft nothing	MONO	Ctrl+Space d	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MONO	Ctrl+Space f	shree U '' [] b7 25	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	MONO	Ctrl+Space h	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+7-only code: TextSoft nothing	MONO	Ctrl+Space j	shree U '' [] b7 93	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MONO	Ctrl+Space p	shree U '' [] b7 3D	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	MONO	Ctrl+Space s	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+same Unicode, other bytes	NEWROMA	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+SHREE NOTHING, TEXTSOFT TYPES	NEWROMA	=	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	NEWROMA	H	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+lone-sign key: Unicode differs	NEWROMA	U	shree U 'ూ' [0C42] b7 E6 61 E6 61	ours U 'ఊ' [0C0A] t7 46 t7w 46
+7-only code: TextSoft nothing	NEWROMA	W	shree U '' [] b7 93	ours U '' [] t7  t7w 
+DIFFERENT UNICODE	NEWROMA	[	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+DIFFERENT UNICODE	NEWROMA	f	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+lone-sign key: Unicode differs	NEWROMA	u	shree U 'ు' [0C41] b7 E6 61 E6 61	ours U 'ఉ' [0C09] t7 45 t7w 45
+same after glyph fix (candrabinduB6>97)	NEWROMA	z	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+DIFFERENT UNICODE	NEWROMA	Ctrl+Space e	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same after glyph fix (candrabinduB6>97)	PHONETIC	$	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same Unicode, other bytes	PHONETIC	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+7-only code: TextSoft nothing	PHONETIC	@	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (visarga40>5D)	PHONETIC	H	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	PHONETIC	`	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	PHONETIC	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	PHONETIC	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+DIFFERENT UNICODE	PHONETIC	Ctrl+Space a	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same Unicode, other bytes	PHONETIC	Ctrl+Space m	shree U 'ఞ్' [0C1E 0C4D] b7 70 FD	ours U 'ఞ్' [0C1E 0C4D] t7 70 8A FF t7w 70 8A FF
+same Unicode, other bytes	PHONETIC	Ctrl+Space n	shree U 'ఙ్' [0C19 0C4D] b7 5C FD	ours U 'ఙ్' [0C19 0C4D] t7 5C 8A FD t7w 5C 8A FD
+same Unicode, other bytes	PHONETIC	Ctrl+Space r	shree U 'ఱ్' [0C31 0C4D] b7 82 FD	ours U 'ఱ్' [0C31 0C4D] t7 82 8C FD t7w 82 8C FD
+same Unicode, other bytes	PRAKASH	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+SHREE NOTHING, TEXTSOFT TYPES	PRAKASH	D	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	PRAKASH	X	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	PRAKASH	_	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+DIFFERENT UNICODE	PRAKASH	w	shree U 'ఐ‌' [0C10 200C] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same Unicode, other bytes	PRAKASH	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	PRAKASH	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+7-only code: TextSoft nothing	PRAKASH	Ctrl+Space a	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	PRAKASH	Ctrl+Space p	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same after glyph fix (candrabinduB6>97)	ROMA	$	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same Unicode, other bytes	ROMA	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+DIFFERENT UNICODE	ROMA	F	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (visarga40>5D)	ROMA	H	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+7-only code: TextSoft nothing	ROMA	X	shree U '' [] b7 93	ours U '' [] t7  t7w 
+DIFFERENT UNICODE	ROMA	`	shree U 'ఐ్' [0C10 0C4D] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+SHREE NOTHING, TEXTSOFT TYPES	ROMA	f	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same Unicode, other bytes	ROMA	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	ROMA	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+DIFFERENT UNICODE	TYPEWRIT	#	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same after glyph fix (candrabinduB6>97)	TYPEWRIT	3	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+SHREE NOTHING, TEXTSOFT TYPES	TYPEWRIT	E	shree U '' [] b7 	ours U '‍' [200D] t7  t7w 
+same Unicode, other bytes	TYPEWRIT	P	shree U 'ౣ' [0C63] b7 	ours U 'ౣ' [0C63] t7 U+0C63 t7w U+0C63
+same Unicode, other bytes	TYPEWRIT	X	shree U '॥' [0965] b7 	ours U '॥' [0965] t7 91 91 t7w 91 91
+same Unicode, other bytes	TYPEWRIT	e	shree U '‍' [200D] b7 	ours U '‍' [200D] t7  t7w 
+SHREE NOTHING, TEXTSOFT TYPES	TYPEWRIT	h	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+same Unicode, other bytes	TYPEWRIT	p	shree U 'ు' [0C41] b7 	ours U 'ు' [0C41] t7 24 t7w 24
+DIFFERENT UNICODE	TYPEWRIT	q	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+same after glyph fix (visarga40>5D)	TYPEWRIT	|	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+same Unicode, other bytes	TYPEWRIT	Ctrl+Space l	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+same Unicode, other bytes	VISION	*	shree U '*' [002A] b7 92	ours U '*' [002A] t7  t7w 92
+7-only code: TextSoft nothing	VISION	>	shree U '' [] b7 93	ours U '' [] t7  t7w 
+same after glyph fix (candrabinduB6>97)	VISION	^	shree U 'ఁ' [0C01] b7 B6	ours U 'ఁ' [0C01] t7 97 t7w 97
+same after glyph fix (visarga40>5D)	VISION	_	shree U 'ః' [0C03] b7 40	ours U 'ః' [0C03] t7 5D t7w 5D
+SHREE NOTHING, TEXTSOFT TYPES	VISION	d	shree U '' [] b7 	ours U '్' [0C4D] t7 8A t7w 8A
+DIFFERENT UNICODE	VISION	w	shree U 'ఐk' [0C10 006B] b7 4F F2	ours U 'ఐ' [0C10] t7 49 t7w 49
+DIFFERENT UNICODE	VISION	x	shree U '్' [0C4D] b7 	ours U '్‌' [0C4D 200C] t7 8A t7w 8A
+same Unicode, other bytes	VISION	Ctrl+Space -	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+same Unicode, other bytes	VISION	Ctrl+Space =	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+same Unicode, other bytes	VISION	Ctrl+Space b	shree U '—' [2014] b7 9B 9B	ours U '—' [2014] t7 26 26 t7w 26 26
+7-only code: TextSoft nothing	VISION	Ctrl+Space d	shree U '' [] b7 2B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	VISION	Ctrl+Space f	shree U '' [] b7 3B	ours U '' [] t7  t7w 
+7-only code: TextSoft nothing	VISION	Ctrl+Space g	shree U '' [] b7 25	ours U '' [] t7  t7w 
+same Unicode, other bytes	VISION	Ctrl+Space n	shree U '–' [2013] b7 9B	ours U '–' [2013] t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	APPLE	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	APPLE	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	APPLE	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	APPLE	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	CRTRONIC	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	CRTRONIC	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	CRTRONIC	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	CRTRONIC	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	DOE	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	DOE	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	DOE	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	DOE	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	ENG	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	ENG	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	ENG	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	ENG	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	GODREJ	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	GODREJ	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	GODREJ	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	GODREJ	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	INDICA	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	INDICA	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	INDICA	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	INDICA	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	INSCRIPT	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	INSCRIPT	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	INSCRIPT	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	INSCRIPT	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	ITR	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	ITR	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	ITR	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	ITR	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	MICRO	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	MICRO	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	MICRO	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	MICRO	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	MONO	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	MONO	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	MONO	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	MONO	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	NEWROMA	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	NEWROMA	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	NEWROMA	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	NEWROMA	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	PHONETIC	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	PHONETIC	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	PHONETIC	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	PHONETIC	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	PRAKASH	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	PRAKASH	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	PRAKASH	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	PRAKASH	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	ROMA	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	ROMA	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	ROMA	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	ROMA	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	TYPEWRIT	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	TYPEWRIT	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	TYPEWRIT	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	TYPEWRIT	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 $	chart '₹' b7 	ours U '₹' t7 92 t7w U+20B9
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 *	chart '×' b7 	ours U '×' t7  t7w 
+CS1: our policy bytes (Shree 9B 9B)	VISION	Ctrl+Shift+1 -	chart '—' b7 9B 9B	ours U '—' t7 26 26 t7w 26 26
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 /	chart '÷' b7 	ours U '÷' t7  t7w 
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 K	chart 'ౡ' b7 	ours U 'ౡ' t7 U+0C61 t7w U+0C61
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 L	chart 'ఌ' b7 	ours U 'ఌ' t7 U+0C0C t7w U+0C0C
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 [	chart '[' b7 	ours U '[' t7  t7w 
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 ]	chart ']' b7 	ours U ']' t7  t7w 
+CS1: our policy bytes (Shree 9B)	VISION	Ctrl+Shift+1 _	chart '–' b7 9B	ours U '–' t7 26 t7w 26
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 k	chart 'ౣ' b7 	ours U 'ౣ' t7 U+0C63 t7w U+0C63
+CS1: our policy bytes (Shree AB A7 E6)	VISION	Ctrl+Shift+1 l	chart 'ౢ' b7 AB A7 E6	ours U 'ౢ' t7 U+0C62 t7w U+0C62
+CS1: our policy bytes (Shree nothing)	VISION	Ctrl+Shift+1 |	chart '॥' b7 	ours U '॥' t7 91 91 t7w 91 91

@@ -1,0 +1,21 @@
+Telugu (S8TelU64 / S8Tel764) Shree-Lipi 7 capture - started 2026-10-18 10:35 IST. Pipeline adapted from ../cap-ori (Odia, this round).
+Every composer run goes through safe-run.js <label> <capdir> <probedir> [...] (shmlab dump -> shmdump/<label>-pre.bin, runlist/probe2,
+then probe2 --put <label>-pre.bin + fresh dump compared). Manual restore: probe2\bin\probe2.exe --put <8.3 path>\shmdump\start.bin
+ 0. shmdump/start.bin: SL8_DLL_DATA before the first load: header 00 00 01, tables all zero (= cap-ori final.bin).
+ 1. vendor: safe-run run1 capvo "C:/Shree-Lipi nxt" + run1b capvo-b (16 .TEL each): identical (verify-stability.json).
+    layers/DOE.tsv (LAYERS=12).
+ 2. explore1.js -> px (E, 26 files) -> capx/capx-b identical; explore1-show.txt, explore1-grid.js -> explore1-grid.txt
+    explore2.js -> px2 (F, 13 files) -> capx2/capx2-b identical; explore2-show.txt
+ 3. gen.js -> seq-all.json (37,276) -> build.js seq-all.json p P (794 files) -> safe-run runP capp p capp-b p
+--- resumed 2026-10-18 ~10:58 (second attempt) ---
+ 4. resume check: shmdump/resume-check.bin == start.bin (0 bytes differ): SLNXT's SL8_DLL_DATA held no probe keyboard.
+ 5. expected.js (code meaning; ra-vattu D7/ED belongs to the NEXT consonant, the composers' own model), analyse1.js.
+    The vendor charts type the ra-vattu FIRST (TYPEWRIT K, ITR Ctrl+Space g, INDICA/APPLE slots D7+C) and the 7 composer then
+    writes the hook before the letter (where the 7D shri ligature and Nirmala UI draw it) -> new probe set R:
+    gen-ra.js -> seq-ra.json (3,924) -> build.js seq-ra.json pr R (84 files) -> safe-run runR capr pr capr-b pr (identical, restore OK)
+ 6. collectv.js -> vendor-rows.json + tel-vendor-keys.json; groundtruth.js -> tel7-groundtruth.json (+ -glyphfix, -composer-gaps,
+    -only7-evidence); patterns.js -> tel7-patterns.txt
+ 7. measure/ (Program.cs adapted from cap-ori, built against repo/ = copy of snap-base Core + assets/config):
+    measured/ (byte-exact truth), measured-glyphfix/ (40->5D, B6->97), WORDS=common-words.txt runs; failclass.js
+ 8. final: shmdump/final.bin == start.bin. SL8_DEFAULTS_DATA differs from cap-pun's 02:26 'before' in 9 bytes = SLNXT's own
+    foreground-app record ("Chrome" at 0x0C) + 90/92 already changed by 02:58; NOT written back (live SLNXT state, not ours).

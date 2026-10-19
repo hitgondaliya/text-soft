@@ -1,0 +1,1273 @@
+read back 27752: exact 27654, same text 98, wrong 0 (100.00%)
+other accepted spellings read back 19405: exact 1, as text the table writes with those very bytes 19404, wrong 0
+words read back 20000 (seed 7): right 20000, wrong 0 (100.00%)
+words read back 20000 (seed 11): right 20000, wrong 0 (100.00%)
+well-formed read back 67501: malformed 0
+composer spellings of the whole capture read back 57173: exact 30763, as text the table writes with those very bytes 25145, other text (the bytes are another text's: a link virama has no glyph, a sign struck out of order) 1241, Latin/control/noncharacter 0, malformed 24
+  OTHER: 1241
+    OTHER	48 71	typed ਕਿਂ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	48 71	typed ਕਿੰ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	49 71	typed ਖਿਂ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	49 71	typed ਖਿੰ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	4A 71	typed ਗਿਂ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4A 71	typed ਗਿੰ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4B 71	typed ਘਿਂ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4B 71	typed ਘਿੰ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4C 71	typed ਙਿਂ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4C 71	typed ਙਿੰ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4D 71	typed ਚਿਂ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4D 71	typed ਚਿੰ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4E 71	typed ਛਿਂ	read ਛਿ [0A1B 0A3F]	written back 71 4E
+    OTHER	4E 71	typed ਛਿੰ	read ਛਿ [0A1B 0A3F]	written back 71 4E
+    OTHER	4F 71	typed ਜਿਂ	read ਜਿ [0A1C 0A3F]	written back 71 4F
+    OTHER	4F 71	typed ਜਿੰ	read ਜਿ [0A1C 0A3F]	written back 71 4F
+    OTHER	50 71	typed ਝਿਂ	read ਝਿ [0A1D 0A3F]	written back 71 50
+    OTHER	50 71	typed ਝਿੰ	read ਝਿ [0A1D 0A3F]	written back 71 50
+    OTHER	51 71	typed ਞਿਂ	read ਞਿ [0A1E 0A3F]	written back 71 51
+    OTHER	51 71	typed ਞਿੰ	read ਞਿ [0A1E 0A3F]	written back 71 51
+    OTHER	52 71	typed ਟਿਂ	read ਟਿ [0A1F 0A3F]	written back 71 52
+    OTHER	52 71	typed ਟਿੰ	read ਟਿ [0A1F 0A3F]	written back 71 52
+    OTHER	53 BE 71	typed ਠਿਂ	read ਠਿ [0A20 0A3F]	written back 71 53 BE
+    OTHER	53 BE 71	typed ਠਿੰ	read ਠਿ [0A20 0A3F]	written back 71 53 BE
+    OTHER	54 71	typed ਡਿਂ	read ਡਿ [0A21 0A3F]	written back 71 54
+    OTHER	54 71	typed ਡਿੰ	read ਡਿ [0A21 0A3F]	written back 71 54
+    OTHER	55 71	typed ਢਿਂ	read ਢਿ [0A22 0A3F]	written back 71 55
+    OTHER	55 71	typed ਢਿੰ	read ਢਿ [0A22 0A3F]	written back 71 55
+    OTHER	56 71	typed ਣਿਂ	read ਣਿ [0A23 0A3F]	written back 71 56
+    OTHER	56 71	typed ਣਿੰ	read ਣਿ [0A23 0A3F]	written back 71 56
+    OTHER	57 71	typed ਤਿਂ	read ਤਿ [0A24 0A3F]	written back 71 57
+    OTHER	57 71	typed ਤਿੰ	read ਤਿ [0A24 0A3F]	written back 71 57
+    OTHER	58 71	typed ਥਿਂ	read ਥਿ [0A25 0A3F]	written back 71 58
+    OTHER	58 71	typed ਥਿੰ	read ਥਿ [0A25 0A3F]	written back 71 58
+    OTHER	59 71	typed ਦਿਂ	read ਦਿ [0A26 0A3F]	written back 71 59
+    OTHER	59 71	typed ਦਿੰ	read ਦਿ [0A26 0A3F]	written back 71 59
+    OTHER	5A 71	typed ਧਿਂ	read ਧਿ [0A27 0A3F]	written back 71 5A
+    OTHER	5A 71	typed ਧਿੰ	read ਧਿ [0A27 0A3F]	written back 71 5A
+    OTHER	B2 BE 71	typed ਨਿਂ	read ਨਿ [0A28 0A3F]	written back 71 B2 BE
+    OTHER	B2 BE 71	typed ਨਿੰ	read ਨਿ [0A28 0A3F]	written back 71 B2 BE
+    OTHER	5C 71	typed ਪਿਂ	read ਪਿ [0A2A 0A3F]	written back 71 5C
+    OTHER	5C 71	typed ਪਿੰ	read ਪਿ [0A2A 0A3F]	written back 71 5C
+    OTHER	B3 71	typed ਫਿਂ	read ਫਿ [0A2B 0A3F]	written back 71 B3
+    OTHER	B3 71	typed ਫਿੰ	read ਫਿ [0A2B 0A3F]	written back 71 B3
+    OTHER	5E 71	typed ਬਿਂ	read ਬਿ [0A2C 0A3F]	written back 71 5E
+    OTHER	5E 71	typed ਬਿੰ	read ਬਿ [0A2C 0A3F]	written back 71 5E
+    OTHER	5F 71	typed ਭਿਂ	read ਭਿ [0A2D 0A3F]	written back 71 5F
+    OTHER	5F 71	typed ਭਿੰ	read ਭਿ [0A2D 0A3F]	written back 71 5F
+    OTHER	60 71	typed ਮਿਂ	read ਮਿ [0A2E 0A3F]	written back 71 60
+    OTHER	60 71	typed ਮਿੰ	read ਮਿ [0A2E 0A3F]	written back 71 60
+    OTHER	61 71	typed ਯਿਂ	read ਯਿ [0A2F 0A3F]	written back 71 61
+    OTHER	61 71	typed ਯਿੰ	read ਯਿ [0A2F 0A3F]	written back 71 61
+    OTHER	63 71	typed ਰਿਂ	read ਰਿ [0A30 0A3F]	written back 71 63
+    OTHER	63 71	typed ਰਿੰ	read ਰਿ [0A30 0A3F]	written back 71 63
+    OTHER	64 71	typed ਲਿਂ	read ਲਿ [0A32 0A3F]	written back 71 64
+    OTHER	64 71	typed ਲਿੰ	read ਲਿ [0A32 0A3F]	written back 71 64
+    OTHER	65 71	typed ਵਿਂ	read ਵਿ [0A35 0A3F]	written back 71 65
+    OTHER	65 71	typed ਵਿੰ	read ਵਿ [0A35 0A3F]	written back 71 65
+    OTHER	6D 71	typed ੜਿਂ	read ੜਿ [0A5C 0A3F]	written back 71 6D
+    OTHER	6D 71	typed ੜਿੰ	read ੜਿ [0A5C 0A3F]	written back 71 6D
+    OTHER	67 71	typed ਸਿਂ	read ਸਿ [0A38 0A3F]	written back 71 67
+    OTHER	67 71	typed ਸਿੰ	read ਸਿ [0A38 0A3F]	written back 71 67
+    OTHER	68 71	typed ਹਿਂ	read ਹਿ [0A39 0A3F]	written back 71 68
+    OTHER	68 71	typed ਹਿੰ	read ਹਿ [0A39 0A3F]	written back 71 68
+    OTHER	66 71	typed ਸ਼ਿਂ	read ਸ਼ਿ [0A36 0A3F]	written back 71 66
+    OTHER	66 71	typed ਸ਼ਿੰ	read ਸ਼ਿ [0A36 0A3F]	written back 71 66
+    OTHER	69 71	typed ਖ਼ਿਂ	read ਖ਼ਿ [0A59 0A3F]	written back 71 69
+    OTHER	69 71	typed ਖ਼ਿੰ	read ਖ਼ਿ [0A59 0A3F]	written back 71 69
+    OTHER	6A 71	typed ਗ਼ਿਂ	read ਗ਼ਿ [0A5A 0A3F]	written back 71 6A
+    OTHER	6A 71	typed ਗ਼ਿੰ	read ਗ਼ਿ [0A5A 0A3F]	written back 71 6A
+    OTHER	6B 71	typed ਜ਼ਿਂ	read ਜ਼ਿ [0A5B 0A3F]	written back 71 6B
+    OTHER	6B 71	typed ਜ਼ਿੰ	read ਜ਼ਿ [0A5B 0A3F]	written back 71 6B
+    OTHER	6C 71	typed ਫ਼ਿਂ	read ਫ਼ਿ [0A5E 0A3F]	written back 71 6C
+    OTHER	6C 71	typed ਫ਼ਿੰ	read ਫ਼ਿ [0A5E 0A3F]	written back 71 6C
+    OTHER	B4 71	typed ਲ਼ਿਂ	read ਲ਼ਿ [0A33 0A3F]	written back 71 B4
+    OTHER	B4 71	typed ਲ਼ਿੰ	read ਲ਼ਿ [0A33 0A3F]	written back 71 B4
+    OTHER	40	typed ੍	read ऽ [093D]	written back U+093D
+    OTHER	48 70 40	typed ਕਾ	read ਕਾऽ [0A15 0A3E 093D]	written back 48 70 U+093D
+    OTHER	48 70 A9	typed ਕਾ	read ਕਾ- [0A15 0A3E 002D]	written back 48 70 2D
+    OTHER	71 48 40	typed ਕਿ	read ਕਿऽ [0A15 0A3F 093D]	written back 71 48 U+093D
+    OTHER	71 48 A9	typed ਕਿ	read ਕਿ- [0A15 0A3F 002D]	written back 71 48 2D
+    OTHER	48 72 40	typed ਕੀ	read ਕੀऽ [0A15 0A40 093D]	written back 48 72 U+093D
+    OTHER	48 72 A9	typed ਕੀ	read ਕੀ- [0A15 0A40 002D]	written back 48 72 2D
+    OTHER	48 74 40	typed ਕੁ	read ਕੁऽ [0A15 0A41 093D]	written back 48 74 U+093D
+    OTHER	48 74 A9	typed ਕੁ	read ਕੁ- [0A15 0A41 002D]	written back 48 74 2D
+    OTHER	48 76 40	typed ਕੂ	read ਕੂऽ [0A15 0A42 093D]	written back 48 76 U+093D
+    OTHER	48 76 A9	typed ਕੂ	read ਕੂ- [0A15 0A42 002D]	written back 48 76 2D
+    OTHER	48 79 40	typed ਕੇ	read ਕੇऽ [0A15 0A47 093D]	written back 48 79 U+093D
+    OTHER	48 79 A9	typed ਕੇ	read ਕੇ- [0A15 0A47 002D]	written back 48 79 2D
+    OTHER	48 B1 40	typed ਕੈ	read ਕੈऽ [0A15 0A48 093D]	written back 48 B1 U+093D
+    OTHER	48 B1 A9	typed ਕੈ	read ਕੈ- [0A15 0A48 002D]	written back 48 B1 2D
+    OTHER	48 7D 40	typed ਕੋ	read ਕੋऽ [0A15 0A4B 093D]	written back 48 7D U+093D
+    OTHER	48 7D A9	typed ਕੋ	read ਕੋ- [0A15 0A4B 002D]	written back 48 7D 2D
+    OTHER	48 A1 40	typed ਕੌ	read ਕੌऽ [0A15 0A4C 093D]	written back 48 A1 U+093D
+    OTHER	48 A1 A9	typed ਕੌ	read ਕੌ- [0A15 0A4C 002D]	written back 48 A1 2D
+    OTHER	48 40	typed ਕ	read ਕऽ [0A15 093D]	written back 48 U+093D
+    OTHER	48 A9	typed ਕ	read ਕ- [0A15 002D]	written back 48 2D
+    OTHER	49 70 40	typed ਖਾ	read ਖਾऽ [0A16 0A3E 093D]	written back 49 70 U+093D
+    OTHER	49 70 A9	typed ਖਾ	read ਖਾ- [0A16 0A3E 002D]	written back 49 70 2D
+    OTHER	71 49 40	typed ਖਿ	read ਖਿऽ [0A16 0A3F 093D]	written back 71 49 U+093D
+    OTHER	71 49 A9	typed ਖਿ	read ਖਿ- [0A16 0A3F 002D]	written back 71 49 2D
+    OTHER	49 72 40	typed ਖੀ	read ਖੀऽ [0A16 0A40 093D]	written back 49 72 U+093D
+    OTHER	49 72 A9	typed ਖੀ	read ਖੀ- [0A16 0A40 002D]	written back 49 72 2D
+    OTHER	49 74 40	typed ਖੁ	read ਖੁऽ [0A16 0A41 093D]	written back 49 74 U+093D
+    OTHER	49 74 A9	typed ਖੁ	read ਖੁ- [0A16 0A41 002D]	written back 49 74 2D
+    OTHER	49 76 40	typed ਖੂ	read ਖੂऽ [0A16 0A42 093D]	written back 49 76 U+093D
+    OTHER	49 76 A9	typed ਖੂ	read ਖੂ- [0A16 0A42 002D]	written back 49 76 2D
+    OTHER	49 79 40	typed ਖੇ	read ਖੇऽ [0A16 0A47 093D]	written back 49 79 U+093D
+    OTHER	49 79 A9	typed ਖੇ	read ਖੇ- [0A16 0A47 002D]	written back 49 79 2D
+    OTHER	49 B1 40	typed ਖੈ	read ਖੈऽ [0A16 0A48 093D]	written back 49 B1 U+093D
+    OTHER	49 B1 A9	typed ਖੈ	read ਖੈ- [0A16 0A48 002D]	written back 49 B1 2D
+    OTHER	49 7D 40	typed ਖੋ	read ਖੋऽ [0A16 0A4B 093D]	written back 49 7D U+093D
+    OTHER	49 7D A9	typed ਖੋ	read ਖੋ- [0A16 0A4B 002D]	written back 49 7D 2D
+    OTHER	49 A1 40	typed ਖੌ	read ਖੌऽ [0A16 0A4C 093D]	written back 49 A1 U+093D
+    OTHER	49 A1 A9	typed ਖੌ	read ਖੌ- [0A16 0A4C 002D]	written back 49 A1 2D
+    OTHER	49 40	typed ਖ	read ਖऽ [0A16 093D]	written back 49 U+093D
+    OTHER	49 A9	typed ਖ	read ਖ- [0A16 002D]	written back 49 2D
+    OTHER	4A 70 40	typed ਗਾ	read ਗਾऽ [0A17 0A3E 093D]	written back 4A 70 U+093D
+    OTHER	4A 70 A9	typed ਗਾ	read ਗਾ- [0A17 0A3E 002D]	written back 4A 70 2D
+    OTHER	71 4A 40	typed ਗਿ	read ਗਿऽ [0A17 0A3F 093D]	written back 71 4A U+093D
+    OTHER	71 4A A9	typed ਗਿ	read ਗਿ- [0A17 0A3F 002D]	written back 71 4A 2D
+    OTHER	4A 72 40	typed ਗੀ	read ਗੀऽ [0A17 0A40 093D]	written back 4A 72 U+093D
+    OTHER	4A 72 A9	typed ਗੀ	read ਗੀ- [0A17 0A40 002D]	written back 4A 72 2D
+    OTHER	4A 74 40	typed ਗੁ	read ਗੁऽ [0A17 0A41 093D]	written back 4A 74 U+093D
+    OTHER	4A 74 A9	typed ਗੁ	read ਗੁ- [0A17 0A41 002D]	written back 4A 74 2D
+    OTHER	4A 76 40	typed ਗੂ	read ਗੂऽ [0A17 0A42 093D]	written back 4A 76 U+093D
+    OTHER	4A 76 A9	typed ਗੂ	read ਗੂ- [0A17 0A42 002D]	written back 4A 76 2D
+    OTHER	4A 79 40	typed ਗੇ	read ਗੇऽ [0A17 0A47 093D]	written back 4A 79 U+093D
+    OTHER	4A 79 A9	typed ਗੇ	read ਗੇ- [0A17 0A47 002D]	written back 4A 79 2D
+    OTHER	4A B1 40	typed ਗੈ	read ਗੈऽ [0A17 0A48 093D]	written back 4A B1 U+093D
+    OTHER	4A B1 A9	typed ਗੈ	read ਗੈ- [0A17 0A48 002D]	written back 4A B1 2D
+    OTHER	4A 7D 40	typed ਗੋ	read ਗੋऽ [0A17 0A4B 093D]	written back 4A 7D U+093D
+    OTHER	4A 7D A9	typed ਗੋ	read ਗੋ- [0A17 0A4B 002D]	written back 4A 7D 2D
+    OTHER	4A A1 40	typed ਗੌ	read ਗੌऽ [0A17 0A4C 093D]	written back 4A A1 U+093D
+    OTHER	4A A1 A9	typed ਗੌ	read ਗੌ- [0A17 0A4C 002D]	written back 4A A1 2D
+    OTHER	4A 40	typed ਗ	read ਗऽ [0A17 093D]	written back 4A U+093D
+    OTHER	4A A9	typed ਗ	read ਗ- [0A17 002D]	written back 4A 2D
+    OTHER	4B 70 40	typed ਘਾ	read ਘਾऽ [0A18 0A3E 093D]	written back 4B 70 U+093D
+    OTHER	4B 70 A9	typed ਘਾ	read ਘਾ- [0A18 0A3E 002D]	written back 4B 70 2D
+    OTHER	71 4B 40	typed ਘਿ	read ਘਿऽ [0A18 0A3F 093D]	written back 71 4B U+093D
+    OTHER	71 4B A9	typed ਘਿ	read ਘਿ- [0A18 0A3F 002D]	written back 71 4B 2D
+    OTHER	4B 72 40	typed ਘੀ	read ਘੀऽ [0A18 0A40 093D]	written back 4B 72 U+093D
+    OTHER	4B 72 A9	typed ਘੀ	read ਘੀ- [0A18 0A40 002D]	written back 4B 72 2D
+    OTHER	4B 74 40	typed ਘੁ	read ਘੁऽ [0A18 0A41 093D]	written back 4B 74 U+093D
+    OTHER	4B 74 A9	typed ਘੁ	read ਘੁ- [0A18 0A41 002D]	written back 4B 74 2D
+    OTHER	4B 76 40	typed ਘੂ	read ਘੂऽ [0A18 0A42 093D]	written back 4B 76 U+093D
+    OTHER	4B 76 A9	typed ਘੂ	read ਘੂ- [0A18 0A42 002D]	written back 4B 76 2D
+    OTHER	4B 79 40	typed ਘੇ	read ਘੇऽ [0A18 0A47 093D]	written back 4B 79 U+093D
+    OTHER	4B 79 A9	typed ਘੇ	read ਘੇ- [0A18 0A47 002D]	written back 4B 79 2D
+    OTHER	4B B1 40	typed ਘੈ	read ਘੈऽ [0A18 0A48 093D]	written back 4B B1 U+093D
+    OTHER	4B B1 A9	typed ਘੈ	read ਘੈ- [0A18 0A48 002D]	written back 4B B1 2D
+    OTHER	4B 7D 40	typed ਘੋ	read ਘੋऽ [0A18 0A4B 093D]	written back 4B 7D U+093D
+    OTHER	4B 7D A9	typed ਘੋ	read ਘੋ- [0A18 0A4B 002D]	written back 4B 7D 2D
+    OTHER	4B A1 40	typed ਘੌ	read ਘੌऽ [0A18 0A4C 093D]	written back 4B A1 U+093D
+    OTHER	4B A1 A9	typed ਘੌ	read ਘੌ- [0A18 0A4C 002D]	written back 4B A1 2D
+    OTHER	4B 40	typed ਘ	read ਘऽ [0A18 093D]	written back 4B U+093D
+    OTHER	4B A9	typed ਘ	read ਘ- [0A18 002D]	written back 4B 2D
+    OTHER	4C 70 40	typed ਙਾ	read ਙਾऽ [0A19 0A3E 093D]	written back 4C 70 U+093D
+    OTHER	4C 70 A9	typed ਙਾ	read ਙਾ- [0A19 0A3E 002D]	written back 4C 70 2D
+    OTHER	71 4C 40	typed ਙਿ	read ਙਿऽ [0A19 0A3F 093D]	written back 71 4C U+093D
+    OTHER	71 4C A9	typed ਙਿ	read ਙਿ- [0A19 0A3F 002D]	written back 71 4C 2D
+    OTHER	4C 72 40	typed ਙੀ	read ਙੀऽ [0A19 0A40 093D]	written back 4C 72 U+093D
+    OTHER	4C 72 A9	typed ਙੀ	read ਙੀ- [0A19 0A40 002D]	written back 4C 72 2D
+    OTHER	4C 74 40	typed ਙੁ	read ਙੁऽ [0A19 0A41 093D]	written back 4C 74 U+093D
+    OTHER	4C 74 A9	typed ਙੁ	read ਙੁ- [0A19 0A41 002D]	written back 4C 74 2D
+    OTHER	4C 76 40	typed ਙੂ	read ਙੂऽ [0A19 0A42 093D]	written back 4C 76 U+093D
+    OTHER	4C 76 A9	typed ਙੂ	read ਙੂ- [0A19 0A42 002D]	written back 4C 76 2D
+    OTHER	4C 79 40	typed ਙੇ	read ਙੇऽ [0A19 0A47 093D]	written back 4C 79 U+093D
+    OTHER	4C 79 A9	typed ਙੇ	read ਙੇ- [0A19 0A47 002D]	written back 4C 79 2D
+    OTHER	4C B1 40	typed ਙੈ	read ਙੈऽ [0A19 0A48 093D]	written back 4C B1 U+093D
+    OTHER	4C B1 A9	typed ਙੈ	read ਙੈ- [0A19 0A48 002D]	written back 4C B1 2D
+    OTHER	4C 7D 40	typed ਙੋ	read ਙੋऽ [0A19 0A4B 093D]	written back 4C 7D U+093D
+    OTHER	4C 7D A9	typed ਙੋ	read ਙੋ- [0A19 0A4B 002D]	written back 4C 7D 2D
+    OTHER	4C A1 40	typed ਙੌ	read ਙੌऽ [0A19 0A4C 093D]	written back 4C A1 U+093D
+    OTHER	4C A1 A9	typed ਙੌ	read ਙੌ- [0A19 0A4C 002D]	written back 4C A1 2D
+    OTHER	4C 40	typed ਙ	read ਙऽ [0A19 093D]	written back 4C U+093D
+    OTHER	4C A9	typed ਙ	read ਙ- [0A19 002D]	written back 4C 2D
+    OTHER	4D 70 40	typed ਚਾ	read ਚਾऽ [0A1A 0A3E 093D]	written back 4D 70 U+093D
+    OTHER	4D 70 A9	typed ਚਾ	read ਚਾ- [0A1A 0A3E 002D]	written back 4D 70 2D
+    OTHER	71 4D 40	typed ਚਿ	read ਚਿऽ [0A1A 0A3F 093D]	written back 71 4D U+093D
+    OTHER	71 4D A9	typed ਚਿ	read ਚਿ- [0A1A 0A3F 002D]	written back 71 4D 2D
+    OTHER	4D 72 40	typed ਚੀ	read ਚੀऽ [0A1A 0A40 093D]	written back 4D 72 U+093D
+    OTHER	4D 72 A9	typed ਚੀ	read ਚੀ- [0A1A 0A40 002D]	written back 4D 72 2D
+    OTHER	4D 74 40	typed ਚੁ	read ਚੁऽ [0A1A 0A41 093D]	written back 4D 74 U+093D
+    OTHER	4D 74 A9	typed ਚੁ	read ਚੁ- [0A1A 0A41 002D]	written back 4D 74 2D
+    OTHER	4D 76 40	typed ਚੂ	read ਚੂऽ [0A1A 0A42 093D]	written back 4D 76 U+093D
+    OTHER	4D 76 A9	typed ਚੂ	read ਚੂ- [0A1A 0A42 002D]	written back 4D 76 2D
+    OTHER	4D 79 40	typed ਚੇ	read ਚੇऽ [0A1A 0A47 093D]	written back 4D 79 U+093D
+    OTHER	4D 79 A9	typed ਚੇ	read ਚੇ- [0A1A 0A47 002D]	written back 4D 79 2D
+    OTHER	4D B1 40	typed ਚੈ	read ਚੈऽ [0A1A 0A48 093D]	written back 4D B1 U+093D
+    OTHER	4D B1 A9	typed ਚੈ	read ਚੈ- [0A1A 0A48 002D]	written back 4D B1 2D
+    OTHER	4D 7D 40	typed ਚੋ	read ਚੋऽ [0A1A 0A4B 093D]	written back 4D 7D U+093D
+    OTHER	4D 7D A9	typed ਚੋ	read ਚੋ- [0A1A 0A4B 002D]	written back 4D 7D 2D
+    OTHER	4D A1 40	typed ਚੌ	read ਚੌऽ [0A1A 0A4C 093D]	written back 4D A1 U+093D
+    OTHER	4D A1 A9	typed ਚੌ	read ਚੌ- [0A1A 0A4C 002D]	written back 4D A1 2D
+    OTHER	4D 40	typed ਚ	read ਚऽ [0A1A 093D]	written back 4D U+093D
+    OTHER	4D A9	typed ਚ	read ਚ- [0A1A 002D]	written back 4D 2D
+    OTHER	4E 70 40	typed ਛਾ	read ਛਾऽ [0A1B 0A3E 093D]	written back 4E 70 U+093D
+    OTHER	4E 70 A9	typed ਛਾ	read ਛਾ- [0A1B 0A3E 002D]	written back 4E 70 2D
+    OTHER	71 4E 40	typed ਛਿ	read ਛਿऽ [0A1B 0A3F 093D]	written back 71 4E U+093D
+    OTHER	71 4E A9	typed ਛਿ	read ਛਿ- [0A1B 0A3F 002D]	written back 71 4E 2D
+    OTHER	4E 72 40	typed ਛੀ	read ਛੀऽ [0A1B 0A40 093D]	written back 4E 72 U+093D
+    OTHER	4E 72 A9	typed ਛੀ	read ਛੀ- [0A1B 0A40 002D]	written back 4E 72 2D
+    OTHER	4E 74 40	typed ਛੁ	read ਛੁऽ [0A1B 0A41 093D]	written back 4E 74 U+093D
+    OTHER	4E 74 A9	typed ਛੁ	read ਛੁ- [0A1B 0A41 002D]	written back 4E 74 2D
+    OTHER	4E 76 40	typed ਛੂ	read ਛੂऽ [0A1B 0A42 093D]	written back 4E 76 U+093D
+    OTHER	4E 76 A9	typed ਛੂ	read ਛੂ- [0A1B 0A42 002D]	written back 4E 76 2D
+    OTHER	4E 79 40	typed ਛੇ	read ਛੇऽ [0A1B 0A47 093D]	written back 4E 79 U+093D
+    OTHER	4E 79 A9	typed ਛੇ	read ਛੇ- [0A1B 0A47 002D]	written back 4E 79 2D
+    OTHER	4E B1 40	typed ਛੈ	read ਛੈऽ [0A1B 0A48 093D]	written back 4E B1 U+093D
+    OTHER	4E B1 A9	typed ਛੈ	read ਛੈ- [0A1B 0A48 002D]	written back 4E B1 2D
+    OTHER	4E 7D 40	typed ਛੋ	read ਛੋऽ [0A1B 0A4B 093D]	written back 4E 7D U+093D
+    OTHER	4E 7D A9	typed ਛੋ	read ਛੋ- [0A1B 0A4B 002D]	written back 4E 7D 2D
+    OTHER	4E A1 40	typed ਛੌ	read ਛੌऽ [0A1B 0A4C 093D]	written back 4E A1 U+093D
+    OTHER	4E A1 A9	typed ਛੌ	read ਛੌ- [0A1B 0A4C 002D]	written back 4E A1 2D
+    OTHER	4E 40	typed ਛ	read ਛऽ [0A1B 093D]	written back 4E U+093D
+    OTHER	4E A9	typed ਛ	read ਛ- [0A1B 002D]	written back 4E 2D
+    OTHER	4F 70 40	typed ਜਾ	read ਜਾऽ [0A1C 0A3E 093D]	written back 4F 70 U+093D
+    OTHER	4F 70 A9	typed ਜਾ	read ਜਾ- [0A1C 0A3E 002D]	written back 4F 70 2D
+    OTHER	71 4F 40	typed ਜਿ	read ਜਿऽ [0A1C 0A3F 093D]	written back 71 4F U+093D
+    OTHER	71 4F A9	typed ਜਿ	read ਜਿ- [0A1C 0A3F 002D]	written back 71 4F 2D
+    OTHER	4F 72 40	typed ਜੀ	read ਜੀऽ [0A1C 0A40 093D]	written back 4F 72 U+093D
+    OTHER	4F 72 A9	typed ਜੀ	read ਜੀ- [0A1C 0A40 002D]	written back 4F 72 2D
+    OTHER	4F 74 40	typed ਜੁ	read ਜੁऽ [0A1C 0A41 093D]	written back 4F 74 U+093D
+    OTHER	4F 74 A9	typed ਜੁ	read ਜੁ- [0A1C 0A41 002D]	written back 4F 74 2D
+    OTHER	4F 76 40	typed ਜੂ	read ਜੂऽ [0A1C 0A42 093D]	written back 4F 76 U+093D
+    OTHER	4F 76 A9	typed ਜੂ	read ਜੂ- [0A1C 0A42 002D]	written back 4F 76 2D
+    OTHER	4F 79 40	typed ਜੇ	read ਜੇऽ [0A1C 0A47 093D]	written back 4F 79 U+093D
+    OTHER	4F 79 A9	typed ਜੇ	read ਜੇ- [0A1C 0A47 002D]	written back 4F 79 2D
+    OTHER	4F B1 40	typed ਜੈ	read ਜੈऽ [0A1C 0A48 093D]	written back 4F B1 U+093D
+    OTHER	4F B1 A9	typed ਜੈ	read ਜੈ- [0A1C 0A48 002D]	written back 4F B1 2D
+    OTHER	4F 7D 40	typed ਜੋ	read ਜੋऽ [0A1C 0A4B 093D]	written back 4F 7D U+093D
+    OTHER	4F 7D A9	typed ਜੋ	read ਜੋ- [0A1C 0A4B 002D]	written back 4F 7D 2D
+    OTHER	4F A1 40	typed ਜੌ	read ਜੌऽ [0A1C 0A4C 093D]	written back 4F A1 U+093D
+    OTHER	4F A1 A9	typed ਜੌ	read ਜੌ- [0A1C 0A4C 002D]	written back 4F A1 2D
+    OTHER	4F 40	typed ਜ	read ਜऽ [0A1C 093D]	written back 4F U+093D
+    OTHER	4F A9	typed ਜ	read ਜ- [0A1C 002D]	written back 4F 2D
+    OTHER	50 70 40	typed ਝਾ	read ਝਾऽ [0A1D 0A3E 093D]	written back 50 70 U+093D
+    OTHER	50 70 A9	typed ਝਾ	read ਝਾ- [0A1D 0A3E 002D]	written back 50 70 2D
+    OTHER	71 50 40	typed ਝਿ	read ਝਿऽ [0A1D 0A3F 093D]	written back 71 50 U+093D
+    OTHER	71 50 A9	typed ਝਿ	read ਝਿ- [0A1D 0A3F 002D]	written back 71 50 2D
+    OTHER	50 72 40	typed ਝੀ	read ਝੀऽ [0A1D 0A40 093D]	written back 50 72 U+093D
+    OTHER	50 72 A9	typed ਝੀ	read ਝੀ- [0A1D 0A40 002D]	written back 50 72 2D
+    OTHER	50 74 40	typed ਝੁ	read ਝੁऽ [0A1D 0A41 093D]	written back 50 74 U+093D
+    OTHER	50 74 A9	typed ਝੁ	read ਝੁ- [0A1D 0A41 002D]	written back 50 74 2D
+    OTHER	50 76 40	typed ਝੂ	read ਝੂऽ [0A1D 0A42 093D]	written back 50 76 U+093D
+    OTHER	50 76 A9	typed ਝੂ	read ਝੂ- [0A1D 0A42 002D]	written back 50 76 2D
+    OTHER	50 79 40	typed ਝੇ	read ਝੇऽ [0A1D 0A47 093D]	written back 50 79 U+093D
+    OTHER	50 79 A9	typed ਝੇ	read ਝੇ- [0A1D 0A47 002D]	written back 50 79 2D
+    OTHER	50 B1 40	typed ਝੈ	read ਝੈऽ [0A1D 0A48 093D]	written back 50 B1 U+093D
+    OTHER	50 B1 A9	typed ਝੈ	read ਝੈ- [0A1D 0A48 002D]	written back 50 B1 2D
+    OTHER	50 7D 40	typed ਝੋ	read ਝੋऽ [0A1D 0A4B 093D]	written back 50 7D U+093D
+    OTHER	50 7D A9	typed ਝੋ	read ਝੋ- [0A1D 0A4B 002D]	written back 50 7D 2D
+    OTHER	50 A1 40	typed ਝੌ	read ਝੌऽ [0A1D 0A4C 093D]	written back 50 A1 U+093D
+    OTHER	50 A1 A9	typed ਝੌ	read ਝੌ- [0A1D 0A4C 002D]	written back 50 A1 2D
+    OTHER	50 40	typed ਝ	read ਝऽ [0A1D 093D]	written back 50 U+093D
+    OTHER	50 A9	typed ਝ	read ਝ- [0A1D 002D]	written back 50 2D
+    OTHER	51 70 40	typed ਞਾ	read ਞਾऽ [0A1E 0A3E 093D]	written back 51 70 U+093D
+    OTHER	51 70 A9	typed ਞਾ	read ਞਾ- [0A1E 0A3E 002D]	written back 51 70 2D
+    OTHER	71 51 40	typed ਞਿ	read ਞਿऽ [0A1E 0A3F 093D]	written back 71 51 U+093D
+    OTHER	71 51 A9	typed ਞਿ	read ਞਿ- [0A1E 0A3F 002D]	written back 71 51 2D
+    OTHER	51 72 40	typed ਞੀ	read ਞੀऽ [0A1E 0A40 093D]	written back 51 72 U+093D
+    OTHER	51 72 A9	typed ਞੀ	read ਞੀ- [0A1E 0A40 002D]	written back 51 72 2D
+    OTHER	51 74 40	typed ਞੁ	read ਞੁऽ [0A1E 0A41 093D]	written back 51 74 U+093D
+    OTHER	51 74 A9	typed ਞੁ	read ਞੁ- [0A1E 0A41 002D]	written back 51 74 2D
+    OTHER	51 76 40	typed ਞੂ	read ਞੂऽ [0A1E 0A42 093D]	written back 51 76 U+093D
+    OTHER	51 76 A9	typed ਞੂ	read ਞੂ- [0A1E 0A42 002D]	written back 51 76 2D
+    OTHER	51 79 40	typed ਞੇ	read ਞੇऽ [0A1E 0A47 093D]	written back 51 79 U+093D
+    OTHER	51 79 A9	typed ਞੇ	read ਞੇ- [0A1E 0A47 002D]	written back 51 79 2D
+    OTHER	51 B1 40	typed ਞੈ	read ਞੈऽ [0A1E 0A48 093D]	written back 51 B1 U+093D
+    OTHER	51 B1 A9	typed ਞੈ	read ਞੈ- [0A1E 0A48 002D]	written back 51 B1 2D
+    OTHER	51 7D 40	typed ਞੋ	read ਞੋऽ [0A1E 0A4B 093D]	written back 51 7D U+093D
+    OTHER	51 7D A9	typed ਞੋ	read ਞੋ- [0A1E 0A4B 002D]	written back 51 7D 2D
+    OTHER	51 A1 40	typed ਞੌ	read ਞੌऽ [0A1E 0A4C 093D]	written back 51 A1 U+093D
+    OTHER	51 A1 A9	typed ਞੌ	read ਞੌ- [0A1E 0A4C 002D]	written back 51 A1 2D
+    OTHER	51 40	typed ਞ	read ਞऽ [0A1E 093D]	written back 51 U+093D
+    OTHER	51 A9	typed ਞ	read ਞ- [0A1E 002D]	written back 51 2D
+    OTHER	52 70 40	typed ਟਾ	read ਟਾऽ [0A1F 0A3E 093D]	written back 52 70 U+093D
+    OTHER	52 70 A9	typed ਟਾ	read ਟਾ- [0A1F 0A3E 002D]	written back 52 70 2D
+    OTHER	71 52 40	typed ਟਿ	read ਟਿऽ [0A1F 0A3F 093D]	written back 71 52 U+093D
+    OTHER	71 52 A9	typed ਟਿ	read ਟਿ- [0A1F 0A3F 002D]	written back 71 52 2D
+    OTHER	52 72 40	typed ਟੀ	read ਟੀऽ [0A1F 0A40 093D]	written back 52 72 U+093D
+    OTHER	52 72 A9	typed ਟੀ	read ਟੀ- [0A1F 0A40 002D]	written back 52 72 2D
+    OTHER	52 74 40	typed ਟੁ	read ਟੁऽ [0A1F 0A41 093D]	written back 52 74 U+093D
+    OTHER	52 74 A9	typed ਟੁ	read ਟੁ- [0A1F 0A41 002D]	written back 52 74 2D
+    OTHER	52 76 40	typed ਟੂ	read ਟੂऽ [0A1F 0A42 093D]	written back 52 76 U+093D
+    OTHER	52 76 A9	typed ਟੂ	read ਟੂ- [0A1F 0A42 002D]	written back 52 76 2D
+    OTHER	52 79 40	typed ਟੇ	read ਟੇऽ [0A1F 0A47 093D]	written back 52 79 U+093D
+    OTHER	52 79 A9	typed ਟੇ	read ਟੇ- [0A1F 0A47 002D]	written back 52 79 2D
+    OTHER	52 B1 40	typed ਟੈ	read ਟੈऽ [0A1F 0A48 093D]	written back 52 B1 U+093D
+    OTHER	52 B1 A9	typed ਟੈ	read ਟੈ- [0A1F 0A48 002D]	written back 52 B1 2D
+    OTHER	52 7D 40	typed ਟੋ	read ਟੋऽ [0A1F 0A4B 093D]	written back 52 7D U+093D
+    OTHER	52 7D A9	typed ਟੋ	read ਟੋ- [0A1F 0A4B 002D]	written back 52 7D 2D
+    OTHER	52 A1 40	typed ਟੌ	read ਟੌऽ [0A1F 0A4C 093D]	written back 52 A1 U+093D
+    OTHER	52 A1 A9	typed ਟੌ	read ਟੌ- [0A1F 0A4C 002D]	written back 52 A1 2D
+    OTHER	52 40	typed ਟ	read ਟऽ [0A1F 093D]	written back 52 U+093D
+    OTHER	52 A9	typed ਟ	read ਟ- [0A1F 002D]	written back 52 2D
+    OTHER	53 BE 70 40	typed ਠਾ	read ਠਾऽ [0A20 0A3E 093D]	written back 53 BE 70 U+093D
+    OTHER	53 BE 70 A9	typed ਠਾ	read ਠਾ- [0A20 0A3E 002D]	written back 53 BE 70 2D
+    OTHER	71 53 BE 40	typed ਠਿ	read ਠਿऽ [0A20 0A3F 093D]	written back 71 53 BE U+093D
+    OTHER	71 53 BE A9	typed ਠਿ	read ਠਿ- [0A20 0A3F 002D]	written back 71 53 BE 2D
+    OTHER	53 BE 72 40	typed ਠੀ	read ਠੀऽ [0A20 0A40 093D]	written back 53 BE 72 U+093D
+    OTHER	53 BE 72 A9	typed ਠੀ	read ਠੀ- [0A20 0A40 002D]	written back 53 BE 72 2D
+    OTHER	53 BE AE 40	typed ਠੁ	read ਠੁऽ [0A20 0A41 093D]	written back 53 BE AE U+093D
+    OTHER	53 BE AE A9	typed ਠੁ	read ਠੁ- [0A20 0A41 002D]	written back 53 BE AE 2D
+    OTHER	53 A7 BE AE	typed ਠੱੁ	read ਠੁੱ [0A20 0A41 0A71]	written back 53 A7 BE 74
+    OTHER	53 A3 BE AE	typed ਠਂੁ	read ਠੁਂ [0A20 0A41 0A02]	written back 53 A3 BE 74
+    OTHER	53 A5 BE AE	typed ਠੰੁ	read ਠੁੰ [0A20 0A41 0A70]	written back 53 A5 BE 74
+    OTHER	53 BE AF 40	typed ਠੂ	read ਠੂऽ [0A20 0A42 093D]	written back 53 BE AF U+093D
+    OTHER	53 BE AF A9	typed ਠੂ	read ਠੂ- [0A20 0A42 002D]	written back 53 BE AF 2D
+    OTHER	53 A7 BE AF	typed ਠੱੂ	read ਠੂੱ [0A20 0A42 0A71]	written back 53 A7 BE 76
+    OTHER	53 A3 BE AF	typed ਠਂੂ	read ਠੂਂ [0A20 0A42 0A02]	written back 53 A3 BE 76
+    OTHER	53 A5 BE AF	typed ਠੰੂ	read ਠੂੰ [0A20 0A42 0A70]	written back 53 A5 BE 76
+    OTHER	53 79 BE 40	typed ਠੇ	read ਠੇऽ [0A20 0A47 093D]	written back 53 79 BE U+093D
+    OTHER	53 79 BE A9	typed ਠੇ	read ਠੇ- [0A20 0A47 002D]	written back 53 79 BE 2D
+    OTHER	53 B1 BE 40	typed ਠੈ	read ਠੈऽ [0A20 0A48 093D]	written back 53 B1 BE U+093D
+    OTHER	53 B1 BE A9	typed ਠੈ	read ਠੈ- [0A20 0A48 002D]	written back 53 B1 BE 2D
+    OTHER	53 7D BE 40	typed ਠੋ	read ਠੋऽ [0A20 0A4B 093D]	written back 53 7D BE U+093D
+    OTHER	53 7D BE A9	typed ਠੋ	read ਠੋ- [0A20 0A4B 002D]	written back 53 7D BE 2D
+    OTHER	53 A1 BE 40	typed ਠੌ	read ਠੌऽ [0A20 0A4C 093D]	written back 53 A1 BE U+093D
+    OTHER	53 A1 BE A9	typed ਠੌ	read ਠੌ- [0A20 0A4C 002D]	written back 53 A1 BE 2D
+    OTHER	53 BE 40	typed ਠ	read ਠऽ [0A20 093D]	written back 53 BE U+093D
+    OTHER	53 BE A9	typed ਠ	read ਠ- [0A20 002D]	written back 53 BE 2D
+    OTHER	54 70 40	typed ਡਾ	read ਡਾऽ [0A21 0A3E 093D]	written back 54 70 U+093D
+    OTHER	54 70 A9	typed ਡਾ	read ਡਾ- [0A21 0A3E 002D]	written back 54 70 2D
+    OTHER	71 54 40	typed ਡਿ	read ਡਿऽ [0A21 0A3F 093D]	written back 71 54 U+093D
+    OTHER	71 54 A9	typed ਡਿ	read ਡਿ- [0A21 0A3F 002D]	written back 71 54 2D
+    OTHER	54 72 40	typed ਡੀ	read ਡੀऽ [0A21 0A40 093D]	written back 54 72 U+093D
+    OTHER	54 72 A9	typed ਡੀ	read ਡੀ- [0A21 0A40 002D]	written back 54 72 2D
+    OTHER	54 74 40	typed ਡੁ	read ਡੁऽ [0A21 0A41 093D]	written back 54 74 U+093D
+    OTHER	54 74 A9	typed ਡੁ	read ਡੁ- [0A21 0A41 002D]	written back 54 74 2D
+    OTHER	54 76 40	typed ਡੂ	read ਡੂऽ [0A21 0A42 093D]	written back 54 76 U+093D
+    OTHER	54 76 A9	typed ਡੂ	read ਡੂ- [0A21 0A42 002D]	written back 54 76 2D
+    OTHER	54 79 40	typed ਡੇ	read ਡੇऽ [0A21 0A47 093D]	written back 54 79 U+093D
+    OTHER	54 79 A9	typed ਡੇ	read ਡੇ- [0A21 0A47 002D]	written back 54 79 2D
+    OTHER	54 B1 40	typed ਡੈ	read ਡੈऽ [0A21 0A48 093D]	written back 54 B1 U+093D
+    OTHER	54 B1 A9	typed ਡੈ	read ਡੈ- [0A21 0A48 002D]	written back 54 B1 2D
+    OTHER	54 7D 40	typed ਡੋ	read ਡੋऽ [0A21 0A4B 093D]	written back 54 7D U+093D
+    OTHER	54 7D A9	typed ਡੋ	read ਡੋ- [0A21 0A4B 002D]	written back 54 7D 2D
+    OTHER	54 A1 40	typed ਡੌ	read ਡੌऽ [0A21 0A4C 093D]	written back 54 A1 U+093D
+    OTHER	54 A1 A9	typed ਡੌ	read ਡੌ- [0A21 0A4C 002D]	written back 54 A1 2D
+    OTHER	54 40	typed ਡ	read ਡऽ [0A21 093D]	written back 54 U+093D
+    OTHER	54 A9	typed ਡ	read ਡ- [0A21 002D]	written back 54 2D
+    OTHER	55 70 40	typed ਢਾ	read ਢਾऽ [0A22 0A3E 093D]	written back 55 70 U+093D
+    OTHER	55 70 A9	typed ਢਾ	read ਢਾ- [0A22 0A3E 002D]	written back 55 70 2D
+    OTHER	71 55 40	typed ਢਿ	read ਢਿऽ [0A22 0A3F 093D]	written back 71 55 U+093D
+    OTHER	71 55 A9	typed ਢਿ	read ਢਿ- [0A22 0A3F 002D]	written back 71 55 2D
+    OTHER	55 72 40	typed ਢੀ	read ਢੀऽ [0A22 0A40 093D]	written back 55 72 U+093D
+    OTHER	55 72 A9	typed ਢੀ	read ਢੀ- [0A22 0A40 002D]	written back 55 72 2D
+    OTHER	55 74 40	typed ਢੁ	read ਢੁऽ [0A22 0A41 093D]	written back 55 74 U+093D
+    OTHER	55 74 A9	typed ਢੁ	read ਢੁ- [0A22 0A41 002D]	written back 55 74 2D
+    OTHER	55 76 40	typed ਢੂ	read ਢੂऽ [0A22 0A42 093D]	written back 55 76 U+093D
+    OTHER	55 76 A9	typed ਢੂ	read ਢੂ- [0A22 0A42 002D]	written back 55 76 2D
+    OTHER	55 79 40	typed ਢੇ	read ਢੇऽ [0A22 0A47 093D]	written back 55 79 U+093D
+    OTHER	55 79 A9	typed ਢੇ	read ਢੇ- [0A22 0A47 002D]	written back 55 79 2D
+    OTHER	55 B1 40	typed ਢੈ	read ਢੈऽ [0A22 0A48 093D]	written back 55 B1 U+093D
+    OTHER	55 B1 A9	typed ਢੈ	read ਢੈ- [0A22 0A48 002D]	written back 55 B1 2D
+    OTHER	55 7D 40	typed ਢੋ	read ਢੋऽ [0A22 0A4B 093D]	written back 55 7D U+093D
+    OTHER	55 7D A9	typed ਢੋ	read ਢੋ- [0A22 0A4B 002D]	written back 55 7D 2D
+    OTHER	55 A1 40	typed ਢੌ	read ਢੌऽ [0A22 0A4C 093D]	written back 55 A1 U+093D
+    OTHER	55 A1 A9	typed ਢੌ	read ਢੌ- [0A22 0A4C 002D]	written back 55 A1 2D
+    OTHER	55 40	typed ਢ	read ਢऽ [0A22 093D]	written back 55 U+093D
+    OTHER	55 A9	typed ਢ	read ਢ- [0A22 002D]	written back 55 2D
+    OTHER	56 70 40	typed ਣਾ	read ਣਾऽ [0A23 0A3E 093D]	written back 56 70 U+093D
+    OTHER	56 70 A9	typed ਣਾ	read ਣਾ- [0A23 0A3E 002D]	written back 56 70 2D
+    OTHER	71 56 40	typed ਣਿ	read ਣਿऽ [0A23 0A3F 093D]	written back 71 56 U+093D
+    OTHER	71 56 A9	typed ਣਿ	read ਣਿ- [0A23 0A3F 002D]	written back 71 56 2D
+    OTHER	56 72 40	typed ਣੀ	read ਣੀऽ [0A23 0A40 093D]	written back 56 72 U+093D
+    OTHER	56 72 A9	typed ਣੀ	read ਣੀ- [0A23 0A40 002D]	written back 56 72 2D
+    OTHER	56 74 40	typed ਣੁ	read ਣੁऽ [0A23 0A41 093D]	written back 56 74 U+093D
+    OTHER	56 74 A9	typed ਣੁ	read ਣੁ- [0A23 0A41 002D]	written back 56 74 2D
+    OTHER	56 76 40	typed ਣੂ	read ਣੂऽ [0A23 0A42 093D]	written back 56 76 U+093D
+    OTHER	56 76 A9	typed ਣੂ	read ਣੂ- [0A23 0A42 002D]	written back 56 76 2D
+    OTHER	56 79 40	typed ਣੇ	read ਣੇऽ [0A23 0A47 093D]	written back 56 79 U+093D
+    OTHER	56 79 A9	typed ਣੇ	read ਣੇ- [0A23 0A47 002D]	written back 56 79 2D
+    OTHER	56 B1 40	typed ਣੈ	read ਣੈऽ [0A23 0A48 093D]	written back 56 B1 U+093D
+    OTHER	56 B1 A9	typed ਣੈ	read ਣੈ- [0A23 0A48 002D]	written back 56 B1 2D
+    OTHER	56 7D 40	typed ਣੋ	read ਣੋऽ [0A23 0A4B 093D]	written back 56 7D U+093D
+    OTHER	56 7D A9	typed ਣੋ	read ਣੋ- [0A23 0A4B 002D]	written back 56 7D 2D
+    OTHER	56 A1 40	typed ਣੌ	read ਣੌऽ [0A23 0A4C 093D]	written back 56 A1 U+093D
+    OTHER	56 A1 A9	typed ਣੌ	read ਣੌ- [0A23 0A4C 002D]	written back 56 A1 2D
+    OTHER	56 40	typed ਣ	read ਣऽ [0A23 093D]	written back 56 U+093D
+    OTHER	56 A9	typed ਣ	read ਣ- [0A23 002D]	written back 56 2D
+    OTHER	57 70 40	typed ਤਾ	read ਤਾऽ [0A24 0A3E 093D]	written back 57 70 U+093D
+    OTHER	57 70 A9	typed ਤਾ	read ਤਾ- [0A24 0A3E 002D]	written back 57 70 2D
+    OTHER	71 57 40	typed ਤਿ	read ਤਿऽ [0A24 0A3F 093D]	written back 71 57 U+093D
+    OTHER	71 57 A9	typed ਤਿ	read ਤਿ- [0A24 0A3F 002D]	written back 71 57 2D
+    OTHER	57 72 40	typed ਤੀ	read ਤੀऽ [0A24 0A40 093D]	written back 57 72 U+093D
+    OTHER	57 72 A9	typed ਤੀ	read ਤੀ- [0A24 0A40 002D]	written back 57 72 2D
+    OTHER	57 74 40	typed ਤੁ	read ਤੁऽ [0A24 0A41 093D]	written back 57 74 U+093D
+    OTHER	57 74 A9	typed ਤੁ	read ਤੁ- [0A24 0A41 002D]	written back 57 74 2D
+    OTHER	57 76 40	typed ਤੂ	read ਤੂऽ [0A24 0A42 093D]	written back 57 76 U+093D
+    OTHER	57 76 A9	typed ਤੂ	read ਤੂ- [0A24 0A42 002D]	written back 57 76 2D
+    OTHER	57 79 40	typed ਤੇ	read ਤੇऽ [0A24 0A47 093D]	written back 57 79 U+093D
+    OTHER	57 79 A9	typed ਤੇ	read ਤੇ- [0A24 0A47 002D]	written back 57 79 2D
+    OTHER	57 B1 40	typed ਤੈ	read ਤੈऽ [0A24 0A48 093D]	written back 57 B1 U+093D
+    OTHER	57 B1 A9	typed ਤੈ	read ਤੈ- [0A24 0A48 002D]	written back 57 B1 2D
+    OTHER	57 7D 40	typed ਤੋ	read ਤੋऽ [0A24 0A4B 093D]	written back 57 7D U+093D
+    OTHER	57 7D A9	typed ਤੋ	read ਤੋ- [0A24 0A4B 002D]	written back 57 7D 2D
+    OTHER	57 A1 40	typed ਤੌ	read ਤੌऽ [0A24 0A4C 093D]	written back 57 A1 U+093D
+    OTHER	57 A1 A9	typed ਤੌ	read ਤੌ- [0A24 0A4C 002D]	written back 57 A1 2D
+    OTHER	57 40	typed ਤ	read ਤऽ [0A24 093D]	written back 57 U+093D
+    OTHER	57 A9	typed ਤ	read ਤ- [0A24 002D]	written back 57 2D
+    OTHER	58 70 40	typed ਥਾ	read ਥਾऽ [0A25 0A3E 093D]	written back 58 70 U+093D
+    OTHER	58 70 A9	typed ਥਾ	read ਥਾ- [0A25 0A3E 002D]	written back 58 70 2D
+    OTHER	71 58 40	typed ਥਿ	read ਥਿऽ [0A25 0A3F 093D]	written back 71 58 U+093D
+    OTHER	71 58 A9	typed ਥਿ	read ਥਿ- [0A25 0A3F 002D]	written back 71 58 2D
+    OTHER	58 72 40	typed ਥੀ	read ਥੀऽ [0A25 0A40 093D]	written back 58 72 U+093D
+    OTHER	58 72 A9	typed ਥੀ	read ਥੀ- [0A25 0A40 002D]	written back 58 72 2D
+    OTHER	58 74 40	typed ਥੁ	read ਥੁऽ [0A25 0A41 093D]	written back 58 74 U+093D
+    OTHER	58 74 A9	typed ਥੁ	read ਥੁ- [0A25 0A41 002D]	written back 58 74 2D
+    OTHER	58 76 40	typed ਥੂ	read ਥੂऽ [0A25 0A42 093D]	written back 58 76 U+093D
+    OTHER	58 76 A9	typed ਥੂ	read ਥੂ- [0A25 0A42 002D]	written back 58 76 2D
+    OTHER	58 79 40	typed ਥੇ	read ਥੇऽ [0A25 0A47 093D]	written back 58 79 U+093D
+    OTHER	58 79 A9	typed ਥੇ	read ਥੇ- [0A25 0A47 002D]	written back 58 79 2D
+    OTHER	58 B1 40	typed ਥੈ	read ਥੈऽ [0A25 0A48 093D]	written back 58 B1 U+093D
+    OTHER	58 B1 A9	typed ਥੈ	read ਥੈ- [0A25 0A48 002D]	written back 58 B1 2D
+    OTHER	58 7D 40	typed ਥੋ	read ਥੋऽ [0A25 0A4B 093D]	written back 58 7D U+093D
+    OTHER	58 7D A9	typed ਥੋ	read ਥੋ- [0A25 0A4B 002D]	written back 58 7D 2D
+    OTHER	58 A1 40	typed ਥੌ	read ਥੌऽ [0A25 0A4C 093D]	written back 58 A1 U+093D
+    OTHER	58 A1 A9	typed ਥੌ	read ਥੌ- [0A25 0A4C 002D]	written back 58 A1 2D
+    OTHER	58 40	typed ਥ	read ਥऽ [0A25 093D]	written back 58 U+093D
+    OTHER	58 A9	typed ਥ	read ਥ- [0A25 002D]	written back 58 2D
+    OTHER	59 70 40	typed ਦਾ	read ਦਾऽ [0A26 0A3E 093D]	written back 59 70 U+093D
+    OTHER	59 70 A9	typed ਦਾ	read ਦਾ- [0A26 0A3E 002D]	written back 59 70 2D
+    OTHER	71 59 40	typed ਦਿ	read ਦਿऽ [0A26 0A3F 093D]	written back 71 59 U+093D
+    OTHER	71 59 A9	typed ਦਿ	read ਦਿ- [0A26 0A3F 002D]	written back 71 59 2D
+    OTHER	59 72 40	typed ਦੀ	read ਦੀऽ [0A26 0A40 093D]	written back 59 72 U+093D
+    OTHER	59 72 A9	typed ਦੀ	read ਦੀ- [0A26 0A40 002D]	written back 59 72 2D
+    OTHER	59 74 40	typed ਦੁ	read ਦੁऽ [0A26 0A41 093D]	written back 59 74 U+093D
+    OTHER	59 74 A9	typed ਦੁ	read ਦੁ- [0A26 0A41 002D]	written back 59 74 2D
+    OTHER	59 76 40	typed ਦੂ	read ਦੂऽ [0A26 0A42 093D]	written back 59 76 U+093D
+    OTHER	59 76 A9	typed ਦੂ	read ਦੂ- [0A26 0A42 002D]	written back 59 76 2D
+    OTHER	59 79 40	typed ਦੇ	read ਦੇऽ [0A26 0A47 093D]	written back 59 79 U+093D
+    OTHER	59 79 A9	typed ਦੇ	read ਦੇ- [0A26 0A47 002D]	written back 59 79 2D
+    OTHER	59 B1 40	typed ਦੈ	read ਦੈऽ [0A26 0A48 093D]	written back 59 B1 U+093D
+    OTHER	59 B1 A9	typed ਦੈ	read ਦੈ- [0A26 0A48 002D]	written back 59 B1 2D
+    OTHER	59 7D 40	typed ਦੋ	read ਦੋऽ [0A26 0A4B 093D]	written back 59 7D U+093D
+    OTHER	59 7D A9	typed ਦੋ	read ਦੋ- [0A26 0A4B 002D]	written back 59 7D 2D
+    OTHER	59 A1 40	typed ਦੌ	read ਦੌऽ [0A26 0A4C 093D]	written back 59 A1 U+093D
+    OTHER	59 A1 A9	typed ਦੌ	read ਦੌ- [0A26 0A4C 002D]	written back 59 A1 2D
+    OTHER	59 40	typed ਦ	read ਦऽ [0A26 093D]	written back 59 U+093D
+    OTHER	59 A9	typed ਦ	read ਦ- [0A26 002D]	written back 59 2D
+    OTHER	5A 70 40	typed ਧਾ	read ਧਾऽ [0A27 0A3E 093D]	written back 5A 70 U+093D
+    OTHER	5A 70 A9	typed ਧਾ	read ਧਾ- [0A27 0A3E 002D]	written back 5A 70 2D
+    OTHER	71 5A 40	typed ਧਿ	read ਧਿऽ [0A27 0A3F 093D]	written back 71 5A U+093D
+    OTHER	71 5A A9	typed ਧਿ	read ਧਿ- [0A27 0A3F 002D]	written back 71 5A 2D
+    OTHER	5A 72 40	typed ਧੀ	read ਧੀऽ [0A27 0A40 093D]	written back 5A 72 U+093D
+    OTHER	5A 72 A9	typed ਧੀ	read ਧੀ- [0A27 0A40 002D]	written back 5A 72 2D
+    OTHER	5A 74 40	typed ਧੁ	read ਧੁऽ [0A27 0A41 093D]	written back 5A 74 U+093D
+    OTHER	5A 74 A9	typed ਧੁ	read ਧੁ- [0A27 0A41 002D]	written back 5A 74 2D
+    OTHER	5A 76 40	typed ਧੂ	read ਧੂऽ [0A27 0A42 093D]	written back 5A 76 U+093D
+    OTHER	5A 76 A9	typed ਧੂ	read ਧੂ- [0A27 0A42 002D]	written back 5A 76 2D
+    OTHER	5A 79 40	typed ਧੇ	read ਧੇऽ [0A27 0A47 093D]	written back 5A 79 U+093D
+    OTHER	5A 79 A9	typed ਧੇ	read ਧੇ- [0A27 0A47 002D]	written back 5A 79 2D
+    OTHER	5A B1 40	typed ਧੈ	read ਧੈऽ [0A27 0A48 093D]	written back 5A B1 U+093D
+    OTHER	5A B1 A9	typed ਧੈ	read ਧੈ- [0A27 0A48 002D]	written back 5A B1 2D
+    OTHER	5A 7D 40	typed ਧੋ	read ਧੋऽ [0A27 0A4B 093D]	written back 5A 7D U+093D
+    OTHER	5A 7D A9	typed ਧੋ	read ਧੋ- [0A27 0A4B 002D]	written back 5A 7D 2D
+    OTHER	5A A1 40	typed ਧੌ	read ਧੌऽ [0A27 0A4C 093D]	written back 5A A1 U+093D
+    OTHER	5A A1 A9	typed ਧੌ	read ਧੌ- [0A27 0A4C 002D]	written back 5A A1 2D
+    OTHER	5A 40	typed ਧ	read ਧऽ [0A27 093D]	written back 5A U+093D
+    OTHER	5A A9	typed ਧ	read ਧ- [0A27 002D]	written back 5A 2D
+    OTHER	B2 BE 70 40	typed ਨਾ	read ਨਾऽ [0A28 0A3E 093D]	written back B2 BE 70 U+093D
+    OTHER	B2 BE 70 A9	typed ਨਾ	read ਨਾ- [0A28 0A3E 002D]	written back B2 BE 70 2D
+    OTHER	71 B2 BE 40	typed ਨਿ	read ਨਿऽ [0A28 0A3F 093D]	written back 71 B2 BE U+093D
+    OTHER	71 B2 BE A9	typed ਨਿ	read ਨਿ- [0A28 0A3F 002D]	written back 71 B2 BE 2D
+    OTHER	B2 BE 72 40	typed ਨੀ	read ਨੀऽ [0A28 0A40 093D]	written back B2 BE 72 U+093D
+    OTHER	B2 BE 72 A9	typed ਨੀ	read ਨੀ- [0A28 0A40 002D]	written back B2 BE 72 2D
+    OTHER	B2 BE AE 40	typed ਨੁ	read ਨੁऽ [0A28 0A41 093D]	written back B2 BE AE U+093D
+    OTHER	B2 BE AE A9	typed ਨੁ	read ਨੁ- [0A28 0A41 002D]	written back B2 BE AE 2D
+    OTHER	B2 A7 BE AE	typed ਨੱੁ	read ਨੁੱ [0A28 0A41 0A71]	written back B2 A7 BE 74
+    OTHER	B2 A3 BE AE	typed ਨਂੁ	read ਨੁਂ [0A28 0A41 0A02]	written back B2 A3 BE 74
+    OTHER	B2 A5 BE AE	typed ਨੰੁ	read ਨੁੰ [0A28 0A41 0A70]	written back B2 A5 BE 74
+    OTHER	B2 BE AF 40	typed ਨੂ	read ਨੂऽ [0A28 0A42 093D]	written back B2 BE AF U+093D
+    OTHER	B2 BE AF A9	typed ਨੂ	read ਨੂ- [0A28 0A42 002D]	written back B2 BE AF 2D
+    OTHER	B2 A7 BE AF	typed ਨੱੂ	read ਨੂੱ [0A28 0A42 0A71]	written back B2 A7 BE 76
+    OTHER	B2 A3 BE AF	typed ਨਂੂ	read ਨੂਂ [0A28 0A42 0A02]	written back B2 A3 BE 76
+    OTHER	B2 79 BE 40	typed ਨੇ	read ਨੇऽ [0A28 0A47 093D]	written back B2 79 BE U+093D
+    OTHER	B2 79 BE A9	typed ਨੇ	read ਨੇ- [0A28 0A47 002D]	written back B2 79 BE 2D
+    OTHER	B2 B1 BE 40	typed ਨੈ	read ਨੈऽ [0A28 0A48 093D]	written back B2 B1 BE U+093D
+    OTHER	B2 B1 BE A9	typed ਨੈ	read ਨੈ- [0A28 0A48 002D]	written back B2 B1 BE 2D
+    OTHER	B2 7D BE 40	typed ਨੋ	read ਨੋऽ [0A28 0A4B 093D]	written back B2 7D BE U+093D
+    OTHER	B2 7D BE A9	typed ਨੋ	read ਨੋ- [0A28 0A4B 002D]	written back B2 7D BE 2D
+    OTHER	B2 A1 BE 40	typed ਨੌ	read ਨੌऽ [0A28 0A4C 093D]	written back B2 A1 BE U+093D
+    OTHER	B2 A1 BE A9	typed ਨੌ	read ਨੌ- [0A28 0A4C 002D]	written back B2 A1 BE 2D
+    OTHER	B2 BE 40	typed ਨ	read ਨऽ [0A28 093D]	written back B2 BE U+093D
+    OTHER	B2 BE A9	typed ਨ	read ਨ- [0A28 002D]	written back B2 BE 2D
+    OTHER	5C 70 40	typed ਪਾ	read ਪਾऽ [0A2A 0A3E 093D]	written back 5C 70 U+093D
+    OTHER	5C 70 A9	typed ਪਾ	read ਪਾ- [0A2A 0A3E 002D]	written back 5C 70 2D
+    OTHER	71 5C 40	typed ਪਿ	read ਪਿऽ [0A2A 0A3F 093D]	written back 71 5C U+093D
+    OTHER	71 5C A9	typed ਪਿ	read ਪਿ- [0A2A 0A3F 002D]	written back 71 5C 2D
+    OTHER	5C 72 40	typed ਪੀ	read ਪੀऽ [0A2A 0A40 093D]	written back 5C 72 U+093D
+    OTHER	5C 72 A9	typed ਪੀ	read ਪੀ- [0A2A 0A40 002D]	written back 5C 72 2D
+    OTHER	5C 74 40	typed ਪੁ	read ਪੁऽ [0A2A 0A41 093D]	written back 5C 74 U+093D
+    OTHER	5C 74 A9	typed ਪੁ	read ਪੁ- [0A2A 0A41 002D]	written back 5C 74 2D
+    OTHER	5C 76 40	typed ਪੂ	read ਪੂऽ [0A2A 0A42 093D]	written back 5C 76 U+093D
+    OTHER	5C 76 A9	typed ਪੂ	read ਪੂ- [0A2A 0A42 002D]	written back 5C 76 2D
+    OTHER	5C 79 40	typed ਪੇ	read ਪੇऽ [0A2A 0A47 093D]	written back 5C 79 U+093D
+    OTHER	5C 79 A9	typed ਪੇ	read ਪੇ- [0A2A 0A47 002D]	written back 5C 79 2D
+    OTHER	5C B1 40	typed ਪੈ	read ਪੈऽ [0A2A 0A48 093D]	written back 5C B1 U+093D
+    OTHER	5C B1 A9	typed ਪੈ	read ਪੈ- [0A2A 0A48 002D]	written back 5C B1 2D
+    OTHER	5C 7D 40	typed ਪੋ	read ਪੋऽ [0A2A 0A4B 093D]	written back 5C 7D U+093D
+    OTHER	5C 7D A9	typed ਪੋ	read ਪੋ- [0A2A 0A4B 002D]	written back 5C 7D 2D
+    OTHER	5C A1 40	typed ਪੌ	read ਪੌऽ [0A2A 0A4C 093D]	written back 5C A1 U+093D
+    OTHER	5C A1 A9	typed ਪੌ	read ਪੌ- [0A2A 0A4C 002D]	written back 5C A1 2D
+    OTHER	5C 40	typed ਪ	read ਪऽ [0A2A 093D]	written back 5C U+093D
+    OTHER	5C A9	typed ਪ	read ਪ- [0A2A 002D]	written back 5C 2D
+    OTHER	B3 70 40	typed ਫਾ	read ਫਾऽ [0A2B 0A3E 093D]	written back B3 70 U+093D
+    OTHER	B3 70 A9	typed ਫਾ	read ਫਾ- [0A2B 0A3E 002D]	written back B3 70 2D
+    OTHER	71 B3 40	typed ਫਿ	read ਫਿऽ [0A2B 0A3F 093D]	written back 71 B3 U+093D
+    OTHER	71 B3 A9	typed ਫਿ	read ਫਿ- [0A2B 0A3F 002D]	written back 71 B3 2D
+    OTHER	B3 72 40	typed ਫੀ	read ਫੀऽ [0A2B 0A40 093D]	written back B3 72 U+093D
+    OTHER	B3 72 A9	typed ਫੀ	read ਫੀ- [0A2B 0A40 002D]	written back B3 72 2D
+    OTHER	B3 74 40	typed ਫੁ	read ਫੁऽ [0A2B 0A41 093D]	written back B3 74 U+093D
+    OTHER	B3 74 A9	typed ਫੁ	read ਫੁ- [0A2B 0A41 002D]	written back B3 74 2D
+    OTHER	B3 76 40	typed ਫੂ	read ਫੂऽ [0A2B 0A42 093D]	written back B3 76 U+093D
+    OTHER	B3 76 A9	typed ਫੂ	read ਫੂ- [0A2B 0A42 002D]	written back B3 76 2D
+    OTHER	B3 79 40	typed ਫੇ	read ਫੇऽ [0A2B 0A47 093D]	written back B3 79 U+093D
+    OTHER	B3 79 A9	typed ਫੇ	read ਫੇ- [0A2B 0A47 002D]	written back B3 79 2D
+    OTHER	B3 B1 40	typed ਫੈ	read ਫੈऽ [0A2B 0A48 093D]	written back B3 B1 U+093D
+    OTHER	B3 B1 A9	typed ਫੈ	read ਫੈ- [0A2B 0A48 002D]	written back B3 B1 2D
+    OTHER	B3 7D 40	typed ਫੋ	read ਫੋऽ [0A2B 0A4B 093D]	written back B3 7D U+093D
+    OTHER	B3 7D A9	typed ਫੋ	read ਫੋ- [0A2B 0A4B 002D]	written back B3 7D 2D
+    OTHER	B3 A1 40	typed ਫੌ	read ਫੌऽ [0A2B 0A4C 093D]	written back B3 A1 U+093D
+    OTHER	B3 A1 A9	typed ਫੌ	read ਫੌ- [0A2B 0A4C 002D]	written back B3 A1 2D
+    OTHER	B3 40	typed ਫ	read ਫऽ [0A2B 093D]	written back B3 U+093D
+    OTHER	B3 A9	typed ਫ	read ਫ- [0A2B 002D]	written back B3 2D
+    OTHER	5E 70 40	typed ਬਾ	read ਬਾऽ [0A2C 0A3E 093D]	written back 5E 70 U+093D
+    OTHER	5E 70 A9	typed ਬਾ	read ਬਾ- [0A2C 0A3E 002D]	written back 5E 70 2D
+    OTHER	71 5E 40	typed ਬਿ	read ਬਿऽ [0A2C 0A3F 093D]	written back 71 5E U+093D
+    OTHER	71 5E A9	typed ਬਿ	read ਬਿ- [0A2C 0A3F 002D]	written back 71 5E 2D
+    OTHER	5E 72 40	typed ਬੀ	read ਬੀऽ [0A2C 0A40 093D]	written back 5E 72 U+093D
+    OTHER	5E 72 A9	typed ਬੀ	read ਬੀ- [0A2C 0A40 002D]	written back 5E 72 2D
+    OTHER	5E 74 40	typed ਬੁ	read ਬੁऽ [0A2C 0A41 093D]	written back 5E 74 U+093D
+    OTHER	5E 74 A9	typed ਬੁ	read ਬੁ- [0A2C 0A41 002D]	written back 5E 74 2D
+    OTHER	5E 76 40	typed ਬੂ	read ਬੂऽ [0A2C 0A42 093D]	written back 5E 76 U+093D
+    OTHER	5E 76 A9	typed ਬੂ	read ਬੂ- [0A2C 0A42 002D]	written back 5E 76 2D
+    OTHER	5E 79 40	typed ਬੇ	read ਬੇऽ [0A2C 0A47 093D]	written back 5E 79 U+093D
+    OTHER	5E 79 A9	typed ਬੇ	read ਬੇ- [0A2C 0A47 002D]	written back 5E 79 2D
+    OTHER	5E B1 40	typed ਬੈ	read ਬੈऽ [0A2C 0A48 093D]	written back 5E B1 U+093D
+    OTHER	5E B1 A9	typed ਬੈ	read ਬੈ- [0A2C 0A48 002D]	written back 5E B1 2D
+    OTHER	5E 7D 40	typed ਬੋ	read ਬੋऽ [0A2C 0A4B 093D]	written back 5E 7D U+093D
+    OTHER	5E 7D A9	typed ਬੋ	read ਬੋ- [0A2C 0A4B 002D]	written back 5E 7D 2D
+    OTHER	5E A1 40	typed ਬੌ	read ਬੌऽ [0A2C 0A4C 093D]	written back 5E A1 U+093D
+    OTHER	5E A1 A9	typed ਬੌ	read ਬੌ- [0A2C 0A4C 002D]	written back 5E A1 2D
+    OTHER	5E 40	typed ਬ	read ਬऽ [0A2C 093D]	written back 5E U+093D
+    OTHER	5E A9	typed ਬ	read ਬ- [0A2C 002D]	written back 5E 2D
+    OTHER	5F 70 40	typed ਭਾ	read ਭਾऽ [0A2D 0A3E 093D]	written back 5F 70 U+093D
+    OTHER	5F 70 A9	typed ਭਾ	read ਭਾ- [0A2D 0A3E 002D]	written back 5F 70 2D
+    OTHER	71 5F 40	typed ਭਿ	read ਭਿऽ [0A2D 0A3F 093D]	written back 71 5F U+093D
+    OTHER	71 5F A9	typed ਭਿ	read ਭਿ- [0A2D 0A3F 002D]	written back 71 5F 2D
+    OTHER	5F 72 40	typed ਭੀ	read ਭੀऽ [0A2D 0A40 093D]	written back 5F 72 U+093D
+    OTHER	5F 72 A9	typed ਭੀ	read ਭੀ- [0A2D 0A40 002D]	written back 5F 72 2D
+    OTHER	5F 74 40	typed ਭੁ	read ਭੁऽ [0A2D 0A41 093D]	written back 5F 74 U+093D
+    OTHER	5F 74 A9	typed ਭੁ	read ਭੁ- [0A2D 0A41 002D]	written back 5F 74 2D
+    OTHER	5F 76 40	typed ਭੂ	read ਭੂऽ [0A2D 0A42 093D]	written back 5F 76 U+093D
+    OTHER	5F 76 A9	typed ਭੂ	read ਭੂ- [0A2D 0A42 002D]	written back 5F 76 2D
+    OTHER	5F 79 40	typed ਭੇ	read ਭੇऽ [0A2D 0A47 093D]	written back 5F 79 U+093D
+    OTHER	5F 79 A9	typed ਭੇ	read ਭੇ- [0A2D 0A47 002D]	written back 5F 79 2D
+    OTHER	5F B1 40	typed ਭੈ	read ਭੈऽ [0A2D 0A48 093D]	written back 5F B1 U+093D
+    OTHER	5F B1 A9	typed ਭੈ	read ਭੈ- [0A2D 0A48 002D]	written back 5F B1 2D
+    OTHER	5F 7D 40	typed ਭੋ	read ਭੋऽ [0A2D 0A4B 093D]	written back 5F 7D U+093D
+    OTHER	5F 7D A9	typed ਭੋ	read ਭੋ- [0A2D 0A4B 002D]	written back 5F 7D 2D
+    OTHER	5F A1 40	typed ਭੌ	read ਭੌऽ [0A2D 0A4C 093D]	written back 5F A1 U+093D
+    OTHER	5F A1 A9	typed ਭੌ	read ਭੌ- [0A2D 0A4C 002D]	written back 5F A1 2D
+    OTHER	5F 40	typed ਭ	read ਭऽ [0A2D 093D]	written back 5F U+093D
+    OTHER	5F A9	typed ਭ	read ਭ- [0A2D 002D]	written back 5F 2D
+    OTHER	60 70 40	typed ਮਾ	read ਮਾऽ [0A2E 0A3E 093D]	written back 60 70 U+093D
+    OTHER	60 70 A9	typed ਮਾ	read ਮਾ- [0A2E 0A3E 002D]	written back 60 70 2D
+    OTHER	71 60 40	typed ਮਿ	read ਮਿऽ [0A2E 0A3F 093D]	written back 71 60 U+093D
+    OTHER	71 60 A9	typed ਮਿ	read ਮਿ- [0A2E 0A3F 002D]	written back 71 60 2D
+    OTHER	60 72 40	typed ਮੀ	read ਮੀऽ [0A2E 0A40 093D]	written back 60 72 U+093D
+    OTHER	60 72 A9	typed ਮੀ	read ਮੀ- [0A2E 0A40 002D]	written back 60 72 2D
+    OTHER	60 74 40	typed ਮੁ	read ਮੁऽ [0A2E 0A41 093D]	written back 60 74 U+093D
+    OTHER	60 74 A9	typed ਮੁ	read ਮੁ- [0A2E 0A41 002D]	written back 60 74 2D
+    OTHER	60 76 40	typed ਮੂ	read ਮੂऽ [0A2E 0A42 093D]	written back 60 76 U+093D
+    OTHER	60 76 A9	typed ਮੂ	read ਮੂ- [0A2E 0A42 002D]	written back 60 76 2D
+    OTHER	60 79 40	typed ਮੇ	read ਮੇऽ [0A2E 0A47 093D]	written back 60 79 U+093D
+    OTHER	60 79 A9	typed ਮੇ	read ਮੇ- [0A2E 0A47 002D]	written back 60 79 2D
+    OTHER	60 B1 40	typed ਮੈ	read ਮੈऽ [0A2E 0A48 093D]	written back 60 B1 U+093D
+    OTHER	60 B1 A9	typed ਮੈ	read ਮੈ- [0A2E 0A48 002D]	written back 60 B1 2D
+    OTHER	60 7D 40	typed ਮੋ	read ਮੋऽ [0A2E 0A4B 093D]	written back 60 7D U+093D
+    OTHER	60 7D A9	typed ਮੋ	read ਮੋ- [0A2E 0A4B 002D]	written back 60 7D 2D
+    OTHER	60 A1 40	typed ਮੌ	read ਮੌऽ [0A2E 0A4C 093D]	written back 60 A1 U+093D
+    OTHER	60 A1 A9	typed ਮੌ	read ਮੌ- [0A2E 0A4C 002D]	written back 60 A1 2D
+    OTHER	60 40	typed ਮ	read ਮऽ [0A2E 093D]	written back 60 U+093D
+    OTHER	60 A9	typed ਮ	read ਮ- [0A2E 002D]	written back 60 2D
+    OTHER	61 70 40	typed ਯਾ	read ਯਾऽ [0A2F 0A3E 093D]	written back 61 70 U+093D
+    OTHER	61 70 A9	typed ਯਾ	read ਯਾ- [0A2F 0A3E 002D]	written back 61 70 2D
+    OTHER	71 61 40	typed ਯਿ	read ਯਿऽ [0A2F 0A3F 093D]	written back 71 61 U+093D
+    OTHER	71 61 A9	typed ਯਿ	read ਯਿ- [0A2F 0A3F 002D]	written back 71 61 2D
+    OTHER	61 72 40	typed ਯੀ	read ਯੀऽ [0A2F 0A40 093D]	written back 61 72 U+093D
+    OTHER	61 72 A9	typed ਯੀ	read ਯੀ- [0A2F 0A40 002D]	written back 61 72 2D
+    OTHER	61 74 40	typed ਯੁ	read ਯੁऽ [0A2F 0A41 093D]	written back 61 74 U+093D
+    OTHER	61 74 A9	typed ਯੁ	read ਯੁ- [0A2F 0A41 002D]	written back 61 74 2D
+    OTHER	61 76 40	typed ਯੂ	read ਯੂऽ [0A2F 0A42 093D]	written back 61 76 U+093D
+    OTHER	61 76 A9	typed ਯੂ	read ਯੂ- [0A2F 0A42 002D]	written back 61 76 2D
+    OTHER	61 79 40	typed ਯੇ	read ਯੇऽ [0A2F 0A47 093D]	written back 61 79 U+093D
+    OTHER	61 79 A9	typed ਯੇ	read ਯੇ- [0A2F 0A47 002D]	written back 61 79 2D
+    OTHER	61 B1 40	typed ਯੈ	read ਯੈऽ [0A2F 0A48 093D]	written back 61 B1 U+093D
+    OTHER	61 B1 A9	typed ਯੈ	read ਯੈ- [0A2F 0A48 002D]	written back 61 B1 2D
+    OTHER	61 7D 40	typed ਯੋ	read ਯੋऽ [0A2F 0A4B 093D]	written back 61 7D U+093D
+    OTHER	61 7D A9	typed ਯੋ	read ਯੋ- [0A2F 0A4B 002D]	written back 61 7D 2D
+    OTHER	61 A1 40	typed ਯੌ	read ਯੌऽ [0A2F 0A4C 093D]	written back 61 A1 U+093D
+    OTHER	61 A1 A9	typed ਯੌ	read ਯੌ- [0A2F 0A4C 002D]	written back 61 A1 2D
+    OTHER	61 40	typed ਯ	read ਯऽ [0A2F 093D]	written back 61 U+093D
+    OTHER	61 A9	typed ਯ	read ਯ- [0A2F 002D]	written back 61 2D
+    OTHER	63 70 40	typed ਰਾ	read ਰਾऽ [0A30 0A3E 093D]	written back 63 70 U+093D
+    OTHER	63 70 A9	typed ਰਾ	read ਰਾ- [0A30 0A3E 002D]	written back 63 70 2D
+    OTHER	71 63 40	typed ਰਿ	read ਰਿऽ [0A30 0A3F 093D]	written back 71 63 U+093D
+    OTHER	71 63 A9	typed ਰਿ	read ਰਿ- [0A30 0A3F 002D]	written back 71 63 2D
+    OTHER	63 72 40	typed ਰੀ	read ਰੀऽ [0A30 0A40 093D]	written back 63 72 U+093D
+    OTHER	63 72 A9	typed ਰੀ	read ਰੀ- [0A30 0A40 002D]	written back 63 72 2D
+    OTHER	63 74 40	typed ਰੁ	read ਰੁऽ [0A30 0A41 093D]	written back 63 74 U+093D
+    OTHER	63 74 A9	typed ਰੁ	read ਰੁ- [0A30 0A41 002D]	written back 63 74 2D
+    OTHER	63 76 40	typed ਰੂ	read ਰੂऽ [0A30 0A42 093D]	written back 63 76 U+093D
+    OTHER	63 76 A9	typed ਰੂ	read ਰੂ- [0A30 0A42 002D]	written back 63 76 2D
+    OTHER	63 79 40	typed ਰੇ	read ਰੇऽ [0A30 0A47 093D]	written back 63 79 U+093D
+    OTHER	63 79 A9	typed ਰੇ	read ਰੇ- [0A30 0A47 002D]	written back 63 79 2D
+    OTHER	63 B1 40	typed ਰੈ	read ਰੈऽ [0A30 0A48 093D]	written back 63 B1 U+093D
+    OTHER	63 B1 A9	typed ਰੈ	read ਰੈ- [0A30 0A48 002D]	written back 63 B1 2D
+    OTHER	63 7D 40	typed ਰੋ	read ਰੋऽ [0A30 0A4B 093D]	written back 63 7D U+093D
+    OTHER	63 7D A9	typed ਰੋ	read ਰੋ- [0A30 0A4B 002D]	written back 63 7D 2D
+    OTHER	63 A1 40	typed ਰੌ	read ਰੌऽ [0A30 0A4C 093D]	written back 63 A1 U+093D
+    OTHER	63 A1 A9	typed ਰੌ	read ਰੌ- [0A30 0A4C 002D]	written back 63 A1 2D
+    OTHER	63 40	typed ਰ	read ਰऽ [0A30 093D]	written back 63 U+093D
+    OTHER	63 A9	typed ਰ	read ਰ- [0A30 002D]	written back 63 2D
+    OTHER	64 70 40	typed ਲਾ	read ਲਾऽ [0A32 0A3E 093D]	written back 64 70 U+093D
+    OTHER	64 70 A9	typed ਲਾ	read ਲਾ- [0A32 0A3E 002D]	written back 64 70 2D
+    OTHER	71 64 40	typed ਲਿ	read ਲਿऽ [0A32 0A3F 093D]	written back 71 64 U+093D
+    OTHER	71 64 A9	typed ਲਿ	read ਲਿ- [0A32 0A3F 002D]	written back 71 64 2D
+    OTHER	64 72 40	typed ਲੀ	read ਲੀऽ [0A32 0A40 093D]	written back 64 72 U+093D
+    OTHER	64 72 A9	typed ਲੀ	read ਲੀ- [0A32 0A40 002D]	written back 64 72 2D
+    OTHER	64 74 40	typed ਲੁ	read ਲੁऽ [0A32 0A41 093D]	written back 64 74 U+093D
+    OTHER	64 74 A9	typed ਲੁ	read ਲੁ- [0A32 0A41 002D]	written back 64 74 2D
+    OTHER	64 76 40	typed ਲੂ	read ਲੂऽ [0A32 0A42 093D]	written back 64 76 U+093D
+    OTHER	64 76 A9	typed ਲੂ	read ਲੂ- [0A32 0A42 002D]	written back 64 76 2D
+    OTHER	64 79 40	typed ਲੇ	read ਲੇऽ [0A32 0A47 093D]	written back 64 79 U+093D
+    OTHER	64 79 A9	typed ਲੇ	read ਲੇ- [0A32 0A47 002D]	written back 64 79 2D
+    OTHER	64 B1 40	typed ਲੈ	read ਲੈऽ [0A32 0A48 093D]	written back 64 B1 U+093D
+    OTHER	64 B1 A9	typed ਲੈ	read ਲੈ- [0A32 0A48 002D]	written back 64 B1 2D
+    OTHER	64 7D 40	typed ਲੋ	read ਲੋऽ [0A32 0A4B 093D]	written back 64 7D U+093D
+    OTHER	64 7D A9	typed ਲੋ	read ਲੋ- [0A32 0A4B 002D]	written back 64 7D 2D
+    OTHER	64 A1 40	typed ਲੌ	read ਲੌऽ [0A32 0A4C 093D]	written back 64 A1 U+093D
+    OTHER	64 A1 A9	typed ਲੌ	read ਲੌ- [0A32 0A4C 002D]	written back 64 A1 2D
+    OTHER	64 40	typed ਲ	read ਲऽ [0A32 093D]	written back 64 U+093D
+    OTHER	64 A9	typed ਲ	read ਲ- [0A32 002D]	written back 64 2D
+    OTHER	65 70 40	typed ਵਾ	read ਵਾऽ [0A35 0A3E 093D]	written back 65 70 U+093D
+    OTHER	65 70 A9	typed ਵਾ	read ਵਾ- [0A35 0A3E 002D]	written back 65 70 2D
+    OTHER	71 65 40	typed ਵਿ	read ਵਿऽ [0A35 0A3F 093D]	written back 71 65 U+093D
+    OTHER	71 65 A9	typed ਵਿ	read ਵਿ- [0A35 0A3F 002D]	written back 71 65 2D
+    OTHER	65 72 40	typed ਵੀ	read ਵੀऽ [0A35 0A40 093D]	written back 65 72 U+093D
+    OTHER	65 72 A9	typed ਵੀ	read ਵੀ- [0A35 0A40 002D]	written back 65 72 2D
+    OTHER	65 74 40	typed ਵੁ	read ਵੁऽ [0A35 0A41 093D]	written back 65 74 U+093D
+    OTHER	65 74 A9	typed ਵੁ	read ਵੁ- [0A35 0A41 002D]	written back 65 74 2D
+    OTHER	65 76 40	typed ਵੂ	read ਵੂऽ [0A35 0A42 093D]	written back 65 76 U+093D
+    OTHER	65 76 A9	typed ਵੂ	read ਵੂ- [0A35 0A42 002D]	written back 65 76 2D
+    OTHER	65 79 40	typed ਵੇ	read ਵੇऽ [0A35 0A47 093D]	written back 65 79 U+093D
+    OTHER	65 79 A9	typed ਵੇ	read ਵੇ- [0A35 0A47 002D]	written back 65 79 2D
+    OTHER	65 B1 40	typed ਵੈ	read ਵੈऽ [0A35 0A48 093D]	written back 65 B1 U+093D
+    OTHER	65 B1 A9	typed ਵੈ	read ਵੈ- [0A35 0A48 002D]	written back 65 B1 2D
+    OTHER	65 7D 40	typed ਵੋ	read ਵੋऽ [0A35 0A4B 093D]	written back 65 7D U+093D
+    OTHER	65 7D A9	typed ਵੋ	read ਵੋ- [0A35 0A4B 002D]	written back 65 7D 2D
+    OTHER	65 A1 40	typed ਵੌ	read ਵੌऽ [0A35 0A4C 093D]	written back 65 A1 U+093D
+    OTHER	65 A1 A9	typed ਵੌ	read ਵੌ- [0A35 0A4C 002D]	written back 65 A1 2D
+    OTHER	65 40	typed ਵ	read ਵऽ [0A35 093D]	written back 65 U+093D
+    OTHER	65 A9	typed ਵ	read ਵ- [0A35 002D]	written back 65 2D
+    OTHER	6D 70 40	typed ੜਾ	read ੜਾऽ [0A5C 0A3E 093D]	written back 6D 70 U+093D
+    OTHER	6D 70 A9	typed ੜਾ	read ੜਾ- [0A5C 0A3E 002D]	written back 6D 70 2D
+    OTHER	71 6D 40	typed ੜਿ	read ੜਿऽ [0A5C 0A3F 093D]	written back 71 6D U+093D
+    OTHER	71 6D A9	typed ੜਿ	read ੜਿ- [0A5C 0A3F 002D]	written back 71 6D 2D
+    OTHER	6D 72 40	typed ੜੀ	read ੜੀऽ [0A5C 0A40 093D]	written back 6D 72 U+093D
+    OTHER	6D 72 A9	typed ੜੀ	read ੜੀ- [0A5C 0A40 002D]	written back 6D 72 2D
+    OTHER	6D 74 40	typed ੜੁ	read ੜੁऽ [0A5C 0A41 093D]	written back 6D 74 U+093D
+    OTHER	6D 74 A9	typed ੜੁ	read ੜੁ- [0A5C 0A41 002D]	written back 6D 74 2D
+    OTHER	6D 76 40	typed ੜੂ	read ੜੂऽ [0A5C 0A42 093D]	written back 6D 76 U+093D
+    OTHER	6D 76 A9	typed ੜੂ	read ੜੂ- [0A5C 0A42 002D]	written back 6D 76 2D
+    OTHER	6D 79 40	typed ੜੇ	read ੜੇऽ [0A5C 0A47 093D]	written back 6D 79 U+093D
+    OTHER	6D 79 A9	typed ੜੇ	read ੜੇ- [0A5C 0A47 002D]	written back 6D 79 2D
+    OTHER	6D B1 40	typed ੜੈ	read ੜੈऽ [0A5C 0A48 093D]	written back 6D B1 U+093D
+    OTHER	6D B1 A9	typed ੜੈ	read ੜੈ- [0A5C 0A48 002D]	written back 6D B1 2D
+    OTHER	6D 7D 40	typed ੜੋ	read ੜੋऽ [0A5C 0A4B 093D]	written back 6D 7D U+093D
+    OTHER	6D 7D A9	typed ੜੋ	read ੜੋ- [0A5C 0A4B 002D]	written back 6D 7D 2D
+    OTHER	6D A1 40	typed ੜੌ	read ੜੌऽ [0A5C 0A4C 093D]	written back 6D A1 U+093D
+    OTHER	6D A1 A9	typed ੜੌ	read ੜੌ- [0A5C 0A4C 002D]	written back 6D A1 2D
+    OTHER	6D 40	typed ੜ	read ੜऽ [0A5C 093D]	written back 6D U+093D
+    OTHER	6D A9	typed ੜ	read ੜ- [0A5C 002D]	written back 6D 2D
+    OTHER	67 70 40	typed ਸਾ	read ਸਾऽ [0A38 0A3E 093D]	written back 67 70 U+093D
+    OTHER	67 70 A9	typed ਸਾ	read ਸਾ- [0A38 0A3E 002D]	written back 67 70 2D
+    OTHER	71 67 40	typed ਸਿ	read ਸਿऽ [0A38 0A3F 093D]	written back 71 67 U+093D
+    OTHER	71 67 A9	typed ਸਿ	read ਸਿ- [0A38 0A3F 002D]	written back 71 67 2D
+    OTHER	67 72 40	typed ਸੀ	read ਸੀऽ [0A38 0A40 093D]	written back 67 72 U+093D
+    OTHER	67 72 A9	typed ਸੀ	read ਸੀ- [0A38 0A40 002D]	written back 67 72 2D
+    OTHER	67 74 40	typed ਸੁ	read ਸੁऽ [0A38 0A41 093D]	written back 67 74 U+093D
+    OTHER	67 74 A9	typed ਸੁ	read ਸੁ- [0A38 0A41 002D]	written back 67 74 2D
+    OTHER	67 76 40	typed ਸੂ	read ਸੂऽ [0A38 0A42 093D]	written back 67 76 U+093D
+    OTHER	67 76 A9	typed ਸੂ	read ਸੂ- [0A38 0A42 002D]	written back 67 76 2D
+    OTHER	67 79 40	typed ਸੇ	read ਸੇऽ [0A38 0A47 093D]	written back 67 79 U+093D
+    OTHER	67 79 A9	typed ਸੇ	read ਸੇ- [0A38 0A47 002D]	written back 67 79 2D
+    OTHER	67 B1 40	typed ਸੈ	read ਸੈऽ [0A38 0A48 093D]	written back 67 B1 U+093D
+    OTHER	67 B1 A9	typed ਸੈ	read ਸੈ- [0A38 0A48 002D]	written back 67 B1 2D
+    OTHER	67 7D 40	typed ਸੋ	read ਸੋऽ [0A38 0A4B 093D]	written back 67 7D U+093D
+    OTHER	67 7D A9	typed ਸੋ	read ਸੋ- [0A38 0A4B 002D]	written back 67 7D 2D
+    OTHER	67 A1 40	typed ਸੌ	read ਸੌऽ [0A38 0A4C 093D]	written back 67 A1 U+093D
+    OTHER	67 A1 A9	typed ਸੌ	read ਸੌ- [0A38 0A4C 002D]	written back 67 A1 2D
+    OTHER	67 40	typed ਸ	read ਸऽ [0A38 093D]	written back 67 U+093D
+    OTHER	67 A9	typed ਸ	read ਸ- [0A38 002D]	written back 67 2D
+    OTHER	68 70 40	typed ਹਾ	read ਹਾऽ [0A39 0A3E 093D]	written back 68 70 U+093D
+    OTHER	68 70 A9	typed ਹਾ	read ਹਾ- [0A39 0A3E 002D]	written back 68 70 2D
+    OTHER	71 68 40	typed ਹਿ	read ਹਿऽ [0A39 0A3F 093D]	written back 71 68 U+093D
+    OTHER	71 68 A9	typed ਹਿ	read ਹਿ- [0A39 0A3F 002D]	written back 71 68 2D
+    OTHER	68 72 40	typed ਹੀ	read ਹੀऽ [0A39 0A40 093D]	written back 68 72 U+093D
+    OTHER	68 72 A9	typed ਹੀ	read ਹੀ- [0A39 0A40 002D]	written back 68 72 2D
+    OTHER	68 74 40	typed ਹੁ	read ਹੁऽ [0A39 0A41 093D]	written back 68 74 U+093D
+    OTHER	68 74 A9	typed ਹੁ	read ਹੁ- [0A39 0A41 002D]	written back 68 74 2D
+    OTHER	68 76 40	typed ਹੂ	read ਹੂऽ [0A39 0A42 093D]	written back 68 76 U+093D
+    OTHER	68 76 A9	typed ਹੂ	read ਹੂ- [0A39 0A42 002D]	written back 68 76 2D
+    OTHER	68 79 40	typed ਹੇ	read ਹੇऽ [0A39 0A47 093D]	written back 68 79 U+093D
+    OTHER	68 79 A9	typed ਹੇ	read ਹੇ- [0A39 0A47 002D]	written back 68 79 2D
+    OTHER	68 B1 40	typed ਹੈ	read ਹੈऽ [0A39 0A48 093D]	written back 68 B1 U+093D
+    OTHER	68 B1 A9	typed ਹੈ	read ਹੈ- [0A39 0A48 002D]	written back 68 B1 2D
+    OTHER	68 7D 40	typed ਹੋ	read ਹੋऽ [0A39 0A4B 093D]	written back 68 7D U+093D
+    OTHER	68 7D A9	typed ਹੋ	read ਹੋ- [0A39 0A4B 002D]	written back 68 7D 2D
+    OTHER	68 A1 40	typed ਹੌ	read ਹੌऽ [0A39 0A4C 093D]	written back 68 A1 U+093D
+    OTHER	68 A1 A9	typed ਹੌ	read ਹੌ- [0A39 0A4C 002D]	written back 68 A1 2D
+    OTHER	68 40	typed ਹ	read ਹऽ [0A39 093D]	written back 68 U+093D
+    OTHER	68 A9	typed ਹ	read ਹ- [0A39 002D]	written back 68 2D
+    OTHER	66 70 40	typed ਸ਼ਾ	read ਸ਼ਾऽ [0A36 0A3E 093D]	written back 66 70 U+093D
+    OTHER	66 70 A9	typed ਸ਼ਾ	read ਸ਼ਾ- [0A36 0A3E 002D]	written back 66 70 2D
+    OTHER	71 66 40	typed ਸ਼ਿ	read ਸ਼ਿऽ [0A36 0A3F 093D]	written back 71 66 U+093D
+    OTHER	71 66 A9	typed ਸ਼ਿ	read ਸ਼ਿ- [0A36 0A3F 002D]	written back 71 66 2D
+    OTHER	66 72 40	typed ਸ਼ੀ	read ਸ਼ੀऽ [0A36 0A40 093D]	written back 66 72 U+093D
+    OTHER	66 72 A9	typed ਸ਼ੀ	read ਸ਼ੀ- [0A36 0A40 002D]	written back 66 72 2D
+    OTHER	66 74 40	typed ਸ਼ੁ	read ਸ਼ੁऽ [0A36 0A41 093D]	written back 66 74 U+093D
+    OTHER	66 74 A9	typed ਸ਼ੁ	read ਸ਼ੁ- [0A36 0A41 002D]	written back 66 74 2D
+    OTHER	66 76 40	typed ਸ਼ੂ	read ਸ਼ੂऽ [0A36 0A42 093D]	written back 66 76 U+093D
+    OTHER	66 76 A9	typed ਸ਼ੂ	read ਸ਼ੂ- [0A36 0A42 002D]	written back 66 76 2D
+    OTHER	66 79 40	typed ਸ਼ੇ	read ਸ਼ੇऽ [0A36 0A47 093D]	written back 66 79 U+093D
+    OTHER	66 79 A9	typed ਸ਼ੇ	read ਸ਼ੇ- [0A36 0A47 002D]	written back 66 79 2D
+    OTHER	66 B1 40	typed ਸ਼ੈ	read ਸ਼ੈऽ [0A36 0A48 093D]	written back 66 B1 U+093D
+    OTHER	66 B1 A9	typed ਸ਼ੈ	read ਸ਼ੈ- [0A36 0A48 002D]	written back 66 B1 2D
+    OTHER	66 7D 40	typed ਸ਼ੋ	read ਸ਼ੋऽ [0A36 0A4B 093D]	written back 66 7D U+093D
+    OTHER	66 7D A9	typed ਸ਼ੋ	read ਸ਼ੋ- [0A36 0A4B 002D]	written back 66 7D 2D
+    OTHER	66 A1 40	typed ਸ਼ੌ	read ਸ਼ੌऽ [0A36 0A4C 093D]	written back 66 A1 U+093D
+    OTHER	66 A1 A9	typed ਸ਼ੌ	read ਸ਼ੌ- [0A36 0A4C 002D]	written back 66 A1 2D
+    OTHER	66 40	typed ਸ਼	read ਸ਼ऽ [0A36 093D]	written back 66 U+093D
+    OTHER	66 A9	typed ਸ਼	read ਸ਼- [0A36 002D]	written back 66 2D
+    OTHER	69 70 40	typed ਖ਼ਾ	read ਖ਼ਾऽ [0A59 0A3E 093D]	written back 69 70 U+093D
+    OTHER	69 70 A9	typed ਖ਼ਾ	read ਖ਼ਾ- [0A59 0A3E 002D]	written back 69 70 2D
+    OTHER	71 69 40	typed ਖ਼ਿ	read ਖ਼ਿऽ [0A59 0A3F 093D]	written back 71 69 U+093D
+    OTHER	71 69 A9	typed ਖ਼ਿ	read ਖ਼ਿ- [0A59 0A3F 002D]	written back 71 69 2D
+    OTHER	69 72 40	typed ਖ਼ੀ	read ਖ਼ੀऽ [0A59 0A40 093D]	written back 69 72 U+093D
+    OTHER	69 72 A9	typed ਖ਼ੀ	read ਖ਼ੀ- [0A59 0A40 002D]	written back 69 72 2D
+    OTHER	69 74 40	typed ਖ਼ੁ	read ਖ਼ੁऽ [0A59 0A41 093D]	written back 69 74 U+093D
+    OTHER	69 74 A9	typed ਖ਼ੁ	read ਖ਼ੁ- [0A59 0A41 002D]	written back 69 74 2D
+    OTHER	69 76 40	typed ਖ਼ੂ	read ਖ਼ੂऽ [0A59 0A42 093D]	written back 69 76 U+093D
+    OTHER	69 76 A9	typed ਖ਼ੂ	read ਖ਼ੂ- [0A59 0A42 002D]	written back 69 76 2D
+    OTHER	69 79 40	typed ਖ਼ੇ	read ਖ਼ੇऽ [0A59 0A47 093D]	written back 69 79 U+093D
+    OTHER	69 79 A9	typed ਖ਼ੇ	read ਖ਼ੇ- [0A59 0A47 002D]	written back 69 79 2D
+    OTHER	69 B1 40	typed ਖ਼ੈ	read ਖ਼ੈऽ [0A59 0A48 093D]	written back 69 B1 U+093D
+    OTHER	69 B1 A9	typed ਖ਼ੈ	read ਖ਼ੈ- [0A59 0A48 002D]	written back 69 B1 2D
+    OTHER	69 7D 40	typed ਖ਼ੋ	read ਖ਼ੋऽ [0A59 0A4B 093D]	written back 69 7D U+093D
+    OTHER	69 7D A9	typed ਖ਼ੋ	read ਖ਼ੋ- [0A59 0A4B 002D]	written back 69 7D 2D
+    OTHER	69 A1 40	typed ਖ਼ੌ	read ਖ਼ੌऽ [0A59 0A4C 093D]	written back 69 A1 U+093D
+    OTHER	69 A1 A9	typed ਖ਼ੌ	read ਖ਼ੌ- [0A59 0A4C 002D]	written back 69 A1 2D
+    OTHER	69 40	typed ਖ਼	read ਖ਼ऽ [0A59 093D]	written back 69 U+093D
+    OTHER	69 A9	typed ਖ਼	read ਖ਼- [0A59 002D]	written back 69 2D
+    OTHER	6A 70 40	typed ਗ਼ਾ	read ਗ਼ਾऽ [0A5A 0A3E 093D]	written back 6A 70 U+093D
+    OTHER	6A 70 A9	typed ਗ਼ਾ	read ਗ਼ਾ- [0A5A 0A3E 002D]	written back 6A 70 2D
+    OTHER	71 6A 40	typed ਗ਼ਿ	read ਗ਼ਿऽ [0A5A 0A3F 093D]	written back 71 6A U+093D
+    OTHER	71 6A A9	typed ਗ਼ਿ	read ਗ਼ਿ- [0A5A 0A3F 002D]	written back 71 6A 2D
+    OTHER	6A 72 40	typed ਗ਼ੀ	read ਗ਼ੀऽ [0A5A 0A40 093D]	written back 6A 72 U+093D
+    OTHER	6A 72 A9	typed ਗ਼ੀ	read ਗ਼ੀ- [0A5A 0A40 002D]	written back 6A 72 2D
+    OTHER	6A 74 40	typed ਗ਼ੁ	read ਗ਼ੁऽ [0A5A 0A41 093D]	written back 6A 74 U+093D
+    OTHER	6A 74 A9	typed ਗ਼ੁ	read ਗ਼ੁ- [0A5A 0A41 002D]	written back 6A 74 2D
+    OTHER	6A 76 40	typed ਗ਼ੂ	read ਗ਼ੂऽ [0A5A 0A42 093D]	written back 6A 76 U+093D
+    OTHER	6A 76 A9	typed ਗ਼ੂ	read ਗ਼ੂ- [0A5A 0A42 002D]	written back 6A 76 2D
+    OTHER	6A 79 40	typed ਗ਼ੇ	read ਗ਼ੇऽ [0A5A 0A47 093D]	written back 6A 79 U+093D
+    OTHER	6A 79 A9	typed ਗ਼ੇ	read ਗ਼ੇ- [0A5A 0A47 002D]	written back 6A 79 2D
+    OTHER	6A B1 40	typed ਗ਼ੈ	read ਗ਼ੈऽ [0A5A 0A48 093D]	written back 6A B1 U+093D
+    OTHER	6A B1 A9	typed ਗ਼ੈ	read ਗ਼ੈ- [0A5A 0A48 002D]	written back 6A B1 2D
+    OTHER	6A 7D 40	typed ਗ਼ੋ	read ਗ਼ੋऽ [0A5A 0A4B 093D]	written back 6A 7D U+093D
+    OTHER	6A 7D A9	typed ਗ਼ੋ	read ਗ਼ੋ- [0A5A 0A4B 002D]	written back 6A 7D 2D
+    OTHER	6A A1 40	typed ਗ਼ੌ	read ਗ਼ੌऽ [0A5A 0A4C 093D]	written back 6A A1 U+093D
+    OTHER	6A A1 A9	typed ਗ਼ੌ	read ਗ਼ੌ- [0A5A 0A4C 002D]	written back 6A A1 2D
+    OTHER	6A 40	typed ਗ਼	read ਗ਼ऽ [0A5A 093D]	written back 6A U+093D
+    OTHER	6A A9	typed ਗ਼	read ਗ਼- [0A5A 002D]	written back 6A 2D
+    OTHER	6B 70 40	typed ਜ਼ਾ	read ਜ਼ਾऽ [0A5B 0A3E 093D]	written back 6B 70 U+093D
+    OTHER	6B 70 A9	typed ਜ਼ਾ	read ਜ਼ਾ- [0A5B 0A3E 002D]	written back 6B 70 2D
+    OTHER	71 6B 40	typed ਜ਼ਿ	read ਜ਼ਿऽ [0A5B 0A3F 093D]	written back 71 6B U+093D
+    OTHER	71 6B A9	typed ਜ਼ਿ	read ਜ਼ਿ- [0A5B 0A3F 002D]	written back 71 6B 2D
+    OTHER	6B 72 40	typed ਜ਼ੀ	read ਜ਼ੀऽ [0A5B 0A40 093D]	written back 6B 72 U+093D
+    OTHER	6B 72 A9	typed ਜ਼ੀ	read ਜ਼ੀ- [0A5B 0A40 002D]	written back 6B 72 2D
+    OTHER	6B 74 40	typed ਜ਼ੁ	read ਜ਼ੁऽ [0A5B 0A41 093D]	written back 6B 74 U+093D
+    OTHER	6B 74 A9	typed ਜ਼ੁ	read ਜ਼ੁ- [0A5B 0A41 002D]	written back 6B 74 2D
+    OTHER	6B 76 40	typed ਜ਼ੂ	read ਜ਼ੂऽ [0A5B 0A42 093D]	written back 6B 76 U+093D
+    OTHER	6B 76 A9	typed ਜ਼ੂ	read ਜ਼ੂ- [0A5B 0A42 002D]	written back 6B 76 2D
+    OTHER	6B 79 40	typed ਜ਼ੇ	read ਜ਼ੇऽ [0A5B 0A47 093D]	written back 6B 79 U+093D
+    OTHER	6B 79 A9	typed ਜ਼ੇ	read ਜ਼ੇ- [0A5B 0A47 002D]	written back 6B 79 2D
+    OTHER	6B B1 40	typed ਜ਼ੈ	read ਜ਼ੈऽ [0A5B 0A48 093D]	written back 6B B1 U+093D
+    OTHER	6B B1 A9	typed ਜ਼ੈ	read ਜ਼ੈ- [0A5B 0A48 002D]	written back 6B B1 2D
+    OTHER	6B 7D 40	typed ਜ਼ੋ	read ਜ਼ੋऽ [0A5B 0A4B 093D]	written back 6B 7D U+093D
+    OTHER	6B 7D A9	typed ਜ਼ੋ	read ਜ਼ੋ- [0A5B 0A4B 002D]	written back 6B 7D 2D
+    OTHER	6B A1 40	typed ਜ਼ੌ	read ਜ਼ੌऽ [0A5B 0A4C 093D]	written back 6B A1 U+093D
+    OTHER	6B A1 A9	typed ਜ਼ੌ	read ਜ਼ੌ- [0A5B 0A4C 002D]	written back 6B A1 2D
+    OTHER	6B 40	typed ਜ਼	read ਜ਼ऽ [0A5B 093D]	written back 6B U+093D
+    OTHER	6B A9	typed ਜ਼	read ਜ਼- [0A5B 002D]	written back 6B 2D
+    OTHER	6C 70 40	typed ਫ਼ਾ	read ਫ਼ਾऽ [0A5E 0A3E 093D]	written back 6C 70 U+093D
+    OTHER	6C 70 A9	typed ਫ਼ਾ	read ਫ਼ਾ- [0A5E 0A3E 002D]	written back 6C 70 2D
+    OTHER	71 6C 40	typed ਫ਼ਿ	read ਫ਼ਿऽ [0A5E 0A3F 093D]	written back 71 6C U+093D
+    OTHER	71 6C A9	typed ਫ਼ਿ	read ਫ਼ਿ- [0A5E 0A3F 002D]	written back 71 6C 2D
+    OTHER	6C 72 40	typed ਫ਼ੀ	read ਫ਼ੀऽ [0A5E 0A40 093D]	written back 6C 72 U+093D
+    OTHER	6C 72 A9	typed ਫ਼ੀ	read ਫ਼ੀ- [0A5E 0A40 002D]	written back 6C 72 2D
+    OTHER	6C 74 40	typed ਫ਼ੁ	read ਫ਼ੁऽ [0A5E 0A41 093D]	written back 6C 74 U+093D
+    OTHER	6C 74 A9	typed ਫ਼ੁ	read ਫ਼ੁ- [0A5E 0A41 002D]	written back 6C 74 2D
+    OTHER	6C 76 40	typed ਫ਼ੂ	read ਫ਼ੂऽ [0A5E 0A42 093D]	written back 6C 76 U+093D
+    OTHER	6C 76 A9	typed ਫ਼ੂ	read ਫ਼ੂ- [0A5E 0A42 002D]	written back 6C 76 2D
+    OTHER	6C 79 40	typed ਫ਼ੇ	read ਫ਼ੇऽ [0A5E 0A47 093D]	written back 6C 79 U+093D
+    OTHER	6C 79 A9	typed ਫ਼ੇ	read ਫ਼ੇ- [0A5E 0A47 002D]	written back 6C 79 2D
+    OTHER	6C B1 40	typed ਫ਼ੈ	read ਫ਼ੈऽ [0A5E 0A48 093D]	written back 6C B1 U+093D
+    OTHER	6C B1 A9	typed ਫ਼ੈ	read ਫ਼ੈ- [0A5E 0A48 002D]	written back 6C B1 2D
+    OTHER	6C 7D 40	typed ਫ਼ੋ	read ਫ਼ੋऽ [0A5E 0A4B 093D]	written back 6C 7D U+093D
+    OTHER	6C 7D A9	typed ਫ਼ੋ	read ਫ਼ੋ- [0A5E 0A4B 002D]	written back 6C 7D 2D
+    OTHER	6C A1 40	typed ਫ਼ੌ	read ਫ਼ੌऽ [0A5E 0A4C 093D]	written back 6C A1 U+093D
+    OTHER	6C A1 A9	typed ਫ਼ੌ	read ਫ਼ੌ- [0A5E 0A4C 002D]	written back 6C A1 2D
+    OTHER	6C 40	typed ਫ਼	read ਫ਼ऽ [0A5E 093D]	written back 6C U+093D
+    OTHER	6C A9	typed ਫ਼	read ਫ਼- [0A5E 002D]	written back 6C 2D
+    OTHER	B4 70 40	typed ਲ਼ਾ	read ਲ਼ਾऽ [0A33 0A3E 093D]	written back B4 70 U+093D
+    OTHER	B4 70 A9	typed ਲ਼ਾ	read ਲ਼ਾ- [0A33 0A3E 002D]	written back B4 70 2D
+    OTHER	71 B4 40	typed ਲ਼ਿ	read ਲ਼ਿऽ [0A33 0A3F 093D]	written back 71 B4 U+093D
+    OTHER	71 B4 A9	typed ਲ਼ਿ	read ਲ਼ਿ- [0A33 0A3F 002D]	written back 71 B4 2D
+    OTHER	B4 72 40	typed ਲ਼ੀ	read ਲ਼ੀऽ [0A33 0A40 093D]	written back B4 72 U+093D
+    OTHER	B4 72 A9	typed ਲ਼ੀ	read ਲ਼ੀ- [0A33 0A40 002D]	written back B4 72 2D
+    OTHER	B4 74 40	typed ਲ਼ੁ	read ਲ਼ੁऽ [0A33 0A41 093D]	written back B4 74 U+093D
+    OTHER	B4 74 A9	typed ਲ਼ੁ	read ਲ਼ੁ- [0A33 0A41 002D]	written back B4 74 2D
+    OTHER	B4 76 40	typed ਲ਼ੂ	read ਲ਼ੂऽ [0A33 0A42 093D]	written back B4 76 U+093D
+    OTHER	B4 76 A9	typed ਲ਼ੂ	read ਲ਼ੂ- [0A33 0A42 002D]	written back B4 76 2D
+    OTHER	B4 79 40	typed ਲ਼ੇ	read ਲ਼ੇऽ [0A33 0A47 093D]	written back B4 79 U+093D
+    OTHER	B4 79 A9	typed ਲ਼ੇ	read ਲ਼ੇ- [0A33 0A47 002D]	written back B4 79 2D
+    OTHER	B4 B1 40	typed ਲ਼ੈ	read ਲ਼ੈऽ [0A33 0A48 093D]	written back B4 B1 U+093D
+    OTHER	B4 B1 A9	typed ਲ਼ੈ	read ਲ਼ੈ- [0A33 0A48 002D]	written back B4 B1 2D
+    OTHER	B4 7D 40	typed ਲ਼ੋ	read ਲ਼ੋऽ [0A33 0A4B 093D]	written back B4 7D U+093D
+    OTHER	B4 7D A9	typed ਲ਼ੋ	read ਲ਼ੋ- [0A33 0A4B 002D]	written back B4 7D 2D
+    OTHER	B4 A1 40	typed ਲ਼ੌ	read ਲ਼ੌऽ [0A33 0A4C 093D]	written back B4 A1 U+093D
+    OTHER	B4 A1 A9	typed ਲ਼ੌ	read ਲ਼ੌ- [0A33 0A4C 002D]	written back B4 A1 2D
+    OTHER	B4 40	typed ਲ਼	read ਲ਼ऽ [0A33 093D]	written back B4 U+093D
+    OTHER	B4 A9	typed ਲ਼	read ਲ਼- [0A33 002D]	written back B4 2D
+    OTHER	48 71	typed ਕ੍ਰਿ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	48 71	typed ਕ੍ਹਿ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	48 71	typed ਕ੍ਵਿ	read ਕਿ [0A15 0A3F]	written back 71 48
+    OTHER	49 71	typed ਖ੍ਰਿ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	49 71	typed ਖ੍ਹਿ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	49 71	typed ਖ੍ਵਿ	read ਖਿ [0A16 0A3F]	written back 71 49
+    OTHER	4A 71	typed ਗ੍ਰਿ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4A 71	typed ਗ੍ਹਿ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4A 71	typed ਗ੍ਵਿ	read ਗਿ [0A17 0A3F]	written back 71 4A
+    OTHER	4B 71	typed ਘ੍ਰਿ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4B 71	typed ਘ੍ਹਿ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4B 71	typed ਘ੍ਵਿ	read ਘਿ [0A18 0A3F]	written back 71 4B
+    OTHER	4C 71	typed ਙ੍ਰਿ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4C 71	typed ਙ੍ਹਿ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4C 71	typed ਙ੍ਵਿ	read ਙਿ [0A19 0A3F]	written back 71 4C
+    OTHER	4D 71	typed ਚ੍ਰਿ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4D 71	typed ਚ੍ਹਿ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4D 71	typed ਚ੍ਵਿ	read ਚਿ [0A1A 0A3F]	written back 71 4D
+    OTHER	4E 71	typed ਛ੍ਰਿ	read ਛਿ [0A1B 0A3F]	written back 71 4E
+    OTHER	4E 71	typed ਛ੍ਹਿ	read ਛਿ [0A1B 0A3F]	written back 71 4E
+    OTHER	4E 71	typed ਛ੍ਵਿ	read ਛਿ [0A1B 0A3F]	written back 71 4E
+    OTHER	4F 71	typed ਜ੍ਰਿ	read ਜਿ [0A1C 0A3F]	written back 71 4F
+    OTHER	4F 71	typed ਜ੍ਹਿ	read ਜਿ [0A1C 0A3F]	written back 71 4F
+    OTHER	4F 71	typed ਜ੍ਵਿ	read ਜਿ [0A1C 0A3F]	written back 71 4F
+    OTHER	50 71	typed ਝ੍ਰਿ	read ਝਿ [0A1D 0A3F]	written back 71 50
+    OTHER	50 71	typed ਝ੍ਹਿ	read ਝਿ [0A1D 0A3F]	written back 71 50
+    OTHER	50 71	typed ਝ੍ਵਿ	read ਝਿ [0A1D 0A3F]	written back 71 50
+    OTHER	51 71	typed ਞ੍ਰਿ	read ਞਿ [0A1E 0A3F]	written back 71 51
+    OTHER	51 71	typed ਞ੍ਹਿ	read ਞਿ [0A1E 0A3F]	written back 71 51
+    OTHER	51 71	typed ਞ੍ਵਿ	read ਞਿ [0A1E 0A3F]	written back 71 51
+    OTHER	52 71	typed ਟ੍ਰਿ	read ਟਿ [0A1F 0A3F]	written back 71 52
+    OTHER	52 71	typed ਟ੍ਹਿ	read ਟਿ [0A1F 0A3F]	written back 71 52
+    OTHER	52 71	typed ਟ੍ਵਿ	read ਟਿ [0A1F 0A3F]	written back 71 52
+    OTHER	53 BE A3 BE 6F	typed ਠ੍ਰਾਂ	read ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	written back 53 A3 BE 6F
+    OTHER	53 BE A7 BE 6F	typed ਠ੍ਰਾੱ	read ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	written back 53 A7 BE 6F
+    OTHER	53 BE A3 BE 6F	typed ਠ੍ਰੁਂ	read ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	written back 53 A3 BE 6F
+    OTHER	53 BE A5 BE 6F	typed ਠ੍ਰੁੰ	read ਠ੍ਰੰ [0A20 0A4D 0A30 0A70]	written back 53 A5 BE 6F
+    OTHER	53 BE A7 BE 6F	typed ਠ੍ਰੁੱ	read ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	written back 53 A7 BE 6F
+    OTHER	53 BE A3 BE 6F	typed ਠ੍ਰੂਂ	read ਠ੍ਰਂ [0A20 0A4D 0A30 0A02]	written back 53 A3 BE 6F
+    OTHER	53 BE A5 BE 6F	typed ਠ੍ਰੂੰ	read ਠ੍ਰੰ [0A20 0A4D 0A30 0A70]	written back 53 A5 BE 6F
+    OTHER	53 BE A7 BE 6F	typed ਠ੍ਰੂੱ	read ਠ੍ਰੱ [0A20 0A4D 0A30 0A71]	written back 53 A7 BE 6F
+    OTHER	53 BE 71	typed ਠ੍ਰਿ	read ਠਿ [0A20 0A3F]	written back 71 53 BE
+    OTHER	53 BE A3 BE AA	typed ਠ੍ਹਾਂ	read ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	written back 53 A3 BE AA
+    OTHER	53 BE A7 BE AA	typed ਠ੍ਹਾੱ	read ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	written back 53 A7 BE AA
+    OTHER	53 BE A3 BE AA	typed ਠ੍ਹੁਂ	read ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	written back 53 A3 BE AA
+    OTHER	53 BE A5 BE AA	typed ਠ੍ਹੁੰ	read ਠ੍ਹੰ [0A20 0A4D 0A39 0A70]	written back 53 A5 BE AA
+    OTHER	53 BE A7 BE AA	typed ਠ੍ਹੁੱ	read ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	written back 53 A7 BE AA
+    OTHER	53 BE A3 BE AA	typed ਠ੍ਹੂਂ	read ਠ੍ਹਂ [0A20 0A4D 0A39 0A02]	written back 53 A3 BE AA
+    OTHER	53 BE A5 BE AA	typed ਠ੍ਹੂੰ	read ਠ੍ਹੰ [0A20 0A4D 0A39 0A70]	written back 53 A5 BE AA
+    OTHER	53 BE A7 BE AA	typed ਠ੍ਹੂੱ	read ਠ੍ਹੱ [0A20 0A4D 0A39 0A71]	written back 53 A7 BE AA
+    OTHER	53 BE 71	typed ਠ੍ਹਿ	read ਠਿ [0A20 0A3F]	written back 71 53 BE
+    OTHER	53 BE A3 BE AB	typed ਠ੍ਵਾਂ	read ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	written back 53 A3 BE AB
+    OTHER	53 BE A7 BE AB	typed ਠ੍ਵਾੱ	read ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	written back 53 A7 BE AB
+    OTHER	53 BE A3 BE AB	typed ਠ੍ਵੁਂ	read ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	written back 53 A3 BE AB
+    OTHER	53 BE A5 BE AB	typed ਠ੍ਵੁੰ	read ਠ੍ਵੰ [0A20 0A4D 0A35 0A70]	written back 53 A5 BE AB
+    OTHER	53 BE A7 BE AB	typed ਠ੍ਵੁੱ	read ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	written back 53 A7 BE AB
+    OTHER	53 BE A3 BE AB	typed ਠ੍ਵੂਂ	read ਠ੍ਵਂ [0A20 0A4D 0A35 0A02]	written back 53 A3 BE AB
+    OTHER	53 BE A5 BE AB	typed ਠ੍ਵੂੰ	read ਠ੍ਵੰ [0A20 0A4D 0A35 0A70]	written back 53 A5 BE AB
+    OTHER	53 BE A7 BE AB	typed ਠ੍ਵੂੱ	read ਠ੍ਵੱ [0A20 0A4D 0A35 0A71]	written back 53 A7 BE AB
+    OTHER	53 BE 71	typed ਠ੍ਵਿ	read ਠਿ [0A20 0A3F]	written back 71 53 BE
+    OTHER	54 71	typed ਡ੍ਰਿ	read ਡਿ [0A21 0A3F]	written back 71 54
+    OTHER	54 71	typed ਡ੍ਹਿ	read ਡਿ [0A21 0A3F]	written back 71 54
+    OTHER	54 71	typed ਡ੍ਵਿ	read ਡਿ [0A21 0A3F]	written back 71 54
+    OTHER	55 71	typed ਢ੍ਰਿ	read ਢਿ [0A22 0A3F]	written back 71 55
+    OTHER	55 71	typed ਢ੍ਹਿ	read ਢਿ [0A22 0A3F]	written back 71 55
+    OTHER	55 71	typed ਢ੍ਵਿ	read ਢਿ [0A22 0A3F]	written back 71 55
+    OTHER	56 71	typed ਣ੍ਰਿ	read ਣਿ [0A23 0A3F]	written back 71 56
+    OTHER	56 71	typed ਣ੍ਹਿ	read ਣਿ [0A23 0A3F]	written back 71 56
+    OTHER	56 71	typed ਣ੍ਵਿ	read ਣਿ [0A23 0A3F]	written back 71 56
+    OTHER	57 71	typed ਤ੍ਰਿ	read ਤਿ [0A24 0A3F]	written back 71 57
+    OTHER	57 71	typed ਤ੍ਹਿ	read ਤਿ [0A24 0A3F]	written back 71 57
+    OTHER	57 71	typed ਤ੍ਵਿ	read ਤਿ [0A24 0A3F]	written back 71 57
+    OTHER	58 71	typed ਥ੍ਰਿ	read ਥਿ [0A25 0A3F]	written back 71 58
+    OTHER	58 71	typed ਥ੍ਹਿ	read ਥਿ [0A25 0A3F]	written back 71 58
+    OTHER	58 71	typed ਥ੍ਵਿ	read ਥਿ [0A25 0A3F]	written back 71 58
+    OTHER	59 71	typed ਦ੍ਰਿ	read ਦਿ [0A26 0A3F]	written back 71 59
+    OTHER	59 71	typed ਦ੍ਹਿ	read ਦਿ [0A26 0A3F]	written back 71 59
+    OTHER	59 71	typed ਦ੍ਵਿ	read ਦਿ [0A26 0A3F]	written back 71 59
+    OTHER	5A 71	typed ਧ੍ਰਿ	read ਧਿ [0A27 0A3F]	written back 71 5A
+    OTHER	5A 71	typed ਧ੍ਹਿ	read ਧਿ [0A27 0A3F]	written back 71 5A
+    OTHER	5A 71	typed ਧ੍ਵਿ	read ਧਿ [0A27 0A3F]	written back 71 5A
+    OTHER	B2 BE A3 BE 6F	typed ਨ੍ਰਾਂ	read ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	written back B2 A3 BE 6F
+    OTHER	B2 BE A7 BE 6F	typed ਨ੍ਰਾੱ	read ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	written back B2 A7 BE 6F
+    OTHER	B2 BE A3 BE 6F	typed ਨ੍ਰੁਂ	read ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	written back B2 A3 BE 6F
+    OTHER	B2 BE A5 BE 6F	typed ਨ੍ਰੁੰ	read ਨ੍ਰੰ [0A28 0A4D 0A30 0A70]	written back B2 A5 BE 6F
+    OTHER	B2 BE A7 BE 6F	typed ਨ੍ਰੁੱ	read ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	written back B2 A7 BE 6F
+    OTHER	B2 BE A3 BE 6F	typed ਨ੍ਰੂਂ	read ਨ੍ਰਂ [0A28 0A4D 0A30 0A02]	written back B2 A3 BE 6F
+    OTHER	B2 BE A5 BE 6F	typed ਨ੍ਰੂੰ	read ਨ੍ਰੰ [0A28 0A4D 0A30 0A70]	written back B2 A5 BE 6F
+    OTHER	B2 BE A7 BE 6F	typed ਨ੍ਰੂੱ	read ਨ੍ਰੱ [0A28 0A4D 0A30 0A71]	written back B2 A7 BE 6F
+    OTHER	B2 BE 71	typed ਨ੍ਰਿ	read ਨਿ [0A28 0A3F]	written back 71 B2 BE
+    OTHER	B2 BE A3 BE AA	typed ਨ੍ਹਾਂ	read ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	written back B2 A3 BE AA
+    OTHER	B2 BE A7 BE AA	typed ਨ੍ਹਾੱ	read ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	written back B2 A7 BE AA
+    OTHER	B2 BE A3 BE AA	typed ਨ੍ਹੁਂ	read ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	written back B2 A3 BE AA
+    OTHER	B2 BE A5 BE AA	typed ਨ੍ਹੁੰ	read ਨ੍ਹੰ [0A28 0A4D 0A39 0A70]	written back B2 A5 BE AA
+    OTHER	B2 BE A7 BE AA	typed ਨ੍ਹੁੱ	read ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	written back B2 A7 BE AA
+    OTHER	B2 BE A3 BE AA	typed ਨ੍ਹੂਂ	read ਨ੍ਹਂ [0A28 0A4D 0A39 0A02]	written back B2 A3 BE AA
+    OTHER	B2 BE A5 BE AA	typed ਨ੍ਹੂੰ	read ਨ੍ਹੰ [0A28 0A4D 0A39 0A70]	written back B2 A5 BE AA
+    OTHER	B2 BE A7 BE AA	typed ਨ੍ਹੂੱ	read ਨ੍ਹੱ [0A28 0A4D 0A39 0A71]	written back B2 A7 BE AA
+    OTHER	B2 BE 71	typed ਨ੍ਹਿ	read ਨਿ [0A28 0A3F]	written back 71 B2 BE
+    OTHER	B2 BE A3 BE AB	typed ਨ੍ਵਾਂ	read ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	written back B2 A3 BE AB
+    OTHER	B2 BE A7 BE AB	typed ਨ੍ਵਾੱ	read ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	written back B2 A7 BE AB
+    OTHER	B2 BE A3 BE AB	typed ਨ੍ਵੁਂ	read ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	written back B2 A3 BE AB
+    OTHER	B2 BE A5 BE AB	typed ਨ੍ਵੁੰ	read ਨ੍ਵੰ [0A28 0A4D 0A35 0A70]	written back B2 A5 BE AB
+    OTHER	B2 BE A7 BE AB	typed ਨ੍ਵੁੱ	read ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	written back B2 A7 BE AB
+    OTHER	B2 BE A3 BE AB	typed ਨ੍ਵੂਂ	read ਨ੍ਵਂ [0A28 0A4D 0A35 0A02]	written back B2 A3 BE AB
+    OTHER	B2 BE A5 BE AB	typed ਨ੍ਵੂੰ	read ਨ੍ਵੰ [0A28 0A4D 0A35 0A70]	written back B2 A5 BE AB
+    OTHER	B2 BE A7 BE AB	typed ਨ੍ਵੂੱ	read ਨ੍ਵੱ [0A28 0A4D 0A35 0A71]	written back B2 A7 BE AB
+    OTHER	B2 BE 71	typed ਨ੍ਵਿ	read ਨਿ [0A28 0A3F]	written back 71 B2 BE
+    OTHER	5C 71	typed ਪ੍ਰਿ	read ਪਿ [0A2A 0A3F]	written back 71 5C
+    OTHER	5C 71	typed ਪ੍ਹਿ	read ਪਿ [0A2A 0A3F]	written back 71 5C
+    OTHER	5C 71	typed ਪ੍ਵਿ	read ਪਿ [0A2A 0A3F]	written back 71 5C
+    OTHER	B3 71	typed ਫ੍ਰਿ	read ਫਿ [0A2B 0A3F]	written back 71 B3
+    OTHER	B3 71	typed ਫ੍ਹਿ	read ਫਿ [0A2B 0A3F]	written back 71 B3
+    OTHER	B3 71	typed ਫ੍ਵਿ	read ਫਿ [0A2B 0A3F]	written back 71 B3
+    OTHER	5E 71	typed ਬ੍ਰਿ	read ਬਿ [0A2C 0A3F]	written back 71 5E
+    OTHER	5E 71	typed ਬ੍ਹਿ	read ਬਿ [0A2C 0A3F]	written back 71 5E
+    OTHER	5E 71	typed ਬ੍ਵਿ	read ਬਿ [0A2C 0A3F]	written back 71 5E
+    OTHER	5F 71	typed ਭ੍ਰਿ	read ਭਿ [0A2D 0A3F]	written back 71 5F
+    OTHER	5F 71	typed ਭ੍ਹਿ	read ਭਿ [0A2D 0A3F]	written back 71 5F
+    OTHER	5F 71	typed ਭ੍ਵਿ	read ਭਿ [0A2D 0A3F]	written back 71 5F
+    OTHER	60 71	typed ਮ੍ਰਿ	read ਮਿ [0A2E 0A3F]	written back 71 60
+    OTHER	60 71	typed ਮ੍ਹਿ	read ਮਿ [0A2E 0A3F]	written back 71 60
+    OTHER	60 71	typed ਮ੍ਵਿ	read ਮਿ [0A2E 0A3F]	written back 71 60
+    OTHER	61 71	typed ਯ੍ਰਿ	read ਯਿ [0A2F 0A3F]	written back 71 61
+    OTHER	61 71	typed ਯ੍ਹਿ	read ਯਿ [0A2F 0A3F]	written back 71 61
+    OTHER	61 71	typed ਯ੍ਵਿ	read ਯਿ [0A2F 0A3F]	written back 71 61
+    OTHER	63 71	typed ਰ੍ਰਿ	read ਰਿ [0A30 0A3F]	written back 71 63
+    OTHER	63 71	typed ਰ੍ਹਿ	read ਰਿ [0A30 0A3F]	written back 71 63
+    OTHER	63 71	typed ਰ੍ਵਿ	read ਰਿ [0A30 0A3F]	written back 71 63
+    OTHER	64 71	typed ਲ੍ਰਿ	read ਲਿ [0A32 0A3F]	written back 71 64
+    OTHER	64 71	typed ਲ੍ਹਿ	read ਲਿ [0A32 0A3F]	written back 71 64
+    OTHER	64 71	typed ਲ੍ਵਿ	read ਲਿ [0A32 0A3F]	written back 71 64
+    OTHER	65 71	typed ਵ੍ਰਿ	read ਵਿ [0A35 0A3F]	written back 71 65
+    OTHER	65 71	typed ਵ੍ਹਿ	read ਵਿ [0A35 0A3F]	written back 71 65
+    OTHER	65 71	typed ਵ੍ਵਿ	read ਵਿ [0A35 0A3F]	written back 71 65
+    OTHER	6D 71	typed ੜ੍ਰਿ	read ੜਿ [0A5C 0A3F]	written back 71 6D
+    OTHER	6D 71	typed ੜ੍ਹਿ	read ੜਿ [0A5C 0A3F]	written back 71 6D
+    OTHER	6D 71	typed ੜ੍ਵਿ	read ੜਿ [0A5C 0A3F]	written back 71 6D
+    OTHER	67 71	typed ਸ੍ਰਿ	read ਸਿ [0A38 0A3F]	written back 71 67
+    OTHER	67 71	typed ਸ੍ਹਿ	read ਸਿ [0A38 0A3F]	written back 71 67
+    OTHER	67 71	typed ਸ੍ਵਿ	read ਸਿ [0A38 0A3F]	written back 71 67
+    OTHER	68 71	typed ਹ੍ਰਿ	read ਹਿ [0A39 0A3F]	written back 71 68
+    OTHER	68 71	typed ਹ੍ਹਿ	read ਹਿ [0A39 0A3F]	written back 71 68
+    OTHER	68 71	typed ਹ੍ਵਿ	read ਹਿ [0A39 0A3F]	written back 71 68
+    OTHER	66 71	typed ਸ਼੍ਰਿ	read ਸ਼ਿ [0A36 0A3F]	written back 71 66
+    OTHER	66 71	typed ਸ਼੍ਹਿ	read ਸ਼ਿ [0A36 0A3F]	written back 71 66
+    OTHER	66 71	typed ਸ਼੍ਵਿ	read ਸ਼ਿ [0A36 0A3F]	written back 71 66
+    OTHER	69 71	typed ਖ਼੍ਰਿ	read ਖ਼ਿ [0A59 0A3F]	written back 71 69
+    OTHER	69 71	typed ਖ਼੍ਹਿ	read ਖ਼ਿ [0A59 0A3F]	written back 71 69
+    OTHER	69 71	typed ਖ਼੍ਵਿ	read ਖ਼ਿ [0A59 0A3F]	written back 71 69
+    OTHER	6A 71	typed ਗ਼੍ਰਿ	read ਗ਼ਿ [0A5A 0A3F]	written back 71 6A
+    OTHER	6A 71	typed ਗ਼੍ਹਿ	read ਗ਼ਿ [0A5A 0A3F]	written back 71 6A
+    OTHER	6A 71	typed ਗ਼੍ਵਿ	read ਗ਼ਿ [0A5A 0A3F]	written back 71 6A
+    OTHER	6B 71	typed ਜ਼੍ਰਿ	read ਜ਼ਿ [0A5B 0A3F]	written back 71 6B
+    OTHER	6B 71	typed ਜ਼੍ਹਿ	read ਜ਼ਿ [0A5B 0A3F]	written back 71 6B
+    OTHER	6B 71	typed ਜ਼੍ਵਿ	read ਜ਼ਿ [0A5B 0A3F]	written back 71 6B
+    OTHER	6C 71	typed ਫ਼੍ਰਿ	read ਫ਼ਿ [0A5E 0A3F]	written back 71 6C
+    OTHER	6C 71	typed ਫ਼੍ਹਿ	read ਫ਼ਿ [0A5E 0A3F]	written back 71 6C
+    OTHER	6C 71	typed ਫ਼੍ਵਿ	read ਫ਼ਿ [0A5E 0A3F]	written back 71 6C
+    OTHER	B4 71	typed ਲ਼੍ਰਿ	read ਲ਼ਿ [0A33 0A3F]	written back 71 B4
+    OTHER	B4 71	typed ਲ਼੍ਹਿ	read ਲ਼ਿ [0A33 0A3F]	written back 71 B4
+    OTHER	B4 71	typed ਲ਼੍ਵਿ	read ਲ਼ਿ [0A33 0A3F]	written back 71 B4
+    OTHER	41 40	typed ਅ	read ਅऽ [0A05 093D]	written back 41 U+093D
+    OTHER	41 A9	typed ਅ	read ਅ- [0A05 002D]	written back 41 2D
+    OTHER	41 70 40	typed ਆ	read ਆऽ [0A06 093D]	written back 41 70 U+093D
+    OTHER	41 70 A9	typed ਆ	read ਆ- [0A06 002D]	written back 41 70 2D
+    OTHER	71 42 40	typed ਇ	read ਇऽ [0A07 093D]	written back 71 42 U+093D
+    OTHER	71 42 A9	typed ਇ	read ਇ- [0A07 002D]	written back 71 42 2D
+    OTHER	42 72 40	typed ਈ	read ਈऽ [0A08 093D]	written back 42 72 U+093D
+    OTHER	42 72 A9	typed ਈ	read ਈ- [0A08 002D]	written back 42 72 2D
+    OTHER	45 40	typed ਉ	read ਉऽ [0A09 093D]	written back 45 U+093D
+    OTHER	45 A9	typed ਉ	read ਉ- [0A09 002D]	written back 45 2D
+    OTHER	46 40	typed ਊ	read ਊऽ [0A0A 093D]	written back 46 U+093D
+    OTHER	46 A9	typed ਊ	read ਊ- [0A0A 002D]	written back 46 2D
+    OTHER	42 79 40	typed ਏ	read ਏऽ [0A0F 093D]	written back 42 79 U+093D
+    OTHER	42 79 A9	typed ਏ	read ਏ- [0A0F 002D]	written back 42 79 2D
+    OTHER	41 B1 40	typed ਐ	read ਐऽ [0A10 093D]	written back 41 B1 U+093D
+    OTHER	41 B1 A9	typed ਐ	read ਐ- [0A10 002D]	written back 41 B1 2D
+    OTHER	47 40	typed ਓ	read ਓऽ [0A13 093D]	written back 47 U+093D
+    OTHER	47 A9	typed ਓ	read ਓ- [0A13 002D]	written back 47 2D
+    OTHER	41 A1 40	typed ਔ	read ਔऽ [0A14 093D]	written back 41 A1 U+093D
+    OTHER	41 A1 A9	typed ਔ	read ਔ- [0A14 002D]	written back 41 A1 2D
+    OTHER	42 40	typed ੲ	read ੲऽ [0A72 093D]	written back 42 U+093D
+    OTHER	42 A9	typed ੲ	read ੲ- [0A72 002D]	written back 42 2D
+    OTHER	43 40	typed ੳ	read ੳऽ [0A73 093D]	written back 43 U+093D
+    OTHER	43 A9	typed ੳ	read ੳ- [0A73 002D]	written back 43 2D
+    OTHER	40	typed ਇ	read ऽ [093D]	written back U+093D
+    OTHER	A9	typed ਇ	read - [002D]	written back 2D
+    OTHER	B2 A3 BE 6F AE	typed ਨ੍ਰਂੁ	read ਨ੍ਰੁਂ [0A28 0A4D 0A30 0A41 0A02]	written back B2 A3 BE 6F 74
+    OTHER	B2 BE A3 BE 74	typed ਨੁ੍ਰਂ	read ਨੁਂ [0A28 0A41 0A02]	written back B2 A3 BE 74
+    OTHER	B2 A3 BE 6F AE	typed ਨਂ੍ਰੁ	read ਨ੍ਰੁਂ [0A28 0A4D 0A30 0A41 0A02]	written back B2 A3 BE 6F 74
+    OTHER	B2 A3 BE AE 6F	typed ਨਂੁ੍ਰ	read ਨੁਂ੍ਰ [0A28 0A41 0A02 0A4D 0A30]	written back B2 A3 BE 74 6F
+    OTHER	B2 A5 BE 6F AE	typed ਨ੍ਰੰੁ	read ਨ੍ਰੁੰ [0A28 0A4D 0A30 0A41 0A70]	written back B2 A5 BE 6F 74
+    OTHER	B2 BE A5 BE 74	typed ਨੁ੍ਰੰ	read ਨੁੰ [0A28 0A41 0A70]	written back B2 A5 BE 74
+    OTHER	B2 A5 BE 6F AE	typed ਨੰ੍ਰੁ	read ਨ੍ਰੁੰ [0A28 0A4D 0A30 0A41 0A70]	written back B2 A5 BE 6F 74
+    OTHER	B2 A5 BE AE 6F	typed ਨੰੁ੍ਰ	read ਨੁੰ੍ਰ [0A28 0A41 0A70 0A4D 0A30]	written back B2 A5 BE 74 6F
+    OTHER	B2 A7 BE 6F AE	typed ਨ੍ਰੱੁ	read ਨ੍ਰੁੱ [0A28 0A4D 0A30 0A41 0A71]	written back B2 A7 BE 6F 74
+    OTHER	B2 BE A7 BE 74	typed ਨੁ੍ਰੱ	read ਨੁੱ [0A28 0A41 0A71]	written back B2 A7 BE 74
+    OTHER	B2 A7 BE 6F AE	typed ਨੱ੍ਰੁ	read ਨ੍ਰੁੱ [0A28 0A4D 0A30 0A41 0A71]	written back B2 A7 BE 6F 74
+    OTHER	B2 A7 BE AE 6F	typed ਨੱੁ੍ਰ	read ਨੁੱ੍ਰ [0A28 0A41 0A71 0A4D 0A30]	written back B2 A7 BE 74 6F
+    OTHER	B2 A3 BE 6F AF	typed ਨ੍ਰਂੂ	read ਨ੍ਰੂਂ [0A28 0A4D 0A30 0A42 0A02]	written back B2 A3 BE 6F 76
+    OTHER	B2 BE A3 BE 76	typed ਨੂ੍ਰਂ	read ਨੂਂ [0A28 0A42 0A02]	written back B2 A3 BE 76
+    OTHER	B2 A3 BE 6F AF	typed ਨਂ੍ਰੂ	read ਨ੍ਰੂਂ [0A28 0A4D 0A30 0A42 0A02]	written back B2 A3 BE 6F 76
+    OTHER	B2 A3 BE AF 6F	typed ਨਂੂ੍ਰ	read ਨੂਂ੍ਰ [0A28 0A42 0A02 0A4D 0A30]	written back B2 A3 BE 76 6F
+    OTHER	B2 A5 BE 6F AF	typed ਨ੍ਰੰੂ	read ਨ੍ਰੂੰ [0A28 0A4D 0A30 0A42 0A70]	written back B2 A5 BE 6F 76
+    OTHER	B2 BE A5 BE 76	typed ਨੂ੍ਰੰ	read ਨੂੰ [0A28 0A42 0A70]	written back B2 A5 BE 76
+    OTHER	B2 A5 BE 6F AF	typed ਨੰ੍ਰੂ	read ਨ੍ਰੂੰ [0A28 0A4D 0A30 0A42 0A70]	written back B2 A5 BE 6F 76
+    OTHER	B2 A7 BE 6F AF	typed ਨ੍ਰੱੂ	read ਨ੍ਰੂੱ [0A28 0A4D 0A30 0A42 0A71]	written back B2 A7 BE 6F 76
+    OTHER	B2 BE A7 BE 76	typed ਨੂ੍ਰੱ	read ਨੂੱ [0A28 0A42 0A71]	written back B2 A7 BE 76
+    OTHER	B2 A7 BE 6F AF	typed ਨੱ੍ਰੂ	read ਨ੍ਰੂੱ [0A28 0A4D 0A30 0A42 0A71]	written back B2 A7 BE 6F 76
+    OTHER	B2 A7 BE AF 6F	typed ਨੱੂ੍ਰ	read ਨੂੱ੍ਰ [0A28 0A42 0A71 0A4D 0A30]	written back B2 A7 BE 76 6F
+    OTHER	B2 79 A5 BE 6F	typed ਨੇ੍ਰਂ	read ਨ੍ਰੇੰ [0A28 0A4D 0A30 0A47 0A70]	written back B2 7A BE 6F
+    OTHER	B2 79 A7 BE 6F	typed ਨੇ੍ਰੱ	read ਨ੍ਰੇੱ [0A28 0A4D 0A30 0A47 0A71]	written back B2 79 BE 6F A8
+    OTHER	B2 B1 A5 BE 6F	typed ਨੈ੍ਰਂ	read ਨ੍ਰੈੰ [0A28 0A4D 0A30 0A48 0A70]	written back B2 7C BE 6F
+    OTHER	B2 B1 A7 BE 6F	typed ਨੈ੍ਰੱ	read ਨ੍ਰੈੱ [0A28 0A4D 0A30 0A48 0A71]	written back B2 B1 BE 6F A8
+    OTHER	B2 7D A5 BE 6F	typed ਨੋ੍ਰਂ	read ਨ੍ਰੋੰ [0A28 0A4D 0A30 0A4B 0A70]	written back B2 7E BE 6F
+    OTHER	B2 7D A7 BE 6F	typed ਨੋ੍ਰੱ	read ਨ੍ਰੋੱ [0A28 0A4D 0A30 0A4B 0A71]	written back B2 7D BE 6F A8
+    OTHER	B2 A1 A5 BE 6F	typed ਨੌ੍ਰਂ	read ਨ੍ਰੌੰ [0A28 0A4D 0A30 0A4C 0A70]	written back B2 A2 BE 6F
+    OTHER	B2 A1 A7 BE 6F	typed ਨੌ੍ਰੱ	read ਨ੍ਰੌੱ [0A28 0A4D 0A30 0A4C 0A71]	written back B2 A1 BE 6F A8
+    OTHER	B2 A3 BE AA AE	typed ਨ੍ਹਂੁ	read ਨ੍ਹੁਂ [0A28 0A4D 0A39 0A41 0A02]	written back B2 A3 BE AA 74
+    OTHER	B2 BE A3 BE 74	typed ਨੁ੍ਹਂ	read ਨੁਂ [0A28 0A41 0A02]	written back B2 A3 BE 74
+    OTHER	B2 A3 BE AA AE	typed ਨਂ੍ਹੁ	read ਨ੍ਹੁਂ [0A28 0A4D 0A39 0A41 0A02]	written back B2 A3 BE AA 74
+    OTHER	B2 A3 BE AE AA	typed ਨਂੁ੍ਹ	read ਨੁਂ੍ਹ [0A28 0A41 0A02 0A4D 0A39]	written back B2 A3 BE 74 AA
+    OTHER	B2 A5 BE AA AE	typed ਨ੍ਹੰੁ	read ਨ੍ਹੁੰ [0A28 0A4D 0A39 0A41 0A70]	written back B2 A5 BE AA 74
+    OTHER	B2 BE A5 BE 74	typed ਨੁ੍ਹੰ	read ਨੁੰ [0A28 0A41 0A70]	written back B2 A5 BE 74
+    OTHER	B2 A5 BE AA AE	typed ਨੰ੍ਹੁ	read ਨ੍ਹੁੰ [0A28 0A4D 0A39 0A41 0A70]	written back B2 A5 BE AA 74
+    OTHER	B2 A5 BE AE AA	typed ਨੰੁ੍ਹ	read ਨੁੰ੍ਹ [0A28 0A41 0A70 0A4D 0A39]	written back B2 A5 BE 74 AA
+    OTHER	B2 A7 BE AA AE	typed ਨ੍ਹੱੁ	read ਨ੍ਹੁੱ [0A28 0A4D 0A39 0A41 0A71]	written back B2 A7 BE AA 74
+    OTHER	B2 BE A7 BE 74	typed ਨੁ੍ਹੱ	read ਨੁੱ [0A28 0A41 0A71]	written back B2 A7 BE 74
+    OTHER	B2 A7 BE AA AE	typed ਨੱ੍ਹੁ	read ਨ੍ਹੁੱ [0A28 0A4D 0A39 0A41 0A71]	written back B2 A7 BE AA 74
+    OTHER	B2 A7 BE AE AA	typed ਨੱੁ੍ਹ	read ਨੁੱ੍ਹ [0A28 0A41 0A71 0A4D 0A39]	written back B2 A7 BE 74 AA
+    OTHER	B2 A3 BE AA AF	typed ਨ੍ਹਂੂ	read ਨ੍ਹੂਂ [0A28 0A4D 0A39 0A42 0A02]	written back B2 A3 BE AA 76
+    OTHER	B2 BE A3 BE 76	typed ਨੂ੍ਹਂ	read ਨੂਂ [0A28 0A42 0A02]	written back B2 A3 BE 76
+    OTHER	B2 A3 BE AA AF	typed ਨਂ੍ਹੂ	read ਨ੍ਹੂਂ [0A28 0A4D 0A39 0A42 0A02]	written back B2 A3 BE AA 76
+    OTHER	B2 A3 BE AF AA	typed ਨਂੂ੍ਹ	read ਨੂਂ੍ਹ [0A28 0A42 0A02 0A4D 0A39]	written back B2 A3 BE 76 AA
+    OTHER	B2 A5 BE AA AF	typed ਨ੍ਹੰੂ	read ਨ੍ਹੂੰ [0A28 0A4D 0A39 0A42 0A70]	written back B2 A5 BE AA 76
+    OTHER	B2 BE A5 BE 76	typed ਨੂ੍ਹੰ	read ਨੂੰ [0A28 0A42 0A70]	written back B2 A5 BE 76
+    OTHER	B2 A5 BE AA AF	typed ਨੰ੍ਹੂ	read ਨ੍ਹੂੰ [0A28 0A4D 0A39 0A42 0A70]	written back B2 A5 BE AA 76
+    OTHER	B2 A7 BE AA AF	typed ਨ੍ਹੱੂ	read ਨ੍ਹੂੱ [0A28 0A4D 0A39 0A42 0A71]	written back B2 A7 BE AA 76
+    OTHER	B2 BE A7 BE 76	typed ਨੂ੍ਹੱ	read ਨੂੱ [0A28 0A42 0A71]	written back B2 A7 BE 76
+    OTHER	B2 A7 BE AA AF	typed ਨੱ੍ਹੂ	read ਨ੍ਹੂੱ [0A28 0A4D 0A39 0A42 0A71]	written back B2 A7 BE AA 76
+    OTHER	B2 A7 BE AF AA	typed ਨੱੂ੍ਹ	read ਨੂੱ੍ਹ [0A28 0A42 0A71 0A4D 0A39]	written back B2 A7 BE 76 AA
+    OTHER	B2 79 A5 BE AA	typed ਨੇ੍ਹਂ	read ਨ੍ਹੇੰ [0A28 0A4D 0A39 0A47 0A70]	written back B2 7A BE AA
+    OTHER	B2 79 A7 BE AA	typed ਨੇ੍ਹੱ	read ਨ੍ਹੇੱ [0A28 0A4D 0A39 0A47 0A71]	written back B2 79 BE AA A8
+    OTHER	B2 B1 A5 BE AA	typed ਨੈ੍ਹਂ	read ਨ੍ਹੈੰ [0A28 0A4D 0A39 0A48 0A70]	written back B2 7C BE AA
+    OTHER	B2 B1 A7 BE AA	typed ਨੈ੍ਹੱ	read ਨ੍ਹੈੱ [0A28 0A4D 0A39 0A48 0A71]	written back B2 B1 BE AA A8
+    OTHER	B2 7D A5 BE AA	typed ਨੋ੍ਹਂ	read ਨ੍ਹੋੰ [0A28 0A4D 0A39 0A4B 0A70]	written back B2 7E BE AA
+    OTHER	B2 7D A7 BE AA	typed ਨੋ੍ਹੱ	read ਨ੍ਹੋੱ [0A28 0A4D 0A39 0A4B 0A71]	written back B2 7D BE AA A8
+    OTHER	B2 A1 A5 BE AA	typed ਨੌ੍ਹਂ	read ਨ੍ਹੌੰ [0A28 0A4D 0A39 0A4C 0A70]	written back B2 A2 BE AA
+    OTHER	B2 A1 A7 BE AA	typed ਨੌ੍ਹੱ	read ਨ੍ਹੌੱ [0A28 0A4D 0A39 0A4C 0A71]	written back B2 A1 BE AA A8
+    OTHER	B2 A3 BE AB AE	typed ਨ੍ਵਂੁ	read ਨ੍ਵੁਂ [0A28 0A4D 0A35 0A41 0A02]	written back B2 A3 BE AB 74
+    OTHER	B2 BE A3 BE 74	typed ਨੁ੍ਵਂ	read ਨੁਂ [0A28 0A41 0A02]	written back B2 A3 BE 74
+    OTHER	B2 A3 BE AB AE	typed ਨਂ੍ਵੁ	read ਨ੍ਵੁਂ [0A28 0A4D 0A35 0A41 0A02]	written back B2 A3 BE AB 74
+    OTHER	B2 A3 BE AE AB	typed ਨਂੁ੍ਵ	read ਨੁਂ੍ਵ [0A28 0A41 0A02 0A4D 0A35]	written back B2 A3 BE 74 AB
+    OTHER	B2 A5 BE AB AE	typed ਨ੍ਵੰੁ	read ਨ੍ਵੁੰ [0A28 0A4D 0A35 0A41 0A70]	written back B2 A5 BE AB 74
+    OTHER	B2 BE A5 BE 74	typed ਨੁ੍ਵੰ	read ਨੁੰ [0A28 0A41 0A70]	written back B2 A5 BE 74
+    OTHER	B2 A5 BE AB AE	typed ਨੰ੍ਵੁ	read ਨ੍ਵੁੰ [0A28 0A4D 0A35 0A41 0A70]	written back B2 A5 BE AB 74
+    OTHER	B2 A5 BE AE AB	typed ਨੰੁ੍ਵ	read ਨੁੰ੍ਵ [0A28 0A41 0A70 0A4D 0A35]	written back B2 A5 BE 74 AB
+    OTHER	B2 A7 BE AB AE	typed ਨ੍ਵੱੁ	read ਨ੍ਵੁੱ [0A28 0A4D 0A35 0A41 0A71]	written back B2 A7 BE AB 74
+    OTHER	B2 BE A7 BE 74	typed ਨੁ੍ਵੱ	read ਨੁੱ [0A28 0A41 0A71]	written back B2 A7 BE 74
+    OTHER	B2 A7 BE AB AE	typed ਨੱ੍ਵੁ	read ਨ੍ਵੁੱ [0A28 0A4D 0A35 0A41 0A71]	written back B2 A7 BE AB 74
+    OTHER	B2 A7 BE AE AB	typed ਨੱੁ੍ਵ	read ਨੁੱ੍ਵ [0A28 0A41 0A71 0A4D 0A35]	written back B2 A7 BE 74 AB
+    OTHER	B2 A3 BE AB AF	typed ਨ੍ਵਂੂ	read ਨ੍ਵੂਂ [0A28 0A4D 0A35 0A42 0A02]	written back B2 A3 BE AB 76
+    OTHER	B2 BE A3 BE 76	typed ਨੂ੍ਵਂ	read ਨੂਂ [0A28 0A42 0A02]	written back B2 A3 BE 76
+    OTHER	B2 A3 BE AB AF	typed ਨਂ੍ਵੂ	read ਨ੍ਵੂਂ [0A28 0A4D 0A35 0A42 0A02]	written back B2 A3 BE AB 76
+    OTHER	B2 A3 BE AF AB	typed ਨਂੂ੍ਵ	read ਨੂਂ੍ਵ [0A28 0A42 0A02 0A4D 0A35]	written back B2 A3 BE 76 AB
+    OTHER	B2 A5 BE AB AF	typed ਨ੍ਵੰੂ	read ਨ੍ਵੂੰ [0A28 0A4D 0A35 0A42 0A70]	written back B2 A5 BE AB 76
+    OTHER	B2 BE A5 BE 76	typed ਨੂ੍ਵੰ	read ਨੂੰ [0A28 0A42 0A70]	written back B2 A5 BE 76
+    OTHER	B2 A5 BE AB AF	typed ਨੰ੍ਵੂ	read ਨ੍ਵੂੰ [0A28 0A4D 0A35 0A42 0A70]	written back B2 A5 BE AB 76
+    OTHER	B2 A7 BE AB AF	typed ਨ੍ਵੱੂ	read ਨ੍ਵੂੱ [0A28 0A4D 0A35 0A42 0A71]	written back B2 A7 BE AB 76
+    OTHER	B2 BE A7 BE 76	typed ਨੂ੍ਵੱ	read ਨੂੱ [0A28 0A42 0A71]	written back B2 A7 BE 76
+    OTHER	B2 A7 BE AB AF	typed ਨੱ੍ਵੂ	read ਨ੍ਵੂੱ [0A28 0A4D 0A35 0A42 0A71]	written back B2 A7 BE AB 76
+    OTHER	B2 A7 BE AF AB	typed ਨੱੂ੍ਵ	read ਨੂੱ੍ਵ [0A28 0A42 0A71 0A4D 0A35]	written back B2 A7 BE 76 AB
+    OTHER	B2 79 A5 BE AB	typed ਨੇ੍ਵਂ	read ਨ੍ਵੇੰ [0A28 0A4D 0A35 0A47 0A70]	written back B2 7A BE AB
+    OTHER	B2 79 A7 BE AB	typed ਨੇ੍ਵੱ	read ਨ੍ਵੇੱ [0A28 0A4D 0A35 0A47 0A71]	written back B2 79 BE AB A8
+    OTHER	B2 B1 A5 BE AB	typed ਨੈ੍ਵਂ	read ਨ੍ਵੈੰ [0A28 0A4D 0A35 0A48 0A70]	written back B2 7C BE AB
+    OTHER	B2 B1 A7 BE AB	typed ਨੈ੍ਵੱ	read ਨ੍ਵੈੱ [0A28 0A4D 0A35 0A48 0A71]	written back B2 B1 BE AB A8
+    OTHER	B2 7D A5 BE AB	typed ਨੋ੍ਵਂ	read ਨ੍ਵੋੰ [0A28 0A4D 0A35 0A4B 0A70]	written back B2 7E BE AB
+    OTHER	B2 7D A7 BE AB	typed ਨੋ੍ਵੱ	read ਨ੍ਵੋੱ [0A28 0A4D 0A35 0A4B 0A71]	written back B2 7D BE AB A8
+    OTHER	B2 A1 A5 BE AB	typed ਨੌ੍ਵਂ	read ਨ੍ਵੌੰ [0A28 0A4D 0A35 0A4C 0A70]	written back B2 A2 BE AB
+    OTHER	B2 A1 A7 BE AB	typed ਨੌ੍ਵੱ	read ਨ੍ਵੌੱ [0A28 0A4D 0A35 0A4C 0A71]	written back B2 A1 BE AB A8
+    OTHER	B2 A3 BE AE 62	typed ਨਂੁ੍ਯ	read ਨੁਂ੍ਯ [0A28 0A41 0A02 0A4D 0A2F]	written back B2 A3 BE 74 62
+    OTHER	B2 A5 BE AE 62	typed ਨੰੁ੍ਯ	read ਨੁੰ੍ਯ [0A28 0A41 0A70 0A4D 0A2F]	written back B2 A5 BE 74 62
+    OTHER	B2 A7 BE AE 62	typed ਨੱੁ੍ਯ	read ਨੁੱ੍ਯ [0A28 0A41 0A71 0A4D 0A2F]	written back B2 A7 BE 74 62
+    OTHER	B2 A3 BE AF 62	typed ਨਂੂ੍ਯ	read ਨੂਂ੍ਯ [0A28 0A42 0A02 0A4D 0A2F]	written back B2 A3 BE 76 62
+    OTHER	B2 A7 BE AF 62	typed ਨੱੂ੍ਯ	read ਨੂੱ੍ਯ [0A28 0A42 0A71 0A4D 0A2F]	written back B2 A7 BE 76 62
+    OTHER	53 A3 BE 6F AE	typed ਠ੍ਰਂੁ	read ਠ੍ਰੁਂ [0A20 0A4D 0A30 0A41 0A02]	written back 53 A3 BE 6F 74
+    OTHER	53 BE A3 BE 74	typed ਠੁ੍ਰਂ	read ਠੁਂ [0A20 0A41 0A02]	written back 53 A3 BE 74
+    OTHER	53 A3 BE 6F AE	typed ਠਂ੍ਰੁ	read ਠ੍ਰੁਂ [0A20 0A4D 0A30 0A41 0A02]	written back 53 A3 BE 6F 74
+    OTHER	53 A3 BE AE 6F	typed ਠਂੁ੍ਰ	read ਠੁਂ੍ਰ [0A20 0A41 0A02 0A4D 0A30]	written back 53 A3 BE 74 6F
+    OTHER	53 A5 BE 6F AE	typed ਠ੍ਰੰੁ	read ਠ੍ਰੁੰ [0A20 0A4D 0A30 0A41 0A70]	written back 53 A5 BE 6F 74
+    OTHER	53 BE A5 BE 74	typed ਠੁ੍ਰੰ	read ਠੁੰ [0A20 0A41 0A70]	written back 53 A5 BE 74
+    OTHER	53 A5 BE 6F AE	typed ਠੰ੍ਰੁ	read ਠ੍ਰੁੰ [0A20 0A4D 0A30 0A41 0A70]	written back 53 A5 BE 6F 74
+    OTHER	53 A5 BE AE 6F	typed ਠੰੁ੍ਰ	read ਠੁੰ੍ਰ [0A20 0A41 0A70 0A4D 0A30]	written back 53 A5 BE 74 6F
+    OTHER	53 A7 BE 6F AE	typed ਠ੍ਰੱੁ	read ਠ੍ਰੁੱ [0A20 0A4D 0A30 0A41 0A71]	written back 53 A7 BE 6F 74
+    OTHER	53 BE A7 BE 74	typed ਠੁ੍ਰੱ	read ਠੁੱ [0A20 0A41 0A71]	written back 53 A7 BE 74
+    OTHER	53 A7 BE 6F AE	typed ਠੱ੍ਰੁ	read ਠ੍ਰੁੱ [0A20 0A4D 0A30 0A41 0A71]	written back 53 A7 BE 6F 74
+    OTHER	53 A7 BE AE 6F	typed ਠੱੁ੍ਰ	read ਠੁੱ੍ਰ [0A20 0A41 0A71 0A4D 0A30]	written back 53 A7 BE 74 6F
+    OTHER	53 A3 BE 6F AF	typed ਠ੍ਰਂੂ	read ਠ੍ਰੂਂ [0A20 0A4D 0A30 0A42 0A02]	written back 53 A3 BE 6F 76
+    OTHER	53 BE A3 BE 76	typed ਠੂ੍ਰਂ	read ਠੂਂ [0A20 0A42 0A02]	written back 53 A3 BE 76
+    OTHER	53 A3 BE 6F AF	typed ਠਂ੍ਰੂ	read ਠ੍ਰੂਂ [0A20 0A4D 0A30 0A42 0A02]	written back 53 A3 BE 6F 76
+    OTHER	53 A3 BE AF 6F	typed ਠਂੂ੍ਰ	read ਠੂਂ੍ਰ [0A20 0A42 0A02 0A4D 0A30]	written back 53 A3 BE 76 6F
+    OTHER	53 A5 BE 6F AF	typed ਠ੍ਰੰੂ	read ਠ੍ਰੂੰ [0A20 0A4D 0A30 0A42 0A70]	written back 53 A5 BE 6F 76
+    OTHER	53 BE A5 BE 76	typed ਠੂ੍ਰੰ	read ਠੂੰ [0A20 0A42 0A70]	written back 53 A5 BE 76
+    OTHER	53 A5 BE 6F AF	typed ਠੰ੍ਰੂ	read ਠ੍ਰੂੰ [0A20 0A4D 0A30 0A42 0A70]	written back 53 A5 BE 6F 76
+    OTHER	53 A5 BE AF 6F	typed ਠੰੂ੍ਰ	read ਠੂੰ੍ਰ [0A20 0A42 0A70 0A4D 0A30]	written back 53 A5 BE 76 6F
+    OTHER	53 A7 BE 6F AF	typed ਠ੍ਰੱੂ	read ਠ੍ਰੂੱ [0A20 0A4D 0A30 0A42 0A71]	written back 53 A7 BE 6F 76
+    OTHER	53 BE A7 BE 76	typed ਠੂ੍ਰੱ	read ਠੂੱ [0A20 0A42 0A71]	written back 53 A7 BE 76
+    OTHER	53 A7 BE 6F AF	typed ਠੱ੍ਰੂ	read ਠ੍ਰੂੱ [0A20 0A4D 0A30 0A42 0A71]	written back 53 A7 BE 6F 76
+    OTHER	53 A7 BE AF 6F	typed ਠੱੂ੍ਰ	read ਠੂੱ੍ਰ [0A20 0A42 0A71 0A4D 0A30]	written back 53 A7 BE 76 6F
+    OTHER	53 79 A5 BE 6F	typed ਠੇ੍ਰਂ	read ਠ੍ਰੇੰ [0A20 0A4D 0A30 0A47 0A70]	written back 53 7A BE 6F
+    OTHER	53 79 A7 BE 6F	typed ਠੇ੍ਰੱ	read ਠ੍ਰੇੱ [0A20 0A4D 0A30 0A47 0A71]	written back 53 79 BE 6F A8
+    OTHER	53 B1 A5 BE 6F	typed ਠੈ੍ਰਂ	read ਠ੍ਰੈੰ [0A20 0A4D 0A30 0A48 0A70]	written back 53 7C BE 6F
+    OTHER	53 B1 A7 BE 6F	typed ਠੈ੍ਰੱ	read ਠ੍ਰੈੱ [0A20 0A4D 0A30 0A48 0A71]	written back 53 B1 BE 6F A8
+    OTHER	53 7D A5 BE 6F	typed ਠੋ੍ਰਂ	read ਠ੍ਰੋੰ [0A20 0A4D 0A30 0A4B 0A70]	written back 53 7E BE 6F
+    OTHER	53 7D A7 BE 6F	typed ਠੋ੍ਰੱ	read ਠ੍ਰੋੱ [0A20 0A4D 0A30 0A4B 0A71]	written back 53 7D BE 6F A8
+    OTHER	53 A1 A5 BE 6F	typed ਠੌ੍ਰਂ	read ਠ੍ਰੌੰ [0A20 0A4D 0A30 0A4C 0A70]	written back 53 A2 BE 6F
+    OTHER	53 A1 A7 BE 6F	typed ਠੌ੍ਰੱ	read ਠ੍ਰੌੱ [0A20 0A4D 0A30 0A4C 0A71]	written back 53 A1 BE 6F A8
+    OTHER	53 A3 BE AA AE	typed ਠ੍ਹਂੁ	read ਠ੍ਹੁਂ [0A20 0A4D 0A39 0A41 0A02]	written back 53 A3 BE AA 74
+    OTHER	53 BE A3 BE 74	typed ਠੁ੍ਹਂ	read ਠੁਂ [0A20 0A41 0A02]	written back 53 A3 BE 74
+    OTHER	53 A3 BE AA AE	typed ਠਂ੍ਹੁ	read ਠ੍ਹੁਂ [0A20 0A4D 0A39 0A41 0A02]	written back 53 A3 BE AA 74
+    OTHER	53 A3 BE AE AA	typed ਠਂੁ੍ਹ	read ਠੁਂ੍ਹ [0A20 0A41 0A02 0A4D 0A39]	written back 53 A3 BE 74 AA
+    OTHER	53 A5 BE AA AE	typed ਠ੍ਹੰੁ	read ਠ੍ਹੁੰ [0A20 0A4D 0A39 0A41 0A70]	written back 53 A5 BE AA 74
+    OTHER	53 BE A5 BE 74	typed ਠੁ੍ਹੰ	read ਠੁੰ [0A20 0A41 0A70]	written back 53 A5 BE 74
+    OTHER	53 A5 BE AA AE	typed ਠੰ੍ਹੁ	read ਠ੍ਹੁੰ [0A20 0A4D 0A39 0A41 0A70]	written back 53 A5 BE AA 74
+    OTHER	53 A5 BE AE AA	typed ਠੰੁ੍ਹ	read ਠੁੰ੍ਹ [0A20 0A41 0A70 0A4D 0A39]	written back 53 A5 BE 74 AA
+    OTHER	53 A7 BE AA AE	typed ਠ੍ਹੱੁ	read ਠ੍ਹੁੱ [0A20 0A4D 0A39 0A41 0A71]	written back 53 A7 BE AA 74
+    OTHER	53 BE A7 BE 74	typed ਠੁ੍ਹੱ	read ਠੁੱ [0A20 0A41 0A71]	written back 53 A7 BE 74
+    OTHER	53 A7 BE AA AE	typed ਠੱ੍ਹੁ	read ਠ੍ਹੁੱ [0A20 0A4D 0A39 0A41 0A71]	written back 53 A7 BE AA 74
+    OTHER	53 A7 BE AE AA	typed ਠੱੁ੍ਹ	read ਠੁੱ੍ਹ [0A20 0A41 0A71 0A4D 0A39]	written back 53 A7 BE 74 AA
+    OTHER	53 A3 BE AA AF	typed ਠ੍ਹਂੂ	read ਠ੍ਹੂਂ [0A20 0A4D 0A39 0A42 0A02]	written back 53 A3 BE AA 76
+    OTHER	53 BE A3 BE 76	typed ਠੂ੍ਹਂ	read ਠੂਂ [0A20 0A42 0A02]	written back 53 A3 BE 76
+    OTHER	53 A3 BE AA AF	typed ਠਂ੍ਹੂ	read ਠ੍ਹੂਂ [0A20 0A4D 0A39 0A42 0A02]	written back 53 A3 BE AA 76
+    OTHER	53 A3 BE AF AA	typed ਠਂੂ੍ਹ	read ਠੂਂ੍ਹ [0A20 0A42 0A02 0A4D 0A39]	written back 53 A3 BE 76 AA
+    OTHER	53 A5 BE AA AF	typed ਠ੍ਹੰੂ	read ਠ੍ਹੂੰ [0A20 0A4D 0A39 0A42 0A70]	written back 53 A5 BE AA 76
+    OTHER	53 BE A5 BE 76	typed ਠੂ੍ਹੰ	read ਠੂੰ [0A20 0A42 0A70]	written back 53 A5 BE 76
+    OTHER	53 A5 BE AA AF	typed ਠੰ੍ਹੂ	read ਠ੍ਹੂੰ [0A20 0A4D 0A39 0A42 0A70]	written back 53 A5 BE AA 76
+    OTHER	53 A5 BE AF AA	typed ਠੰੂ੍ਹ	read ਠੂੰ੍ਹ [0A20 0A42 0A70 0A4D 0A39]	written back 53 A5 BE 76 AA
+    OTHER	53 A7 BE AA AF	typed ਠ੍ਹੱੂ	read ਠ੍ਹੂੱ [0A20 0A4D 0A39 0A42 0A71]	written back 53 A7 BE AA 76
+    OTHER	53 BE A7 BE 76	typed ਠੂ੍ਹੱ	read ਠੂੱ [0A20 0A42 0A71]	written back 53 A7 BE 76
+    OTHER	53 A7 BE AA AF	typed ਠੱ੍ਹੂ	read ਠ੍ਹੂੱ [0A20 0A4D 0A39 0A42 0A71]	written back 53 A7 BE AA 76
+    OTHER	53 A7 BE AF AA	typed ਠੱੂ੍ਹ	read ਠੂੱ੍ਹ [0A20 0A42 0A71 0A4D 0A39]	written back 53 A7 BE 76 AA
+    OTHER	53 79 A5 BE AA	typed ਠੇ੍ਹਂ	read ਠ੍ਹੇੰ [0A20 0A4D 0A39 0A47 0A70]	written back 53 7A BE AA
+    OTHER	53 79 A7 BE AA	typed ਠੇ੍ਹੱ	read ਠ੍ਹੇੱ [0A20 0A4D 0A39 0A47 0A71]	written back 53 79 BE AA A8
+    OTHER	53 B1 A5 BE AA	typed ਠੈ੍ਹਂ	read ਠ੍ਹੈੰ [0A20 0A4D 0A39 0A48 0A70]	written back 53 7C BE AA
+    OTHER	53 B1 A7 BE AA	typed ਠੈ੍ਹੱ	read ਠ੍ਹੈੱ [0A20 0A4D 0A39 0A48 0A71]	written back 53 B1 BE AA A8
+    OTHER	53 7D A5 BE AA	typed ਠੋ੍ਹਂ	read ਠ੍ਹੋੰ [0A20 0A4D 0A39 0A4B 0A70]	written back 53 7E BE AA
+    OTHER	53 7D A7 BE AA	typed ਠੋ੍ਹੱ	read ਠ੍ਹੋੱ [0A20 0A4D 0A39 0A4B 0A71]	written back 53 7D BE AA A8
+    OTHER	53 A1 A5 BE AA	typed ਠੌ੍ਹਂ	read ਠ੍ਹੌੰ [0A20 0A4D 0A39 0A4C 0A70]	written back 53 A2 BE AA
+    OTHER	53 A1 A7 BE AA	typed ਠੌ੍ਹੱ	read ਠ੍ਹੌੱ [0A20 0A4D 0A39 0A4C 0A71]	written back 53 A1 BE AA A8
+    OTHER	53 A3 BE AB AE	typed ਠ੍ਵਂੁ	read ਠ੍ਵੁਂ [0A20 0A4D 0A35 0A41 0A02]	written back 53 A3 BE AB 74
+    OTHER	53 BE A3 BE 74	typed ਠੁ੍ਵਂ	read ਠੁਂ [0A20 0A41 0A02]	written back 53 A3 BE 74
+    OTHER	53 A3 BE AB AE	typed ਠਂ੍ਵੁ	read ਠ੍ਵੁਂ [0A20 0A4D 0A35 0A41 0A02]	written back 53 A3 BE AB 74
+    OTHER	53 A3 BE AE AB	typed ਠਂੁ੍ਵ	read ਠੁਂ੍ਵ [0A20 0A41 0A02 0A4D 0A35]	written back 53 A3 BE 74 AB
+    OTHER	53 A5 BE AB AE	typed ਠ੍ਵੰੁ	read ਠ੍ਵੁੰ [0A20 0A4D 0A35 0A41 0A70]	written back 53 A5 BE AB 74
+    OTHER	53 BE A5 BE 74	typed ਠੁ੍ਵੰ	read ਠੁੰ [0A20 0A41 0A70]	written back 53 A5 BE 74
+    OTHER	53 A5 BE AB AE	typed ਠੰ੍ਵੁ	read ਠ੍ਵੁੰ [0A20 0A4D 0A35 0A41 0A70]	written back 53 A5 BE AB 74
+    OTHER	53 A5 BE AE AB	typed ਠੰੁ੍ਵ	read ਠੁੰ੍ਵ [0A20 0A41 0A70 0A4D 0A35]	written back 53 A5 BE 74 AB
+    OTHER	53 A7 BE AB AE	typed ਠ੍ਵੱੁ	read ਠ੍ਵੁੱ [0A20 0A4D 0A35 0A41 0A71]	written back 53 A7 BE AB 74
+    OTHER	53 BE A7 BE 74	typed ਠੁ੍ਵੱ	read ਠੁੱ [0A20 0A41 0A71]	written back 53 A7 BE 74
+    OTHER	53 A7 BE AB AE	typed ਠੱ੍ਵੁ	read ਠ੍ਵੁੱ [0A20 0A4D 0A35 0A41 0A71]	written back 53 A7 BE AB 74
+    OTHER	53 A7 BE AE AB	typed ਠੱੁ੍ਵ	read ਠੁੱ੍ਵ [0A20 0A41 0A71 0A4D 0A35]	written back 53 A7 BE 74 AB
+    OTHER	53 A3 BE AB AF	typed ਠ੍ਵਂੂ	read ਠ੍ਵੂਂ [0A20 0A4D 0A35 0A42 0A02]	written back 53 A3 BE AB 76
+    OTHER	53 BE A3 BE 76	typed ਠੂ੍ਵਂ	read ਠੂਂ [0A20 0A42 0A02]	written back 53 A3 BE 76
+    OTHER	53 A3 BE AB AF	typed ਠਂ੍ਵੂ	read ਠ੍ਵੂਂ [0A20 0A4D 0A35 0A42 0A02]	written back 53 A3 BE AB 76
+    OTHER	53 A3 BE AF AB	typed ਠਂੂ੍ਵ	read ਠੂਂ੍ਵ [0A20 0A42 0A02 0A4D 0A35]	written back 53 A3 BE 76 AB
+    OTHER	53 A5 BE AB AF	typed ਠ੍ਵੰੂ	read ਠ੍ਵੂੰ [0A20 0A4D 0A35 0A42 0A70]	written back 53 A5 BE AB 76
+    OTHER	53 BE A5 BE 76	typed ਠੂ੍ਵੰ	read ਠੂੰ [0A20 0A42 0A70]	written back 53 A5 BE 76
+    OTHER	53 A5 BE AB AF	typed ਠੰ੍ਵੂ	read ਠ੍ਵੂੰ [0A20 0A4D 0A35 0A42 0A70]	written back 53 A5 BE AB 76
+    OTHER	53 A5 BE AF AB	typed ਠੰੂ੍ਵ	read ਠੂੰ੍ਵ [0A20 0A42 0A70 0A4D 0A35]	written back 53 A5 BE 76 AB
+    OTHER	53 A7 BE AB AF	typed ਠ੍ਵੱੂ	read ਠ੍ਵੂੱ [0A20 0A4D 0A35 0A42 0A71]	written back 53 A7 BE AB 76
+    OTHER	53 BE A7 BE 76	typed ਠੂ੍ਵੱ	read ਠੂੱ [0A20 0A42 0A71]	written back 53 A7 BE 76
+    OTHER	53 A7 BE AB AF	typed ਠੱ੍ਵੂ	read ਠ੍ਵੂੱ [0A20 0A4D 0A35 0A42 0A71]	written back 53 A7 BE AB 76
+    OTHER	53 A7 BE AF AB	typed ਠੱੂ੍ਵ	read ਠੂੱ੍ਵ [0A20 0A42 0A71 0A4D 0A35]	written back 53 A7 BE 76 AB
+    OTHER	53 79 A5 BE AB	typed ਠੇ੍ਵਂ	read ਠ੍ਵੇੰ [0A20 0A4D 0A35 0A47 0A70]	written back 53 7A BE AB
+    OTHER	53 79 A7 BE AB	typed ਠੇ੍ਵੱ	read ਠ੍ਵੇੱ [0A20 0A4D 0A35 0A47 0A71]	written back 53 79 BE AB A8
+    OTHER	53 B1 A5 BE AB	typed ਠੈ੍ਵਂ	read ਠ੍ਵੈੰ [0A20 0A4D 0A35 0A48 0A70]	written back 53 7C BE AB
+    OTHER	53 B1 A7 BE AB	typed ਠੈ੍ਵੱ	read ਠ੍ਵੈੱ [0A20 0A4D 0A35 0A48 0A71]	written back 53 B1 BE AB A8
+    OTHER	53 7D A5 BE AB	typed ਠੋ੍ਵਂ	read ਠ੍ਵੋੰ [0A20 0A4D 0A35 0A4B 0A70]	written back 53 7E BE AB
+    OTHER	53 7D A7 BE AB	typed ਠੋ੍ਵੱ	read ਠ੍ਵੋੱ [0A20 0A4D 0A35 0A4B 0A71]	written back 53 7D BE AB A8
+    OTHER	53 A1 A5 BE AB	typed ਠੌ੍ਵਂ	read ਠ੍ਵੌੰ [0A20 0A4D 0A35 0A4C 0A70]	written back 53 A2 BE AB
+    OTHER	53 A1 A7 BE AB	typed ਠੌ੍ਵੱ	read ਠ੍ਵੌੱ [0A20 0A4D 0A35 0A4C 0A71]	written back 53 A1 BE AB A8
+    OTHER	53 A3 BE AE 62	typed ਠਂੁ੍ਯ	read ਠੁਂ੍ਯ [0A20 0A41 0A02 0A4D 0A2F]	written back 53 A3 BE 74 62
+    OTHER	53 A5 BE AE 62	typed ਠੰੁ੍ਯ	read ਠੁੰ੍ਯ [0A20 0A41 0A70 0A4D 0A2F]	written back 53 A5 BE 74 62
+    OTHER	53 A7 BE AE 62	typed ਠੱੁ੍ਯ	read ਠੁੱ੍ਯ [0A20 0A41 0A71 0A4D 0A2F]	written back 53 A7 BE 74 62
+    OTHER	53 A3 BE AF 62	typed ਠਂੂ੍ਯ	read ਠੂਂ੍ਯ [0A20 0A42 0A02 0A4D 0A2F]	written back 53 A3 BE 76 62
+    OTHER	53 A5 BE AF 62	typed ਠੰੂ੍ਯ	read ਠੂੰ੍ਯ [0A20 0A42 0A70 0A4D 0A2F]	written back 53 A5 BE 76 62
+    OTHER	53 A7 BE AF 62	typed ਠੱੂ੍ਯ	read ਠੂੱ੍ਯ [0A20 0A42 0A71 0A4D 0A2F]	written back 53 A7 BE 76 62
+    OTHER	48 6E A8	typed ਕੀ੍ਰੱ	read ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	written back 48 6E A7
+    OTHER	48 6E A8	typed ਕੇ੍ਰੱ	read ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	written back 48 6E A7
+    OTHER	48 6E A8	typed ਕੈ੍ਰੱ	read ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	written back 48 6E A7
+    OTHER	48 6E A8	typed ਕੋ੍ਰੱ	read ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	written back 48 6E A7
+    OTHER	48 6E A8	typed ਕੌ੍ਰੱ	read ਕਕ੍ਰੱ [0A15 0A15 0A4D 0A30 0A71]	written back 48 6E A7
+  MALFORMED: 24
+    MALFORMED	53 79 BE 7A	typed ਠ੍ਰੇਂ	read ਠੇੇਂ [0A20 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	53 B1 BE 7C	typed ਠ੍ਰੈਂ	read ਠੈੈਂ [0A20 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	53 7D BE 7E	typed ਠ੍ਰੋਂ	read ਠੋੋਂ [0A20 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	53 A1 BE A2	typed ਠ੍ਰੌਂ	read ਠੌੌਂ [0A20 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'
+    MALFORMED	53 79 BE 7A	typed ਠ੍ਹੇਂ	read ਠੇੇਂ [0A20 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	53 B1 BE 7C	typed ਠ੍ਹੈਂ	read ਠੈੈਂ [0A20 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	53 7D BE 7E	typed ਠ੍ਹੋਂ	read ਠੋੋਂ [0A20 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	53 A1 BE A2	typed ਠ੍ਹੌਂ	read ਠੌੌਂ [0A20 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'
+    MALFORMED	53 79 BE 7A	typed ਠ੍ਵੇਂ	read ਠੇੇਂ [0A20 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	53 B1 BE 7C	typed ਠ੍ਵੈਂ	read ਠੈੈਂ [0A20 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	53 7D BE 7E	typed ਠ੍ਵੋਂ	read ਠੋੋਂ [0A20 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	53 A1 BE A2	typed ਠ੍ਵੌਂ	read ਠੌੌਂ [0A20 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'
+    MALFORMED	B2 79 BE 7A	typed ਨ੍ਰੇਂ	read ਨੇੇਂ [0A28 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	B2 B1 BE 7C	typed ਨ੍ਰੈਂ	read ਨੈੈਂ [0A28 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	B2 7D BE 7E	typed ਨ੍ਰੋਂ	read ਨੋੋਂ [0A28 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	B2 A1 BE A2	typed ਨ੍ਰੌਂ	read ਨੌੌਂ [0A28 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'
+    MALFORMED	B2 79 BE 7A	typed ਨ੍ਹੇਂ	read ਨੇੇਂ [0A28 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	B2 B1 BE 7C	typed ਨ੍ਹੈਂ	read ਨੈੈਂ [0A28 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	B2 7D BE 7E	typed ਨ੍ਹੋਂ	read ਨੋੋਂ [0A28 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	B2 A1 BE A2	typed ਨ੍ਹੌਂ	read ਨੌੌਂ [0A28 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'
+    MALFORMED	B2 79 BE 7A	typed ਨ੍ਵੇਂ	read ਨੇੇਂ [0A28 0A47 0A47 0A02]	vowel sign ੇ at 2 after 'ੇ'
+    MALFORMED	B2 B1 BE 7C	typed ਨ੍ਵੈਂ	read ਨੈੈਂ [0A28 0A48 0A48 0A02]	vowel sign ੈ at 2 after 'ੈ'
+    MALFORMED	B2 7D BE 7E	typed ਨ੍ਵੋਂ	read ਨੋੋਂ [0A28 0A4B 0A4B 0A02]	vowel sign ੋ at 2 after 'ੋ'
+    MALFORMED	B2 A1 BE A2	typed ਨ੍ਵੌਂ	read ਨੌੌਂ [0A28 0A4C 0A4C 0A02]	vowel sign ੌ at 2 after 'ੌ'

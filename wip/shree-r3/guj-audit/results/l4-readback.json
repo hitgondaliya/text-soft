@@ -1,0 +1,3205 @@
+{
+ "about": "L4 read-back: bytes Shree writes (truth spellings, per-key answers, code sweep, code runs, joined truth words) and bytes TextSoft writes (L3 characters between two letters) through shree-guj7-to-unicode / shree-guj456-to-unicode.",
+ "stats": {
+  "truth": {
+   "reads": 17335,
+   "same": 17061,
+   "wrong": 274
+  },
+  "truth-456": {
+   "reads": 17335,
+   "same": 17061,
+   "wrong": 274
+  },
+  "truth-alt": {
+   "reads": 751,
+   "same": 743,
+   "wrong": 8
+  },
+  "truth-456-alt": {
+   "reads": 751,
+   "same": 743,
+   "wrong": 8
+  },
+  "joined": {
+   "reads": 6000,
+   "same": 5782,
+   "wrong": 218
+  },
+  "key": {
+   "reads": 160,
+   "same": 158,
+   "wrong": 2
+  },
+  "code": {
+   "reads": 116,
+   "same": 97,
+   "wrong": 19
+  },
+  "run": {
+   "reads": 40,
+   "same": 32,
+   "wrong": 8
+  },
+  "named": {
+   "reads": 31,
+   "same": 31,
+   "wrong": 0
+  },
+  "ts-l3": {
+   "reads": 152,
+   "same": 43,
+   "wrong": 109
+  },
+  "ts-l3-456": {
+   "reads": 152,
+   "same": 43,
+   "wrong": 109
+  }
+ },
+ "named": [
+  {
+   "why": "in-word ZWNJ halant (composer: ક્‌ક)",
+   "hex": "4C B9 24 4C 24",
+   "reads": "ક્ક",
+   "readsHex": "0A95 0ACD 0A95",
+   "unmapped": []
+  },
+  {
+   "why": "“ as TextSoft writes it",
+   "hex": "22 22",
+   "reads": "‘‘",
+   "readsHex": "2018 2018",
+   "unmapped": []
+  },
+  {
+   "why": "” as TextSoft writes it",
+   "hex": "27 27",
+   "reads": "’’",
+   "readsHex": "2019 2019",
+   "unmapped": []
+  },
+  {
+   "why": "… as TextSoft writes it",
+   "hex": "2E 2E 2E",
+   "reads": "...",
+   "readsHex": "002E 002E 002E",
+   "unmapped": [
+    "."
+   ]
+  },
+  {
+   "why": "bullet",
+   "hex": "B7",
+   "reads": "•",
+   "readsHex": "2022",
+   "unmapped": []
+  },
+  {
+   "why": "॥ as the composer writes two dandas",
+   "hex": "97 26 26",
+   "reads": "।।",
+   "readsHex": "0964 0964",
+   "unmapped": []
+  },
+  {
+   "why": "।। as TextSoft writes it",
+   "hex": "97 26 97 26",
+   "reads": "।।",
+   "readsHex": "0964 0964",
+   "unmapped": []
+  },
+  {
+   "why": "₹ as the composer writes it",
+   "hex": "3C",
+   "reads": "<",
+   "readsHex": "003C",
+   "unmapped": [
+    "<"
+   ]
+  },
+  {
+   "why": "old ruu key",
+   "hex": "EA 24",
+   "reads": "રૂ",
+   "readsHex": "0AB0 0AC2",
+   "unmapped": []
+  },
+  {
+   "why": "new ruu key",
+   "hex": "7E 24",
+   "reads": "~",
+   "readsHex": "007E",
+   "unmapped": [
+    "~"
+   ]
+  },
+  {
+   "why": "ru key",
+   "hex": "7B 24",
+   "reads": "રુ",
+   "readsHex": "0AB0 0AC1",
+   "unmapped": []
+  },
+  {
+   "why": "code EE",
+   "hex": "90",
+   "reads": "",
+   "readsHex": "0090",
+   "unmapped": [
+    ""
+   ]
+  },
+  {
+   "why": "–",
+   "hex": "81",
+   "reads": "–",
+   "readsHex": "2013",
+   "unmapped": []
+  },
+  {
+   "why": "—",
+   "hex": "81 81",
+   "reads": "—",
+   "readsHex": "2014",
+   "unmapped": []
+  },
+  {
+   "why": "÷",
+   "hex": "8D",
+   "reads": "÷",
+   "readsHex": "00F7",
+   "unmapped": []
+  },
+  {
+   "why": "૰",
+   "hex": "8F",
+   "reads": "૰",
+   "readsHex": "0AF0",
+   "unmapped": []
+  },
+  {
+   "why": "ન્‌ન (composer)",
+   "hex": "5F B9 5F",
+   "reads": "ન્ન",
+   "readsHex": "0AA8 0ACD 0AA8",
+   "unmapped": []
+  },
+  {
+   "why": "ક્‌ત (composer)",
+   "hex": "4C B9 24 73",
+   "reads": "ક્ત",
+   "readsHex": "0A95 0ACD 0AA4",
+   "unmapped": []
+  },
+  {
+   "why": "ક઼ (composer)",
+   "hex": "9C 4C 24",
+   "reads": "ક઼",
+   "readsHex": "0A95 0ABC",
+   "unmapped": []
+  },
+  {
+   "why": "ફ઼",
+   "hex": "9C 61",
+   "reads": "ફ઼",
+   "readsHex": "0AAB 0ABC",
+   "unmapped": []
+  },
+  {
+   "why": "ઝ઼",
+   "hex": "9A",
+   "reads": "ઝ઼",
+   "readsHex": "0A9D 0ABC",
+   "unmapped": []
+  },
+  {
+   "why": "ર્‌ક / ર્‍ક (composer)",
+   "hex": "66 B9 4C 24",
+   "reads": "ર્ક",
+   "readsHex": "0AB0 0ACD 0A95",
+   "unmapped": []
+  },
+  {
+   "why": "halant alone",
+   "hex": "B9",
+   "reads": "્",
+   "readsHex": "0ACD",
+   "unmapped": []
+  },
+  {
+   "why": "reph alone",
+   "hex": "AE",
+   "reads": "ર્",
+   "readsHex": "0AB0 0ACD",
+   "unmapped": []
+  },
+  {
+   "why": "ya-sign alone",
+   "hex": "E9",
+   "reads": "્ય",
+   "readsHex": "0ACD 0AAF",
+   "unmapped": []
+  },
+  {
+   "why": "ra-sign alone",
+   "hex": "B0",
+   "reads": "્ર",
+   "readsHex": "0ACD 0AB0",
+   "unmapped": []
+  },
+  {
+   "why": "anusvara alone",
+   "hex": "84",
+   "reads": "ં",
+   "readsHex": "0A82",
+   "unmapped": []
+  },
+  {
+   "why": "i-sign alone",
+   "hex": "71",
+   "reads": "િ",
+   "readsHex": "0ABF",
+   "unmapped": []
+  },
+  {
+   "why": "spacer alone",
+   "hex": "24",
+   "reads": "",
+   "readsHex": "",
+   "unmapped": []
+  },
+  {
+   "why": "spacer > alone",
+   "hex": "3E",
+   "reads": "",
+   "readsHex": "",
+   "unmapped": []
+  },
+  {
+   "why": "& alone",
+   "hex": "26",
+   "reads": "।",
+   "readsHex": "0964",
+   "unmapped": []
+  }
+ ],
+ "groups": {
+  "truth-alt | virama lost or added": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "69 B0",
+     "want": "શ્ર્",
+     "wantHex": "0AB6 0ACD 0AB0 0ACD",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "73 B0",
+     "want": "ત્ર્",
+     "wantHex": "0AA4 0ACD 0AB0 0ACD",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth-alt | other": {
+   "count": 6,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "69 B0",
+     "want": "શ્રૢ",
+     "wantHex": "0AB6 0ACD 0AB0 0AE2",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "69 B0",
+     "want": "શ્રૣ",
+     "wantHex": "0AB6 0ACD 0AB0 0AE3",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "73 B0",
+     "want": "ત્રૢ",
+     "wantHex": "0AA4 0ACD 0AB0 0AE2",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "73 B0",
+     "want": "ત્રૣ",
+     "wantHex": "0AA4 0ACD 0AB0 0AE3",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "66 AE",
+     "want": "ર્રૢ",
+     "wantHex": "0AB0 0ACD 0AB0 0AE2",
+     "got": "ર્ર",
+     "gotHex": "0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "66 AE",
+     "want": "ર્રૣ",
+     "wantHex": "0AB0 0ACD 0AB0 0AE3",
+     "got": "ર્ર",
+     "gotHex": "0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth-456-alt | virama lost or added": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "69 B0",
+     "want": "શ્ર્",
+     "wantHex": "0AB6 0ACD 0AB0 0ACD",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "73 B0",
+     "want": "ત્ર્",
+     "wantHex": "0AA4 0ACD 0AB0 0ACD",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth-456-alt | other": {
+   "count": 6,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "69 B0",
+     "want": "શ્રૢ",
+     "wantHex": "0AB6 0ACD 0AB0 0AE2",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "69 B0",
+     "want": "શ્રૣ",
+     "wantHex": "0AB6 0ACD 0AB0 0AE3",
+     "got": "શ્ર",
+     "gotHex": "0AB6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "73 B0",
+     "want": "ત્રૢ",
+     "wantHex": "0AA4 0ACD 0AB0 0AE2",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "73 B0",
+     "want": "ત્રૣ",
+     "wantHex": "0AA4 0ACD 0AB0 0AE3",
+     "got": "ત્ર",
+     "gotHex": "0AA4 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "66 AE",
+     "want": "ર્રૢ",
+     "wantHex": "0AB0 0ACD 0AB0 0AE2",
+     "got": "ર્ર",
+     "gotHex": "0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "66 AE",
+     "want": "ર્રૣ",
+     "wantHex": "0AB0 0ACD 0AB0 0AE3",
+     "got": "ર્ર",
+     "gotHex": "0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth | virama lost or added": {
+   "count": 40,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "5F",
+     "want": "્ન",
+     "wantHex": "0ACD 0AA8",
+     "got": "ન",
+     "gotHex": "0AA8",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "BE 24",
+     "want": "ક્ર્",
+     "wantHex": "0A95 0ACD 0AB0 0ACD",
+     "got": "ક્ર",
+     "gotHex": "0A95 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "C0",
+     "want": "ખ્ર્",
+     "wantHex": "0A96 0ACD 0AB0 0ACD",
+     "got": "ખ્ર",
+     "gotHex": "0A96 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4E B0",
+     "want": "ગ્ર્",
+     "wantHex": "0A97 0ACD 0AB0 0ACD",
+     "got": "ગ્ર",
+     "gotHex": "0A97 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4F B0",
+     "want": "ઘ્ર્",
+     "wantHex": "0A98 0ACD 0AB0 0ACD",
+     "got": "ઘ્ર",
+     "gotHex": "0A98 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "50 B2 24",
+     "want": "ઙ્ર્",
+     "wantHex": "0A99 0ACD 0AB0 0ACD",
+     "got": "ઙ્ર",
+     "gotHex": "0A99 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "51 B0",
+     "want": "ચ્ર્",
+     "wantHex": "0A9A 0ACD 0AB0 0ACD",
+     "got": "ચ્ર",
+     "gotHex": "0A9A 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "52 B2 3E",
+     "want": "છ્ર્",
+     "wantHex": "0A9B 0ACD 0AB0 0ACD",
+     "got": "છ્ર",
+     "gotHex": "0A9B 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "C7 3E",
+     "want": "જ્ર્",
+     "wantHex": "0A9C 0ACD 0AB0 0ACD",
+     "got": "જ્ર",
+     "gotHex": "0A9C 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "C9",
+     "want": "ઝ્ર્",
+     "wantHex": "0A9D 0ACD 0AB0 0ACD",
+     "got": "ઝ્ર",
+     "gotHex": "0A9D 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "55 B0",
+     "want": "ઞ્ર્",
+     "wantHex": "0A9E 0ACD 0AB0 0ACD",
+     "got": "ઞ્ર",
+     "gotHex": "0A9E 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "56 B2 24",
+     "want": "ટ્ર્",
+     "wantHex": "0A9F 0ACD 0AB0 0ACD",
+     "got": "ટ્ર",
+     "gotHex": "0A9F 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "57 B2 24",
+     "want": "ઠ્ર્",
+     "wantHex": "0AA0 0ACD 0AB0 0ACD",
+     "got": "ઠ્ર",
+     "gotHex": "0AA0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "58 B2 24",
+     "want": "ડ્ર્",
+     "wantHex": "0AA1 0ACD 0AB0 0ACD",
+     "got": "ડ્ર",
+     "gotHex": "0AA1 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "59 B2 24",
+     "want": "ઢ્ર્",
+     "wantHex": "0AA2 0ACD 0AB0 0ACD",
+     "got": "ઢ્ર",
+     "gotHex": "0AA2 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5A B0",
+     "want": "ણ્ર્",
+     "wantHex": "0AA3 0ACD 0AB0 0ACD",
+     "got": "ણ્ર",
+     "gotHex": "0AA3 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5C B0",
+     "want": "થ્ર્",
+     "wantHex": "0AA5 0ACD 0AB0 0ACD",
+     "got": "થ્ર",
+     "gotHex": "0AA5 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "D6",
+     "want": "દ્ર્",
+     "wantHex": "0AA6 0ACD 0AB0 0ACD",
+     "got": "દ્ર",
+     "gotHex": "0AA6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5E B0",
+     "want": "ધ્ર્",
+     "wantHex": "0AA7 0ACD 0AB0 0ACD",
+     "got": "ધ્ર",
+     "gotHex": "0AA7 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5F B0",
+     "want": "ન્ર્",
+     "wantHex": "0AA8 0ACD 0AB0 0ACD",
+     "got": "ન્ર",
+     "gotHex": "0AA8 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E2",
+     "want": "પ્ર્",
+     "wantHex": "0AAA 0ACD 0AB0 0ACD",
+     "got": "પ્ર",
+     "gotHex": "0AAA 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E4",
+     "want": "ફ્ર્",
+     "wantHex": "0AAB 0ACD 0AB0 0ACD",
+     "got": "ફ્ર",
+     "gotHex": "0AAB 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "62 B0",
+     "want": "બ્ર્",
+     "wantHex": "0AAC 0ACD 0AB0 0ACD",
+     "got": "બ્ર",
+     "gotHex": "0AAC 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "63 B0",
+     "want": "ભ્ર્",
+     "wantHex": "0AAD 0ACD 0AB0 0ACD",
+     "got": "ભ્ર",
+     "gotHex": "0AAD 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "64 B0",
+     "want": "મ્ર્",
+     "wantHex": "0AAE 0ACD 0AB0 0ACD",
+     "got": "મ્ર",
+     "gotHex": "0AAE 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth | other": {
+   "count": 234,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "4C 24",
+     "want": "કૢ",
+     "wantHex": "0A95 0AE2",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24",
+     "want": "કૣ",
+     "wantHex": "0A95 0AE3",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4D",
+     "want": "ખૢ",
+     "wantHex": "0A96 0AE2",
+     "got": "ખ",
+     "gotHex": "0A96",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4D",
+     "want": "ખૣ",
+     "wantHex": "0A96 0AE3",
+     "got": "ખ",
+     "gotHex": "0A96",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4E",
+     "want": "ગૢ",
+     "wantHex": "0A97 0AE2",
+     "got": "ગ",
+     "gotHex": "0A97",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4E",
+     "want": "ગૣ",
+     "wantHex": "0A97 0AE3",
+     "got": "ગ",
+     "gotHex": "0A97",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4F",
+     "want": "ઘૢ",
+     "wantHex": "0A98 0AE2",
+     "got": "ઘ",
+     "gotHex": "0A98",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4F",
+     "want": "ઘૣ",
+     "wantHex": "0A98 0AE3",
+     "got": "ઘ",
+     "gotHex": "0A98",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "50 24",
+     "want": "ઙૢ",
+     "wantHex": "0A99 0AE2",
+     "got": "ઙ",
+     "gotHex": "0A99",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "50 24",
+     "want": "ઙૣ",
+     "wantHex": "0A99 0AE3",
+     "got": "ઙ",
+     "gotHex": "0A99",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "51",
+     "want": "ચૢ",
+     "wantHex": "0A9A 0AE2",
+     "got": "ચ",
+     "gotHex": "0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "51",
+     "want": "ચૣ",
+     "wantHex": "0A9A 0AE3",
+     "got": "ચ",
+     "gotHex": "0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "52 3E",
+     "want": "છૢ",
+     "wantHex": "0A9B 0AE2",
+     "got": "છ",
+     "gotHex": "0A9B",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "52 3E",
+     "want": "છૣ",
+     "wantHex": "0A9B 0AE3",
+     "got": "છ",
+     "gotHex": "0A9B",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "53 3E",
+     "want": "જૢ",
+     "wantHex": "0A9C 0AE2",
+     "got": "જ",
+     "gotHex": "0A9C",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "53 3E",
+     "want": "જૣ",
+     "wantHex": "0A9C 0AE3",
+     "got": "જ",
+     "gotHex": "0A9C",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "54",
+     "want": "ઝૢ",
+     "wantHex": "0A9D 0AE2",
+     "got": "ઝ",
+     "gotHex": "0A9D",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "54",
+     "want": "ઝૣ",
+     "wantHex": "0A9D 0AE3",
+     "got": "ઝ",
+     "gotHex": "0A9D",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "55",
+     "want": "ઞૢ",
+     "wantHex": "0A9E 0AE2",
+     "got": "ઞ",
+     "gotHex": "0A9E",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "55",
+     "want": "ઞૣ",
+     "wantHex": "0A9E 0AE3",
+     "got": "ઞ",
+     "gotHex": "0A9E",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "56 24",
+     "want": "ટૢ",
+     "wantHex": "0A9F 0AE2",
+     "got": "ટ",
+     "gotHex": "0A9F",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "56 24",
+     "want": "ટૣ",
+     "wantHex": "0A9F 0AE3",
+     "got": "ટ",
+     "gotHex": "0A9F",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "57 24",
+     "want": "ઠૢ",
+     "wantHex": "0AA0 0AE2",
+     "got": "ઠ",
+     "gotHex": "0AA0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "57 24",
+     "want": "ઠૣ",
+     "wantHex": "0AA0 0AE3",
+     "got": "ઠ",
+     "gotHex": "0AA0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "58 24",
+     "want": "ડૢ",
+     "wantHex": "0AA1 0AE2",
+     "got": "ડ",
+     "gotHex": "0AA1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth-456 | virama lost or added": {
+   "count": 40,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "5F",
+     "want": "્ન",
+     "wantHex": "0ACD 0AA8",
+     "got": "ન",
+     "gotHex": "0AA8",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "BE 24",
+     "want": "ક્ર્",
+     "wantHex": "0A95 0ACD 0AB0 0ACD",
+     "got": "ક્ર",
+     "gotHex": "0A95 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "C0",
+     "want": "ખ્ર્",
+     "wantHex": "0A96 0ACD 0AB0 0ACD",
+     "got": "ખ્ર",
+     "gotHex": "0A96 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4E B0",
+     "want": "ગ્ર્",
+     "wantHex": "0A97 0ACD 0AB0 0ACD",
+     "got": "ગ્ર",
+     "gotHex": "0A97 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4F B0",
+     "want": "ઘ્ર્",
+     "wantHex": "0A98 0ACD 0AB0 0ACD",
+     "got": "ઘ્ર",
+     "gotHex": "0A98 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "50 B2 24",
+     "want": "ઙ્ર્",
+     "wantHex": "0A99 0ACD 0AB0 0ACD",
+     "got": "ઙ્ર",
+     "gotHex": "0A99 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "51 B0",
+     "want": "ચ્ર્",
+     "wantHex": "0A9A 0ACD 0AB0 0ACD",
+     "got": "ચ્ર",
+     "gotHex": "0A9A 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "52 B2 3E",
+     "want": "છ્ર્",
+     "wantHex": "0A9B 0ACD 0AB0 0ACD",
+     "got": "છ્ર",
+     "gotHex": "0A9B 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "C7 3E",
+     "want": "જ્ર્",
+     "wantHex": "0A9C 0ACD 0AB0 0ACD",
+     "got": "જ્ર",
+     "gotHex": "0A9C 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "C9",
+     "want": "ઝ્ર્",
+     "wantHex": "0A9D 0ACD 0AB0 0ACD",
+     "got": "ઝ્ર",
+     "gotHex": "0A9D 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "55 B0",
+     "want": "ઞ્ર્",
+     "wantHex": "0A9E 0ACD 0AB0 0ACD",
+     "got": "ઞ્ર",
+     "gotHex": "0A9E 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "56 B2 24",
+     "want": "ટ્ર્",
+     "wantHex": "0A9F 0ACD 0AB0 0ACD",
+     "got": "ટ્ર",
+     "gotHex": "0A9F 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "57 B2 24",
+     "want": "ઠ્ર્",
+     "wantHex": "0AA0 0ACD 0AB0 0ACD",
+     "got": "ઠ્ર",
+     "gotHex": "0AA0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "58 B2 24",
+     "want": "ડ્ર્",
+     "wantHex": "0AA1 0ACD 0AB0 0ACD",
+     "got": "ડ્ર",
+     "gotHex": "0AA1 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "59 B2 24",
+     "want": "ઢ્ર્",
+     "wantHex": "0AA2 0ACD 0AB0 0ACD",
+     "got": "ઢ્ર",
+     "gotHex": "0AA2 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "5A B0",
+     "want": "ણ્ર્",
+     "wantHex": "0AA3 0ACD 0AB0 0ACD",
+     "got": "ણ્ર",
+     "gotHex": "0AA3 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "5C B0",
+     "want": "થ્ર્",
+     "wantHex": "0AA5 0ACD 0AB0 0ACD",
+     "got": "થ્ર",
+     "gotHex": "0AA5 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "D6",
+     "want": "દ્ર્",
+     "wantHex": "0AA6 0ACD 0AB0 0ACD",
+     "got": "દ્ર",
+     "gotHex": "0AA6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "5E B0",
+     "want": "ધ્ર્",
+     "wantHex": "0AA7 0ACD 0AB0 0ACD",
+     "got": "ધ્ર",
+     "gotHex": "0AA7 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "5F B0",
+     "want": "ન્ર્",
+     "wantHex": "0AA8 0ACD 0AB0 0ACD",
+     "got": "ન્ર",
+     "gotHex": "0AA8 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "E2",
+     "want": "પ્ર્",
+     "wantHex": "0AAA 0ACD 0AB0 0ACD",
+     "got": "પ્ર",
+     "gotHex": "0AAA 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "E4",
+     "want": "ફ્ર્",
+     "wantHex": "0AAB 0ACD 0AB0 0ACD",
+     "got": "ફ્ર",
+     "gotHex": "0AAB 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "62 B0",
+     "want": "બ્ર્",
+     "wantHex": "0AAC 0ACD 0AB0 0ACD",
+     "got": "બ્ર",
+     "gotHex": "0AAC 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "63 B0",
+     "want": "ભ્ર્",
+     "wantHex": "0AAD 0ACD 0AB0 0ACD",
+     "got": "ભ્ર",
+     "gotHex": "0AAD 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "64 B0",
+     "want": "મ્ર્",
+     "wantHex": "0AAE 0ACD 0AB0 0ACD",
+     "got": "મ્ર",
+     "gotHex": "0AAE 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "truth-456 | other": {
+   "count": 234,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "4C 24",
+     "want": "કૢ",
+     "wantHex": "0A95 0AE2",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24",
+     "want": "કૣ",
+     "wantHex": "0A95 0AE3",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4D",
+     "want": "ખૢ",
+     "wantHex": "0A96 0AE2",
+     "got": "ખ",
+     "gotHex": "0A96",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4D",
+     "want": "ખૣ",
+     "wantHex": "0A96 0AE3",
+     "got": "ખ",
+     "gotHex": "0A96",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4E",
+     "want": "ગૢ",
+     "wantHex": "0A97 0AE2",
+     "got": "ગ",
+     "gotHex": "0A97",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4E",
+     "want": "ગૣ",
+     "wantHex": "0A97 0AE3",
+     "got": "ગ",
+     "gotHex": "0A97",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4F",
+     "want": "ઘૢ",
+     "wantHex": "0A98 0AE2",
+     "got": "ઘ",
+     "gotHex": "0A98",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4F",
+     "want": "ઘૣ",
+     "wantHex": "0A98 0AE3",
+     "got": "ઘ",
+     "gotHex": "0A98",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "50 24",
+     "want": "ઙૢ",
+     "wantHex": "0A99 0AE2",
+     "got": "ઙ",
+     "gotHex": "0A99",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "50 24",
+     "want": "ઙૣ",
+     "wantHex": "0A99 0AE3",
+     "got": "ઙ",
+     "gotHex": "0A99",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "51",
+     "want": "ચૢ",
+     "wantHex": "0A9A 0AE2",
+     "got": "ચ",
+     "gotHex": "0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "51",
+     "want": "ચૣ",
+     "wantHex": "0A9A 0AE3",
+     "got": "ચ",
+     "gotHex": "0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "52 3E",
+     "want": "છૢ",
+     "wantHex": "0A9B 0AE2",
+     "got": "છ",
+     "gotHex": "0A9B",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "52 3E",
+     "want": "છૣ",
+     "wantHex": "0A9B 0AE3",
+     "got": "છ",
+     "gotHex": "0A9B",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "53 3E",
+     "want": "જૢ",
+     "wantHex": "0A9C 0AE2",
+     "got": "જ",
+     "gotHex": "0A9C",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "53 3E",
+     "want": "જૣ",
+     "wantHex": "0A9C 0AE3",
+     "got": "જ",
+     "gotHex": "0A9C",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "54",
+     "want": "ઝૢ",
+     "wantHex": "0A9D 0AE2",
+     "got": "ઝ",
+     "gotHex": "0A9D",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "54",
+     "want": "ઝૣ",
+     "wantHex": "0A9D 0AE3",
+     "got": "ઝ",
+     "gotHex": "0A9D",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "55",
+     "want": "ઞૢ",
+     "wantHex": "0A9E 0AE2",
+     "got": "ઞ",
+     "gotHex": "0A9E",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "55",
+     "want": "ઞૣ",
+     "wantHex": "0A9E 0AE3",
+     "got": "ઞ",
+     "gotHex": "0A9E",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "56 24",
+     "want": "ટૢ",
+     "wantHex": "0A9F 0AE2",
+     "got": "ટ",
+     "gotHex": "0A9F",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "56 24",
+     "want": "ટૣ",
+     "wantHex": "0A9F 0AE3",
+     "got": "ટ",
+     "gotHex": "0A9F",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "57 24",
+     "want": "ઠૢ",
+     "wantHex": "0AA0 0AE2",
+     "got": "ઠ",
+     "gotHex": "0AA0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "57 24",
+     "want": "ઠૣ",
+     "wantHex": "0AA0 0AE3",
+     "got": "ઠ",
+     "gotHex": "0AA0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "58 24",
+     "want": "ડૢ",
+     "wantHex": "0AA1 0AE2",
+     "got": "ડ",
+     "gotHex": "0AA1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "joined | other": {
+   "count": 193,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "76 B9 24 55 A1 51",
+     "want": "દ્ઞેચૣ",
+     "wantHex": "0AA6 0ACD 0A9E 0AC7 0A9A 0AE3",
+     "got": "દ્ઞેચ",
+     "gotHex": "0AA6 0ACD 0A9E 0AC7 0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "ED 6A D6",
+     "want": "શ્ષદ્રૣ",
+     "wantHex": "0AB6 0ACD 0AB7 0AA6 0ACD 0AB0 0AE3",
+     "got": "શ્ષદ્ર",
+     "gotHex": "0AB6 0ACD 0AB7 0AA6 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "57 B9 24 52 3E A5 FA",
+     "want": "ઠ્છૈહ્રૣ",
+     "wantHex": "0AA0 0ACD 0A9B 0AC8 0AB9 0ACD 0AB0 0AE3",
+     "got": "ઠ્છૈહ્ર",
+     "gotHex": "0AA0 0ACD 0A9B 0AC8 0AB9 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "68 AE 57 B9 24 59 B9 24",
+     "want": "ર્વૣઠ્ઢ્",
+     "wantHex": "0AB0 0ACD 0AB5 0AE3 0AA0 0ACD 0AA2 0ACD",
+     "got": "ર્વઠ્ઢ્",
+     "gotHex": "0AB0 0ACD 0AB5 0AA0 0ACD 0AA2 0ACD",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4F B0 E5 50 B2 24",
+     "want": "ઘ્રૣબ્ઙ્ર",
+     "wantHex": "0A98 0ACD 0AB0 0AE3 0AAC 0ACD 0A99 0ACD 0AB0",
+     "got": "ઘ્રબ્ઙ્ર",
+     "gotHex": "0A98 0ACD 0AB0 0AAC 0ACD 0A99 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "52 B9 3E E5 BF 5C AE",
+     "want": "છ્બ્ર્ખ્થ",
+     "wantHex": "0A9B 0ACD 0AAC 0ACD 0AB0 0ACD 0A96 0ACD 0AA5",
+     "got": "ર્છ્બ્ખ્થ",
+     "gotHex": "0AB0 0ACD 0A9B 0ACD 0AAC 0ACD 0A96 0ACD 0AA5",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "6D AE C3 4E 70",
+     "want": "ર્ળૣચ્ગા",
+     "wantHex": "0AB0 0ACD 0AB3 0AE3 0A9A 0ACD 0A97 0ABE",
+     "got": "ર્ળચ્ગા",
+     "gotHex": "0AB0 0ACD 0AB3 0A9A 0ACD 0A97 0ABE",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "EC 60 75 58 B2 24",
+     "want": "વ્પીડ્રૣ",
+     "wantHex": "0AB5 0ACD 0AAA 0AC0 0AA1 0ACD 0AB0 0AE3",
+     "got": "વ્પીડ્ર",
+     "gotHex": "0AB5 0ACD 0AAA 0AC0 0AA1 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 C8 68 7C",
+     "want": "કૣઝ્વૂ",
+     "wantHex": "0A95 0AE3 0A9D 0ACD 0AB5 0AC2",
+     "got": "કઝ્વૂ",
+     "gotHex": "0A95 0A9D 0ACD 0AB5 0AC2",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "58 B8 AE 24 5E B0",
+     "want": "ર્ડૅધ્રૢ",
+     "wantHex": "0AB0 0ACD 0AA1 0AC5 0AA7 0ACD 0AB0 0AE2",
+     "got": "ર્ડૅધ્ર",
+     "gotHex": "0AB0 0ACD 0AA1 0AC5 0AA7 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4D AE EC 55 A5",
+     "want": "ર્ખૣવ્ઞૈ",
+     "wantHex": "0AB0 0ACD 0A96 0AE3 0AB5 0ACD 0A9E 0AC8",
+     "got": "ર્ખવ્ઞૈ",
+     "gotHex": "0AB0 0ACD 0A96 0AB5 0ACD 0A9E 0AC8",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E4 C2 52 3E 70",
+     "want": "ફ્રૣઘ્છા",
+     "wantHex": "0AAB 0ACD 0AB0 0AE3 0A98 0ACD 0A9B 0ABE",
+     "got": "ફ્રઘ્છા",
+     "gotHex": "0AAB 0ACD 0AB0 0A98 0ACD 0A9B 0ABE",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "63 AE DE D7",
+     "want": "ર્ભૣન્દૃ",
+     "wantHex": "0AB0 0ACD 0AAD 0AE3 0AA8 0ACD 0AA6 0AC3",
+     "got": "ર્ભન્દૃ",
+     "gotHex": "0AB0 0ACD 0AAD 0AA8 0ACD 0AA6 0AC3",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "C4 6C 7D",
+     "want": "જ્ર્હી",
+     "wantHex": "0A9C 0ACD 0AB0 0ACD 0AB9 0AC0",
+     "got": "ર્જ્હી",
+     "gotHex": "0AB0 0ACD 0A9C 0ACD 0AB9 0AC0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "56 B9 24 E7 52 B9 3E 51 AE",
+     "want": "ટ્મ્ર્છ્ચ",
+     "wantHex": "0A9F 0ACD 0AAE 0ACD 0AB0 0ACD 0A9B 0ACD 0A9A",
+     "got": "ર્ટ્મ્છ્ચ",
+     "gotHex": "0AB0 0ACD 0A9F 0ACD 0AAE 0ACD 0A9B 0ACD 0A9A",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "62 AE CA 4F A1",
+     "want": "ર્બૣઞ્ઘે",
+     "wantHex": "0AB0 0ACD 0AAC 0AE3 0A9E 0ACD 0A98 0AC7",
+     "got": "ર્બઞ્ઘે",
+     "gotHex": "0AB0 0ACD 0AAC 0A9E 0ACD 0A98 0AC7",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "D5 4E 7C 57 24",
+     "want": "થ્ગૂઠૢ",
+     "wantHex": "0AA5 0ACD 0A97 0AC2 0AA0 0AE2",
+     "got": "થ્ગૂઠ",
+     "gotHex": "0AA5 0ACD 0A97 0AC2 0AA0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "55 FD 51 84",
+     "want": "ઞૢળ્ચં",
+     "wantHex": "0A9E 0AE2 0AB3 0ACD 0A9A 0A82",
+     "got": "ઞળ્ચં",
+     "gotHex": "0A9E 0AB3 0ACD 0A9A 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "55 AE BC 59 A9 24",
+     "want": "ર્ઞૣક્ઢૃ",
+     "wantHex": "0AB0 0ACD 0A9E 0AE3 0A95 0ACD 0AA2 0AC3",
+     "got": "ર્ઞક્ઢૃ",
+     "gotHex": "0AB0 0ACD 0A9E 0A95 0ACD 0AA2 0AC3",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "F8 C8 4C B8 AE 24",
+     "want": "હ્ઝ્ર્કૅ",
+     "wantHex": "0AB9 0ACD 0A9D 0ACD 0AB0 0ACD 0A95 0AC5",
+     "got": "ર્હ્ઝ્કૅ",
+     "gotHex": "0AB0 0ACD 0AB9 0ACD 0A9D 0ACD 0A95 0AC5",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "58 24 AE CA 60 79",
+     "want": "ર્ડૣઞ્પુ",
+     "wantHex": "0AB0 0ACD 0AA1 0AE3 0A9E 0ACD 0AAA 0AC1",
+     "got": "ર્ડઞ્પુ",
+     "gotHex": "0AB0 0ACD 0AA1 0A9E 0ACD 0AAA 0AC1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "C1 59 A5 24 58 24",
+     "want": "ગ્ઢૈડૢ",
+     "wantHex": "0A97 0ACD 0AA2 0AC8 0AA1 0AE2",
+     "got": "ગ્ઢૈડ",
+     "gotHex": "0A97 0ACD 0AA2 0AC8 0AA1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5B E3 5E 6A",
+     "want": "ફ્ધિષૣ",
+     "wantHex": "0AAB 0ACD 0AA7 0ABF 0AB7 0AE3",
+     "got": "ફ્ધિષ",
+     "gotHex": "0AAB 0ACD 0AA7 0ABF 0AB7",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "ED 54 55 B0",
+     "want": "શ્ઝઞ્રૣ",
+     "wantHex": "0AB6 0ACD 0A9D 0A9E 0ACD 0AB0 0AE3",
+     "got": "શ્ઝઞ્ર",
+     "gotHex": "0AB6 0ACD 0A9D 0A9E 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "63 B0 D6 3A",
+     "want": "ભ્રૣદ્રઃ",
+     "wantHex": "0AAD 0ACD 0AB0 0AE3 0AA6 0ACD 0AB0 0A83",
+     "got": "ભ્રદ્રઃ",
+     "gotHex": "0AAD 0ACD 0AB0 0AA6 0ACD 0AB0 0A83",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "joined | virama lost or added": {
+   "count": 24,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "56 24 EC DE 53 3E A5",
+     "want": "ટ્વ્ન્જૈ",
+     "wantHex": "0A9F 0ACD 0AB5 0ACD 0AA8 0ACD 0A9C 0AC8",
+     "got": "ટવ્ન્જૈ",
+     "gotHex": "0A9F 0AB5 0ACD 0AA8 0ACD 0A9C 0AC8",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4E B0 5A A9",
+     "want": "ગ્ર્ણૃ",
+     "wantHex": "0A97 0ACD 0AB0 0ACD 0AA3 0AC3",
+     "got": "ગ્રણૃ",
+     "gotHex": "0A97 0ACD 0AB0 0AA3 0AC3",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E3 55 B0 57 B2 24",
+     "want": "ફ્ઞ્રઠ્ર્",
+     "wantHex": "0AAB 0ACD 0A9E 0ACD 0AB0 0AA0 0ACD 0AB0 0ACD",
+     "got": "ફ્ઞ્રઠ્ર",
+     "gotHex": "0AAB 0ACD 0A9E 0ACD 0AB0 0AA0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "50 B2 24 57 B9 24 4C AE 24",
+     "want": "ઙ્ર્ર્ઠ્ક",
+     "wantHex": "0A99 0ACD 0AB0 0ACD 0AB0 0ACD 0AA0 0ACD 0A95",
+     "got": "ઙ્રર્ઠ્ક",
+     "gotHex": "0A99 0ACD 0AB0 0AB0 0ACD 0AA0 0ACD 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "EB 5F A1 5E B0",
+     "want": "લ્નેધ્ર્",
+     "wantHex": "0AB2 0ACD 0AA8 0AC7 0AA7 0ACD 0AB0 0ACD",
+     "got": "લ્નેધ્ર",
+     "gotHex": "0AB2 0ACD 0AA8 0AC7 0AA7 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "57 7C 24 C9",
+     "want": "ઠૂઝ્ર્",
+     "wantHex": "0AA0 0AC2 0A9D 0ACD 0AB0 0ACD",
+     "got": "ઠૂઝ્ર",
+     "gotHex": "0AA0 0AC2 0A9D 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E2 C4 54 AE",
+     "want": "પ્ર્ર્જ્ઝ",
+     "wantHex": "0AAA 0ACD 0AB0 0ACD 0AB0 0ACD 0A9C 0ACD 0A9D",
+     "got": "પ્રર્જ્ઝ",
+     "gotHex": "0AAA 0ACD 0AB0 0AB0 0ACD 0A9C 0ACD 0A9D",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "CA 55 75 6D B2",
+     "want": "ઞ્ઞીળ્ર્",
+     "wantHex": "0A9E 0ACD 0A9E 0AC0 0AB3 0ACD 0AB0 0ACD",
+     "got": "ઞ્ઞીળ્ર",
+     "gotHex": "0A9E 0ACD 0A9E 0AC0 0AB3 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "F6 50 B9 24 F3",
+     "want": "સ્ર્ઙ્ષ્",
+     "wantHex": "0AB8 0ACD 0AB0 0ACD 0A99 0ACD 0AB7 0ACD",
+     "got": "સ્રઙ્ષ્",
+     "gotHex": "0AB8 0ACD 0AB0 0A99 0ACD 0AB7 0ACD",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "DD 68 AE 50 B2 24",
+     "want": "ર્ધ્વઙ્ર્",
+     "wantHex": "0AB0 0ACD 0AA7 0ACD 0AB5 0A99 0ACD 0AB0 0ACD",
+     "got": "ર્ધ્વઙ્ર",
+     "gotHex": "0AB0 0ACD 0AA7 0ACD 0AB5 0A99 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "66 B0 E2 A2",
+     "want": "ર્ર્પ્રેં",
+     "wantHex": "0AB0 0ACD 0AB0 0ACD 0AAA 0ACD 0AB0 0AC7 0A82",
+     "got": "ર્રપ્રેં",
+     "gotHex": "0AB0 0ACD 0AB0 0AAA 0ACD 0AB0 0AC7 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5B 52 B9 3E 62 57 B2 24",
+     "want": "છ્બિઠ્ર્",
+     "wantHex": "0A9B 0ACD 0AAC 0ABF 0AA0 0ACD 0AB0 0ACD",
+     "got": "છ્બિઠ્ર",
+     "gotHex": "0A9B 0ACD 0AAC 0ABF 0AA0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "6D B2 E5 4D A1",
+     "want": "ળ્ર્બ્ખે",
+     "wantHex": "0AB3 0ACD 0AB0 0ACD 0AAC 0ACD 0A96 0AC7",
+     "got": "ળ્રબ્ખે",
+     "gotHex": "0AB3 0ACD 0AB0 0AAC 0ACD 0A96 0AC7",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "76 24 EC C3 53 3E A1",
+     "want": "દ્વ્ચ્જે",
+     "wantHex": "0AA6 0ACD 0AB5 0ACD 0A9A 0ACD 0A9C 0AC7",
+     "got": "દવ્ચ્જે",
+     "gotHex": "0AA6 0AB5 0ACD 0A9A 0ACD 0A9C 0AC7",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "EC 58 B9 24 66 B0",
+     "want": "વ્ડ્ર્ર્",
+     "wantHex": "0AB5 0ACD 0AA1 0ACD 0AB0 0ACD 0AB0 0ACD",
+     "got": "વ્ડ્ર્ર",
+     "gotHex": "0AB5 0ACD 0AA1 0ACD 0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "EB 51 75 5E B0",
+     "want": "લ્ચીધ્ર્",
+     "wantHex": "0AB2 0ACD 0A9A 0AC0 0AA7 0ACD 0AB0 0ACD",
+     "got": "લ્ચીધ્ર",
+     "gotHex": "0AB2 0ACD 0A9A 0AC0 0AA7 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "E5 4C 79 24 E2",
+     "want": "બ્કુપ્ર્",
+     "wantHex": "0AAC 0ACD 0A95 0AC1 0AAA 0ACD 0AB0 0ACD",
+     "got": "બ્કુપ્ર",
+     "gotHex": "0AAC 0ACD 0A95 0AC1 0AAA 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "6D B2 59 B9 24 73 75",
+     "want": "ળ્ર્ઢ્તી",
+     "wantHex": "0AB3 0ACD 0AB0 0ACD 0AA2 0ACD 0AA4 0AC0",
+     "got": "ળ્રઢ્તી",
+     "gotHex": "0AB3 0ACD 0AB0 0AA2 0ACD 0AA4 0AC0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "76 AB 24 4E B0",
+     "want": "દૄગ્ર્",
+     "wantHex": "0AA6 0AC4 0A97 0ACD 0AB0 0ACD",
+     "got": "દૄગ્ર",
+     "gotHex": "0AA6 0AC4 0A97 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "CA 4D 84 50 24 EC",
+     "want": "ઞ્ખંઙ્વ્",
+     "wantHex": "0A9E 0ACD 0A96 0A82 0A99 0ACD 0AB5 0ACD",
+     "got": "ઞ્ખંઙવ્",
+     "gotHex": "0A9E 0ACD 0A96 0A82 0A99 0AB5 0ACD",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5B F8 6C F6",
+     "want": "હ્હિસ્ર્",
+     "wantHex": "0AB9 0ACD 0AB9 0ABF 0AB8 0ACD 0AB0 0ACD",
+     "got": "હ્હિસ્ર",
+     "gotHex": "0AB9 0ACD 0AB9 0ABF 0AB8 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "BF 6A A5 66 B0",
+     "want": "ખ્ષૈર્ર્",
+     "wantHex": "0A96 0ACD 0AB7 0AC8 0AB0 0ACD 0AB0 0ACD",
+     "got": "ખ્ષૈર્ર",
+     "gotHex": "0A96 0ACD 0AB7 0AC8 0AB0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "5B 52 B9 3E 62 57 B2 24",
+     "want": "છ્બિઠ્ર્",
+     "wantHex": "0A9B 0ACD 0AAC 0ABF 0AA0 0ACD 0AB0 0ACD",
+     "got": "છ્બિઠ્ર",
+     "gotHex": "0A9B 0ACD 0AAC 0ABF 0AA0 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "6D B2 E5 4D A1",
+     "want": "ળ્ર્બ્ખે",
+     "wantHex": "0AB3 0ACD 0AB0 0ACD 0AAC 0ACD 0A96 0AC7",
+     "got": "ળ્રબ્ખે",
+     "gotHex": "0AB3 0ACD 0AB0 0AAC 0ACD 0A96 0AC7",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "joined | ZWNJ halant inside a word lost": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "64 B9 F6",
+     "want": "મ્‌સ્ર્",
+     "wantHex": "0AAE 0ACD 200C 0AB8 0ACD 0AB0 0ACD",
+     "got": "મ્સ્ર",
+     "gotHex": "0AAE 0ACD 0AB8 0ACD 0AB0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "key | byte(s) not read at all: 0000": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "9C 00",
+     "want": "઼",
+     "wantHex": "0ABC",
+     "got": "઼\u0000",
+     "gotHex": "0ABC 0000",
+     "leak": false,
+     "unmapped": [
+      "\u0000"
+     ],
+     "onlyJoiner": false,
+     "kb": "AKSHAR",
+     "key": "1"
+    }
+   ]
+  },
+  "key | other": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "81 81 81",
+     "want": "–––",
+     "wantHex": "2013 2013 2013",
+     "got": "—–",
+     "gotHex": "2014 2013",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false,
+     "kb": "NEWROMA",
+     "key": "x"
+    }
+   ]
+  },
+  "code | other": {
+   "count": 15,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "A7",
+     "want": "\u0012",
+     "wantHex": "0012",
+     "got": "ર્ૈ",
+     "gotHex": "0AB0 0ACD 0AC8",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "A8",
+     "want": "\u0013",
+     "wantHex": "0013",
+     "got": "ર્ૈં",
+     "gotHex": "0AB0 0ACD 0AC8 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "88 3E",
+     "want": "\u0015",
+     "wantHex": "0015",
+     "got": "જ્જ",
+     "gotHex": "0A9C 0ACD 0A9C",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "8F",
+     "want": "\u0016",
+     "wantHex": "0016",
+     "got": "૰",
+     "gotHex": "0AF0",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "AB",
+     "want": "\u0017",
+     "wantHex": "0017",
+     "got": "ૄ",
+     "gotHex": "0AC4",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "66 B9",
+     "want": "\u0001",
+     "wantHex": "0001",
+     "got": "ર્",
+     "gotHex": "0AB0 0ACD",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "FE 65",
+     "want": "\f",
+     "wantHex": "000C",
+     "got": "ળ્ય",
+     "gotHex": "0AB3 0ACD 0AAF",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "BA",
+     "want": "\u000e",
+     "wantHex": "000E",
+     "got": "ુ",
+     "gotHex": "0AC1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "9F",
+     "want": "\u000f",
+     "wantHex": "000F",
+     "got": "ૂ",
+     "gotHex": "0AC2",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "CF",
+     "want": "\u001b",
+     "wantHex": "001B",
+     "got": "ણુ",
+     "gotHex": "0AA3 0AC1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "48",
+     "want": "\u001c",
+     "wantHex": "001C",
+     "got": "ઇં",
+     "gotHex": "0A87 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "49",
+     "want": "\u001d",
+     "wantHex": "001D",
+     "got": "ઈં",
+     "gotHex": "0A88 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4A",
+     "want": "\u001e",
+     "wantHex": "001E",
+     "got": "ઉં",
+     "gotHex": "0A89 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4B",
+     "want": "\u001f",
+     "wantHex": "001F",
+     "got": "ઊં",
+     "gotHex": "0A8A 0A82",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "3A",
+     "want": ":",
+     "wantHex": "003A",
+     "got": "ઃ",
+     "gotHex": "0A83",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "code | byte(s) not read at all: 0000": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "9C 00",
+     "want": "\u0019",
+     "wantHex": "0019",
+     "got": "઼\u0000",
+     "gotHex": "0ABC 0000",
+     "leak": false,
+     "unmapped": [
+      "\u0000"
+     ],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "9C 00",
+     "want": "઼",
+     "wantHex": "0ABC",
+     "got": "઼\u0000",
+     "gotHex": "0ABC 0000",
+     "leak": false,
+     "unmapped": [
+      "\u0000"
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "code | byte(s) not read at all: 0090": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "90",
+     "want": "\u001a",
+     "wantHex": "001A",
+     "got": "",
+     "gotHex": "0090",
+     "leak": false,
+     "unmapped": [
+      ""
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "code | byte(s) not read at all: 003C": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "3C",
+     "want": "₹",
+     "wantHex": "20B9",
+     "got": "<",
+     "gotHex": "003C",
+     "leak": false,
+     "unmapped": [
+      "<"
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "run | byte(s) not read at all: 003C": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "3C 31 32",
+     "want": "₹૧૨",
+     "wantHex": "20B9 0AE7 0AE8",
+     "got": "<૧૨",
+     "gotHex": "003C 0AE7 0AE8",
+     "leak": false,
+     "unmapped": [
+      "<"
+     ],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "31 3C",
+     "want": "૧₹",
+     "wantHex": "0AE7 20B9",
+     "got": "૧<",
+     "gotHex": "0AE7 003C",
+     "leak": false,
+     "unmapped": [
+      "<"
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "run | other": {
+   "count": 6,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "4C 24",
+     "want": "ક॥",
+     "wantHex": "0A95 0965",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24",
+     "want": "“ક”",
+     "wantHex": "201C 0A95 201D",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 3A",
+     "want": "ક:",
+     "wantHex": "0A95 003A",
+     "got": "કઃ",
+     "gotHex": "0A95 0A83",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "97 26 26",
+     "want": "॥",
+     "wantHex": "0965",
+     "got": "।।",
+     "gotHex": "0964 0964",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24",
+     "want": "[ક",
+     "wantHex": "005B 0A95",
+     "got": "ક",
+     "gotHex": "0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "66 7B 24",
+     "want": "ર",
+     "wantHex": "0AB0",
+     "got": "રરુ",
+     "gotHex": "0AB0 0AB0 0AC1",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3 | other": {
+   "count": 106,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "4C 24 22 4C 24",
+     "want": "ક\"ક",
+     "wantHex": "0A95 0022 0A95",
+     "got": "ક‘ક",
+     "gotHex": "0A95 2018 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 23 4C 24",
+     "want": "ક#ક",
+     "wantHex": "0A95 0023 0A95",
+     "got": "ક×ક",
+     "gotHex": "0A95 00D7 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 24 4C 24",
+     "want": "ક$ક",
+     "wantHex": "0A95 0024 0A95",
+     "got": "કક",
+     "gotHex": "0A95 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 26 4C 24",
+     "want": "ક&ક",
+     "wantHex": "0A95 0026 0A95",
+     "got": "ક।ક",
+     "gotHex": "0A95 0964 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 27 4C 24",
+     "want": "ક'ક",
+     "wantHex": "0A95 0027 0A95",
+     "got": "ક’ક",
+     "gotHex": "0A95 2019 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 30 4C 24",
+     "want": "ક0ક",
+     "wantHex": "0A95 0030 0A95",
+     "got": "ક૦ક",
+     "gotHex": "0A95 0AE6 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 31 4C 24",
+     "want": "ક1ક",
+     "wantHex": "0A95 0031 0A95",
+     "got": "ક૧ક",
+     "gotHex": "0A95 0AE7 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 32 4C 24",
+     "want": "ક2ક",
+     "wantHex": "0A95 0032 0A95",
+     "got": "ક૨ક",
+     "gotHex": "0A95 0AE8 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 33 4C 24",
+     "want": "ક3ક",
+     "wantHex": "0A95 0033 0A95",
+     "got": "ક૩ક",
+     "gotHex": "0A95 0AE9 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 34 4C 24",
+     "want": "ક4ક",
+     "wantHex": "0A95 0034 0A95",
+     "got": "ક૪ક",
+     "gotHex": "0A95 0AEA 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 35 4C 24",
+     "want": "ક5ક",
+     "wantHex": "0A95 0035 0A95",
+     "got": "ક૫ક",
+     "gotHex": "0A95 0AEB 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 36 4C 24",
+     "want": "ક6ક",
+     "wantHex": "0A95 0036 0A95",
+     "got": "ક૬ક",
+     "gotHex": "0A95 0AEC 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 37 4C 24",
+     "want": "ક7ક",
+     "wantHex": "0A95 0037 0A95",
+     "got": "ક૭ક",
+     "gotHex": "0A95 0AED 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 38 4C 24",
+     "want": "ક8ક",
+     "wantHex": "0A95 0038 0A95",
+     "got": "ક૮ક",
+     "gotHex": "0A95 0AEE 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 39 4C 24",
+     "want": "ક9ક",
+     "wantHex": "0A95 0039 0A95",
+     "got": "ક૯ક",
+     "gotHex": "0A95 0AEF 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 3A 4C 24",
+     "want": "ક:ક",
+     "wantHex": "0A95 003A 0A95",
+     "got": "કઃક",
+     "gotHex": "0A95 0A83 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 3E 4C 24",
+     "want": "ક>ક",
+     "wantHex": "0A95 003E 0A95",
+     "got": "કક",
+     "gotHex": "0A95 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 40 4C 24",
+     "want": "ક@ક",
+     "wantHex": "0A95 0040 0A95",
+     "got": "કઽક",
+     "gotHex": "0A95 0ABD 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 41 4C 24",
+     "want": "કAક",
+     "wantHex": "0A95 0041 0A95",
+     "got": "કઅક",
+     "gotHex": "0A95 0A85 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 42 4C 24",
+     "want": "કBક",
+     "wantHex": "0A95 0042 0A95",
+     "got": "કઇક",
+     "gotHex": "0A95 0A87 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 43 4C 24",
+     "want": "કCક",
+     "wantHex": "0A95 0043 0A95",
+     "got": "કઈક",
+     "gotHex": "0A95 0A88 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 44 4C 24",
+     "want": "કDક",
+     "wantHex": "0A95 0044 0A95",
+     "got": "કઉક",
+     "gotHex": "0A95 0A89 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 45 4C 24",
+     "want": "કEક",
+     "wantHex": "0A95 0045 0A95",
+     "got": "કઊક",
+     "gotHex": "0A95 0A8A 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 46 4C 24",
+     "want": "કFક",
+     "wantHex": "0A95 0046 0A95",
+     "got": "કઋક",
+     "gotHex": "0A95 0A8B 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 47 4C 24",
+     "want": "કGક",
+     "wantHex": "0A95 0047 0A95",
+     "got": "કૠક",
+     "gotHex": "0A95 0AE0 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3 | byte(s) not read at all: 002E": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "4C 24 2E 2E 2E 4C 24",
+     "want": "ક…ક",
+     "wantHex": "0A95 2026 0A95",
+     "got": "ક...ક",
+     "gotHex": "0A95 002E 002E 002E 0A95",
+     "leak": false,
+     "unmapped": [
+      "."
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3 | byte(s) not read at all: 002C": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev7",
+     "hex": "4C 24 2C 4C 24",
+     "want": "ક‚ક",
+     "wantHex": "0A95 201A 0A95",
+     "got": "ક,ક",
+     "gotHex": "0A95 002C 0A95",
+     "leak": false,
+     "unmapped": [
+      ","
+     ],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev7",
+     "hex": "4C 24 2C 2C 4C 24",
+     "want": "ક„ક",
+     "wantHex": "0A95 201E 0A95",
+     "got": "ક,,ક",
+     "gotHex": "0A95 002C 002C 0A95",
+     "leak": false,
+     "unmapped": [
+      ","
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3-456 | other": {
+   "count": 106,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "4C 24 22 4C 24",
+     "want": "ક\"ક",
+     "wantHex": "0A95 0022 0A95",
+     "got": "ક‘ક",
+     "gotHex": "0A95 2018 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 23 4C 24",
+     "want": "ક#ક",
+     "wantHex": "0A95 0023 0A95",
+     "got": "ક×ક",
+     "gotHex": "0A95 00D7 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 24 4C 24",
+     "want": "ક$ક",
+     "wantHex": "0A95 0024 0A95",
+     "got": "કક",
+     "gotHex": "0A95 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 26 4C 24",
+     "want": "ક&ક",
+     "wantHex": "0A95 0026 0A95",
+     "got": "ક।ક",
+     "gotHex": "0A95 0964 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 27 4C 24",
+     "want": "ક'ક",
+     "wantHex": "0A95 0027 0A95",
+     "got": "ક’ક",
+     "gotHex": "0A95 2019 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 30 4C 24",
+     "want": "ક0ક",
+     "wantHex": "0A95 0030 0A95",
+     "got": "ક૦ક",
+     "gotHex": "0A95 0AE6 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 31 4C 24",
+     "want": "ક1ક",
+     "wantHex": "0A95 0031 0A95",
+     "got": "ક૧ક",
+     "gotHex": "0A95 0AE7 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 32 4C 24",
+     "want": "ક2ક",
+     "wantHex": "0A95 0032 0A95",
+     "got": "ક૨ક",
+     "gotHex": "0A95 0AE8 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 33 4C 24",
+     "want": "ક3ક",
+     "wantHex": "0A95 0033 0A95",
+     "got": "ક૩ક",
+     "gotHex": "0A95 0AE9 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 34 4C 24",
+     "want": "ક4ક",
+     "wantHex": "0A95 0034 0A95",
+     "got": "ક૪ક",
+     "gotHex": "0A95 0AEA 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 35 4C 24",
+     "want": "ક5ક",
+     "wantHex": "0A95 0035 0A95",
+     "got": "ક૫ક",
+     "gotHex": "0A95 0AEB 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 36 4C 24",
+     "want": "ક6ક",
+     "wantHex": "0A95 0036 0A95",
+     "got": "ક૬ક",
+     "gotHex": "0A95 0AEC 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 37 4C 24",
+     "want": "ક7ક",
+     "wantHex": "0A95 0037 0A95",
+     "got": "ક૭ક",
+     "gotHex": "0A95 0AED 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 38 4C 24",
+     "want": "ક8ક",
+     "wantHex": "0A95 0038 0A95",
+     "got": "ક૮ક",
+     "gotHex": "0A95 0AEE 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 39 4C 24",
+     "want": "ક9ક",
+     "wantHex": "0A95 0039 0A95",
+     "got": "ક૯ક",
+     "gotHex": "0A95 0AEF 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 3A 4C 24",
+     "want": "ક:ક",
+     "wantHex": "0A95 003A 0A95",
+     "got": "કઃક",
+     "gotHex": "0A95 0A83 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 3E 4C 24",
+     "want": "ક>ક",
+     "wantHex": "0A95 003E 0A95",
+     "got": "કક",
+     "gotHex": "0A95 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 40 4C 24",
+     "want": "ક@ક",
+     "wantHex": "0A95 0040 0A95",
+     "got": "કઽક",
+     "gotHex": "0A95 0ABD 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 41 4C 24",
+     "want": "કAક",
+     "wantHex": "0A95 0041 0A95",
+     "got": "કઅક",
+     "gotHex": "0A95 0A85 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 42 4C 24",
+     "want": "કBક",
+     "wantHex": "0A95 0042 0A95",
+     "got": "કઇક",
+     "gotHex": "0A95 0A87 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 43 4C 24",
+     "want": "કCક",
+     "wantHex": "0A95 0043 0A95",
+     "got": "કઈક",
+     "gotHex": "0A95 0A88 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 44 4C 24",
+     "want": "કDક",
+     "wantHex": "0A95 0044 0A95",
+     "got": "કઉક",
+     "gotHex": "0A95 0A89 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 45 4C 24",
+     "want": "કEક",
+     "wantHex": "0A95 0045 0A95",
+     "got": "કઊક",
+     "gotHex": "0A95 0A8A 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 46 4C 24",
+     "want": "કFક",
+     "wantHex": "0A95 0046 0A95",
+     "got": "કઋક",
+     "gotHex": "0A95 0A8B 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 47 4C 24",
+     "want": "કGક",
+     "wantHex": "0A95 0047 0A95",
+     "got": "કૠક",
+     "gotHex": "0A95 0AE0 0A95",
+     "leak": false,
+     "unmapped": [],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3-456 | byte(s) not read at all: 002E": {
+   "count": 1,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "4C 24 2E 2E 2E 4C 24",
+     "want": "ક…ક",
+     "wantHex": "0A95 2026 0A95",
+     "got": "ક...ક",
+     "gotHex": "0A95 002E 002E 002E 0A95",
+     "leak": false,
+     "unmapped": [
+      "."
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  },
+  "ts-l3-456 | byte(s) not read at all: 002C": {
+   "count": 2,
+   "examples": [
+    {
+     "dir": "rev456",
+     "hex": "4C 24 2C 4C 24",
+     "want": "ક‚ક",
+     "wantHex": "0A95 201A 0A95",
+     "got": "ક,ક",
+     "gotHex": "0A95 002C 0A95",
+     "leak": false,
+     "unmapped": [
+      ","
+     ],
+     "onlyJoiner": false
+    },
+    {
+     "dir": "rev456",
+     "hex": "4C 24 2C 2C 4C 24",
+     "want": "ક„ક",
+     "wantHex": "0A95 201E 0A95",
+     "got": "ક,,ક",
+     "gotHex": "0A95 002C 002C 0A95",
+     "leak": false,
+     "unmapped": [
+      ","
+     ],
+     "onlyJoiner": false
+    }
+   ]
+  }
+ }
+}

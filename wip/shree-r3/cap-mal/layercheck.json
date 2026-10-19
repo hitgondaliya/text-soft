@@ -1,0 +1,13 @@
+{
+ "layers3to12EqualLayer2": {
+  "same": 870,
+  "diff": 0
+ },
+ "layer0": "1076/1078",
+ "ctrlSpace": "172/172",
+ "notOnRawLayerCompare": "codes 80-FE are not reachable as a raw-layer key (key chars 21-7E only)",
+ "mismatches": [
+  "NEWROMA.tsv:a 0D3E|4C raw 0D05|41",
+  "NEWROMA.tsv:u 0D41|4F raw 0D09|44"
+ ]
+}

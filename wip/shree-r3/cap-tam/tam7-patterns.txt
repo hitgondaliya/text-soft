@@ -1,0 +1,73 @@
+Shree-Lipi 7 Tamil: how S8Tam764.dll spells Unicode Tamil, read from 31086 truth strings (tam7-groundtruth.json: 9871 single syllables/clusters/vendor keys from round 1 + 21215 two- and three-syllable strings from round 2). Bytes are hex, one per glyph. The 12 faces SHREE-TAM7-0800..0803/1316/3883 and SHREE-TAM-0800..0803/1316/3883 (and Shree-Tam7-001/002) map the same codes to the same characters; same-number 7 and 4/5/6 faces differ only in the drawing of 9B ரி, 9F ரீ, BA ர். A "check" line counts the truth strings that follow the rule (preferred or accepted spelling).
+
+0. ONE RULE ABOVE ALL: syllables join by plain concatenation. Round 2 typed 21,224 two- and three-syllable keystrokes; the 7 composer wrote exactly the syllables' own answers joined in 21,224/21,224 (wjoin.json). No glyph moves across a syllable boundary - in particular a pre-base sign never moves in front of a preceding pulli letter (க்கை = 55 F8 50, NOT F8 55 50).
+
+1. Consonants and their blocks (base, +ி, +ீ, +ு, +ூ, +்) - every native letter has its own ி ீ ு ூ ் glyphs:
+   க   base 50 | ி 51 | ீ 52 | ு 53 | ூ 54 | ் 55
+   ங   base 56 | ி 57 | ீ 58 | ு 59 | ூ 5A | ் 5B
+   ச   base 5C | ி 5D | ீ 5E | ு 5F | ூ 60 | ் 61
+   ஞ   base 62 | ி 63 | ீ 64 | ு 65 | ூ 66 | ் 67
+   ட   base 68 | ி 69 | ீ 6A | ு 6B | ூ 6C | ் 6D
+   ண   base 6E | ி 6F | ீ 70 | ு 71 | ூ 72 | ் 73
+   த   base 75 | ி 76 | ீ 77 | ு 78 | ூ 79 | ் 7A
+   ந   base 7C | ி 7B | ீ 7D | ு 7E | ூ A1 | ் A2
+   ப   base A3 | ி A4 | ீ A5 | ு A6 | ூ A7 | ் A8
+   ம   base A9 | ி AA | ீ AB | ு 95 | ூ 89 | ் AE
+   ய   base AF | ி B0 | ீ B1 | ு B2 | ூ B3 | ் B4
+   ர   base B5 | ி 9B | ீ 9F | ு B8 | ூ B9 | ் BA
+   ல   base BB | ி BC | ீ BD | ு BE | ூ BF | ் C0
+   வ   base C1 | ி C2 | ீ C3 | ு C4 | ூ C5 | ் C6
+   ழ   base C7 | ி C8 | ீ C9 | ு CA | ூ CB | ் CC
+   ள   base CD | ி CE | ீ CF | ு D0 | ூ D1 | ் D2
+   ற   base D3 | ி D4 | ீ D5 | ு D6 | ூ D7 | ் D8
+   ன   base DA | ி DB | ீ DC | ு DD | ூ DE | ் DF
+   ஜ   base E1 | ி E2 | ீ E3 | ு E1 FA | ூ E1 FC | ் E4
+   ஷ   base E5 | ி E6 | ீ E7 | ு E5 FB | ூ E5 FD | ் E8
+   ஸ   base E9 | ி EA | ீ EB | ு E9 FA | ூ E9 FC | ் EC
+   ஹ   base ED | ி EE | ீ EF | ு ED FA | ூ ED FC | ் F0
+   ஶ   base 86 | ி 87 | ீ 82 | ு 86 FA | ூ 86 FC | ் 83
+   க்ஷ base F1 | ி F2 | ீ F3 | ு F1 FB | ூ F1 FD | ் F4
+   check "a native letter's ி ீ ் glyphs are its own single byte": 54/54 truth strings follow it
+   check "a native letter's ு ூ glyphs are its own single byte (the native ligature)": 36/36 truth strings follow it
+   Byte blocks are base,+1..+5 for most letters (க 50 51 52 53 54 55); exceptions: ந 7C 7B 7D 7E A1 A2, ம A9 AA AB 95 89 AE, ர B5 9B 9F B8 B9 BA, ய் = B4 (23 draws the same glyph), ஜ ஷ ஸ ஹ ஶ have base/ி/ீ/் glyphs and take separate ு ூ hooks.
+
+2. Grantha letters + ு ூ: the letter, then a separate hook: ு FA, ூ FC; on ஷ and க்ஷ the ஷ-shaped hooks FB / FD (preferred; FC accepted for ூ).
+   check "ஜ ஸ ஹ ஶ + ு = base FA": 4/4 truth strings follow it
+   check "ஜ ஸ ஹ ஶ + ூ = base FC": 4/4 truth strings follow it
+   check "ஷ க்ஷ + ு = base FB": 2/2 truth strings follow it
+   check "ஷ க்ஷ + ூ = base FD": 2/2 truth strings follow it
+   The 7 composer also writes FA/FC after a NATIVE letter when the Grantha ு ூ codes 5D/5E are struck on it (க + FA): kept as alt:, not truth - Tamil writes the native ligature (கு 53).
+
+3. ா = F5 after the letter. Pre-base signs are written BEFORE their own letter only (visual order): ெ F6, ே F7 (40 draws the identical glyph), ை F8. Two-part signs: ொ = F6 C F5, ோ = F7 C F5, ௌ = F6 C CD (the au length mark is drawn with the ள glyph CD).
+   check "Cா = C F5": 24/24 truth strings follow it
+   check "Cெ = F6 C": 24/24 truth strings follow it
+   check "Cே = F7 C": 24/24 truth strings follow it
+   check "Cை = F8 C": 24/24 truth strings follow it
+   check "Cொ = F6 C F5": 24/24 truth strings follow it
+   check "Cோ = F7 C F5": 24/24 truth strings follow it
+   check "Cௌ = F6 C CD": 24/24 truth strings follow it
+   Reverse trap: F6 C CD is ALSO Cெ + ள (கெள) - the encoding cannot tell them apart; Shree's ௌ keys type exactly ெ C ள. Prefer ௌ when reading back.
+
+4. Clusters: C1் is one glyph (the letter's pulli form), then C2 as a whole syllable; a pre-base sign of C2 goes between C1் and C2.
+   check "C1்C2 = C1் C2": 575/575 truth strings follow it
+   check "C1்C2+sign = C1் + (C2+sign)": 4600/4600 truth strings follow it
+
+5. Ligatures: க்ஷ = F1 (க்ஷி F2, க்ஷீ F3, க்ஷ் F4; க் + ஷ = 55 E5 accepted); ஸ்ரீ = FF (ஸ் + ரீ = EC 9F accepted); ஶ்ரீ = 83 9F; ரி 9B, ரீ 9F, ர் BA (the three glyphs the 4/5/6 faces draw differently).
+   ட டி டீ = 68 69 6A (டி/டீ are their own ligature glyphs like every C+ி/ீ).
+
+6. Independent vowels and aytham: அ 41, ஆ 42, இ 43, ஈ 44, உ 45, ஊ 46, எ 47, ஏ 48, ஐ 49, ஒ 4A, ஓ 4B, ஃ 4C. ஔ has no direct spelling (code A6: no 7 answer); Shree's ஔ keys type ஒ + ள = 4A CD (tam7-composer-gaps.json).
+
+7. Old (pre-1978) orthography, accepted but ranked after the modern spelling: னா E0, றா D9, ணா 74 (Shree's own னா/றா/ணா keys type these; ன/ற/ண + ா types DA F5 / D3 F5 / 6E F5), and the ை curl F9 on ணை லை ளை னை (F9 on other letters is no Tamil form: alt).
+   check "old ligatures accepted": 3/3 truth strings follow it
+
+8. Digits and signs: ௦-௯ = 30-39 (the fonts draw WESTERN digits there), ௰ 85, ௱ 84, ௲ 98, ௳ 88, ௴ 4E, ௵ 4D, ௸ FE, ௹ 99, ௺ 4F, ௐ 9A, । 3E, ‘ 22, ’ 27, – (U+2013, the - key) 26. ASCII ! % ( ) * + , . / : ; = ? keep their own bytes.
+   check "Tamil digit = ASCII digit byte": 10/10 truth strings follow it
+
+9. Nothing for ZWNJ/ZWJ (codes A4/A5/EF): the 7 composer writes no byte, but a joiner between க் and ஷ breaks the க்ஷ ligature (க்‌ஷ = 55 E5, the 2 exceptions below); ஂ (U+0B82) has no glyph (the composer writes 54 = கூ for code 77: quirk).
+   check "a ZWNJ/ZWJ adds no byte": 1656/1658 truth strings follow it; exceptions: க்‌ஷ rule F1 / truth 55 E5; க்‍ஷ rule F1 / truth 55 E5
+
+10. Glyph-identical bytes in every SHREE-TAM7/TAM face (fonts/dup-glyphs.json): [23 B4] [26 AD] [40 F7] [5C 8C] [5F 94] [60 8B]. Shree writes B4 (ய்), F7 (ே), 5C (ச), 5F (சு), 60 (சூ) and the dash 26; the other byte of each pair draws the same, so a table using it LOOKS right but is not byte-identical.
+
+11. Symbols with no Tamil-font glyph: hyphen-minus U+002D (byte 2D is an EMPTY 5-unit glyph: use 26, what the - key types), × (Shree writes 23 = ய்; the × glyph is 96), — 97 and ÷ 24 (7-only codes); # $ < > @ _ [ ] { } \ | ` ^ & “ ” get control bytes 06-1C from Shree (no glyph), while their own ASCII bytes are Tamil glyphs; ₹, ॥ and ஂ have no glyph at all. See tam7-composer-gaps.json.
+
+All checks: 7114/7116 truth strings follow the rules above.

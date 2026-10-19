@@ -1,0 +1,70 @@
+truth 27752: preferred 25242, other accepted 0, wrong 2510 (90.96% preferred)
+  CHCst: 784
+      ਕ੍ਯੀੱ	[0A15 0A4D 0A2F 0A40 0A71]	want 48 62 72 A8	got 48 62 72 A7
+      ਕ੍ਯੇੱ	[0A15 0A4D 0A2F 0A47 0A71]	want 48 62 79 A8	got 48 62 79 A7
+  CHCs: 535
+      ਕ੍ਠੁ	[0A15 0A4D 0A20 0A41]	want 48 B5 53 BE AE (or 48 53 BE AE)	got 48 B5 53 BE 74
+      ਕ੍ਠੂ	[0A15 0A4D 0A20 0A42]	want 48 B5 53 BE AF (or 48 53 BE AF)	got 48 B5 53 BE 76
+  CHCHC: 288
+      ਕ੍ਠ੍ਯ	[0A15 0A4D 0A20 0A4D 0A2F]	want 48 B5 53 BE 62 (or 48 53 BE 62)	got 48 B5 53 62
+      ਕ੍ਠ੍ਰ	[0A15 0A4D 0A20 0A4D 0A30]	want 48 B5 53 BE 6F (or 48 53 BE 6F)	got 48 B5 53 6F
+  Cst: 248
+      ਕੀੱ	[0A15 0A40 0A71]	want 48 72 A8	got 48 72 A7
+      ਕੇੱ	[0A15 0A47 0A71]	want 48 79 A8	got 48 79 A7
+  CHCt: 224
+      ਕ੍ਠਂ	[0A15 0A4D 0A20 0A02]	want 48 B5 53 A3 BE (or 48 53 A3 BE)	got 48 B5 53 BE A3
+      ਕ੍ਠੰ	[0A15 0A4D 0A20 0A70]	want 48 B5 53 A5 BE (or 48 53 A5 BE)	got 48 B5 53 BE A5
+  Ctt: 88
+      ਕਂੱ	[0A15 0A02 0A71]	want 48 A3 A8	got 48 A3 A7
+      ਕੰੱ	[0A15 0A70 0A71]	want 48 A5 A8	got 48 A5 A7
+  Vtt: 64
+      ਅਂੱ	[0A05 0A02 0A71]	want 41 A3 A8	got 41 A3 A7
+      ਅੰੱ	[0A05 0A70 0A71]	want 41 A5 A8	got 41 A5 A7
+  CtC: 64
+      ਠੱਕ	[0A20 0A71 0A15]	want 53 A7 BE 48	got 53 BE A7 48
+      ਠੱਖ	[0A20 0A71 0A16]	want 53 A7 BE 49	got 53 BE A7 49
+  Ct: 44
+      ਕਁ	[0A15 0A01]	unmapped ਁ	got 48 U+0A01
+      ਖਁ	[0A16 0A01]	unmapped ਁ	got 49 U+0A01
+  CHN: 38
+      ਕ੍‌	[0A15 0A4D 200C]	unmapped ‌	got 48 B5 U+200C
+      ਖ੍‌	[0A16 0A4D 200C]	unmapped ‌	got 49 B5 U+200C
+  CHJ: 38
+      ਕ੍‍	[0A15 0A4D 200D]	unmapped ‍	got 48 B5 U+200D
+      ਖ੍‍	[0A16 0A4D 200D]	unmapped ‍	got 49 B5 U+200D
+  Vt: 29
+      ਅਁ	[0A05 0A01]	unmapped ਁ	got 41 U+0A01
+      ਆਁ	[0A06 0A01]	unmapped ਁ	got 41 70 U+0A01
+  o: 18
+      !	[0021]	unmapped !	got 21
+      %	[0025]	unmapped %	got 25
+  Cs: 17
+      ਠੁ	[0A20 0A41]	want 53 BE AE	got 53 BE 74
+      ਠੂ	[0A20 0A42]	want 53 BE AF	got 53 BE 76
+  CHC: 8
+      ਠ੍ਯ	[0A20 0A4D 0A2F]	want 53 BE 62	got 53 62
+      ਠ੍ਰ	[0A20 0A4D 0A30]	want 53 BE 6F	got 53 6F
+  CHCH: 8
+      ਠ੍ਯ੍	[0A20 0A4D 0A2F 0A4D]	want 53 BE 62 B5 (or 53 BE 62)	got 53 62 B5
+      ਠ੍ਰ੍	[0A20 0A4D 0A30 0A4D]	want 53 BE 6F B5 (or 53 BE 6F)	got 53 6F B5
+  st: 5
+      ੀੱ	[0A40 0A71]	want 72 A8	got 72 A7
+      ੇੱ	[0A47 0A71]	want 79 A8	got 79 A7
+  Vs: 3
+      ਅਿ	[0A05 0A3F]	want 71 41	got 41 71
+      ਓਿ	[0A13 0A3F]	want 71 47	got 47 71
+  tt: 2
+      ਂੱ	[0A02 0A71]	want A3 A8	got A3 A7
+      ੰੱ	[0A70 0A71]	want A5 A8	got A5 A7
+  ooo: 1
+      ...	[002E 002E 002E]	unmapped .	got 2E 2E 2E
+  oC: 1
+      .ਲ	[002E 0A32]	unmapped .	got 2E 64
+  t: 1
+      ਁ	[0A01]	unmapped ਁ	got U+0A01
+  V: 1
+      ਇ	[0A07]	want 71 42	got 42 71
+  Cts: 1
+      ਨੰੂ	[0A28 0A70 0A42]	want B2 A5 BE AF	got B2 BE A5 76
+words 20000 (seed 7): exact 15169, wrong 4831 (75.84%)
+words 20000 (seed 11): exact 15054, wrong 4946 (75.27%)
