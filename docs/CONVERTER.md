@@ -62,6 +62,75 @@ In order of how much they can be trusted.
 - **The byte band 0x80-0x9F.** A legacy file is read as Windows-1252, so byte 0x85
   arrives as U+2026 and the tables store it that way. The composers answer in raw
   bytes. Spell one as the other and a whole band looks like a gap.
+- **Whitespace passes the converter unreported.** The Shree 7 and 4/5/6 tables write
+  the 15 Unicode spaces no face maps (U+1680, U+2000-200A, U+202F, U+205F, U+3000) as
+  the fonts' space; the Gujarati, Devanagari and Sanskrit ones write NEL, U+2028 and
+  U+2029 as a space, reported (the Bangla/Assamese ones keep U+2028/U+2029 as line
+  breaks, which a .txt writes as CR LF). A .txt would have written them '?', NEL as
+  its raw byte - a letter.
+
+## What the Shree 7 and 4/5/6 tables write for what the fonts cannot show
+
+Every Shree-Lipi 7 and 4/5/6 table (guj7, guj456, dev7, dev456, san7 and the five
+Bangla/Assamese ones) follows one output policy, applied by the shared generator
+code (`tools/Shared/ShreeNonIndic.cs`) - never by hand:
+
+- **P1** Indic text is written exactly as Shree's composer writes it; a word-final
+  virama is the visible halant (`tools/Shared/ShreeWordFinal.cs`).
+- **P2** A character the fonts draw as itself at its own code (`, . ( ) ? ! -`, the
+  script's digit at an ASCII digit) is written as that code, not reported.
+- **P3** A character whose own code the fonts draw as something else (a Latin letter,
+  `[` - an i-sign -, `<` - where Shree's composer writes ₹ -, ° - B0, a ra-sign) is
+  never written as that code: the fonts' look-alike if there is one, else left out
+  and reported.
+- **P3b** A character no code of the fonts draws visibly - ₹ (Shree's 3C has no
+  glyph), ૱, ૰ (its glyph sits at 8F, which Word draws as nothing), the vocalic-l
+  letters and signs (ઌ ૡ ૢ ૣ, ऌ ॡ ॢ ॣ, ॑, ৄ ৢ ৣ), the short e and o of Devanagari
+  (ऄ ऎ ऒ ॆ ॊ - the composer writes the base and the blank 90, which read back as
+  another letter: ॊ as ा), ৱ in the Bangla fonts (9E, a C1 code), a Bangla nukta on a
+  letter with no nukta spelling (all but জ ড় ঢ় য়: it stays after its letter) - is
+  passed through as itself and reported, never left out: Word draws it in a fallback
+  font (on a dotted circle of its own, for a sign) and the typist sees the right
+  character. A reph is written before such a sign, on its letter (ર્કૢ = 4C 24 AE
+  U+0AE2, र्कॊ = 48 A9 24 U+094A, র্কৄ = 41 A2 A1 U+09C4). Typing
+  sends it as Unicode (Gujarati Ctrl+Shift+1 then `$` types ₹). The tables' checks
+  compare with the composer on the table as the composer spells (the character
+  written as nothing, `NonIndic.AsComposer`) and prove the real table is exactly
+  that plus the character (`NonIndic.CheckPassThrough`). The Sanskrit fonts' missing
+  nukta is the one exception: the composer drops it, the rules can only carry it
+  before its letter, so the letter is written as the composer writes it and the
+  nukta is left out and reported.
+- **P4** A code Word or RichEdit draws as nothing (the C1 codes 81 8D 8F 90 9D) is
+  never written: another code of the same glyph, an equivalent spelling, the ASCII
+  look-alike, or left out and reported. The control characters - C0 but TAB LF VT
+  FF CR, DEL, C1 - are left out and reported: Word draws them as nothing, and a .txt
+  would write a stray U+0092 (’ mis-decoded from Windows-1252) as byte 92, થ.
+- **P5** Reading back accepts every spelling we or Shree ever wrote, the passed-through
+  characters included: each reads as itself and is not reported (the reverse tables
+  have a pair to itself for every character the forward table passes through,
+  `NonIndic.PassedThrough`), and a reph still moves past a vocalic-l sign written the
+  older way. 3C, where Shree's composers write ₹, reads ₹ in every script. In the 7
+  Bangla/Assamese fonts the 7 composer's own raw codes read as their text: ঃ 40 (the
+  hook there) wherever no letter the hook joins follows it, ্ন 97 (৺ there) straight
+  after a letter, its dashes 2D FF 2D (FF is ড়্গ there); and the table shipped before
+  the split, which wrote গ্ন as 4E A5 in the 4/5/6 fonts, reads গ্ন there.
+- **P6** Typing, RTF/clipboard, .docx and .txt carry the same code points. A .txt
+  writes U+0080-U+00FF as their raw bytes and leaves out (never '?') a character no
+  Windows-1252 byte holds - one passed through, which the converter has reported.
+
+What is reported is told apart (`ConversionResult`): `LeftOutCharacters` - not in the
+text as itself (left out, or a stand-in the fonts draw: · and ∙ as the large bullet B7,
+reported in every script) - and `KeptCharacters` - in the text as itself (P3b, or a code
+a reverse table could not read). The Converter screen says which is which, and which
+characters a .txt had no Windows-1252 byte for; the typing engine logs both.
+
+A composer row that is its carrier, not text, is not learned: Bangla া.ে = E0 EC and
+ৗ.ে = EF EC (the composer asked for a lone sign on '.' and dropped the '.') made every
+'.' between a syllable ending in া ো ৗ ৌ and one with ে ো ৌ disappear (ডা.সেন).
+
+Known and left as they are: RichEdit/WordPad draws U+0152 U+0153 U+0160 U+0161
+U+0178 U+0192 as Latin letters (it rebinds them to charset 238, Arial) where Word
+draws the font's glyph; Bangla প and দ are U+0161 and U+0192.
 
 ## Checking the tables
 

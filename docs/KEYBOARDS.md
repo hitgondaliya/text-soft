@@ -90,6 +90,14 @@ Sixteen keyboards have a chart but no capture: the vendor documents them and
 ships no runtime file for them (Modular in every script, Gujarati Ekl, Malayalam
 Typewri1, Telugu Applen). They are complete from their charts.
 
+A link key - code 64 in a vendor file (the tutor's "Lk"), the virama; code D7
+("Hf"), virama + ZWJ - is typed as such on every Gujarati keyboard; six keys fell
+through to something else and were set (scratchpad r3\guj-fix2\linkfix.js). On
+Phonetic every consonant key already types its virama: a link key struck after a
+letter that has its virama adds only its joiner (the engine's Emit, and
+TypingOrder.Compose for keyboards typed out of Unicode's order), so k Q k a is
+ક્‍ક, BC 4C 24 in SHREE-GUJ7 and SHREE-GUJ, as Shree writes the codes 73 D7 73.
+
 ## The order a keyboard is typed in
 
 A chart shows how a sign goes onto a letter once, on ka, and that run is all the
@@ -118,3 +126,54 @@ script, Malayalam Typewri1, Telugu Applen, a key of Hindi Remington) had sign
 keys that appear only in a run on ka and typed nothing alone; each now types the
 sign its run shows. And Gujarati was the one script without the rupee on
 Ctrl+Shift+1 then `$` - every keyboard now has it there, as all the others do.
+In a Shree-Lipi 7 or 4/5/6 font, which has no rupee sign (Shree's own composer
+writes 3C, where the fonts have no glyph), the key types ₹ itself, U+20B9, and Word
+draws it in a fallback font - never nothing (the output policy, P3b, in
+docs/CONVERTER.md).
+
+## Importing a typist's own Shree keyboard
+
+Keyboards -> "Import Shree-Lipi file..." reads a 406-byte `.GUJ`/`.DEV`/... file
+(`ShreeKeyboardFile`) through `assets/config/shree-kbd/<SCRIPT>.json`, which says
+what each of Shree's internal codes types. That table was read out of Shree's
+Unicode composer, and a few codes only its legacy-font composer types: a client's
+BPMK1 put the ru and ruu ligatures (E9, EA) on Shift+5 and 2, and the import left
+both empty. Two rules came out of it:
+
+- A code the table cannot read is named in the import's summary ("type nothing
+  here: Shift+5"), never dropped without a word. When one turns up, ask the X
+  composer what it types (`tools/KbdCapture --family X`), add the script's glyph
+  offset, look the glyph up in `mappings/shree-<x>-to-unicode.json`, and add the
+  code to the table.
+- A layer the file leaves empty is written `""`, which types nothing (and the key
+  is swallowed). A layer that is simply not set (`null`) means "Shift types the
+  normal character" - right for our own layouts, wrong for an import, where it
+  made Shift+5 type the 5 key's letter. The keyboard designer writes `""` too when
+  a layer is cleared while the other still types.
+
+Backspace takes back exactly the last keystroke (`TypingEngine._undo`, one state of
+the whole engine per key): Shift+A's half letter બ્ whole, one key inside a chart run
+(InScript k s Backspace leaves ક), a key that typed nothing (an empty slot, an unused
+letter, a character the font cannot show), and - until the caret moves or a key goes
+to the application - back into a word that a key of ours finished: a mark typed
+through the font's table ('"' is 22 22), a fixed key or a run on the layer of the Eng
+keyboard (Ctrl+Space n is ઙ્, taken back whole). A shortcut never rewrites the word:
+the half form Shree shows while a virama waits stays, and nothing is sent under the
+held Ctrl, Alt or Windows key.
+
+### The two shapes of ruu, and the keys for them
+
+Shree's Gujarati fonts draw ruu twice: the old shape (U+E3CA, like a 3 with a
+tail) and the new looped one (U+E3C6), plus ru (U+E3C5). Ra then the uu sign
+gives neither in Shree's own legacy typing - its keyboards have keys for them
+(old ruu: ITR Shift+H, InScript Shift+J, Remington 1 Shift+Z, Script Shift+?, Roma
+Shift+-, Crtronic Shift+;, and Ctrl+Space on Akshar x, Asterix j, BPMK v, DOE o,
+MTNK l, Newroma l/b, Phonetic r/b, Remington and Remington 2 v, Typewriter a; new
+ruu: Typewriter Shift+;, Phonetic Shift+4, DOE Ctrl+Space n; ru: Typewriter
+Shift+3, Phonetic Shift+2, DOE Ctrl+Space b). The charts drew those keys as
+pictures, so every one of them was missing here; they are back.
+
+Unicode has one ruu. The new shape is written `રૂ` + U+FE00 (variation selector
+1, invisible): `unicode-to-shree-gujx` gives it U+E3C6, plain `રૂ` stays U+E3CA,
+and a font with one ruu gets that one - `FontConverter` drops a variation
+selector its table has no entry for.

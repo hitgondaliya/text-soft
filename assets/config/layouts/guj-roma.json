@@ -18,7 +18,8 @@
     {
       "vk": 50,
       "base": "૨",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 51,
@@ -29,7 +30,8 @@
     {
       "vk": 52,
       "base": "૪",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 53,
@@ -40,7 +42,8 @@
     {
       "vk": 54,
       "base": "૬",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 55,
@@ -237,6 +240,7 @@
     {
       "vk": 189,
       "base": "-",
+      "shift": "રૂ",
       "deadKey": false
     },
     {
@@ -597,15 +601,27 @@
       "to": "ઞ્જ"
     },
     {
-      "keys": "k#orkØc",
+      "keys": "k#",
       "to": "કૅ"
     },
     {
-      "keys": "Øikorrfk",
+      "keys": "kØc",
+      "to": "કૅ"
+    },
+    {
+      "keys": "Øik",
       "to": "ર્ક"
     },
     {
-      "keys": "ka#orkaØc",
+      "keys": "rfk",
+      "to": "ર્ક"
+    },
+    {
+      "keys": "ka#",
+      "to": "કૉ"
+    },
+    {
+      "keys": "kaØc",
       "to": "કૉ"
     },
     {
@@ -667,6 +683,10 @@
     {
       "keys": "Øf",
       "to": "્‍"
+    },
+    {
+      "keys": "Ø3",
+      "to": "‐"
     }
   ],
   "escape": [
@@ -749,6 +769,10 @@
     {
       "keys": "f",
       "to": "્‍"
+    },
+    {
+      "keys": "3",
+      "to": "‐"
     }
   ],
   "symbols": [

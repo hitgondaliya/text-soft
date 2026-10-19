@@ -63,7 +63,7 @@ public partial class ConverterView : UserControl
         FlowDocument output;
         try
         {
-            output = RichTextConversion.Convert(input, _vm.ConvertText, _vm.OutputFontFamily, _vm.OutputFontSize, _vm.PlainText);
+            output = RichTextConversion.Convert(input, _vm.ConvertText, _vm.OutputFontFamily, _vm.OutputFontSize, _vm.PlainText, _vm.Scope);
         }
         catch (Exception ex)
         {

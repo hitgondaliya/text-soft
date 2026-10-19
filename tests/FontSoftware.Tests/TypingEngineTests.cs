@@ -207,22 +207,25 @@ public class TypingEngineTests : IDisposable
     public void CtrlSpaceEndsTheRunAndTypesNothing()
     {
         Press(VkY);                       // અ
-        Escape();                         // the Gujarati keyboards have no third layer
+        Escape();                         // Ctrl+Space types nothing by itself
         Assert.Equal("અ", _injector.Text);
 
-        Press(VkT);                       // no longer part of the run, so it is the bare matra
+        Press(VkT);                       // t has nothing on ITR's third layer: nothing, as on Shree
+        Assert.Equal("અ", _injector.Text);
+        Press(VkT);                       // and the next t is the keyboard's again: the bare matra
         Assert.Equal("અા", _injector.Text);
     }
 
     [Fact]
     public void ALetterKeyTheKeyboardDoesNotUseTypesNothing()
     {
-        var gujarati = _config.Languages.First(l => l.Id == "gu");
-        _engine.SetProfile(_config.GetLayout(gujarati.Layouts.First(l => l.Id == "gu-inscript")),
-                           gujarati.Name, "Unicode");
+        // A keyboard that does not use z: typing an English z into Gujarati text is never
+        // what the typist meant. (Shree's Gujarati InScript is not one: its file holds code
+        // 20 on z, and the composer types a space there - audit 2026-10-18, BUG-15.)
+        var layout = new FontSoftware.Core.Models.KeyboardLayout { Name = "No z" };
+        layout.Keys.Add(new FontSoftware.Core.Models.KeyMapping { VirtualKey = VkA, Base = "અ" });
+        _engine.SetProfile(layout, "Gujarati", "Unicode");
 
-        // Shree's own Gujarati InScript leaves z empty; typing an English z into
-        // Gujarati text is never what the typist meant.
         Assert.True(Press(VkZ), "the engine owns the key, it just types nothing");
         Assert.Equal("", _injector.Text);
     }
@@ -259,12 +262,19 @@ public class TypingEngineTests : IDisposable
         Assert.Equal("त्र", _injector.Text);
     }
 
+    /// <summary>
+    /// Ctrl+Space then a key its layer leaves empty types nothing, as on Shree (the keyboard
+    /// file's slot is FF and the composer answers nothing, audit 2026-10-18 BUG-15): it used
+    /// to type the key's own character (ITR Ctrl+Space 0 was ૦).
+    /// </summary>
     [Fact]
-    public void AKeyTheThirdLayerDoesNotDefineTypesNormally()
+    public void AKeyTheThirdLayerDoesNotDefineTypesNothing()
     {
         UseHindiItr();
         Escape();
-        Assert.True(Press(VkY));          // nothing on the layer, so y is still अ
+        Assert.True(Press(VkY), "the key is the engine's: it types nothing");
+        Assert.Equal("", _injector.Text);
+        TypeKeys("y");                    // the next key is the keyboard again
         Assert.Equal("अ", _injector.Text);
     }
 
@@ -834,5 +844,276 @@ public class TypingEngineTests : IDisposable
         UseGujarati("Itr");
         TypeKeys(keys);
         Assert.Equal(word, _injector.Text);
+    }
+
+    // ---- keyboards imported from Shree files, and Backspace ----
+
+    /// <summary>Backspace the way the application does it when the engine lets it through.</summary>
+    private void Backspace()
+    {
+        if (!Press(0x08)) _injector.SendBackspace(1);
+        Send(0x08, down: false);
+    }
+
+    /// <summary>A keyboard made the way an imported one is: no runs, half letters on Shift.</summary>
+    private void UseHalfLetterKeyboard()
+    {
+        var layout = new FontSoftware.Core.Models.KeyboardLayout { Name = "Imported" };
+        layout.Keys.Add(new FontSoftware.Core.Models.KeyMapping { VirtualKey = VkA, Base = "બ", Shift = "બ્" });
+        layout.Keys.Add(new FontSoftware.Core.Models.KeyMapping { VirtualKey = VkD, Base = "મ", Shift = "મ્" });
+        _engine.SetProfile(layout, "Gujarati", "Unicode");
+    }
+
+    /// <summary>
+    /// A client's own keyboard has nothing on Shift+5. Shree types nothing there;
+    /// the import's empty Shift used to mean "the same as 5", so Shift+5 typed પ.
+    /// </summary>
+    [Fact]
+    public void AShiftSlotTheShreeFileLeavesEmptyTypesNothing()
+    {
+        var f = new byte[FontSoftware.Core.Keyboards.ShreeKeyboardFile.Length];
+        for (int i = 32; i < 166; i++) f[i] = 0xFF;
+        for (int r = 0; r < 48; r++) { f[166 + r * 5] = 4; for (int k = 1; k < 5; k++) f[166 + r * 5 + k] = 0xFF; }
+        f['5'] = 0x77;                                   // પ on 5, nothing on Shift+5
+        var read = FontSoftware.Core.Keyboards.ShreeKeyboardFile.Decode(f, _config.GetShreeCodeTable("GUJ")!);
+        _engine.SetProfile(FontSoftware.Core.Keyboards.ShreeKeyboardFile.ToLayout(read, "Mine"), "Gujarati", "Unicode");
+
+        TypeKeys("5");
+        _down.Add(VkShift);
+        Assert.True(Press('5'), "a key the keyboard says types nothing is not handed to the application");
+        Send('5', down: false);
+        _down.Remove(VkShift);
+        TypeKeys("5");
+        Assert.Equal("પપ", _injector.Text);
+    }
+
+    /// <summary>
+    /// Legacy font, a keyboard with no runs: Backspace after Shift+A (બ્) took one
+    /// unit, the virama, and left a full બ - the letter plain A types.
+    /// </summary>
+    [Fact]
+    public void BackspaceAfterAHalfLetterInALegacyFontTakesTheWholeKeystroke()
+    {
+        UseHalfLetterKeyboard();
+        var toLegacy = _config.CreateConverterToLegacy("shree-gujx")!;
+        _engine.SetLegacyConverter(toLegacy, "SHREE-GUJX-1120");
+
+        TypeKeys("A");
+        Backspace();
+        Assert.Equal("", _injector.Text);
+        TypeKeys("a");
+        Assert.Equal(toLegacy.ConvertText("બ"), _injector.Text);
+    }
+
+    /// <summary>Two Backspaces take two keystrokes, not one keystroke and half of another.</summary>
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void EachBackspaceTakesAWholeKeystroke(bool legacy)
+    {
+        UseHalfLetterKeyboard();
+        if (legacy) _engine.SetLegacyConverter(_config.CreateConverterToLegacy("shree-gujx")!, "SHREE-GUJX-1120");
+        TypeKeys("AD");
+        Backspace();
+        Backspace();
+        Assert.Equal("", _injector.Text);
+    }
+
+    /// <summary>
+    /// After a Backspace the run is over. On Hindi InScript k is क and "k$" is र्क;
+    /// k, Backspace, $ used to carry the run on and "replace" a क that was no longer
+    /// there - taking the character before it instead. Now $ is the र् it types alone.
+    /// </summary>
+    [Fact]
+    public void BackspaceEndsTheRunInProgress()
+    {
+        UseHindi("InScript");
+        TypeKeys("jk");
+        Backspace();
+        TypeKeys("$");
+        Assert.Equal("रर्", _injector.Text);
+    }
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")] private static extern IntPtr GetForegroundWindow();
+    [System.Runtime.InteropServices.DllImport("user32.dll")] private static extern uint GetWindowThreadProcessId(IntPtr h, out uint pid);
+
+    /// <summary>
+    /// A layer that types nothing is swallowed - but not in an app the typist has
+    /// excluded (a password manager, Remote Desktop), which gets the raw key, as
+    /// every key there always has.
+    /// </summary>
+    [Fact]
+    public void AnEmptyLayerStillPassesThroughInAnExcludedApp()
+    {
+        IntPtr front = GetForegroundWindow();
+        if (front == IntPtr.Zero) return;               // no window in front to exclude
+        GetWindowThreadProcessId(front, out uint pid);
+        string name = System.Diagnostics.Process.GetProcessById((int)pid).ProcessName.ToLowerInvariant();
+
+        var layout = new FontSoftware.Core.Models.KeyboardLayout { Name = "Imported" };
+        layout.Keys.Add(new FontSoftware.Core.Models.KeyMapping { VirtualKey = VkK, Base = "ક", Shift = "" });
+        _engine.SetProfile(layout, "Gujarati", "Unicode");
+
+        _down.Add(VkShift);
+        Assert.True(Press(VkK), "outside an excluded app, a layer that types nothing is swallowed");
+        Send(VkK, down: false);
+        _engine.ExcludedProcesses.Add(name);
+        Assert.False(Press(VkK), "an excluded app gets the raw key");
+        Send(VkK, down: false);
+        _down.Remove(VkShift);
+    }
+
+    /// <summary>
+    /// A click can move the caret, which the keyboard hook never sees: the word in
+    /// progress is forgotten, and Backspace is the application's again - it used
+    /// to delete whole keystrokes of the old word from wherever the caret now was.
+    /// </summary>
+    [Fact]
+    public void AClickForgetsTheWordBeingTyped()
+    {
+        long clicks = 0;
+        _engine.Clicks = () => clicks;
+        UseHalfLetterKeyboard();
+        TypeKeys("AD");
+        clicks++;                                        // the typist clicks somewhere
+        Assert.False(Press(0x08), "after a click, Backspace belongs to the application");
+        Send(0x08, down: false);
+    }
+
+    // ---- ruu: the keys Shree's keyboards have for it, and its two shapes ----
+    // Shree's Gujarati fonts draw ruu twice: the old shape (U+E3CA, a 3 with a tail)
+    // and the new looped one (U+E3C6). Typing ra then uu gives neither in Shree -
+    // its keyboards have keys of their own for them (ITR Shift+H, Typewriter Shift+;),
+    // and the charts our layouts came from drew those keys as pictures, so they were
+    // missing from every Gujarati keyboard here. Unicode has one ruu; the new shape
+    // carries a variation selector so that a Shree font can still be given its glyph.
+
+    [Theory]
+    [InlineData("Itr", "H")]
+    [InlineData("InScript", "J")]
+    [InlineData("Remington 1", "Z")]
+    [InlineData("Script", "?")]
+    public void TheOldRuuHasItsKeyAgain(string keyboard, string keys)
+    {
+        UseGujarati(keyboard);
+        TypeKeys(keys);
+        Assert.Equal("રૂ", _injector.Text);
+    }
+
+    [Fact]
+    public void TheOldRuuIsTheOldGlyphInAShreeFont()
+    {
+        UseGujarati("Itr");
+        _engine.SetLegacyConverter(_config.CreateConverterToLegacy("shree-gujx")!, "SHREE-GUJX-1120");
+        TypeKeys("H");
+        Assert.Equal("\uE3CA", _injector.Text);
+    }
+
+    [Fact]
+    public void TheNewRuuIsTheNewGlyphInAShreeFont()
+    {
+        UseGujarati("Typewriter");
+        _engine.SetLegacyConverter(_config.CreateConverterToLegacy("shree-gujx")!, "SHREE-GUJX-1120");
+        TypeKeys(":");
+        Assert.Equal("\uE3C6", _injector.Text);
+    }
+
+    /// <summary>A font with one ruu gets that one; the variation selector never reaches it.</summary>
+    [Fact]
+    public void AFontWithOneRuuGetsItForBothShapes()
+    {
+        UseGujarati("Typewriter");
+        var toLegacy = _config.CreateConverterToLegacy("gopika-guj")!;
+        _engine.SetLegacyConverter(toLegacy, "Gopika");
+        TypeKeys(":");
+        Assert.Equal(toLegacy.ConvertText("રૂ"), _injector.Text);
+        Assert.DoesNotContain('\uFE00', _injector.Text);
+    }
+
+    [Fact]
+    public void TheRuKeyTypesRu()
+    {
+        UseGujarati("Typewriter");
+        TypeKeys("#");
+        Assert.Equal("રુ", _injector.Text);
+    }
+
+    // ---- Shree-Lipi 7.0 and 4.0/5.0/6.0: what the typist's keys put in the document ----
+    // The bytes are what Shree's own Shree-Lipi 7 composer writes for the same text
+    // (its Tutor DLL, 2026-10-10). The old table wrote half ga + full ra for ગ્ર
+    // (C1 66), which read back as ગ્ર - so the round-trip tests passed - but the
+    // fonts draw it differently from Shree's own ra-sign (4E B0).
+
+    [Theory]
+    [InlineData("Bpmk", "u1", "shree-guj7", "SHREE-GUJ7-0750", "4E B0")]       // ગ્ર, the client's case
+    [InlineData("Bpmk", "u1", "shree-guj456", "SHREE-GUJ-0750", "4E B0")]
+    [InlineData("Bpmk", "u1f", "shree-guj7", "SHREE-GUJ7-0750", "4E B0 70")]   // ગ્રા
+    [InlineData("Itr", "rf", "shree-guj7", "SHREE-GUJ7-0750", "71 4C 24")]     // કિ: i-sign glyph, ka, spacer
+    [InlineData("Itr", "bo", "shree-guj7", "SHREE-GUJ7-0750", "64 AE")]        // ર્મ: the reph after its letter
+    [InlineData("Itr", "bo", "shree-guj456", "SHREE-GUJ-0750", "64 AE")]   // (all these codes are below 80 or above 9F: char = byte)
+    public void AShreeFontGetsTheBytesShreeItselfWrites(string keyboard, string keys, string encoding, string family, string hex)
+    {
+        UseGujarati(keyboard);
+        _engine.SetLegacyConverter(_config.CreateConverterToLegacy(encoding)!, family);
+        TypeKeys(keys);
+        Assert.Equal(hex, string.Join(" ", _injector.Text.Select(c => ((int)c).ToString("X2"))));
+    }
+
+    // ---- a virama that ends a word, in a Shree-Lipi 7 font ----
+    // The engine converts the word being typed again on every key, so between the Link key
+    // (Shift+T on ITR: ્ / ्) and the next letter the word ends in a virama. That is drawn
+    // with the visible halant, as Shree's composer writes C + virama + ZWNJ - not the half
+    // form it shows while it waits, which drawn alone is a broken letter - and the next
+    // letter turns it into the conjunct. A space after the Link leaves the halant in place.
+
+    /// <summary>Use the ITR keyboard of a language and a Shree-Lipi 7 font.</summary>
+    private void UseItrInShree(string language, string encoding, string family)
+    {
+        var lang = _config.Languages.First(l => l.Id == language);
+        _engine.SetProfile(_config.GetLayout(lang.Layouts.First(l => l.Id == (language == "gu" ? "guj-itr" : "dev-itr"))), lang.Name, "Unicode");
+        _engine.SetLegacyConverter(_config.CreateConverterToLegacy(encoding)!, family);
+    }
+
+    /// <summary>Legacy text as the bytes a Windows-1252 document holds.</summary>
+    private static string Bytes(string legacy)
+    {
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        return string.Join(" ", Encoding.GetEncoding(1252).GetBytes(legacy).Select(b => b.ToString("X2")));
+    }
+
+    // In a Shree-Lipi 7 Gujarati font (2026-10-18, BUG-13) the word still being typed shows the half form
+    // Shree shows while it waits (સ્ = F5, as BPMK Shift+: types it); the Devanagari table does not take the
+    // engine's waiting marker yet, so it keeps the halant until the next letter.
+    [Theory]
+    [InlineData("gu", "shree-guj7", "SHREE-GUJ7-0750", "F5", "F5 73")]      // half સ while it waits, then સ્ત: half સ + ત
+    [InlineData("gu", "shree-guj456", "SHREE-GUJ-0750", "F5", "F5 73")]
+    [InlineData("hi", "shree-dev7", "SHREE-DEV7-0700", "67 B2", "F1 56")]   // स् (स्+ZWNJ), then स्त: half स + त
+    public void TheLinkShowsTheHalantUntilTheNextLetterJoinsIt(string language, string encoding, string family, string afterLink, string conjunct)
+    {
+        UseItrInShree(language, encoding, family);
+        TypeKeys("mT");                       // સ / स, then the Link
+        Assert.Equal(afterLink, Bytes(_injector.Text));
+        TypeKeys(";");                        // ત / त
+        Assert.Equal(conjunct, Bytes(_injector.Text));
+    }
+
+    [Theory]
+    [InlineData("gu", "shree-guj7", "SHREE-GUJ7-0750", "68 70 BC", "68 70 4C B9 24", "4C 24")]   // વાક્: half ક while it waits, the halant once the word ends
+    [InlineData("hi", "shree-dev7", "SHREE-DEV7-0700", "64 6D 48 B2 24", "64 6D 48 B2 24", "48 24")]   // वाक् then क: was 64 6D 8A, a half क
+    public void AWordThatEndsInTheLinkKeepsTheHalant(string language, string encoding, string family, string waiting, string word, string ka)
+    {
+        UseItrInShree(language, encoding, family);
+        TypeKeys("JtfT");                     // વ/व, ા/ा, ક/क, the Link
+        Assert.Equal(waiting, Bytes(_injector.Text));
+
+        // The space is the application's: the engine lets it through and starts a new word -
+        // after the word that ends there has its halant.
+        Assert.False(Press(VkSpace));
+        Assert.Equal(word, Bytes(_injector.Text));
+        int at = _injector.Text.Length;
+        Send(VkSpace, down: false);
+        TypeKeys("f");
+        string document = _injector.Text.Insert(at, " ");
+        Assert.Equal(word + " 20 " + ka, Bytes(document));
     }
 }

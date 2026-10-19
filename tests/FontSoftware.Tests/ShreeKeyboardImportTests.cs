@@ -217,4 +217,94 @@ public class ShreeKeyboardImportTests : IDisposable
         Assert.False(vm.Import(file));
         Assert.Contains(".GUJ", vm.Status);
     }
+
+    // ---- a client's own keyboard (BPMK1, from Shree's Keyboard Generator) ----
+    // It put the ru and ruu ligatures on Shift+5 and 2. Shree types those codes
+    // through its legacy-font composer only, so the table - read from the Unicode
+    // composer - had no text for them: Shift+5 came in empty and typed the 5 key's
+    // letter, and 2 typed an English 2.
+
+    /// <summary>E9 and EA are Shree's ru and ruu ligatures, 7E its other ruu (its legacy glyphs E3C5, E3C6, E3CA).</summary>
+    [Fact]
+    public void TheRuLigaturesComeAcross()
+    {
+        var f = Blank();
+        f['%'] = 0xE9;
+        f['2'] = 0xEA;
+        f[0x80 + ShreeKeyboardFile.EscapeKeys.IndexOf('v')] = 0x7E;
+        var read = ShreeKeyboardFile.Decode(f, Table("GUJ"));
+        Assert.Equal("રુ", read.Keys['%']);
+        Assert.Equal("રૂ\uFE00", read.Keys['2']);   // the new shape: a glyph of its own in Shree fonts
+        Assert.Equal("રૂ", read.Escape['v']);
+        Assert.Empty(read.Unknown);
+    }
+
+    /// <summary>A code the table cannot read is named, not dropped without a word.</summary>
+    [Fact]
+    public void ACodeTheTableCannotReadIsReported()
+    {
+        var table = Table("GUJ");
+        var f = Blank();
+        f['%'] = Unknown(table);
+        f[0x80 + ShreeKeyboardFile.EscapeKeys.IndexOf('3')] = Unknown(table);
+        var read = ShreeKeyboardFile.Decode(f, table);
+        Assert.Contains('%', read.Unknown);
+        Assert.Contains('3', read.UnknownOnEscape);
+        Assert.False(read.Keys.ContainsKey('%'));
+    }
+
+    /// <summary>A layer the file leaves empty stays empty: Shift+5 must not borrow the letter on 5.</summary>
+    [Fact]
+    public void ALayerTheFileLeavesEmptyTypesNothing()
+    {
+        var f = Blank();
+        f['5'] = 0x77;                                   // પ, and nothing on Shift+5
+        var layout = ShreeKeyboardFile.ToLayout(ShreeKeyboardFile.Decode(f, Table("GUJ")), "Mine");
+        Assert.Equal("પ", layout.Find('5')?.Base);
+        Assert.Equal("", layout.Find('5')?.Shift);
+    }
+
+    [Fact]
+    public void TheImportNamesTheKeysItCouldNotRead()
+    {
+        var table = Table("GUJ");
+        var f = Gujarati();
+        f['%'] = Unknown(table);
+        string file = Path.Combine(_dir, "MINE.GUJ");
+        File.WriteAllBytes(file, f);
+        var vm = new KeyboardEditorViewModel(_bundle, new UserKeyboards(Path.Combine(_dir, "store")), NullLog.Instance)
+        {
+            SelectedLanguage = _bundle.Languages.First(l => l.Id == "gu"),
+        };
+        Assert.True(vm.Import(file), vm.Status);
+        Assert.Contains("Shift+5", vm.Status);
+    }
+
+    /// <summary>Shree's own files write 0x00 where their charts show nothing; it is not a character we failed to read.</summary>
+    [Fact]
+    public void CodeZeroIsNothingNotAnUnreadCharacter()
+    {
+        var f = Blank();
+        f['$'] = 0x00;
+        var read = ShreeKeyboardFile.Decode(f, Table("GUJ"));
+        Assert.Empty(read.Unknown);
+        Assert.False(read.Keys.ContainsKey('$'));
+    }
+
+    /// <summary>
+    /// A key the file gives only a character this version cannot read types nothing,
+    /// as the summary says - it used to be left out and type its English character.
+    /// </summary>
+    [Fact]
+    public void AKeyWithOnlyAnUnreadCharacterTypesNothing()
+    {
+        var table = Table("GUJ");
+        var f = Blank();
+        f['`'] = Unknown(table);
+        var layout = ShreeKeyboardFile.ToLayout(ShreeKeyboardFile.Decode(f, table), "Mine");
+        var key = layout.Find(192);
+        Assert.NotNull(key);
+        Assert.Equal("", key!.Base);
+        Assert.Equal("", key.Shift);
+    }
 }

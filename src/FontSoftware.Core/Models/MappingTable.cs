@@ -10,6 +10,16 @@ public sealed class MappingPair
 
     [JsonPropertyName("to")]
     public string To { get; set; } = string.Empty;
+
+    /// <summary>
+    /// The target cannot show <see cref="From"/>: the converter writes <see cref="To"/>
+    /// in its place (usually nothing) and still reports <see cref="From"/> as unmapped.
+    /// For a legacy font whose code for the character draws a letter - passing it
+    /// through would print that letter, and leaving it out silently would lose it.
+    /// </summary>
+    [JsonPropertyName("unmapped")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public bool Unmapped { get; set; }
 }
 
 /// <summary>

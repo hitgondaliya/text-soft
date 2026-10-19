@@ -59,6 +59,17 @@ public sealed class FontConverter
 
     public MappingTable Table => _table;
 
+    /// <summary>
+    /// A noncharacter the typing engine puts after a word it is still typing, when the table has a
+    /// pair for it (<see cref="KnowsWaiting"/>): a virama before it is waiting for its next letter,
+    /// so a Shree table writes the half form or the reph Shree's composer shows meanwhile - not the
+    /// visible halant of a word that ends there. The pair writes nothing.
+    /// </summary>
+    public const char WaitingMark = '﷯';
+
+    /// <summary>True when the table reads <see cref="WaitingMark"/> (the Shree-Lipi 7 and 4/5/6 Gujarati tables).</summary>
+    public bool KnowsWaiting => _byFirstChar.ContainsKey(WaitingMark);
+
     /// <summary>Convenience overload that discards the unmapped report.</summary>
     public string ConvertText(string input) => Convert(input).Text;
 
@@ -72,6 +83,8 @@ public sealed class FontConverter
 
         var sb = new StringBuilder(staged.Length);
         var unmapped = new HashSet<string>(StringComparer.Ordinal);
+        var leftOut = new HashSet<string>(StringComparer.Ordinal);
+        var kept = new HashSet<string>(StringComparer.Ordinal);
 
         int i = 0;
         while (i < staged.Length)
@@ -80,7 +93,27 @@ public sealed class FontConverter
             if (match is not null)
             {
                 sb.Append(match.To);
+                // A pair for a character the target cannot show: reported all the same - as kept when the
+                // pair writes the character itself and it is no code of an 8-bit font (U+0100 and up: ₹ in a
+                // Shree font, drawn in a fallback font), else as left out or written as a stand-in (a code
+                // of the font, a space, U+FFFD).
+                if (match.Unmapped)
+                {
+                    unmapped.Add(match.From);
+                    if (match.To.Contains(match.From, StringComparison.Ordinal) && match.From.Any(c => c > (char)0xFF))
+                        kept.Add(match.From);
+                    else
+                        leftOut.Add(match.From);
+                }
                 i += match.From.Length;
+            }
+            else if (staged[i] is >= '\uFE00' and <= '\uFE0F')
+            {
+                // A variation selector picks one shape of what comes before it (the new
+                // ruu, U+E3C6, against the old one Shree fonts draw for plain રૂ). A table
+                // that has no entry for it has one shape only: it is dropped, never
+                // passed into a legacy font as a character of its own.
+                i++;
             }
             else
             {
@@ -90,7 +123,10 @@ public sealed class FontConverter
                 string ch = staged.Substring(i, len);
                 sb.Append(ch);
                 if (!char.IsWhiteSpace(staged[i]))
+                {
                     unmapped.Add(ch);
+                    kept.Add(ch);
+                }
                 i += len;
             }
         }
@@ -99,7 +135,9 @@ public sealed class FontConverter
         return new ConversionResult
         {
             Text = result,
-            UnmappedCharacters = unmapped.ToArray()
+            UnmappedCharacters = unmapped.ToArray(),
+            LeftOutCharacters = leftOut.ToArray(),
+            KeptCharacters = kept.ToArray()
         };
     }
 

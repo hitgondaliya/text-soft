@@ -76,6 +76,11 @@ foreach (var lang in bundle.Languages)
                 if (string.IsNullOrEmpty(combo.Dead) || string.IsNullOrEmpty(combo.Next))
                     warnings.Add($"layout '{layoutRef.Id}': a dead-key combination is missing 'dead' or 'next'.");
             }
+            // A chart cell "A or B" is two ways to type a character, A and B - not one run of
+            // keys "AorB" that no typist strikes, whose prefixes change what nearby keys type.
+            foreach (var seq in layout.Sequences)
+                if (seq.Keys.Length > 2 && seq.Keys.IndexOf("or", 1, StringComparison.Ordinal) is var at && at > 0 && at < seq.Keys.Length - 2)
+                    errors.Add($"layout '{layoutRef.Id}': the key run '{seq.Keys}' holds a literal 'or' - a chart's 'A or B' is two runs.");
         }
         catch (ConfigException ex)
         {
@@ -108,7 +113,10 @@ foreach (var table in bundle.MappingTables)
     // even reporting it unmapped. Drop the pair instead and let it fall through -
     // unless encoding-limits records that the target font cannot show the character
     // (its byte is a letter there), where deleting it beats printing that letter.
-    foreach (var p in table.Pairs.Where(p => string.IsNullOrEmpty(p.To)))
+    // A pair marked "unmapped" is reported to the user as unmapped, so it is not silent.
+    // (A noncharacter U+FDD0-FDEF is a marker the table's own rules or the typing engine put in the
+    // text - never text - and its pair rightly writes nothing.)
+    foreach (var p in table.Pairs.Where(p => string.IsNullOrEmpty(p.To) && !p.Unmapped && !p.From.All(c => c is >= '﷐' and <= '﷯')))
     {
         bool declared = p.From.Length == 1 && limits.TryGetValue(table.TargetFontId, out var cannot)
                         && cannot.Contains(((int)p.From[0]).ToString("X4"));

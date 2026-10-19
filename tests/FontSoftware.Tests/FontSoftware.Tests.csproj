@@ -34,4 +34,11 @@
     </Content>
   </ItemGroup>
 
+  <!-- Test fixtures (e.g. what Shree-Lipi's own composers write), read from Data/ next to the tests. -->
+  <ItemGroup>
+    <None Update="Data\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace FontSoftware.Core.Models;
 
@@ -49,15 +50,39 @@ public sealed class FontLayout
     [JsonPropertyName("replaces")]
     public List<string>? Replaces { get; set; }
 
+    /// <summary>
+    /// Which fonts belong to this layout, as a pattern over their family name, when
+    /// the encoding alone cannot say: Shree-Lipi 7.0 (SHREE-GUJ7-0750) and
+    /// Shree-Lipi 4.0/5.0/6.0 (SHREE-GUJ-0750) are two families, and both used to
+    /// be listed under either. Matched without regard to case.
+    /// </summary>
+    [JsonPropertyName("families")]
+    public string? Families { get; set; }
+
+    private Regex? _families;
+
     /// <summary>True when the layout covers more than one encoding.</summary>
     [JsonIgnore]
     public bool IsCombined => Encodings is { Count: > 1 };
 
-    /// <summary>Does this font belong to the layout? Combined layouts go by encoding; others by id.</summary>
-    public bool Includes(FontAsset font) =>
-        Encodings is { Count: > 0 }
-            ? Encodings.Contains(font.ConversionKey, StringComparer.OrdinalIgnoreCase)
-            : string.Equals(font.Id, FontId, StringComparison.OrdinalIgnoreCase);
+    /// <summary>
+    /// Does this font belong to the layout? A combined layout goes by encoding, a
+    /// layout with <see cref="Families"/> by family name; any other by its own font
+    /// and - given <paramref name="ownKey"/>, the conversion key of that font -
+    /// every font converting the same way (all the ShreeLipi-Ex faces).
+    /// </summary>
+    public bool Includes(FontAsset font, string? ownKey = null)
+    {
+        if (Encodings is { Count: > 0 })
+            return Encodings.Contains(font.ConversionKey, StringComparer.OrdinalIgnoreCase);
+        if (!string.IsNullOrEmpty(Families))
+        {
+            _families ??= new Regex(Families, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+            return _families.IsMatch(font.Family ?? string.Empty);
+        }
+        return string.Equals(font.Id, FontId, StringComparison.OrdinalIgnoreCase)
+               || (ownKey is not null && string.Equals(font.ConversionKey, ownKey, StringComparison.OrdinalIgnoreCase));
+    }
 
     /// <summary>True when this is the universal Unicode layout (always works).</summary>
     [JsonIgnore]

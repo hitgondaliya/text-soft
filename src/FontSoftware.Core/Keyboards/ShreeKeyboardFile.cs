@@ -76,6 +76,17 @@ public sealed class ShreeKeyboard
     /// empty, and the import says which they are.
     /// </summary>
     public List<char> Unreadable { get; } = new();
+
+    /// <summary>
+    /// Keys, on the printed layers, holding a code the table has no text for. The
+    /// table is what Shree's Unicode composer answers, and a few codes only its
+    /// legacy-font composer types (a client's own keyboard had the ru and ruu
+    /// ligatures on Shift+5 and 2). They type nothing here, and the import says so.
+    /// </summary>
+    public List<char> Unknown { get; } = new();
+
+    /// <summary>The same, on the Ctrl+Space layer (keyed like <see cref="Escape"/>).</summary>
+    public List<char> UnknownOnEscape { get; } = new();
 }
 
 /// <summary>
@@ -145,16 +156,18 @@ public static class ShreeKeyboardFile
 
         var keyboard = new ShreeKeyboard();
         for (char c = '!'; c <= '~'; c++)
-            Read(file, file[c], c, table, keyboard, keyboard.Keys);
+            Read(file, file[c], c, table, keyboard, keyboard.Keys, keyboard.Unknown);
         for (int i = 0; i < EscapeKeys.Length; i++)
-            Read(file, file[EscapeStart + i], EscapeKeys[i], table, keyboard, keyboard.Escape);
+            Read(file, file[EscapeStart + i], EscapeKeys[i], table, keyboard, keyboard.Escape, keyboard.UnknownOnEscape);
         return keyboard;
     }
 
     private static void Read(byte[] file, byte code, char key, ShreeCodeTable table,
-                             ShreeKeyboard keyboard, SortedDictionary<char, string> into)
+                             ShreeKeyboard keyboard, SortedDictionary<char, string> into, List<char> unknown)
     {
-        if (code == 0xFF) return;
+        // 0xFF is the generator's "nothing here"; Shree's own files use 0x00 the same
+        // way (SULIPI.DEV, BPMK.DEV), and its composer answers nothing for either.
+        if (code is 0xFF or 0x00) return;
         int slot = Slot(code);
         if (slot >= 0 && table.Text(code) is null)
         {
@@ -165,9 +178,11 @@ public static class ShreeKeyboardFile
             into[key] = conjunct;
             return;
         }
-        // A code the table has no text for is one Shree types nothing for either:
-        // the table holds every code its composer answers. The key stays empty.
+        // The table holds every code Shree's Unicode composer answers. A code it has
+        // no text for may still type a glyph in Shree's own legacy fonts, so the key
+        // stays empty and is named in the import's summary rather than dropped quietly.
         if (table.Text(code) is { Length: > 0 } text) into[key] = text;
+        else unknown.Add(key);
     }
 
     private static int Slot(byte code) => code switch
@@ -255,8 +270,16 @@ public static class ShreeKeyboardFile
         {
             keyboard.Keys.TryGetValue(normal, out string? baseText);
             keyboard.Keys.TryGetValue(shift, out string? shiftText);
-            if (baseText is null && shiftText is null) continue;
-            layout.Keys.Add(new KeyMapping { VirtualKey = vk, Base = baseText, Shift = shiftText });
+            // A key the file gives nothing on either layer stays the English key. One
+            // it does give a character this version cannot read types nothing, as the
+            // import's summary says - not the English character.
+            bool unread = keyboard.Unknown.Contains(normal) || keyboard.Unknown.Contains(shift)
+                       || keyboard.Unreadable.Contains(normal) || keyboard.Unreadable.Contains(shift);
+            if (baseText is null && shiftText is null && !unread) continue;
+            // A layer the file leaves empty types nothing on Shree. Written as "", not
+            // left out: a missing Shift means "the same as normal" to the engine, and
+            // on the client's BPMK1 that made Shift+5 type the 5 key's letter.
+            layout.Keys.Add(new KeyMapping { VirtualKey = vk, Base = baseText ?? "", Shift = shiftText ?? "" });
         }
 
         foreach (var (key, text) in keyboard.Escape)

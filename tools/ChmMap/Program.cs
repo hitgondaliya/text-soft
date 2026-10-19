@@ -345,6 +345,23 @@ static List<Pair> ParsePairs(string html)
         });
         text = DecodeBasicEntities(text);
         bool isLabel = labels.Contains(Regex.Replace(text, "\\s+", " ").Trim());
+        // A cell can give two ways to type the character: "k or jdk" (InScript ર્ક). Each is a
+        // keystroke run of its own - stripping the spaces made one run "korjdk" of them that no
+        // typist strikes, whose prefixes then changed what the keys before it typed (78 such runs
+        // in 18 Gujarati layouts, 114 in 34 layouts of five scripts; audit 2026-10-18, BUG-07).
+        var alternatives = Regex.Split(text.Trim(), "\\s+or\\s+");
+        bool isCharCell = uni.Any(ch => ch >= 'ऀ' && ch <= '෿');
+        if (alternatives.Length > 1 && pendingUni is not null && !isLabel && !isCharCell)
+        {
+            foreach (var alt in alternatives)
+            {
+                string keys = Regex.Replace(alt, "\\s+", "");
+                if (keys.Length is > 0 and <= 10 && keys.All(c => c <= (char)0x7E || c == EscapeLayer.Mark))
+                    pairs.Add(new Pair { Key = keys, Uni = pendingUni });
+            }
+            pendingUni = null;
+            continue;
+        }
         // Keystrokes never contain spaces; the CHM sometimes formats them with one
         // (e.g. Bengali i-matra key "k f"). Strip all whitespace so they decompose.
         text = Regex.Replace(text, "\\s+", "");

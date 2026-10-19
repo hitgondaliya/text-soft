@@ -43,9 +43,17 @@ public static class FileConversion
         FontFamily targetFont,
         string targetFontName,
         bool plainText,
-        Action<string>? readWhole = null)
+        Action<string>? readWhole = null,
+        Func<string, bool>? isSourceFont = null)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+        // Only the text in the source's script is converted and set in the target font:
+        // English in a Unicode document stays as it is, in its own font (Shree has no codes
+        // for Latin letters - set in a Shree font, "Email" drew ઊળફશલ). From Unicode, the
+        // script is told by its characters; from a legacy font, by the run's font when the
+        // caller says which fonts are the source's (isSourceFont).
+        // (Unicode to Unicode - the digit style, the dictionary - still takes every run.)
+        var scope = sourceIsUnicode && targetIsUnicode ? RunScope.All : new RunScope(sourceIsUnicode, isSourceFont);
         switch (Path.GetExtension(inputPath).ToLowerInvariant())
         {
             case ".txt":
@@ -60,14 +68,14 @@ public static class FileConversion
                 }
                 else
                 {
-                    ConvertRtf(inputPath, outputPath, convert, targetFont);
+                    ConvertRtf(inputPath, outputPath, convert, targetFont, scope);
                 }
                 break;
             case ".docx":
-                ConvertDocx(inputPath, outputPath, convert, targetFontName);
+                ConvertDocx(inputPath, outputPath, convert, targetFontName, scope);
                 break;
             case ".doc":
-                ConvertDoc(inputPath, outputPath, convert, targetFontName, readWhole);
+                ConvertDoc(inputPath, outputPath, convert, targetFontName, readWhole, scope);
                 break;
             default:
                 throw new NotSupportedException($"Unsupported file type: {Path.GetExtension(inputPath)}");
@@ -96,13 +104,53 @@ public static class FileConversion
     private static void WriteTxt(string path, string text, bool unicode)
     {
         if (unicode) File.WriteAllText(path, text, new UTF8Encoding(true));
-        else File.WriteAllBytes(path, Cp1252.GetBytes(text));
+        else File.WriteAllBytes(path, LegacyBytes(text));
     }
 
-    private static void ConvertRtf(string inputPath, string outputPath, Func<string, string> convert, FontFamily targetFont)
+    /// <summary>
+    /// Legacy text as the bytes of a .txt file. An 8-bit font holds each of its codes at the
+    /// code point of the same number, U+0000-U+00FF, the C1 controls U+0080-U+009F included
+    /// (every SHREE-BAN font draws ৱ at U+009E; earlier tables wrote ব্ঢ as U+0081), and
+    /// Windows-1252's own characters (– is 96) at theirs. Encoding.GetEncoding(1252) alone
+    /// turns the C1 code points into '?', which loses the letter without a word: each is
+    /// written as its own byte. A character with no byte at all - one the table passed
+    /// through because no code of the fonts draws it (₹ in a Shree font, P3b), which the
+    /// converter reports - is left out: never '?' (which the font draws as itself, a wrong
+    /// character) and never a "best fit" letter (ā as a), which the legacy font would draw
+    /// as a letter of its script.
+    /// </summary>
+    public static byte[] LegacyBytes(string text)
+    {
+        var bytes = new List<byte>(text.Length);
+        for (int i = 0; i < text.Length; i++)
+        {
+            char c = text[i];
+            if (c <= 'ÿ') { bytes.Add((byte)c); continue; }
+            // The line and paragraph separators are line breaks (the tables pass them through, as they do
+            // \n): a Windows-1252 file has no byte for them, so they are its line break, CR LF - never '?'.
+            if (c is (char)0x2028 or (char)0x2029) { bytes.Add(0x0D); bytes.Add(0x0A); continue; }
+            // a character beyond the BMP (two UTF-16 units) has no Windows-1252 byte: left out
+            if (char.IsHighSurrogate(c) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1])) { i++; continue; }
+            bytes.AddRange(Cp1252Strict.GetBytes(c.ToString()));
+        }
+        return bytes.ToArray();
+    }
+
+    /// <summary>
+    /// True when <see cref="LegacyBytes"/> writes <paramref name="c"/> (a code U+0000-U+00FF, a character
+    /// Windows-1252 has a byte for, or a line or paragraph separator); false when it leaves it out.
+    /// </summary>
+    public static bool TxtHolds(char c) =>
+        c <= (char)0xFF || c is (char)0x2028 or (char)0x2029 || (!char.IsSurrogate(c) && Cp1252Strict.GetByteCount(c.ToString()) > 0);
+
+    /// <summary>Windows-1252 that writes nothing for a character it has no byte for (no '?', no best-fit mapping).</summary>
+    private static readonly Encoding Cp1252Strict =
+        Encoding.GetEncoding(1252, new EncoderReplacementFallback(""), new DecoderReplacementFallback("?"));
+
+    private static void ConvertRtf(string inputPath, string outputPath, Func<string, string> convert, FontFamily targetFont, RunScope scope)
     {
         var doc = RichTextConversion.FromRtf(File.ReadAllText(inputPath, Cp1252));
-        var outDoc = RichTextConversion.Convert(doc, convert, targetFont, null, plainText: false);
+        var outDoc = RichTextConversion.Convert(doc, convert, targetFont, null, plainText: false, scope);
         File.WriteAllText(outputPath, RichTextConversion.ToRtf(outDoc), Cp1252);
     }
 
@@ -115,7 +163,7 @@ public static class FileConversion
     /// The document's own XML comes out of Word, goes through the same conversion every
     /// .docx gets, and goes back in.
     /// </summary>
-    private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName, Action<string>? readWhole)
+    private static void ConvertDoc(string inputPath, string outputPath, Func<string, string> convert, string targetFontName, Action<string>? readWhole, RunScope scope)
     {
         File.Copy(inputPath, outputPath, overwrite: true);
         WordDocFormat.ConvertInPlace(outputPath, xml =>
@@ -124,19 +172,22 @@ public static class FileConversion
             if (readWhole is not null)
             {
                 var text = new StringBuilder();
-                ConvertFlatOpc(xml, s => { text.Append(s).Append(' '); return s; }, targetFontName);
+                ConvertFlatOpc(xml, s => { text.Append(s).Append(' '); return s; }, targetFontName, scope);
                 readWhole(text.ToString());
             }
-            return ConvertFlatOpc(xml, convert, targetFontName);
+            return ConvertFlatOpc(xml, convert, targetFontName, scope);
         });
     }
 
     /// <summary>A whole Word document as one XML string - the shape Word hands its own
     /// content over in - converted and handed back.</summary>
-    public static string ConvertFlatOpc(string flatOpc, Func<string, string> convert, string targetFontName)
+    public static string ConvertFlatOpc(string flatOpc, Func<string, string> convert, string targetFontName) =>
+        ConvertFlatOpc(flatOpc, convert, targetFontName, RunScope.All);
+
+    internal static string ConvertFlatOpc(string flatOpc, Func<string, string> convert, string targetFontName, RunScope scope)
     {
         using var doc = WordprocessingDocument.FromFlatOpcString(flatOpc);
-        ConvertParts(doc, convert, targetFontName);
+        ConvertParts(doc, convert, targetFontName, scope);
         return doc.ToFlatOpcString();
     }
 
@@ -146,7 +197,7 @@ public static class FileConversion
     /// into several runs for reasons of its own - an editing session, a spell-check
     /// pass - and the split falls anywhere, including inside a conjunct.
     /// </summary>
-    private static IEnumerable<List<Run>> RunGroups(OpenXmlElement root)
+    private static IEnumerable<List<Run>> RunGroups(OpenXmlElement root, bool byFont = false)
     {
         foreach (var parent in root.Descendants<Run>().Select(r => r.Parent!).Distinct().ToList())
         {
@@ -161,7 +212,7 @@ public static class FileConversion
                     continue;
                 }
                 var run = (Run)child;
-                string key = FormattingKey(run);
+                string key = FormattingKey(run, byFont);
                 if (group is not null && key == groupKey) group.Add(run);
                 else
                 {
@@ -179,26 +230,26 @@ public static class FileConversion
     /// conversion restamps it anyway, and so are the spell-check and language hints
     /// Word sprinkles through a document without changing how it looks.
     /// </summary>
-    private static string FormattingKey(Run run)
+    private static string FormattingKey(Run run, bool byFont = false)
     {
         var props = run.RunProperties;
         if (props is null) return "";
         var copy = (RunProperties)props.CloneNode(true);
-        foreach (var ignorable in copy.ChildElements.Where(c => c is RunFonts or Languages or NoProof).ToList())
+        foreach (var ignorable in copy.ChildElements.Where(c => (c is RunFonts && !byFont) || c is Languages or NoProof).ToList())
             ignorable.Remove();
         return copy.OuterXml;
     }
 
-    private static void ConvertDocx(string inputPath, string outputPath, Func<string, string> convert, string targetFontName)
+    private static void ConvertDocx(string inputPath, string outputPath, Func<string, string> convert, string targetFontName, RunScope scope)
     {
         File.Copy(inputPath, outputPath, overwrite: true);
         using var doc = WordprocessingDocument.Open(outputPath, isEditable: true);
-        ConvertParts(doc, convert, targetFontName);
+        ConvertParts(doc, convert, targetFontName, scope);
     }
 
     /// <summary>Convert the text of every part of a Word document that holds any: the
     /// body, the headers and footers, the footnotes and the endnotes.</summary>
-    private static void ConvertParts(WordprocessingDocument doc, Func<string, string> convert, string targetFontName)
+    private static void ConvertParts(WordprocessingDocument doc, Func<string, string> convert, string targetFontName, RunScope scope)
     {
         var main = doc.MainDocumentPart ?? throw new InvalidDataException("Not a Word document.");
         var parts = new List<OpenXmlPart> { main };
@@ -220,7 +271,7 @@ public static class FileConversion
             };
             if (root is null) continue;
 
-            foreach (var group in RunGroups(root))
+            foreach (var group in RunGroups(root, byFont: !scope.SourceIsUnicode && scope.IsSourceFont is not null))
             {
                 var texts = group.SelectMany(r => r.Elements<Text>()).ToList();
                 if (texts.Count == 0) continue;
@@ -228,25 +279,168 @@ public static class FileConversion
                 // seam at once, or a vowel sign that is drawn before its consonant
                 // ends up on the wrong side of it.
                 string joined = string.Concat(texts.Select(t => t.Text));
-                string converted = convert(joined);
-                texts[0].Text = converted;
-                texts[0].Space = SpaceProcessingModeValues.Preserve;
-                for (int i = 1; i < texts.Count; i++) texts[i].Remove();
-                foreach (var extra in group.Skip(1)) extra.Remove();
+
+                // Which of it is the source's text: from a legacy font, the runs in that
+                // font; from Unicode, the stretches in the script (English keeps its font).
+                var pieces = scope.Pieces(joined, scope.SourceIsUnicode || scope.IsSourceFont is null ? null : RunFontName(doc, group[0]));
+                if (!pieces.Any(p => p.Convert)) continue;            // nothing of the source's here: left as it is
 
                 var run = group[0];
-                var props = run.RunProperties ?? run.PrependChild(new RunProperties());
-                var fonts = props.RunFonts ?? props.PrependChild(new RunFonts());
-                fonts.Ascii = targetFontName;
-                fonts.HighAnsi = targetFontName;
-                fonts.ComplexScript = targetFontName;
-                fonts.EastAsia = targetFontName;
-                fonts.AsciiTheme = null;
-                fonts.HighAnsiTheme = null;
-                fonts.ComplexScriptTheme = null;
-                fonts.EastAsiaTheme = null;
+                if (pieces.Count == 1)
+                {
+                    texts[0].Text = convert(joined);
+                    texts[0].Space = SpaceProcessingModeValues.Preserve;
+                    for (int i = 1; i < texts.Count; i++) texts[i].Remove();
+                    foreach (var extra in group.Skip(1)) extra.Remove();
+                    Restamp(run, targetFontName);
+                    continue;
+                }
+
+                // A run that mixes the two is split: the script's stretches converted and
+                // in the target font, the rest as it was, each part in the run it came from
+                // (the runs of a group can differ in font).
+                var starts = new List<int>();
+                int at = 0;
+                foreach (var r in group) { starts.Add(at); at += string.Concat(r.Elements<Text>().Select(t => t.Text)).Length; }
+                Run Piece(Run from, string text, bool conv)
+                {
+                    var piece = (Run)from.CloneNode(true);
+                    foreach (var t in piece.Elements<Text>().ToList()) t.Remove();
+                    piece.AppendChild(new Text(text) { Space = SpaceProcessingModeValues.Preserve });
+                    if (conv) Restamp(piece, targetFontName);
+                    return piece;
+                }
+                int pos = 0;
+                foreach (var (text, conv) in pieces)
+                {
+                    if (conv)
+                        run.InsertBeforeSelf(Piece(run, convert(text), true));
+                    else
+                        for (int i = 0; i < group.Count; i++)
+                        {
+                            int s = starts[i], e = i + 1 < group.Count ? starts[i + 1] : at;
+                            int a = Math.Max(s, pos), b = Math.Min(e, pos + text.Length);
+                            if (a < b) run.InsertBeforeSelf(Piece(group[i], joined[a..b], false));
+                        }
+                    pos += text.Length;
+                }
+                foreach (var r in group) r.Remove();
             }
             part.RootElement?.Save();
         }
+    }
+
+    /// <summary>Set a run in the target font, for every script slot (no theme font).</summary>
+    private static void Restamp(Run run, string targetFontName)
+    {
+        var props = run.RunProperties ?? run.PrependChild(new RunProperties());
+        var fonts = props.RunFonts ?? props.PrependChild(new RunFonts());
+        fonts.Ascii = targetFontName;
+        fonts.HighAnsi = targetFontName;
+        fonts.ComplexScript = targetFontName;
+        fonts.EastAsia = targetFontName;
+        fonts.AsciiTheme = null;
+        fonts.HighAnsiTheme = null;
+        fonts.ComplexScriptTheme = null;
+        fonts.EastAsiaTheme = null;
+    }
+
+    /// <summary>
+    /// The font a run's Latin-range text is drawn in: its own, else its character style's, else
+    /// its paragraph style's (and the styles they are based on), else the document default.
+    /// Null when it is a theme font or cannot be told.
+    /// </summary>
+    private static string? RunFontName(WordprocessingDocument doc, Run run)
+    {
+        static string? Own(RunFonts? f) => f?.Ascii?.Value ?? f?.HighAnsi?.Value;
+        if (Own(run.RunProperties?.RunFonts) is { } own) return own;
+        var styles = doc.MainDocumentPart?.StyleDefinitionsPart?.Styles;
+        string? FromStyle(string? id)
+        {
+            for (int depth = 0; id is not null && styles is not null && depth < 10; depth++)
+            {
+                var s = styles.Elements<Style>().FirstOrDefault(x => x.StyleId?.Value == id);
+                if (s is null) return null;
+                if (Own(s.StyleRunProperties?.RunFonts) is { } f) return f;
+                id = s.BasedOn?.Val?.Value;
+            }
+            return null;
+        }
+        if (FromStyle(run.RunProperties?.RunStyle?.Val?.Value) is { } rs) return rs;
+        var para = run.Ancestors<Paragraph>().FirstOrDefault();
+        if (FromStyle(para?.ParagraphProperties?.ParagraphStyleId?.Val?.Value) is { } ps) return ps;
+        return Own(styles?.DocDefaults?.RunPropertiesDefault?.RunPropertiesBaseStyle?.RunFonts);
+    }
+}
+
+/// <summary>
+/// Which text of a document a conversion takes (audit 2026-10-18, BUG-03): converting a .docx
+/// to Shree-Lipi 7 used to put the Shree font on English runs too, and an e-mail address came
+/// out as Gujarati letters. From Unicode, the stretches in an Indic script are converted and get
+/// the target font; the rest - English, and the spaces and punctuation that go with it - stays
+/// in its own font. From a legacy font, a run is converted when it is in one of the source's
+/// fonts (or its font cannot be told); any other run is left as it is.
+/// </summary>
+public sealed class RunScope
+{
+    public static readonly RunScope All = new(false, null);
+
+    public RunScope(bool sourceIsUnicode, Func<string, bool>? isSourceFont)
+    {
+        SourceIsUnicode = sourceIsUnicode;
+        IsSourceFont = isSourceFont;
+    }
+
+    public bool SourceIsUnicode { get; }
+    public Func<string, bool>? IsSourceFont { get; }
+
+    /// <summary>A run's text in pieces, each converted or left: one piece when the whole run goes one way.</summary>
+    public List<(string Text, bool Convert)> Pieces(string text, string? fontName)
+    {
+        if (ReferenceEquals(this, All) || text.Length == 0) return new() { (text, true) };
+        if (!SourceIsUnicode)
+            return new() { (text, IsSourceFont is null || fontName is null || IsSourceFont(fontName)) };
+        return Split(text);
+    }
+
+    private enum Kind { Neutral, Script, Other }
+
+    private static Kind KindOf(char c) =>
+        c is >= 'ऀ' and <= '෿' or '‌' or '‍' or '︀' ? Kind.Script
+        : char.IsLetter(c) ? Kind.Other
+        : Kind.Neutral;
+
+    /// <summary>
+    /// The script's stretches and the rest. A letter of the script, or of another script, decides;
+    /// a space, a digit or a punctuation mark goes with the letters around it: with the script when
+    /// script is on both sides of it (or on one side and the text ends on the other), else it stays.
+    /// </summary>
+    public static List<(string Text, bool Convert)> Split(string text)
+    {
+        var kinds = text.Select(KindOf).ToArray();
+        var convert = new bool[text.Length];
+        var left = new Kind[text.Length];
+        var last = Kind.Neutral;
+        for (int i = 0; i < text.Length; i++) { if (kinds[i] != Kind.Neutral) last = kinds[i]; left[i] = last; }
+        last = Kind.Neutral;
+        for (int i = text.Length - 1; i >= 0; i--)
+        {
+            if (kinds[i] != Kind.Neutral) last = kinds[i];
+            convert[i] = kinds[i] switch
+            {
+                Kind.Script => true,
+                Kind.Other => false,
+                _ => (left[i], last) is (Kind.Script, Kind.Script) or (Kind.Script, Kind.Neutral) or (Kind.Neutral, Kind.Script),
+            };
+        }
+        var pieces = new List<(string, bool)>();
+        int start = 0;
+        for (int i = 1; i <= text.Length; i++)
+            if (i == text.Length || convert[i] != convert[start])
+            {
+                pieces.Add((text[start..i], convert[start]));
+                start = i;
+            }
+        return pieces;
     }
 }

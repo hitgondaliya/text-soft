@@ -268,21 +268,55 @@ public sealed class ConverterViewModel : ObservableObject
     {
         if (SelectedInputLayout is null || SelectedOutputLayout is null) return text;
         var r = _pipeline.Convert(text, InputKey(text), OutputKey(), Options());
-        // ASCII punctuation and digits pass through every layout unchanged; only real
-        // letters that found no mapping are worth reporting.
-        foreach (var u in r.UnmappedCharacters)
-            if (u.Length > 0 && u[0] > '') _unmapped.Add(u);
+        // What the typist is told (EndBatch), in three kinds:
+        // - every character a table itself says the target font cannot show, ASCII or not: left out, or
+        //   written as a stand-in (a slash in a Bangla Shree font, a '[' in a Gujarati one - it draws an
+        //   i-sign - is gone from the output);
+        // - every character kept as itself that the target font has no glyph for (₹ in a Shree font: Word
+        //   draws it in another font) or, read out of a legacy font, a code the table could not read. ASCII
+        //   punctuation and digits that pass through every layout unchanged are not worth a word; a Latin
+        //   letter is (into a legacy font it draws a letter of the script, out of one it is a code unread);
+        // - in a .txt file, what Windows-1252 has no byte for (FileConversion.LegacyBytes leaves it out).
+        foreach (var u in r.LeftOutCharacters)
+            if (u.Length > 0) lock (_report) _leftOut.Add(u);
+        foreach (var u in r.KeptCharacters)
+            if (u.Length > 0 && (u[0] > (char)0x7F || char.IsAsciiLetter(u[0]))) lock (_report) _kept.Add(u);
+        if (_txtOut)
+            for (int i = 0; i < r.Text.Length; i++)
+            {
+                bool pair = char.IsHighSurrogate(r.Text[i]) && i + 1 < r.Text.Length && char.IsLowSurrogate(r.Text[i + 1]);
+                if (pair || !FileConversion.TxtHolds(r.Text[i])) lock (_report) _txtDropped.Add(r.Text.Substring(i, pair ? 2 : 1));
+                if (pair) i++;
+            }
         return r.Text;
     }
 
-    private readonly HashSet<string> _unmapped = new(StringComparer.Ordinal);
+    private readonly object _report = new();
+    private readonly HashSet<string> _leftOut = new(StringComparer.Ordinal);
+    private readonly HashSet<string> _kept = new(StringComparer.Ordinal);
+    private readonly HashSet<string> _txtDropped = new(StringComparer.Ordinal);
+
+    // True while the file being converted is written as a legacy .txt (Windows-1252 bytes).
+    private bool _txtOut;
 
     /// <summary>Call before a batch of <see cref="ConvertText"/> calls; then <see cref="EndBatch"/>.</summary>
     public void BeginBatch()
     {
-        _unmapped.Clear();
+        lock (_report)
+        {
+            _leftOut.Clear();
+            _kept.Clear();
+            _txtDropped.Clear();
+        }
+        _txtOut = false;
         _detected = null;
+        lock (_otherLayoutFonts) _otherLayoutFonts.Clear();
     }
+
+    // Runs of a document set in a font of another legacy layout of the language (SHREE-GUJ-0750 when
+    // converting from Shree-Lipi 7.0): left as they are, and named in the report - they used to be
+    // left without a word. Font name -> that layout's name.
+    private readonly SortedDictionary<string, string> _otherLayoutFonts = new(StringComparer.OrdinalIgnoreCase);
 
     /// <summary>
     /// Start a batch whose whole text is known up front, so an input layout that
@@ -391,9 +425,32 @@ public sealed class ConverterViewModel : ObservableObject
     public string EndBatch(string what)
     {
         StatusIsError = false;
-        if (_unmapped.Count == 0) return $"{what} converted.";
-        string sample = string.Join(" ", _unmapped.Take(8));
-        return $"{what} converted. {_unmapped.Count} character{(_unmapped.Count == 1 ? "" : "s")} had no mapping and passed through: {sample}";
+        string others;
+        lock (_otherLayoutFonts)
+            others = _otherLayoutFonts.Count == 0 ? "" :
+                " Left as it is: text in " + string.Join(", ", _otherLayoutFonts.Select(f => $"{f.Key} (a {f.Value} font)")) +
+                " - convert it with that layout.";
+        var parts = new List<string>();
+        lock (_report)
+        {
+            static string Count(int n) => n == 1 ? "1 character" : $"{n} characters";
+            static string Sample(IEnumerable<string> set) => string.Join(" ", set.Take(8)) + (set.Count() > 8 ? " …" : "");
+            // Left out (or a stand-in), kept as itself, and the .txt: told apart, so the typist knows which
+            // characters are gone and which are still there in another font (P3b) - or, out of a legacy font,
+            // which codes the table could not read.
+            if (_leftOut.Count > 0)
+                parts.Add($"{Count(_leftOut.Count)} left out - the font cannot show {(_leftOut.Count == 1 ? "it" : "them")} (a stand-in where it has one): {Sample(_leftOut)}");
+            var kept = _kept.Where(k => !_leftOut.Contains(k)).ToList();
+            bool intoLegacy = SelectedOutputLayout is { Key.IsUnicode: false };
+            if (kept.Count > 0)
+                parts.Add(intoLegacy
+                    ? $"{Count(kept.Count)} kept as {(kept.Count == 1 ? "itself" : "themselves")} - the font has no glyph for {(kept.Count == 1 ? "it" : "them")}, so Word draws {(kept.Count == 1 ? "it" : "them")} in another font: {Sample(kept)}"
+                    : $"{Count(kept.Count)} had no mapping (passed through as {(kept.Count == 1 ? "it was" : "they were")}): {Sample(kept)}");
+            if (_txtDropped.Count > 0)
+                parts.Add($"{Count(_txtDropped.Count)} left out of the .txt - Windows-1252 has no byte for {(_txtDropped.Count == 1 ? "it" : "them")}: {Sample(_txtDropped)}");
+        }
+        if (parts.Count == 0) return $"{what} converted.{others}";
+        return $"{what} converted. {string.Join(". ", parts)}.{others}";
     }
 
     private ConversionOptions Options() => new()
@@ -404,6 +461,31 @@ public sealed class ConverterViewModel : ObservableObject
     };
 
     public string TargetFontName => SelectedOutputFont?.Name ?? "Nirmala UI";
+
+    /// <summary>
+    /// Which text of a formatted document is converted (BUG-03): from Unicode into a legacy font,
+    /// the stretches in the script (English keeps its own font); from a legacy font, the runs set
+    /// in one of the input layout's fonts.
+    /// </summary>
+    public RunScope Scope =>
+        SelectedInputLayout is null || SelectedOutputLayout is null ? RunScope.All
+        : SelectedInputLayout.Key.IsUnicode ? (SelectedOutputLayout.Key.IsUnicode ? RunScope.All : new RunScope(true, null))
+        : new RunScope(false, IsInputFont);
+
+    /// <summary>Is a run's font (as Word or WPF names it) one of the input layout's fonts?</summary>
+    private bool IsInputFont(string fontName)
+    {
+        string name = fontName.Contains('#') ? fontName[(fontName.LastIndexOf('#') + 1)..] : fontName;
+        name = name.Split(',')[0].Trim();
+        var layout = SelectedInputLayout;
+        if (layout is null || name.Length == 0) return true;
+        var names = layout.Members.Select(m => m.Family).Append(layout.Font?.Family).Append(SelectedInputFont?.Name);
+        bool mine = names.Any(n => string.Equals(n, name, StringComparison.OrdinalIgnoreCase));
+        if (!mine && InputLayouts.FirstOrDefault(o => o != layout && !o.Key.IsUnicode &&
+                o.Members.Any(m => string.Equals(m.Family, name, StringComparison.OrdinalIgnoreCase))) is { } other)
+            lock (_otherLayoutFonts) _otherLayoutFonts[name] = other.Name;
+        return mine;
+    }
 
     /// <summary>Files mode: convert every listed file into <see cref="OutputFolder"/>.</summary>
     public async Task ConvertFilesAsync()
@@ -448,7 +530,15 @@ public sealed class ConverterViewModel : ObservableObject
                     Action<string>? readWhole = layout.IsCombined
                         ? t => { if (Letters(t) > 0) _detected = Detect(t, layout); }
                         : null;
-                    FileConversion.ConvertFile(f.Path, outPath, ConvertText, srcUni, tgtUni, font, fontName, PlainText, readWhole);
+                    // A legacy .txt holds Windows-1252 bytes only: what it has no byte for is left out of it, and said so.
+                    string ext = Path.GetExtension(f.Path).ToLowerInvariant();
+                    _txtOut = !tgtUni && (ext == ".txt" || (ext == ".rtf" && PlainText));
+                    try
+                    {
+                        FileConversion.ConvertFile(f.Path, outPath, ConvertText, srcUni, tgtUni, font, fontName, PlainText, readWhole,
+                            SelectedInputLayout.Key.IsUnicode ? null : IsInputFont);
+                    }
+                    finally { _txtOut = false; }
                     f.Status = "Done";
                     ok++;
                 }
@@ -572,8 +662,12 @@ public sealed class ConverterViewModel : ObservableObject
             FontAsset? font = string.IsNullOrEmpty(fl.FontId) ? null : lang.Fonts.FirstOrDefault(f => f.Id == fl.FontId)
                               ?? _bundle.Languages.SelectMany(l => l.Fonts).FirstOrDefault(f => f.Id == fl.FontId);
             // A layout that gathers several font products renders in whichever of its
-            // fonts this PC has, and converts with that font's table by default.
-            var members = fl.Encodings is { Count: > 0 } ? lang.Fonts.Where(fl.Includes).ToList() : new List<FontAsset>();
+            // fonts this PC has, and converts with that font's table by default. A layout
+            // of one family (Shree-Lipi 7.0, 4.0/5.0/6.0) lists that family's fonts only, and
+            // an ordinary one the fonts that convert the way its own font does (BUG-14: a
+            // SHREE-GUJ7 face could be stamped on 4/5/6 bytes, which it draws otherwise).
+            string? ownKey = font?.ConversionKey;
+            var members = lang.Fonts.Where(f => f.Type != FontType.Unicode && fl.Includes(f, ownKey)).ToList();
             if (members.Count > 0)
                 font = members.FirstOrDefault(f => f.Id == fl.FontId && _fonts.IsAvailable(f))
                        ?? members.FirstOrDefault(f => _fonts.IsAvailable(f)) ?? font ?? members[0];
@@ -617,11 +711,16 @@ public sealed class ConverterViewModel : ObservableObject
                 first ??= c;
             }
         }
-        foreach (var fam in SystemFontService.InstalledFamilies())
-        {
-            if (target.Any(t => string.Equals(t.Name, fam, StringComparison.OrdinalIgnoreCase))) continue;
-            target.Add(new FontChoice { Name = fam, Family = new FontFamily(fam) });
-        }
+        // A legacy layout offers its own fonts only: its bytes in any other font are other
+        // letters (a SHREE-GUJ7 face on 4/5/6 bytes draws પ for ઙ્ક). Every installed font is
+        // offered only when none of the layout's is on this PC, so there is still a choice.
+        bool ownOnly = layout is { Key.IsUnicode: false } && target.Count > 0;
+        if (!ownOnly)
+            foreach (var fam in SystemFontService.InstalledFamilies())
+            {
+                if (target.Any(t => string.Equals(t.Name, fam, StringComparison.OrdinalIgnoreCase))) continue;
+                target.Add(new FontChoice { Name = fam, Family = new FontFamily(fam) });
+            }
         select(first ?? target.FirstOrDefault() ?? new FontChoice { Name = "Nirmala UI", Family = new FontFamily("Nirmala UI") });
     }
 

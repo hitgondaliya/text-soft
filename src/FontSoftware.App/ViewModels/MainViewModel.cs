@@ -26,6 +26,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     private readonly FontResolver _fonts;
 
     private readonly KeyboardThread _keyboard;   // the hook and the engine run there, never on the UI thread
+    private MouseClickWatch? _mouse;             // a click may move the caret: the engine forgets the word
     private readonly Dispatcher _ui = Dispatcher.CurrentDispatcher;
     private readonly InputInjector _injector;
     private readonly TypingEngine _engine;
@@ -70,6 +71,9 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         get => _selectedFont;
         set
         {
+            // Refilling the list drops the font box's selection, and WPF writes that
+            // null back here; it is not the typist's choice, and the next pick follows.
+            if (_fillingFonts && value is null) return;
             if (SetProperty(ref _selectedFont, value))
             {
                 OnPropertyChanged(nameof(SelectedFontFamily));
@@ -488,6 +492,9 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         try
         {
             _keyboard.Start();
+            _mouse = new MouseClickWatch(_log);
+            var mouse = _mouse;
+            _keyboard.Invoke(() => _engine.Clicks = () => mouse.Clicks);
             _log.Info("Keyboard hook installed (on its own thread, with a watchdog).");
         }
         catch (Exception ex)
@@ -508,6 +515,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         string? savedLayout = _settings.DefaultLayoutId;
 
         Fonts.Clear();
+        _languageFonts.Clear();
         Layouts.Clear();
         FontLayouts.Clear();
         OnPropertyChanged(nameof(ActiveScriptChar));
@@ -520,7 +528,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         // correctly into any app and renders in Windows' built-in Indic font
         // even when none of the client's legacy fonts are installed. This is
         // what makes "pick Unicode and whatever font the client has just works".
-        Fonts.Add(UnicodeFont);
+        _languageFonts.Add(UnicodeFont);
 
         // FR-1: show the language's FULL supported font list so the client can
         // see everything the software integrates. Fonts not installed on this PC
@@ -534,7 +542,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             bool available = _fonts.IsAvailable(font);
             if (!available && font.Optional)
                 continue; // a large family (Bhasha Bharati) lists only the faces this PC has
-            Fonts.Add(available ? font : font.AsNotInstalled());
+            _languageFonts.Add(available ? font : font.AsNotInstalled());
         }
         foreach (var layout in SelectedLanguage.Layouts)
             Layouts.Add(layout);
@@ -543,11 +551,11 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         // family), so a client's own/private Unicode font can be picked too.
         if (ShowAllInstalledFonts)
         {
-            var have = new HashSet<string>(Fonts.Select(f => f.Family), StringComparer.OrdinalIgnoreCase);
+            var have = new HashSet<string>(_languageFonts.Select(f => f.Family), StringComparer.OrdinalIgnoreCase);
             foreach (var fam in SystemFontService.InstalledFamilies())
             {
                 if (have.Add(fam))
-                    Fonts.Add(new FontAsset { Id = "sys:" + fam, Name = fam, Family = fam, Type = FontType.Unicode });
+                    _languageFonts.Add(new FontAsset { Id = "sys:" + fam, Name = fam, Family = fam, Type = FontType.Unicode });
             }
         }
 
@@ -555,6 +563,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         foreach (var fl in SelectedLanguage.FontLayouts)
             FontLayouts.Add(fl);
 
+        FillFonts(FontLayouts.FirstOrDefault());
         SelectedFont = Fonts.FirstOrDefault();
         SelectedLayout = Layouts.FirstOrDefault();
         // Setting this drives the render font via OnFontLayoutChanged (defaults to Unicode).
@@ -588,6 +597,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     {
         if (SelectedFontLayout is null)
             return;
+        FillFonts(SelectedFontLayout);
 
         if (SelectedFontLayout.IsUnicode)
         {
@@ -627,6 +637,37 @@ public sealed class MainViewModel : ObservableObject, IDisposable
     }
 
     private FontAsset AddAndReturn(FontAsset f) { Fonts.Add(f); return f; }
+
+    // Every font of the language (and, when asked for, of the PC); the Font box
+    // shows the part of it that belongs to the chosen font layout.
+    private readonly List<FontAsset> _languageFonts = new();
+    private bool _fillingFonts;
+
+    /// <summary>
+    /// Show the fonts of one font layout. The Font box used to list every font of
+    /// the language whatever the layout, so Shree-Lipi 7.0 and 4.0/5.0/6.0 each
+    /// offered the other family's fonts - and a font of one family typed with the
+    /// other's bytes draws other letters on five codes.
+    /// </summary>
+    private void FillFonts(FontLayout? layout)
+    {
+        string? ownKey = layout?.FontId is { } id ? _languageFonts.FirstOrDefault(f => f.Id == id)?.ConversionKey : null;
+        var wanted = _languageFonts.Where(f => layout is null || layout.IsUnicode
+                                                   ? f.Type == FontType.Unicode
+                                                   : f.Type != FontType.Unicode && layout.Includes(f, ownKey))
+                                   .ToList();
+        _fillingFonts = true;
+        try
+        {
+            Fonts.Clear();
+            foreach (var f in wanted) Fonts.Add(f);
+        }
+        finally
+        {
+            _fillingFonts = false;
+        }
+        _selectedFont = null;   // the box lost its selection with the old list: the next pick must reach it
+    }
 
     /// <summary>
     /// The installed font a legacy layout should type in: the one already selected
@@ -740,7 +781,8 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                 // Gujarati keyboard look like it had a Z on it. Digits, punctuation
                 // and the symbol keys do pass through, so they keep their label.
                 bool letter = cap.VirtualKey is >= 'A' and <= 'Z';
-                cap.Display = letter ? string.Empty : cap.Label;
+                // A layer the keyboard says types nothing ("") is swallowed, label and all.
+                cap.Display = letter || mapped is "" ? string.Empty : cap.Label;
                 cap.IsMapped = false;
             }
         }
@@ -866,6 +908,24 @@ public sealed class MainViewModel : ObservableObject, IDisposable
                      ?? FontLayouts.FirstOrDefault(x => x.Replaces?.Contains(fontLayoutId, StringComparer.OrdinalIgnoreCase) == true);
             if (fl is not null) SelectedFontLayout = fl;
         }
+        string? moved = null;
+        if (fontId is not null && Fonts.All(x => x.Id != fontId) && SelectedFontLayout is { IsUnicode: false } current
+            && _languageFonts.FirstOrDefault(x => x.Id == fontId) is { } saved)
+        {
+            // A saved font the selected Font Layout no longer lists - an old setting: the 7.0
+            // row once defaulted to the 4/5/6 face SHREE-GUJ-0750, and reopening switched to
+            // SHREE-GUJ7-0750 without a word (BUG-14). The font stays, under the layout that
+            // writes its own codes, and the typist is told.
+            var home = FontLayouts.FirstOrDefault(fl => !fl.IsUnicode && fl.Includes(saved,
+                           fl.FontId is { } id ? _languageFonts.FirstOrDefault(x => x.Id == id)?.ConversionKey : null));
+            if (home is not null && !ReferenceEquals(home, current))
+            {
+                SelectedFontLayout = home;
+                moved = $"{saved.Family} is a {home.Name} font: the saved setting had it under {current.Name}, so the Font Layout is now {home.Name}, which writes that font's own codes.";
+            }
+            else
+                moved = $"{saved.Family} is not a {current.Name} font; {SelectedFont?.Family ?? "the layout's own font"} is used instead.";
+        }
         if (fontId is not null)
         {
             var f = Fonts.FirstOrDefault(x => x.Id == fontId);
@@ -881,7 +941,17 @@ public sealed class MainViewModel : ObservableObject, IDisposable
             var l = Layouts.FirstOrDefault(x => x.Id == layoutId);
             if (l is not null) SelectedLayout = l;
         }
+        if (moved is not null)
+        {
+            _log.Info("Saved selection: " + moved);
+            Status = moved;
+            SettingsNote = moved;
+        }
     }
+
+    private string? _settingsNote;
+    /// <summary>What reopening the saved selection had to change, and why (shown once, in the status line).</summary>
+    public string? SettingsNote { get => _settingsNote; private set => SetProperty(ref _settingsNote, value); }
 
     private void SaveDefaults()
     {
@@ -897,6 +967,7 @@ public sealed class MainViewModel : ObservableObject, IDisposable
         _engine.Toggled -= OnEngineToggled;
         _keyboard.Invoke(_engine.Dispose);
         _keyboard.Dispose();
+        _mouse?.Dispose();
     }
 }
 

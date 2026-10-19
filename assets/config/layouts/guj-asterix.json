@@ -258,7 +258,8 @@
     {
       "vk": 192,
       "base": "ૅ",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 219,
@@ -410,6 +411,10 @@
     {
       "keys": "Øh",
       "to": ";"
+    },
+    {
+      "keys": "Øj",
+      "to": "રૂ"
     },
     {
       "keys": "Øk",
@@ -596,23 +601,39 @@
       "to": "ઢ્ઢ"
     },
     {
-      "keys": "kxork`",
+      "keys": "kx",
       "to": "કૅ"
     },
     {
-      "keys": "k`borkB",
+      "keys": "k`",
+      "to": "કૅ"
+    },
+    {
+      "keys": "k`b",
       "to": "કઁ"
     },
     {
-      "keys": "kesorka",
+      "keys": "kB",
+      "to": "કઁ"
+    },
+    {
+      "keys": "kes",
       "to": "કો"
     },
     {
-      "keys": "keworkq",
+      "keys": "ka",
+      "to": "કો"
+    },
+    {
+      "keys": "kew",
       "to": "કૌ"
     },
     {
-      "keys": "ldlorØl",
+      "keys": "kq",
+      "to": "કૌ"
+    },
+    {
+      "keys": "ldl",
       "to": "ત્ત"
     },
     {
@@ -674,6 +695,10 @@
     {
       "keys": "Ød",
       "to": "્‍"
+    },
+    {
+      "keys": "Ø3",
+      "to": "‐"
     }
   ],
   "escape": [
@@ -738,6 +763,10 @@
       "to": ";"
     },
     {
+      "keys": "j",
+      "to": "રૂ"
+    },
+    {
       "keys": "k",
       "to": "ૐ"
     },
@@ -772,6 +801,10 @@
     {
       "keys": "d",
       "to": "્‍"
+    },
+    {
+      "keys": "3",
+      "to": "‐"
     }
   ],
   "symbols": [

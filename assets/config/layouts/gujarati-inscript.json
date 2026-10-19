@@ -120,6 +120,7 @@
     {
       "vk": 74,
       "base": "ર",
+      "shift": "રૂ",
       "deadKey": false
     },
     {
@@ -215,7 +216,8 @@
     {
       "vk": 90,
       "shift": "્ય",
-      "deadKey": false
+      "deadKey": false,
+      "base": " "
     },
     {
       "vk": 186,
@@ -571,11 +573,19 @@
       "to": "ઞ્જ"
     },
     {
-      "keys": "$korjdk",
+      "keys": "$k",
       "to": "ર્ક"
     },
     {
-      "keys": "'Zor'd/",
+      "keys": "jdk",
+      "to": "ર્ક"
+    },
+    {
+      "keys": "'Z",
+      "to": "ટ્ય"
+    },
+    {
+      "keys": "'d/",
       "to": "ટ્ય"
     },
     {

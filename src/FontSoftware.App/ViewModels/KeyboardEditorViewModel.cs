@@ -280,8 +280,15 @@ public sealed class KeyboardEditorViewModel : ObservableObject
                 mapping = new KeyMapping { VirtualKey = cap.VirtualKey };
                 _layout.Keys.Add(mapping);
             }
-            if (Layer == KeyLayer.Shift) mapping.Shift = text.Length == 0 ? null : text;
-            else mapping.Base = text.Length == 0 ? null : text;
+            // A layer cleared while the other still types something types nothing
+            // ("" - what the status line says), rather than the other layer's
+            // character: an unset Shift types the normal character.
+            if (Layer == KeyLayer.Shift)
+                mapping.Shift = text.Length > 0 ? text : string.IsNullOrEmpty(mapping.Base) ? null : "";
+            else
+                mapping.Base = text.Length > 0 ? text : string.IsNullOrEmpty(mapping.Shift) ? null : "";
+            if (string.IsNullOrEmpty(mapping.Base) && string.IsNullOrEmpty(mapping.Shift))
+                mapping.Base = mapping.Shift = null;   // neither layer types: the key is not this keyboard's
         }
         _layout.Reindex();
     }
@@ -427,9 +434,29 @@ public sealed class KeyboardEditorViewModel : ObservableObject
                          $"{read.ConjunctKeys} conjunct keys. It is in the {SelectedLanguage.Name} keyboard list now.";
         if (read.Unreadable.Count > 0)
             summary += $" {read.Unreadable.Count} key(s) hold a code this version cannot read and were left empty: {string.Join(" ", read.Unreadable)}.";
+        var unknown = read.Unknown.Select(KeyName).ToList();
+        if (unknown.Count > 0)
+            summary += $" {unknown.Count} key(s) type a character this version cannot read yet, and type nothing here: {string.Join(", ", unknown)}.";
+        // Nothing on the Ctrl+Space layer means the key types what it types without it.
+        var unknownOnEscape = read.UnknownOnEscape.Select(k => "Ctrl+Space " + KeyName(k)).ToList();
+        if (unknownOnEscape.Count > 0)
+            summary += $" After Ctrl+Space, {unknownOnEscape.Count} key(s) hold a character this version cannot read yet, " +
+                       $"and type their ordinary character instead: {string.Join(", ", unknownOnEscape)}.";
         Status = summary;
         _log.Info($"Shree-Lipi keyboard imported: {path} -> {summary}");
         return true;
+    }
+
+    /// <summary>How a typist names the key a US keyboard types this character with: "Shift+5" for %, "K" for k.</summary>
+    private static string KeyName(char c)
+    {
+        foreach (var (_, normal, shift) in ShreeKeyboardFile.PhysicalKeys)
+        {
+            string label = char.IsLetter(normal) ? char.ToUpperInvariant(normal).ToString() : normal.ToString();
+            if (c == normal) return label;
+            if (c == shift) return "Shift+" + label;
+        }
+        return c.ToString();
     }
 
     private void Save()

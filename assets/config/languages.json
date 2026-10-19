@@ -70,10 +70,10 @@
         },
         {
           "id": "shree-dev7-0700",
-          "name": "SHREE-DEV7-0700",
+          "name": "SHREE-DEV7-0700 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-0700",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-devx-0701",
@@ -847,7 +847,7 @@
         },
         {
           "id": "shree-dev-4914",
-          "name": "SHREE-DEV-4914",
+          "name": "SHREE-DEV-4914 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-DEV-4914",
           "type": "legacy",
           "encoding": "shree-dev456"
@@ -861,45 +861,45 @@
         },
         {
           "id": "shree-dev7-4914",
-          "name": "SHREE-DEV7-4914",
+          "name": "SHREE-DEV7-4914 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-4914",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-001",
-          "name": "Shree-Dev7-001",
+          "name": "Shree-Dev7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-001",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-002",
-          "name": "Shree-Dev7-002",
+          "name": "Shree-Dev7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-002",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-san7-0960",
-          "name": "SHREE-SAN7-0960",
+          "name": "SHREE-SAN7-0960 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0960",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0962",
-          "name": "SHREE-SAN7-0962",
+          "name": "SHREE-SAN7-0962 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0962",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0964",
-          "name": "SHREE-SAN7-0964",
+          "name": "SHREE-SAN7-0964 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0964",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "bb-kautilya",
@@ -1101,7 +1101,7 @@
         },
         {
           "id": "shree-dev-0700-dev456",
-          "name": "SHREE-DEV-0700",
+          "name": "SHREE-DEV-0700 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-DEV-0700",
           "type": "legacy",
           "encoding": "shree-dev456"
@@ -1124,13 +1124,15 @@
           "id": "hi-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-dev-4914"
+          "fontId": "shree-dev7-4914",
+          "families": "^SHREE-(DEV|SAN)7-"
         },
         {
           "id": "hi-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-dev-4914"
+          "fontId": "shree-dev-4914",
+          "families": "^SHREE-DEV-"
         },
         {
           "id": "hi-fl-shivaji",
@@ -1629,7 +1631,7 @@
         },
         {
           "id": "shree-dev-0700",
-          "name": "SHREE-DEV-0700",
+          "name": "SHREE-DEV-0700 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-DEV-0700",
           "type": "legacy",
           "encoding": "shree-dev456"
@@ -1643,10 +1645,10 @@
         },
         {
           "id": "shree-dev7-0700",
-          "name": "SHREE-DEV7-0700",
+          "name": "SHREE-DEV7-0700 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-0700",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-devx-0701",
@@ -1797,24 +1799,24 @@
         },
         {
           "id": "shree-san7-0960",
-          "name": "SHREE-SAN7-0960",
+          "name": "SHREE-SAN7-0960 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0960",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0962",
-          "name": "SHREE-SAN7-0962",
+          "name": "SHREE-SAN7-0962 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0962",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0964",
-          "name": "SHREE-SAN7-0964",
+          "name": "SHREE-SAN7-0964 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0964",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-devx-0971",
@@ -2441,7 +2443,7 @@
         },
         {
           "id": "shree-dev-4914",
-          "name": "SHREE-DEV-4914",
+          "name": "SHREE-DEV-4914 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-DEV-4914",
           "type": "legacy",
           "encoding": "shree-dev456"
@@ -2455,24 +2457,24 @@
         },
         {
           "id": "shree-dev7-4914",
-          "name": "SHREE-DEV7-4914",
+          "name": "SHREE-DEV7-4914 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-4914",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-001",
-          "name": "Shree-Dev7-001",
+          "name": "Shree-Dev7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-001",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-002",
-          "name": "Shree-Dev7-002",
+          "name": "Shree-Dev7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-002",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         }
       ],
       "fontLayouts": [
@@ -2492,13 +2494,15 @@
           "id": "mr-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-dev-0700"
+          "fontId": "shree-dev7-0700",
+          "families": "^SHREE-(DEV|SAN)7-"
         },
         {
           "id": "mr-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-dev-0700"
+          "fontId": "shree-dev-0700",
+          "families": "^SHREE-DEV-"
         },
         {
           "id": "mr-fl-shivaji",
@@ -2792,10 +2796,10 @@
         },
         {
           "id": "shree-dev7-0700",
-          "name": "SHREE-DEV7-0700",
+          "name": "SHREE-DEV7-0700 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-0700",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-devx-0701",
@@ -2946,24 +2950,24 @@
         },
         {
           "id": "shree-san7-0960",
-          "name": "SHREE-SAN7-0960",
+          "name": "SHREE-SAN7-0960 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0960",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0962",
-          "name": "SHREE-SAN7-0962",
+          "name": "SHREE-SAN7-0962 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0962",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-san7-0964",
-          "name": "SHREE-SAN7-0964",
+          "name": "SHREE-SAN7-0964 (Shree-Lipi 7.0)",
           "family": "SHREE-SAN7-0964",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-san7"
         },
         {
           "id": "shree-devx-0971",
@@ -3604,24 +3608,24 @@
         },
         {
           "id": "shree-dev7-4914",
-          "name": "SHREE-DEV7-4914",
+          "name": "SHREE-DEV7-4914 (Shree-Lipi 7.0)",
           "family": "SHREE-DEV7-4914",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-001",
-          "name": "Shree-Dev7-001",
+          "name": "Shree-Dev7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-001",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         },
         {
           "id": "shree-dev7-002",
-          "name": "Shree-Dev7-002",
+          "name": "Shree-Dev7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Dev7-002",
           "type": "legacy",
-          "encoding": "shree-dev456"
+          "encoding": "shree-dev7"
         }
       ],
       "fontLayouts": [
@@ -3641,7 +3645,8 @@
           "id": "sa-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-dev-0700"
+          "fontId": "shree-dev7-0700",
+          "families": "^SHREE-(SAN|DEV)7-"
         }
       ],
       "layouts": [
@@ -3869,35 +3874,35 @@
         },
         {
           "id": "shree-pun-0950",
-          "name": "SHREE-PUN-0950 (Shree-Lipi 4-5-6)",
+          "name": "SHREE-PUN-0950 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-PUN-0950",
           "type": "legacy",
           "encoding": "shree-pun7"
         },
         {
           "id": "shree-pun-0951",
-          "name": "SHREE-PUN-0951 (Shree-Lipi 4-5-6)",
+          "name": "SHREE-PUN-0951 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-PUN-0951",
           "type": "legacy",
           "encoding": "shree-pun7"
         },
         {
           "id": "shree-pun-0952",
-          "name": "SHREE-PUN-0952 (Shree-Lipi 4-5-6)",
+          "name": "SHREE-PUN-0952 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-PUN-0952",
           "type": "legacy",
           "encoding": "shree-pun7"
         },
         {
           "id": "shree-pun-0955",
-          "name": "SHREE-PUN-0955 (Shree-Lipi 4-5-6)",
+          "name": "SHREE-PUN-0955 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-PUN-0955",
           "type": "legacy",
           "encoding": "shree-pun7"
         },
         {
           "id": "shree-pun-0956",
-          "name": "SHREE-PUN-0956 (Shree-Lipi 4-5-6)",
+          "name": "SHREE-PUN-0956 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-PUN-0956",
           "type": "legacy",
           "encoding": "shree-pun7"
@@ -3981,14 +3986,14 @@
         },
         {
           "id": "shree-pun7-0951",
-          "name": "SHREE-PUN7-0951",
+          "name": "SHREE-PUN7-0951 (Shree-Lipi 7.0)",
           "family": "SHREE-PUN7-0951",
           "type": "legacy",
           "encoding": "shree-pun7"
         },
         {
           "id": "shree-pun7-0952",
-          "name": "SHREE-PUN7-0952",
+          "name": "SHREE-PUN7-0952 (Shree-Lipi 7.0)",
           "family": "SHREE-PUN7-0952",
           "type": "legacy",
           "encoding": "shree-pun7"
@@ -4011,13 +4016,15 @@
           "id": "pa-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-pun-0950"
+          "fontId": "shree-pun7-0951",
+          "families": "^SHREE-PUN7-"
         },
         {
           "id": "pa-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-pun-0950"
+          "fontId": "shree-pun-0950",
+          "families": "^SHREE-PUN-"
         }
       ],
       "layouts": [
@@ -4117,336 +4124,336 @@
         },
         {
           "id": "shree-ban-0550",
-          "name": "SHREE-BAN-0550",
+          "name": "SHREE-BAN-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0550",
-          "name": "SHREE-ASS-0550",
+          "name": "SHREE-ASS-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0550",
-          "name": "SHREE-BAN7-0550",
+          "name": "SHREE-BAN7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0550",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0550",
-          "name": "SHREE-ASS7-0550",
+          "name": "SHREE-ASS7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0552",
-          "name": "SHREE-BAN-0552",
+          "name": "SHREE-BAN-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0552",
-          "name": "SHREE-ASS-0552",
+          "name": "SHREE-ASS-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0552",
-          "name": "SHREE-BAN7-0552",
+          "name": "SHREE-BAN7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0552",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0552",
-          "name": "SHREE-ASS7-0552",
+          "name": "SHREE-ASS7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0553",
-          "name": "SHREE-BAN-0553",
+          "name": "SHREE-BAN-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0553",
-          "name": "SHREE-ASS-0553",
+          "name": "SHREE-ASS-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0553",
-          "name": "SHREE-BAN7-0553",
+          "name": "SHREE-BAN7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0553",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0553",
-          "name": "SHREE-ASS7-0553",
+          "name": "SHREE-ASS7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0560",
-          "name": "SHREE-BAN-0560",
+          "name": "SHREE-BAN-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0560",
-          "name": "SHREE-ASS-0560",
+          "name": "SHREE-ASS-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0560",
-          "name": "SHREE-BAN7-0560",
+          "name": "SHREE-BAN7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0560",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0560",
-          "name": "SHREE-ASS7-0560",
+          "name": "SHREE-ASS7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0562",
-          "name": "SHREE-BAN-0562",
+          "name": "SHREE-BAN-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0562",
-          "name": "SHREE-ASS-0562",
+          "name": "SHREE-ASS-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0562",
-          "name": "SHREE-BAN7-0562",
+          "name": "SHREE-BAN7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0562",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0562",
-          "name": "SHREE-ASS7-0562",
+          "name": "SHREE-ASS7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0564",
-          "name": "SHREE-BAN-0564",
+          "name": "SHREE-BAN-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0564",
-          "name": "SHREE-ASS-0564",
+          "name": "SHREE-ASS-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0564",
-          "name": "SHREE-BAN7-0564",
+          "name": "SHREE-BAN7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0564",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0564",
-          "name": "SHREE-ASS7-0564",
+          "name": "SHREE-ASS7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0592",
-          "name": "SHREE-BAN-0592",
+          "name": "SHREE-BAN-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0592",
-          "name": "SHREE-ASS-0592",
+          "name": "SHREE-ASS-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0592",
-          "name": "SHREE-BAN7-0592",
+          "name": "SHREE-BAN7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0592",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0592",
-          "name": "SHREE-ASS7-0592",
+          "name": "SHREE-ASS7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0593",
-          "name": "SHREE-BAN-0593",
+          "name": "SHREE-BAN-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0593",
-          "name": "SHREE-ASS-0593",
+          "name": "SHREE-ASS-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0593",
-          "name": "SHREE-BAN7-0593",
+          "name": "SHREE-BAN7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0593",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0593",
-          "name": "SHREE-ASS7-0593",
+          "name": "SHREE-ASS7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0594",
-          "name": "SHREE-BAN-0594",
+          "name": "SHREE-BAN-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0594",
-          "name": "SHREE-ASS-0594",
+          "name": "SHREE-ASS-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0594",
-          "name": "SHREE-BAN7-0594",
+          "name": "SHREE-BAN7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0594",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0594",
-          "name": "SHREE-ASS7-0594",
+          "name": "SHREE-ASS7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0595",
-          "name": "SHREE-BAN-0595",
+          "name": "SHREE-BAN-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0595",
-          "name": "SHREE-ASS-0595",
+          "name": "SHREE-ASS-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0595",
-          "name": "SHREE-BAN7-0595",
+          "name": "SHREE-BAN7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0595",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0595",
-          "name": "SHREE-ASS7-0595",
+          "name": "SHREE-ASS7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0597",
-          "name": "SHREE-BAN-0597",
+          "name": "SHREE-BAN-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0597",
-          "name": "SHREE-ASS-0597",
+          "name": "SHREE-ASS-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0597",
-          "name": "SHREE-BAN7-0597",
+          "name": "SHREE-BAN7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0597",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0597",
-          "name": "SHREE-ASS7-0597",
+          "name": "SHREE-ASS7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ass7-001",
-          "name": "Shree-Ass7-001",
+          "name": "Shree-Ass7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-001",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ass7-002",
-          "name": "Shree-Ass7-002",
+          "name": "Shree-Ass7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-002",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ban7-001",
-          "name": "Shree-Ban7-001",
+          "name": "Shree-Ban7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-001",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ban7-002",
-          "name": "Shree-Ban7-002",
+          "name": "Shree-Ban7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-002",
           "type": "legacy",
           "encoding": "shree-ban7"
@@ -4469,13 +4476,15 @@
           "id": "bn-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ban7-0550",
+          "families": "^SHREE-(BAN|ASS)7-"
         },
         {
           "id": "bn-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ban-0550",
+          "families": "^SHREE-(BAN|ASS)-"
         },
         {
           "id": "bn-fl-stm-bnt",
@@ -6771,42 +6780,42 @@
         },
         {
           "id": "shree-tel-apoorva-0900",
-          "name": "SHREE-TEL-Apoorva-0900",
+          "name": "SHREE-TEL-Apoorva-0900 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TEL-Apoorva-0900",
           "type": "legacy",
           "encoding": "shree-tel7"
         },
         {
           "id": "shree-tel7-apoorva-0900",
-          "name": "SHREE-TEL7-Apoorva-0900",
+          "name": "SHREE-TEL7-Apoorva-0900 (Shree-Lipi 7.0)",
           "family": "SHREE-TEL7-Apoorva-0900",
           "type": "legacy",
           "encoding": "shree-tel7"
         },
         {
           "id": "shree-tel-asmitha-1642",
-          "name": "SHREE-TEL-Asmitha-1642",
+          "name": "SHREE-TEL-Asmitha-1642 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TEL-Asmitha-1642",
           "type": "legacy",
           "encoding": "shree-tel7"
         },
         {
           "id": "shree-tel7-asmitha-1642",
-          "name": "SHREE-TEL7-Asmitha-1642",
+          "name": "SHREE-TEL7-Asmitha-1642 (Shree-Lipi 7.0)",
           "family": "SHREE-TEL7-Asmitha-1642",
           "type": "legacy",
           "encoding": "shree-tel7"
         },
         {
           "id": "shree-tel7-001",
-          "name": "Shree-Tel7-001",
+          "name": "Shree-Tel7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Tel7-001",
           "type": "legacy",
           "encoding": "shree-tel7"
         },
         {
           "id": "shree-tel7-002",
-          "name": "Shree-Tel7-002",
+          "name": "Shree-Tel7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Tel7-002",
           "type": "legacy",
           "encoding": "shree-tel7"
@@ -6829,13 +6838,15 @@
           "id": "te-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-tel-apoorva-0900"
+          "fontId": "shree-tel7-apoorva-0900",
+          "families": "^SHREE-TEL7-"
         },
         {
           "id": "te-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-tel-apoorva-0900"
+          "fontId": "shree-tel-apoorva-0900",
+          "families": "^SHREE-TEL-"
         },
         {
           "id": "te-fl-isfoc-monolingual",
@@ -7023,112 +7034,112 @@
         },
         {
           "id": "shree-guj-0750",
-          "name": "SHREE-GUJ-0750 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0750 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0750",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-0751",
-          "name": "SHREE-GUJ-0751 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0751 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0751",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-0763",
-          "name": "SHREE-GUJ-0763 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0763 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0763",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-0768",
-          "name": "SHREE-GUJ-0768 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0768 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0768",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-0769",
-          "name": "SHREE-GUJ-0769 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0769 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0769",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-0781",
-          "name": "SHREE-GUJ-0781 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-0781 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-0781",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj-3700",
-          "name": "SHREE-GUJ-3700 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ-3700 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-GUJ-3700",
           "type": "legacy",
-          "encoding": "shree-guj7"
+          "encoding": "shree-guj456"
         },
         {
           "id": "shree-guj7-001",
-          "name": "Shree-Guj7-001 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "Shree-Guj7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Guj7-001",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-002",
-          "name": "Shree-Guj7-002 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "Shree-Guj7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Guj7-002",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0750",
-          "name": "SHREE-GUJ7-0750 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0750 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0750",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0751",
-          "name": "SHREE-GUJ7-0751 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0751 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0751",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0763",
-          "name": "SHREE-GUJ7-0763 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0763 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0763",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0768",
-          "name": "SHREE-GUJ7-0768 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0768 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0768",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0769",
-          "name": "SHREE-GUJ7-0769 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0769 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0769",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-0781",
-          "name": "SHREE-GUJ7-0781 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-0781 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-0781",
           "type": "legacy",
           "encoding": "shree-guj7"
         },
         {
           "id": "shree-guj7-3700",
-          "name": "SHREE-GUJ7-3700 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-GUJ7-3700 (Shree-Lipi 7.0)",
           "family": "SHREE-GUJ7-3700",
           "type": "legacy",
           "encoding": "shree-guj7"
@@ -8016,13 +8027,15 @@
           "id": "gu-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-guj-0750"
+          "fontId": "shree-guj7-0750",
+          "families": "^SHREE-GUJ7-"
         },
         {
           "id": "gu-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-guj-0750"
+          "fontId": "shree-guj-0750",
+          "families": "^SHREE-GUJ-"
         },
         {
           "id": "gu-fl-terafont",
@@ -8259,77 +8272,77 @@
         },
         {
           "id": "shree-kan-0850",
-          "name": "SHREE-KAN-0850",
+          "name": "SHREE-KAN-0850 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0850",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan-0851",
-          "name": "SHREE-KAN-0851",
+          "name": "SHREE-KAN-0851 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0851",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-0851",
-          "name": "SHREE-KAN7-0851",
+          "name": "SHREE-KAN7-0851 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0851",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan-0852",
-          "name": "SHREE-KAN-0852",
+          "name": "SHREE-KAN-0852 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0852",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-0852",
-          "name": "SHREE-KAN7-0852",
+          "name": "SHREE-KAN7-0852 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0852",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan-0853",
-          "name": "SHREE-KAN-0853",
+          "name": "SHREE-KAN-0853 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0853",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-0853",
-          "name": "SHREE-KAN7-0853",
+          "name": "SHREE-KAN7-0853 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0853",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan-0854",
-          "name": "SHREE-KAN-0854",
+          "name": "SHREE-KAN-0854 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0854",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-0854",
-          "name": "SHREE-KAN7-0854",
+          "name": "SHREE-KAN7-0854 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0854",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan-0855",
-          "name": "SHREE-KAN-0855",
+          "name": "SHREE-KAN-0855 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0855",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-0855",
-          "name": "SHREE-KAN7-0855",
+          "name": "SHREE-KAN7-0855 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0855",
           "type": "legacy",
           "encoding": "shree-kan7"
@@ -8511,7 +8524,7 @@
         },
         {
           "id": "shree-kan-0899",
-          "name": "SHREE-KAN-0899",
+          "name": "SHREE-KAN-0899 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-KAN-0899",
           "type": "legacy",
           "encoding": "shree-kan7"
@@ -8525,21 +8538,21 @@
         },
         {
           "id": "shree-kan7-0899",
-          "name": "SHREE-KAN7-0899",
+          "name": "SHREE-KAN7-0899 (Shree-Lipi 7.0)",
           "family": "SHREE-KAN7-0899",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-001",
-          "name": "Shree-Kan7-001",
+          "name": "Shree-Kan7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Kan7-001",
           "type": "legacy",
           "encoding": "shree-kan7"
         },
         {
           "id": "shree-kan7-002",
-          "name": "Shree-Kan7-002",
+          "name": "Shree-Kan7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Kan7-002",
           "type": "legacy",
           "encoding": "shree-kan7"
@@ -8562,13 +8575,15 @@
           "id": "kn-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-kan7-0850"
+          "fontId": "shree-kan7-0850",
+          "families": "^SHREE-KAN7-"
         },
         {
           "id": "kn-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-kan-0850"
+          "fontId": "shree-kan-0850",
+          "families": "^SHREE-KAN-"
         },
         {
           "id": "kn-fl-kgp-nudi-monolingual",
@@ -8965,13 +8980,15 @@
           "id": "ml-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-mal7-001"
+          "fontId": "shree-mal7-001",
+          "families": "^SHREE-MAL7-"
         },
         {
           "id": "ml-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-mal7-001"
+          "fontId": null,
+          "families": "^SHREE-MAL-"
         }
       ],
       "layouts": [
@@ -9084,70 +9101,70 @@
         },
         {
           "id": "shree-ori-0600",
-          "name": "SHREE-ORI-0600 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI-0600 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ORI-0600",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori-0601",
-          "name": "SHREE-ORI-0601 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI-0601 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ORI-0601",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori-0602",
-          "name": "SHREE-ORI-0602 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI-0602 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ORI-0602",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori-0603",
-          "name": "SHREE-ORI-0603 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI-0603 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ORI-0603",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori-0604",
-          "name": "SHREE-ORI-0604 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI-0604 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ORI-0604",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori7-0600",
-          "name": "SHREE-ORI7-0600 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI7-0600 (Shree-Lipi 7.0)",
           "family": "SHREE-ORI7-0600",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori7-0601",
-          "name": "SHREE-ORI7-0601 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI7-0601 (Shree-Lipi 7.0)",
           "family": "SHREE-ORI7-0601",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori7-0602",
-          "name": "SHREE-ORI7-0602 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI7-0602 (Shree-Lipi 7.0)",
           "family": "SHREE-ORI7-0602",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori7-0603",
-          "name": "SHREE-ORI7-0603 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI7-0603 (Shree-Lipi 7.0)",
           "family": "SHREE-ORI7-0603",
           "type": "legacy",
           "encoding": "shree-ori7"
         },
         {
           "id": "shree-ori7-0604",
-          "name": "SHREE-ORI7-0604 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-ORI7-0604 (Shree-Lipi 7.0)",
           "family": "SHREE-ORI7-0604",
           "type": "legacy",
           "encoding": "shree-ori7"
@@ -9492,13 +9509,15 @@
           "id": "or-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-ori-0600"
+          "fontId": "shree-ori7-0600",
+          "families": "^SHREE-ORI7-"
         },
         {
           "id": "or-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-ori-0600"
+          "fontId": "shree-ori-0600",
+          "families": "^SHREE-ORI-"
         },
         {
           "id": "or-fl-akruti-98",
@@ -9576,84 +9595,84 @@
         },
         {
           "id": "shree-tam-0800",
-          "name": "SHREE-TAM-0800 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-0800 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-0800",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam-0801",
-          "name": "SHREE-TAM-0801 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-0801 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-0801",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam-0802",
-          "name": "SHREE-TAM-0802 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-0802 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-0802",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam-0803",
-          "name": "SHREE-TAM-0803 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-0803 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-0803",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam-1316",
-          "name": "SHREE-TAM-1316 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-1316 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-1316",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam-3883",
-          "name": "SHREE-TAM-3883 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM-3883 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-TAM-3883",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-0800",
-          "name": "SHREE-TAM7-0800 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-0800 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-0800",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-0801",
-          "name": "SHREE-TAM7-0801 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-0801 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-0801",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-0802",
-          "name": "SHREE-TAM7-0802 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-0802 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-0802",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-0803",
-          "name": "SHREE-TAM7-0803 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-0803 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-0803",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-1316",
-          "name": "SHREE-TAM7-1316 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-1316 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-1316",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-3883",
-          "name": "SHREE-TAM7-3883 (Shree-Lipi 7.0 / 4-5-6)",
+          "name": "SHREE-TAM7-3883 (Shree-Lipi 7.0)",
           "family": "SHREE-TAM7-3883",
           "type": "legacy",
           "encoding": "shree-tam7"
@@ -12663,14 +12682,14 @@
         },
         {
           "id": "shree-tam7-001",
-          "name": "Shree-Tam7-001",
+          "name": "Shree-Tam7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Tam7-001",
           "type": "legacy",
           "encoding": "shree-tam7"
         },
         {
           "id": "shree-tam7-002",
-          "name": "Shree-Tam7-002",
+          "name": "Shree-Tam7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Tam7-002",
           "type": "legacy",
           "encoding": "shree-tam7"
@@ -12693,13 +12712,15 @@
           "id": "ta-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-tam-0800"
+          "fontId": "shree-tam7-0800",
+          "families": "^SHREE-TAM7-"
         },
         {
           "id": "ta-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-tam-0800"
+          "fontId": "shree-tam-0800",
+          "families": "^SHREE-TAM-"
         },
         {
           "id": "ta-fl-vanavil",
@@ -12873,336 +12894,336 @@
         },
         {
           "id": "shree-ban-0550",
-          "name": "SHREE-BAN-0550",
+          "name": "SHREE-BAN-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0550",
-          "name": "SHREE-ASS-0550",
+          "name": "SHREE-ASS-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0550",
-          "name": "SHREE-BAN7-0550",
+          "name": "SHREE-BAN7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0550",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0550",
-          "name": "SHREE-ASS7-0550",
+          "name": "SHREE-ASS7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0552",
-          "name": "SHREE-BAN-0552",
+          "name": "SHREE-BAN-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0552",
-          "name": "SHREE-ASS-0552",
+          "name": "SHREE-ASS-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0552",
-          "name": "SHREE-BAN7-0552",
+          "name": "SHREE-BAN7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0552",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0552",
-          "name": "SHREE-ASS7-0552",
+          "name": "SHREE-ASS7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0553",
-          "name": "SHREE-BAN-0553",
+          "name": "SHREE-BAN-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0553",
-          "name": "SHREE-ASS-0553",
+          "name": "SHREE-ASS-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0553",
-          "name": "SHREE-BAN7-0553",
+          "name": "SHREE-BAN7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0553",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0553",
-          "name": "SHREE-ASS7-0553",
+          "name": "SHREE-ASS7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0560",
-          "name": "SHREE-BAN-0560",
+          "name": "SHREE-BAN-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0560",
-          "name": "SHREE-ASS-0560",
+          "name": "SHREE-ASS-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0560",
-          "name": "SHREE-BAN7-0560",
+          "name": "SHREE-BAN7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0560",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0560",
-          "name": "SHREE-ASS7-0560",
+          "name": "SHREE-ASS7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0562",
-          "name": "SHREE-BAN-0562",
+          "name": "SHREE-BAN-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0562",
-          "name": "SHREE-ASS-0562",
+          "name": "SHREE-ASS-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0562",
-          "name": "SHREE-BAN7-0562",
+          "name": "SHREE-BAN7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0562",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0562",
-          "name": "SHREE-ASS7-0562",
+          "name": "SHREE-ASS7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0564",
-          "name": "SHREE-BAN-0564",
+          "name": "SHREE-BAN-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0564",
-          "name": "SHREE-ASS-0564",
+          "name": "SHREE-ASS-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0564",
-          "name": "SHREE-BAN7-0564",
+          "name": "SHREE-BAN7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0564",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0564",
-          "name": "SHREE-ASS7-0564",
+          "name": "SHREE-ASS7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0592",
-          "name": "SHREE-BAN-0592",
+          "name": "SHREE-BAN-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0592",
-          "name": "SHREE-ASS-0592",
+          "name": "SHREE-ASS-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0592",
-          "name": "SHREE-BAN7-0592",
+          "name": "SHREE-BAN7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0592",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0592",
-          "name": "SHREE-ASS7-0592",
+          "name": "SHREE-ASS7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0593",
-          "name": "SHREE-BAN-0593",
+          "name": "SHREE-BAN-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0593",
-          "name": "SHREE-ASS-0593",
+          "name": "SHREE-ASS-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0593",
-          "name": "SHREE-BAN7-0593",
+          "name": "SHREE-BAN7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0593",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0593",
-          "name": "SHREE-ASS7-0593",
+          "name": "SHREE-ASS7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0594",
-          "name": "SHREE-BAN-0594",
+          "name": "SHREE-BAN-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0594",
-          "name": "SHREE-ASS-0594",
+          "name": "SHREE-ASS-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0594",
-          "name": "SHREE-BAN7-0594",
+          "name": "SHREE-BAN7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0594",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0594",
-          "name": "SHREE-ASS7-0594",
+          "name": "SHREE-ASS7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0595",
-          "name": "SHREE-BAN-0595",
+          "name": "SHREE-BAN-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0595",
-          "name": "SHREE-ASS-0595",
+          "name": "SHREE-ASS-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0595",
-          "name": "SHREE-BAN7-0595",
+          "name": "SHREE-BAN7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0595",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0595",
-          "name": "SHREE-ASS7-0595",
+          "name": "SHREE-ASS7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0597",
-          "name": "SHREE-BAN-0597",
+          "name": "SHREE-BAN-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0597",
-          "name": "SHREE-ASS-0597",
+          "name": "SHREE-ASS-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0597",
-          "name": "SHREE-BAN7-0597",
+          "name": "SHREE-BAN7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0597",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0597",
-          "name": "SHREE-ASS7-0597",
+          "name": "SHREE-ASS7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ass7-001",
-          "name": "Shree-Ass7-001",
+          "name": "Shree-Ass7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-001",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ass7-002",
-          "name": "Shree-Ass7-002",
+          "name": "Shree-Ass7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-002",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ban7-001",
-          "name": "Shree-Ban7-001",
+          "name": "Shree-Ban7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-001",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ban7-002",
-          "name": "Shree-Ban7-002",
+          "name": "Shree-Ban7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-002",
           "type": "legacy",
           "encoding": "shree-ban7"
@@ -13225,13 +13246,15 @@
           "id": "as-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ass7-0550",
+          "families": "^SHREE-(ASS|BAN)7-"
         },
         {
           "id": "as-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ass-0550",
+          "families": "^SHREE-(ASS|BAN)-"
         },
         {
           "id": "as-fl-stm-bnt",
@@ -13424,336 +13447,336 @@
         },
         {
           "id": "shree-ban-0550",
-          "name": "SHREE-BAN-0550",
+          "name": "SHREE-BAN-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0550",
-          "name": "SHREE-ASS-0550",
+          "name": "SHREE-ASS-0550 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0550",
-          "name": "SHREE-BAN7-0550",
+          "name": "SHREE-BAN7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0550",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0550",
-          "name": "SHREE-ASS7-0550",
+          "name": "SHREE-ASS7-0550 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0550",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0552",
-          "name": "SHREE-BAN-0552",
+          "name": "SHREE-BAN-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0552",
-          "name": "SHREE-ASS-0552",
+          "name": "SHREE-ASS-0552 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0552",
-          "name": "SHREE-BAN7-0552",
+          "name": "SHREE-BAN7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0552",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0552",
-          "name": "SHREE-ASS7-0552",
+          "name": "SHREE-ASS7-0552 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0552",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0553",
-          "name": "SHREE-BAN-0553",
+          "name": "SHREE-BAN-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0553",
-          "name": "SHREE-ASS-0553",
+          "name": "SHREE-ASS-0553 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0553",
-          "name": "SHREE-BAN7-0553",
+          "name": "SHREE-BAN7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0553",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0553",
-          "name": "SHREE-ASS7-0553",
+          "name": "SHREE-ASS7-0553 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0553",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0560",
-          "name": "SHREE-BAN-0560",
+          "name": "SHREE-BAN-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0560",
-          "name": "SHREE-ASS-0560",
+          "name": "SHREE-ASS-0560 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0560",
-          "name": "SHREE-BAN7-0560",
+          "name": "SHREE-BAN7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0560",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0560",
-          "name": "SHREE-ASS7-0560",
+          "name": "SHREE-ASS7-0560 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0560",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0562",
-          "name": "SHREE-BAN-0562",
+          "name": "SHREE-BAN-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0562",
-          "name": "SHREE-ASS-0562",
+          "name": "SHREE-ASS-0562 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0562",
-          "name": "SHREE-BAN7-0562",
+          "name": "SHREE-BAN7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0562",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0562",
-          "name": "SHREE-ASS7-0562",
+          "name": "SHREE-ASS7-0562 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0562",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0564",
-          "name": "SHREE-BAN-0564",
+          "name": "SHREE-BAN-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0564",
-          "name": "SHREE-ASS-0564",
+          "name": "SHREE-ASS-0564 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0564",
-          "name": "SHREE-BAN7-0564",
+          "name": "SHREE-BAN7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0564",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0564",
-          "name": "SHREE-ASS7-0564",
+          "name": "SHREE-ASS7-0564 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0564",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0592",
-          "name": "SHREE-BAN-0592",
+          "name": "SHREE-BAN-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0592",
-          "name": "SHREE-ASS-0592",
+          "name": "SHREE-ASS-0592 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0592",
-          "name": "SHREE-BAN7-0592",
+          "name": "SHREE-BAN7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0592",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0592",
-          "name": "SHREE-ASS7-0592",
+          "name": "SHREE-ASS7-0592 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0592",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0593",
-          "name": "SHREE-BAN-0593",
+          "name": "SHREE-BAN-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0593",
-          "name": "SHREE-ASS-0593",
+          "name": "SHREE-ASS-0593 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0593",
-          "name": "SHREE-BAN7-0593",
+          "name": "SHREE-BAN7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0593",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0593",
-          "name": "SHREE-ASS7-0593",
+          "name": "SHREE-ASS7-0593 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0593",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0594",
-          "name": "SHREE-BAN-0594",
+          "name": "SHREE-BAN-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0594",
-          "name": "SHREE-ASS-0594",
+          "name": "SHREE-ASS-0594 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0594",
-          "name": "SHREE-BAN7-0594",
+          "name": "SHREE-BAN7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0594",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0594",
-          "name": "SHREE-ASS7-0594",
+          "name": "SHREE-ASS7-0594 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0594",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0595",
-          "name": "SHREE-BAN-0595",
+          "name": "SHREE-BAN-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0595",
-          "name": "SHREE-ASS-0595",
+          "name": "SHREE-ASS-0595 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0595",
-          "name": "SHREE-BAN7-0595",
+          "name": "SHREE-BAN7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0595",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0595",
-          "name": "SHREE-ASS7-0595",
+          "name": "SHREE-ASS7-0595 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0595",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ban-0597",
-          "name": "SHREE-BAN-0597",
+          "name": "SHREE-BAN-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-BAN-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ban456"
         },
         {
           "id": "shree-ass-0597",
-          "name": "SHREE-ASS-0597",
+          "name": "SHREE-ASS-0597 (Shree-Lipi 4.0/5.0/6.0)",
           "family": "SHREE-ASS-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass456"
         },
         {
           "id": "shree-ban7-0597",
-          "name": "SHREE-BAN7-0597",
+          "name": "SHREE-BAN7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-BAN7-0597",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ass7-0597",
-          "name": "SHREE-ASS7-0597",
+          "name": "SHREE-ASS7-0597 (Shree-Lipi 7.0)",
           "family": "SHREE-ASS7-0597",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7"
         },
         {
           "id": "shree-ass7-001",
-          "name": "Shree-Ass7-001",
+          "name": "Shree-Ass7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-001",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ass7-002",
-          "name": "Shree-Ass7-002",
+          "name": "Shree-Ass7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ass7-002",
           "type": "legacy",
-          "encoding": "shree-ban7"
+          "encoding": "shree-ass7w"
         },
         {
           "id": "shree-ban7-001",
-          "name": "Shree-Ban7-001",
+          "name": "Shree-Ban7-001 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-001",
           "type": "legacy",
           "encoding": "shree-ban7"
         },
         {
           "id": "shree-ban7-002",
-          "name": "Shree-Ban7-002",
+          "name": "Shree-Ban7-002 (Shree-Lipi 7.0)",
           "family": "Shree-Ban7-002",
           "type": "legacy",
           "encoding": "shree-ban7"
@@ -13776,13 +13799,15 @@
           "id": "mni-fl-shree-lipi-7-0",
           "name": "Shree-Lipi 7.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ban7-0550",
+          "families": "^SHREE-(BAN|ASS)7-"
         },
         {
           "id": "mni-fl-shree-lipi-4-0-5-0-6-0",
           "name": "Shree-Lipi 4.0/5.0/6.0",
           "type": "legacy",
-          "fontId": "shree-ass-0550"
+          "fontId": "shree-ban-0550",
+          "families": "^SHREE-(BAN|ASS)-"
         },
         {
           "id": "mni-fl-stm-bnt",
@@ -14017,6 +14042,8 @@
     "mappings/unicode-to-shree-tamx.json",
     "mappings/shree-guj7-to-unicode.json",
     "mappings/unicode-to-shree-guj7.json",
+    "mappings/shree-guj456-to-unicode.json",
+    "mappings/unicode-to-shree-guj456.json",
     "mappings/shree-mal7-to-unicode.json",
     "mappings/unicode-to-shree-mal7.json",
     "mappings/shree-ori7-to-unicode.json",
@@ -14031,8 +14058,20 @@
     "mappings/unicode-to-shree-kan7.json",
     "mappings/shree-dev456-to-unicode.json",
     "mappings/unicode-to-shree-dev456.json",
+    "mappings/shree-dev7-to-unicode.json",
+    "mappings/unicode-to-shree-dev7.json",
+    "mappings/shree-san7-to-unicode.json",
+    "mappings/unicode-to-shree-san7.json",
     "mappings/shree-ban7-to-unicode.json",
     "mappings/unicode-to-shree-ban7.json",
+    "mappings/shree-ban456-to-unicode.json",
+    "mappings/unicode-to-shree-ban456.json",
+    "mappings/shree-ass7-to-unicode.json",
+    "mappings/unicode-to-shree-ass7.json",
+    "mappings/shree-ass456-to-unicode.json",
+    "mappings/unicode-to-shree-ass456.json",
+    "mappings/shree-ass7w-to-unicode.json",
+    "mappings/unicode-to-shree-ass7w.json",
     "mappings/shree-tel7-to-unicode.json",
     "mappings/unicode-to-shree-tel7.json",
     "mappings/bhasha-bharati-dev-to-unicode.json",

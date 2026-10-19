@@ -40,6 +40,7 @@
     {
       "vk": 54,
       "base": "૬",
+      "shift": "",
       "deadKey": false
     },
     {
@@ -239,7 +240,26 @@
     },
     {
       "vk": 192,
+      "base": "",
       "shift": "ૃ",
+      "deadKey": false
+    },
+    {
+      "vk": 219,
+      "base": "",
+      "shift": "",
+      "deadKey": false
+    },
+    {
+      "vk": 220,
+      "base": "",
+      "shift": "",
+      "deadKey": false
+    },
+    {
+      "vk": 221,
+      "base": "",
+      "shift": "",
       "deadKey": false
     },
     {
@@ -612,7 +632,11 @@
       "to": "ષ્ઠ"
     },
     {
-      "keys": "aorA",
+      "keys": "a",
+      "to": "અ"
+    },
+    {
+      "keys": "A",
       "to": "અ"
     },
     {
@@ -696,27 +720,51 @@
       "to": "ઙ્ખ"
     },
     {
-      "keys": "aaorAa",
+      "keys": "aa",
       "to": "આ"
     },
     {
-      "keys": "k~orkR",
+      "keys": "Aa",
+      "to": "આ"
+    },
+    {
+      "keys": "k~",
       "to": "કૃ"
     },
     {
-      "keys": "vaorwa",
+      "keys": "kR",
+      "to": "કૃ"
+    },
+    {
+      "keys": "va",
       "to": "વ"
     },
     {
-      "keys": "kEorkØe",
+      "keys": "wa",
+      "to": "વ"
+    },
+    {
+      "keys": "kE",
       "to": "કૅ"
     },
     {
-      "keys": "phaorfa",
+      "keys": "kØe",
+      "to": "કૅ"
+    },
+    {
+      "keys": "pha",
       "to": "ફ"
     },
     {
-      "keys": "TaYorTya",
+      "keys": "fa",
+      "to": "ફ"
+    },
+    {
+      "keys": "TaY",
+      "to": "ટ્ય"
+    },
+    {
+      "keys": "Tya",
       "to": "ટ્ય"
     },
     {
@@ -774,6 +822,14 @@
     {
       "keys": "¤R",
       "to": "ૠ"
+    },
+    {
+      "keys": "Øb",
+      "to": "રૂ"
+    },
+    {
+      "keys": "Ør",
+      "to": "રૂ"
     }
   ],
   "escape": [
@@ -798,6 +854,10 @@
       "to": "્‌"
     },
     {
+      "keys": "b",
+      "to": "રૂ"
+    },
+    {
       "keys": "d",
       "to": "ઌ"
     },
@@ -820,6 +880,10 @@
     {
       "keys": "o",
       "to": "ૉ"
+    },
+    {
+      "keys": "r",
+      "to": "રૂ"
     },
     {
       "keys": "u",

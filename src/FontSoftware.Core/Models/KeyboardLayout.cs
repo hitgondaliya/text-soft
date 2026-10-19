@@ -6,7 +6,10 @@ namespace FontSoftware.Core.Models;
 /// <summary>
 /// One physical key's output in a layout. Base is the unshifted character;
 /// Shift/AltGr are optional per FR-2 ("optionally reflects Shift/AltGr states").
-/// Empty/absent string means the key falls back to its default English char.
+/// Absent (null): Shift types the Base character, and a key with no Base passes
+/// through as its English character (letters type nothing). An empty string ""
+/// says the key types nothing on that layer - what an imported Shree file's
+/// empty slot means, and what clearing a layer in the keyboard designer means.
 /// </summary>
 public sealed class KeyMapping
 {

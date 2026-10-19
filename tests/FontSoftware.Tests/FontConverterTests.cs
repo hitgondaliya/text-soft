@@ -54,6 +54,20 @@ public class FontConverterTests
         Assert.Contains("Z", result.UnmappedCharacters);
     }
 
+    // A pair marked unmapped: the target cannot show the character (its code draws a
+    // letter there), so the converter writes the pair's text in its place - here
+    // nothing - and still reports the character, as it would one with no pair at all.
+    [Fact]
+    public void APairMarkedUnmappedIsWrittenAndStillReported()
+    {
+        var t = Table();
+        t.Pairs.Add(new MappingPair { From = "©", To = "", Unmapped = true });
+        var result = new FontConverter(t).Convert("d©e");
+        Assert.Equal("कम", result.Text);
+        Assert.Equal(new[] { "©" }, result.UnmappedCharacters);
+        Assert.False(new FontConverter(Table()).Convert("de").HasUnmapped);
+    }
+
     [Fact]
     public void EmptyInputReturnsEmpty()
     {

@@ -24,12 +24,14 @@
     {
       "vk": 51,
       "base": "૩",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 52,
       "base": "૪",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 53,
@@ -40,12 +42,14 @@
     {
       "vk": 54,
       "base": "૬",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 55,
       "base": "૭",
-      "deadKey": false
+      "deadKey": false,
+      "shift": ""
     },
     {
       "vk": 56,
@@ -92,7 +96,8 @@
     {
       "vk": 70,
       "shift": "ફ",
-      "deadKey": false
+      "deadKey": false,
+      "base": "્‍"
     },
     {
       "vk": 71,
@@ -336,6 +341,10 @@
       "to": "આ"
     },
     {
+      "keys": "Øb",
+      "to": "રૂ"
+    },
+    {
       "keys": "Øe",
       "to": "ઊ"
     },
@@ -346,6 +355,10 @@
     {
       "keys": "Øi",
       "to": "ઉ"
+    },
+    {
+      "keys": "Øl",
+      "to": "રૂ"
     },
     {
       "keys": "Øm",
@@ -572,7 +585,7 @@
       "to": "સ્ત્ર"
     },
     {
-      "keys": "AaorØa",
+      "keys": "Aa",
       "to": "આ"
     },
     {
@@ -650,6 +663,10 @@
       "to": "આ"
     },
     {
+      "keys": "b",
+      "to": "રૂ"
+    },
+    {
       "keys": "e",
       "to": "ઊ"
     },
@@ -660,6 +677,10 @@
     {
       "keys": "i",
       "to": "ઉ"
+    },
+    {
+      "keys": "l",
+      "to": "રૂ"
     },
     {
       "keys": "m",

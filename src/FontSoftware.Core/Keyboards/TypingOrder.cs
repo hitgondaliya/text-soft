@@ -207,6 +207,17 @@ public sealed class TypingOrder
                 continue;
             }
 
+            // A link key (virama, or virama + ZWJ) struck after a letter that already has its virama: one
+            // virama - only the joiner the key adds is kept (ક્ then ્‍ is ક્‍, as Shree's composer writes it).
+            if (Offset(c) == 0x4D && sb.Length > 0 && Offset(sb[^1]) == 0x4D)
+            {
+                open = clusterStart >= 0;
+                if (i + 1 < raw.Length && raw[i + 1] == Zwj) { sb.Append(Zwj); i++; }
+                else if (i + 1 < raw.Length && raw[i + 1] == Zwnj) { sb.Append(Zwnj); i++; open = false; }
+                if (!open || !ClusterGoesOn(raw, i)) { Flush(sb, pending); open = false; }
+                continue;
+            }
+
             if (Offset(c) == 0x4D && clusterStart >= 0)            // virama: the cluster may go on
             {
                 // A sign a run already put after this letter (ITR's "rf" is કિ) was
@@ -221,6 +232,13 @@ public sealed class TypingOrder
                 if (i + 1 < raw.Length && raw[i + 1] == Zwj) { sb.Append(Zwj); i++; }
                 else if (i + 1 < raw.Length && raw[i + 1] == Zwnj) { sb.Append(Zwnj); i++; open = false; }
                 if (!open || !ClusterGoesOn(raw, i)) { Flush(sb, pending); open = false; }
+                continue;
+            }
+
+            // a variation selector picks the shape of what is before it, and stays with it
+            if (c is >= (char)0xFE00 and <= (char)0xFE0F)
+            {
+                sb.Append(c);
                 continue;
             }
 

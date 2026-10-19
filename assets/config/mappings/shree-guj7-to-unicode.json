@@ -1,11 +1,77 @@
 {
   "id": "shree-guj7-to-unicode",
-  "name": "Shree-Guj (7.0 / 4-5-6) -\u003E Unicode",
+  "name": "Shree-Lipi 7.0 Gujarati -\u003E Unicode",
   "sourceFontId": "shree-guj7",
   "targetFontId": "shruti",
   "sourceType": "legacy",
   "targetType": "unicode",
-  "preRules": [],
+  "preRules": [
+    {
+      "pattern": "\\}",
+      "replace": "u\u00AE",
+      "note": "7D: the sign 75 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A3",
+      "replace": "\u00A1\u00AE",
+      "note": "A3: the sign A1 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A7",
+      "replace": "\u00A5\u00AE",
+      "note": "A7: the sign A5 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00AF",
+      "replace": "\u201E\u00AE",
+      "note": "AF: the sign 84 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u2026",
+      "replace": "]\u00AE",
+      "note": "85: the sign 5D with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A4",
+      "replace": "\u00A2\u00AE",
+      "note": "A4: the sign A2 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00A8",
+      "replace": "\u00A6\u00AE",
+      "note": "A8: the sign A6 with a reph - two pieces, so the reph can move."
+    },
+    {
+      "pattern": "\u00B9([\\$\\\u003E])((?:[\u0192\u201E\u00A1\u00A2\u00A5\u00A6\u00B8\u00B5\u00AE\u00AF\u00A3\u00A4\u00A7\u00A8])*)\u00AE",
+      "replace": "\u00AE\u00B9$1$2",
+      "note": "A reph on a word-final letter that keeps its signs above after the spacer (\u0AB0\u0ACD\u0A9B\u0ACD = 52 B9 3E AE) comes after the halant and the spacer: put it before the halant, so it moves with the letter as it does in \u0AB0\u0ACD\u0AA4\u0ACD = 73 AE B9."
+    },
+    {
+      "pattern": "(?\u003C=(?:[LMNOQSTUZ\\\\\\^_\u0060abcdeghijklmns\u00D1\u00D3\u00EEf])(?:[\u0192\u201E\u00A1\u00A2\u00A5\u00A6\u00B8\u00B5\u00AE\u00AF\u00A3\u00A4\u00A7\u00A8])*)\u00B9(?=(?:[\\$\\\u003E])?(?:[qrt\\[\u0153])*(?:[ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijklmnosvx\\{~\u201A\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u2022\u2013\u02DC\u0161\u203A\u00AA\u00AC\u00BD\u00BE\u00C0\u00C5\u00C6\u00C7\u00C9\u00CB\u00CC\u00CD\u00CF\u00D1\u00D3\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DC\u00DF\u00E1\u00E2\u00E4\u00EA\u00EE\u00F0\u00F1\u00F2\u00F4\u00F6\u00F7\u00F9\u00FA\u00FB\u00FC\u2018\u2019\u201C\u201D]|[\u00BC\u00BF\u00C1\u00C2\u00C3\u00C4\u00C8\u00CA\u00CE\u00D0\u00D5\u00DD\u00DE\u00E0\u00E3\u00E5\u00E6\u00E7\u00E8\u00EB\u00EC\u00ED\u00F3\u00F5\u00F8\u00FD\u00FF\u00D2\u00D4\u00EF]))",
+      "replace": "\u00B9\uFDD5",
+      "note": "A visible halant inside a word (\u0A95\u0ACD\u200C\u0A95 = 4C B9 24 4C 24, \u0AB0\u0ACD\u200C\u0A95 = 66 B9 4C 24): a letter that has a half form shows its halant only when it was typed so - virama \u002B ZWNJ (U\u002BFDD5 marks it for the pairs). The letters with no half form (\u0A99 \u0A9B \u0A9F \u0AA0 \u0AA1 \u0AA2 \u0AA6 \u0A9C\u0ACD\u0A9E) keep a visible virama in every cluster."
+    },
+    {
+      "pattern": "([\u00BC\u00BF\u00C1\u00C2\u00C3\u00C4\u00C8\u00CA\u00CE\u00D0\u00D5\u00DD\u00DE\u00E0\u00E3\u00E5\u00E6\u00E7\u00E8\u00EB\u00EC\u00ED\u00F3\u00F5\u00F8\u00FD\u00FF\u00D2\u00D4\u00EF])(?!(?:[\\$\\\u003E])?(?:[qrt\\[\u0153])*(?:[ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijklmnosvx\\{~\u201A\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u2022\u2013\u02DC\u0161\u203A\u00AA\u00AC\u00BD\u00BE\u00C0\u00C5\u00C6\u00C7\u00C9\u00CB\u00CC\u00CD\u00CF\u00D1\u00D3\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DC\u00DF\u00E1\u00E2\u00E4\u00EA\u00EE\u00F0\u00F1\u00F2\u00F4\u00F6\u00F7\u00F9\u00FA\u00FB\u00FC\u2018\u2019\u201C\u201D]|[\u00BC\u00BF\u00C1\u00C2\u00C3\u00C4\u00C8\u00CA\u00CE\u00D0\u00D5\u00DD\u00DE\u00E0\u00E3\u00E5\u00E6\u00E7\u00E8\u00EB\u00EC\u00ED\u00F3\u00F5\u00F8\u00FD\u00FF\u00D2\u00D4\u00EF]))",
+      "replace": "$1\uFDD6",
+      "note": "A half form with no letter after it (BC before a space) is the letter \u002B virama \u002B ZWJ, as the composer writes \u0A95\u0ACD\u200D (U\u002BFDD6 marks it for the pairs) - so the next conversion writes the same half form, not the halant."
+    },
+    {
+      "pattern": "[\\$\\\u003E]",
+      "replace": "",
+      "note": "The spacers 24 and 3E draw nothing; they only follow a letter."
+    },
+    {
+      "pattern": "\u0153((?:(?:[\u00BC\u00BF\u00C1\u00C2\u00C3\u00C4\u00C8\u00CA\u00CE\u00D0\u00D5\u00DD\u00DE\u00E0\u00E3\u00E5\u00E6\u00E7\u00E8\u00EB\u00EC\u00ED\u00F3\u00F5\u00F8\u00FD\u00FF\u00D2\u00D4\u00EF]|[PRVWXYv]\u00B9)*[ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijklmnosvx\\{~\u201A\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u2022\u2013\u02DC\u0161\u203A\u00AA\u00AC\u00BD\u00BE\u00C0\u00C5\u00C6\u00C7\u00C9\u00CB\u00CC\u00CD\u00CF\u00D1\u00D3\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DC\u00DF\u00E1\u00E2\u00E4\u00EA\u00EE\u00F0\u00F1\u00F2\u00F4\u00F6\u00F7\u00F9\u00FA\u00FB\u00FC\u2018\u2019\u201C\u201D](?\u003C![ABCDEFGHIJK])|[ABCDEFGHIJK]))",
+      "replace": "$1\u0153",
+      "note": "Nukta is written before its letter; Unicode has it after."
+    },
+    {
+      "pattern": "((?:(?:(?:[\u00BC\u00BF\u00C1\u00C2\u00C3\u00C4\u00C8\u00CA\u00CE\u00D0\u00D5\u00DD\u00DE\u00E0\u00E3\u00E5\u00E6\u00E7\u00E8\u00EB\u00EC\u00ED\u00F3\u00F5\u00F8\u00FD\u00FF\u00D2\u00D4\u00EF]|[PRVWXYv]\u00B9)*[ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\\\\^_\u0060abcdefghijklmnosvx\\{~\u201A\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u2022\u2013\u02DC\u0161\u203A\u00AA\u00AC\u00BD\u00BE\u00C0\u00C5\u00C6\u00C7\u00C9\u00CB\u00CC\u00CD\u00CF\u00D1\u00D3\u00D6\u00D7\u00D8\u00D9\u00DA\u00DB\u00DC\u00DF\u00E1\u00E2\u00E4\u00EA\u00EE\u00F0\u00F1\u00F2\u00F4\u00F6\u00F7\u00F9\u00FA\u00FB\u00FC\u2018\u2019\u201C\u201D](?\u003C![ABCDEFGHIJK])|[ABCDEFGHIJK]))?(?:[pu\\]y\\|zw\u00BA\u0178\u00A9\u00AB\u00A1\u00A2\u00A5\u00A6\u00B8\u00B5\u0192\u201E\u00BB:\u00B0\u00B2\u00B3\u00B4\u00B6\u00E9\u2122\u0153]|[\u0A8C\u0AE1\u0AE2\u0AE3])*)\u00AE",
+      "replace": "\u00AE$1",
+      "note": "Reph is written after its letter and signs (or after a sign with no letter, as the composer writes \u0AB0\u0ACD\u0AC7; and after a vocalic-l letter or sign, which the fonts have no glyph for and the tables pass through); Unicode has \u0AB0\u0ACD first."
+    }
+  ],
   "pairs": [
     {
       "from": "\u0022",
@@ -66,6 +132,10 @@
     {
       "from": ":",
       "to": "\u0A83"
+    },
+    {
+      "from": "\u003C",
+      "to": "\u20B9"
     },
     {
       "from": "@",
@@ -208,6 +278,10 @@
       "to": "\u0AAC"
     },
     {
+      "from": "c",
+      "to": "\u0AAD"
+    },
+    {
       "from": "d",
       "to": "\u0AAE"
     },
@@ -272,6 +346,10 @@
       "to": "\u0AA4"
     },
     {
+      "from": "t",
+      "to": "\u0ABF\u0A82"
+    },
+    {
       "from": "u",
       "to": "\u0AC0"
     },
@@ -280,11 +358,19 @@
       "to": "\u0AA6"
     },
     {
+      "from": "w",
+      "to": "\u0AC2"
+    },
+    {
       "from": "x",
       "to": "\u0AA1\u0ACD\u0AA2"
     },
     {
       "from": "y",
+      "to": "\u0AC1"
+    },
+    {
+      "from": "z",
       "to": "\u0AC1"
     },
     {
@@ -296,12 +382,24 @@
       "to": "\u0AC2"
     },
     {
-      "from": "}",
-      "to": "\u0AB0\u0ACD\u0AC0"
+      "from": "~",
+      "to": "\u0AB0\u0AC2\uFE00"
+    },
+    {
+      "from": "\u0081",
+      "to": "\u2013"
     },
     {
       "from": "\u008D",
       "to": "\u00F7"
+    },
+    {
+      "from": "\u008F",
+      "to": "\u0AF0"
+    },
+    {
+      "from": "\u0090",
+      "to": "\u2010"
     },
     {
       "from": "\u00A1",
@@ -312,28 +410,12 @@
       "to": "\u0AC7\u0A82"
     },
     {
-      "from": "\u00A3",
-      "to": "\u0AB0\u0ACD\u0AC7"
-    },
-    {
-      "from": "\u00A4",
-      "to": "\u0AC7\u0AB0\u0ACD\u0A82"
-    },
-    {
       "from": "\u00A5",
       "to": "\u0AC8"
     },
     {
       "from": "\u00A6",
       "to": "\u0AC8\u0A82"
-    },
-    {
-      "from": "\u00A7",
-      "to": "\u0AB0\u0ACD\u0AC8"
-    },
-    {
-      "from": "\u00A8",
-      "to": "\u0AC8\u0AB0\u0ACD\u0A82"
     },
     {
       "from": "\u00A9",
@@ -356,12 +438,16 @@
       "to": "\u0AB0\u0ACD"
     },
     {
-      "from": "\u00AF",
-      "to": "\u0AB0\u0ACD\u0A82"
+      "from": "\u00B0",
+      "to": "\u0ACD\u0AB0"
     },
     {
       "from": "\u00B1",
       "to": "\u0AD0"
+    },
+    {
+      "from": "\u00B2",
+      "to": "\u0ACD\u0AB0"
     },
     {
       "from": "\u00B3",
@@ -372,8 +458,16 @@
       "to": "\u0ACD\u0AB0\u0AC2"
     },
     {
+      "from": "\u00B5",
+      "to": "\u0AC5"
+    },
+    {
       "from": "\u00B6",
-      "to": "\u0A99\u0ACD\u0A95\u0ACD\u0AB7"
+      "to": "\u0ACD\u0AB0\u0AC2"
+    },
+    {
+      "from": "\u00B7",
+      "to": "\u2022"
     },
     {
       "from": "\u00B8",
@@ -386,6 +480,10 @@
     {
       "from": "\u00BA",
       "to": "\u0AC1"
+    },
+    {
+      "from": "\u00BB",
+      "to": "\u0A82"
     },
     {
       "from": "\u00BC",
@@ -556,12 +654,20 @@
       "to": "\u0AAC\u0ACD"
     },
     {
+      "from": "\u00E6",
+      "to": "\u0AAD\u0ACD"
+    },
+    {
       "from": "\u00E7",
       "to": "\u0AAE\u0ACD"
     },
     {
       "from": "\u00E8",
       "to": "\u0AAF\u0ACD"
+    },
+    {
+      "from": "\u00E9",
+      "to": "\u0ACD\u0AAF"
     },
     {
       "from": "\u00EA",
@@ -644,6 +750,10 @@
       "to": "\u0AB3\u0ACD"
     },
     {
+      "from": "\u00FE",
+      "to": "\u0AB3\u0ACD"
+    },
+    {
       "from": "\u00FF",
       "to": "\u0A95\u0ACD\u0AB7\u0ACD"
     },
@@ -652,8 +762,16 @@
       "to": "\u0AB9\u0ACD\u0AA8"
     },
     {
+      "from": "\u0153",
+      "to": "\u0ABC"
+    },
+    {
       "from": "\u0160",
       "to": "\u0AB9\u0ACD\u0AB2"
+    },
+    {
+      "from": "\u0161",
+      "to": "\u0A9D\u0ABC"
     },
     {
       "from": "\u0178",
@@ -672,16 +790,68 @@
       "to": "\u0AA6\u0ACD\u0AAD"
     },
     {
+      "from": "\u0A8C",
+      "to": "\u0A8C"
+    },
+    {
+      "from": "\u0AE1",
+      "to": "\u0AE1"
+    },
+    {
+      "from": "\u0AE2",
+      "to": "\u0AE2"
+    },
+    {
+      "from": "\u0AE3",
+      "to": "\u0AE3"
+    },
+    {
+      "from": "\u0AF0",
+      "to": "\u0AF0"
+    },
+    {
+      "from": "\u0AF1",
+      "to": "\u0AF1"
+    },
+    {
+      "from": "\u0AF9",
+      "to": "\u0AF9"
+    },
+    {
+      "from": "\u0AFA",
+      "to": "\u0AFA"
+    },
+    {
+      "from": "\u0AFB",
+      "to": "\u0AFB"
+    },
+    {
+      "from": "\u0AFC",
+      "to": "\u0AFC"
+    },
+    {
+      "from": "\u0AFD",
+      "to": "\u0AFD"
+    },
+    {
+      "from": "\u0AFE",
+      "to": "\u0AFE"
+    },
+    {
+      "from": "\u0AFF",
+      "to": "\u0AFF"
+    },
+    {
       "from": "\u2013",
       "to": "\u0AA2\u0ACD\u0AA2"
     },
     {
       "from": "\u2018",
-      "to": "\u0A99\u0ACD\u0A95"
+      "to": "\u0AAA"
     },
     {
       "from": "\u2019",
-      "to": "\u0A99\u0ACD\u0A96"
+      "to": "\u0AA5"
     },
     {
       "from": "\u201A",
@@ -689,7 +859,11 @@
     },
     {
       "from": "\u201C",
-      "to": "\u0A99\u0ACD\u0A97"
+      "to": "\u0AA8"
+    },
+    {
+      "from": "\u201D",
+      "to": "\u0AB8\u0ACD\u0AA4\u0ACD\u0AB0"
     },
     {
       "from": "\u201E",
@@ -708,10 +882,6 @@
       "to": "\u0AA6\u0ACD\u0A97"
     },
     {
-      "from": "\u2026",
-      "to": "\u0AC0\u0AB0\u0ACD\u0A82"
-    },
-    {
       "from": "\u2030",
       "to": "\u0AB2\u0ACD\u0AB2"
     },
@@ -724,16 +894,32 @@
       "to": "\u0AB7\u0ACD\u0AA0"
     },
     {
-      "from": "c",
-      "to": "\u0AAD"
+      "from": "\u20B9",
+      "to": "\u20B9"
+    },
+    {
+      "from": "\u2122",
+      "to": "\u0ACD\u0AB5"
+    },
+    {
+      "from": "\uFDD5",
+      "to": "\u200C"
+    },
+    {
+      "from": "\uFDD6",
+      "to": "\u200D"
+    },
+    {
+      "from": "\u0022\u0022",
+      "to": "\u201C"
+    },
+    {
+      "from": "\u0027\u0027",
+      "to": "\u201D"
     },
     {
       "from": "Ap",
       "to": "\u0A86"
-    },
-    {
-      "from": "A\u00B8",
-      "to": "\u0A8D"
     },
     {
       "from": "A\u00A1",
@@ -744,6 +930,30 @@
       "to": "\u0A90"
     },
     {
+      "from": "A\u00B8",
+      "to": "\u0A8D"
+    },
+    {
+      "from": "p\u00A1",
+      "to": "\u0ACB"
+    },
+    {
+      "from": "p\u00A5",
+      "to": "\u0ACC"
+    },
+    {
+      "from": "p\u00B8",
+      "to": "\u0AC9"
+    },
+    {
+      "from": "\u0081\u0081",
+      "to": "\u2014"
+    },
+    {
+      "from": "\u2014\u0026",
+      "to": "\u0964"
+    },
+    {
       "from": "Ap\u00A1",
       "to": "\u0A93"
     },
@@ -752,603 +962,79 @@
       "to": "\u0A94"
     },
     {
-      "from": "\u0153",
-      "to": "\u0ABC"
-    },
-    {
-      "from": "\u0153L$",
-      "to": "\u0A95\u0ABC"
-    },
-    {
-      "from": "\u0153M",
-      "to": "\u0A96\u0ABC"
-    },
-    {
-      "from": "\u0153N",
-      "to": "\u0A97\u0ABC"
-    },
-    {
-      "from": "O\u0153",
-      "to": "\u0A98\u0ABC"
-    },
-    {
-      "from": "P\u0153$",
-      "to": "\u0A99\u0ABC"
-    },
-    {
-      "from": "Q\u0153",
-      "to": "\u0A9A\u0ABC"
-    },
-    {
-      "from": "R\u0153$",
-      "to": "\u0A9B\u0ABC"
-    },
-    {
-      "from": "\u0153S",
-      "to": "\u0A9C\u0ABC"
-    },
-    {
-      "from": "\u0161",
-      "to": "\u0A9D\u0ABC"
-    },
-    {
-      "from": "U\u0153",
-      "to": "\u0A9E\u0ABC"
-    },
-    {
-      "from": "V\u0153$",
-      "to": "\u0A9F\u0ABC"
-    },
-    {
-      "from": "W\u0153$",
-      "to": "\u0AA0\u0ABC"
-    },
-    {
-      "from": "\u0153X$",
-      "to": "\u0AA1\u0ABC"
-    },
-    {
-      "from": "\u0153Y$",
-      "to": "\u0AA2\u0ABC"
-    },
-    {
-      "from": "Z\u0153",
-      "to": "\u0AA3\u0ABC"
-    },
-    {
-      "from": "s\u0153",
-      "to": "\u0AA4\u0ABC"
-    },
-    {
-      "from": "\u2019\u0153",
-      "to": "\u0AA5\u0ABC"
-    },
-    {
-      "from": "v\u0153$",
-      "to": "\u0AA6\u0ABC"
-    },
-    {
-      "from": "^\u0153",
-      "to": "\u0AA7\u0ABC"
-    },
-    {
-      "from": "\u201C\u0153",
-      "to": "\u0AA8\u0ABC"
-    },
-    {
-      "from": "\u2018\u0153",
-      "to": "\u0AAA\u0ABC"
-    },
-    {
-      "from": "\u0153a$",
-      "to": "\u0AAB\u0ABC"
-    },
-    {
-      "from": "b\u0153",
-      "to": "\u0AAC\u0ABC"
-    },
-    {
-      "from": "c\u0153",
-      "to": "\u0AAD\u0ABC"
-    },
-    {
-      "from": "\u0153d",
-      "to": "\u0AAE\u0ABC"
-    },
-    {
-      "from": "e\u0153",
-      "to": "\u0AAF\u0ABC"
-    },
-    {
-      "from": "f\u0153",
-      "to": "\u0AB0\u0ABC"
-    },
-    {
-      "from": "g\u0153",
-      "to": "\u0AB2\u0ABC"
-    },
-    {
-      "from": "m\u0153",
-      "to": "\u0AB3\u0ABC"
-    },
-    {
-      "from": "h\u0153",
-      "to": "\u0AB5\u0ABC"
-    },
-    {
-      "from": "i\u0153",
-      "to": "\u0AB6\u0ABC"
-    },
-    {
-      "from": "j\u0153",
-      "to": "\u0AB7\u0ABC"
-    },
-    {
-      "from": "k\u0153",
-      "to": "\u0AB8\u0ABC"
-    },
-    {
-      "from": "l\u0153",
-      "to": "\u0AB9\u0ABC"
-    },
-    {
-      "from": "p\u00A1",
-      "to": "\u0ACB"
-    },
-    {
-      "from": "L$p\u00A1",
-      "to": "\u0A95\u0ACB"
-    },
-    {
-      "from": "Mp\u00A1",
-      "to": "\u0A96\u0ACB"
-    },
-    {
-      "from": "Np\u00A1",
-      "to": "\u0A97\u0ACB"
-    },
-    {
-      "from": "Op\u00A1",
-      "to": "\u0A98\u0ACB"
-    },
-    {
-      "from": "P$p\u00A1",
-      "to": "\u0A99\u0ACB"
-    },
-    {
-      "from": "Qp\u00A1",
-      "to": "\u0A9A\u0ACB"
-    },
-    {
-      "from": "R$p\u00A1",
-      "to": "\u0A9B\u0ACB"
-    },
-    {
-      "from": "\u00C5\u00A1",
-      "to": "\u0A9C\u0ACB"
-    },
-    {
-      "from": "Tp\u00A1",
-      "to": "\u0A9D\u0ACB"
-    },
-    {
-      "from": "Up\u00A1",
-      "to": "\u0A9E\u0ACB"
-    },
-    {
-      "from": "V$p\u00A1",
-      "to": "\u0A9F\u0ACB"
-    },
-    {
-      "from": "W$p\u00A1",
-      "to": "\u0AA0\u0ACB"
-    },
-    {
-      "from": "X$p\u00A1",
-      "to": "\u0AA1\u0ACB"
-    },
-    {
-      "from": "Y$p\u00A1",
-      "to": "\u0AA2\u0ACB"
-    },
-    {
-      "from": "Zp\u00A1",
-      "to": "\u0AA3\u0ACB"
-    },
-    {
-      "from": "sp\u00A1",
-      "to": "\u0AA4\u0ACB"
-    },
-    {
-      "from": "\u2019p\u00A1",
-      "to": "\u0AA5\u0ACB"
-    },
-    {
-      "from": "v$p\u00A1",
-      "to": "\u0AA6\u0ACB"
-    },
-    {
-      "from": "^p\u00A1",
-      "to": "\u0AA7\u0ACB"
-    },
-    {
-      "from": "\u201Cp\u00A1",
-      "to": "\u0AA8\u0ACB"
-    },
-    {
-      "from": "\u2018p\u00A1",
-      "to": "\u0AAA\u0ACB"
-    },
-    {
-      "from": "ap\u00A1",
-      "to": "\u0AAB\u0ACB"
-    },
-    {
-      "from": "bp\u00A1",
-      "to": "\u0AAC\u0ACB"
-    },
-    {
-      "from": "cp\u00A1",
-      "to": "\u0AAD\u0ACB"
-    },
-    {
-      "from": "dp\u00A1",
-      "to": "\u0AAE\u0ACB"
-    },
-    {
-      "from": "ep\u00A1",
-      "to": "\u0AAF\u0ACB"
-    },
-    {
-      "from": "fp\u00A1",
-      "to": "\u0AB0\u0ACB"
-    },
-    {
-      "from": "gp\u00A1",
-      "to": "\u0AB2\u0ACB"
-    },
-    {
-      "from": "mp\u00A1",
-      "to": "\u0AB3\u0ACB"
-    },
-    {
-      "from": "hp\u00A1",
-      "to": "\u0AB5\u0ACB"
-    },
-    {
-      "from": "ip\u00A1",
-      "to": "\u0AB6\u0ACB"
-    },
-    {
-      "from": "jp\u00A1",
-      "to": "\u0AB7\u0ACB"
-    },
-    {
-      "from": "kp\u00A1",
-      "to": "\u0AB8\u0ACB"
-    },
-    {
-      "from": "lp\u00A1",
-      "to": "\u0AB9\u0ACB"
-    },
-    {
-      "from": "p\u00A5",
-      "to": "\u0ACC"
-    },
-    {
-      "from": "L$p\u00A5",
-      "to": "\u0A95\u0ACC"
-    },
-    {
-      "from": "Mp\u00A5",
-      "to": "\u0A96\u0ACC"
-    },
-    {
-      "from": "Np\u00A5",
-      "to": "\u0A97\u0ACC"
-    },
-    {
-      "from": "Op\u00A5",
-      "to": "\u0A98\u0ACC"
-    },
-    {
-      "from": "P$p\u00A5",
-      "to": "\u0A99\u0ACC"
-    },
-    {
-      "from": "Qp\u00A5",
-      "to": "\u0A9A\u0ACC"
-    },
-    {
-      "from": "R$p\u00A5",
-      "to": "\u0A9B\u0ACC"
-    },
-    {
-      "from": "\u00C5\u00A5",
-      "to": "\u0A9C\u0ACC"
-    },
-    {
-      "from": "Tp\u00A5",
-      "to": "\u0A9D\u0ACC"
-    },
-    {
-      "from": "Up\u00A5",
-      "to": "\u0A9E\u0ACC"
-    },
-    {
-      "from": "V$p\u00A5",
-      "to": "\u0A9F\u0ACC"
-    },
-    {
-      "from": "W$p\u00A5",
-      "to": "\u0AA0\u0ACC"
-    },
-    {
-      "from": "X$p\u00A5",
-      "to": "\u0AA1\u0ACC"
-    },
-    {
-      "from": "Y$p\u00A5",
-      "to": "\u0AA2\u0ACC"
-    },
-    {
-      "from": "Zp\u00A5",
-      "to": "\u0AA3\u0ACC"
-    },
-    {
-      "from": "sp\u00A5",
-      "to": "\u0AA4\u0ACC"
-    },
-    {
-      "from": "\u2019p\u00A5",
-      "to": "\u0AA5\u0ACC"
-    },
-    {
-      "from": "v$p\u00A5",
-      "to": "\u0AA6\u0ACC"
-    },
-    {
-      "from": "^p\u00A5",
-      "to": "\u0AA7\u0ACC"
-    },
-    {
-      "from": "\u201Cp\u00A5",
-      "to": "\u0AA8\u0ACC"
-    },
-    {
-      "from": "\u2018p\u00A5",
-      "to": "\u0AAA\u0ACC"
-    },
-    {
-      "from": "ap\u00A5",
-      "to": "\u0AAB\u0ACC"
-    },
-    {
-      "from": "bp\u00A5",
-      "to": "\u0AAC\u0ACC"
-    },
-    {
-      "from": "cp\u00A5",
-      "to": "\u0AAD\u0ACC"
-    },
-    {
-      "from": "dp\u00A5",
-      "to": "\u0AAE\u0ACC"
-    },
-    {
-      "from": "ep\u00A5",
-      "to": "\u0AAF\u0ACC"
-    },
-    {
-      "from": "fp\u00A5",
-      "to": "\u0AB0\u0ACC"
-    },
-    {
-      "from": "gp\u00A5",
-      "to": "\u0AB2\u0ACC"
-    },
-    {
-      "from": "mp\u00A5",
-      "to": "\u0AB3\u0ACC"
-    },
-    {
-      "from": "hp\u00A5",
-      "to": "\u0AB5\u0ACC"
-    },
-    {
-      "from": "ip\u00A5",
-      "to": "\u0AB6\u0ACC"
-    },
-    {
-      "from": "jp\u00A5",
-      "to": "\u0AB7\u0ACC"
-    },
-    {
-      "from": "kp\u00A5",
-      "to": "\u0AB8\u0ACC"
-    },
-    {
-      "from": "lp\u00A5",
-      "to": "\u0AB9\u0ACC"
-    },
-    {
-      "from": "F\u003E",
-      "to": "\u0A8B"
-    },
-    {
-      "from": "L$",
-      "to": "\u0A95"
-    },
-    {
-      "from": "R\u003E",
-      "to": "\u0A9B"
-    },
-    {
-      "from": "S\u003E",
-      "to": "\u0A9C"
-    },
-    {
-      "from": "V$",
-      "to": "\u0A9F"
-    },
-    {
-      "from": "W$",
-      "to": "\u0AA0"
-    },
-    {
-      "from": "X$",
-      "to": "\u0AA1"
-    },
-    {
-      "from": "Y$",
-      "to": "\u0AA2"
-    },
-    {
-      "from": "v$",
-      "to": "\u0AA6"
-    },
-    {
-      "from": "v\u00B9$^",
-      "to": "\u0AA6\u0ACD\u0AA7"
-    },
-    {
-      "from": "v\u00B9$e",
-      "to": "\u0AA6\u0ACD\u0AAF"
-    },
-    {
-      "from": "fy",
-      "to": "\u0AB0\u0AC1"
-    },
-    {
-      "from": "\u00B0",
-      "to": "\u0ACD\u0AB0"
-    },
-    {
       "from": "Ap\u00B8",
       "to": "\u0A91"
     },
     {
-      "from": "P$",
-      "to": "\u0A99"
-    },
-    {
-      "from": "p\u00B8",
-      "to": "\u0AC9"
-    },
-    {
-      "from": "\u00E6",
-      "to": "\u0AAD\u0ACD"
-    },
-    {
-      "from": "\u00E9",
-      "to": "\u0ACD\u0AAF"
-    },
-    {
-      "from": "V\u00B9$",
-      "to": "\u0A9F\u0ACD"
-    },
-    {
-      "from": "X\u00B9$",
-      "to": "\u0AA1\u0ACD"
-    },
-    {
-      "from": "v\u00B9$",
-      "to": "\u0AA6\u0ACD"
-    },
-    {
-      "from": "\u008F",
-      "to": "\u0AF0"
-    },
-    {
-      "from": "\u0081",
-      "to": "\u2013"
-    },
-    {
-      "from": "p\u00A2",
-      "to": "\u0ACB\u0A82"
-    },
-    {
-      "from": "G\u003E",
-      "to": "\u0AE0"
-    },
-    {
-      "from": "Z|",
-      "to": "\u0AA3\u0AC2"
-    },
-    {
-      "from": "V\u00B2$",
-      "to": "\u0A9F\u0ACD\u0AB0"
-    },
-    {
-      "from": "v\u00B9$d",
-      "to": "\u0AA6\u0ACD\u0AAE"
-    },
-    {
-      "from": "\u00EFh",
-      "to": "\u0AB6\u0ACD\u0AB0\u0ACD\u0AB5"
-    },
-    {
-      "from": "P\u00B9$",
-      "to": "\u0A99\u0ACD"
-    },
-    {
-      "from": "R\u00B9\u003E",
-      "to": "\u0A9B\u0ACD"
-    },
-    {
-      "from": "W\u00B9$",
-      "to": "\u0AA0\u0ACD"
-    },
-    {
-      "from": "Y\u00B9$",
-      "to": "\u0AA2\u0ACD"
-    },
-    {
-      "from": "\u2014\u0026",
-      "to": "\u0964"
-    },
-    {
-      "from": "\u0081\u0081",
-      "to": "\u2014"
-    },
-    {
-      "from": "t",
-      "to": "\u0ABF\u0A82"
-    },
-    {
-      "from": "w",
-      "to": "\u0AC2"
-    },
-    {
-      "from": "z",
-      "to": "\u0AC1"
-    },
-    {
-      "from": "\u00AD",
-      "to": "\u2013"
-    },
-    {
-      "from": "\u00B2",
-      "to": "\u0ACD\u0AB0"
-    },
-    {
-      "from": "\u00B5",
-      "to": "\u0AC5"
-    },
-    {
-      "from": "\u00BB",
-      "to": "\u0A82"
-    },
-    {
-      "from": "\u00FE",
-      "to": "\u0AB3\u0ACD"
+      "from": "\u2014\u0026\u0026",
+      "to": "\u0965"
     }
   ],
   "postRules": [
     {
-      "pattern": "\u0ABF((?:[\u0A95-\u0AB9]\u0ABC?\u0ACD)*[\u0A95-\u0AB9]\u0ABC?)",
-      "replace": "$1\u0ABF",
-      "note": "Move pre-base matra U\u002B0ABF after the consonant cluster (legacy visual order -\u003E Unicode logical order)."
+      "pattern": "([\u0A95-\u0AB9])((?:\u0ACD[\u0AAF\u0AB0\u0AB5])?[\u0A81-\u0A83\u0ABE-\u0ACC]*)\u0ABC",
+      "replace": "$1\u0ABC$2",
+      "note": "Nukta: right after its letter. The bytes have it before the glyph it sits under, and the pre rules after that glyph - which can be a letter with its vowel sign (\u0A9C\u0ABE C5, \u0AA3\u0AC1 CF) or with the ra-, ya- or va-sign (\u0A95\u0ACD\u0AB0 BE): \u0A9C\u0ABC\u0ABE and \u0A95\u0ABC\u0ACD\u0AB0, not \u0A9C\u0ABE\u0ABC and \u0A95\u0ACD\u0AB0\u0ABC."
+    },
+    {
+      "pattern": "\u0ABE\u0AC5",
+      "replace": "\u0AC9",
+      "note": "\u0ABE \u002B \u0AC5 is written \u0AC9."
+    },
+    {
+      "pattern": "\u0ABE\u0AC7",
+      "replace": "\u0ACB",
+      "note": "\u0ABE \u002B \u0AC7 is written \u0ACB."
+    },
+    {
+      "pattern": "\u0ABE\u0AC8",
+      "replace": "\u0ACC",
+      "note": "\u0ABE \u002B \u0AC8 is written \u0ACC."
+    },
+    {
+      "pattern": "\u0A85\u0ABE",
+      "replace": "\u0A86",
+      "note": "\u0A85 \u002B \u0ABE is written \u0A86."
+    },
+    {
+      "pattern": "\u0A85\u0AC5",
+      "replace": "\u0A8D",
+      "note": "\u0A85 \u002B \u0AC5 is written \u0A8D."
+    },
+    {
+      "pattern": "\u0A85\u0AC7",
+      "replace": "\u0A8F",
+      "note": "\u0A85 \u002B \u0AC7 is written \u0A8F."
+    },
+    {
+      "pattern": "\u0A85\u0AC8",
+      "replace": "\u0A90",
+      "note": "\u0A85 \u002B \u0AC8 is written \u0A90."
+    },
+    {
+      "pattern": "\u0A86\u0AC5",
+      "replace": "\u0A91",
+      "note": "\u0A86 \u002B \u0AC5 is written \u0A91."
+    },
+    {
+      "pattern": "\u0A86\u0AC7",
+      "replace": "\u0A93",
+      "note": "\u0A86 \u002B \u0AC7 is written \u0A93."
+    },
+    {
+      "pattern": "\u0A86\u0AC8",
+      "replace": "\u0A94",
+      "note": "\u0A86 \u002B \u0AC8 is written \u0A94."
+    },
+    {
+      "pattern": "\u0ABF(\u0A82?)((?:[\u0A95-\u0AB9]\u0ABC?\u0ACD)*[\u0A95-\u0AB9]\u0ABC?)",
+      "replace": "$2\u0ABF$1",
+      "note": "Move pre-base matra U\u002B0ABF (and the anusvara of 74) after the consonant cluster (legacy visual order -\u003E Unicode logical order)."
+    },
+    {
+      "pattern": "(?\u003C![\u0A85-\u0A94\u0A95-\u0AB9\u0ABC\u0ABE-\u0ACC\u0AE0-\u0AE3])\u0A83",
+      "replace": ":",
+      "note": "Shree writes the colon and the visarga with one code (3A). Where it cannot be a visarga - not after a letter, a vowel or a vowel sign: after a space, a digit, punctuation, the anusvara (\u0A95\u0AB9\u0ACD\u0AAF\u0AC1\u0A82:) or at the start - it is the colon."
     }
   ]
 }

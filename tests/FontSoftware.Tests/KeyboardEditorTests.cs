@@ -161,4 +161,36 @@ public class KeyboardEditorTests : IDisposable
         Assert.Equal("ૠ", layout.Find('K')?.Base);
         Assert.Equal(original.Find('J')?.Base, layout.Find('J')?.Base);   // the rest is untouched
     }
+
+    /// <summary>
+    /// "K now types nothing on the Shift layer", the designer says when Shift is
+    /// cleared - and it must mean it: an unset Shift types the normal character.
+    /// </summary>
+    [Fact]
+    public void ClearingTheShiftLayerMakesItTypeNothing()
+    {
+        _vm.Name = "Blank Shift";
+        _vm.SelectedKey = Key('K');
+        _vm.Choose("ક");
+        _vm.ShowShiftLayer = true;
+        _vm.SelectedKey = Key('K');
+        _vm.Choose("ખ");
+        _vm.BlankCommand.Execute(null);
+        _vm.SaveCommand.Execute(null);
+        var k = Saved().Find('K');
+        Assert.Equal("ક", k?.Base);
+        Assert.Equal("", k?.Shift);
+    }
+
+    [Fact]
+    public void ClearingBothLayersTakesTheKeyOffTheKeyboard()
+    {
+        _vm.Name = "Blank Both";
+        _vm.SelectedKey = Key('K');
+        _vm.Choose("ક");
+        _vm.BlankCommand.Execute(null);
+        _vm.SaveCommand.Execute(null);
+        var k = Saved().Find('K');
+        Assert.True(k is null || (k.Base is null && k.Shift is null));
+    }
 }

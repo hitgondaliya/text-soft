@@ -14,7 +14,8 @@ namespace FontSoftware.App.Services;
 public static class RichTextConversion
 {
     /// <summary>Deep-copy <paramref name="source"/> as RTF, then convert every run in place.</summary>
-    public static FlowDocument Convert(FlowDocument source, Func<string, string> convert, FontFamily targetFont, double? fontSize, bool plainText)
+    public static FlowDocument Convert(FlowDocument source, Func<string, string> convert, FontFamily targetFont, double? fontSize, bool plainText,
+        RunScope? scope = null)
     {
         var doc = Clone(source);
         if (plainText)
@@ -28,15 +29,51 @@ public static class RichTextConversion
             return flat;
         }
 
+        scope ??= RunScope.All;
+        // Each run's own font, before the document's changes under the runs that inherit it:
+        // a run that is not the source's text keeps it (BUG-03 - English stays in its font).
+        var runs = Runs(doc).ToList();
+        var own = runs.ToDictionary(r => r, r => r.FontFamily);
         doc.FontFamily = targetFont;
         if (fontSize is { } size) doc.FontSize = size;
-        foreach (var run in Runs(doc).ToList())
+        foreach (var run in runs)
         {
-            run.Text = convert(run.Text);
-            run.FontFamily = targetFont;
-            if (fontSize is { } s) run.FontSize = s;
+            var pieces = scope.Pieces(run.Text, own[run].Source);
+            if (pieces.Count == 1)
+            {
+                if (pieces[0].Convert)
+                {
+                    run.Text = convert(run.Text);
+                    run.FontFamily = targetFont;
+                    if (fontSize is { } s) run.FontSize = s;
+                }
+                else run.FontFamily = own[run];
+                continue;
+            }
+            // A run that mixes the two is split, each piece keeping the run's formatting.
+            foreach (var (text, conv) in pieces)
+            {
+                var piece = CloneRun(run, conv ? convert(text) : text);
+                piece.FontFamily = conv ? targetFont : own[run];
+                if (conv && fontSize is { } s) piece.FontSize = s;
+                run.SiblingInlines.InsertBefore(run, piece);
+            }
+            run.SiblingInlines.Remove(run);
         }
         return doc;
+    }
+
+    /// <summary>A run with another text and the same local formatting.</summary>
+    private static Run CloneRun(Run source, string text)
+    {
+        var run = new Run(text);
+        var values = source.GetLocalValueEnumerator();
+        while (values.MoveNext())
+        {
+            var p = values.Current.Property;
+            if (!p.ReadOnly && p != Run.TextProperty) run.SetValue(p, values.Current.Value);
+        }
+        return run;
     }
 
     /// <summary>Point every run (and the document) at <paramref name="font"/>, keeping the rest of the formatting.</summary>

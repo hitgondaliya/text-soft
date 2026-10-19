@@ -93,6 +93,42 @@ public sealed class TypingEngine : IDisposable
     private readonly StringBuilder _uniWord = new(); // Unicode typed for the current word
     private string _legacyOut = string.Empty;        // legacy text currently shown for it
 
+    // The word as it stood before each keystroke of it, newest last - so Backspace
+    // takes back exactly the last keystroke: a whole one (Shift+A's બ્, not only its
+    // virama, which left the full બ behind), and only that one inside a chart run
+    // (k then s is કે on InScript; Backspace leaves the ક, and the run the k began,
+    // where taking the run's single piece used to delete both keys). Each state is
+    // the whole engine as it stood: the run in progress, the word in every path's units
+    // (_raw on a keyboard typed out of Unicode's order, _uniWord/_legacyOut in a legacy
+    // font, _plainWord otherwise, _roman typed by sound), and what was on screen.
+    // A key that types nothing is a keystroke too, and Backspace takes it back.
+    private sealed record WordState(string SeqKeys, string SeqOut, int SeqMatched, string UniWord, string LegacyOut,
+        string Raw, string Word, string PlainWord, string? LastEmitted, string Roman, string PhoneticOut, string Done);
+    private readonly Stack<WordState> _undo = new();
+
+    // What the keystrokes since the caret last moved have put on screen for words already
+    // finished by a key the engine typed itself: a mark typed through a legacy font's table
+    // ('"' is 22 22), a fixed key or a run on the layer of the Eng keyboard, the word typed
+    // by sound before it. Backspace goes back into them a keystroke at a time, as inside a
+    // word; a key the application gets itself, a shortcut or a click ends them.
+    private string _done = string.Empty;
+
+    // The state a keystroke the Eng keyboard's layer let go of began in (see ContinuePhoneticEscape).
+    private WordState? _carried;
+
+    // What the word in progress has put on screen, in plain Unicode typing (no
+    // legacy font, no typing order) - the state Backspace restores is compared with it.
+    private readonly StringBuilder _plainWord = new();
+
+    /// <summary>
+    /// How many mouse clicks there have been (see MouseClickWatch). A click can move
+    /// the caret without a key, so when the count has moved since the last key the
+    /// word in progress is forgotten - what Backspace would take back whole, the run
+    /// a key would rewrite - rather than applied wherever the caret now is.
+    /// </summary>
+    public Func<long> Clicks { get; set; } = () => 0;
+    private long _clicksSeen;
+
     // ---- Typing order (see TypingOrder) ----
     // A typewriter keyboard strikes the i-sign before its letter and the reph after
     // it. On such a keyboard the word is kept as typed, with those two still marked,
@@ -100,7 +136,6 @@ public sealed class TypingEngine : IDisposable
     private TypingOrder _order = TypingOrder.None;
     private readonly StringBuilder _raw = new();     // the word as typed
     private string _word = string.Empty;             // the word in Unicode's order, as shown
-    private int _lastPiece;                          // how much of _raw the last keystroke typed
 
     /// <summary>When true (and a scheme is set), keys are transliterated by sound instead of the layout.</summary>
     public bool PhoneticMode { get; private set; }
@@ -212,7 +247,71 @@ public sealed class TypingEngine : IDisposable
         _legacyOut = string.Empty;
         _raw.Clear();
         _word = string.Empty;
-        _lastPiece = 0;
+        _plainWord.Clear();
+        _undo.Clear();
+        _done = string.Empty;
+        _carried = null;
+    }
+
+    /// <summary>The engine as it stands now (see <see cref="_undo"/>).</summary>
+    private WordState CurrentState() => new(_seqKeys.ToString(), _seqOut, _seqMatched, _uniWord.ToString(), _legacyOut,
+        _raw.ToString(), _word, _plainWord.ToString(), _lastEmitted, _roman.ToString(), _phoneticOut, _done);
+
+    /// <summary>What the keystrokes since the caret last moved have put on screen: the finished words and the one in progress.</summary>
+    private string Shown() =>
+        _done + (_legacyConv is not null ? _legacyOut : _phoneticOut + (_order.Active ? _word : _plainWord.ToString()));
+
+    /// <summary>
+    /// The word is finished, but the caret has not moved: what it put on screen joins what the
+    /// keystrokes before it did (<see cref="_done"/>), and Backspace can still go back into it.
+    /// </summary>
+    private void CommitWord()
+    {
+        _done = Shown();
+        _uniWord.Clear();
+        _legacyOut = string.Empty;
+        _raw.Clear();
+        _word = string.Empty;
+        _plainWord.Clear();
+        _lastEmitted = null;
+        _roman.Clear();
+        _phoneticOut = string.Empty;
+    }
+
+    /// <summary>
+    /// Backspace: the engine goes back to how it stood before the last keystroke, and the
+    /// screen with it - inside the word, into a word a key of ours finished, and the run in
+    /// progress too, so the key typed next carries the run on exactly as it would have then.
+    /// </summary>
+    private void RestoreState(WordState s)
+    {
+        string shown = Shown();
+        _seqKeys.Clear();
+        _seqKeys.Append(s.SeqKeys);
+        _seqOut = s.SeqOut;
+        _seqMatched = s.SeqMatched;
+        _uniWord.Clear();
+        _uniWord.Append(s.UniWord);
+        _legacyOut = s.LegacyOut;
+        _raw.Clear();
+        _raw.Append(s.Raw);
+        _word = s.Word;
+        _plainWord.Clear();
+        _plainWord.Append(s.PlainWord);
+        _lastEmitted = s.LastEmitted;
+        _roman.Clear();
+        _roman.Append(s.Roman);
+        _phoneticOut = s.PhoneticOut;
+        _done = s.Done;
+        string next = Shown();
+        int keep = CommonPrefix(shown, next);
+        if (_legacyConv is not null)
+        {
+            InjectLegacy(shown.Length - keep, next[keep..], keep == 0);
+            return;
+        }
+        if (shown.Length > keep) _injector.SendBackspace(shown.Length - keep);
+        if (next.Length > keep) _injector.SendText(next[keep..]);
     }
 
     /// <summary>Turn phonetic "type by sound" mode on/off.</summary>
@@ -255,6 +354,13 @@ public sealed class TypingEngine : IDisposable
 
     private void OnKey(object? sender, HookKeyEventArgs e)
     {
+        long clicks = Clicks();
+        if (clicks != _clicksSeen)
+        {
+            _clicksSeen = clicks;
+            ForgetWord();
+        }
+
         if (e.VirtualKey is VK_CONTROL or VK_LCONTROL or VK_RCONTROL)
         {
             if (e.Lift)
@@ -318,9 +424,9 @@ public sealed class TypingEngine : IDisposable
                 HandlePhonetic(e);
                 return;
             }
-            // The word typed so far stays as it is on screen - unless this escape
-            // is the second of a run (ØmØma), whose text is still being rewritten.
-            if (_seqKeys.Length == 0) ResetPhonetic();
+            // The word typed so far stays as it is on screen, finished (below, once the
+            // escape is a keystroke Backspace can take back) - unless this escape is the
+            // second of a run (ØmØma), whose text is still being rewritten.
         }
 
         if (_layout is null)
@@ -369,13 +475,27 @@ public sealed class TypingEngine : IDisposable
             // Ctrl+Space v types the plain v.
             if (_seqKeys.Length > 0 && _seqKeys[^1] == mark)
             {
-                _seqKeys.Length--;
-                if (_seqKeys.Length == 0) _seqOut = string.Empty;
+                if (_undo.Count > 0) RestoreState(_undo.Pop());   // the escape's own keystroke, taken back with it
+                else
+                {
+                    _seqKeys.Length--;
+                    if (_seqKeys.Length == 0) _seqOut = string.Empty;
+                }
                 _log.Info($"Escape: {(mark == EscapeLayer.Mark ? "Ctrl+Space" : "Ctrl+Shift+1")} pressed again - taken back.");
                 return;
             }
-            if (_layout.HasSequences) _seqKeys.Append(mark);
-            else ResetLegacy();
+            if (_layout.HasSequences)
+            {
+                _undo.Push(CurrentState());         // an escape is a keystroke: Backspace takes it back
+                // Typing by sound, the word so far ends here; Backspace still goes back into it.
+                if (_seqKeys.Length == 0 && (PhoneticMode || _layoutIsPhonetic) && _translit is not null) CommitWord();
+                _seqKeys.Append(mark);
+            }
+            else
+            {
+                ResetPhonetic();   // the word typed by sound, if any, is the application's now
+                ResetLegacy();
+            }
             // An escape puts nothing on screen, so when one does not work there is
             // nothing to look at. Write down that it was seen and what it opened.
             _log.Info($"Escape: {(mark == EscapeLayer.Mark ? "Ctrl+Space" : "Ctrl+Shift+1")} on '{_layout.Name}' " +
@@ -408,6 +528,9 @@ public sealed class TypingEngine : IDisposable
             _pendingDead = null;
             _lastEmitted = null;
             ResetSequence();
+            // A word waiting on its virama keeps the half form Shree shows: rewriting it to the
+            // halant now would send a Backspace under the typist's Ctrl, Alt or Windows key -
+            // Ctrl+Backspace deletes the word before it, Alt+Backspace is undo.
             ResetLegacy(); // the shortcut may move the caret; start the next word fresh
             FlushBeforeKey();
             return;
@@ -417,10 +540,47 @@ public sealed class TypingEngine : IDisposable
         // A key with no glyph of its own can still finish a run: on the ITR Gujarati
         // keyboard "o" types nothing alone, but "fo" is ર્ક. So the run is resolved
         // before an unmapped key is handed back to the application.
-        string output = mapping is null ? string.Empty : SelectOutput(mapping) ?? string.Empty;
+        string? selected = mapping is null ? null : SelectOutput(mapping);
+        string output = selected ?? string.Empty;
         int replace = 0;
+        var before = CurrentState();          // the word as it stood before this keystroke
+        // Keys of a run that have put nothing on screen yet (see below). Should this key
+        // leave that run, the ones that are not letters are typed as themselves - as
+        // they were before a run could start on them (Malayalam Ismeng's ".", for ".ra").
+        string silent = _seqOut.Length == 0 && _seqKeys.Length > 0
+                        && _seqKeys.ToString().IndexOfAny(new[] { EscapeLayer.Mark, EscapeLayer.SymbolMark }) < 0
+            ? new string(_seqKeys.ToString().Where(c => !char.IsAsciiLetter(c)).ToArray()) : string.Empty;
+        bool escapedToNothing = false;
         if (_layout.HasSequences)
-            output = ResolveSequence(typed, output, out replace);
+            output = ResolveSequence(typed, output, out replace, out escapedToNothing);
+        if (silent.Length > 0 && replace == 0 && !_seqKeys.ToString().StartsWith(before.SeqKeys, StringComparison.Ordinal)
+            && !IsForegroundExcluded())
+        {
+            Emit(silent, 0);
+            _lastEmitted = null;
+        }
+
+        // Ctrl+Space then a key its layer leaves empty types nothing, as on Shree (the
+        // vendor file's slot is FF): it used to type the key's own character. The key
+        // is swallowed, and the word goes on.
+        if (escapedToNothing)
+        {
+            e.Handled = !IsForegroundExcluded();
+            _undo.Push(before);
+            _log.Info($"Escape: '{typed}' has nothing on that layer - types nothing.");
+            return;
+        }
+
+        // A key that types nothing alone but starts (or carries on) a run of the chart -
+        // most of the Ekl keyboard: "k" alone is nothing, "ka" is કા - waits for the
+        // rest of the run instead of ending it: it used to be dropped, run and all.
+        if (string.IsNullOrEmpty(output) && replace == 0 && typed != '\0' && _seqKeys.Length > 0
+            && _seqKeys[^1] == typed && _layout.SequenceCanGrow(_seqKeys.ToString()) && !IsForegroundExcluded())
+        {
+            e.Handled = true;
+            _undo.Push(before);
+            return;
+        }
 
         // Straight after a consonant, a key that types a vowel types the vowel's
         // sign instead - the run the chart shows on ka, applied to every letter.
@@ -433,18 +593,41 @@ public sealed class TypingEngine : IDisposable
 
         if (string.IsNullOrEmpty(output) && replace == 0)
         {
+            bool excluded = IsForegroundExcluded();
+            // A printable key in a legacy font goes through the font's table (P6): "" where the
+            // font cannot show it, null where it is written as itself and passes as it is.
+            string? tableText = excluded ? null : TableText(typed);
+            // The word ends here: a virama it ends in is now the visible halant, not the
+            // half form shown while it waited for its next letter.
+            if (!excluded) FinishLegacyWord();
             _lastEmitted = null;  // navigation/space/punctuation breaks the chain
             ResetSequence();      // and ends the run being typed
-            ResetLegacy();        // and commits the current legacy word
 
             // A letter key the active keyboard does not use types nothing on the
             // vendor's software, and nothing here: an English letter dropped into
-            // Indic text is never what the typist meant. Everything else - digits,
-            // punctuation, space, the navigation keys - still passes through.
-            if (e.VirtualKey is >= 'A' and <= 'Z')
+            // Indic text is never what the typist meant. Nor does a key whose layer
+            // the keyboard says types nothing ("" - an imported Shree file's empty
+            // slot), nor one the legacy font cannot show. A key the table writes is
+            // typed as it writes it. Each is a keystroke of ours, and the caret has not
+            // moved: Backspace takes it back whole, and then goes on into the word.
+            // Everything else - digits, punctuation, space, the navigation keys - still
+            // passes through, and the word is the application's from here.
+            // An app the typist excluded gets every key as it is.
+            if (!excluded && (e.VirtualKey is >= 'A' and <= 'Z' || selected is "" || tableText is not null))
+            {
                 e.Handled = true;
-            else
-                FlushBeforeKey();
+                _undo.Push(before);
+                CommitWord();
+                if (tableText is { Length: > 0 })
+                {
+                    _log.Info($"Key '{typed}' in a legacy font: typed as the table writes it.");
+                    TypeAlone(typed.ToString());
+                }
+                else if (tableText is not null) _log.Info($"Key '{typed}' in a legacy font: the font cannot show it - not typed.");
+                return;
+            }
+            ResetLegacy();        // the word is the application's now
+            FlushBeforeKey();
             return;
         }
 
@@ -475,6 +658,7 @@ public sealed class TypingEngine : IDisposable
             _pendingDead = null;
         }
 
+        _undo.Push(before);
         Emit(output, replace);
     }
 
@@ -485,12 +669,21 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     private void Emit(string output, int replace)
     {
+        // A link key struck after a letter that already carries its virama (the Phonetic keyboard types
+        // every consonant as ક્; its Shift+Q and Ctrl+Space f type ્‍): one virama, not two - Shree's
+        // composer writes k Q k a as ક્‍ક (BC 4C 24 in SHREE-GUJ7). Only the joiner is added.
+        if (!_order.Active)
+        {
+            var word = _legacyConv is not null ? _uniWord : _plainWord;
+            int end = word.Length - replace;
+            if (output.Length > 0 && IsVirama(output[0]) && end > 0 && end <= word.Length && IsVirama(word[end - 1]))
+                output = output[1..];
+        }
+
         if (_order.Active)
         {
             _raw.Length = Math.Max(0, _raw.Length - replace);
-            string marked = _order.Mark(output);
-            _raw.Append(marked);
-            _lastPiece = marked.Length;
+            _raw.Append(_order.Mark(output));
             ShowWord();
             return;
         }
@@ -510,6 +703,8 @@ public sealed class TypingEngine : IDisposable
         // Replacing the run in progress: only the part that actually changed needs
         // to go. "k" then "i" on a phonetic keyboard shows क and then कि - one more
         // character, not both of them again.
+        _plainWord.Length = Math.Max(0, _plainWord.Length - replace);
+        _plainWord.Append(output);
         if (replace > 0)
         {
             string shown = _lastEmitted is not null && _lastEmitted.Length == replace ? _lastEmitted : string.Empty;
@@ -554,8 +749,9 @@ public sealed class TypingEngine : IDisposable
     /// showed before; when they cannot, the run ends and a new one starts with
     /// this key.
     /// </summary>
-    private string ResolveSequence(char typed, string single, out int replace)
+    private string ResolveSequence(char typed, string single, out int replace, out bool escapedToNothing)
     {
+        escapedToNothing = false;
         string grown = _seqKeys.ToString() + typed;
         if (typed != '\0' && (_layout!.SequenceCanGrow(grown) || _layout.MatchSequence(grown) is not null))
         {
@@ -585,6 +781,16 @@ public sealed class TypingEngine : IDisposable
                 _seqOut = escaped ?? single;   // show the plain key until the run finishes
                 return _seqOut;
             }
+        }
+
+        // Ctrl+Space, then a key its layer leaves empty: on Shree it types nothing (the
+        // keyboard file's slot is FF, and the composer answers nothing for it).
+        if (typed != '\0' && grown.Length >= 2 && grown[^2] == EscapeLayer.Mark)
+        {
+            escapedToNothing = true;
+            _seqKeys.Clear();
+            _seqOut = string.Empty;
+            return string.Empty;
         }
 
         _seqKeys.Clear();
@@ -680,23 +886,47 @@ public sealed class TypingEngine : IDisposable
         if (!e.IsKeyDown || IsModifier(e.VirtualKey)) return false;
         if (EscapeMarkFor(e.VirtualKey) != '\0') return false;    // a second escape: the usual handling
 
+        // Backspace takes back the run's last keystroke, the escape too, as on every other
+        // keyboard: it used to end the run and delete one character of what it had typed
+        // (Ctrl+Space n is ઙ્; Backspace left ઙ).
+        if (e.VirtualKey == VK_BACK)
+        {
+            if (IsDown(VK_CONTROL) || IsDown(VK_MENU) || _undo.Count == 0) { ResetSequence(); return false; }
+            e.Handled = true;
+            RestoreState(_undo.Pop());
+            return true;
+        }
+
+        var before = CurrentState();
         char typed = KeyChar(e.VirtualKey);
         string grown = _seqKeys.ToString() + typed;
         string? hit = typed == '\0' ? null : _layout!.MatchSequence(grown);
         bool grows = typed != '\0' && _layout!.SequenceCanGrow(grown);
         if (hit is null && !grows)
         {
+            // Ctrl+Space and a key its layer leaves empty: Shree's Eng keyboard types nothing
+            // there (the file's slot is FF) - it used to type the key by sound.
+            if (typed != '\0' && _seqKeys.Length == 1 && _seqKeys[0] == EscapeLayer.Mark && !IsForegroundExcluded())
+            {
+                _log.Info($"Escape: then '{typed}' -> nothing on that layer - types nothing.");
+                _undo.Push(before);            // a keystroke all the same: Backspace takes it back, and nothing before it
+                ResetSequence();
+                e.Handled = true;
+                return true;
+            }
             if (_seqKeys[^1] == EscapeLayer.Mark || _seqKeys[^1] == EscapeLayer.SymbolMark)
                 _log.Info($"Escape: then '{typed}' -> nothing on that layer.");
             // Keys that only looked like the start of a longer run showed nothing
             // while it might come: Ctrl+Space n g could still become ઙ્ગ. It did not,
             // so they are letters after all - typed by sound, ahead of this key.
+            // What the run typed stays, finished; this keystroke's Backspace goes back to it.
             string pending = _seqKeys.ToString()[_seqMatched..];
             ResetSequence();
-            ResetLegacy();
+            CommitWord();
             foreach (char c in pending)
                 if (char.IsAsciiLetter(c)) _roman.Append(c);
             if (_roman.Length > 0) Rerender();
+            _carried = before;
             return false;                                          // typed by sound
         }
 
@@ -707,6 +937,7 @@ public sealed class TypingEngine : IDisposable
         string text = hit ?? _seqOut;          // until the run finishes, keep what it shows
         int replace = _seqOut.Length;
         _log.Info($"Escape: then '{typed}' -> '{text}'.");
+        _undo.Push(before);
         _seqKeys.Clear();
         _seqKeys.Append(grown);
         if (hit is not null) _seqMatched = _seqKeys.Length;
@@ -715,7 +946,7 @@ public sealed class TypingEngine : IDisposable
         if (!grows)
         {
             ResetSequence();                   // the run is complete
-            ResetLegacy();
+            CommitWord();                      // and what it typed is finished; Backspace still goes back into it
         }
         return true;
     }
@@ -752,12 +983,38 @@ public sealed class TypingEngine : IDisposable
     // Replace the legacy text shown for the current word with the conversion of the
     // Unicode buffer. Backspaces are UTF-16 units — legacy output is byte-range
     // characters, one unit each, so this is reliable in standard edit controls.
-    private void RerenderLegacy()
+    // The last report of characters the legacy table could not write as the font's own codes (logged once).
+    private string? _lastNotShown;
+
+    private void RerenderLegacy(bool wordEnds = false)
     {
-        string next = _legacyConv!.ConvertText(_uniWord.ToString());
+        string word = _uniWord.ToString();
+        // A word still being typed that ends in a virama is waiting for its next letter:
+        // Shree shows the half form (Shift+A on BPMK is E5), the reph (AE) or the link's
+        // half letter meanwhile, and only a word that ends there gets the visible halant.
+        // A table that knows the marker writes that; for one that does not, nothing changes.
+        // (Not a ra + virama on a keyboard typed in Unicode's order - no sign struck before its
+        // letter, no reph after it: InScript and Indica, whose ર્ key holds Shree's code BE. Shree
+        // shows that ra with its halant until the letter comes; the reph glyph alone (AE) is what
+        // the typewriter keyboards' reph key shows, Shree's code 40.)
+        bool rephFirst = word.Length > 1 && (word[^2] & 0x7F) == 0x30 && word[^2] is >= 'ऀ' and <= '෿'
+                         && (word.Length < 3 || !IsVirama(word[^3])) && _order.PreSigns.Count == 0 && _order.Reph is null;
+        if (!wordEnds && word.Length > 0 && IsVirama(word[^1]) && !rephFirst && _legacyConv!.KnowsWaiting)
+            word += FontConverter.WaitingMark;
+        var converted = _legacyConv!.Convert(word);
+        string next = converted.Text;
         string shown = _legacyOut;
         if (string.Equals(next, shown, StringComparison.Ordinal))
             return;                        // the keystroke changed nothing on screen
+        // What the table reports is said, as the converter says it (round 2): left out - the font cannot show it -
+        // or typed as itself, which the font has no glyph for (₹ in a Shree font; Word draws it in another font).
+        if (converted.HasUnmapped)
+        {
+            string said = $"left out: {string.Join(" ", converted.LeftOutCharacters)}; typed as itself: {string.Join(" ", converted.KeptCharacters)}";
+            if (!string.Equals(said, _lastNotShown, StringComparison.Ordinal))
+                _log.Info($"Typed into a legacy font - {said} (the font has no glyph for these).");
+            _lastNotShown = said;
+        }
 
         // One keystroke usually only adds to the end of the word, even though the
         // whole word has to be re-converted to find that out: the legacy byte order
@@ -767,9 +1024,17 @@ public sealed class TypingEngine : IDisposable
         // what made it lag: a ten-letter word cost twenty injected events per key.
         _legacyOut = next;
         int keep = CommonPrefix(shown, next);
-        int remove = shown.Length - keep;
-        string add = next[keep..];
+        InjectLegacy(shown.Length - keep, next[keep..], keep == 0);
+    }
 
+    /// <summary>
+    /// Take <paramref name="remove"/> characters back from in front of the caret and type
+    /// <paramref name="add"/> there, in the legacy font. <paramref name="fromWordStart"/>: nothing
+    /// we typed is left in front of the caret, so the font has to travel with the text.
+    /// </summary>
+    private void InjectLegacy(int remove, string add, bool fromWordStart)
+    {
+        if (remove == 0 && add.Length == 0) return;
         string? app = LegacyFontName is null ? null : ForegroundApp.GetProcessName();
         bool rich = app is not null && RichTextApps.Contains(app) && !ForegroundApp.IsSpreadsheet();
 
@@ -804,11 +1069,27 @@ public sealed class TypingEngine : IDisposable
             // instead. A letter in the wrong font is a nuisance; somebody else's
             // paragraph pasted into their work is not. When Word will not talk to
             // us, the characters are typed and the font is the typist's to set.
-            if (rich && keep == 0 && !wordRefusedUs)
+            if (rich && fromWordStart && !wordRefusedUs)
                 _injector.SendRichText(add, LegacyFontName!);
             else
                 _injector.SendText(add);
         });
+    }
+
+    /// <summary>The virama of every Indic script Unicode has (U+094D, U+09CD ... U+0D4D).</summary>
+    private static bool IsVirama(char c) => c is >= 'ऀ' and <= '෿' && (c & 0x7F) == 0x4D;
+
+    /// <summary>
+    /// The word in a legacy font ends here (a space, punctuation, Enter, a shortcut): if it
+    /// ends in a virama it was shown waiting for its next letter, and now gets the visible halant.
+    /// </summary>
+    private void FinishLegacyWord()
+    {
+        if (_legacyConv is null || _uniWord.Length == 0 || !IsVirama(_uniWord[^1]) || !_legacyConv.KnowsWaiting) return;
+        // Never under a held Ctrl, Alt or Windows key: the rewrite's Backspace would be the
+        // application's Ctrl+Backspace (delete a word) or Alt+Backspace (undo).
+        if (IsDown(VK_CONTROL) || IsDown(VK_MENU) || IsDown(VK_LWIN) || IsDown(VK_RWIN)) return;
+        RerenderLegacy(wordEnds: true);
     }
 
     /// <summary>How much of the start of the two strings is the same.</summary>
@@ -821,36 +1102,6 @@ public sealed class TypingEngine : IDisposable
 
     private void HandleBackspace(HookKeyEventArgs e)
     {
-        // A keyboard typed out of Unicode's order: take back the last keystroke of
-        // the word as typed and show the rest in order again.
-        if (_order.Active && _raw.Length > 0)
-        {
-            e.Handled = true;
-            _pendingDead = null;
-            int cut = _lastPiece > 0 ? Math.Min(_lastPiece, _raw.Length) : 1;
-            if (cut == 1 && _raw[^1] == TypingOrder.RephMark && _raw.Length > 1) cut = 2;
-            _raw.Length -= cut;
-            _lastPiece = 0;
-            ResetSequence();
-            ShowWord();
-            return;
-        }
-
-        // Legacy Font Layout: shrink the Unicode word buffer and re-convert.
-        if (_legacyConv is not null)
-        {
-            if (_uniWord.Length > 0)
-            {
-                e.Handled = true;
-                _uniWord.Length--;
-                RerenderLegacy();
-                return;
-            }
-            // Nothing buffered → the word is already committed; let Backspace act
-            // normally on the document from here.
-            _legacyOut = string.Empty;
-        }
-
         // A pending dead key is cancelled by backspace before anything was emitted.
         if (_pendingDead is not null)
         {
@@ -859,16 +1110,23 @@ public sealed class TypingEngine : IDisposable
             return;
         }
 
-        // Multi-unit cluster: suppress the single backspace and delete the lot.
-        if (_lastEmitted is { Length: > 1 })
+        // The word being typed: Backspace takes back exactly its last keystroke - the
+        // whole of it (Shift+A's બ્, not only its virama), and only it inside a chart run
+        // (InScript k s is કે; Backspace leaves ક, where it used to take the run whole).
+        // The word goes back to how it stood before that key, in every font and order,
+        // and so does the run, so the key typed next carries it on as it would have then.
+        if (_undo.Count > 0)
         {
             e.Handled = true;
-            _injector.SendBackspace(_lastEmitted.Length);
-            _lastEmitted = null;
+            RestoreState(_undo.Pop());
             return;
         }
 
-        // Single unit or nothing tracked: let the normal backspace through.
+        // Nothing of this word is ours to take back: the word is committed, and the
+        // application's own Backspace acts on the document from here.
+        _legacyOut = string.Empty;
+        _done = string.Empty;
+        ResetSequence();
         _lastEmitted = null;
     }
 
@@ -879,25 +1137,29 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     private void HandlePhonetic(HookKeyEventArgs e)
     {
-        // Backspace: shrink the pending roman buffer and re-render. Ctrl+ and
-        // Alt+Backspace are the application's; the word is finished as it stands.
+        // The state this keystroke began in - the run on the layer it ended, if it ended one.
+        var before = _carried ?? CurrentState();
+        _carried = null;
+
+        // Backspace: back to how it stood before the last keystroke - a roman letter of the
+        // word, a fixed key, a run on the layer (see _done). Ctrl+ and Alt+Backspace are the
+        // application's; the word is finished as it stands.
         if (e.VirtualKey == VK_BACK && (IsDown(VK_CONTROL) || IsDown(VK_MENU)))
         {
-            if (e.IsKeyDown) { ResetPhonetic(); FlushBeforeKey(); }
+            if (e.IsKeyDown) { ResetSequence(); ResetPhonetic(); FlushBeforeKey(); }
             return;
         }
         if (e.VirtualKey == VK_BACK)
         {
-            if (_roman.Length == 0)
-            {
-                ResetPhonetic();
-                return; // nothing pending → let Backspace act normally
-            }
-            e.Handled = true; // suppress down and up while we own the buffer
             if (!e.IsKeyDown)
                 return;
-            _roman.Length--;
-            Rerender();
+            if (_undo.Count == 0)
+            {
+                ResetPhonetic();
+                return; // nothing of ours → let Backspace act normally
+            }
+            e.Handled = true;
+            RestoreState(_undo.Pop());
             return;
         }
 
@@ -916,12 +1178,17 @@ public sealed class TypingEngine : IDisposable
             return;
         }
 
-        // A–Z are the roman letters we buffer; anything else commits the word.
-        if (TryRomanChar(e.VirtualKey, out char ch))
+        // The roman letters, and the symbols the scheme spells with (Shree's Eng keyboard
+        // types ઽ on '<', the ru ligature on '@', ...), are buffered for the word.
+        if (TryRomanChar(e.VirtualKey, out char ch) || ReadsBySound(ch = KeyChar(e.VirtualKey)))
         {
             e.Handled = true; // suppress the raw Latin letter (down and up)
             if (!e.IsKeyDown)
                 return;
+            _undo.Push(before);   // a keystroke, even one that types nothing: Backspace takes it back
+            // A letter the scheme cannot read types nothing, as on Shree's Eng keyboard
+            // (B, C, K, P, Q, V, W, X, Z, q) - it used to be typed as itself, in Latin.
+            if (!ReadsBySound(ch)) return;
             _roman.Append(ch);
             Rerender();
             return;
@@ -932,8 +1199,79 @@ public sealed class TypingEngine : IDisposable
         // word goes in through its automation object, slowly enough that a space
         // let through at once could land between the last two letters.
         if (!e.IsKeyDown) return;
+        FinishLegacyWord();
+        // A key the keyboard itself types (Shree's Eng: the digits are the script's, '&' the
+        // danda) is typed as the keyboard says - or nothing, where the keyboard leaves it
+        // empty (""); a printable key in a legacy font goes through the font's table. Either
+        // is a keystroke of ours, and the caret has not moved: the word ends, but Backspace
+        // takes this key back whole and then goes on into the word. Any other key passes through.
+        string? alone = null;   // what the key types (Unicode; in a legacy font TypeAlone converts it)
+        if (_layoutIsPhonetic && _layout?.Find(e.VirtualKey) is { } m && ch != '\0' && SelectOutput(m) is { } fixedText && !IsForegroundExcluded())
+            alone = fixedText;
+        else if (!IsForegroundExcluded() && TableText(ch) is { } written)
+            alone = written.Length > 0 ? ch.ToString() : string.Empty;
+        if (alone is not null)
+        {
+            e.Handled = true;
+            _undo.Push(before);
+            CommitWord();
+            if (alone.Length > 0) TypeAlone(alone);
+            return;
+        }
         ResetPhonetic();
         FlushBeforeKey();
+    }
+
+    /// <summary>True when the phonetic scheme spells with this character (a letter anywhere in a token, a symbol at its start).</summary>
+    private bool ReadsBySound(char c)
+    {
+        if (c == '\0' || _translit is null) return false;
+        if (!ReferenceEquals(_soundCharsOf, _translit))
+        {
+            _soundCharsOf = _translit;
+            _soundChars.Clear();
+            var s = _translit.Scheme;
+            foreach (var token in s.Consonants.Keys.Concat(s.Vowels.Keys).Concat(s.Specials.Keys))
+            {
+                if (token.Length == 0) continue;
+                foreach (char t in token) if (char.IsAsciiLetter(t)) _soundChars.Add(t);
+                _soundChars.Add(token[0]);
+            }
+        }
+        return _soundChars.Contains(c);
+    }
+    private readonly HashSet<char> _soundChars = new();
+    private Transliterator? _soundCharsOf;
+
+    /// <summary>
+    /// Text a key types on its own, outside any word (the word before it is finished,
+    /// <see cref="CommitWord"/>): in a legacy font, converted. It is finished too, and stays
+    /// ours for Backspace to take back whole - '"' is 22 22 in a Shree font, two characters.
+    /// </summary>
+    private void TypeAlone(string text)
+    {
+        if (_legacyConv is not null)
+        {
+            _uniWord.Append(text);
+            RerenderLegacy(wordEnds: true);
+            CommitWord();
+            return;
+        }
+        _injector.SendText(text);
+        _done = Shown() + text;
+    }
+
+    /// <summary>
+    /// A printable key the keyboard passes through, in a legacy font: it reaches the document as
+    /// its byte, which the font may draw as a letter of the script ('[' is an i-sign in a Shree font).
+    /// So it goes through the font's table as the converter's text does (P6): what the table writes
+    /// for it, "" where the table leaves it out, null where it is written as itself and can pass as it is.
+    /// </summary>
+    private string? TableText(char typed)
+    {
+        if (_legacyConv is null || typed is < '!' or > '~') return null;
+        string written = _legacyConv.ConvertText(typed.ToString());
+        return written == typed.ToString() ? null : written;
     }
 
     // Replace the previously shown script for this word with the transliteration of
@@ -993,9 +1331,12 @@ public sealed class TypingEngine : IDisposable
         if (altGr && !string.IsNullOrEmpty(mapping.AltGr))
             return mapping.AltGr;
 
-        // Shift XOR CapsLock selects the shifted glyph (letter-style behaviour).
+        // Shift XOR CapsLock selects the shifted glyph (letter-style behaviour). A
+        // Shift the layout leaves unset types the normal character; one it sets to
+        // "" types nothing - an imported Shree file's empty slot, where Shift+5 on
+        // a client's keyboard used to type the 5 key's letter.
         bool useShift = shift ^ caps;
-        if (useShift && !string.IsNullOrEmpty(mapping.Shift))
+        if (useShift && mapping.Shift is not null)
             return mapping.Shift;
 
         return mapping.Base;
@@ -1041,11 +1382,17 @@ public sealed class TypingEngine : IDisposable
     /// </summary>
     public void Resync()
     {
-        _pendingDead = null;
-        _lastEmitted = null;
         _ctrlLifted = false;
         _layerKey = 0;
         _escapeKey = 0;
+        ForgetWord();
+    }
+
+    /// <summary>The caret may be somewhere else: the word in progress is no longer ours to rewrite.</summary>
+    private void ForgetWord()
+    {
+        _pendingDead = null;
+        _lastEmitted = null;
         ResetPhonetic();
         ResetSequence();
         ResetLegacy();

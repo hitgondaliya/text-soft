@@ -358,20 +358,33 @@ if (args.Contains("--by-series"))
 {
     var seriesToEnc = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
     {
-        ["DEVX"] = "shree-devx",  ["DEV7"] = "shree-dev456", ["DEV"] = "shree-dev456",
-        // Sanskrit is written in Devanagari and Shree gives it the same byte layout;
-        // the cmap check below rejects it if that ever stops being true
-        ["SANX"] = "shree-devx",  ["SAN7"] = "shree-dev456", ["SAN"] = "shree-dev456",
+        // Shree-Lipi 7.0 (SHREE-DEV7-*) and 4.0/5.0/6.0 (SHREE-DEV-*) are two families with
+        // a table each: they share the 7 composer's codes but four (91 92 B3 B6).
+        ["DEVX"] = "shree-devx",  ["DEV7"] = "shree-dev7",   ["DEV"] = "shree-dev456",
+        // The Shree-Lipi 7 Sanskrit fonts (SHREE-SAN7-*) are an encoding of their own, not
+        // Devanagari's layout (क = 40 A1 there, 48 24 in DEV7): shree-san7. No 4/5/6 Sanskrit
+        // font (SHREE-SAN-*) has been checked against any table, so that series is left out
+        // and counted below as a series with no table, not guessed.
+        ["SANX"] = "shree-devx",  ["SAN7"] = "shree-san7",
         ["BANX"] = "shree-banx",  ["ASSX"] = "shree-banx",   ["MANX"] = "shree-banx",
-        ["BAN7"] = "shree-ban7",  ["ASS7"] = "shree-ban7",   ["BAN"] = "shree-ban7", ["ASS"] = "shree-ban7",
+        // Bangla / Assamese: Shree-Lipi 7.0 and 4.0/5.0/6.0 draw ঃ, the half-ন hook, ্ন and ৺ at swapped
+        // codes, and the Assamese fonts draw ৱ at AF: a table each (tools/BanTruth).
+        ["BAN7"] = "shree-ban7",  ["ASS7"] = "shree-ass7",   ["BAN"] = "shree-ban456", ["ASS"] = "shree-ass456",
         ["TEL7"] = "shree-tel7",  ["TEL"] = "shree-tel7",
-        ["GUJX"] = "shree-gujx",  ["GUJ7"] = "shree-guj7",   ["GUJ"] = "shree-guj7",
+        // Gujarati 7.0 (SHREE-GUJ7-*) and 4.0/5.0/6.0 (SHREE-GUJ-*): five codes (91-94, B6) differ.
+        ["GUJX"] = "shree-gujx",  ["GUJ7"] = "shree-guj7",   ["GUJ"] = "shree-guj456",
         ["KANX"] = "shree-kanx",  ["KAN7"] = "shree-kan7",   ["KAN"] = "shree-kan7",
         ["MALX"] = "shree-malx",  ["MAL7"] = "shree-mal7",   ["MAL"] = "shree-mal7",
         ["ORIX"] = "shree-orix",  ["ORI7"] = "shree-ori7",   ["ORI"] = "shree-ori7",
         ["PUNX"] = "shree-punx",  ["PUN7"] = "shree-pun7",   ["PUN"] = "shree-pun7",
         ["TAMX"] = "shree-tamx",  ["TAM7"] = "shree-tam7",   ["TAM"] = "shree-tam7",
         ["TELX"] = "shree-telx",
+    };
+    // A few families are not what their series says: Shree-Ass7-001/002 (WASS7*.TTF) keep the
+    // 4/5/6 order of ঃ, the hook and ্ন, and have % and : - their own table, not SHREE-ASS7's.
+    var familyToEnc = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    {
+        ["Shree-Ass7-001"] = "shree-ass7w", ["Shree-Ass7-002"] = "shree-ass7w",
     };
     // An encoding belongs to a SCRIPT, and a script serves several languages:
     // Devanagari is Hindi, Marathi and Sanskrit; the Bengali script is Bangla,
@@ -381,11 +394,17 @@ if (args.Contains("--by-series"))
     var encToLangs = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
     {
         ["shree-devx"] = new[] { "Hindi", "Marathi", "Sanskrit" },
+        ["shree-dev7"] = new[] { "Hindi", "Marathi", "Sanskrit" },
         ["shree-dev456"] = new[] { "Hindi", "Marathi", "Sanskrit" },
+        ["shree-san7"] = new[] { "Hindi", "Marathi", "Sanskrit" },
         ["shree-banx"] = new[] { "Bangla", "Assamese", "Manipuri" },
         ["shree-ban7"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-ban456"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-ass7"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-ass456"] = new[] { "Bangla", "Assamese", "Manipuri" },
+        ["shree-ass7w"] = new[] { "Bangla", "Assamese", "Manipuri" },
         ["shree-tel7"] = new[] { "Telugu" }, ["shree-telx"] = new[] { "Telugu" },
-        ["shree-gujx"] = new[] { "Gujarati" }, ["shree-guj7"] = new[] { "Gujarati" },
+        ["shree-gujx"] = new[] { "Gujarati" }, ["shree-guj7"] = new[] { "Gujarati" }, ["shree-guj456"] = new[] { "Gujarati" },
         ["shree-kanx"] = new[] { "Kannada" }, ["shree-kan7"] = new[] { "Kannada" },
         ["shree-malx"] = new[] { "Malayalam" }, ["shree-mal7"] = new[] { "Malayalam" },
         ["shree-orix"] = new[] { "Odia" }, ["shree-ori7"] = new[] { "Odia" },
@@ -396,7 +415,7 @@ if (args.Contains("--by-series"))
     string mapDir = Path.Combine(Path.GetDirectoryName(configPath)!, "mappings");
     // encoding -> the legacy code points its table can emit
     var needed = new Dictionary<string, HashSet<int>>(StringComparer.OrdinalIgnoreCase);
-    foreach (var enc in seriesToEnc.Values.Distinct(StringComparer.OrdinalIgnoreCase))
+    foreach (var enc in seriesToEnc.Values.Concat(familyToEnc.Values).Distinct(StringComparer.OrdinalIgnoreCase))
     {
         string p = Path.Combine(mapDir, "unicode-to-" + enc + ".json");
         if (!File.Exists(p)) continue;
@@ -422,7 +441,7 @@ if (args.Contains("--by-series"))
         string family = r[1];
         var m = System.Text.RegularExpressions.Regex.Match(family, @"^SHREE[-_ ]?([A-Z]{3}[X7]?)[-_ ]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         if (!m.Success) { string k2 = "OTHER: " + (family.Length > 14 ? family.Substring(0, 14) : family); unmatched[k2] = unmatched.GetValueOrDefault(k2) + 1; continue; }
-        if (!seriesToEnc.TryGetValue(m.Groups[1].Value, out var enc))
+        if (!familyToEnc.TryGetValue(family, out var enc) && !seriesToEnc.TryGetValue(m.Groups[1].Value, out enc))
         {
             // no table for this series yet — count it so the gap is visible
             string key = m.Groups[1].Value.ToUpperInvariant();
@@ -512,13 +531,16 @@ foreach (var group in found.GroupBy(x => x.hash))
     {
         string id = Slug(family);
         if (fonts.Any(x => (string?)x!["id"] == id || (string?)x!["family"] == family)) { already++; continue; }
+        // The Gujarati 7.0 and 4.0/5.0/6.0 fonts share one code-point set but five codes draw
+        // differently (91-94, B6): SHREE-GUJ-* (no 7) is the 4/5/6 family, with its own table.
+        bool guj456 = enc == "shree-guj7" && !System.Text.RegularExpressions.Regex.IsMatch(family, @"^SHREE[-_ ]?GUJ7", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         fonts.Add(new JsonObject
         {
             ["id"] = id,
-            ["name"] = family + " (" + label + ")",
+            ["name"] = family + " (" + (guj456 ? "Shree-Lipi 4.0/5.0/6.0" : label) + ")",
             ["family"] = family,
             ["type"] = "legacy",
-            ["encoding"] = enc,
+            ["encoding"] = guj456 ? "shree-guj456" : enc,
         });
         added++;
     }

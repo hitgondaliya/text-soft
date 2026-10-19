@@ -68,4 +68,14 @@ public class KeyboardThreadTests
         ui.Join();
         keyboard!.Dispose();
     }
+
+    /// <summary>The click counter starts and stops cleanly, on a thread of its own.</summary>
+    [Fact]
+    public void TheClickCounterStartsAndStops()
+    {
+        var mouse = new MouseClickWatch();
+        Assert.True(mouse.Clicks >= 0);
+        mouse.Dispose();
+        mouse.Dispose();                                  // twice is harmless
+    }
 }

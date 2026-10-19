@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>shreedevtruth</AssemblyName>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FontSoftware.Core\FontSoftware.Core.csproj" />
+    <Compile Include="..\Shared\ShreeWordFinal.cs" Link="ShreeWordFinal.cs" />
+    <Compile Include="..\Shared\ShreeNonIndic.cs" Link="ShreeNonIndic.cs" />
+  </ItemGroup>
+
+</Project>

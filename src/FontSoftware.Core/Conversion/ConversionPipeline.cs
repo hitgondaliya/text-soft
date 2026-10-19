@@ -49,6 +49,8 @@ public sealed class ConversionPipeline
         if (string.IsNullOrEmpty(text)) return new ConversionResult { Text = string.Empty };
 
         var unmapped = new List<string>();
+        var leftOut = new List<string>();
+        var kept = new List<string>();
         string uni = text;
 
         // Hop 1: into Unicode.
@@ -58,6 +60,8 @@ public sealed class ConversionPipeline
             var r = c.Convert(text);
             uni = r.Text;
             unmapped.AddRange(r.UnmappedCharacters);
+            leftOut.AddRange(r.LeftOutCharacters);
+            kept.AddRange(r.KeptCharacters);
         }
 
         // Middle: script-agnostic fixes on Unicode text.
@@ -67,12 +71,14 @@ public sealed class ConversionPipeline
 
         // Hop 2: out of Unicode.
         if (target.IsUnicode)
-            return new ConversionResult { Text = Nukta.Spell(uni), UnmappedCharacters = unmapped.Distinct().ToArray() };
+            return new ConversionResult { Text = Nukta.Spell(uni), UnmappedCharacters = unmapped.Distinct().ToArray(), LeftOutCharacters = leftOut.Distinct().ToArray(), KeptCharacters = kept.Distinct().ToArray() };
 
         var to = FromUnicode(target.Encoding) ?? throw new InvalidOperationException($"No table for Unicode → {target.Encoding}.");
         var r2 = to.Convert(uni);
         unmapped.AddRange(r2.UnmappedCharacters);
-        return new ConversionResult { Text = r2.Text, UnmappedCharacters = unmapped.Distinct().ToArray() };
+        leftOut.AddRange(r2.LeftOutCharacters);
+        kept.AddRange(r2.KeptCharacters);
+        return new ConversionResult { Text = r2.Text, UnmappedCharacters = unmapped.Distinct().ToArray(), LeftOutCharacters = leftOut.Distinct().ToArray(), KeptCharacters = kept.Distinct().ToArray() };
     }
 
     private readonly Dictionary<string, bool> _byteEnc = new();
